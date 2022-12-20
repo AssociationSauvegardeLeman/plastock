@@ -1,0 +1,16 @@
+# In _config.yml
+title: Plast-Stock
+author: Association pour la Sauvegarde du Léman
+logo: False
+execute:
+  execute_notebooks: False
+html:
+  extra_navbar: Built by <a href="https://hammerdirt.ch/">hammerdirt</a> 
+
+# Add a bibtex file so that we can create citations
+bibtex_bibfiles:
+ - references.bib
+sphinx:
+  config:
+    bibtex_reference_style: author_year
+

@@ -1,0 +1,9 @@
+format: jb-book
+root: index
+options:
+  numbered: False
+  only_build_toc_files: true
+chapters:
+- file: plstk_01
+- file: plstk_02
+- file: references

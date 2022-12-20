@@ -1,0 +1,22 @@
+name: dscy
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10.0
+  - scipy
+  - pandas
+  - matplotlib
+  - jupyterlab
+  - python-slugify
+  - bokeh
+  - jupyter_bokeh
+  - reportlab
+  - pymc
+  - mlxtend
+  - scikit-learn
+  - statsmodels
+  - seaborn
+  - arviz
+  - bambi
+prefix: /home/roger/anaconda3/envs/dscy
