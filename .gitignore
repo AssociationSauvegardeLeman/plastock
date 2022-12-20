@@ -6,7 +6,7 @@ __pycache__/
 
 # this repo
 data/ignorethese/
-# docs/build/
+#_build/
 
 # Jupyter Notebook
 .ipynb_checkpoints
