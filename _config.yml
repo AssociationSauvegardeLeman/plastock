@@ -5,7 +5,10 @@ logo: False
 execute:
   execute_notebooks: False
 html:
-  extra_navbar: Built by <a href="https://hammerdirt.ch/">hammerdirt</a> 
+  extra_navbar: Built by <a href="https://hammerdirt.ch/">hammerdirt</a>
+  use_repository_button: True
+repository:
+  url: https://github.com/hammerdirt-analyst/plastock
 
 # Add a bibtex file so that we can create citations
 bibtex_bibfiles:
