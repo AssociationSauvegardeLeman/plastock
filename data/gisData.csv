@@ -1,0 +1,113 @@
+place,événement,zone,substrat,fibres,fdure,souple,fragments,status,orientation,temps,total,région,lat,lon
+Hermance,GE_Her_1,ligne-d'eau,3,79.0,3.0,0.0,3.0,prior,OSO,50,82.0,petit-lac,46.30358333,6.240833333
+Hermance,GE_Her_2,ligne-d'eau,3,25.0,1.0,0.0,1.0,prior,OSO,50,26.0,petit-lac,46.3037,6.240683333
+Hermance,GE_Her_3,ligne-d'eau,3,69.0,4.0,0.0,4.0,prior,OSO,50,73.0,petit-lac,46.30378333,6.24065
+Hermance,GE_Her_4,ligne-d'eau,3,76.0,9.0,0.0,9.0,prior,OSO,50,85.0,petit-lac,46.3039,6.24065
+Savonière,GE_Sav_1,ligne-d'eau,4,110.0,10.0,0.0,10.0,prior,NO,40,120.0,petit-lac,46.26413333,6.199733333
+Savonière,GE_Sav_2,ligne-d'eau,4,24.0,2.0,0.0,2.0,prior,NO,40,26.0,petit-lac,46.26416667,6.199916667
+Savonière,GE_Sav_3,ligne-d'eau,4,210.0,34.0,0.0,34.0,prior,OSO,40,244.0,petit-lac,46.26426667,6.20005
+Baby Plage,GE_Bab_1,ligne-d'eau,1,22.0,1.0,0.0,1.0,prior,NNE,60,23.0,petit-lac,46.20878333,6.16285
+Baby Plage,GE_Bab_2,ligne-d'eau,1,122.0,3.0,0.0,3.0,prior,N,60,125.0,petit-lac,46.20873333,6.163116667
+Baby Plage,GE_Bab_3,ligne-d'eau,1,31.0,1.0,0.0,1.0,prior,N,60,32.0,petit-lac,46.20873333,6.16325
+Baby Plage,GE_Bab_4,ligne-d'eau,1,21.0,6.0,0.0,6.0,prior,N,60,27.0,petit-lac,46.20875,6.163383333
+Baby Plage,GE_Bab_5,ligne-d'eau,1,119.0,19.0,0.0,19.0,prior,N,60,138.0,petit-lac,46.20878333,6.163466667
+Versoix,GE_Ver_1,ligne-d'eau,3,59.0,3.0,0.0,3.0,prior,ESE,20,62.0,petit-lac,46.27405,6.171316667
+Versoix,GE_Ver_2,ligne-d'eau,3,134.0,10.0,2.0,12.0,prior,ESE,20,146.0,petit-lac,46.274,6.171316667
+Versoix,GE_Ver_3,ligne-d'eau,3,89.0,1.0,0.0,1.0,prior,ESE,20,90.0,petit-lac,46.27396667,6.171216667
+Crans,VD_Cra_1,ligne-d'eau,2,17.0,2.0,0.0,2.0,prior,SSE,6,19.0,petit-lac,46.35538333,6.214033333
+Gland,VD_Gld_1,ligne-d'eau,2,26.0,8.0,6.0,14.0,prior,E,8,40.0,grand-lac,46.4188,6.290033333
+Rolle,VD_Rol_1,ligne-d'eau,2,67.0,30.0,2.0,32.0,prior,SSO,60,99.0,grand-lac,46.36133333,6.350633333
+Rolle,VD_Rol_2,ligne-d'eau,2,28.0,35.0,0.0,35.0,prior,SSO,60,63.0,grand-lac,46.36133333,6.350516667
+Rolle,VD_Rol_3,ligne-d'eau,2,60.0,15.0,3.0,18.0,prior,SSO,60,78.0,grand-lac,46.36133333,6.350466667
+Rolle,VD_Rol_4,ligne-d'eau,2,160.0,24.0,2.0,26.0,prior,SSO,60,186.0,grand-lac,46.46135,6.350333333
+Rolle,VD_Rol_5,ligne-d'eau,2,98.0,21.0,2.0,23.0,prior,S,60,121.0,grand-lac,46.46136667,6.350266667
+Rolle,VD_Rol_6,ligne-d'eau,2,145.0,40.0,9.0,49.0,prior,S,60,194.0,grand-lac,46.46136667,6.3502
+Rolle,VD_Rol_7,ligne-d'eau,2,177.0,21.0,2.0,23.0,prior,S,60,200.0,grand-lac,46.46138333,6.350133333
+Rolle,VD_Rol_8,ligne-d'eau,2,83.0,41.0,6.0,47.0,prior,SSE,60,130.0,grand-lac,46.46136667,6.35005
+Rolle,VD_Rol_9,ligne-d'eau,2,72.0,21.0,2.0,23.0,prior,SSE,60,95.0,grand-lac,46.46135,6.3499
+Rolle,VD_Rol_10,ligne-d'eau,2,72.0,10.0,3.0,13.0,prior,S,60,85.0,grand-lac,46.46133333,6.349783333
+Aubonne,VD_Aub_1,ligne-d'eau,4,39.0,5.0,0.0,5.0,prior,ONO,40,44.0,grand-lac,46.46026667,6.39115
+Aubonne,VD_Aub_2,ligne-d'eau,4,51.0,8.0,0.0,8.0,prior,O,40,59.0,grand-lac,46.46033333,6.391183333
+Aubonne,VD_Aub_3,ligne-d'eau,4,86.0,2.0,1.0,3.0,prior,OSO,40,89.0,grand-lac,46.46041667,6.391166667
+Aubonne,VD_Aub_4,ligne-d'eau,4,30.0,37.0,0.0,37.0,prior,OSO,40,67.0,grand-lac,46.46046667,6.391133333
+Aubonne,VD_Aub_5,ligne-d'eau,4,42.0,11.0,2.0,13.0,prior,SO,40,55.0,grand-lac,46.46051667,6.39115
+Tolochenaz,VD_Tol_1,ligne-d'eau,2,54.0,3.0,0.0,3.0,prior,SE,25,57.0,grand-lac,46.4917,6.48075
+Tolochenaz,VD_Tol_2,ligne-d'eau,2,54.0,1.0,0.0,1.0,prior,SE,25,55.0,grand-lac,46.49166667,6.4807
+Tolochenaz,VD_Tol_3,ligne-d'eau,2,82.0,7.0,0.0,7.0,prior,ENE,25,89.0,grand-lac,46.49158333,6.480633333
+Tolochenaz,VD_Tol_4,ligne-d'eau,2,176.0,6.0,0.0,6.0,prior,ENE,25,182.0,grand-lac,46.4916,6.480583333
+Préverenges,VD_Pré_1,ligne-d'eau,1,179.0,16.0,3.0,19.0,prior,SO,80,198.0,grand-lac,46.51141667,6.529916667
+Préverenges,VD_Pré_3,ligne-d'eau,1,251.0,112.0,118.0,230.0,prior,SO,80,481.0,grand-lac,46.51158333,6.529683333
+Préverenges,VD_Pré_4,ligne-d'eau,1,36.0,41.0,1.0,42.0,prior,SO,80,78.0,grand-lac,46.51166667,6.529533333
+Préverenges,VD_Pré_5,ligne-d'eau,1,67.0,58.0,3.0,61.0,prior,SO,80,128.0,grand-lac,46.51173333,6.529383333
+Préverenges,VD_Pré_6,ligne-d'eau,1,69.0,15.0,2.0,17.0,prior,SO,80,86.0,grand-lac,46.51188333,6.529083333
+Préverenges,VD_Pré_7,ligne-d'eau,1,110.0,32.0,6.0,38.0,prior,SO,80,148.0,grand-lac,46.51195,6.529016667
+Préverenges,VD_Pré_8,ligne-d'eau,1,132.0,9.0,10.0,19.0,prior,SO,80,151.0,grand-lac,46.512,6.528883333
+Préverenges,VD_Pré_9,ligne-d'eau,1,118.0,43.0,13.0,56.0,prior,SO,80,174.0,grand-lac,46.51208333,6.528733333
+Préverenges,VD_Pré_10,ligne-d'eau,1,53.0,40.0,2.0,42.0,prior,SO,80,95.0,grand-lac,46.51215,6.528616667
+Vidy,VD_Vid_1,ligne-d'eau,1,102.0,2.0,0.0,2.0,prior,SO,45,104.0,grand-lac,46.51121667,6.6109
+Vidy,VD_Vid_2,ligne-d'eau,1,202.0,10.0,1.0,11.0,prior,SO,45,213.0,grand-lac,46.51126667,6.610783333
+Vidy,VD_Vid_3,ligne-d'eau,1,39.0,1.0,0.0,1.0,prior,SO,45,40.0,grand-lac,46.51131667,6.61065
+Vidy,VD_Vid_4,ligne-d'eau,1,24.0,2.0,0.0,2.0,prior,S,45,26.0,grand-lac,46.51133333,6.6106
+Vidy,VD_Vid_5,ligne-d'eau,1,36.0,13.0,2.0,15.0,prior,S,45,51.0,grand-lac,46.51133333,6.610416667
+Vidy,VD_Vid_6,ligne-d'eau,1,34.0,1.0,0.0,1.0,prior,SSE,45,35.0,grand-lac,46.51131667,6.611033333
+Lutry,VD_Lut_1,ligne-d'eau,4,126.0,0.0,0.0,0.0,prior,SSE,40,126.0,grand-lac,46.49995,6.69245
+Lutry,VD_Lut_2,ligne-d'eau,4,61.0,7.0,1.0,8.0,prior,SE,40,69.0,grand-lac,46.49988333,6.692283333
+Lutry,VD_Lut_3,ligne-d'eau,4,68.0,2.0,2.0,4.0,prior,SE,40,72.0,grand-lac,46.49976667,6.69215
+Lutry,VD_Lut_4,ligne-d'eau,4,39.0,2.0,0.0,2.0,prior,SE,40,41.0,grand-lac,46.4997,6.692066667
+Cully,VD_Cul_1,ligne-d'eau,3,117.0,11.0,0.0,11.0,prior,SO,7,128.0,grand-lac,46.48895,6.7414
+Pichette,VD_Pic_1,ligne-d'eau,3,18.0,2.0,0.0,2.0,prior,SSE,20,20.0,haut-lac,46.46991667,6.815783333
+Pichette,VD_Pic_2,ligne-d'eau,3,107.0,6.0,0.0,6.0,prior,S,20,113.0,haut-lac,46.46988333,6.815566667
+Pichette,VD_Pic_3,ligne-d'eau,3,75.0,8.0,0.0,8.0,prior,SSE,20,83.0,haut-lac,46.4699,6.815483333
+Clarens,VD_Cls_1,ligne-d'eau,4,44.0,7.0,1.0,8.0,prior,SSO,30,52.0,haut-lac,46.43941667,6.889566667
+Clarens,VD_Cls_2,ligne-d'eau,4,84.0,3.0,2.0,5.0,prior,SSO,30,89.0,haut-lac,46.4394,6.889466667
+Clarens,VD_Cls_3,ligne-d'eau,4,42.0,7.0,0.0,7.0,prior,SSO,30,49.0,haut-lac,46.43943333,6.889383333
+Clarens,VD_Cls_4,ligne-d'eau,4,25.0,2.0,0.0,2.0,prior,SSO,30,27.0,haut-lac,46.43943333,6.889266667
+Grangettes,VD_Grs_3,ligne-d'eau,1,89.0,10.0,0.0,10.0,prior,NO,40,99.0,haut-lac,46.39631667,6.88685
+Bouveret,VS_Bou_1,ligne-d'eau,1,68.0,14.0,0.0,14.0,prior,ONO,50,82.0,haut-lac,46.389,6.859816667
+Bouveret,VS_Bou_2,ligne-d'eau,1,100.0,9.0,0.0,9.0,prior,ONO,50,109.0,haut-lac,46.3891,6.859833333
+Bouveret,VS_Bou_3,ligne-d'eau,1,36.0,1.0,0.0,1.0,prior,O,50,37.0,haut-lac,46.38915,6.85985
+Bouveret,VS_Bou_4,ligne-d'eau,1,37.0,18.0,2.0,20.0,prior,O,50,57.0,haut-lac,46.3892,6.859866667
+Bouveret,VS_Bou_5,ligne-d'eau,1,199.0,59.0,0.0,59.0,prior,O,50,258.0,haut-lac,46.38931667,6.859866667
+Bouveret,VS_Bou_6,ligne-d'eau,1,35.0,0.0,0.0,0.0,prior,OSO,50,35.0,haut-lac,46.3894,6.859866667
+Bouveret,VS_Bou_7,ligne-d'eau,1,53.0,5.0,0.0,5.0,prior,OSO,50,58.0,haut-lac,46.38951667,6.859816667
+Tougues,74_Tou_5,ligne-d'eau,2,43.0,8.0,0.0,8.0,prior,NO,45,51.0,petit-lac,46.32515,6.25735
+Amphion,74_Amp_1,ligne-d'eau,4,97.0,0.0,0.0,0.0,update,NE,50,97.0,grand-lac,46.39811667,6.534083333
+Amphion,74_Amp_2,ligne-d'eau,4,121.0,3.0,12.0,15.0,update,NNE,50,136.0,grand-lac,46.39801667,6.53425
+Amphion,74_Amp_3,ligne-d'eau,4,31.0,0.0,0.0,0.0,update,NE,50,31.0,grand-lac,46.398,6.53435
+Amphion,74_Amp_4,ligne-d'eau,4,179.0,2.0,1.0,3.0,update,NNE,50,182.0,grand-lac,46.39791667,6.534583333
+Anthy,74_Ant_1,ligne-d'eau,4,29.0,5.0,4.0,9.0,update,NNO,30,38.0,grand-lac,46.35155,6.404266667
+Anthy,74_Ant_2,ligne-d'eau,4,33.0,8.0,16.0,24.0,update,NNO,30,57.0,grand-lac,46.35158333,6.404566667
+Anthy,74_Ant_3,ligne-d'eau,4,61.0,9.0,1.0,10.0,update,NNO,30,71.0,grand-lac,46.35163333,6.404833333
+Excenevex,74_Exc_1,ligne-d'eau,1,84.0,13.0,21.0,34.0,update,NE,90,118.0,grand-lac,46.34981667,6.3595
+Excenevex,74_Exc_2,ligne-d'eau,1,184.0,0.0,6.0,6.0,update,NE,90,190.0,grand-lac,46.34978333,6.359583333
+Excenevex,74_Exc_3,ligne-d'eau,1,109.0,11.0,10.0,21.0,update,NE,90,130.0,grand-lac,46.34973333,6.359666667
+Excenevex,74_Exc_4,ligne-d'eau,1,39.0,3.0,9.0,12.0,update,NE,90,51.0,grand-lac,46.34965,6.359816667
+Excenevex,74_Exc_5,ligne-d'eau,1,33.0,1.0,4.0,5.0,update,NE,90,38.0,grand-lac,46.3496,6.359933333
+Excenevex,74_Exc_6,ligne-d'eau,1,125.0,3.0,0.0,3.0,update,NE,90,128.0,grand-lac,46.34955,6.360016667
+Excenevex,74_Exc_7,ligne-d'eau,1,120.0,0.0,3.0,3.0,update,NE,90,123.0,grand-lac,46.34948333,6.360116667
+Excenevex,74_Exc_8,ligne-d'eau,1,126.0,0.0,2.0,2.0,update,NE,90,128.0,grand-lac,46.3494,6.360266667
+Lugrin,74_Lug_1,ligne-d'eau,4,110.0,12.0,4.0,16.0,update,NNE,35,126.0,haut-lac,46.40485,6.667833333
+Lugrin,74_Lug_2,ligne-d'eau,4,126.0,3.0,6.0,9.0,update,N,35,135.0,haut-lac,46.40485,6.66805
+Lugrin,74_Lug_3,ligne-d'eau,4,66.0,1.0,5.0,6.0,update,NNO,35,72.0,haut-lac,46.40483333,6.668216667
+Meillerie,74_Mei_1,ligne-d'eau,2,26.0,26.0,5.0,31.0,update,N,7,57.0,haut-lac,46.40773333,6.716533333
+Saint-Disdille,74_StD_1,ligne-d'eau,4,79.0,15.0,2.0,17.0,update,N,30,96.0,grand-lac,46.40105,6.502066667
+Saint-Disdille,74_StD_2,ligne-d'eau,4,221.0,14.0,11.0,25.0,update,N,30,246.0,grand-lac,46.40106667,6.502333333
+Saint-Disdille,74_StD_3,ligne-d'eau,4,261.0,43.0,30.0,73.0,update,NNO,30,334.0,grand-lac,46.40106667,6.502516667
+Saint-Disdille,74_StD_4,ligne-d'eau,4,115.0,8.0,8.0,16.0,update,NNO,30,131.0,grand-lac,46.4011,6.502683333
+Saint-Disdille,74_StD_5,ligne-d'eau,4,116.0,1.0,0.0,1.0,update,NNO,30,117.0,grand-lac,46.40115,6.50275
+Saint-Disdille,74_StD_6,ligne-d'eau,4,113.0,40.0,2.0,42.0,update,NO,30,155.0,grand-lac,46.40126667,6.502916667
+Tougues,74_Tou_1,ligne-d'eau,2,63.0,3.0,8.0,11.0,update,NO,45,74.0,petit-lac,46.32471667,6.256883333
+Tougues,74_Tou_2,ligne-d'eau,2,161.0,3.0,2.0,5.0,update,NO,45,166.0,petit-lac,46.32481667,6.256983333
+Tougues,74_Tou_3,ligne-d'eau,2,21.0,6.0,6.0,12.0,update,NO,45,33.0,petit-lac,46.32491667,6.257066667
+Tougues,74_Tou_4,ligne-d'eau,2,20.0,2.0,3.0,5.0,update,NO,45,25.0,petit-lac,46.32501667,6.257233333
+Tougues,74_Tou_6,ligne-d'eau,2,50.0,6.0,1.0,7.0,update,NO,45,57.0,petit-lac,46.32535,6.257533333
+Port Choiseul,GE_Por_1,ligne-d'eau,3,37.0,2.0,1.0,3.0,update,NE,70,40.0,petit-lac,46.28966667,6.170716667
+Port Choiseul,GE_Por_2,ligne-d'eau,3,61.0,1.0,0.0,1.0,update,NE,70,62.0,petit-lac,46.28955,6.170783333
+Port Choiseul,GE_Por_3,ligne-d'eau,3,80.0,10.0,1.0,11.0,update,NE,70,91.0,petit-lac,46.28946667,6.17085
+Port Choiseul,GE_Por_4,ligne-d'eau,3,62.0,3.0,5.0,8.0,update,NE,70,70.0,petit-lac,46.28941667,6.1709
+Port Choiseul,GE_Por_5,ligne-d'eau,3,35.0,0.0,1.0,1.0,update,NE,70,36.0,petit-lac,46.28936667,6.17095
+Port Choiseul,GE_Por_6,ligne-d'eau,3,84.0,1.0,0.0,1.0,update,NE,70,85.0,petit-lac,46.28928333,6.170966667
+Grangettes,VD_Grs_1,ligne-d'eau,1,181.0,14.0,502.0,516.0,update,NO,40,697.0,haut-lac,46.39621667,6.886716667
+Grangettes,VD_Grs_2,ligne-d'eau,1,112.0,10.0,166.0,176.0,update,NO,40,288.0,haut-lac,46.39626667,6.8868
+Grangettes,VD_Grs_4,ligne-d'eau,1,273.0,6.0,316.0,322.0,update,NO,40,595.0,haut-lac,46.39636667,6.886933333
+Préverenges,VD_Pré_2,ligne-d'eau,1,240.0,40.0,604.0,644.0,update,SO,80,884.0,grand-lac,46.51146667,6.5299

@@ -1,0 +1,409 @@
+place,événement,zone,substrat,matériel,y,région
+Hermance,GE_Her_1,ligne-d'eau,Graviers,fibres,79.0,petit-lac
+Hermance,GE_Her_2,ligne-d'eau,Graviers,fibres,25.0,petit-lac
+Hermance,GE_Her_3,ligne-d'eau,Graviers,fibres,69.0,petit-lac
+Hermance,GE_Her_4,ligne-d'eau,Graviers,fibres,76.0,petit-lac
+Savonière,GE_Sav_1,ligne-d'eau,Galets,fibres,110.0,petit-lac
+Savonière,GE_Sav_2,ligne-d'eau,Galets,fibres,24.0,petit-lac
+Savonière,GE_Sav_3,ligne-d'eau,Galets,fibres,210.0,petit-lac
+Baby Plage,GE_Bab_1,ligne-d'eau,Sables fin,fibres,22.0,petit-lac
+Baby Plage,GE_Bab_2,ligne-d'eau,Sables fin,fibres,122.0,petit-lac
+Baby Plage,GE_Bab_3,ligne-d'eau,Sables fin,fibres,31.0,petit-lac
+Baby Plage,GE_Bab_4,ligne-d'eau,Sables fin,fibres,21.0,petit-lac
+Baby Plage,GE_Bab_5,ligne-d'eau,Sables fin,fibres,119.0,petit-lac
+Baby Plage,GE_Bab_6,plage-seche,Sables fin,fibres,51.0,petit-lac
+Baby Plage,GE_Bab_7,plage-seche,Sables fin,fibres,88.0,petit-lac
+Baby Plage,GE_Bab_8,plage-seche,Sables fin,fibres,203.0,petit-lac
+Versoix,GE_Ver_1,ligne-d'eau,Graviers,fibres,59.0,petit-lac
+Versoix,GE_Ver_2,ligne-d'eau,Graviers,fibres,134.0,petit-lac
+Versoix,GE_Ver_3,ligne-d'eau,Graviers,fibres,89.0,petit-lac
+Versoix,GE_Ver_4,plage-seche,Graviers,fibres,84.0,petit-lac
+Crans,VD_Cra_1,ligne-d'eau,Sables grossiers,fibres,17.0,petit-lac
+Gland,VD_Gld_1,ligne-d'eau,Sables grossiers,fibres,26.0,grand-lac
+Rolle,VD_Rol_1,ligne-d'eau,Sables grossiers,fibres,67.0,grand-lac
+Rolle,VD_Rol_2,ligne-d'eau,Sables grossiers,fibres,28.0,grand-lac
+Rolle,VD_Rol_3,ligne-d'eau,Sables grossiers,fibres,60.0,grand-lac
+Rolle,VD_Rol_4,ligne-d'eau,Sables grossiers,fibres,160.0,grand-lac
+Rolle,VD_Rol_5,ligne-d'eau,Sables grossiers,fibres,98.0,grand-lac
+Rolle,VD_Rol_6,ligne-d'eau,Sables grossiers,fibres,145.0,grand-lac
+Rolle,VD_Rol_7,ligne-d'eau,Sables grossiers,fibres,177.0,grand-lac
+Rolle,VD_Rol_8,ligne-d'eau,Sables grossiers,fibres,83.0,grand-lac
+Rolle,VD_Rol_9,ligne-d'eau,Sables grossiers,fibres,72.0,grand-lac
+Rolle,VD_Rol_10,ligne-d'eau,Sables grossiers,fibres,72.0,grand-lac
+Rolle,VD_Rol_11,plage-seche,Sables grossiers,fibres,155.0,grand-lac
+Rolle,VD_Rol_12,plage-seche,Sables grossiers,fibres,99.0,grand-lac
+Rolle,VD_Rol_13,plage-seche,Sables grossiers,fibres,156.0,grand-lac
+Rolle,VD_Rol_14,plage-seche,Sables grossiers,fibres,72.0,grand-lac
+Rolle,VD_Rol_15,plage-seche,Sables grossiers,fibres,131.0,grand-lac
+Rolle,VD_Rol_16,plage-seche,Sables grossiers,fibres,155.0,grand-lac
+Rolle,VD_Rol_17,plage-seche,Sables grossiers,fibres,84.0,grand-lac
+Rolle,VD_Rol_18,plage-seche,Sables grossiers,fibres,58.0,grand-lac
+Rolle,VD_Rol_19,plage-seche,Sables grossiers,fibres,97.0,grand-lac
+Rolle,VD_Rol_20,plage-seche,Sables grossiers,fibres,98.0,grand-lac
+Rolle,VD_Rol_21,plage-seche,Sables grossiers,fibres,240.0,grand-lac
+Aubonne,VD_Aub_1,ligne-d'eau,Galets,fibres,39.0,grand-lac
+Aubonne,VD_Aub_2,ligne-d'eau,Galets,fibres,51.0,grand-lac
+Aubonne,VD_Aub_3,ligne-d'eau,Galets,fibres,86.0,grand-lac
+Aubonne,VD_Aub_4,ligne-d'eau,Galets,fibres,30.0,grand-lac
+Aubonne,VD_Aub_5,ligne-d'eau,Galets,fibres,42.0,grand-lac
+Aubonne,VD_Aub_6,plage-seche,Galets,fibres,76.0,grand-lac
+Tolochenaz,VD_Tol_1,ligne-d'eau,Sables grossiers,fibres,54.0,grand-lac
+Tolochenaz,VD_Tol_2,ligne-d'eau,Sables grossiers,fibres,54.0,grand-lac
+Tolochenaz,VD_Tol_3,ligne-d'eau,Sables grossiers,fibres,82.0,grand-lac
+Tolochenaz,VD_Tol_4,ligne-d'eau,Sables grossiers,fibres,176.0,grand-lac
+Préverenges,VD_Pré_1,ligne-d'eau,Sables fin,fibres,179.0,grand-lac
+Préverenges,VD_Pré_3,ligne-d'eau,Sables fin,fibres,251.0,grand-lac
+Préverenges,VD_Pré_4,ligne-d'eau,Sables fin,fibres,36.0,grand-lac
+Préverenges,VD_Pré_5,ligne-d'eau,Sables fin,fibres,67.0,grand-lac
+Préverenges,VD_Pré_6,ligne-d'eau,Sables fin,fibres,69.0,grand-lac
+Préverenges,VD_Pré_7,ligne-d'eau,Sables fin,fibres,110.0,grand-lac
+Préverenges,VD_Pré_8,ligne-d'eau,Sables fin,fibres,132.0,grand-lac
+Préverenges,VD_Pré_9,ligne-d'eau,Sables fin,fibres,118.0,grand-lac
+Préverenges,VD_Pré_10,ligne-d'eau,Sables fin,fibres,53.0,grand-lac
+Préverenges,VD_Pré_11,plage-seche,Sables fin,fibres,224.0,grand-lac
+Préverenges,VD_Pré_12,plage-seche,Sables fin,fibres,124.0,grand-lac
+Préverenges,VD_Pré_14,plage-seche,Sables fin,fibres,208.0,grand-lac
+Préverenges,VD_Pré_16,plage-seche,Sables fin,fibres,94.0,grand-lac
+Préverenges,VD_Pré_17,plage-seche,Sables fin,fibres,130.0,grand-lac
+Préverenges,VD_Pré_19,plage-seche,Sables fin,fibres,120.0,grand-lac
+Préverenges,VD_Pré_20,plage-seche,Sables fin,fibres,121.0,grand-lac
+Préverenges,VD_Pré_21,plage-seche,Sables fin,fibres,206.0,grand-lac
+Vidy,VD_Vid_1,ligne-d'eau,Sables fin,fibres,102.0,grand-lac
+Vidy,VD_Vid_2,ligne-d'eau,Sables fin,fibres,202.0,grand-lac
+Vidy,VD_Vid_3,ligne-d'eau,Sables fin,fibres,39.0,grand-lac
+Vidy,VD_Vid_4,ligne-d'eau,Sables fin,fibres,24.0,grand-lac
+Vidy,VD_Vid_5,ligne-d'eau,Sables fin,fibres,36.0,grand-lac
+Vidy,VD_Vid_6,ligne-d'eau,Sables fin,fibres,34.0,grand-lac
+Lutry,VD_Lut_1,ligne-d'eau,Galets,fibres,126.0,grand-lac
+Lutry,VD_Lut_2,ligne-d'eau,Galets,fibres,61.0,grand-lac
+Lutry,VD_Lut_3,ligne-d'eau,Galets,fibres,68.0,grand-lac
+Lutry,VD_Lut_4,ligne-d'eau,Galets,fibres,39.0,grand-lac
+Cully,VD_Cul_1,ligne-d'eau,Graviers,fibres,117.0,grand-lac
+Pichette,VD_Pic_1,ligne-d'eau,Graviers,fibres,18.0,haut-lac
+Pichette,VD_Pic_2,ligne-d'eau,Graviers,fibres,107.0,haut-lac
+Pichette,VD_Pic_3,ligne-d'eau,Graviers,fibres,75.0,haut-lac
+Clarens,VD_Cls_1,ligne-d'eau,Galets,fibres,44.0,haut-lac
+Clarens,VD_Cls_2,ligne-d'eau,Galets,fibres,84.0,haut-lac
+Clarens,VD_Cls_3,ligne-d'eau,Galets,fibres,42.0,haut-lac
+Clarens,VD_Cls_4,ligne-d'eau,Galets,fibres,25.0,haut-lac
+Grangettes,VD_Grs_3,ligne-d'eau,Sables fin,fibres,89.0,haut-lac
+Bouveret,VS_Bou_1,ligne-d'eau,Sables fin,fibres,68.0,haut-lac
+Bouveret,VS_Bou_2,ligne-d'eau,Sables fin,fibres,100.0,haut-lac
+Bouveret,VS_Bou_3,ligne-d'eau,Sables fin,fibres,36.0,haut-lac
+Bouveret,VS_Bou_4,ligne-d'eau,Sables fin,fibres,37.0,haut-lac
+Bouveret,VS_Bou_5,ligne-d'eau,Sables fin,fibres,199.0,haut-lac
+Bouveret,VS_Bou_6,ligne-d'eau,Sables fin,fibres,35.0,haut-lac
+Bouveret,VS_Bou_7,ligne-d'eau,Sables fin,fibres,53.0,haut-lac
+Tougues,74_Tou_5,ligne-d'eau,Sables grossiers,fibres,43.0,haut-lac
+Amphion,74_Amp_1,ligne-d'eau,Galets,fibres,97.0,grand-lac
+Amphion,74_Amp_2,ligne-d'eau,Galets,fibres,121.0,grand-lac
+Amphion,74_Amp_3,ligne-d'eau,Galets,fibres,31.0,grand-lac
+Amphion,74_Amp_4,ligne-d'eau,Galets,fibres,179.0,grand-lac
+Anthy,74_Ant_1,ligne-d'eau,Galets,fibres,29.0,grand-lac
+Anthy,74_Ant_2,ligne-d'eau,Galets,fibres,33.0,grand-lac
+Anthy,74_Ant_3,ligne-d'eau,Galets,fibres,61.0,grand-lac
+Excenevex,74_Exc_1,ligne-d'eau,Sables fin,fibres,84.0,grand-lac
+Excenevex,74_Exc_2,ligne-d'eau,Sables fin,fibres,184.0,grand-lac
+Excenevex,74_Exc_3,ligne-d'eau,Sables fin,fibres,109.0,grand-lac
+Excenevex,74_Exc_4,ligne-d'eau,Sables fin,fibres,39.0,grand-lac
+Excenevex,74_Exc_5,ligne-d'eau,Sables fin,fibres,33.0,grand-lac
+Excenevex,74_Exc_6,ligne-d'eau,Sables fin,fibres,125.0,grand-lac
+Excenevex,74_Exc_7,ligne-d'eau,Sables fin,fibres,120.0,grand-lac
+Excenevex,74_Exc_8,ligne-d'eau,Sables fin,fibres,126.0,grand-lac
+Lugrin,74_Lug_1,ligne-d'eau,Galets,fibres,110.0,haut-lac
+Lugrin,74_Lug_2,ligne-d'eau,Galets,fibres,126.0,haut-lac
+Lugrin,74_Lug_3,ligne-d'eau,Galets,fibres,66.0,haut-lac
+Meillerie,74_Mei_1,ligne-d'eau,Sables grossiers,fibres,26.0,haut-lac
+Saint-Disdille,74_StD_1,ligne-d'eau,Galets,fibres,79.0,grand-lac
+Saint-Disdille,74_StD_2,ligne-d'eau,Galets,fibres,221.0,grand-lac
+Saint-Disdille,74_StD_3,ligne-d'eau,Galets,fibres,261.0,grand-lac
+Saint-Disdille,74_StD_4,ligne-d'eau,Galets,fibres,115.0,grand-lac
+Saint-Disdille,74_StD_5,ligne-d'eau,Galets,fibres,116.0,grand-lac
+Saint-Disdille,74_StD_6,ligne-d'eau,Galets,fibres,113.0,grand-lac
+Tougues,74_Tou_1,ligne-d'eau,Sables grossiers,fibres,63.0,haut-lac
+Tougues,74_Tou_2,ligne-d'eau,Sables grossiers,fibres,161.0,haut-lac
+Tougues,74_Tou_3,ligne-d'eau,Sables grossiers,fibres,21.0,haut-lac
+Tougues,74_Tou_4,ligne-d'eau,Sables grossiers,fibres,20.0,haut-lac
+Tougues,74_Tou_6,ligne-d'eau,Sables grossiers,fibres,50.0,haut-lac
+Port Choiseul,GE_Por_1,ligne-d'eau,Graviers,fibres,37.0,petit-lac
+Port Choiseul,GE_Por_2,ligne-d'eau,Graviers,fibres,61.0,petit-lac
+Port Choiseul,GE_Por_3,ligne-d'eau,Graviers,fibres,80.0,petit-lac
+Port Choiseul,GE_Por_4,ligne-d'eau,Graviers,fibres,62.0,petit-lac
+Port Choiseul,GE_Por_5,ligne-d'eau,Graviers,fibres,35.0,petit-lac
+Port Choiseul,GE_Por_6,ligne-d'eau,Graviers,fibres,84.0,petit-lac
+Grangettes,VD_Grs_1,ligne-d'eau,Sables fin,fibres,181.0,haut-lac
+Grangettes,VD_Grs_2,ligne-d'eau,Sables fin,fibres,112.0,haut-lac
+Grangettes,VD_Grs_4,ligne-d'eau,Sables fin,fibres,273.0,haut-lac
+Préverenges,VD_Pré_2,ligne-d'eau,Sables fin,fibres,240.0,grand-lac
+Hermance,GE_Her_1,ligne-d'eau,Graviers,fdure,3.0,petit-lac
+Hermance,GE_Her_2,ligne-d'eau,Graviers,fdure,1.0,petit-lac
+Hermance,GE_Her_3,ligne-d'eau,Graviers,fdure,4.0,petit-lac
+Hermance,GE_Her_4,ligne-d'eau,Graviers,fdure,9.0,petit-lac
+Savonière,GE_Sav_1,ligne-d'eau,Galets,fdure,10.0,petit-lac
+Savonière,GE_Sav_2,ligne-d'eau,Galets,fdure,2.0,petit-lac
+Savonière,GE_Sav_3,ligne-d'eau,Galets,fdure,34.0,petit-lac
+Baby Plage,GE_Bab_1,ligne-d'eau,Sables fin,fdure,1.0,petit-lac
+Baby Plage,GE_Bab_2,ligne-d'eau,Sables fin,fdure,3.0,petit-lac
+Baby Plage,GE_Bab_3,ligne-d'eau,Sables fin,fdure,1.0,petit-lac
+Baby Plage,GE_Bab_4,ligne-d'eau,Sables fin,fdure,6.0,petit-lac
+Baby Plage,GE_Bab_5,ligne-d'eau,Sables fin,fdure,19.0,petit-lac
+Baby Plage,GE_Bab_6,plage-seche,Sables fin,fdure,8.0,petit-lac
+Baby Plage,GE_Bab_7,plage-seche,Sables fin,fdure,12.0,petit-lac
+Baby Plage,GE_Bab_8,plage-seche,Sables fin,fdure,16.0,petit-lac
+Versoix,GE_Ver_1,ligne-d'eau,Graviers,fdure,3.0,petit-lac
+Versoix,GE_Ver_2,ligne-d'eau,Graviers,fdure,10.0,petit-lac
+Versoix,GE_Ver_3,ligne-d'eau,Graviers,fdure,1.0,petit-lac
+Versoix,GE_Ver_4,plage-seche,Graviers,fdure,17.0,petit-lac
+Crans,VD_Cra_1,ligne-d'eau,Sables grossiers,fdure,2.0,petit-lac
+Gland,VD_Gld_1,ligne-d'eau,Sables grossiers,fdure,8.0,grand-lac
+Rolle,VD_Rol_1,ligne-d'eau,Sables grossiers,fdure,30.0,grand-lac
+Rolle,VD_Rol_2,ligne-d'eau,Sables grossiers,fdure,35.0,grand-lac
+Rolle,VD_Rol_3,ligne-d'eau,Sables grossiers,fdure,15.0,grand-lac
+Rolle,VD_Rol_4,ligne-d'eau,Sables grossiers,fdure,24.0,grand-lac
+Rolle,VD_Rol_5,ligne-d'eau,Sables grossiers,fdure,21.0,grand-lac
+Rolle,VD_Rol_6,ligne-d'eau,Sables grossiers,fdure,40.0,grand-lac
+Rolle,VD_Rol_7,ligne-d'eau,Sables grossiers,fdure,21.0,grand-lac
+Rolle,VD_Rol_8,ligne-d'eau,Sables grossiers,fdure,41.0,grand-lac
+Rolle,VD_Rol_9,ligne-d'eau,Sables grossiers,fdure,21.0,grand-lac
+Rolle,VD_Rol_10,ligne-d'eau,Sables grossiers,fdure,10.0,grand-lac
+Rolle,VD_Rol_11,plage-seche,Sables grossiers,fdure,36.0,grand-lac
+Rolle,VD_Rol_12,plage-seche,Sables grossiers,fdure,20.0,grand-lac
+Rolle,VD_Rol_13,plage-seche,Sables grossiers,fdure,198.0,grand-lac
+Rolle,VD_Rol_14,plage-seche,Sables grossiers,fdure,43.0,grand-lac
+Rolle,VD_Rol_15,plage-seche,Sables grossiers,fdure,42.0,grand-lac
+Rolle,VD_Rol_16,plage-seche,Sables grossiers,fdure,12.0,grand-lac
+Rolle,VD_Rol_17,plage-seche,Sables grossiers,fdure,16.0,grand-lac
+Rolle,VD_Rol_18,plage-seche,Sables grossiers,fdure,12.0,grand-lac
+Rolle,VD_Rol_19,plage-seche,Sables grossiers,fdure,33.0,grand-lac
+Rolle,VD_Rol_20,plage-seche,Sables grossiers,fdure,31.0,grand-lac
+Rolle,VD_Rol_21,plage-seche,Sables grossiers,fdure,154.0,grand-lac
+Aubonne,VD_Aub_1,ligne-d'eau,Galets,fdure,5.0,grand-lac
+Aubonne,VD_Aub_2,ligne-d'eau,Galets,fdure,8.0,grand-lac
+Aubonne,VD_Aub_3,ligne-d'eau,Galets,fdure,2.0,grand-lac
+Aubonne,VD_Aub_4,ligne-d'eau,Galets,fdure,37.0,grand-lac
+Aubonne,VD_Aub_5,ligne-d'eau,Galets,fdure,11.0,grand-lac
+Aubonne,VD_Aub_6,plage-seche,Galets,fdure,10.0,grand-lac
+Tolochenaz,VD_Tol_1,ligne-d'eau,Sables grossiers,fdure,3.0,grand-lac
+Tolochenaz,VD_Tol_2,ligne-d'eau,Sables grossiers,fdure,1.0,grand-lac
+Tolochenaz,VD_Tol_3,ligne-d'eau,Sables grossiers,fdure,7.0,grand-lac
+Tolochenaz,VD_Tol_4,ligne-d'eau,Sables grossiers,fdure,6.0,grand-lac
+Préverenges,VD_Pré_1,ligne-d'eau,Sables fin,fdure,16.0,grand-lac
+Préverenges,VD_Pré_3,ligne-d'eau,Sables fin,fdure,112.0,grand-lac
+Préverenges,VD_Pré_4,ligne-d'eau,Sables fin,fdure,41.0,grand-lac
+Préverenges,VD_Pré_5,ligne-d'eau,Sables fin,fdure,58.0,grand-lac
+Préverenges,VD_Pré_6,ligne-d'eau,Sables fin,fdure,15.0,grand-lac
+Préverenges,VD_Pré_7,ligne-d'eau,Sables fin,fdure,32.0,grand-lac
+Préverenges,VD_Pré_8,ligne-d'eau,Sables fin,fdure,9.0,grand-lac
+Préverenges,VD_Pré_9,ligne-d'eau,Sables fin,fdure,43.0,grand-lac
+Préverenges,VD_Pré_10,ligne-d'eau,Sables fin,fdure,40.0,grand-lac
+Préverenges,VD_Pré_11,plage-seche,Sables fin,fdure,23.0,grand-lac
+Préverenges,VD_Pré_12,plage-seche,Sables fin,fdure,13.0,grand-lac
+Préverenges,VD_Pré_14,plage-seche,Sables fin,fdure,26.0,grand-lac
+Préverenges,VD_Pré_16,plage-seche,Sables fin,fdure,14.0,grand-lac
+Préverenges,VD_Pré_17,plage-seche,Sables fin,fdure,21.0,grand-lac
+Préverenges,VD_Pré_19,plage-seche,Sables fin,fdure,18.0,grand-lac
+Préverenges,VD_Pré_20,plage-seche,Sables fin,fdure,29.0,grand-lac
+Préverenges,VD_Pré_21,plage-seche,Sables fin,fdure,85.0,grand-lac
+Vidy,VD_Vid_1,ligne-d'eau,Sables fin,fdure,2.0,grand-lac
+Vidy,VD_Vid_2,ligne-d'eau,Sables fin,fdure,10.0,grand-lac
+Vidy,VD_Vid_3,ligne-d'eau,Sables fin,fdure,1.0,grand-lac
+Vidy,VD_Vid_4,ligne-d'eau,Sables fin,fdure,2.0,grand-lac
+Vidy,VD_Vid_5,ligne-d'eau,Sables fin,fdure,13.0,grand-lac
+Vidy,VD_Vid_6,ligne-d'eau,Sables fin,fdure,1.0,grand-lac
+Lutry,VD_Lut_1,ligne-d'eau,Galets,fdure,0.0,grand-lac
+Lutry,VD_Lut_2,ligne-d'eau,Galets,fdure,7.0,grand-lac
+Lutry,VD_Lut_3,ligne-d'eau,Galets,fdure,2.0,grand-lac
+Lutry,VD_Lut_4,ligne-d'eau,Galets,fdure,2.0,grand-lac
+Cully,VD_Cul_1,ligne-d'eau,Graviers,fdure,11.0,grand-lac
+Pichette,VD_Pic_1,ligne-d'eau,Graviers,fdure,2.0,haut-lac
+Pichette,VD_Pic_2,ligne-d'eau,Graviers,fdure,6.0,haut-lac
+Pichette,VD_Pic_3,ligne-d'eau,Graviers,fdure,8.0,haut-lac
+Clarens,VD_Cls_1,ligne-d'eau,Galets,fdure,7.0,haut-lac
+Clarens,VD_Cls_2,ligne-d'eau,Galets,fdure,3.0,haut-lac
+Clarens,VD_Cls_3,ligne-d'eau,Galets,fdure,7.0,haut-lac
+Clarens,VD_Cls_4,ligne-d'eau,Galets,fdure,2.0,haut-lac
+Grangettes,VD_Grs_3,ligne-d'eau,Sables fin,fdure,10.0,haut-lac
+Bouveret,VS_Bou_1,ligne-d'eau,Sables fin,fdure,14.0,haut-lac
+Bouveret,VS_Bou_2,ligne-d'eau,Sables fin,fdure,9.0,haut-lac
+Bouveret,VS_Bou_3,ligne-d'eau,Sables fin,fdure,1.0,haut-lac
+Bouveret,VS_Bou_4,ligne-d'eau,Sables fin,fdure,18.0,haut-lac
+Bouveret,VS_Bou_5,ligne-d'eau,Sables fin,fdure,59.0,haut-lac
+Bouveret,VS_Bou_6,ligne-d'eau,Sables fin,fdure,0.0,haut-lac
+Bouveret,VS_Bou_7,ligne-d'eau,Sables fin,fdure,5.0,haut-lac
+Tougues,74_Tou_5,ligne-d'eau,Sables grossiers,fdure,8.0,haut-lac
+Amphion,74_Amp_1,ligne-d'eau,Galets,fdure,0.0,grand-lac
+Amphion,74_Amp_2,ligne-d'eau,Galets,fdure,3.0,grand-lac
+Amphion,74_Amp_3,ligne-d'eau,Galets,fdure,0.0,grand-lac
+Amphion,74_Amp_4,ligne-d'eau,Galets,fdure,2.0,grand-lac
+Anthy,74_Ant_1,ligne-d'eau,Galets,fdure,5.0,grand-lac
+Anthy,74_Ant_2,ligne-d'eau,Galets,fdure,8.0,grand-lac
+Anthy,74_Ant_3,ligne-d'eau,Galets,fdure,9.0,grand-lac
+Excenevex,74_Exc_1,ligne-d'eau,Sables fin,fdure,13.0,grand-lac
+Excenevex,74_Exc_2,ligne-d'eau,Sables fin,fdure,0.0,grand-lac
+Excenevex,74_Exc_3,ligne-d'eau,Sables fin,fdure,11.0,grand-lac
+Excenevex,74_Exc_4,ligne-d'eau,Sables fin,fdure,3.0,grand-lac
+Excenevex,74_Exc_5,ligne-d'eau,Sables fin,fdure,1.0,grand-lac
+Excenevex,74_Exc_6,ligne-d'eau,Sables fin,fdure,3.0,grand-lac
+Excenevex,74_Exc_7,ligne-d'eau,Sables fin,fdure,0.0,grand-lac
+Excenevex,74_Exc_8,ligne-d'eau,Sables fin,fdure,0.0,grand-lac
+Lugrin,74_Lug_1,ligne-d'eau,Galets,fdure,12.0,haut-lac
+Lugrin,74_Lug_2,ligne-d'eau,Galets,fdure,3.0,haut-lac
+Lugrin,74_Lug_3,ligne-d'eau,Galets,fdure,1.0,haut-lac
+Meillerie,74_Mei_1,ligne-d'eau,Sables grossiers,fdure,26.0,haut-lac
+Saint-Disdille,74_StD_1,ligne-d'eau,Galets,fdure,15.0,grand-lac
+Saint-Disdille,74_StD_2,ligne-d'eau,Galets,fdure,14.0,grand-lac
+Saint-Disdille,74_StD_3,ligne-d'eau,Galets,fdure,43.0,grand-lac
+Saint-Disdille,74_StD_4,ligne-d'eau,Galets,fdure,8.0,grand-lac
+Saint-Disdille,74_StD_5,ligne-d'eau,Galets,fdure,1.0,grand-lac
+Saint-Disdille,74_StD_6,ligne-d'eau,Galets,fdure,40.0,grand-lac
+Tougues,74_Tou_1,ligne-d'eau,Sables grossiers,fdure,3.0,haut-lac
+Tougues,74_Tou_2,ligne-d'eau,Sables grossiers,fdure,3.0,haut-lac
+Tougues,74_Tou_3,ligne-d'eau,Sables grossiers,fdure,6.0,haut-lac
+Tougues,74_Tou_4,ligne-d'eau,Sables grossiers,fdure,2.0,haut-lac
+Tougues,74_Tou_6,ligne-d'eau,Sables grossiers,fdure,6.0,haut-lac
+Port Choiseul,GE_Por_1,ligne-d'eau,Graviers,fdure,2.0,petit-lac
+Port Choiseul,GE_Por_2,ligne-d'eau,Graviers,fdure,1.0,petit-lac
+Port Choiseul,GE_Por_3,ligne-d'eau,Graviers,fdure,10.0,petit-lac
+Port Choiseul,GE_Por_4,ligne-d'eau,Graviers,fdure,3.0,petit-lac
+Port Choiseul,GE_Por_5,ligne-d'eau,Graviers,fdure,0.0,petit-lac
+Port Choiseul,GE_Por_6,ligne-d'eau,Graviers,fdure,1.0,petit-lac
+Grangettes,VD_Grs_1,ligne-d'eau,Sables fin,fdure,14.0,haut-lac
+Grangettes,VD_Grs_2,ligne-d'eau,Sables fin,fdure,10.0,haut-lac
+Grangettes,VD_Grs_4,ligne-d'eau,Sables fin,fdure,6.0,haut-lac
+Préverenges,VD_Pré_2,ligne-d'eau,Sables fin,fdure,40.0,grand-lac
+Hermance,GE_Her_1,ligne-d'eau,Graviers,souple,0.0,petit-lac
+Hermance,GE_Her_2,ligne-d'eau,Graviers,souple,0.0,petit-lac
+Hermance,GE_Her_3,ligne-d'eau,Graviers,souple,0.0,petit-lac
+Hermance,GE_Her_4,ligne-d'eau,Graviers,souple,0.0,petit-lac
+Savonière,GE_Sav_1,ligne-d'eau,Galets,souple,0.0,petit-lac
+Savonière,GE_Sav_2,ligne-d'eau,Galets,souple,0.0,petit-lac
+Savonière,GE_Sav_3,ligne-d'eau,Galets,souple,0.0,petit-lac
+Baby Plage,GE_Bab_1,ligne-d'eau,Sables fin,souple,0.0,petit-lac
+Baby Plage,GE_Bab_2,ligne-d'eau,Sables fin,souple,0.0,petit-lac
+Baby Plage,GE_Bab_3,ligne-d'eau,Sables fin,souple,0.0,petit-lac
+Baby Plage,GE_Bab_4,ligne-d'eau,Sables fin,souple,0.0,petit-lac
+Baby Plage,GE_Bab_5,ligne-d'eau,Sables fin,souple,0.0,petit-lac
+Baby Plage,GE_Bab_6,plage-seche,Sables fin,souple,0.0,petit-lac
+Baby Plage,GE_Bab_7,plage-seche,Sables fin,souple,0.0,petit-lac
+Baby Plage,GE_Bab_8,plage-seche,Sables fin,souple,4.0,petit-lac
+Versoix,GE_Ver_1,ligne-d'eau,Graviers,souple,0.0,petit-lac
+Versoix,GE_Ver_2,ligne-d'eau,Graviers,souple,2.0,petit-lac
+Versoix,GE_Ver_3,ligne-d'eau,Graviers,souple,0.0,petit-lac
+Versoix,GE_Ver_4,plage-seche,Graviers,souple,0.0,petit-lac
+Crans,VD_Cra_1,ligne-d'eau,Sables grossiers,souple,0.0,petit-lac
+Gland,VD_Gld_1,ligne-d'eau,Sables grossiers,souple,6.0,grand-lac
+Rolle,VD_Rol_1,ligne-d'eau,Sables grossiers,souple,2.0,grand-lac
+Rolle,VD_Rol_2,ligne-d'eau,Sables grossiers,souple,0.0,grand-lac
+Rolle,VD_Rol_3,ligne-d'eau,Sables grossiers,souple,3.0,grand-lac
+Rolle,VD_Rol_4,ligne-d'eau,Sables grossiers,souple,2.0,grand-lac
+Rolle,VD_Rol_5,ligne-d'eau,Sables grossiers,souple,2.0,grand-lac
+Rolle,VD_Rol_6,ligne-d'eau,Sables grossiers,souple,9.0,grand-lac
+Rolle,VD_Rol_7,ligne-d'eau,Sables grossiers,souple,2.0,grand-lac
+Rolle,VD_Rol_8,ligne-d'eau,Sables grossiers,souple,6.0,grand-lac
+Rolle,VD_Rol_9,ligne-d'eau,Sables grossiers,souple,2.0,grand-lac
+Rolle,VD_Rol_10,ligne-d'eau,Sables grossiers,souple,3.0,grand-lac
+Rolle,VD_Rol_11,plage-seche,Sables grossiers,souple,1.0,grand-lac
+Rolle,VD_Rol_12,plage-seche,Sables grossiers,souple,5.0,grand-lac
+Rolle,VD_Rol_13,plage-seche,Sables grossiers,souple,1.0,grand-lac
+Rolle,VD_Rol_14,plage-seche,Sables grossiers,souple,1.0,grand-lac
+Rolle,VD_Rol_15,plage-seche,Sables grossiers,souple,2.0,grand-lac
+Rolle,VD_Rol_16,plage-seche,Sables grossiers,souple,4.0,grand-lac
+Rolle,VD_Rol_17,plage-seche,Sables grossiers,souple,5.0,grand-lac
+Rolle,VD_Rol_18,plage-seche,Sables grossiers,souple,0.0,grand-lac
+Rolle,VD_Rol_19,plage-seche,Sables grossiers,souple,4.0,grand-lac
+Rolle,VD_Rol_20,plage-seche,Sables grossiers,souple,7.0,grand-lac
+Rolle,VD_Rol_21,plage-seche,Sables grossiers,souple,6.0,grand-lac
+Aubonne,VD_Aub_1,ligne-d'eau,Galets,souple,0.0,grand-lac
+Aubonne,VD_Aub_2,ligne-d'eau,Galets,souple,0.0,grand-lac
+Aubonne,VD_Aub_3,ligne-d'eau,Galets,souple,1.0,grand-lac
+Aubonne,VD_Aub_4,ligne-d'eau,Galets,souple,0.0,grand-lac
+Aubonne,VD_Aub_5,ligne-d'eau,Galets,souple,2.0,grand-lac
+Aubonne,VD_Aub_6,plage-seche,Galets,souple,1.0,grand-lac
+Tolochenaz,VD_Tol_1,ligne-d'eau,Sables grossiers,souple,0.0,grand-lac
+Tolochenaz,VD_Tol_2,ligne-d'eau,Sables grossiers,souple,0.0,grand-lac
+Tolochenaz,VD_Tol_3,ligne-d'eau,Sables grossiers,souple,0.0,grand-lac
+Tolochenaz,VD_Tol_4,ligne-d'eau,Sables grossiers,souple,0.0,grand-lac
+Préverenges,VD_Pré_1,ligne-d'eau,Sables fin,souple,3.0,grand-lac
+Préverenges,VD_Pré_3,ligne-d'eau,Sables fin,souple,118.0,grand-lac
+Préverenges,VD_Pré_4,ligne-d'eau,Sables fin,souple,1.0,grand-lac
+Préverenges,VD_Pré_5,ligne-d'eau,Sables fin,souple,3.0,grand-lac
+Préverenges,VD_Pré_6,ligne-d'eau,Sables fin,souple,2.0,grand-lac
+Préverenges,VD_Pré_7,ligne-d'eau,Sables fin,souple,6.0,grand-lac
+Préverenges,VD_Pré_8,ligne-d'eau,Sables fin,souple,10.0,grand-lac
+Préverenges,VD_Pré_9,ligne-d'eau,Sables fin,souple,13.0,grand-lac
+Préverenges,VD_Pré_10,ligne-d'eau,Sables fin,souple,2.0,grand-lac
+Préverenges,VD_Pré_11,plage-seche,Sables fin,souple,6.0,grand-lac
+Préverenges,VD_Pré_12,plage-seche,Sables fin,souple,2.0,grand-lac
+Préverenges,VD_Pré_14,plage-seche,Sables fin,souple,8.0,grand-lac
+Préverenges,VD_Pré_16,plage-seche,Sables fin,souple,6.0,grand-lac
+Préverenges,VD_Pré_17,plage-seche,Sables fin,souple,6.0,grand-lac
+Préverenges,VD_Pré_19,plage-seche,Sables fin,souple,4.0,grand-lac
+Préverenges,VD_Pré_20,plage-seche,Sables fin,souple,7.0,grand-lac
+Préverenges,VD_Pré_21,plage-seche,Sables fin,souple,11.0,grand-lac
+Vidy,VD_Vid_1,ligne-d'eau,Sables fin,souple,0.0,grand-lac
+Vidy,VD_Vid_2,ligne-d'eau,Sables fin,souple,1.0,grand-lac
+Vidy,VD_Vid_3,ligne-d'eau,Sables fin,souple,0.0,grand-lac
+Vidy,VD_Vid_4,ligne-d'eau,Sables fin,souple,0.0,grand-lac
+Vidy,VD_Vid_5,ligne-d'eau,Sables fin,souple,2.0,grand-lac
+Vidy,VD_Vid_6,ligne-d'eau,Sables fin,souple,0.0,grand-lac
+Lutry,VD_Lut_1,ligne-d'eau,Galets,souple,0.0,grand-lac
+Lutry,VD_Lut_2,ligne-d'eau,Galets,souple,1.0,grand-lac
+Lutry,VD_Lut_3,ligne-d'eau,Galets,souple,2.0,grand-lac
+Lutry,VD_Lut_4,ligne-d'eau,Galets,souple,0.0,grand-lac
+Cully,VD_Cul_1,ligne-d'eau,Graviers,souple,0.0,grand-lac
+Pichette,VD_Pic_1,ligne-d'eau,Graviers,souple,0.0,haut-lac
+Pichette,VD_Pic_2,ligne-d'eau,Graviers,souple,0.0,haut-lac
+Pichette,VD_Pic_3,ligne-d'eau,Graviers,souple,0.0,haut-lac
+Clarens,VD_Cls_1,ligne-d'eau,Galets,souple,1.0,haut-lac
+Clarens,VD_Cls_2,ligne-d'eau,Galets,souple,2.0,haut-lac
+Clarens,VD_Cls_3,ligne-d'eau,Galets,souple,0.0,haut-lac
+Clarens,VD_Cls_4,ligne-d'eau,Galets,souple,0.0,haut-lac
+Grangettes,VD_Grs_3,ligne-d'eau,Sables fin,souple,0.0,haut-lac
+Bouveret,VS_Bou_1,ligne-d'eau,Sables fin,souple,0.0,haut-lac
+Bouveret,VS_Bou_2,ligne-d'eau,Sables fin,souple,0.0,haut-lac
+Bouveret,VS_Bou_3,ligne-d'eau,Sables fin,souple,0.0,haut-lac
+Bouveret,VS_Bou_4,ligne-d'eau,Sables fin,souple,2.0,haut-lac
+Bouveret,VS_Bou_5,ligne-d'eau,Sables fin,souple,0.0,haut-lac
+Bouveret,VS_Bou_6,ligne-d'eau,Sables fin,souple,0.0,haut-lac
+Bouveret,VS_Bou_7,ligne-d'eau,Sables fin,souple,0.0,haut-lac
+Tougues,74_Tou_5,ligne-d'eau,Sables grossiers,souple,0.0,haut-lac
+Amphion,74_Amp_1,ligne-d'eau,Galets,souple,0.0,grand-lac
+Amphion,74_Amp_2,ligne-d'eau,Galets,souple,12.0,grand-lac
+Amphion,74_Amp_3,ligne-d'eau,Galets,souple,0.0,grand-lac
+Amphion,74_Amp_4,ligne-d'eau,Galets,souple,1.0,grand-lac
+Anthy,74_Ant_1,ligne-d'eau,Galets,souple,4.0,grand-lac
+Anthy,74_Ant_2,ligne-d'eau,Galets,souple,16.0,grand-lac
+Anthy,74_Ant_3,ligne-d'eau,Galets,souple,1.0,grand-lac
+Excenevex,74_Exc_1,ligne-d'eau,Sables fin,souple,21.0,grand-lac
+Excenevex,74_Exc_2,ligne-d'eau,Sables fin,souple,6.0,grand-lac
+Excenevex,74_Exc_3,ligne-d'eau,Sables fin,souple,10.0,grand-lac
+Excenevex,74_Exc_4,ligne-d'eau,Sables fin,souple,9.0,grand-lac
+Excenevex,74_Exc_5,ligne-d'eau,Sables fin,souple,4.0,grand-lac
+Excenevex,74_Exc_6,ligne-d'eau,Sables fin,souple,0.0,grand-lac
+Excenevex,74_Exc_7,ligne-d'eau,Sables fin,souple,3.0,grand-lac
+Excenevex,74_Exc_8,ligne-d'eau,Sables fin,souple,2.0,grand-lac
+Lugrin,74_Lug_1,ligne-d'eau,Galets,souple,4.0,haut-lac
+Lugrin,74_Lug_2,ligne-d'eau,Galets,souple,6.0,haut-lac
+Lugrin,74_Lug_3,ligne-d'eau,Galets,souple,5.0,haut-lac
+Meillerie,74_Mei_1,ligne-d'eau,Sables grossiers,souple,5.0,haut-lac
+Saint-Disdille,74_StD_1,ligne-d'eau,Galets,souple,2.0,grand-lac
+Saint-Disdille,74_StD_2,ligne-d'eau,Galets,souple,11.0,grand-lac
+Saint-Disdille,74_StD_3,ligne-d'eau,Galets,souple,30.0,grand-lac
+Saint-Disdille,74_StD_4,ligne-d'eau,Galets,souple,8.0,grand-lac
+Saint-Disdille,74_StD_5,ligne-d'eau,Galets,souple,0.0,grand-lac
+Saint-Disdille,74_StD_6,ligne-d'eau,Galets,souple,2.0,grand-lac
+Tougues,74_Tou_1,ligne-d'eau,Sables grossiers,souple,8.0,haut-lac
+Tougues,74_Tou_2,ligne-d'eau,Sables grossiers,souple,2.0,haut-lac
+Tougues,74_Tou_3,ligne-d'eau,Sables grossiers,souple,6.0,haut-lac
+Tougues,74_Tou_4,ligne-d'eau,Sables grossiers,souple,3.0,haut-lac
+Tougues,74_Tou_6,ligne-d'eau,Sables grossiers,souple,1.0,haut-lac
+Port Choiseul,GE_Por_1,ligne-d'eau,Graviers,souple,1.0,petit-lac
+Port Choiseul,GE_Por_2,ligne-d'eau,Graviers,souple,0.0,petit-lac
+Port Choiseul,GE_Por_3,ligne-d'eau,Graviers,souple,1.0,petit-lac
+Port Choiseul,GE_Por_4,ligne-d'eau,Graviers,souple,5.0,petit-lac
+Port Choiseul,GE_Por_5,ligne-d'eau,Graviers,souple,1.0,petit-lac
+Port Choiseul,GE_Por_6,ligne-d'eau,Graviers,souple,0.0,petit-lac
+Grangettes,VD_Grs_1,ligne-d'eau,Sables fin,souple,502.0,haut-lac
+Grangettes,VD_Grs_2,ligne-d'eau,Sables fin,souple,166.0,haut-lac
+Grangettes,VD_Grs_4,ligne-d'eau,Sables fin,souple,316.0,haut-lac
+Préverenges,VD_Pré_2,ligne-d'eau,Sables fin,souple,604.0,grand-lac
