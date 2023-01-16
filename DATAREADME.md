@@ -12,14 +12,14 @@ The data is cleaned and stored here as it is made available. Therefore this docu
 
 4. data/workDataTwo.csv: The first and second batch of data combined. A status column has been added to indicate if the record is a prior or an update.
 
-6. data/fibersGePosteriorPredictive.json: A subset of the posterior predictive distribution.
+5. data/fibersGePosteriorPredictive.json: A subset of the posterior predictive distribution.
 
-7. data/fibersVdPosteriorPredictive.json: A subset of the posterior predictive distribution. 
+6. data/fibersVdPosteriorPredictive.json: A subset of the posterior predictive distribution. 
 
-8. data/fragmentsGePosteriorPredictive.json: A subset of the posterior predictive distribution. 
+7. data/fragmentsGePosteriorPredictive.json: A subset of the posterior predictive distribution. 
 
-9. data/fragmentsVdPosteriorPredictive.json: A subset of the posterior predictive distribution. 
+8. data/fragmentsVdPosteriorPredictive.json: A subset of the posterior predictive distribution. 
 
-6. data/totalGePosteriorPredictive.json: A subset of the posterior predictive distribution. 
+9. data/totalGePosteriorPredictive.json: A subset of the posterior predictive distribution. 
 
-6. data/totalVdPosteriorPredictive.json: A subset of the posterior predictive distribution. 
+10. data/totalVdPosteriorPredictive.json: A subset of the posterior predictive distribution.

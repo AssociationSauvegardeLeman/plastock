@@ -9,6 +9,8 @@ collaborateurs de [l'Association pour la Sauvegarde du Léman](https://asleman.o
 2. Alexis Pochelon
 
 Veuillez contacter Alexis ou Adrien pour toute question concernant les microplastiques ou le lac en général.
+![map](data/images/vone_leman.jpg)
+
 
 ## Objectif et structure du document
 

@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="References" href="references.html" />
+    <link rel="next" title="Un troisième regard : Orientation de la plage" href="plstk_03.html" />
     <link rel="prev" title="Un premier regard: La quantité probable de particules dans un polygone" href="plstk_01.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -117,6 +117,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Un deuxième regard : effets du substrat, échantillonnage par région, données additionnelles, prévisions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="plstk_03.html">
+   Un troisième regard : Orientation de la plage
   </a>
  </li>
  <li class="toctree-l1">
@@ -663,7 +668,7 @@ title="Print to PDF"
     <span class="s1">&#39;Clarens&#39;</span><span class="p">:</span> <span class="s2">&quot;haut-lac&quot;</span><span class="p">,</span>
     <span class="s1">&#39;Grangettes&#39;</span><span class="p">:</span><span class="s2">&quot;haut-lac&quot;</span><span class="p">,</span>
     <span class="s1">&#39;Bouveret&#39;</span><span class="p">:</span><span class="s2">&quot;haut-lac&quot;</span><span class="p">,</span>
-    <span class="s1">&#39;Tougues&#39;</span><span class="p">:</span> <span class="s2">&quot;haut-lac&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;Tougues&#39;</span><span class="p">:</span> <span class="s2">&quot;petit-lac&quot;</span><span class="p">,</span>
     <span class="s1">&#39;Excenevex&#39;</span><span class="p">:</span><span class="s2">&quot;grand-lac&quot;</span><span class="p">,</span>
     <span class="s1">&#39;Meillerie&#39;</span><span class="p">:</span><span class="s2">&quot;haut-lac&quot;</span><span class="p">,</span>
     <span class="s1">&#39;Lugrin&#39;</span><span class="p">:</span><span class="s2">&quot;haut-lac&quot;</span><span class="p">,</span>
@@ -860,13 +865,13 @@ Name: y, dtype: float64
 
 Fragments par événement &#39;haut-lac&#39;:
 
-count     28.000000
-mean     126.571429
-std      160.477165
+count     22.000000
+mean     142.636364
+std      176.703827
 min       20.000000
-25%       50.500000
-50%       73.000000
-75%      116.250000
+25%       53.250000
+50%       82.500000
+75%      122.750000
 max      697.000000
 Name: y, dtype: float64
 
@@ -884,13 +889,13 @@ Name: y, dtype: float64
 
 Fragments par événement &#39;petit-lac&#39;:
 
-count     26.000000
-mean      84.038462
-std       57.296060
+count     32.000000
+mean      80.968750
+std       55.793678
 min       19.000000
-25%       37.000000
-50%       77.500000
-75%      100.750000
+25%       35.250000
+50%       71.500000
+75%      100.250000
 max      244.000000
 Name: y, dtype: float64
 </pre></div>
@@ -1072,8 +1077,8 @@ Sables fin       grand-lac  165.750000  129.0  158.974739
                  haut-lac   210.454545   99.0  232.325790
                  petit-lac   90.875000   79.5   69.790375
 Sables grossiers grand-lac  140.461538  122.5   84.804354
-                 haut-lac    66.142857   57.0   46.941199
-                 petit-lac   19.000000   19.0         NaN
+                 haut-lac    57.000000   57.0         NaN
+                 petit-lac   60.714286   51.0   50.255064
 </pre></div>
 </div>
 </div>
@@ -1130,13 +1135,13 @@ haut-lac   Galets            Clarens            4
            Sables fin        Bouveret           7
                              Grangettes         4
            Sables grossiers  Meillerie          1
-                             Tougues            6
 petit-lac  Galets            Savonière          3
            Graviers          Hermance           4
                              Port Choiseul      6
                              Versoix            4
            Sables fin        Baby Plage         8
            Sables grossiers  Crans              1
+                             Tougues            6
 Name: événement, dtype: int64
 </pre></div>
 </div>
@@ -1146,7 +1151,7 @@ Name: événement, dtype: int64
 <section id="modele-lineaire-generalise-mlg-glm">
 <span id="section-four"></span><h2>4. Modèle linéaire généralisé (MLG/GLM)<a class="headerlink" href="#modele-lineaire-generalise-mlg-glm" title="Permalink to this headline">#</a></h2>
 <p>Le modèle développé avec le premier ensemble de données (<em>prior</em>) a été utilisé pour prédire les valeurs possibles (<em>posterior predictive</em>) pour les données futures (<em>update</em>).</p>
-<p>La mise à jour est concentrée avec les prieurs et la masse des valeurs prédites. Cependant, trois échantillons suggèrent que les résultats &gt; 200 pour les fragments (durs + souples) peuvent être plus fréquents que ce qui était supposé auparavant.</p>
+<p>Les nouvelles données occupent la même région que les données antérieures. Cependant, trois échantillons suggèrent que les résultats &gt; 200 pour les fragments (durs + souples) peuvent être plus fréquents que ce qui était supposé auparavant.</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">update_palette</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;prior&quot;</span><span class="p">:</span><span class="s2">&quot;magenta&quot;</span><span class="p">,</span> <span class="s2">&quot;update&quot;</span><span class="p">:</span><span class="s2">&quot;orange&quot;</span><span class="p">}</span>
@@ -1227,10 +1232,10 @@ Name: événement, dtype: int64
             <p class="prev-next-title">Un premier regard: La quantité probable de particules dans un polygone</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="references.html" title="next page">
+    <a class='right-next' id="next-link" href="plstk_03.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">References</p>
+        <p class="prev-next-title">Un troisième regard : Orientation de la plage</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
