@@ -23,3 +23,20 @@ The data is cleaned and stored here as it is made available. Therefore this docu
 9. data/totalGePosteriorPredictive.json: A subset of the posterior predictive distribution. 
 
 10. data/totalVdPosteriorPredictive.json: A subset of the posterior predictive distribution.
+
+11. data/gisData.csv: The workDataTwo file with GPS coordinates and proper column names
+
+12. data/gisSupport.csv: The total fibres, fragments tima and the average event total for each city
+
+13. data/placeLabels.csv: The city and GPS reference coordinates
+
+14. data/updatedMelted.csv: The long form of the workDataTwo file
+
+15. data/timeOrientation.csv: The time spent on each sample, the orientation of the beach, the surface area and the GPS coords
+
+## Images
+
+1. vone_leman.jpg: Initial map of the lake with regional and municipal aggregated values.
+
+
+
