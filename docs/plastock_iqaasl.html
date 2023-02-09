@@ -1,0 +1,1031 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Plastock - Iqaasl &#8212; Plast-Stock</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="References" href="references.html" />
+    <link rel="prev" title="Un troisième regard : Orientation de la plage" href="plstk_03.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Plast-Stock</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Plastock - count data
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="plstk_01.html">
+   Un premier regard: La quantité probable de particules dans un polygone
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="plstk_02.html">
+   Un deuxième regard : effets du substrat, échantillonnage par région, données additionnelles, prévisions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="plstk_03.html">
+   Un troisième regard : Orientation de la plage
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Plastock - Iqaasl
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="references.html">
+   References
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Built by <a href="https://hammerdirt.ch/">hammerdirt</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/hammerdirt-analyst/plastock/master?urlpath=tree/plastock_iqaasl.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/hammerdirt-analyst/plastock"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/plastock_iqaasl.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Plastock - Iqaasl</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span><span class="p">,</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">time</span>
+<span class="kn">from</span> <span class="nn">babel.dates</span> <span class="kn">import</span> <span class="n">format_date</span><span class="p">,</span> <span class="n">format_datetime</span><span class="p">,</span> <span class="n">format_time</span><span class="p">,</span> <span class="n">get_month_names</span>
+<span class="kn">import</span> <span class="nn">locale</span>
+<span class="kn">import</span> <span class="nn">slugify</span>
+
+<span class="c1"># math packages:</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span>
+
+<span class="c1"># charting:</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.dates</span> <span class="k">as</span> <span class="nn">mdates</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">ticker</span>
+<span class="kn">from</span> <span class="nn">matplotlib.ticker</span> <span class="kn">import</span> <span class="n">MultipleLocator</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="c1"># the module that has all the methods for handling the data</span>
+<span class="c1"># import resources.featuredata as featuredata</span>
+
+<span class="c1"># home brew utitilties</span>
+<span class="c1"># import resources.chart_kwargs as ck</span>
+<span class="c1"># import resources.sr_ut as sut</span>
+
+<span class="c1"># images and display</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Markdown</span> <span class="k">as</span> <span class="n">md</span>
+<span class="kn">from</span> <span class="nn">IPython</span> <span class="kn">import</span> <span class="n">display</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="plastock-iqaasl">
+<h1>Plastock - Iqaasl<a class="headerlink" href="#plastock-iqaasl" title="Permalink to this headline">#</a></h1>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># clean the data for processing this step is a long process and should be avoided</span>
+<span class="c1"># in the worst case this operation can be standardized if the data source cannot be changed</span>
+<span class="n">macro_csv</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/macro_csv.csv&quot;</span><span class="p">)</span>
+<span class="n">macro_csv</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># this is a remnant from exporting the csv from excel</span>
+<span class="n">macro_csv</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;Unnamed: 11&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># these dates were stored in a different format than all the others</span>
+<span class="n">bad_dates</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;8/13/2022&#39;</span><span class="p">,</span> <span class="s1">&#39;10/15/2022&#39;</span><span class="p">,</span> <span class="s1">&#39;11/6/2022&#39;</span><span class="p">]</span>
+<span class="n">macro_csv_bad_date</span> <span class="o">=</span> <span class="n">macro_csv</span><span class="p">[</span><span class="n">macro_csv</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">bad_dates</span><span class="p">)]</span>
+<span class="n">macro_csv</span> <span class="o">=</span> <span class="n">macro_csv</span><span class="p">[</span><span class="o">~</span><span class="n">macro_csv</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">bad_dates</span><span class="p">)]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="n">replace_with_key</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;8/13/2022&#39;</span><span class="p">:</span> <span class="s1">&#39;08.13.2022&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;10/15/2022&#39;</span><span class="p">:</span> <span class="s1">&#39;10.15.2022&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;11/6/2022&#39;</span><span class="p">:</span> <span class="s1">&#39;11.06.2022&#39;</span>
+<span class="p">}</span>
+
+<span class="n">citys_plastock</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;amphion&#39;</span><span class="p">:</span> <span class="s2">&quot;Amphion-Publier&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;aubonne&#39;</span><span class="p">:</span> <span class="s2">&quot;Allaman&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;baby-plage&#39;</span><span class="p">:</span> <span class="s2">&quot;Genève&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;bouveret&#39;</span><span class="p">:</span> <span class="s2">&quot;Port-Valais&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;clarens&#39;</span><span class="p">:</span> <span class="s2">&quot;Montreux&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;crans&#39;</span><span class="p">:</span> <span class="s2">&quot;Crans&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;cully&#39;</span><span class="p">:</span> <span class="s2">&quot;Cully&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;excenevex&#39;</span><span class="p">:</span> <span class="s2">&quot;Excenevex&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;gland&#39;</span><span class="p">:</span> <span class="s2">&quot;Gland&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;grangettes&#39;</span><span class="p">:</span> <span class="s2">&quot;Noville&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;lugrin&#39;</span><span class="p">:</span> <span class="s2">&quot;Lugrin&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;lutry&#39;</span><span class="p">:</span> <span class="s2">&quot;Lutry&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;meillerie&#39;</span><span class="p">:</span> <span class="s2">&quot;Meillerie&quot;</span> <span class="p">,</span>
+    <span class="s1">&#39;pichette&#39;</span><span class="p">:</span> <span class="s2">&quot;Vevey&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;port-choiseul&#39;</span><span class="p">:</span> <span class="s2">&quot;Versoix&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;preverenges&#39;</span><span class="p">:</span> <span class="s2">&quot;Préverenges&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;rolle&#39;</span><span class="p">:</span> <span class="s2">&quot;Rolle&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;tolochenaz&#39;</span><span class="p">:</span> <span class="s2">&quot;Tolochénaz&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;tougues&#39;</span><span class="p">:</span> <span class="s2">&quot;Chens-sur-Léman&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;vidy&#39;</span><span class="p">:</span> <span class="s2">&quot;Lausanne&quot;</span> 
+<span class="p">}</span>
+    
+<span class="c1"># replace with a key</span>
+<span class="n">macro_csv_bad_date</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">macro_csv_bad_date</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">replace_with_key</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+
+<span class="c1"># put that back together</span>
+<span class="n">plastock_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">macro_csv</span><span class="p">,</span> <span class="n">macro_csv_bad_date</span><span class="p">])</span>
+
+<span class="c1"># these codes are stored as string tupled with no other correspondance.</span>
+<span class="c1"># if taken by definition it is an aggregation of 78 and 79 which corresponds</span>
+<span class="c1"># to Gfrags in IQAASL</span>
+<span class="n">macro_csv_bad_code</span> <span class="o">=</span> <span class="n">macro_csv</span><span class="p">[</span><span class="n">macro_csv</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;G78, G79&#39;</span><span class="p">,</span> <span class="s1">&#39;G79, G78&#39;</span><span class="p">])]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">macro_csv</span> <span class="o">=</span> <span class="n">macro_csv</span><span class="p">[</span><span class="o">~</span><span class="n">macro_csv</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;G78, G79&#39;</span><span class="p">,</span> <span class="s1">&#39;G79, G78&#39;</span><span class="p">])]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">macro_csv_bad_code</span><span class="p">[</span><span class="s2">&quot;code&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;G79&quot;</span>
+
+<span class="c1"># put that back together</span>
+<span class="n">plastock_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">macro_csv</span><span class="p">,</span> <span class="n">macro_csv_bad_code</span><span class="p">])</span>
+
+<span class="c1"># slug the location and then combine with date to make unique identifiers</span>
+<span class="n">plastock_data</span><span class="p">[</span><span class="s2">&quot;slug&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">plastock_data</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">slugify</span><span class="o">.</span><span class="n">slugify</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">plastock_data</span><span class="p">[</span><span class="s2">&quot;loc_date&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">plastock_data</span><span class="p">[</span><span class="s2">&quot;slug&quot;</span><span class="p">],</span> <span class="n">plastock_data</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]))</span>
+<span class="n">plastock_data</span><span class="p">[</span><span class="s2">&quot;loc_date&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">plastock_data</span><span class="o">.</span><span class="n">loc_date</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+
+<span class="c1"># convert to datetime</span>
+<span class="n">plastock_data</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">plastock_data</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2">.%m.%Y&quot;</span><span class="p">)</span>
+
+<span class="c1"># identify the project</span>
+<span class="n">plastock_data</span><span class="p">[</span><span class="s2">&quot;project&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;plastock&quot;</span>
+
+<span class="c1"># aggregated values are tested to against this</span>
+<span class="c1"># set of data. Similar operations should result</span>
+<span class="c1"># in similar results with the work data</span>
+<span class="n">plastock_data_save</span> <span class="o">=</span> <span class="n">plastock_data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># get code descriptions from the results.</span>
+<span class="n">plastock_codeData</span> <span class="o">=</span> <span class="n">plastock_data</span><span class="p">[[</span><span class="s2">&quot;code&quot;</span><span class="p">,</span> <span class="s2">&quot;description&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># there are mulitple definitions for the same code. In this case we</span>
+<span class="c1"># drop the duplicates from this list, keep the first. Aggregations can</span>
+<span class="c1"># be made to the IQAASL data to account for the intentions of giving </span>
+<span class="c1"># multiple definitions to the same code. There are methods for dealing with this</span>
+<span class="c1"># https://hammerdirt-analyst.github.io/IQAASL-End-0f-Sampling-2021/code_groups.html#accounting-for-regional-objects</span>
+<span class="n">plastock_codeData</span> <span class="o">=</span> <span class="n">plastock_codeData</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="s2">&quot;code&quot;</span><span class="p">)</span>
+<span class="n">plastock_codeData</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;data/code_data_from_macro.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># the beaches data has the lat and lon coordinates associated with each location name</span>
+<span class="n">beaches_csv</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/asl_beaches.csv&quot;</span><span class="p">)</span>
+<span class="n">beaches_csv</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Orientation&quot;</span><span class="p">:</span> <span class="s2">&quot;orientation&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># making a slug removes all special characters and spaces, it is a cheap method to ensure</span>
+<span class="c1"># that Genève is counted the same as Genéve when we are talking about the municpalities of</span>
+<span class="c1"># Switzerland.</span>
+<span class="n">beaches_csv</span><span class="p">[</span><span class="s2">&quot;slug&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">beaches_csv</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">slugify</span><span class="o">.</span><span class="n">slugify</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">plastock_beaches</span><span class="o">=</span> <span class="n">beaches_csv</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="s2">&quot;location&quot;</span><span class="p">)</span>
+
+<span class="c1"># this is a way to connect the name of the beach to its recorded length</span>
+<span class="c1"># the mlw protocols suggest measuring the survey location at each itteration</span>
+<span class="n">beach_map_length</span> <span class="o">=</span> <span class="n">plastock_beaches</span><span class="p">[[</span><span class="s2">&quot;slug&quot;</span><span class="p">,</span> <span class="s2">&quot;length&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;slug&quot;</span><span class="p">)</span>
+
+<span class="c1"># beach gps</span>
+<span class="n">beaches_csv_gps</span> <span class="o">=</span> <span class="n">plastock_beaches</span><span class="p">[[</span><span class="s2">&quot;slug&quot;</span><span class="p">,</span> <span class="s2">&quot;latitude&quot;</span><span class="p">,</span> <span class="s2">&quot;longitude&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;slug&quot;</span><span class="p">)</span>
+
+<span class="c1"># beach orientation</span>
+<span class="n">beaches_csv_orientation</span> <span class="o">=</span> <span class="n">plastock_beaches</span><span class="p">[[</span><span class="s2">&quot;slug&quot;</span><span class="p">,</span><span class="s2">&quot;orientation&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;slug&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># identify elements that are not in both sets of data</span>
+<span class="c1"># the beach length is not readily identifiable there fore it can not</span>
+<span class="c1"># be compared to the IQAASL data</span>
+<span class="n">no_beach_length</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">plastock_data</span><span class="o">.</span><span class="n">slug</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">plastock_beaches</span><span class="o">.</span><span class="n">slug</span><span class="o">.</span><span class="n">unique</span><span class="p">()]</span>
+
+<span class="c1"># get code descriptions</span>
+<span class="n">plastock_codeData</span> <span class="o">=</span> <span class="n">plastock_data</span><span class="p">[[</span><span class="s2">&quot;code&quot;</span><span class="p">,</span> <span class="s2">&quot;description&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># there are mulitple definitions for the same code. In this case we</span>
+<span class="c1"># drop the duplicates from this list, keep the first. </span>
+<span class="n">plastock_codeData</span> <span class="o">=</span> <span class="n">plastock_codeData</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="s2">&quot;code&quot;</span><span class="p">)</span>
+<span class="n">plastock_codeData</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;data/code_data_from_macro.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># drop all the locations for which there is no beach length</span>
+<span class="c1"># or gps data</span>
+<span class="n">plastock_data</span> <span class="o">=</span> <span class="n">plastock_data</span><span class="p">[</span><span class="o">~</span><span class="n">plastock_data</span><span class="o">.</span><span class="n">slug</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">no_beach_length</span><span class="p">)]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># map the lenght to the survey data</span>
+<span class="n">plastock_data</span><span class="p">[</span><span class="s1">&#39;length&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">plastock_data</span><span class="o">.</span><span class="n">slug</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">beach_map_length</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;length&quot;</span><span class="p">])</span>
+
+<span class="c1"># compute the pcs_m ratio from the lenght and the quantity</span>
+<span class="n">plastock_data</span><span class="p">[</span><span class="s2">&quot;pcs_m&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">plastock_data</span><span class="p">[</span><span class="s2">&quot;quantity&quot;</span><span class="p">]</span><span class="o">/</span><span class="n">plastock_data</span><span class="o">.</span><span class="n">length</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    
+<span class="c1"># indentify the variable columns  </span>
+<span class="n">var_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;loc_date&#39;</span><span class="p">,</span> <span class="s1">&#39;project&#39;</span><span class="p">,</span> <span class="s1">&#39;location&#39;</span><span class="p">,</span> <span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="s1">&#39;season&#39;</span><span class="p">,</span><span class="s1">&#39;area&#39;</span><span class="p">,</span> <span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;position&#39;</span><span class="p">,</span> <span class="s1">&#39;substrate&#39;</span><span class="p">,</span> <span class="s1">&#39;code&#39;</span><span class="p">,</span><span class="s1">&#39;slug&#39;</span><span class="p">]</span>
+
+<span class="c1"># indentify the value columns</span>
+<span class="n">val_cols</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;quantity&#39;</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span><span class="p">,</span> <span class="s2">&quot;pcs_m&quot;</span><span class="p">]</span>
+
+<span class="c1"># check should equal data by quantity</span>
+<span class="n">check</span> <span class="o">=</span> <span class="n">plastock_data_save</span><span class="p">[</span><span class="o">~</span><span class="n">plastock_data_save</span><span class="o">.</span><span class="n">slug</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">no_beach_length</span><span class="p">)]</span><span class="o">.</span><span class="n">quantity</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="c1"># this combines all the different definitions for one code in to one.</span>
+<span class="n">work_data</span> <span class="o">=</span> <span class="n">plastock_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">var_cols</span><span class="p">,</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s2">&quot;quantity&quot;</span><span class="p">:</span><span class="s2">&quot;sum&quot;</span><span class="p">,</span> <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="s2">&quot;sum&quot;</span><span class="p">,</span> <span class="s2">&quot;pcs_m&quot;</span><span class="p">:</span> <span class="s2">&quot;sum&quot;</span><span class="p">})</span>
+<span class="n">work_data_save</span> <span class="o">=</span> <span class="n">work_data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># the quantity should be equal before and after the aggregation</span>
+<span class="n">check_quantity</span> <span class="o">=</span>  <span class="nb">int</span><span class="p">(</span><span class="n">work_data</span><span class="o">.</span><span class="n">quantity</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">-</span> <span class="n">check</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># the sum of the values with common loc_date should be equal</span>
+<span class="c1"># if both sets of data are grouped by loc_date and totaled</span>
+<span class="c1"># those totals should be equal before and after the aggregation</span>
+<span class="n">check_sample</span> <span class="o">=</span> <span class="n">plastock_data_save</span><span class="p">[</span><span class="o">~</span><span class="n">plastock_data_save</span><span class="o">.</span><span class="n">slug</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">no_beach_length</span><span class="p">)]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;loc_date&quot;</span><span class="p">,</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">quantity</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">data_check_sample</span> <span class="o">=</span> <span class="n">work_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;loc_date&quot;</span><span class="p">,</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">quantity</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">check_event_totals</span> <span class="o">=</span> <span class="n">check_sample</span><span class="o">.</span><span class="n">quantity</span> <span class="o">==</span> <span class="n">data_check_sample</span><span class="o">.</span><span class="n">quantity</span>
+
+<span class="c1"># the individual elements should also sum to zero</span>
+<span class="k">if</span> <span class="n">check_quantity</span> <span class="o">-</span> <span class="n">check</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;not good&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">pass</span>    
+<span class="k">if</span> <span class="nb">sum</span><span class="p">(</span><span class="n">check_event_totals</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">check_event_totals</span><span class="p">):</span>
+    <span class="k">pass</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;not good&quot;</span><span class="p">)</span>
+
+<span class="c1"># there are aggregations that need to be made to the plastock data. The fragemented foams</span>
+<span class="c1"># and fragmented plastics are consolidated into one group of codes. The plastic caps are consolidated</span>
+<span class="c1"># as per the intend of the ASL and the recomendation from the IQAASL report.    </span>
+<span class="n">gfoam</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;G81&quot;</span><span class="p">,</span> <span class="s2">&quot;G82&quot;</span><span class="p">,</span> <span class="s2">&quot;G83&quot;</span><span class="p">]</span>
+<span class="n">plasticpcs</span> <span class="o">=</span> <span class="p">[</span> <span class="s2">&quot;G78&quot;</span><span class="p">,</span> <span class="s2">&quot;G79&quot;</span><span class="p">,</span> <span class="s2">&quot;G80&quot;</span><span class="p">,</span> <span class="s2">&quot;G75&quot;</span><span class="p">,</span> <span class="s2">&quot;G76&quot;</span><span class="p">,</span> <span class="s2">&quot;G77&quot;</span><span class="p">]</span>
+<span class="n">Gcaps</span> <span class="o">=</span> <span class="p">[</span> <span class="s2">&quot;G21&quot;</span><span class="p">,</span> <span class="s2">&quot;G23&quot;</span><span class="p">,</span> <span class="s2">&quot;G24&quot;</span> <span class="p">]</span>
+
+<span class="c1"># the columns that are being kept and the operations per column          </span>
+<span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;loc_date&#39;</span><span class="p">,</span> <span class="s1">&#39;project&#39;</span><span class="p">,</span> <span class="s1">&#39;location&#39;</span><span class="p">,</span> <span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="s1">&#39;area&#39;</span><span class="p">,</span> <span class="s1">&#39;slug&#39;</span><span class="p">]</span>
+<span class="n">operations</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;quantity&quot;</span><span class="p">:</span><span class="s2">&quot;sum&quot;</span><span class="p">,</span> <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="s2">&quot;sum&quot;</span><span class="p">,</span> <span class="s2">&quot;pcs_m&quot;</span><span class="p">:</span> <span class="s2">&quot;sum&quot;</span><span class="p">}</span>
+
+<span class="c1"># separate the codes of interest by group from the data frame and add the replacement value</span>
+<span class="n">work_data_gfrags</span> <span class="o">=</span> <span class="n">work_data</span><span class="p">[</span><span class="n">work_data</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">plasticpcs</span><span class="p">)]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">columns</span><span class="p">,</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">operations</span><span class="p">)</span>
+<span class="n">work_data_gfoam</span> <span class="o">=</span> <span class="n">work_data</span><span class="p">[</span><span class="n">work_data</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">gfoam</span><span class="p">)]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">columns</span><span class="p">,</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">operations</span><span class="p">)</span>
+<span class="n">work_data_gcaps</span> <span class="o">=</span> <span class="n">work_data</span><span class="p">[</span><span class="n">work_data</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">Gcaps</span><span class="p">)]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">columns</span><span class="p">,</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">operations</span><span class="p">)</span>
+
+<span class="n">work_data_gcaps</span><span class="p">[</span><span class="s2">&quot;code&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Gcaps&quot;</span>
+<span class="n">work_data_gfoam</span><span class="p">[</span><span class="s2">&quot;code&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Gfoam&quot;</span>
+<span class="n">work_data_gfrags</span><span class="p">[</span><span class="s2">&quot;code&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Gfrags&quot;</span>
+
+<span class="c1"># remove the same instances from the work data                                                               </span>
+<span class="n">work_data_no_frags</span> <span class="o">=</span> <span class="n">work_data</span><span class="p">[</span><span class="o">~</span><span class="n">work_data</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="o">*</span><span class="n">plasticpcs</span><span class="p">,</span> <span class="o">*</span><span class="n">gfoam</span><span class="p">,</span> <span class="o">*</span><span class="n">Gcaps</span><span class="p">])]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># combine with </span>
+<span class="n">work_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">work_data_no_frags</span><span class="p">,</span> <span class="n">work_data_gfrags</span><span class="p">,</span> <span class="n">work_data_gfoam</span><span class="p">,</span> <span class="n">work_data_gcaps</span><span class="p">])</span>
+<span class="n">work_data_save</span> <span class="o">=</span> <span class="n">work_data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>   
+<span class="n">work_data</span> <span class="o">=</span> <span class="n">work_data</span><span class="p">[[</span><span class="s2">&quot;project&quot;</span><span class="p">,</span><span class="s2">&quot;slug&quot;</span><span class="p">,</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="s2">&quot;loc_date&quot;</span><span class="p">,</span> <span class="s2">&quot;area&quot;</span><span class="p">,</span> <span class="s2">&quot;code&quot;</span><span class="p">,</span> <span class="s2">&quot;quantity&quot;</span><span class="p">,</span> <span class="s2">&quot;pcs_m&quot;</span><span class="p">,</span> <span class="s2">&quot;weight&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">work_data</span> <span class="o">=</span> <span class="n">work_data</span><span class="p">[[</span><span class="s2">&quot;slug&quot;</span><span class="p">,</span> <span class="s2">&quot;project&quot;</span><span class="p">,</span> <span class="s2">&quot;loc_date&quot;</span><span class="p">,</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="s2">&quot;code&quot;</span><span class="p">,</span> <span class="s2">&quot;quantity&quot;</span><span class="p">,</span> <span class="s2">&quot;pcs_m&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">work_data</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;slug&quot;</span><span class="p">:</span> <span class="s2">&quot;location&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># begin IQAASL data</span>
+<span class="c1"># iqaasl = pd.read_csv(&quot;resources/checked_sdata_eos_2020_21.csv&quot;)</span>
+<span class="c1"># iqaasl = iqaasl[iqaasl.water_name_slug == &#39;lac-leman&#39;].copy()</span>
+<span class="c1"># save to the repo</span>
+<span class="c1"># iqaasl.to_csv(&quot;data/lac_leman_iqaasl.csv&quot;, index=False)</span>
+<span class="n">iqaasl</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/lac_leman_iqaasl.csv&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># select columns from iqaasl data and aggregate gcaps</span>
+<span class="n">iqaasl_data</span> <span class="o">=</span> <span class="n">iqaasl</span><span class="p">[[</span><span class="s1">&#39;location&#39;</span><span class="p">,</span> <span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="s1">&#39;loc_date&#39;</span><span class="p">,</span> <span class="s1">&#39;code&#39;</span><span class="p">,</span>  <span class="s1">&#39;quantity&#39;</span><span class="p">,</span><span class="s1">&#39;pcs_m&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># identify the data</span>
+<span class="n">iqaasl_data</span><span class="p">[</span><span class="s2">&quot;project&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;iqaasl&quot;</span>
+
+<span class="c1"># make gcaps, gfrags and foams are ready made</span>
+<span class="n">iqaasl_not_caps</span> <span class="o">=</span> <span class="n">iqaasl_data</span><span class="p">[</span><span class="o">~</span><span class="n">iqaasl_data</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">Gcaps</span><span class="p">)]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">iqaasl_caps</span> <span class="o">=</span> <span class="n">iqaasl_data</span><span class="p">[</span><span class="n">iqaasl_data</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">Gcaps</span><span class="p">)]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">iqaasl_caps</span><span class="p">[</span><span class="s2">&quot;code&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Gcaps&quot;</span>
+
+<span class="n">iqaasl_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">iqaasl_caps</span><span class="p">,</span> <span class="n">iqaasl_not_caps</span><span class="p">])</span>
+
+<span class="n">palette</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;plastock&quot;</span><span class="p">:</span> <span class="s2">&quot;magenta&quot;</span><span class="p">,</span> <span class="s2">&quot;iqaasl&quot;</span><span class="p">:</span> <span class="s2">&quot;dodgerblue&quot;</span><span class="p">}</span>
+
+<span class="n">nwd</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">iqaasl_data</span><span class="p">,</span> <span class="n">work_data</span><span class="p">])</span>
+<span class="n">nwd</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">nwd</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/plastock_iqaasl_3_0.jpg" src="_images/plastock_iqaasl_3_0.jpg" />
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nwdt</span> <span class="o">=</span> <span class="n">nwd</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;loc_date&quot;</span><span class="p">,</span><span class="s2">&quot;project&quot;</span><span class="p">,</span> <span class="s2">&quot;date&quot;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">pcs_m</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="c1"># Minor ticks every month.</span>
+<span class="n">fmt_month</span> <span class="o">=</span> <span class="n">mdates</span><span class="o">.</span><span class="n">MonthLocator</span><span class="p">()</span>
+<span class="c1"># Minor ticks every year.</span>
+<span class="n">fmt_year</span> <span class="o">=</span> <span class="n">mdates</span><span class="o">.</span><span class="n">YearLocator</span><span class="p">()</span>
+
+<span class="n">months</span> <span class="o">=</span> <span class="n">mdates</span><span class="o">.</span><span class="n">MonthLocator</span><span class="p">(</span><span class="n">interval</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">months_fmt</span> <span class="o">=</span> <span class="n">mdates</span><span class="o">.</span><span class="n">DateFormatter</span><span class="p">(</span><span class="s2">&quot;%b&quot;</span><span class="p">)</span>
+<span class="n">days</span> <span class="o">=</span> <span class="n">mdates</span><span class="o">.</span><span class="n">DayLocator</span><span class="p">(</span><span class="n">interval</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">nwdt</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;pcs_m&quot;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="n">palette</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;project&quot;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_minor_locator</span><span class="p">(</span><span class="n">days</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">months_fmt</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Déchets pour 1 m&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">nwdt</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;project&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;pcs_m&quot;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="n">palette</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;project&quot;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="n">dodge</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Déchets pour 1 m&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">ecdfplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">nwdt</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;pcs_m&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;project&quot;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="n">palette</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Probailité&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Déchets pour 1 m&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Déchets pour 1 m&quot;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">nwdt</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;pcs_m&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;project&quot;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="n">palette</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="n">multiple</span><span class="o">=</span><span class="s2">&quot;stack&quot;</span><span class="p">,</span> <span class="n">stat</span><span class="o">=</span><span class="s2">&quot;probability&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;Le Léman déchets pour 1 m de plage. Observations 2020 - 2022&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/plastock_iqaasl_4_0.png" src="_images/plastock_iqaasl_4_0.png" />
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">summary_iqaasl_dt</span> <span class="o">=</span> <span class="n">nwdt</span><span class="p">[</span><span class="n">nwdt</span><span class="o">.</span><span class="n">project</span> <span class="o">==</span> <span class="s2">&quot;iqaasl&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">pcs_m</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+<span class="n">iqaasl_total</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">({</span><span class="s2">&quot;total&quot;</span><span class="p">:</span><span class="n">nwd</span><span class="p">[</span><span class="n">nwd</span><span class="o">.</span><span class="n">project</span> <span class="o">==</span> <span class="s2">&quot;iqaasl&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">quantity</span><span class="o">.</span><span class="n">sum</span><span class="p">()})</span>
+<span class="n">summary_iqaasl_dt</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">summary_iqaasl_dt</span><span class="p">,</span> <span class="n">iqaasl_total</span><span class="p">])</span>
+
+
+<span class="n">summary_plastock_dt</span> <span class="o">=</span> <span class="n">nwdt</span><span class="p">[</span><span class="n">nwdt</span><span class="o">.</span><span class="n">project</span> <span class="o">==</span> <span class="s2">&quot;plastock&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">pcs_m</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+<span class="n">plastock_total</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">({</span><span class="s2">&quot;total&quot;</span><span class="p">:</span><span class="n">nwd</span><span class="p">[</span><span class="n">nwd</span><span class="o">.</span><span class="n">project</span> <span class="o">==</span> <span class="s2">&quot;plastock&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">quantity</span><span class="o">.</span><span class="n">sum</span><span class="p">()})</span>
+<span class="n">summary_plastock_dt</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">summary_plastock_dt</span><span class="p">,</span> <span class="n">plastock_total</span><span class="p">])</span>
+
+
+<span class="n">f</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+
+<span class="s2">NOTE: mean = moyen, count=nombre d&#39;événements, std=écart type</span>
+
+<span class="s2">Résumé des totaux d&#39;échantillons &#39;Plastock&#39;:</span>
+
+<span class="si">{</span><span class="n">summary_plastock_dt</span><span class="si">}</span><span class="s2"></span>
+
+<span class="s2">Résumé des totaux d&#39;échantillons &#39;IQAASL&#39;:</span>
+
+<span class="si">{</span><span class="n">summary_iqaasl_dt</span><span class="si">}</span><span class="s2"></span>
+
+
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>NOTE: mean = moyen, count=nombre d&#39;événements, std=écart type
+
+Résumé des totaux d&#39;échantillons &#39;Plastock&#39;:
+
+count       68.000000
+mean         5.012206
+std          4.423880
+min          0.150000
+25%          1.190000
+50%          3.795000
+75%          7.832500
+max         19.730000
+total    25218.000000
+dtype: float64
+
+Résumé des totaux d&#39;échantillons &#39;IQAASL&#39;:
+
+count       98.000000
+mean         8.671122
+std         11.681734
+min          0.220000
+25%          2.325000
+50%          4.505000
+75%          9.682500
+max         66.170000
+total    27462.000000
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mc_codes</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;Gcaps&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Gfrags&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Gfoam&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;G27&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;G30&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;G112&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;G95&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;G74&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;G67&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;G117&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;G89&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;G200&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;G70&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;G178&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;G25&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;G10&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;G35&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;G23&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;G31&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;G33&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;G32&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;G177&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;G100&#39;</span>
+<span class="p">]</span>
+
+
+<span class="n">nwd_common</span> <span class="o">=</span> <span class="n">nwd</span><span class="p">[</span><span class="n">nwd</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">mc_codes</span><span class="p">)]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">nwd_common</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># fig, ax = plt.subplots()</span>
+<span class="n">operations</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;quantity&quot;</span><span class="p">:</span><span class="s2">&quot;sum&quot;</span><span class="p">,</span> <span class="s2">&quot;pcs_m&quot;</span><span class="p">:</span> <span class="s2">&quot;median&quot;</span><span class="p">}</span>
+
+<span class="n">dx</span> <span class="o">=</span> <span class="n">nwd_common</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;project&quot;</span><span class="p">,</span> <span class="s2">&quot;code&quot;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">operations</span><span class="p">)</span>
+
+<span class="n">dx</span> <span class="o">=</span> <span class="n">dx</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s2">&quot;code&quot;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s2">&quot;project&quot;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s2">&quot;pcs_m&quot;</span><span class="p">)</span>
+<span class="n">mcommon</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+
+<span class="s2">Comparaison des codes les plus courants Le Léman 2020 - 2021</span>
+
+<span class="si">{</span><span class="n">dx</span><span class="si">}</span><span class="s2"></span>
+
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">mcommon</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Comparaison des codes les plus courants Le Léman 2020 - 2021
+
+project  iqaasl  plastock
+code                     
+G10       0.010     0.010
+G100      0.020     0.020
+G112      0.000     0.110
+G117      0.000     0.060
+G177      0.020     0.040
+G178      0.030     0.020
+G200      0.030     0.400
+G25       0.020     0.010
+G27       0.470     0.130
+G30       0.215     0.130
+G31       0.030     0.030
+G32       0.025     0.020
+G33       0.020     0.015
+G35       0.040     0.020
+G67       0.090     0.040
+G70       0.010     0.030
+G74       0.100     0.050
+G89       0.055     0.040
+G95       0.120     0.130
+Gcaps     0.025     0.050
+Gfoam     0.260     0.140
+Gfrags    0.615     0.240
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># by code and by location</span>
+<span class="n">map_pcs_m</span> <span class="o">=</span> <span class="n">nwdt</span><span class="p">[[</span><span class="s2">&quot;loc_date&quot;</span><span class="p">,</span> <span class="s2">&quot;pcs_m&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;loc_date&quot;</span><span class="p">)</span>
+
+<span class="n">dcopy</span> <span class="o">=</span> <span class="n">work_data_save</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">dcopy</span><span class="p">[</span><span class="s2">&quot;p/m²&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dcopy</span><span class="p">[</span><span class="s2">&quot;quantity&quot;</span><span class="p">]</span><span class="o">/</span><span class="n">dcopy</span><span class="p">[</span><span class="s2">&quot;area&quot;</span><span class="p">]</span>
+
+<span class="c1"># indentify the variable columns  </span>
+<span class="n">var_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;loc_date&#39;</span><span class="p">,</span> <span class="s1">&#39;project&#39;</span><span class="p">,</span> <span class="s1">&#39;location&#39;</span><span class="p">,</span> <span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="s1">&#39;season&#39;</span><span class="p">,</span><span class="s1">&#39;area&#39;</span><span class="p">,</span> <span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;position&#39;</span><span class="p">,</span> <span class="s1">&#39;substrate&#39;</span><span class="p">,</span> <span class="s1">&#39;code&#39;</span><span class="p">,</span><span class="s1">&#39;slug&#39;</span><span class="p">]</span>
+
+<span class="c1"># indentify the value columns</span>
+<span class="n">val_cols</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;quantity&#39;</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span><span class="p">,</span> <span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;p/m²&quot;</span><span class="p">]</span>
+
+<span class="c1"># sum operations</span>
+<span class="n">operations</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;quantity&quot;</span><span class="p">:</span><span class="s2">&quot;sum&quot;</span><span class="p">,</span> <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="s2">&quot;sum&quot;</span><span class="p">,</span> <span class="s2">&quot;p/m²&quot;</span><span class="p">:</span><span class="s2">&quot;sum&quot;</span><span class="p">}</span>
+
+<span class="c1"># operation columns</span>
+<span class="n">ops_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;loc_date&#39;</span><span class="p">,</span> <span class="s1">&#39;project&#39;</span><span class="p">,</span> <span class="s1">&#39;location&#39;</span><span class="p">,</span> <span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="s1">&#39;slug&#39;</span><span class="p">]</span>
+
+<span class="c1"># points cardinal</span>
+<span class="n">cardinal</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;OSO&#39;</span><span class="p">:</span><span class="mf">247.5</span><span class="p">,</span> <span class="s1">&#39;NO&#39;</span><span class="p">:</span> <span class="mi">315</span><span class="p">,</span> <span class="s1">&#39;NNE&#39;</span><span class="p">:</span> <span class="mf">22.5</span><span class="p">,</span> <span class="s1">&#39;N&#39;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;ESE&#39;</span><span class="p">:</span><span class="mf">112.5</span><span class="p">,</span> <span class="s1">&#39;SSE&#39;</span><span class="p">:</span><span class="mf">157.5</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">:</span><span class="mi">90</span><span class="p">,</span> <span class="s1">&#39;SSO&#39;</span><span class="p">:</span><span class="mf">202.5</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">:</span><span class="mi">180</span><span class="p">,</span> <span class="s1">&#39;ONO&#39;</span><span class="p">:</span><span class="mf">292.5</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">:</span><span class="mi">270</span><span class="p">,</span>
+       <span class="s1">&#39;SO&#39;</span><span class="p">:</span><span class="mi">225</span><span class="p">,</span> <span class="s1">&#39;SE&#39;</span><span class="p">:</span><span class="mi">135</span><span class="p">,</span> <span class="s1">&#39;ENE&#39;</span><span class="p">:</span><span class="mf">67.5</span><span class="p">,</span> <span class="s1">&#39;NE&#39;</span><span class="p">:</span><span class="mi">45</span><span class="p">,</span> <span class="s1">&#39;NNO&#39;</span><span class="p">:</span> <span class="mf">337.5</span><span class="p">}</span>
+
+<span class="n">regions</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Hermance&#39;</span><span class="p">:</span><span class="s2">&quot;petit-lac&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;Savonière&#39;</span><span class="p">:</span> <span class="s2">&quot;petit-lac&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;Baby plage&#39;</span><span class="p">:</span> <span class="s2">&quot;petit-lac&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;Versoix&#39;</span><span class="p">:</span> <span class="s2">&quot;petit-lac&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;Crans&#39;</span><span class="p">:</span><span class="s2">&quot;petit-lac&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;Gland&#39;</span><span class="p">:</span><span class="s2">&quot;grand-lac&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;Rolle&#39;</span><span class="p">:</span><span class="s2">&quot;grand-lac&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;Aubonne&#39;</span><span class="p">:</span><span class="s2">&quot;grand-lac&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;Tolochenaz&#39;</span><span class="p">:</span><span class="s2">&quot;grand-lac&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;Préverenges&#39;</span><span class="p">:</span><span class="s2">&quot;grand-lac&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;Vidy&#39;</span><span class="p">:</span><span class="s2">&quot;grand-lac&quot;</span><span class="p">,</span> 
+    <span class="s1">&#39;Lutry&#39;</span><span class="p">:</span><span class="s2">&quot;grand-lac&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;Cully&#39;</span><span class="p">:</span><span class="s2">&quot;grand-lac&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;Pichette&#39;</span><span class="p">:</span><span class="s2">&quot;haut-lac&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;Clarens&#39;</span><span class="p">:</span> <span class="s2">&quot;haut-lac&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;Grangettes&#39;</span><span class="p">:</span><span class="s2">&quot;haut-lac&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;Bouveret&#39;</span><span class="p">:</span><span class="s2">&quot;haut-lac&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;Tougues&#39;</span><span class="p">:</span> <span class="s2">&quot;petit-lac&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;Excenevex&#39;</span><span class="p">:</span><span class="s2">&quot;grand-lac&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;Meillerie&#39;</span><span class="p">:</span><span class="s2">&quot;haut-lac&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;Lugrin&#39;</span><span class="p">:</span><span class="s2">&quot;grand-lac&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;Amphion&#39;</span><span class="p">:</span><span class="s2">&quot;grand-lac&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;Anthy&#39;</span><span class="p">:</span><span class="s2">&quot;grand-lac&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;Port choiseul&#39;</span><span class="p">:</span><span class="s2">&quot;petit-lac&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;Saint-Disdille&#39;</span><span class="p">:</span><span class="s2">&quot;grand-lac&quot;</span>   
+<span class="p">}</span>
+
+<span class="n">dxt</span> <span class="o">=</span> <span class="n">dcopy</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">ops_cols</span><span class="p">,</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">operations</span><span class="p">)</span>
+<span class="n">dxt</span><span class="p">[</span><span class="s2">&quot;p/m&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dxt</span><span class="o">.</span><span class="n">loc_date</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">map_pcs_m</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="s2">&quot;pcs_m&quot;</span><span class="p">])</span>
+<span class="n">dxt</span><span class="p">[</span><span class="s2">&quot;orientation&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dxt</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">beaches_csv_orientation</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">slugify</span><span class="o">.</span><span class="n">slugify</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="s2">&quot;orientation&quot;</span><span class="p">])</span>
+<span class="n">dxt</span><span class="p">[</span><span class="s2">&quot;lat&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dxt</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">beaches_csv_gps</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">slugify</span><span class="o">.</span><span class="n">slugify</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="s2">&quot;latitude&quot;</span><span class="p">])</span>
+<span class="n">dxt</span><span class="p">[</span><span class="s2">&quot;lon&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dxt</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">beaches_csv_gps</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">slugify</span><span class="o">.</span><span class="n">slugify</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="s2">&quot;longitude&quot;</span><span class="p">])</span>
+<span class="n">dxt</span><span class="p">[</span><span class="s2">&quot;city&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dxt</span><span class="o">.</span><span class="n">slug</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">citys_plastock</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+<span class="n">dxt</span><span class="p">[</span><span class="s2">&quot;pc&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dxt</span><span class="o">.</span><span class="n">orientation</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">cardinal</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+<span class="n">dxt</span><span class="p">[</span><span class="s2">&quot;region&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dxt</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">regions</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+<span class="n">dxt_display</span> <span class="o">=</span> <span class="n">dxt</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;location&quot;</span><span class="p">,</span> <span class="s2">&quot;city&quot;</span><span class="p">,</span> <span class="s2">&quot;region&quot;</span><span class="p">,</span> <span class="s2">&quot;lat&quot;</span><span class="p">,</span> <span class="s2">&quot;lon&quot;</span><span class="p">,</span> <span class="s2">&quot;pc&quot;</span><span class="p">,</span> <span class="s2">&quot;orientation&quot;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s2">&quot;quantity&quot;</span><span class="p">:</span><span class="s2">&quot;sum&quot;</span><span class="p">,</span> <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="s2">&quot;sum&quot;</span><span class="p">,</span> <span class="s2">&quot;p/m²&quot;</span><span class="p">:</span><span class="s2">&quot;mean&quot;</span><span class="p">,</span> <span class="s2">&quot;p/m&quot;</span><span class="p">:</span> <span class="s2">&quot;median&quot;</span><span class="p">,</span> <span class="s2">&quot;loc_date&quot;</span><span class="p">:</span> <span class="s2">&quot;nunique&quot;</span><span class="p">})</span>
+<span class="n">dxt_display</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;loc_date&quot;</span><span class="p">:</span> <span class="s2">&quot;samples&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">gis_out_plastock</span> <span class="o">=</span> <span class="n">dxt_display</span><span class="p">[[</span><span class="s2">&quot;location&quot;</span><span class="p">,</span> <span class="s2">&quot;city&quot;</span><span class="p">,</span> <span class="s2">&quot;lat&quot;</span><span class="p">,</span> <span class="s2">&quot;lon&quot;</span><span class="p">,</span> <span class="s2">&quot;pc&quot;</span><span class="p">,</span>  <span class="s2">&quot;region&quot;</span><span class="p">,</span> <span class="s2">&quot;quantity&quot;</span><span class="p">,</span> <span class="s2">&quot;weight&quot;</span><span class="p">,</span> <span class="s2">&quot;p/m²&quot;</span><span class="p">,</span> <span class="s2">&quot;p/m&quot;</span><span class="p">,</span> <span class="s2">&quot;samples&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="n">dxt_display_city</span> <span class="o">=</span> <span class="n">dxt</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;city&quot;</span><span class="p">,</span> <span class="s2">&quot;region&quot;</span><span class="p">,</span> <span class="s2">&quot;lat&quot;</span><span class="p">,</span> <span class="s2">&quot;lon&quot;</span><span class="p">,</span> <span class="s2">&quot;pc&quot;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s2">&quot;quantity&quot;</span><span class="p">:</span><span class="s2">&quot;sum&quot;</span><span class="p">,</span> <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="s2">&quot;sum&quot;</span><span class="p">,</span> <span class="s2">&quot;p/m²&quot;</span><span class="p">:</span><span class="s2">&quot;mean&quot;</span><span class="p">,</span> <span class="s2">&quot;p/m&quot;</span><span class="p">:</span> <span class="s2">&quot;median&quot;</span><span class="p">,</span> <span class="s2">&quot;loc_date&quot;</span><span class="p">:</span> <span class="s2">&quot;nunique&quot;</span><span class="p">})</span>
+<span class="n">dxt_display_city</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;loc_date&quot;</span><span class="p">:</span> <span class="s2">&quot;samples&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># dxt_display_city.to_csv(&quot;resources/plastock_city_macro.csv&quot;, index=False)</span>
+<span class="c1"># gis_out_plastock.to_csv(&quot;resources/plastock_macro.csv&quot;, index=False)</span>
+<span class="c1"># dxt_city_summary = dxt_display_city = dxt.groupby([&quot;city&quot;, &quot;region&quot;], as_index=False).agg({&quot;quantity&quot;:&quot;sum&quot;, &quot;weight&quot;: &quot;sum&quot;, &quot;p/m²&quot;:&quot;mean&quot;, &quot;p/m&quot;: &quot;median&quot;, &quot;loc_date&quot;: &quot;nunique&quot;})</span>
+
+<span class="n">city_map</span> <span class="o">=</span> <span class="n">dxt</span><span class="p">[[</span><span class="s2">&quot;city&quot;</span><span class="p">,</span> <span class="s2">&quot;lat&quot;</span><span class="p">,</span> <span class="s2">&quot;lon&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;city&quot;</span><span class="p">)</span>
+
+<span class="c1"># dxt_city_summary[&quot;lat&quot;] = dxt_city_summary.city.map(lambda x: city_map.loc[x, &quot;lat&quot;])</span>
+<span class="c1"># dxt_city_summary[&quot;lon&quot;] = dxt_city_summary.city.map(lambda x: city_map.loc[x, &quot;lon&quot;])</span>
+
+<span class="n">locations</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+
+<span class="s2">Résumé par localité:</span>
+
+<span class="si">{</span><span class="n">gis_out_plastock</span><span class="p">[[</span><span class="s2">&quot;location&quot;</span><span class="p">,</span> <span class="s2">&quot;quantity&quot;</span><span class="p">,</span> <span class="s2">&quot;weight&quot;</span><span class="p">,</span> <span class="s2">&quot;p/m²&quot;</span><span class="p">,</span> <span class="s2">&quot;p/m&quot;</span><span class="p">,</span> <span class="s2">&quot;samples&quot;</span><span class="p">]]</span><span class="si">}</span><span class="s2"></span>
+
+
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">locations</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Résumé par localité:
+
+         location  quantity     weight      p/m²     p/m  samples
+0         Amphion      2505   8.008169  2.628312   6.650        4
+1         Aubonne       812   4.170334  1.295813   3.490        4
+2      Baby plage      1173  14.355139  1.108352   3.465        4
+3        Bouveret       836  26.391915  8.444444   7.230        1
+4         Clarens      1399   8.389276  3.296175   8.530        3
+5           Crans        74   0.869780  1.156250   0.940        4
+6           Cully        88   0.741463  0.648397   0.945        4
+7       Excenevex      1804   5.027917  2.182116  15.050        1
+8           Gland       300   1.348070  3.377470   3.390        4
+9      Grangettes      3909  12.992625  6.243659  13.850        4
+10         Lugrin      3019  55.200694  7.098926  10.310        4
+11          Lutry       143   0.478920  1.029360   2.240        1
+12      Meillerie       183   0.787206  0.863208   2.180        4
+13       Pichette       102   0.579582  0.505501   0.810        3
+14  Port choiseul      1382   6.242715  1.371499   4.305        4
+15    Préverenges      2516  12.464569  1.013189   5.085        4
+16          Rolle      1296  10.079764  0.818377   4.940        3
+17     Tolochenaz       108   1.010992  0.398333   0.700        4
+18        Tougues      1206   5.908257  0.983499   2.550        4
+19           Vidy      2363   5.445079  3.060393   8.485        4
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Résumé par code et emplacement</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_rows&#39;</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+
+<span class="n">plastock_data</span><span class="p">[</span><span class="s2">&quot;p/m²&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">plastock_data</span><span class="p">[</span><span class="s2">&quot;quantity&quot;</span><span class="p">]</span><span class="o">/</span><span class="n">plastock_data</span><span class="p">[</span><span class="s2">&quot;area&quot;</span><span class="p">]</span>
+<span class="n">code_location</span> <span class="o">=</span> <span class="n">plastock_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;location&quot;</span><span class="p">,</span> <span class="s2">&quot;code&quot;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="s2">&quot;sum&quot;</span><span class="p">,</span> <span class="s2">&quot;pcs_m&quot;</span><span class="p">:</span><span class="s2">&quot;median&quot;</span><span class="p">,</span> <span class="s2">&quot;p/m²&quot;</span><span class="p">:</span><span class="s2">&quot;mean&quot;</span><span class="p">})</span>
+<span class="n">code_location</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;resources/region_city.json&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">afile</span><span class="p">:</span>
+    
+    <span class="n">region_city</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">afile</span><span class="p">)</span>
+    
+
+<span class="k">def</span> <span class="nf">unpackRegions</span><span class="p">(</span><span class="n">region_city</span><span class="p">):</span>
+    
+    <span class="n">new_d</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">region_city</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">for</span> <span class="n">city</span> <span class="ow">in</span> <span class="n">v</span><span class="p">:</span>
+            <span class="n">new_d</span><span class="p">[</span><span class="n">city</span><span class="p">]</span> <span class="o">=</span> <span class="n">k</span>
+    <span class="k">return</span> <span class="n">new_d</span>
+
+<span class="n">region_city_map</span> <span class="o">=</span> <span class="n">unpackRegions</span><span class="p">(</span><span class="n">region_city</span><span class="p">)</span>
+
+<span class="n">orientate_iqaasl</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/export_oriented_layer_iqaasl.csv&quot;</span><span class="p">)</span>
+
+<span class="n">area_iqaasl</span> <span class="o">=</span> <span class="n">admin_details</span><span class="o">.</span><span class="n">dims_data</span><span class="p">[[</span><span class="s2">&quot;loc_date&quot;</span><span class="p">,</span><span class="s2">&quot;area&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;loc_date&quot;</span><span class="p">)</span>
+<span class="n">weight_iqaasl</span> <span class="o">=</span> <span class="n">admin_details</span><span class="o">.</span><span class="n">dims_data</span><span class="p">[[</span><span class="s2">&quot;loc_date&quot;</span><span class="p">,</span><span class="s2">&quot;total_w&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;loc_date&quot;</span><span class="p">)</span>
+<span class="n">admin_details</span><span class="o">.</span><span class="n">df_beaches</span><span class="p">[</span><span class="s2">&quot;slug&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">admin_details</span><span class="o">.</span><span class="n">df_beaches</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">slugify</span><span class="o">.</span><span class="n">slugify</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+
+<span class="n">iqt_gps</span> <span class="o">=</span> <span class="n">admin_details</span><span class="o">.</span><span class="n">df_beaches</span><span class="p">[[</span><span class="s2">&quot;slug&quot;</span><span class="p">,</span> <span class="s2">&quot;latitude&quot;</span><span class="p">,</span> <span class="s2">&quot;longitude&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;slug&quot;</span><span class="p">)</span>
+<span class="n">iqt_city</span> <span class="o">=</span> <span class="n">admin_details</span><span class="o">.</span><span class="n">df_beaches</span><span class="p">[[</span><span class="s2">&quot;slug&quot;</span><span class="p">,</span> <span class="s2">&quot;city&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;slug&quot;</span><span class="p">)</span>
+
+<span class="n">iqt</span> <span class="o">=</span> <span class="n">nwd</span><span class="p">[</span><span class="n">nwd</span><span class="o">.</span><span class="n">project</span> <span class="o">==</span> <span class="s2">&quot;iqaasl&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">iqt</span><span class="p">[</span><span class="s2">&quot;slug&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">iqt</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">slugify</span><span class="o">.</span><span class="n">slugify</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">iqt</span><span class="p">[</span><span class="s2">&quot;area&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">iqt</span><span class="o">.</span><span class="n">loc_date</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">area_iqaasl</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="s2">&quot;area&quot;</span><span class="p">])</span>
+<span class="n">iqt</span><span class="p">[</span><span class="s2">&quot;p/m²&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">iqt</span><span class="o">.</span><span class="n">quantity</span><span class="o">/</span><span class="n">iqt</span><span class="o">.</span><span class="n">area</span>
+<span class="n">iqt</span><span class="p">[</span><span class="s2">&quot;city&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">iqt</span><span class="o">.</span><span class="n">slug</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">iqt_city</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;city&quot;</span><span class="p">])</span>
+<span class="n">iqt</span><span class="p">[</span><span class="s2">&quot;region&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">iqt</span><span class="o">.</span><span class="n">city</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">region_city_map</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+<span class="n">iqt</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;pcs_m&quot;</span><span class="p">:</span> <span class="s2">&quot;p/m&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">iqt</span> <span class="o">=</span> <span class="n">iqt</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;loc_date&quot;</span><span class="p">,</span> <span class="s2">&quot;location&quot;</span><span class="p">,</span> <span class="s2">&quot;city&quot;</span><span class="p">,</span> <span class="s2">&quot;region&quot;</span><span class="p">,</span> <span class="s2">&quot;slug&quot;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s2">&quot;quantity&quot;</span><span class="p">:</span><span class="s2">&quot;sum&quot;</span><span class="p">,</span> <span class="s2">&quot;p/m²&quot;</span><span class="p">:</span><span class="s2">&quot;sum&quot;</span><span class="p">,</span> <span class="s2">&quot;p/m&quot;</span><span class="p">:</span> <span class="s2">&quot;sum&quot;</span><span class="p">})</span>
+<span class="n">iqt</span><span class="p">[</span><span class="s2">&quot;weight&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">iqt</span><span class="o">.</span><span class="n">loc_date</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">weight_iqaasl</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="s2">&quot;total_w&quot;</span><span class="p">])</span>
+<span class="n">iqt</span><span class="p">[</span><span class="s2">&quot;pc&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+
+
+<span class="n">iqt</span><span class="p">[</span><span class="s2">&quot;lat&quot;</span><span class="p">]</span> <span class="o">=</span>  <span class="n">iqt</span><span class="o">.</span><span class="n">slug</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">iqt_gps</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;latitude&quot;</span><span class="p">])</span>
+<span class="n">iqt</span><span class="p">[</span><span class="s2">&quot;lon&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">iqt</span><span class="o">.</span><span class="n">slug</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">iqt_gps</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;longitude&quot;</span><span class="p">])</span>
+
+
+<span class="n">iqt_display</span> <span class="o">=</span> <span class="n">iqt</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;location&quot;</span><span class="p">,</span> <span class="s2">&quot;city&quot;</span><span class="p">,</span> <span class="s2">&quot;lat&quot;</span><span class="p">,</span> <span class="s2">&quot;lon&quot;</span><span class="p">,</span> <span class="s2">&quot;region&quot;</span><span class="p">,</span> <span class="s2">&quot;pc&quot;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s2">&quot;quantity&quot;</span><span class="p">:</span><span class="s2">&quot;sum&quot;</span><span class="p">,</span> <span class="s2">&quot;p/m²&quot;</span><span class="p">:</span><span class="s2">&quot;mean&quot;</span><span class="p">,</span> <span class="s2">&quot;p/m&quot;</span><span class="p">:</span> <span class="s2">&quot;median&quot;</span><span class="p">,</span> <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="s2">&quot;sum&quot;</span><span class="p">,</span> <span class="s2">&quot;loc_date&quot;</span><span class="p">:</span> <span class="s2">&quot;nunique&quot;</span><span class="p">})</span>
+<span class="n">iqt_display</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;loc_date&quot;</span><span class="p">:</span> <span class="s2">&quot;samples&quot;</span><span class="p">}</span> <span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+
+<span class="c1"># iqt_display[[&quot;location&quot;, &quot;city&quot;, &quot;lat&quot;, &quot;lon&quot;, &quot;pc&quot;,  &quot;region&quot;, &quot;quantity&quot;, &quot;weight&quot;, &quot;p/m²&quot;, &quot;p/m&quot;, &quot;samples&quot;]].to_csv(&quot;resources/iqaasl_location_macro.csv&quot;, index=False)</span>
+
+<span class="n">city_gps</span> <span class="o">=</span> <span class="n">iqt</span><span class="p">[[</span><span class="s2">&quot;city&quot;</span><span class="p">,</span> <span class="s2">&quot;lat&quot;</span><span class="p">,</span> <span class="s2">&quot;lon&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="s2">&quot;city&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;city&quot;</span><span class="p">)</span>
+<span class="n">city_orientation</span> <span class="o">=</span> <span class="n">orientate_iqaasl</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;city&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">pc</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+
+<span class="n">iqt_display_city</span> <span class="o">=</span> <span class="n">iqt</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;city&quot;</span><span class="p">,</span> <span class="s2">&quot;region&quot;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s2">&quot;quantity&quot;</span><span class="p">:</span><span class="s2">&quot;sum&quot;</span><span class="p">,</span> <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="s2">&quot;sum&quot;</span><span class="p">,</span> <span class="s2">&quot;p/m²&quot;</span><span class="p">:</span><span class="s2">&quot;mean&quot;</span><span class="p">,</span> <span class="s2">&quot;p/m&quot;</span><span class="p">:</span> <span class="s2">&quot;median&quot;</span><span class="p">,</span> <span class="s2">&quot;loc_date&quot;</span><span class="p">:</span> <span class="s2">&quot;nunique&quot;</span><span class="p">})</span>
+<span class="n">iqt_display_city</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;loc_date&quot;</span><span class="p">:</span> <span class="s2">&quot;samples&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">iqt_display_city</span><span class="p">[</span><span class="s2">&quot;lat&quot;</span><span class="p">]</span> <span class="o">=</span>  <span class="n">iqt_display_city</span><span class="p">[</span><span class="s2">&quot;city&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">city_gps</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;lat&quot;</span><span class="p">])</span>
+<span class="n">iqt_display_city</span><span class="p">[</span><span class="s2">&quot;lon&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">iqt_display_city</span><span class="p">[</span><span class="s2">&quot;city&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">city_gps</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;lon&quot;</span><span class="p">])</span>
+<span class="n">iqt_display_city</span><span class="p">[</span><span class="s2">&quot;pe&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">iqt_display_city</span><span class="p">[</span><span class="s2">&quot;city&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">city_orientation</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+
+
+
+
+<span class="c1"># iqt_display_city.to_csv(&quot;resources/iqaasl_city_macro.csv&quot;, index=False)</span>
+<span class="c1"># iqt_display[[&quot;location&quot;, &quot;city&quot;, &quot;lat&quot;, &quot;lon&quot;, &quot;pc&quot;,  &quot;region&quot;, &quot;quantity&quot;, &quot;weight&quot;, &quot;p/m²&quot;, &quot;p/m&quot;, &quot;samples&quot;]]</span>
+<span class="n">iqt_display_city</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="plstk_03.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Un troisième regard : Orientation de la plage</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="references.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">References</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Association pour la Sauvegarde du Léman<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
