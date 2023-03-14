@@ -1,5 +1,5 @@
 # Plastock - count data
-
+jupyter book build ./
 *Statistiques descriptives et modèles du nombre de fragments anthropiques identifiés dans un cuboïde rectangulaire de 10X10X5 centimètres.*
 
 Il s'agit d'un manuscrit non publié. Ce travail en cours est l'œuvre des

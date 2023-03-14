@@ -16,80 +16,80 @@ G79,"Morceau de plastique entre 2,5 et 50cm"
 G35,Paille pour boisson
 G124,Rubalise/ruban de signalisation/de chantier en plastique
 G82,"Sagex-EPS/Polystirène expensé entre 2,5cm et 50cm"
-G53,Morceau de filet de pêche de moins de 50 cm
-G112,Pellets/Nurdles industriels
 G177,Emballage/papier alimentaire en aluminium
 G27,Mégot de cigarette
 G198,Morceau de métal de moins de 5cm
 G200,Morceau de verre/bouteille de moins de 5cm
 G117,Sagex-EPS/Polystirène expensé de moins de 5mm
-G126,Balle/Ballon de sport
-G125,Ballon de baudruche
-G26,Briquet
-G175,Canette
-G178,Couvercle/capuchon aluminium/fer blanc
-G131,Élastique pour les cheveux
-G32,Jouet en plastique
-G158,Livre
-G901,Masque chirurgical/protection/hygiène
-G134,Morceau de caoutchouc entre 5 et 30cm
-G106,Morceaux/fragments de plastique anguleux de moins de 5mm
-G211,Pansement/Sparadrap/Bande
-G128,Pneu velo
 G89,Déchet de construction/chantier en plastique
 G210,Morceau de céramique de moins de 5cm
+G112,Pellets/Nurdles industriels
 G81,"Sagex-EPS/Polystirène expensé entre 0,5cm et 2,5cm"
+G158,Serviette/mouchoir en papier
 G50,Ficelle de moins de 1cm de diamètre
 G21,Bouchon/capuchon PET
+G175,Capsule/capuchon de bouteille en aluminium
+G134,Chewing-gum
+G131,Élastique pour les cheveux
 G183,Hameçon
+G53,Morceau de filet de pêche de moins de 50 cm
 G54,Morceau de filet de pêche de plus de 50 cm
 G145,Morceau de textile entre 5 et 30cm
+G106,Morceaux/fragments de plastique anguleux de moins de 5mm
+G211,Pansement/Sparadrap/Bande
+G901,Masque chirurgical/protection/hygiène
 G74,Mousse de rembourage
 G182,Bouchon à vis
 G216,Cable/fil électrique
+G178,Couvercle/capuchon aluminium/fer blanc
 G28,Feutre/Stylo
-G191,Barbelé de moins de 50 cm
-G103,Morceaux/fragments de plastique arrondis de moins de 5mm
-G99,Seringue en plastique
 G66,Bande de cerclage en plastique
-G12,Bouteille/Emballage de cosmétique
-G67,Emballage industriel
-G167,Feux d'artifice
-G170,Bois d'oeuvre (traité ou coupé/usiné)
+G103,Morceaux/fragments de plastique arrondis de moins de 5mm
 G132,Ligne de pêche
+G125,Ballon de baudruche
 G7,Bouteille de PET 0.5l
 G33,Gobelet plastique jetable
 G97,Serviette/lingette hygiènique
+G170,Bois d'oeuvre (traité ou coupé/usiné)
 G159,Bouchon en liège
-G135,Chausette
-G2,Sachet plastique
-G34,Touillette/Batonnet en plastique
+G191,Fil de fer
 G10,"Barquette/récipient en plastique, Take away, restauration rapide"
 G197,Cartouche/munition/balle/douille de chasse en métal
 G100,Plaquette de médicament
+G99,Seringue en plastique
+G2,Sac plastique
 G138,Ceinture en cuir
-G25,Paquet de cigarettes
-G61,Rapala/Leurre
+G126,Balle/Ballon de sport
 G202,Ampoule
+G67,Emballage industriel
 G157,Feuille de papier
 G90,Pot de fleur en plastique
+G135,Chausette
 G148,Emballage boîte en carton
 G101,Sac à excréments de chien
 G29,Barrette/Pince à cheveux
-G137,Serviette/Mouchoir en tissu
+G34,Touillette/Batonnet en plastique
 G73,Éponge
 G4,Sac de congélation/petit sac plastique
 G937,Capsule de phéromones pour vigne
+G167,Feux d'artifice
 G144,Tampon hygiénique/applicateur
-G194,Câble de moins de 50 cm
+G26,Briquet
 G171,Crayon
 G51,Morceau de Filet de pêche de moins de 50 cm
 G199,Tuyau métalique
-G174,Bombe aérosol/de peinture
-G136,Chaussure/Basket
 G41,Gant chirurgical/protection/caoutchouc
+G32,Jouet en plastique
 G139,Sac en tissu/toile
 G155,Tube pour feux d'artifice
 G129,Chambre à air/ feuille de caoutchouc
+G136,Chaussure/Basket
+G25,Paquet de cigarettes
 G181,Cuillère métal
 G39,Gant en latex
+G12,Bouteille/Emballage de cosmétique
+G194,Câble de moins de 50 cm
+G128,Pneu velo
+G61,Rapala/Leurre
+G137,Serviette/Mouchoir en tissu
+G174,Bombe aérosol/de peinture
