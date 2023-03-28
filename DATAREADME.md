@@ -38,5 +38,6 @@ The data is cleaned and stored here as it is made available. Therefore this docu
 
 1. vone_leman.jpg: Initial map of the lake with regional and municipal aggregated values.
 
-
+## lecture fichier CSV avec ;
+macro_csv =pd.read_csv('data/20230328macro.csv', sep = ';', header = None)
 
