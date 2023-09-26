@@ -4,8 +4,5 @@ options:
   numbered: False
   only_build_toc_files: true
 chapters:
-- file: plstk_01
-- file: plstk_02
-- file: plstk_03
-- file: plastock_iqaasl
+- file: variables_aleatoires
 - file: references

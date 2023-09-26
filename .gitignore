@@ -1,21 +1,27 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
-
-
-# this repo
-data/ignorethese/
-/ignorethese
-_build/
-
-# Jupyter Notebook
+# if you are producing data in a repo with
 .ipynb_checkpoints
+*/.ipynb_checkpoints/*
+*.log
+*.pot
+*.pyc
+*/*/*/__pycache__/
+*/*/__pycache__/
+*/__pycache__/
+
+
+
+# generated data
+/ignorethis/
 
 # IPython
 profile_default/
 ipython_config.py
 
+# jetbrains IDE stuff
+*.iml
+.idea/
 
-
-
+# ms IDE stuff
+*.code-workspace
+.history
+.vscode
