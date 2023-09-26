@@ -1,13 +1,13 @@
 # Plastock - count data
-jupyter book build ./
+
 *Statistiques descriptives et modèles du nombre de fragments de micro-plastiques et de déchets identifiés sur les plages du Léman.*
 
 Il s'agit d'un manuscrit non publié. Ce travail en cours est l'œuvre des
-collaborateurs de [l'Association pour la Sauvegarde du Léman](https://asleman.org/):
+collaborateurs de [l'Association pour la Sauvegarde du Léman](https://asleman.org/) et Roger Erismann:
 
 1. Adrien Bonny
 2. Alexis Pochelon
-3. Roger 
+
 
 Veuillez contacter Alexis ou Adrien pour toute question concernant les microplastiques ou le lac en général.
 ![map](resources/maps/intro_map.jpeg)
