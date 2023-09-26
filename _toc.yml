@@ -1,8 +1,8 @@
 format: jb-book
 root: index
 options:
-  numbered: False
+  numbered: true
   only_build_toc_files: true
 chapters:
-- file: variables_aleatoires
+- file: random_variables
 - file: references

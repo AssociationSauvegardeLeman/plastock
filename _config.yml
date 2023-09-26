@@ -1,7 +1,6 @@
 # In _config.yml
-title: Plast-Stock
-author: Association pour la Sauvegarde du Léman
-logo: False
+title: Plaststock
+author: Roger Erismann, Alexis Pochelon
 execute:
   execute_notebooks: False
 html:
