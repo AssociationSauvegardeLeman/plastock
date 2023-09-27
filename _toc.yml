@@ -5,4 +5,5 @@ options:
   only_build_toc_files: true
 chapters:
 - file: random_variables
+- file: location_summary
 - file: references
