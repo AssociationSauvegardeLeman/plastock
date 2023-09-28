@@ -62,7 +62,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'random_variables';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="2. References" href="references.html" />
+    <link rel="next" title="2. Résultats par plage et position" href="location_summary.html" />
     <link rel="prev" title="Plastock - count data" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
@@ -150,7 +150,8 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Variables aléatoires</a></li>
-<li class="toctree-l1"><a class="reference internal" href="references.html">2. References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="location_summary.html">2. Résultats par plage et position</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">3. References</a></li>
 </ul>
 
     </div>
@@ -352,6 +353,21 @@ document.write(`
 
 <span class="kn">from</span> <span class="nn">plastockmethods</span> <span class="kn">import</span> <span class="n">name_the_zones</span><span class="p">,</span> <span class="n">name_the_particles</span><span class="p">,</span> <span class="n">frequentation_name</span><span class="p">,</span> <span class="n">situation_name</span>
 <span class="kn">from</span> <span class="nn">plastockmethods</span> <span class="kn">import</span> <span class="n">particle_groups</span><span class="p">,</span> <span class="n">name_the_substrate</span><span class="p">,</span> <span class="n">name_the_distance</span><span class="p">,</span> <span class="n">table_css_styles</span>
+
+<span class="k">def</span> <span class="nf">add_weight_of_samples</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">samps</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="n">nsamples</span><span class="p">,</span> <span class="n">tquantity</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="n">tquantity</span><span class="p">):</span>
+    <span class="c1"># calculates the weight of the samples and the counts for a set of data    </span>
+    <span class="n">data</span><span class="p">[</span><span class="s2">&quot;poids compte&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">compte</span><span class="o">/</span><span class="n">tquantity</span>
+    <span class="n">data</span><span class="p">[</span><span class="s2">&quot;poids echantillon&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">echantillon</span><span class="o">/</span><span class="n">nsamples</span>
+    
+    <span class="k">return</span> <span class="n">data</span>
+
+<span class="k">def</span> <span class="nf">add_labels_display</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">column_name</span><span class="p">,</span> <span class="n">labels</span><span class="p">):</span>
+    <span class="c1"># Changes column values from integer to labels and sets df.index to column_name</span>
+    <span class="n">data</span><span class="p">[</span><span class="n">column_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">column_name</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">labels</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+    <span class="n">data</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="n">column_name</span><span class="p">,</span> <span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="kc">None</span>
+        
+    <span class="k">return</span> <span class="n">data</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">precision</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">set_table_styles</span><span class="p">(</span><span class="n">table_css_styles</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1380,11 +1396,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="references.html"
+       href="location_summary.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2. </span>References</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Résultats par plage et position</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
