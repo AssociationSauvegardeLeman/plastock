@@ -68,6 +68,6 @@ header_row = {'selector': 'th:nth-child(1)', 'props': f'background-color: #FFF;'
 even_rows = {"selector": 'tr:nth-child(even)', 'props': f'background-color: rgba(139, 69, 19, 0.08);'}
 odd_rows = {'selector': 'tr:nth-child(odd)', 'props': 'background: #FFF;'}
 table_font = {'selector': 'tr', 'props': 'font-size: 14px;'}
-caption_bottom = {'selector': 'caption','props': 'caption-side: bottom; font-size:14px; text-align: left'}
+caption_bottom = {'selector': 'caption','props': 'caption-side: bottom; font-size:16px; text-align: left; margin-top:15px;'}
 table_css_styles = [even_rows, odd_rows, table_font, header_row, caption_bottom]
 
