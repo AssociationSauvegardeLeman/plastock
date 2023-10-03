@@ -1,0 +1,1396 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plastock - Iqaasl &#8212; Plaststock</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'plastock_iqaasl';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Plaststock</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Plastock - count data
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="random_variables.html">1. Variables aléatoires</a></li>
+<li class="toctree-l1"><a class="reference internal" href="location_summary.html">2. Micro: résultats par plage et position</a></li>
+<li class="toctree-l1"><a class="reference internal" href="location_attributes.html">3. Micro : résultats par plage et attribut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="macro_location_summary.html">4. Macro : résultats par plage et position</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">5. References</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/hammerdirt-analyst/plastock" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/plastock_iqaasl.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Plastock - Iqaasl</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparaison-de-la-taille-des-lieux-d-echantillonnage">Comparaison de la taille des lieux d’échantillonnage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metres-carres">Mètres carrés</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metres-lineaires">Mètres linéaires</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparaison-des-resultats">Comparaison des résultats:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pieces-par-metre-carre">Pièces par mètre carré</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pieces-par-metre-lineaire">Pièces par mètre linéaire</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jours-d-echantillonnage-par-periode-de-12-mois">Jours d’échantillonnage par période de 12 mois</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#difference-entre-les-deux-distributions-d-echantillonnage-pcs-m">Difference entre les deux distributions d’échantillonnage: pcs/m</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantifying-the-difference">Quantifying the difference</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-confidence-intervals-and-boxplots">The confidence intervals and boxplots</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fail-rate-taux-d-echeque">Fail rate : taux d’écheque</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span><span class="p">,</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">time</span>
+<span class="kn">from</span> <span class="nn">babel.dates</span> <span class="kn">import</span> <span class="n">format_date</span><span class="p">,</span> <span class="n">format_datetime</span><span class="p">,</span> <span class="n">format_time</span><span class="p">,</span> <span class="n">get_month_names</span>
+<span class="kn">import</span> <span class="nn">locale</span>
+<span class="kn">import</span> <span class="nn">slugify</span>
+
+<span class="c1"># math packages:</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stats</span>
+
+<span class="c1"># charting:</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.dates</span> <span class="k">as</span> <span class="nn">mdates</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">ticker</span>
+<span class="kn">from</span> <span class="nn">matplotlib.ticker</span> <span class="kn">import</span> <span class="n">MultipleLocator</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="c1"># images and display</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Markdown</span> <span class="k">as</span> <span class="n">md</span>
+<span class="kn">from</span> <span class="nn">IPython</span> <span class="kn">import</span> <span class="n">display</span>
+
+
+<span class="n">header_row</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;selector&#39;</span><span class="p">:</span> <span class="s1">&#39;th:nth-child(1)&#39;</span><span class="p">,</span> <span class="s1">&#39;props&#39;</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;background-color: #FFF;&#39;</span><span class="p">}</span>
+<span class="n">even_rows</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;selector&quot;</span><span class="p">:</span> <span class="s1">&#39;tr:nth-child(even)&#39;</span><span class="p">,</span> <span class="s1">&#39;props&#39;</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;background-color: rgba(139, 69, 19, 0.08);&#39;</span><span class="p">}</span>
+<span class="n">odd_rows</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;selector&#39;</span><span class="p">:</span> <span class="s1">&#39;tr:nth-child(odd)&#39;</span><span class="p">,</span> <span class="s1">&#39;props&#39;</span><span class="p">:</span> <span class="s1">&#39;background: #FFF;&#39;</span><span class="p">}</span>
+<span class="n">table_font</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;selector&#39;</span><span class="p">:</span> <span class="s1">&#39;tr&#39;</span><span class="p">,</span> <span class="s1">&#39;props&#39;</span><span class="p">:</span> <span class="s1">&#39;font-size: 12px;&#39;</span><span class="p">}</span>
+<span class="n">table_css_styles</span> <span class="o">=</span> <span class="p">[</span><span class="n">even_rows</span><span class="p">,</span> <span class="n">odd_rows</span><span class="p">,</span> <span class="n">table_font</span><span class="p">,</span> <span class="n">header_row</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="plastock-iqaasl">
+<h1>Plastock - Iqaasl<a class="headerlink" href="#plastock-iqaasl" title="Permalink to this headline">#</a></h1>
+<div class="section" id="comparaison-de-la-taille-des-lieux-d-echantillonnage">
+<h2>Comparaison de la taille des lieux d’échantillonnage<a class="headerlink" href="#comparaison-de-la-taille-des-lieux-d-echantillonnage" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="metres-carres">
+<h2>Mètres carrés<a class="headerlink" href="#metres-carres" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/macro_current.csv&quot;</span><span class="p">)</span>
+<span class="n">beach_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/pstock_beaches_current.csv&quot;</span><span class="p">)</span>
+<span class="n">beach_data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Plage</th>
+      <th>echantillon</th>
+      <th>orientation</th>
+      <th>latitude</th>
+      <th>longitude</th>
+      <th>position</th>
+      <th>substrat</th>
+      <th>area</th>
+      <th>time</th>
+      <th>length</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Amphion</td>
+      <td>74_Amp_1</td>
+      <td>NE</td>
+      <td>46.398117</td>
+      <td>6.534083</td>
+      <td>1</td>
+      <td>4</td>
+      <td>98</td>
+      <td>50</td>
+      <td>91</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Amphion</td>
+      <td>74_Amp_10</td>
+      <td>NNE</td>
+      <td>46.397900</td>
+      <td>6.534450</td>
+      <td>2</td>
+      <td>4</td>
+      <td>98</td>
+      <td>50</td>
+      <td>91</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Amphion</td>
+      <td>74_Amp_2</td>
+      <td>NNE</td>
+      <td>46.398017</td>
+      <td>6.534250</td>
+      <td>1</td>
+      <td>4</td>
+      <td>98</td>
+      <td>50</td>
+      <td>91</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Amphion</td>
+      <td>74_Amp_3</td>
+      <td>NE</td>
+      <td>46.398000</td>
+      <td>6.534350</td>
+      <td>1</td>
+      <td>4</td>
+      <td>98</td>
+      <td>50</td>
+      <td>91</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Amphion</td>
+      <td>74_Amp_4</td>
+      <td>NNE</td>
+      <td>46.397917</td>
+      <td>6.534583</td>
+      <td>1</td>
+      <td>4</td>
+      <td>98</td>
+      <td>50</td>
+      <td>91</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>230</th>
+      <td>Bouveret</td>
+      <td>VS_Bou_5</td>
+      <td>O</td>
+      <td>46.389317</td>
+      <td>6.859867</td>
+      <td>1</td>
+      <td>1</td>
+      <td>99</td>
+      <td>50</td>
+      <td>116</td>
+    </tr>
+    <tr>
+      <th>231</th>
+      <td>Bouveret</td>
+      <td>VS_Bou_6</td>
+      <td>OSO</td>
+      <td>46.389400</td>
+      <td>6.859867</td>
+      <td>1</td>
+      <td>1</td>
+      <td>99</td>
+      <td>50</td>
+      <td>116</td>
+    </tr>
+    <tr>
+      <th>232</th>
+      <td>Bouveret</td>
+      <td>VS_Bou_7</td>
+      <td>OSO</td>
+      <td>46.389517</td>
+      <td>6.859817</td>
+      <td>1</td>
+      <td>1</td>
+      <td>99</td>
+      <td>50</td>
+      <td>116</td>
+    </tr>
+    <tr>
+      <th>233</th>
+      <td>Bouveret</td>
+      <td>VS_Bou_8</td>
+      <td>ONO</td>
+      <td>46.389017</td>
+      <td>6.859833</td>
+      <td>2</td>
+      <td>1</td>
+      <td>438</td>
+      <td>220</td>
+      <td>116</td>
+    </tr>
+    <tr>
+      <th>234</th>
+      <td>Bouveret</td>
+      <td>VS_Bou_9</td>
+      <td>ONO</td>
+      <td>46.389100</td>
+      <td>6.859883</td>
+      <td>2</td>
+      <td>1</td>
+      <td>438</td>
+      <td>220</td>
+      <td>116</td>
+    </tr>
+  </tbody>
+</table>
+<p>235 rows × 10 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_column_names</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Position&quot;</span><span class="p">:</span><span class="s2">&quot;position&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Substrat&quot;</span><span class="p">:</span><span class="s2">&quot;substrat&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Date&quot;</span><span class="p">:</span><span class="s2">&quot;date&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Code&quot;</span><span class="p">:</span><span class="s2">&quot;code&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Quantité&quot;</span><span class="p">:</span><span class="s2">&quot;quantity&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Aire&quot;</span><span class="p">:</span><span class="s2">&quot;area&quot;</span>
+<span class="p">}</span>
+
+<span class="n">length_key</span> <span class="o">=</span> <span class="n">beach_data</span><span class="p">[[</span><span class="s2">&quot;Plage&quot;</span><span class="p">,</span><span class="s2">&quot;length&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="s2">&quot;Plage&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;Plage&quot;</span><span class="p">)</span>
+<span class="n">work_data</span> <span class="o">=</span> <span class="n">new_data</span><span class="p">[[</span><span class="s2">&quot;Plage&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">new_column_names</span><span class="o">.</span><span class="n">keys</span><span class="p">()]]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">work_data</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">new_column_names</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">work_data</span><span class="p">[</span><span class="s2">&quot;length&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">work_data</span><span class="o">.</span><span class="n">Plage</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">length_key</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;length&quot;</span><span class="p">])</span>
+<span class="n">work_data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Plage</th>
+      <th>position</th>
+      <th>substrat</th>
+      <th>date</th>
+      <th>code</th>
+      <th>quantity</th>
+      <th>area</th>
+      <th>length</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Amphion</td>
+      <td>1</td>
+      <td>4.0</td>
+      <td>01.02.2022</td>
+      <td>G24</td>
+      <td>2</td>
+      <td>98</td>
+      <td>91</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Amphion</td>
+      <td>2</td>
+      <td>4.0</td>
+      <td>01.02.2022</td>
+      <td>G24</td>
+      <td>42</td>
+      <td>342</td>
+      <td>91</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Amphion</td>
+      <td>2</td>
+      <td>4.0</td>
+      <td>03.05.2022</td>
+      <td>G24</td>
+      <td>5</td>
+      <td>342</td>
+      <td>91</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Amphion</td>
+      <td>1</td>
+      <td>4.0</td>
+      <td>19.07.2022</td>
+      <td>G24</td>
+      <td>5</td>
+      <td>98</td>
+      <td>91</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Amphion</td>
+      <td>2</td>
+      <td>4.0</td>
+      <td>19.07.2022</td>
+      <td>G24</td>
+      <td>11</td>
+      <td>342</td>
+      <td>91</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2285</th>
+      <td>Aubonne</td>
+      <td>1</td>
+      <td>4.0</td>
+      <td>10.09.2022</td>
+      <td>G165</td>
+      <td>1</td>
+      <td>72</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <th>2286</th>
+      <td>Aubonne</td>
+      <td>2</td>
+      <td>4.0</td>
+      <td>10.09.2022</td>
+      <td>G165</td>
+      <td>4</td>
+      <td>268</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <th>2287</th>
+      <td>Baby Plage</td>
+      <td>1</td>
+      <td>1.0</td>
+      <td>23.04.2022</td>
+      <td>G165</td>
+      <td>1</td>
+      <td>112</td>
+      <td>81</td>
+    </tr>
+    <tr>
+      <th>2288</th>
+      <td>Baby Plage</td>
+      <td>2</td>
+      <td>1.0</td>
+      <td>15.10.2022</td>
+      <td>G165</td>
+      <td>1</td>
+      <td>384</td>
+      <td>81</td>
+    </tr>
+    <tr>
+      <th>2289</th>
+      <td>Tougues</td>
+      <td>2</td>
+      <td>2.0</td>
+      <td>29.01.2022</td>
+      <td>G165</td>
+      <td>2</td>
+      <td>450</td>
+      <td>114</td>
+    </tr>
+  </tbody>
+</table>
+<p>2290 rows × 8 columns</p>
+</div></div></div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plastock data</span>
+<span class="n">plastock</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/20230314macro.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;ISO-8859-3&quot;</span><span class="p">)</span>
+<span class="n">p_beaches</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/asl_beaches2.csv&quot;</span><span class="p">)</span>
+<span class="c1"># iqaasl data</span>
+<span class="n">iq_dims</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/corrected_dims.csv&quot;</span><span class="p">)</span>
+<span class="n">iqaasl</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/lac_leman_iqaasl.csv&quot;</span><span class="p">)</span>
+
+<span class="c1"># plastock survey data of interest</span>
+<span class="n">pstck_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Lieu&#39;</span><span class="p">,</span> <span class="s1">&#39;Aire&#39;</span><span class="p">,</span><span class="s1">&#39;Position&#39;</span><span class="p">,</span> <span class="s1">&#39;Date&#39;</span><span class="p">,</span> <span class="s1">&#39;Code&#39;</span><span class="p">,</span> <span class="s1">&#39;Quantité&#39;</span><span class="p">]</span>
+<span class="n">pstck_rename</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Lieu&quot;</span><span class="p">:</span><span class="s2">&quot;location&quot;</span><span class="p">,</span> <span class="s2">&quot;Aire&quot;</span><span class="p">:</span><span class="s2">&quot;area&quot;</span><span class="p">,</span> <span class="s2">&quot;Date&quot;</span><span class="p">:</span><span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="s2">&quot;Code&quot;</span><span class="p">:</span><span class="s2">&quot;code&quot;</span><span class="p">,</span> <span class="s2">&quot;Quantité&quot;</span><span class="p">:</span><span class="s2">&quot;quantity&quot;</span><span class="p">,</span> <span class="s2">&quot;Position&quot;</span><span class="p">:</span><span class="s2">&quot;position&quot;</span><span class="p">}</span>
+<span class="n">pstck</span> <span class="o">=</span>  <span class="n">plastock</span><span class="p">[</span><span class="n">pstck_cols</span><span class="p">]</span>
+<span class="n">pstck</span> <span class="o">=</span> <span class="n">pstck</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">pstck_rename</span><span class="p">)</span>
+
+<span class="c1"># the surveys were separated into two zones for plastock</span>
+<span class="c1"># we want to compare the total of the surveys, so the zones at each</span>
+<span class="c1"># location and survey need to be combined</span>
+<span class="n">pstck_q</span> <span class="o">=</span> <span class="n">pstck</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;location&quot;</span><span class="p">,</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="s2">&quot;code&quot;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">quantity</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="c1"># the length of the survey is not included in the plastock survey data</span>
+<span class="c1"># it needs to be attached to the survey reults, this information is available</span>
+<span class="c1"># in the beaches file</span>
+<span class="n">pbl</span> <span class="o">=</span> <span class="n">p_beaches</span><span class="p">[[</span><span class="s2">&quot;location&quot;</span><span class="p">,</span> <span class="s2">&quot;length&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">([</span><span class="s2">&quot;location&quot;</span><span class="p">,</span> <span class="s2">&quot;length&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;location&quot;</span><span class="p">)</span>
+
+<span class="c1"># the dimensional data was taken once per survey</span>
+<span class="c1"># remove the duplicate values by date and location</span>
+<span class="n">pstck_ndup</span> <span class="o">=</span> <span class="n">pstck</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">([</span><span class="s2">&quot;location&quot;</span><span class="p">,</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span><span class="s2">&quot;area&quot;</span><span class="p">])</span>
+<span class="c1"># combine the areas by date and location</span>
+<span class="n">pstck_ta</span> <span class="o">=</span> <span class="n">pstck_ndup</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;location&quot;</span><span class="p">,</span> <span class="s2">&quot;date&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">area</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">pstck</span> <span class="o">=</span> <span class="n">pstck_q</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">pstck_ta</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;location&quot;</span><span class="p">,</span> <span class="s2">&quot;date&quot;</span><span class="p">])</span>
+
+<span class="c1"># the location names in asl_beaches does not match the names in 20230314macro.csv</span>
+<span class="c1"># the names in the asl_beaches file were changed previously</span>
+<span class="c1"># they need to be changed back to match the new survey data</span>
+<span class="n">p_names</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">p_beaches</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+<span class="n">pstock_names</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">plastock</span><span class="o">.</span><span class="n">Lieu</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+
+<span class="c1"># the differences are capitalizations and hyphenations</span>
+<span class="n">renames</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="p">:</span> <span class="n">p_names</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">pstock_names</span><span class="p">)}</span>
+<span class="n">pstck</span><span class="p">[</span><span class="s2">&quot;location&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pstck</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">renames</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+
+<span class="c1"># add the length</span>
+<span class="n">pstck</span><span class="p">[</span><span class="s2">&quot;length&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pstck</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">pbl</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">.</span><span class="n">length</span><span class="p">)</span>
+<span class="n">pstck</span><span class="p">[</span><span class="s2">&quot;project&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;plastock&quot;</span>
+<span class="n">pstck</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">pstck</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2">.%m.%Y&quot;</span><span class="p">)</span>
+
+<span class="n">pstck</span><span class="p">[</span><span class="s2">&quot;doy&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pstck</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">dayofyear</span>
+<span class="n">pstck</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pstck</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">date</span>
+
+<span class="c1"># the columns of interest</span>
+<span class="n">survey_columns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;location&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;date&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;code&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;length&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;area&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;quantity&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;project&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;doy&quot;</span>
+<span class="p">]</span>
+
+<span class="n">pstck</span> <span class="o">=</span> <span class="n">pstck</span><span class="p">[</span><span class="n">survey_columns</span><span class="p">]</span>
+<span class="c1"># there are aggregations that need to be made to the plastock data. The fragemented foams</span>
+<span class="c1"># and fragmented plastics are consolidated into one group of codes. The plastic caps are consolidated</span>
+<span class="c1"># as per the intend of the ASL and the recomendation from the IQAASL report.    </span>
+<span class="n">gfoam</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;G81&quot;</span><span class="p">,</span> <span class="s2">&quot;G82&quot;</span><span class="p">,</span> <span class="s2">&quot;G83&quot;</span><span class="p">]</span>
+<span class="n">plasticpcs</span> <span class="o">=</span> <span class="p">[</span> <span class="s2">&quot;G78&quot;</span><span class="p">,</span> <span class="s2">&quot;G79&quot;</span><span class="p">,</span> <span class="s2">&quot;G80&quot;</span><span class="p">,</span> <span class="s2">&quot;G75&quot;</span><span class="p">,</span> <span class="s2">&quot;G76&quot;</span><span class="p">,</span> <span class="s2">&quot;G77&quot;</span><span class="p">]</span>
+<span class="n">Gcaps</span> <span class="o">=</span> <span class="p">[</span> <span class="s2">&quot;G21&quot;</span><span class="p">,</span> <span class="s2">&quot;G23&quot;</span><span class="p">,</span> <span class="s2">&quot;G24&quot;</span> <span class="p">]</span>
+
+<span class="c1"># the columns that are being kept and the operations per column          </span>
+<span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;location&#39;</span><span class="p">,</span> <span class="s1">&#39;date&#39;</span><span class="p">,</span>  <span class="s1">&#39;area&#39;</span><span class="p">,</span> <span class="s1">&#39;length&#39;</span><span class="p">,</span><span class="s1">&#39;project&#39;</span><span class="p">,</span> <span class="s2">&quot;doy&quot;</span><span class="p">]</span>
+<span class="n">operations</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;quantity&quot;</span><span class="p">:</span><span class="s2">&quot;sum&quot;</span><span class="p">}</span>
+
+<span class="c1"># separate the codes of interest by group from the data frame and add the replacement value</span>
+<span class="n">pstck_gfrags</span> <span class="o">=</span> <span class="n">pstck</span><span class="p">[</span><span class="n">pstck</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">plasticpcs</span><span class="p">)]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">columns</span><span class="p">,</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">operations</span><span class="p">)</span>
+<span class="n">pstck_gfoam</span> <span class="o">=</span> <span class="n">pstck</span><span class="p">[</span><span class="n">pstck</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">gfoam</span><span class="p">)]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">columns</span><span class="p">,</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">operations</span><span class="p">)</span>
+<span class="n">pstck_gcaps</span> <span class="o">=</span> <span class="n">pstck</span><span class="p">[</span><span class="n">pstck</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">Gcaps</span><span class="p">)]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">columns</span><span class="p">,</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">operations</span><span class="p">)</span>
+
+<span class="n">pstck_gcaps</span><span class="p">[</span><span class="s2">&quot;code&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Gcaps&quot;</span>
+<span class="n">pstck_gfoam</span><span class="p">[</span><span class="s2">&quot;code&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Gfoam&quot;</span>
+<span class="n">pstck_gfrags</span><span class="p">[</span><span class="s2">&quot;code&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Gfrags&quot;</span>
+
+<span class="c1"># remove the same instances from the work data                                                               </span>
+<span class="n">pstck_no_frags</span> <span class="o">=</span> <span class="n">pstck</span><span class="p">[</span><span class="o">~</span><span class="n">pstck</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="o">*</span><span class="n">plasticpcs</span><span class="p">,</span> <span class="o">*</span><span class="n">gfoam</span><span class="p">,</span> <span class="o">*</span><span class="n">Gcaps</span><span class="p">])]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># formatted plastock data</span>
+<span class="n">pstck</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">pstck_no_frags</span><span class="p">,</span> <span class="n">pstck_gfrags</span><span class="p">,</span> <span class="n">pstck_gfoam</span><span class="p">,</span> <span class="n">pstck_gcaps</span><span class="p">])</span>
+
+<span class="c1"># zero is not accounted for in the plastock data</span>
+<span class="c1"># this is essential for computing the median and average</span>
+<span class="c1"># values. The fail rate can not be calculated with out it</span>
+<span class="c1"># 1. collect all the codes that were identified in plastock</span>
+<span class="n">codes</span> <span class="o">=</span> <span class="n">pstck</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+
+<span class="c1"># 2 make a dataframe of all possible codes and give them a</span>
+<span class="c1"># quantity of zero</span>
+<span class="n">code_zero</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;code&quot;</span><span class="p">:</span><span class="n">codes</span><span class="p">})</span>
+<span class="n">code_zero</span><span class="p">[</span><span class="s2">&quot;quantity&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># 3. collect all the unique date and location pairs</span>
+<span class="n">dates</span> <span class="o">=</span> <span class="n">pstck</span><span class="p">[[</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="s1">&#39;location&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">add_zeroes</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">dates</span><span class="p">,</span> <span class="n">code_zero</span><span class="p">):</span>
+    
+    <span class="n">some_zeroes</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">apair</span> <span class="ow">in</span> <span class="n">dates</span><span class="o">.</span><span class="n">values</span><span class="p">:</span>
+        <span class="c1"># collect the results from one survey</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="n">data</span><span class="p">[(</span><span class="n">data</span><span class="o">.</span><span class="n">location</span> <span class="o">==</span> <span class="n">apair</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">&amp;</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">apair</span><span class="p">[</span><span class="mi">0</span><span class="p">])]</span>
+        <span class="c1"># collect the codes that were identified in the current survey</span>
+        <span class="n">codes_with_vals</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+        <span class="c1"># identify the codes that were not identified</span>
+        <span class="n">codes_with_no_vals</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">code_zero</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">codes_with_vals</span><span class="p">]</span>
+        <span class="c1"># collect the area and length for the current survey</span>
+        <span class="n">area_length</span> <span class="o">=</span> <span class="n">d</span><span class="p">[[</span><span class="s2">&quot;area&quot;</span><span class="p">,</span> <span class="s2">&quot;length&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">([</span><span class="s2">&quot;area&quot;</span><span class="p">,</span> <span class="s2">&quot;length&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+        <span class="c1"># add the area, length, location, date and project to</span>
+        <span class="c1"># to the dataframe of codes and zeroes</span>
+        <span class="n">code_zero</span><span class="p">[</span><span class="s2">&quot;area&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">area_length</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;area&quot;</span><span class="p">]</span>
+        <span class="n">code_zero</span><span class="p">[</span><span class="s2">&quot;length&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">area_length</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;length&quot;</span><span class="p">]</span>
+        <span class="n">code_zero</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">apair</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">code_zero</span><span class="p">[</span><span class="s2">&quot;location&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">apair</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">code_zero</span><span class="p">[</span><span class="s2">&quot;project&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;plastock&quot;</span>
+        <span class="c1"># keep only the codes that were not indentified in the survey</span>
+        <span class="n">test_no_vals</span> <span class="o">=</span> <span class="n">code_zero</span><span class="p">[</span><span class="n">code_zero</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">codes_with_no_vals</span><span class="p">)]</span>
+        <span class="c1"># add the resulting df to the list</span>
+        <span class="n">some_zeroes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">test_no_vals</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">some_zeroes</span>
+
+<span class="c1"># collect the zero values</span>
+<span class="n">zeroes</span> <span class="o">=</span>  <span class="n">add_zeroes</span><span class="p">(</span><span class="n">pstck</span><span class="p">,</span> <span class="n">dates</span><span class="p">,</span> <span class="n">code_zero</span><span class="p">)</span>
+<span class="c1"># add them to the existing survey results</span>
+<span class="n">pstk</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">pstck</span><span class="p">,</span> <span class="o">*</span><span class="n">zeroes</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># IQAASL data</span>
+<span class="c1"># only locations on lac leman</span>
+<span class="n">iq_locations</span> <span class="o">=</span> <span class="n">iqaasl</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+<span class="n">iq_d</span> <span class="o">=</span> <span class="n">iq_dims</span><span class="p">[</span><span class="n">iq_dims</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">iq_locations</span><span class="p">)]</span>
+
+<span class="c1"># there are three surveys that do not have length or area data:</span>
+<span class="c1"># two at quai-maria-belgia and one at baby-plage-geneva</span>
+<span class="c1"># the average value of the preceeding surveys will be used</span>
+<span class="n">qmb</span> <span class="o">=</span> <span class="n">iq_d</span><span class="p">[(</span><span class="n">iq_d</span><span class="o">.</span><span class="n">location</span> <span class="o">==</span> <span class="s2">&quot;quai-maria-belgia&quot;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">iq_d</span><span class="o">.</span><span class="n">area</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)]</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s2">&quot;length&quot;</span><span class="p">:</span><span class="s2">&quot;mean&quot;</span><span class="p">,</span> <span class="s2">&quot;area&quot;</span><span class="p">:</span><span class="s2">&quot;mean&quot;</span><span class="p">})</span>
+<span class="n">bp</span> <span class="o">=</span> <span class="n">iq_d</span><span class="p">[(</span><span class="n">iq_d</span><span class="o">.</span><span class="n">location</span> <span class="o">==</span> <span class="s2">&quot;baby-plage-geneva&quot;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">iq_d</span><span class="o">.</span><span class="n">area</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)]</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s2">&quot;length&quot;</span><span class="p">:</span><span class="s2">&quot;mean&quot;</span><span class="p">,</span> <span class="s2">&quot;area&quot;</span><span class="p">:</span><span class="s2">&quot;mean&quot;</span><span class="p">})</span>
+
+<span class="c1"># separate the surveys with no dimensional data</span>
+<span class="n">qmb_0</span> <span class="o">=</span> <span class="n">iq_d</span><span class="p">[(</span><span class="n">iq_d</span><span class="o">.</span><span class="n">location</span> <span class="o">==</span> <span class="s2">&quot;quai-maria-belgia&quot;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">iq_d</span><span class="o">.</span><span class="n">area</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)]</span>
+<span class="n">bp_0</span> <span class="o">=</span> <span class="n">iq_d</span><span class="p">[(</span><span class="n">iq_d</span><span class="o">.</span><span class="n">location</span> <span class="o">==</span> <span class="s2">&quot;baby-plage-geneva&quot;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">iq_d</span><span class="o">.</span><span class="n">area</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)]</span>
+
+<span class="c1"># add the derived values</span>
+<span class="n">qmb_0</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s2">&quot;area&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">qmb</span><span class="o">.</span><span class="n">area</span>
+<span class="n">qmb_0</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s2">&quot;length&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">qmb</span><span class="o">.</span><span class="n">length</span>
+<span class="n">bp_0</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s2">&quot;area&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">bp</span><span class="o">.</span><span class="n">area</span>
+<span class="n">bp_0</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s2">&quot;length&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">bp</span><span class="o">.</span><span class="n">length</span>
+
+<span class="c1"># merge the corrections with the original data</span>
+<span class="c1"># minus the records with no diemensional data</span>
+<span class="n">iqd</span> <span class="o">=</span> <span class="n">iq_d</span><span class="p">[(</span><span class="n">iq_d</span><span class="o">.</span><span class="n">area</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)]</span>
+<span class="n">iqd</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">iqd</span><span class="p">,</span> <span class="n">qmb_0</span><span class="p">,</span> <span class="n">bp_0</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">iqd_la</span> <span class="o">=</span> <span class="n">iqd</span><span class="p">[[</span><span class="s2">&quot;loc_date&quot;</span><span class="p">,</span> <span class="s2">&quot;area&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;loc_date&quot;</span><span class="p">)</span>
+
+<span class="n">iqaasl</span><span class="p">[</span><span class="s2">&quot;project&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;iqaasl&quot;</span>
+<span class="n">iqaasl</span><span class="p">[</span><span class="s2">&quot;area&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">iqaasl</span><span class="o">.</span><span class="n">loc_date</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">iqd_la</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">.</span><span class="n">area</span><span class="p">)</span>
+<span class="n">iqa</span> <span class="o">=</span> <span class="n">iqaasl</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">iqa</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">iqa</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">])</span>
+<span class="n">iqa</span><span class="p">[</span><span class="s2">&quot;doy&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">iqa</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">dayofyear</span>
+<span class="n">iqa</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">iqa</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">date</span>
+<span class="n">iqa</span> <span class="o">=</span> <span class="n">iqa</span><span class="p">[</span><span class="n">survey_columns</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">iqa</span> <span class="o">=</span> <span class="n">iqa</span><span class="p">[</span><span class="n">iqa</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">codes</span><span class="p">)]</span>
+
+<span class="c1"># make gcaps, gfrags and foams are ready made</span>
+<span class="n">iqaasl_not_caps</span> <span class="o">=</span> <span class="n">iqa</span><span class="p">[</span><span class="o">~</span><span class="n">iqa</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">Gcaps</span><span class="p">)]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">iqaasl_caps</span> <span class="o">=</span> <span class="n">iqa</span><span class="p">[</span><span class="n">iqa</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">Gcaps</span><span class="p">)]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">columns</span><span class="p">,</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">quantity</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">iqaasl_caps</span><span class="p">[</span><span class="s2">&quot;code&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Gcaps&quot;</span>
+
+<span class="c1"># formatted iqaasl data</span>
+<span class="n">iqa</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">iqaasl_caps</span><span class="p">,</span> <span class="n">iqaasl_not_caps</span><span class="p">])</span>
+<span class="n">combined</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">iqa</span><span class="p">,</span><span class="n">pstk</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">combined</span><span class="p">[</span><span class="s2">&quot;loc_date&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">combined</span><span class="o">.</span><span class="n">location</span><span class="p">,</span> <span class="n">combined</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]))</span>
+<span class="n">combined</span><span class="p">[</span><span class="s2">&quot;pcs/m&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">combined</span><span class="p">[</span><span class="s2">&quot;quantity&quot;</span><span class="p">]</span><span class="o">/</span><span class="n">combined</span><span class="p">[</span><span class="s2">&quot;length&quot;</span><span class="p">]</span>
+<span class="n">combined</span><span class="p">[</span><span class="s2">&quot;pcs/m²&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">combined</span><span class="p">[</span><span class="s2">&quot;quantity&quot;</span><span class="p">]</span><span class="o">/</span><span class="n">combined</span><span class="p">[</span><span class="s2">&quot;area&quot;</span><span class="p">]</span>
+
+<span class="n">combined_dt</span> <span class="o">=</span> <span class="n">combined</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;loc_date&quot;</span><span class="p">,</span> <span class="s2">&quot;location&quot;</span><span class="p">,</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="s2">&quot;doy&quot;</span><span class="p">,</span> <span class="s2">&quot;project&quot;</span><span class="p">,</span> <span class="s2">&quot;area&quot;</span><span class="p">,</span> <span class="s2">&quot;length&quot;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s2">&quot;pcs/m&quot;</span><span class="p">:</span><span class="s2">&quot;sum&quot;</span><span class="p">,</span> <span class="s2">&quot;pcs/m²&quot;</span><span class="p">:</span><span class="s2">&quot;sum&quot;</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table_one</span> <span class="o">=</span> <span class="n">combined_dt</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">)[</span><span class="s2">&quot;area&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+<span class="n">table_one</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">table_one</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">precision</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">set_table_styles</span><span class="p">(</span><span class="n">table_css_styles</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</div>
+<div class="section" id="metres-lineaires">
+<h2>Mètres linéaires<a class="headerlink" href="#metres-lineaires" title="Permalink to this headline">#</a></h2>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table_two</span> <span class="o">=</span> <span class="n">combined_dt</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">)[</span><span class="s2">&quot;length&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+<span class="n">table_two</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">table_two</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">precision</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">set_table_styles</span><span class="p">(</span><span class="n">table_css_styles</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</div>
+<div class="section" id="comparaison-des-resultats">
+<h2>Comparaison des résultats:<a class="headerlink" href="#comparaison-des-resultats" title="Permalink to this headline">#</a></h2>
+<p>Comparaison des résultats des deux projets : distribution des résultats de l’échantillon en pièces par mètre et en pièces par mètre au carré.</p>
+<p>Seuls les objets identifiés dans PLASTOCK ont été pris en compte</p>
+<div class="section" id="pieces-par-metre-carre">
+<h3>Pièces par mètre carré<a class="headerlink" href="#pieces-par-metre-carre" title="Permalink to this headline">#</a></h3>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table_three</span> <span class="o">=</span> <span class="n">combined_dt</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">)[</span><span class="s2">&quot;pcs/m²&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+<span class="n">table_three</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">table_three</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">precision</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">set_table_styles</span><span class="p">(</span><span class="n">table_css_styles</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</div>
+<div class="section" id="pieces-par-metre-lineaire">
+<h3>Pièces par mètre linéaire<a class="headerlink" href="#pieces-par-metre-lineaire" title="Permalink to this headline">#</a></h3>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table_four</span> <span class="o">=</span> <span class="n">combined_dt</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">)[</span><span class="s2">&quot;pcs/m&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+<span class="n">table_four</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">table_four</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">precision</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">set_table_styles</span><span class="p">(</span><span class="n">table_css_styles</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mask</span> <span class="o">=</span> <span class="p">(</span><span class="n">combined_dt</span><span class="o">.</span><span class="n">doy</span> <span class="o">&gt;=</span>  <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">combined_dt</span><span class="o">.</span><span class="n">doy</span> <span class="o">&lt;=</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">q1</span> <span class="o">=</span> <span class="n">combined_dt</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+
+<span class="n">mask_notin_pstock</span> <span class="o">=</span> <span class="p">(</span><span class="n">combined_dt</span><span class="o">.</span><span class="n">doy</span> <span class="o">&gt;</span><span class="mi">50</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">combined_dt</span><span class="o">.</span><span class="n">doy</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">not_inpstck</span> <span class="o">=</span> <span class="n">combined_dt</span><span class="p">[</span><span class="n">mask_notin_pstock</span><span class="p">]</span>
+
+<span class="n">mask2</span> <span class="o">=</span> <span class="p">(</span><span class="n">combined_dt</span><span class="o">.</span><span class="n">doy</span> <span class="o">&gt;=</span> <span class="mi">100</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">combined_dt</span><span class="o">.</span><span class="n">doy</span> <span class="o">&lt;=</span> <span class="mi">150</span><span class="p">)</span>
+<span class="n">q2</span> <span class="o">=</span> <span class="n">combined_dt</span><span class="p">[</span><span class="n">mask2</span><span class="p">]</span>
+
+<span class="n">mask3</span> <span class="o">=</span> <span class="p">(</span><span class="n">combined_dt</span><span class="o">.</span><span class="n">doy</span> <span class="o">&gt;=</span> <span class="mi">183</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">combined_dt</span><span class="o">.</span><span class="n">doy</span> <span class="o">&lt;=</span> <span class="mi">257</span><span class="p">)</span>
+<span class="n">q3</span> <span class="o">=</span> <span class="n">combined_dt</span><span class="p">[</span><span class="n">mask3</span><span class="p">]</span>
+
+<span class="n">mask4</span> <span class="o">=</span> <span class="p">(</span><span class="n">combined_dt</span><span class="o">.</span><span class="n">doy</span> <span class="o">&gt;</span> <span class="mi">257</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">combined_dt</span><span class="o">.</span><span class="n">doy</span> <span class="o">&lt;=</span> <span class="mi">351</span><span class="p">)</span>
+<span class="n">q4</span> <span class="o">=</span> <span class="n">combined_dt</span><span class="p">[</span><span class="n">mask3</span><span class="p">]</span>
+
+<span class="n">merged_qs</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">q1</span><span class="p">,</span> <span class="n">q2</span><span class="p">,</span> <span class="n">q3</span><span class="p">,</span> <span class="n">q4</span><span class="p">,</span> <span class="n">not_inpstck</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">palette</span><span class="o">=</span> <span class="p">{</span><span class="s2">&quot;iqaasl&quot;</span><span class="p">:</span><span class="s2">&quot;dodgerblue&quot;</span><span class="p">,</span> <span class="s2">&quot;plastock&quot;</span><span class="p">:</span><span class="s2">&quot;magenta&quot;</span><span class="p">}</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">q1</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;project&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;pcs/m&quot;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;project&quot;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="n">palette</span><span class="p">,</span> <span class="n">showfliers</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">dodge</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">q2</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;project&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;pcs/m&quot;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;project&quot;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="n">palette</span><span class="p">,</span> <span class="n">showfliers</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">dodge</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">q3</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;project&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;pcs/m&quot;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;project&quot;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="n">palette</span><span class="p">,</span> <span class="n">showfliers</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">dodge</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">q4</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;project&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;pcs/m&quot;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;project&quot;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="n">palette</span><span class="p">,</span> <span class="n">showfliers</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">dodge</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Jours 0 - 50&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Jours 100 - 150&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Jours 183 - 257&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Jours 258 - 351&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">anax</span> <span class="ow">in</span> <span class="p">[</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]]:</span>
+    <span class="n">anax</span><span class="o">.</span><span class="n">get_legend</span><span class="p">()</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
+    <span class="n">anax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</div>
+<div class="section" id="jours-d-echantillonnage-par-periode-de-12-mois">
+<h3>Jours d’échantillonnage par période de 12 mois<a class="headerlink" href="#jours-d-echantillonnage-par-periode-de-12-mois" title="Permalink to this headline">#</a></h3>
+<div class="cell tag_remove-input docutils container">
+</div>
+</div>
+<div class="section" id="difference-entre-les-deux-distributions-d-echantillonnage-pcs-m">
+<h3>Difference entre les deux distributions d’échantillonnage: pcs/m<a class="headerlink" href="#difference-entre-les-deux-distributions-d-echantillonnage-pcs-m" title="Permalink to this headline">#</a></h3>
+<p>Les deux distributions sont des mesures de la densité minimale probable de déchets pour chaque mètre de littoral.</p>
+<p>Notre intérêt est de comprendre dans quelle mesure les observations de PLASTOCK étaient probables compte tenu des résultats d’IQAASSL et vice versa. Le JRC, dans <a class="reference external" href="https://mcc.jrc.ec.europa.eu/main/dev.py?N=41&amp;O=454">Eu threshold for macro litter on coastlines</a>, a suggéré d’utiliser une distribution binomiale négative pour modéliser les résultats des échantillons. Cette méthode a été illustrée dans le chapitre (<a class="reference external" href="https://hammerdirt-analyst.github.io/IQAASL-End-0f-Sampling-2021/baselines.html">Beach litter baselines</a>) du rapport fédérale.</p>
+<p>The difference between the two sampling periods is the shaded area between the probability mass functions of the two negative binomial distributions defined by the mean and variance from the respective sampling periods.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">nbinom</span>
+<span class="kn">from</span> <span class="nn">statsmodels.distributions.empirical_distribution</span> <span class="kn">import</span> <span class="n">ECDF</span> <span class="k">as</span> <span class="n">ecdf</span>
+
+<span class="n">e_pstock</span> <span class="o">=</span> <span class="n">combined_dt</span><span class="p">[</span><span class="n">combined_dt</span><span class="o">.</span><span class="n">project</span> <span class="o">==</span> <span class="s2">&quot;plastock&quot;</span><span class="p">]</span>
+<span class="n">x_p</span> <span class="o">=</span> <span class="n">e_pstock</span><span class="p">[</span><span class="s2">&quot;pcs/m&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span>
+<span class="n">ecdf_pstock</span> <span class="o">=</span> <span class="n">ecdf</span><span class="p">(</span><span class="n">x_p</span><span class="p">)</span>
+
+<span class="n">e_iqaasl</span> <span class="o">=</span> <span class="n">combined_dt</span><span class="p">[</span><span class="n">combined_dt</span><span class="o">.</span><span class="n">project</span> <span class="o">==</span> <span class="s2">&quot;iqaasl&quot;</span><span class="p">]</span>
+<span class="n">x_i</span> <span class="o">=</span> <span class="n">e_iqaasl</span><span class="p">[</span><span class="s2">&quot;pcs/m&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span>
+<span class="n">ecdf_iqaasl</span> <span class="o">=</span> <span class="n">ecdf</span><span class="p">(</span><span class="n">x_i</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">make_n</span><span class="p">(</span><span class="n">mean</span><span class="p">,</span> <span class="n">variance</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">mean</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="p">(</span><span class="n">variance</span><span class="o">-</span><span class="n">mean</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">make_p</span><span class="p">(</span><span class="n">mean</span><span class="p">,</span> <span class="n">variance</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">mean</span><span class="o">/</span><span class="n">variance</span>
+
+<span class="n">n_i</span> <span class="o">=</span> <span class="n">make_n</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">x_i</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">x_i</span><span class="p">))</span>
+<span class="n">p_i</span> <span class="o">=</span> <span class="n">make_p</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">x_i</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">x_i</span><span class="p">))</span>
+
+<span class="n">n_p</span> <span class="o">=</span> <span class="n">make_n</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">x_p</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">x_p</span><span class="p">))</span>
+<span class="n">p_p</span> <span class="o">=</span> <span class="n">make_p</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">x_p</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">x_p</span><span class="p">))</span>
+
+<span class="n">x_ii</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">x_i</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+<span class="n">x_pi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span>  <span class="n">x_i</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+
+<span class="n">i_nb</span> <span class="o">=</span> <span class="n">nbinom</span><span class="p">(</span><span class="n">n_i</span><span class="p">,</span> <span class="n">p_i</span><span class="p">)</span>
+<span class="n">p_nb</span> <span class="o">=</span> <span class="n">nbinom</span><span class="p">(</span><span class="n">n_p</span><span class="p">,</span> <span class="n">p_p</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_ii</span><span class="p">,</span> <span class="n">i_nb</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">x_ii</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;iqaasl&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;dodgerblue&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_pi</span><span class="p">,</span> <span class="n">p_nb</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">x_pi</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;plastock&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;magenta&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x_pi</span><span class="p">,</span><span class="n">p_nb</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">x_pi</span><span class="p">),</span> <span class="n">i_nb</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">x_ii</span><span class="p">),</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;difference&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Probability mass function&quot;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x_pi</span><span class="p">,</span><span class="n">p_nb</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">x_pi</span><span class="p">),</span> <span class="n">i_nb</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">x_pi</span><span class="p">),</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;difference&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_i</span><span class="p">,</span> <span class="n">i_nb</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">x_i</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;dodgerblue&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_p</span><span class="p">,</span> <span class="n">p_nb</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">x_p</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;magenta&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Cumulative distribution&quot;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</div>
+<div class="section" id="quantifying-the-difference">
+<h3>Quantifying the difference<a class="headerlink" href="#quantifying-the-difference" title="Permalink to this headline">#</a></h3>
+<p>To quantify the difference between the two sampling periods we will consider the following:</p>
+<ol class="arabic simple">
+<li><p>The probability that samples from one period could have been drawn from the other</p></li>
+<li><p>Comparing the 90% confidence interval of the two distributions</p></li>
+<li><p>Visully comparing the results in a box-plot</p></li>
+</ol>
+<div class="section" id="the-confidence-intervals-and-boxplots">
+<h4>The confidence intervals and boxplots<a class="headerlink" href="#the-confidence-intervals-and-boxplots" title="Permalink to this headline">#</a></h4>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">i_nbci</span> <span class="o">=</span> <span class="n">i_nb</span><span class="o">.</span><span class="n">interval</span><span class="p">(</span><span class="mf">.9</span><span class="p">)</span>
+<span class="n">p_nbci</span> <span class="o">=</span> <span class="n">p_nb</span><span class="o">.</span><span class="n">interval</span><span class="p">(</span><span class="mf">.9</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_ii</span><span class="p">,</span> <span class="n">i_nb</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">x_ii</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;iqaasl&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;dodgerblue&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_pi</span><span class="p">,</span> <span class="n">p_nb</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">x_pi</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;plastock&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;magenta&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">axvspan</span><span class="p">(</span><span class="n">xmin</span><span class="o">=</span><span class="n">i_nbci</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">xmax</span><span class="o">=</span><span class="n">i_nbci</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;dodgerblue&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;iqaasl 90</span><span class="si">% i</span><span class="s2">nterval&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">axvspan</span><span class="p">(</span><span class="n">xmin</span><span class="o">=</span><span class="n">p_nbci</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">xmax</span><span class="o">=</span><span class="n">p_nbci</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;magenta&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;plastock 90</span><span class="si">% i</span><span class="s2">nterval&quot;</span><span class="p">)</span>
+<span class="c1"># ax[0].fill_between(x_pi,p_nb.pmf(x_pi), i_nb.pmf(x_ii), alpha=0.2, color=&quot;black&quot;, label=&quot;difference&quot;)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Probability mass function&quot;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">)</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">combined_dt</span><span class="p">[</span><span class="n">combined_dt</span><span class="o">.</span><span class="n">project</span> <span class="o">==</span> <span class="s2">&quot;iqaasl&quot;</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;pcs/m&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;project&quot;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;project&quot;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="n">palette</span><span class="p">,</span> <span class="n">showfliers</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">dodge</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">stripplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">combined_dt</span><span class="p">[</span><span class="n">combined_dt</span><span class="o">.</span><span class="n">project</span> <span class="o">==</span> <span class="s2">&quot;plastock&quot;</span><span class="p">],</span>  <span class="n">x</span><span class="o">=</span><span class="s2">&quot;project&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;pcs/m&quot;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;magenta&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">dodge</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;plastock&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">combined_dt</span><span class="p">[</span><span class="n">combined_dt</span><span class="o">.</span><span class="n">project</span> <span class="o">==</span> <span class="s2">&quot;plastock&quot;</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;pcs/m&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;project&quot;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;project&quot;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="n">palette</span><span class="p">,</span> <span class="n">showfliers</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">dodge</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">stripplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">combined_dt</span><span class="p">[</span><span class="n">combined_dt</span><span class="o">.</span><span class="n">project</span> <span class="o">==</span> <span class="s2">&quot;iqaasl&quot;</span><span class="p">],</span>  <span class="n">x</span><span class="o">=</span><span class="s2">&quot;project&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;pcs/m&quot;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;dodgerblue&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">dodge</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;iqaasl&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<p><strong>Interpretation:</strong></p>
+<ol class="arabic simple">
+<li><p>The 90% interval from the plastock samples fall within the 90% interval of IQAASL</p></li>
+<li><p>99% of all samples from plastock fall within the 90% interval of iqaasl</p></li>
+<li><p>80% of all samples from iqaasl fall within the 90% interval of plastock</p></li>
+</ol>
+<p><strong>Remarks:</strong> The standard deviation of iqaasl is <span class="math notranslate nohighlight">\(\approx\)</span> 3 times that of plastock. There are more sampling days in iqaasl v/s plastock.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pnames</span> <span class="o">=</span> <span class="n">combined</span><span class="p">[</span><span class="n">combined</span><span class="o">.</span><span class="n">project</span> <span class="o">==</span> <span class="s2">&quot;plastock&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">iqnames</span> <span class="o">=</span> <span class="n">combined</span><span class="p">[</span><span class="n">combined</span><span class="o">.</span><span class="n">project</span> <span class="o">==</span> <span class="s2">&quot;iqaasl&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+
+
+<span class="n">pnames</span><span class="p">[</span><span class="s2">&quot;city&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pnames</span><span class="o">.</span><span class="n">location</span>
+
+<span class="n">city_names</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Grangettes&quot;</span><span class="p">:</span><span class="s2">&quot;Villeneuve&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Port Choilseul&quot;</span><span class="p">:</span> <span class="s2">&quot;Versoix&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Pichette&quot;</span><span class="p">:</span> <span class="s2">&quot;Vevey&quot;</span>
+<span class="p">}</span>
+
+
+
+<span class="k">def</span> <span class="nf">change_names</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="n">city_names</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span> <span class="n">city_names</span><span class="o">=</span><span class="n">city_names</span><span class="p">):</span>
+    
+    <span class="k">if</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">city_names</span><span class="p">[</span><span class="n">x</span><span class="p">]</span>
+    
+    <span class="k">return</span> <span class="n">x</span>
+
+<span class="n">pnames</span><span class="p">[</span><span class="s2">&quot;city&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pnames</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">change_names</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+
+
+<span class="n">iqcities</span> <span class="o">=</span> <span class="n">iqaasl</span><span class="p">[[</span><span class="s1">&#39;location&#39;</span><span class="p">,</span> <span class="s1">&#39;city&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">([</span><span class="s1">&#39;location&#39;</span><span class="p">,</span> <span class="s1">&#39;city&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;location&#39;</span><span class="p">)</span>
+<span class="n">iqnames</span><span class="p">[</span><span class="s2">&quot;city&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">iqnames</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">iqcities</span><span class="p">[</span><span class="s2">&quot;city&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+
+
+<span class="n">city_combined</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">iqnames</span><span class="p">,</span> <span class="n">pnames</span><span class="p">])</span>
+<span class="n">pnames_s</span> <span class="o">=</span> <span class="n">p_beaches</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</div>
+</div>
+<div class="section" id="fail-rate-taux-d-echeque">
+<h3>Fail rate : taux d’écheque<a class="headerlink" href="#fail-rate-taux-d-echeque" title="Permalink to this headline">#</a></h3>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># fail rate</span>
+<span class="k">def</span> <span class="nf">n_fails</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">threshhold</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    
+    <span class="k">return</span> <span class="p">((</span><span class="n">data</span><span class="o">.</span><span class="n">code</span> <span class="o">==</span> <span class="n">code</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">quantity</span> <span class="o">&gt;</span> <span class="n">threshhold</span><span class="p">))</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>    
+
+<span class="k">def</span> <span class="nf">fail_rate</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">threshhold</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">project</span><span class="o">=</span><span class="s2">&quot;iqaasl&quot;</span><span class="p">):</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="o">.</span><span class="n">project</span> <span class="o">==</span> <span class="n">project</span><span class="p">]</span>
+    <span class="n">fails</span> <span class="o">=</span> <span class="n">n_fails</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">threshhold</span><span class="o">=</span><span class="n">threshhold</span><span class="p">)</span>
+    <span class="n">tries</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">loc_date</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+    
+    <span class="k">return</span> <span class="n">fails</span><span class="o">/</span><span class="n">tries</span>
+
+<span class="k">def</span> <span class="nf">make_fail_rate_df</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">codes</span><span class="p">,</span> <span class="n">project</span><span class="o">=</span><span class="s2">&quot;iqaasl&quot;</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    
+    <span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="k">for</span> <span class="n">code</span> <span class="ow">in</span> <span class="n">codes</span><span class="p">:</span>
+        <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">&quot;code&quot;</span><span class="p">:</span><span class="n">code</span><span class="p">,</span> <span class="s2">&quot;project&quot;</span><span class="p">:</span><span class="n">project</span><span class="p">,</span> <span class="s2">&quot;fail rate&quot;</span><span class="p">:</span><span class="n">fail_rate</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">project</span><span class="o">=</span><span class="n">project</span><span class="p">)})</span>
+    
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+
+<span class="n">iqa_fail_rate</span> <span class="o">=</span> <span class="n">make_fail_rate_df</span><span class="p">(</span><span class="n">combined</span><span class="p">,</span> <span class="n">codes</span><span class="p">)</span>
+<span class="n">pstk_fail_rate</span> <span class="o">=</span> <span class="n">make_fail_rate_df</span><span class="p">(</span><span class="n">combined</span><span class="p">,</span> <span class="n">codes</span><span class="p">,</span> <span class="n">project</span><span class="o">=</span><span class="s1">&#39;plastock&#39;</span><span class="p">)</span>
+
+<span class="n">fail_rates</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">iqa_fail_rate</span><span class="p">,</span> <span class="n">pstk_fail_rate</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">fail_rates</span> <span class="o">=</span> <span class="n">fail_rates</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s2">&quot;code&quot;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s2">&quot;project&quot;</span><span class="p">)</span>
+<span class="n">fail_rates</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;fail rate&quot;</span><span class="p">,</span><span class="s2">&quot;iqaasl&quot;</span><span class="p">),</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)[:</span><span class="mi">20</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparaison-de-la-taille-des-lieux-d-echantillonnage">Comparaison de la taille des lieux d’échantillonnage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metres-carres">Mètres carrés</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metres-lineaires">Mètres linéaires</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparaison-des-resultats">Comparaison des résultats:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pieces-par-metre-carre">Pièces par mètre carré</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pieces-par-metre-lineaire">Pièces par mètre linéaire</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jours-d-echantillonnage-par-periode-de-12-mois">Jours d’échantillonnage par période de 12 mois</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#difference-entre-les-deux-distributions-d-echantillonnage-pcs-m">Difference entre les deux distributions d’échantillonnage: pcs/m</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantifying-the-difference">Quantifying the difference</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-confidence-intervals-and-boxplots">The confidence intervals and boxplots</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fail-rate-taux-d-echeque">Fail rate : taux d’écheque</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Roger Erismann, Alexis Pochelon
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
