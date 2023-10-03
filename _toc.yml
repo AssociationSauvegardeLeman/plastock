@@ -7,4 +7,5 @@ chapters:
 - file: random_variables
 - file: location_summary
 - file: location_attributes
+- file: macro_location_summary
 - file: references
