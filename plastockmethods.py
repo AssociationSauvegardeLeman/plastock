@@ -7,18 +7,18 @@ name_the_particles = {
     "fbt":"fibre transparent",
     "fbn":"fibre noire",
     "fba":"fibre autre",
-    "frr":"fragment rigide rouge",
-    "frb":"fragment rigide bleu",
-    "frj":"fragment rigide jaune",
-    "frt":"fragment rigide transparent",
-    "frn":"fragment rigide noire",
-    "fra":"fragment rigide autre",
-    "fsr":"fragment souple rouge",
-    "fsb":"fragment souple bleu",
-    "fsj":"fragment souple jaune",
-    "fst":"fragment souple transparent",
-    "fsn":"fragment souple noire",
-    "fsa":"fragment souple autre",
+    "frr":"particule rigide rouge",
+    "frb":"particule rigide bleu",
+    "frj":"particule rigide jaune",
+    "frt":"particule rigide transparent",
+    "frn":"particule rigide noire",
+    "fra":"particule rigide autre",
+    "fsr":"particule souple rouge",
+    "fsb":"particule souple bleu",
+    "fsj":"particule souple jaune",
+    "fst":"particule souple transparent",
+    "fsn":"particule souple noire",
+    "fsa":"particule souple autre",
 }
 
 frequentation_name = {
@@ -34,8 +34,8 @@ situation_name = {
 
 particle_groups = {
     "fibres":"fibre",
-    "fdure":"fragment rigide",
-    "souple":"fragment souple"
+    "fdure":"particule rigide",
+    "souple":"particule souple"
 }
 
 name_the_substrate = {

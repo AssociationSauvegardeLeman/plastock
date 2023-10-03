@@ -6,4 +6,5 @@ options:
 chapters:
 - file: random_variables
 - file: location_summary
+- file: location_attributes
 - file: references
