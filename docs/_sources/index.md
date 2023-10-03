@@ -13,6 +13,13 @@ Veuillez contacter Alexis ou Adrien pour toute question concernant les microplas
 ![map](resources/maps/intro_map.jpeg)
 
 
+__Micro-plastiques: moyenne par échantillon__
+![graph](resources/images/micro_position_summary.png)
+
+
+__Macro: moyenne par pièces par m²__
+![graph2](resources/images/macro_position_summary.png)
+
 ## Objectif et structure du document
 
 Le but est de décrire numériquement les observations en relation avec les différentes variables indépendantes listées/observées par les chercheurs. 
