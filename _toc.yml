@@ -4,6 +4,8 @@ options:
   numbered: true
   only_build_toc_files: true
 chapters:
+
+- file: annex_start
 - file: random_variables
 - file: location_summary
 - file: location_attributes
