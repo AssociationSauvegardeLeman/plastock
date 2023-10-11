@@ -10,15 +10,8 @@ collaborateurs de [l'Association pour la Sauvegarde du Léman](https://asleman.o
 
 
 Veuillez contacter Alexis ou Adrien pour toute question concernant les microplastiques ou le lac en général.
-![map](resources/maps/intro_map.jpeg)
+![map](resources/maps/annex_map_regions.jpeg)
 
-
-__Micro-plastiques: moyenne par échantillon__
-![graph](resources/images/micro_position_summary.png)
-
-
-__Macro: moyenne par pièces par m²__
-![graph2](resources/images/macro_position_summary.png)
 
 ## Objectif et structure du document
 
