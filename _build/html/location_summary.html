@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4. Annex : Micro plage et position &#8212; Plaststock</title>
+    <title>6. Annex : Micro plage et position &#8212; Plaststock</title>
   
   
   
@@ -62,8 +62,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'location_summary';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="5. Annex : Micro plage et attribut" href="location_attributes.html" />
-    <link rel="prev" title="3. Variables aléatoires" href="random_variables.html" />
+    <link rel="next" title="7. Annex : Micro plage et attribut" href="location_attributes.html" />
+    <link rel="prev" title="5. Variables aléatoires" href="random_variables.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -141,14 +141,16 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="regression.html">1. Regression</a></li>
-<li class="toctree-l1"><a class="reference internal" href="annex_start.html">2. Annex</a></li>
-<li class="toctree-l1"><a class="reference internal" href="random_variables.html">3. Variables aléatoires</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Annex : Micro plage et position</a></li>
-<li class="toctree-l1"><a class="reference internal" href="location_attributes.html">5. Annex : Micro plage et attribut</a></li>
-<li class="toctree-l1"><a class="reference internal" href="macro_summary.html">6. Annex : Macro plage et position</a></li>
-<li class="toctree-l1"><a class="reference internal" href="macro_attributes.html">7. Annex : Macro plage et attribut</a></li>
-<li class="toctree-l1"><a class="reference internal" href="references.html">8. References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pca.html">1. PCA/AFDM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regression.html">2. Regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other_linear_models.html">3. Autres modèles linéaires</a></li>
+<li class="toctree-l1"><a class="reference internal" href="annex_start.html">4. Annex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="random_variables.html">5. Variables aléatoires</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Annex : Micro plage et position</a></li>
+<li class="toctree-l1"><a class="reference internal" href="location_attributes.html">7. Annex : Micro plage et attribut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="macro_summary.html">8. Annex : Macro plage et position</a></li>
+<li class="toctree-l1"><a class="reference internal" href="macro_attributes.html">9. Annex : Macro plage et attribut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">10. References</a></li>
 </ul>
 
     </div>
@@ -294,12 +296,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nombre-cumule-d-echantillons-et-particules-par-plage">4.1. Nombre cumulé d’échantillons et particules par plage</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compte-moyen-par-echantillon-et-plage">4.2. Compte moyen par échantillon et plage</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comptes-moyenne-par-position">4.3. Comptes moyenne par position</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nombre-moyen-par-forme-et-plage">4.3.1. Nombre moyen par forme et plage</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nombre-moyen-par-forme-et-position">4.3.2. Nombre moyen par forme et position</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distributions">4.3.3. Distributions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nombre-cumule-d-echantillons-et-particules-par-plage">6.1. Nombre cumulé d’échantillons et particules par plage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compte-moyen-par-echantillon-et-plage">6.2. Compte moyen par échantillon et plage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comptes-moyenne-par-position">6.3. Comptes moyenne par position</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nombre-moyen-par-forme-et-plage">6.3.1. Nombre moyen par forme et plage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nombre-moyen-par-forme-et-position">6.3.2. Nombre moyen par forme et position</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distributions">6.3.3. Distributions</a></li>
 </ul>
 </li>
 </ul>
@@ -353,7 +355,7 @@ document.write(`
 </details>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="annex-micro-plage-et-position">
-<h1><span class="section-number">4. </span>Annex : Micro plage et position<a class="headerlink" href="#annex-micro-plage-et-position" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">6. </span>Annex : Micro plage et position<a class="headerlink" href="#annex-micro-plage-et-position" title="Permalink to this headline">#</a></h1>
 <p><strong>Résultats agrégés par forme, position et échantillon</strong></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
@@ -439,7 +441,7 @@ document.write(`
 </div></div>
 </div>
 <div class="section" id="nombre-cumule-d-echantillons-et-particules-par-plage">
-<h2><span class="section-number">4.1. </span>Nombre cumulé d’échantillons et particules par plage<a class="headerlink" href="#nombre-cumule-d-echantillons-et-particules-par-plage" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">6.1. </span>Nombre cumulé d’échantillons et particules par plage<a class="headerlink" href="#nombre-cumule-d-echantillons-et-particules-par-plage" title="Permalink to this headline">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
@@ -764,7 +766,7 @@ document.write(`
 </div>
 </div>
 <div class="section" id="compte-moyen-par-echantillon-et-plage">
-<h2><span class="section-number">4.2. </span>Compte moyen par échantillon et plage<a class="headerlink" href="#compte-moyen-par-echantillon-et-plage" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">6.2. </span>Compte moyen par échantillon et plage<a class="headerlink" href="#compte-moyen-par-echantillon-et-plage" title="Permalink to this headline">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
@@ -999,7 +1001,7 @@ document.write(`
 </div>
 </div>
 <div class="section" id="comptes-moyenne-par-position">
-<h2><span class="section-number">4.3. </span>Comptes moyenne par position<a class="headerlink" href="#comptes-moyenne-par-position" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">6.3. </span>Comptes moyenne par position<a class="headerlink" href="#comptes-moyenne-par-position" title="Permalink to this headline">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 </div>
 <table class="colwidths-auto table">
@@ -1304,7 +1306,7 @@ document.write(`
 </div>
 </div>
 <div class="section" id="nombre-moyen-par-forme-et-plage">
-<h3><span class="section-number">4.3.1. </span>Nombre moyen par forme et plage<a class="headerlink" href="#nombre-moyen-par-forme-et-plage" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">6.3.1. </span>Nombre moyen par forme et plage<a class="headerlink" href="#nombre-moyen-par-forme-et-plage" title="Permalink to this headline">#</a></h3>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
@@ -1741,7 +1743,7 @@ document.write(`
 </div>
 </div>
 <div class="section" id="nombre-moyen-par-forme-et-position">
-<h3><span class="section-number">4.3.2. </span>Nombre moyen par forme et position<a class="headerlink" href="#nombre-moyen-par-forme-et-position" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">6.3.2. </span>Nombre moyen par forme et position<a class="headerlink" href="#nombre-moyen-par-forme-et-position" title="Permalink to this headline">#</a></h3>
 <div class="cell tag_remove-input docutils container">
 </div>
 <table class="colwidths-auto table">
@@ -2401,7 +2403,7 @@ document.write(`
 </div>
 </div>
 <div class="section" id="distributions">
-<h3><span class="section-number">4.3.3. </span>Distributions<a class="headerlink" href="#distributions" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">6.3.3. </span>Distributions<a class="headerlink" href="#distributions" title="Permalink to this headline">#</a></h3>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <img alt="_images/fa159606880f8052a751bf53a60411d6da86d8a97ba0a5c3150fd56faefbc966.png" src="_images/fa159606880f8052a751bf53a60411d6da86d8a97ba0a5c3150fd56faefbc966.png" />
@@ -2467,7 +2469,7 @@ pandas    : 2.0.0
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">3. </span>Variables aléatoires</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Variables aléatoires</p>
       </div>
     </a>
     <a class="right-next"
@@ -2475,7 +2477,7 @@ pandas    : 2.0.0
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5. </span>Annex : Micro plage et attribut</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Annex : Micro plage et attribut</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -2497,12 +2499,12 @@ pandas    : 2.0.0
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nombre-cumule-d-echantillons-et-particules-par-plage">4.1. Nombre cumulé d’échantillons et particules par plage</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compte-moyen-par-echantillon-et-plage">4.2. Compte moyen par échantillon et plage</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comptes-moyenne-par-position">4.3. Comptes moyenne par position</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nombre-moyen-par-forme-et-plage">4.3.1. Nombre moyen par forme et plage</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nombre-moyen-par-forme-et-position">4.3.2. Nombre moyen par forme et position</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distributions">4.3.3. Distributions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nombre-cumule-d-echantillons-et-particules-par-plage">6.1. Nombre cumulé d’échantillons et particules par plage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compte-moyen-par-echantillon-et-plage">6.2. Compte moyen par échantillon et plage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comptes-moyenne-par-position">6.3. Comptes moyenne par position</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nombre-moyen-par-forme-et-plage">6.3.1. Nombre moyen par forme et plage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nombre-moyen-par-forme-et-position">6.3.2. Nombre moyen par forme et position</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distributions">6.3.3. Distributions</a></li>
 </ul>
 </li>
 </ul>

@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>7. Annex : Macro plage et attribut &#8212; Plaststock</title>
+    <title>9. Annex : Macro plage et attribut &#8212; Plaststock</title>
   
   
   
@@ -62,8 +62,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'macro_attributes';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="8. References" href="references.html" />
-    <link rel="prev" title="6. Annex : Macro plage et position" href="macro_summary.html" />
+    <link rel="next" title="10. References" href="references.html" />
+    <link rel="prev" title="8. Annex : Macro plage et position" href="macro_summary.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -141,14 +141,16 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="regression.html">1. Regression</a></li>
-<li class="toctree-l1"><a class="reference internal" href="annex_start.html">2. Annex</a></li>
-<li class="toctree-l1"><a class="reference internal" href="random_variables.html">3. Variables aléatoires</a></li>
-<li class="toctree-l1"><a class="reference internal" href="location_summary.html">4. Annex : Micro plage et position</a></li>
-<li class="toctree-l1"><a class="reference internal" href="location_attributes.html">5. Annex : Micro plage et attribut</a></li>
-<li class="toctree-l1"><a class="reference internal" href="macro_summary.html">6. Annex : Macro plage et position</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">7. Annex : Macro plage et attribut</a></li>
-<li class="toctree-l1"><a class="reference internal" href="references.html">8. References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pca.html">1. PCA/AFDM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regression.html">2. Regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other_linear_models.html">3. Autres modèles linéaires</a></li>
+<li class="toctree-l1"><a class="reference internal" href="annex_start.html">4. Annex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="random_variables.html">5. Variables aléatoires</a></li>
+<li class="toctree-l1"><a class="reference internal" href="location_summary.html">6. Annex : Micro plage et position</a></li>
+<li class="toctree-l1"><a class="reference internal" href="location_attributes.html">7. Annex : Micro plage et attribut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="macro_summary.html">8. Annex : Macro plage et position</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">9. Annex : Macro plage et attribut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">10. References</a></li>
 </ul>
 
     </div>
@@ -294,26 +296,26 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#substrat">7.1. Substrat</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-plages-substrat-sable-fin">7.1.1. Les plages substrat = sable fin</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#substrat">9.1. Substrat</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-plages-substrat-sable-fin">9.1.1. Les plages substrat = sable fin</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frequentation">7.2. Frequentation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-plages-frequentation-moyenne">7.2.1. Les plages fréquentation = moyenne</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-plages-frequentation-elevee">7.2.2. Les plages fréquentation = élevée</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frequentation">9.2. Frequentation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-plages-frequentation-moyenne">9.2.1. Les plages fréquentation = moyenne</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-plages-frequentation-elevee">9.2.2. Les plages fréquentation = élevée</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#situation">7.3. Situation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-plages-situation-campagne">7.3.1. Les plages situation = campagne</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-plages-situation-urbain">7.3.2. Les plages situation = urbain</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#situation">9.3. Situation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-plages-situation-campagne">9.3.1. Les plages situation = campagne</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-plages-situation-urbain">9.3.2. Les plages situation = urbain</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distance">7.4. Distance</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-plages-distance-100-500m">7.4.1. Les plages distance = 100 - 500m</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-plages-distance-100m">7.4.2. Les plages distance = &lt; 100m</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distance">9.4. Distance</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-plages-distance-100-500m">9.4.1. Les plages distance = 100 - 500m</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-plages-distance-100m">9.4.2. Les plages distance = &lt; 100m</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#orientation">7.5. Orientation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#orientation">9.5. Orientation</a></li>
 </ul>
             </nav>
         </div>
@@ -435,9 +437,9 @@ document.write(`
 </details>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="annex-macro-plage-et-attribut">
-<h1><span class="section-number">7. </span>Annex : Macro plage et attribut<a class="headerlink" href="#annex-macro-plage-et-attribut" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">9. </span>Annex : Macro plage et attribut<a class="headerlink" href="#annex-macro-plage-et-attribut" title="Permalink to this headline">#</a></h1>
 <div class="section" id="substrat">
-<h2><span class="section-number">7.1. </span>Substrat<a class="headerlink" href="#substrat" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">9.1. </span>Substrat<a class="headerlink" href="#substrat" title="Permalink to this headline">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 </div>
 <div class="cell tag_remove-input docutils container">
@@ -534,7 +536,7 @@ document.write(`
 </div>
 </div>
 <div class="section" id="les-plages-substrat-sable-fin">
-<h3><span class="section-number">7.1.1. </span>Les plages substrat = sable fin<a class="headerlink" href="#les-plages-substrat-sable-fin" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">9.1.1. </span>Les plages substrat = sable fin<a class="headerlink" href="#les-plages-substrat-sable-fin" title="Permalink to this headline">#</a></h3>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <p>Baby Plage, Bouveret, Excenevex, Préverenges, Rolle, Vidy, Grangettes</p>
@@ -548,7 +550,7 @@ document.write(`
 </div>
 </div>
 <div class="section" id="frequentation">
-<h2><span class="section-number">7.2. </span>Frequentation<a class="headerlink" href="#frequentation" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">9.2. </span>Frequentation<a class="headerlink" href="#frequentation" title="Permalink to this headline">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
@@ -632,7 +634,7 @@ document.write(`
 </div>
 </div>
 <div class="section" id="les-plages-frequentation-moyenne">
-<h3><span class="section-number">7.2.1. </span>Les plages fréquentation = moyenne<a class="headerlink" href="#les-plages-frequentation-moyenne" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">9.2.1. </span>Les plages fréquentation = moyenne<a class="headerlink" href="#les-plages-frequentation-moyenne" title="Permalink to this headline">#</a></h3>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <p>Aubonne, Lugrin, Saint-Disdille, Grangettes, Anthy, Gland, Pichette</p>
@@ -640,7 +642,7 @@ document.write(`
 </div>
 </div>
 <div class="section" id="les-plages-frequentation-elevee">
-<h3><span class="section-number">7.2.2. </span>Les plages fréquentation = élevée<a class="headerlink" href="#les-plages-frequentation-elevee" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">9.2.2. </span>Les plages fréquentation = élevée<a class="headerlink" href="#les-plages-frequentation-elevee" title="Permalink to this headline">#</a></h3>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <p>Amphion, Baby Plage, Bouveret, Clarens, Excenevex, Préverenges, Rolle, Savonnière, Vidy, Tougues, Versoix, Port Choiseul, Hermance, Lutry</p>
@@ -654,7 +656,7 @@ document.write(`
 </div>
 </div>
 <div class="section" id="situation">
-<h2><span class="section-number">7.3. </span>Situation<a class="headerlink" href="#situation" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">9.3. </span>Situation<a class="headerlink" href="#situation" title="Permalink to this headline">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
@@ -727,7 +729,7 @@ document.write(`
 </div>
 </div>
 <div class="section" id="les-plages-situation-campagne">
-<h3><span class="section-number">7.3.1. </span>Les plages situation = campagne<a class="headerlink" href="#les-plages-situation-campagne" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">9.3.1. </span>Les plages situation = campagne<a class="headerlink" href="#les-plages-situation-campagne" title="Permalink to this headline">#</a></h3>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <p>Amphion, Aubonne, Bouveret, Excenevex, Lugrin, Préverenges, Saint-Disdille, Savonnière, Grangettes, Tougues, Versoix, Tolochenaz, Anthy, Crans, Gland, Cully, Pichette</p>
@@ -735,7 +737,7 @@ document.write(`
 </div>
 </div>
 <div class="section" id="les-plages-situation-urbain">
-<h3><span class="section-number">7.3.2. </span>Les plages situation = urbain<a class="headerlink" href="#les-plages-situation-urbain" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">9.3.2. </span>Les plages situation = urbain<a class="headerlink" href="#les-plages-situation-urbain" title="Permalink to this headline">#</a></h3>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <p>Baby Plage, Clarens, Rolle, Vidy, Port Choiseul, Hermance, Lutry, Meillerie</p>
@@ -749,7 +751,7 @@ document.write(`
 </div>
 </div>
 <div class="section" id="distance">
-<h2><span class="section-number">7.4. </span>Distance<a class="headerlink" href="#distance" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">9.4. </span>Distance<a class="headerlink" href="#distance" title="Permalink to this headline">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
@@ -844,7 +846,7 @@ document.write(`
 </div>
 </div>
 <div class="section" id="les-plages-distance-100-500m">
-<h3><span class="section-number">7.4.1. </span>Les plages distance = 100 - 500m<a class="headerlink" href="#les-plages-distance-100-500m" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">9.4.1. </span>Les plages distance = 100 - 500m<a class="headerlink" href="#les-plages-distance-100-500m" title="Permalink to this headline">#</a></h3>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <p>Baby Plage, Bouveret, Lugrin, Préverenges, Vidy, Grangettes, Tougues, Versoix, Port Choiseul, Hermance, Lutry</p>
@@ -852,7 +854,7 @@ document.write(`
 </div>
 </div>
 <div class="section" id="les-plages-distance-100m">
-<h3><span class="section-number">7.4.2. </span>Les plages distance = &lt; 100m<a class="headerlink" href="#les-plages-distance-100m" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">9.4.2. </span>Les plages distance = &lt; 100m<a class="headerlink" href="#les-plages-distance-100m" title="Permalink to this headline">#</a></h3>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <p>Amphion, Clarens, Excenevex, Rolle, Saint-Disdille, Savonnière, Anthy, Gland, Cully, Pichette</p>
@@ -866,7 +868,7 @@ document.write(`
 </div>
 </div>
 <div class="section" id="orientation">
-<h2><span class="section-number">7.5. </span>Orientation<a class="headerlink" href="#orientation" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">9.5. </span>Orientation<a class="headerlink" href="#orientation" title="Permalink to this headline">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
@@ -1108,7 +1110,7 @@ matplotlib: 3.7.1
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">6. </span>Annex : Macro plage et position</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>Annex : Macro plage et position</p>
       </div>
     </a>
     <a class="right-next"
@@ -1116,7 +1118,7 @@ matplotlib: 3.7.1
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">8. </span>References</p>
+        <p class="prev-next-title"><span class="section-number">10. </span>References</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1138,26 +1140,26 @@ matplotlib: 3.7.1
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#substrat">7.1. Substrat</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-plages-substrat-sable-fin">7.1.1. Les plages substrat = sable fin</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#substrat">9.1. Substrat</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-plages-substrat-sable-fin">9.1.1. Les plages substrat = sable fin</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frequentation">7.2. Frequentation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-plages-frequentation-moyenne">7.2.1. Les plages fréquentation = moyenne</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-plages-frequentation-elevee">7.2.2. Les plages fréquentation = élevée</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frequentation">9.2. Frequentation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-plages-frequentation-moyenne">9.2.1. Les plages fréquentation = moyenne</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-plages-frequentation-elevee">9.2.2. Les plages fréquentation = élevée</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#situation">7.3. Situation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-plages-situation-campagne">7.3.1. Les plages situation = campagne</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-plages-situation-urbain">7.3.2. Les plages situation = urbain</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#situation">9.3. Situation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-plages-situation-campagne">9.3.1. Les plages situation = campagne</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-plages-situation-urbain">9.3.2. Les plages situation = urbain</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distance">7.4. Distance</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-plages-distance-100-500m">7.4.1. Les plages distance = 100 - 500m</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-plages-distance-100m">7.4.2. Les plages distance = &lt; 100m</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distance">9.4. Distance</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-plages-distance-100-500m">9.4.1. Les plages distance = 100 - 500m</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-plages-distance-100m">9.4.2. Les plages distance = &lt; 100m</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#orientation">7.5. Orientation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#orientation">9.5. Orientation</a></li>
 </ul>
   </nav></div>
 

@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3. Variables aléatoires &#8212; Plaststock</title>
+    <title>5. Variables aléatoires &#8212; Plaststock</title>
   
   
   
@@ -62,8 +62,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'random_variables';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="4. Annex : Micro plage et position" href="location_summary.html" />
-    <link rel="prev" title="2. Annex" href="annex_start.html" />
+    <link rel="next" title="6. Annex : Micro plage et position" href="location_summary.html" />
+    <link rel="prev" title="4. Annex" href="annex_start.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -141,14 +141,16 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="regression.html">1. Regression</a></li>
-<li class="toctree-l1"><a class="reference internal" href="annex_start.html">2. Annex</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Variables aléatoires</a></li>
-<li class="toctree-l1"><a class="reference internal" href="location_summary.html">4. Annex : Micro plage et position</a></li>
-<li class="toctree-l1"><a class="reference internal" href="location_attributes.html">5. Annex : Micro plage et attribut</a></li>
-<li class="toctree-l1"><a class="reference internal" href="macro_summary.html">6. Annex : Macro plage et position</a></li>
-<li class="toctree-l1"><a class="reference internal" href="macro_attributes.html">7. Annex : Macro plage et attribut</a></li>
-<li class="toctree-l1"><a class="reference internal" href="references.html">8. References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pca.html">1. PCA/AFDM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regression.html">2. Regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other_linear_models.html">3. Autres modèles linéaires</a></li>
+<li class="toctree-l1"><a class="reference internal" href="annex_start.html">4. Annex</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Variables aléatoires</a></li>
+<li class="toctree-l1"><a class="reference internal" href="location_summary.html">6. Annex : Micro plage et position</a></li>
+<li class="toctree-l1"><a class="reference internal" href="location_attributes.html">7. Annex : Micro plage et attribut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="macro_summary.html">8. Annex : Macro plage et position</a></li>
+<li class="toctree-l1"><a class="reference internal" href="macro_attributes.html">9. Annex : Macro plage et attribut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">10. References</a></li>
 </ul>
 
     </div>
@@ -294,20 +296,20 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#donnees-mises-en-forme">3.1. Données mises en forme</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-independantes">3.2. Variables indépendantes</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lieu-d-echantillonage">3.2.1. Lieu d’echantillonage</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#position">3.2.2. Position</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#substrat">3.2.3. Substrat</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#frequentation">3.2.4. Fréquentation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#situation">3.2.5. Situation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distance-parking">3.2.6. Distance parking</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#orientation-de-la-plage">3.2.7. Orientation de la plage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#donnees-mises-en-forme">5.1. Données mises en forme</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-independantes">5.2. Variables indépendantes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lieu-d-echantillonage">5.2.1. Lieu d’echantillonage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#position">5.2.2. Position</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#substrat">5.2.3. Substrat</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#frequentation">5.2.4. Fréquentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#situation">5.2.5. Situation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distance-parking">5.2.6. Distance parking</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#orientation-de-la-plage">5.2.7. Orientation de la plage</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-dependantes">3.3. Variables dépendantes</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fragments-plastiques-par-forme">3.3.1. Fragments plastiques par forme</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fragments-plastiques-par-forme-et-couleur">3.3.2. Fragments plastiques par forme et couleur</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-dependantes">5.3. Variables dépendantes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fragments-plastiques-par-forme">5.3.1. Fragments plastiques par forme</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fragments-plastiques-par-forme-et-couleur">5.3.2. Fragments plastiques par forme et couleur</a></li>
 </ul>
 </li>
 </ul>
@@ -351,11 +353,11 @@ document.write(`
 </details>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="variables-aleatoires">
-<h1><span class="section-number">3. </span>Variables aléatoires<a class="headerlink" href="#variables-aleatoires" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">5. </span>Variables aléatoires<a class="headerlink" href="#variables-aleatoires" title="Permalink to this headline">#</a></h1>
 <div class="cell tag_remove-input docutils container">
 </div>
 <div class="section" id="donnees-mises-en-forme">
-<h2><span class="section-number">3.1. </span>Données mises en forme<a class="headerlink" href="#donnees-mises-en-forme" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">5.1. </span>Données mises en forme<a class="headerlink" href="#donnees-mises-en-forme" title="Permalink to this headline">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
@@ -468,9 +470,9 @@ document.write(`
 </div>
 </div>
 <div class="section" id="variables-independantes">
-<h2><span class="section-number">3.2. </span>Variables indépendantes<a class="headerlink" href="#variables-independantes" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">5.2. </span>Variables indépendantes<a class="headerlink" href="#variables-independantes" title="Permalink to this headline">#</a></h2>
 <div class="section" id="lieu-d-echantillonage">
-<h3><span class="section-number">3.2.1. </span>Lieu d’echantillonage<a class="headerlink" href="#lieu-d-echantillonage" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">5.2.1. </span>Lieu d’echantillonage<a class="headerlink" href="#lieu-d-echantillonage" title="Permalink to this headline">#</a></h3>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
@@ -737,7 +739,7 @@ document.write(`
 </div>
 </div>
 <div class="section" id="position">
-<h3><span class="section-number">3.2.2. </span>Position<a class="headerlink" href="#position" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">5.2.2. </span>Position<a class="headerlink" href="#position" title="Permalink to this headline">#</a></h3>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
@@ -791,7 +793,7 @@ document.write(`
 </div>
 </div>
 <div class="section" id="substrat">
-<h3><span class="section-number">3.2.3. </span>Substrat<a class="headerlink" href="#substrat" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">5.2.3. </span>Substrat<a class="headerlink" href="#substrat" title="Permalink to this headline">#</a></h3>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
@@ -859,7 +861,7 @@ document.write(`
 </div>
 </div>
 <div class="section" id="frequentation">
-<h3><span class="section-number">3.2.4. </span>Fréquentation<a class="headerlink" href="#frequentation" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">5.2.4. </span>Fréquentation<a class="headerlink" href="#frequentation" title="Permalink to this headline">#</a></h3>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
@@ -920,7 +922,7 @@ document.write(`
 </div>
 </div>
 <div class="section" id="situation">
-<h3><span class="section-number">3.2.5. </span>Situation<a class="headerlink" href="#situation" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">5.2.5. </span>Situation<a class="headerlink" href="#situation" title="Permalink to this headline">#</a></h3>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
@@ -974,7 +976,7 @@ document.write(`
 </div>
 </div>
 <div class="section" id="distance-parking">
-<h3><span class="section-number">3.2.6. </span>Distance parking<a class="headerlink" href="#distance-parking" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">5.2.6. </span>Distance parking<a class="headerlink" href="#distance-parking" title="Permalink to this headline">#</a></h3>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
@@ -1042,7 +1044,7 @@ document.write(`
 </div>
 </div>
 <div class="section" id="orientation-de-la-plage">
-<h3><span class="section-number">3.2.7. </span>Orientation de la plage<a class="headerlink" href="#orientation-de-la-plage" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">5.2.7. </span>Orientation de la plage<a class="headerlink" href="#orientation-de-la-plage" title="Permalink to this headline">#</a></h3>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
@@ -1195,9 +1197,9 @@ document.write(`
 </div>
 </div>
 <div class="section" id="variables-dependantes">
-<h2><span class="section-number">3.3. </span>Variables dépendantes<a class="headerlink" href="#variables-dependantes" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">5.3. </span>Variables dépendantes<a class="headerlink" href="#variables-dependantes" title="Permalink to this headline">#</a></h2>
 <div class="section" id="fragments-plastiques-par-forme">
-<h3><span class="section-number">3.3.1. </span>Fragments plastiques par forme<a class="headerlink" href="#fragments-plastiques-par-forme" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">5.3.1. </span>Fragments plastiques par forme<a class="headerlink" href="#fragments-plastiques-par-forme" title="Permalink to this headline">#</a></h3>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
@@ -1258,7 +1260,7 @@ document.write(`
 </div>
 </div>
 <div class="section" id="fragments-plastiques-par-forme-et-couleur">
-<h3><span class="section-number">3.3.2. </span>Fragments plastiques par forme et couleur<a class="headerlink" href="#fragments-plastiques-par-forme-et-couleur" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">5.3.2. </span>Fragments plastiques par forme et couleur<a class="headerlink" href="#fragments-plastiques-par-forme-et-couleur" title="Permalink to this headline">#</a></h3>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
@@ -1437,7 +1439,7 @@ numpy : 1.24.2
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2. </span>Annex</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Annex</p>
       </div>
     </a>
     <a class="right-next"
@@ -1445,7 +1447,7 @@ numpy : 1.24.2
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4. </span>Annex : Micro plage et position</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Annex : Micro plage et position</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1467,20 +1469,20 @@ numpy : 1.24.2
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#donnees-mises-en-forme">3.1. Données mises en forme</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-independantes">3.2. Variables indépendantes</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lieu-d-echantillonage">3.2.1. Lieu d’echantillonage</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#position">3.2.2. Position</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#substrat">3.2.3. Substrat</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#frequentation">3.2.4. Fréquentation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#situation">3.2.5. Situation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distance-parking">3.2.6. Distance parking</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#orientation-de-la-plage">3.2.7. Orientation de la plage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#donnees-mises-en-forme">5.1. Données mises en forme</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-independantes">5.2. Variables indépendantes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lieu-d-echantillonage">5.2.1. Lieu d’echantillonage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#position">5.2.2. Position</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#substrat">5.2.3. Substrat</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#frequentation">5.2.4. Fréquentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#situation">5.2.5. Situation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distance-parking">5.2.6. Distance parking</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#orientation-de-la-plage">5.2.7. Orientation de la plage</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-dependantes">3.3. Variables dépendantes</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fragments-plastiques-par-forme">3.3.1. Fragments plastiques par forme</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fragments-plastiques-par-forme-et-couleur">3.3.2. Fragments plastiques par forme et couleur</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-dependantes">5.3. Variables dépendantes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fragments-plastiques-par-forme">5.3.1. Fragments plastiques par forme</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fragments-plastiques-par-forme-et-couleur">5.3.2. Fragments plastiques par forme et couleur</a></li>
 </ul>
 </li>
 </ul>
