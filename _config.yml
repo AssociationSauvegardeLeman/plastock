@@ -21,6 +21,8 @@ sphinx:
       use_issues_button: true
       use_repository_button: true
       extra_navbar: Built by <a href="https://hammerdirt.ch/">hammerdirt</a>
+      use_multitoc_numbering: false
+
       extra_footer:
         <p>
            Association pour la Sauvegarde du Léman et hammerdirt 2023

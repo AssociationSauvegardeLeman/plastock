@@ -1,19 +1,20 @@
 format: jb-book
 root: index
 options:
-  numbered: true
   only_build_toc_files: true
-chapters:
-
-- file: pca
-- file: regression
-- file: other_linear_models
-
-- file: annex_start
-
-- file: random_variables
-- file: location_summary
-- file: location_attributes
-- file: macro_summary
-- file: macro_attributes
-- file: references
+parts:
+- caption: Analyses
+  numbered: true
+  chapters:
+  - file: pca
+  - file: regression
+  - file: other_linear_models
+- caption: Annex
+  numbered: False
+  chapters:
+  - file: random_variables
+  - file: location_summary
+  - file: location_attributes
+  - file: macro_summary
+  - file: macro_attributes
+  - file: references
