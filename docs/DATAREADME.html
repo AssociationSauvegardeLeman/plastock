@@ -138,17 +138,20 @@ const thebe_selector_output = ".output, .cell_output"
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <ul class="nav bd-sidenav">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analyses</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="pca.html">1. PCA/AFDM</a></li>
 <li class="toctree-l1"><a class="reference internal" href="regression.html">2. Regression</a></li>
 <li class="toctree-l1"><a class="reference internal" href="other_linear_models.html">3. Autres modèles linéaires</a></li>
-<li class="toctree-l1"><a class="reference internal" href="annex_start.html">4. Annex</a></li>
-<li class="toctree-l1"><a class="reference internal" href="random_variables.html">5. Variables aléatoires</a></li>
-<li class="toctree-l1"><a class="reference internal" href="location_summary.html">6. Annex : Micro plage et position</a></li>
-<li class="toctree-l1"><a class="reference internal" href="location_attributes.html">7. Annex : Micro plage et attribut</a></li>
-<li class="toctree-l1"><a class="reference internal" href="macro_summary.html">8. Annex : Macro plage et position</a></li>
-<li class="toctree-l1"><a class="reference internal" href="macro_attributes.html">9. Annex : Macro plage et attribut</a></li>
-<li class="toctree-l1"><a class="reference internal" href="references.html">10. References</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Annex</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="random_variables.html">Variables aléatoires</a></li>
+<li class="toctree-l1"><a class="reference internal" href="location_summary.html">Microplastiques plage et position</a></li>
+<li class="toctree-l1"><a class="reference internal" href="location_attributes.html">Microplastiques plage et attribut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="macro_summary.html">Macro déchets plage et position</a></li>
+<li class="toctree-l1"><a class="reference internal" href="macro_attributes.html">Macro déchets plage et attribut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
 </ul>
 
     </div>
@@ -313,15 +316,19 @@ document.write(`
 <p>The data is cleaned and stored here as it is made available. Therefore this document will change as the project continues.</p>
 <div class="section" id="data-files-and-description">
 <h2>Data files and description<a class="headerlink" href="#data-files-and-description" title="Permalink to this headline">#</a></h2>
+<p><strong>This concerns only the contents of the end_pipe file</strong></p>
 <ol class="arabic simple">
 <li><p>data/end_pipe/asl_beaches.csv: GPS and location specific details</p></li>
 <li><p>data/end_pipe/micro_results.csv: The cleaned survey results of the microplastics</p></li>
+<li><p>data/end_pipe/u_all_data.csv: The trash data</p></li>
+<li><p>data/end_pipe/geo_long_form.csv: Long form surveys with geo data for each row</p></li>
 </ol>
 </div>
 <div class="section" id="maps-and-images">
 <h2>maps and images<a class="headerlink" href="#maps-and-images" title="Permalink to this headline">#</a></h2>
 <ol class="arabic simple">
 <li><p>resources/maps/intro_map.jpeg: Basic map with survey locations.</p></li>
+<li><p>resources/maps/annex_map_regions.jpeg: Map with cummulative totals by region and points for min and max values.</p></li>
 </ol>
 </div>
 <div class="section" id="shape-files">
