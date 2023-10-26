@@ -1,6 +1,6 @@
-name_the_zones = {1:"ligne-d'eau", 2:"plage-seche"}
+name_zones = {1:"ligne-d'eau", 2:"plage-seche"}
 
-name_the_particles = {
+name_particles = {
     "fbr":"fibre rouge",
     "fbb":"fibre bleu",
     "fbj":"fibre jaune",
@@ -21,13 +21,15 @@ name_the_particles = {
     "fsa":"particule souple autre",
 }
 
-frequentation_name = {
+name_frequentation = {
     1:"faible",
     2:"moyenne",
     3:"élévée"
 }
 
-situation_name = {
+freq_ord = ['faible', 'moyenne', 'élévée']
+
+name_situation = {
     1: "campagne",
     2: "urbain"
 }
@@ -38,14 +40,14 @@ particle_groups = {
     "souple":"particule souple"
 }
 
-name_the_substrate = {
+name_substrate = {
     1:"sable fin",
     2:"sable grosssier",
     3:"gravier",
     4:"galet"
 }
 
-name_the_distance = {
+name_distance = {
     1: "< 100m",
     2: "100 - 500m",
     3: "500 - 1000m",
