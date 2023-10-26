@@ -63,7 +63,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Variables aléatoires" href="random_variables.html" />
-    <link rel="prev" title="2. Regression" href="regression.html" />
+    <link rel="prev" title="2. Modèles linéaires" href="regression.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -143,7 +143,7 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analyses</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="pca.html">1. PCA/AFDM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="regression.html">2. Regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regression.html">2. Modèles linéaires</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Autres modèles linéaires</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Annex</span></p>
@@ -341,8 +341,8 @@ document.write(`
 <span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
 <span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
 
-<span class="kn">from</span> <span class="nn">plastockmethods</span> <span class="kn">import</span> <span class="n">name_the_zones</span><span class="p">,</span> <span class="n">name_the_particles</span><span class="p">,</span> <span class="n">frequentation_name</span><span class="p">,</span> <span class="n">situation_name</span>
-<span class="kn">from</span> <span class="nn">plastockmethods</span> <span class="kn">import</span> <span class="n">particle_groups</span><span class="p">,</span> <span class="n">name_the_substrate</span><span class="p">,</span> <span class="n">name_the_distance</span><span class="p">,</span> <span class="n">table_css_styles</span>
+<span class="kn">from</span> <span class="nn">plastockmethods</span> <span class="kn">import</span> <span class="n">name_zones</span><span class="p">,</span> <span class="n">name_particles</span><span class="p">,</span> <span class="n">name_frequentation</span><span class="p">,</span> <span class="n">name_situation</span>
+<span class="kn">from</span> <span class="nn">plastockmethods</span> <span class="kn">import</span> <span class="n">particle_groups</span><span class="p">,</span> <span class="n">name_substrate</span><span class="p">,</span> <span class="n">name_distance</span><span class="p">,</span> <span class="n">table_css_styles</span>
 
 <span class="k">def</span> <span class="nf">translate_describe</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">value_column</span><span class="p">):</span>
     <span class="n">described</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
@@ -358,15 +358,15 @@ document.write(`
     <span class="k">return</span> <span class="n">df</span>
 
 <span class="n">work_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/end_pipe/long_form_micro.csv&quot;</span><span class="p">)</span>
-<span class="n">wide_form</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/end_pipe/aggregated_micro_results.csv&quot;</span><span class="p">)</span>
+<span class="n">wide_form</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/aggregated_micro_results.csv&quot;</span><span class="p">)</span>
 <span class="n">beach_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/end_pipe/asl_beaches.csv&quot;</span><span class="p">)</span>
 
 <span class="n">wdx</span> <span class="o">=</span> <span class="n">work_data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="n">wdx</span><span class="p">[</span><span class="s2">&quot;position&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wdx</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">name_the_zones</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
-<span class="n">wdx</span><span class="p">[</span><span class="s2">&quot;frequentation&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wdx</span><span class="o">.</span><span class="n">frequentation</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">frequentation_name</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
-<span class="n">wdx</span><span class="p">[</span><span class="s2">&quot;situation&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wdx</span><span class="o">.</span><span class="n">situation</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">situation_name</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
-<span class="n">wdx</span><span class="p">[</span><span class="s2">&quot;distance&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wdx</span><span class="o">.</span><span class="n">distance</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">name_the_distance</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
-<span class="n">wdx</span><span class="p">[</span><span class="s2">&quot;substrat&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wdx</span><span class="o">.</span><span class="n">substrat</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">name_the_substrate</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+<span class="n">wdx</span><span class="p">[</span><span class="s2">&quot;position&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wdx</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">name_zones</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+<span class="n">wdx</span><span class="p">[</span><span class="s2">&quot;frequentation&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wdx</span><span class="o">.</span><span class="n">frequentation</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">name_frequentation</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+<span class="n">wdx</span><span class="p">[</span><span class="s2">&quot;situation&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wdx</span><span class="o">.</span><span class="n">situation</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">name_situation</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+<span class="n">wdx</span><span class="p">[</span><span class="s2">&quot;distance&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wdx</span><span class="o">.</span><span class="n">distance</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">name_distance</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+<span class="n">wdx</span><span class="p">[</span><span class="s2">&quot;substrat&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wdx</span><span class="o">.</span><span class="n">substrat</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">name_substrate</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -419,99 +419,123 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
-#T_221ee tr:nth-child(even) {
+#T_e3cd2 tr:nth-child(even) {
   background-color: rgba(139, 69, 19, 0.08);
 }
-#T_221ee tr:nth-child(odd) {
+#T_e3cd2 tr:nth-child(odd) {
   background: #FFF;
 }
-#T_221ee tr {
+#T_e3cd2 tr {
   font-size: 14px;
+  padding: 10px;
 }
-#T_221ee th:nth-child(1) {
+#T_e3cd2 th:nth-child(1) {
   background-color: #FFF;
 }
-#T_221ee caption {
+#T_e3cd2 caption {
   caption-side: bottom;
   font-size: 16px;
   text-align: left;
   margin-top: 15px;
 }
 </style>
-<table id="T_221ee">
+<table id="T_e3cd2">
   <caption>Les données sont regroupées en deux groupes par échantillon: 1. fibres, 2. fragment.</caption>
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_221ee_level0_col0" class="col_heading level0 col0" >orientation</th>
-      <th id="T_221ee_level0_col1" class="col_heading level0 col1" >substrat</th>
-      <th id="T_221ee_level0_col2" class="col_heading level0 col2" >frequentation</th>
-      <th id="T_221ee_level0_col3" class="col_heading level0 col3" >situation</th>
-      <th id="T_221ee_level0_col4" class="col_heading level0 col4" >distance</th>
-      <th id="T_221ee_level0_col5" class="col_heading level0 col5" >objet</th>
-      <th id="T_221ee_level0_col6" class="col_heading level0 col6" >compte</th>
-      <th id="T_221ee_level0_col7" class="col_heading level0 col7" >scaled</th>
+      <th id="T_e3cd2_level0_col0" class="col_heading level0 col0" >orientation</th>
+      <th id="T_e3cd2_level0_col1" class="col_heading level0 col1" >substrat</th>
+      <th id="T_e3cd2_level0_col2" class="col_heading level0 col2" >frequentation</th>
+      <th id="T_e3cd2_level0_col3" class="col_heading level0 col3" >situation</th>
+      <th id="T_e3cd2_level0_col4" class="col_heading level0 col4" >distance</th>
+      <th id="T_e3cd2_level0_col5" class="col_heading level0 col5" >objet</th>
+      <th id="T_e3cd2_level0_col6" class="col_heading level0 col6" >compte</th>
+      <th id="T_e3cd2_level0_col7" class="col_heading level0 col7" >scaled</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_221ee_level0_row0" class="row_heading level0 row0" >0</th>
-      <td id="T_221ee_row0_col0" class="data row0 col0" >NE</td>
-      <td id="T_221ee_row0_col1" class="data row0 col1" >galet</td>
-      <td id="T_221ee_row0_col2" class="data row0 col2" >élévée</td>
-      <td id="T_221ee_row0_col3" class="data row0 col3" >campagne</td>
-      <td id="T_221ee_row0_col4" class="data row0 col4" >< 100m</td>
-      <td id="T_221ee_row0_col5" class="data row0 col5" >fragment</td>
-      <td id="T_221ee_row0_col6" class="data row0 col6" >0</td>
-      <td id="T_221ee_row0_col7" class="data row0 col7" >0.000000</td>
+      <th id="T_e3cd2_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_e3cd2_row0_col0" class="data row0 col0" >NE</td>
+      <td id="T_e3cd2_row0_col1" class="data row0 col1" >galet</td>
+      <td id="T_e3cd2_row0_col2" class="data row0 col2" >élévée</td>
+      <td id="T_e3cd2_row0_col3" class="data row0 col3" >campagne</td>
+      <td id="T_e3cd2_row0_col4" class="data row0 col4" >< 100m</td>
+      <td id="T_e3cd2_row0_col5" class="data row0 col5" >fragment</td>
+      <td id="T_e3cd2_row0_col6" class="data row0 col6" >0</td>
+      <td id="T_e3cd2_row0_col7" class="data row0 col7" >0.000000</td>
     </tr>
     <tr>
-      <th id="T_221ee_level0_row1" class="row_heading level0 row1" >1</th>
-      <td id="T_221ee_row1_col0" class="data row1 col0" >NNE</td>
-      <td id="T_221ee_row1_col1" class="data row1 col1" >galet</td>
-      <td id="T_221ee_row1_col2" class="data row1 col2" >élévée</td>
-      <td id="T_221ee_row1_col3" class="data row1 col3" >campagne</td>
-      <td id="T_221ee_row1_col4" class="data row1 col4" >< 100m</td>
-      <td id="T_221ee_row1_col5" class="data row1 col5" >fragment</td>
-      <td id="T_221ee_row1_col6" class="data row1 col6" >15</td>
-      <td id="T_221ee_row1_col7" class="data row1 col7" >0.023292</td>
+      <th id="T_e3cd2_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_e3cd2_row1_col0" class="data row1 col0" >NNE</td>
+      <td id="T_e3cd2_row1_col1" class="data row1 col1" >galet</td>
+      <td id="T_e3cd2_row1_col2" class="data row1 col2" >élévée</td>
+      <td id="T_e3cd2_row1_col3" class="data row1 col3" >campagne</td>
+      <td id="T_e3cd2_row1_col4" class="data row1 col4" >< 100m</td>
+      <td id="T_e3cd2_row1_col5" class="data row1 col5" >fragment</td>
+      <td id="T_e3cd2_row1_col6" class="data row1 col6" >15</td>
+      <td id="T_e3cd2_row1_col7" class="data row1 col7" >0.023292</td>
     </tr>
     <tr>
-      <th id="T_221ee_level0_row2" class="row_heading level0 row2" >2</th>
-      <td id="T_221ee_row2_col0" class="data row2 col0" >NE</td>
-      <td id="T_221ee_row2_col1" class="data row2 col1" >galet</td>
-      <td id="T_221ee_row2_col2" class="data row2 col2" >élévée</td>
-      <td id="T_221ee_row2_col3" class="data row2 col3" >campagne</td>
-      <td id="T_221ee_row2_col4" class="data row2 col4" >< 100m</td>
-      <td id="T_221ee_row2_col5" class="data row2 col5" >fragment</td>
-      <td id="T_221ee_row2_col6" class="data row2 col6" >0</td>
-      <td id="T_221ee_row2_col7" class="data row2 col7" >0.000000</td>
+      <th id="T_e3cd2_level0_row2" class="row_heading level0 row2" >2</th>
+      <td id="T_e3cd2_row2_col0" class="data row2 col0" >NE</td>
+      <td id="T_e3cd2_row2_col1" class="data row2 col1" >galet</td>
+      <td id="T_e3cd2_row2_col2" class="data row2 col2" >élévée</td>
+      <td id="T_e3cd2_row2_col3" class="data row2 col3" >campagne</td>
+      <td id="T_e3cd2_row2_col4" class="data row2 col4" >< 100m</td>
+      <td id="T_e3cd2_row2_col5" class="data row2 col5" >fragment</td>
+      <td id="T_e3cd2_row2_col6" class="data row2 col6" >0</td>
+      <td id="T_e3cd2_row2_col7" class="data row2 col7" >0.000000</td>
     </tr>
     <tr>
-      <th id="T_221ee_level0_row3" class="row_heading level0 row3" >3</th>
-      <td id="T_221ee_row3_col0" class="data row3 col0" >NNE</td>
-      <td id="T_221ee_row3_col1" class="data row3 col1" >galet</td>
-      <td id="T_221ee_row3_col2" class="data row3 col2" >élévée</td>
-      <td id="T_221ee_row3_col3" class="data row3 col3" >campagne</td>
-      <td id="T_221ee_row3_col4" class="data row3 col4" >< 100m</td>
-      <td id="T_221ee_row3_col5" class="data row3 col5" >fragment</td>
-      <td id="T_221ee_row3_col6" class="data row3 col6" >3</td>
-      <td id="T_221ee_row3_col7" class="data row3 col7" >0.004658</td>
+      <th id="T_e3cd2_level0_row3" class="row_heading level0 row3" >3</th>
+      <td id="T_e3cd2_row3_col0" class="data row3 col0" >NNE</td>
+      <td id="T_e3cd2_row3_col1" class="data row3 col1" >galet</td>
+      <td id="T_e3cd2_row3_col2" class="data row3 col2" >élévée</td>
+      <td id="T_e3cd2_row3_col3" class="data row3 col3" >campagne</td>
+      <td id="T_e3cd2_row3_col4" class="data row3 col4" >< 100m</td>
+      <td id="T_e3cd2_row3_col5" class="data row3 col5" >fragment</td>
+      <td id="T_e3cd2_row3_col6" class="data row3 col6" >3</td>
+      <td id="T_e3cd2_row3_col7" class="data row3 col7" >0.004658</td>
     </tr>
     <tr>
-      <th id="T_221ee_level0_row4" class="row_heading level0 row4" >4</th>
-      <td id="T_221ee_row4_col0" class="data row4 col0" >NNO</td>
-      <td id="T_221ee_row4_col1" class="data row4 col1" >galet</td>
-      <td id="T_221ee_row4_col2" class="data row4 col2" >moyenne</td>
-      <td id="T_221ee_row4_col3" class="data row4 col3" >campagne</td>
-      <td id="T_221ee_row4_col4" class="data row4 col4" >< 100m</td>
-      <td id="T_221ee_row4_col5" class="data row4 col5" >fragment</td>
-      <td id="T_221ee_row4_col6" class="data row4 col6" >9</td>
-      <td id="T_221ee_row4_col7" class="data row4 col7" >0.013975</td>
+      <th id="T_e3cd2_level0_row4" class="row_heading level0 row4" >4</th>
+      <td id="T_e3cd2_row4_col0" class="data row4 col0" >NNO</td>
+      <td id="T_e3cd2_row4_col1" class="data row4 col1" >galet</td>
+      <td id="T_e3cd2_row4_col2" class="data row4 col2" >moyenne</td>
+      <td id="T_e3cd2_row4_col3" class="data row4 col3" >campagne</td>
+      <td id="T_e3cd2_row4_col4" class="data row4 col4" >< 100m</td>
+      <td id="T_e3cd2_row4_col5" class="data row4 col5" >fragment</td>
+      <td id="T_e3cd2_row4_col6" class="data row4 col6" >9</td>
+      <td id="T_e3cd2_row4_col7" class="data row4 col7" >0.013975</td>
     </tr>
   </tbody>
 </table>
 </div></div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">OrdinalEncoder</span>
+
+<span class="n">freq</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">name_frequentation</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="n">sub</span>  <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">name_substrate</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="n">dis</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">name_distance</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="n">sit</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">name_situation</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+
+<span class="c1"># Now, when you instantiate the encoder, both of these lists go in one big categories list:</span>
+<span class="n">encoder</span> <span class="o">=</span> <span class="n">OrdinalEncoder</span><span class="p">(</span><span class="n">categories</span><span class="o">=</span><span class="p">[</span><span class="n">freq</span><span class="p">,</span> <span class="n">sub</span><span class="p">,</span> <span class="n">dis</span><span class="p">])</span>
+
+<span class="n">ordinal_encoded</span> <span class="o">=</span> <span class="n">encoder</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">w_d</span><span class="p">[[</span><span class="s2">&quot;frequentation&quot;</span><span class="p">,</span> <span class="s2">&quot;substrat&quot;</span><span class="p">,</span> <span class="s2">&quot;distance&quot;</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+</details>
 </div>
 </div>
 <div class="section" id="gridsearch-with-pca">
@@ -532,18 +556,12 @@ document.write(`
 
 <span class="n">categorical_columns_selector</span> <span class="o">=</span> <span class="n">selector</span><span class="p">(</span><span class="n">dtype_include</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span>
 <span class="n">categorical_columns</span> <span class="o">=</span> <span class="n">categorical_columns_selector</span><span class="p">(</span><span class="n">w_d</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">categorical_columns</span><span class="p">)</span>
 
 <span class="n">w_dc</span> <span class="o">=</span> <span class="n">w_d</span><span class="p">[</span><span class="n">categorical_columns</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </details>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;orientation&#39;, &#39;substrat&#39;, &#39;frequentation&#39;, &#39;situation&#39;, &#39;distance&#39;, &#39;objet&#39;]
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
@@ -564,28 +582,57 @@ document.write(`
 </div>
 <div class="section" id="cross-validated-results-mean-squared-error">
 <h3><span class="section-number">3.2.1. </span>Cross validated results: mean squared error<a class="headerlink" href="#cross-validated-results-mean-squared-error" title="Permalink to this headline">#</a></h3>
-<div class="cell tag_remove-input docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">Lasso</span><span class="p">,</span> <span class="n">Ridge</span><span class="p">,</span> <span class="n">LinearRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">GridSearchCV</span><span class="p">,</span> <span class="n">cross_validate</span>
+<span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>
+<span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">Pipeline</span><span class="p">,</span> <span class="n">make_pipeline</span>
+<span class="kn">from</span> <span class="nn">sklearn.compose</span> <span class="kn">import</span> <span class="n">TransformedTargetRegressor</span>
+<span class="kn">from</span> <span class="nn">sklearn.compose</span> <span class="kn">import</span> <span class="n">make_column_transformer</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
+    <span class="p">(</span><span class="s1">&#39;scale&#39;</span><span class="p">,</span> <span class="n">StandardScaler</span><span class="p">()),</span>
+    <span class="p">(</span><span class="s1">&#39;pca&#39;</span><span class="p">,</span><span class="n">PCA</span><span class="p">()),</span>
+    <span class="p">(</span><span class="s1">&#39;lm&#39;</span><span class="p">,</span> <span class="n">Lasso</span><span class="p">())</span>
+<span class="p">])</span>
+
+<span class="n">param_grid</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;pca__n_components&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
+    <span class="s1">&#39;lm__alpha&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">gscv</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">param_grid</span><span class="o">=</span><span class="n">param_grid</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">scoring</span> <span class="o">=</span> <span class="n">rmse</span><span class="p">)</span>
+
+<span class="n">results</span> <span class="o">=</span> <span class="n">cross_validate</span><span class="p">(</span><span class="n">gscv</span><span class="p">,</span> <span class="n">w_dencoded</span><span class="p">,</span> <span class="n">Y_not_scale</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">scoring</span> <span class="o">=</span> <span class="n">rmse</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="n">gscv</span>
+</pre></div>
+</div>
+</div>
+</details>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV] END ......................................, score=69.833 total time=   0.2s
-[CV] END ......................................, score=61.233 total time=   0.2s
-[CV] END ....................................., score=118.265 total time=   0.2s
-[CV] END ....................................., score=131.466 total time=   0.2s
-[CV] END ......................................, score=57.558 total time=   0.2s
-[CV] END ......................................, score=85.579 total time=   0.2s
-[CV] END ......................................, score=38.895 total time=   0.2s
-[CV] END ......................................, score=65.614 total time=   0.2s
-[CV] END ......................................, score=73.920 total time=   0.2s
-[CV] END ......................................, score=76.559 total time=   0.2s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV] END ......................................, score=99.441 total time=   0.8s
+[CV] END ......................................, score=81.787 total time=   0.8s
 </pre></div>
 </div>
 <div class="output text_html"><style>#sk-container-id-1 {color: black;}#sk-container-id-1 pre{padding: 0;}#sk-container-id-1 div.sk-toggleable {background-color: white;}#sk-container-id-1 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-1 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-1 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-1 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-1 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-1 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-1 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-1 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-1 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-1 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-1 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-1 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-1 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-1 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-1 div.sk-item {position: relative;z-index: 1;}#sk-container-id-1 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-1 div.sk-item::before, #sk-container-id-1 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-1 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-1 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-1 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-1 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-1 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-1 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-1 div.sk-label-container {text-align: center;}#sk-container-id-1 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-1 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>GridSearchCV(cv=10,
              estimator=Pipeline(steps=[(&#x27;scale&#x27;, StandardScaler()),
                                        (&#x27;pca&#x27;, PCA()), (&#x27;lm&#x27;, Lasso())]),
-             param_grid={&#x27;pca__n_components&#x27;: [3, 5, 7]},
+             param_grid={&#x27;lm__alpha&#x27;: array([1.00000000e-03, 3.16227766e-02, 1.00000000e+00, 3.16227766e+01,
+       1.00000000e+03]),
+                         &#x27;pca__n_components&#x27;: [2, 5, 10]},
              scoring=make_scorer(mean_squared_error, squared=False))</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" ><label for="sk-estimator-id-1" class="sk-toggleable__label sk-toggleable__label-arrow">GridSearchCV</label><div class="sk-toggleable__content"><pre>GridSearchCV(cv=10,
              estimator=Pipeline(steps=[(&#x27;scale&#x27;, StandardScaler()),
                                        (&#x27;pca&#x27;, PCA()), (&#x27;lm&#x27;, Lasso())]),
-             param_grid={&#x27;pca__n_components&#x27;: [3, 5, 7]},
+             param_grid={&#x27;lm__alpha&#x27;: array([1.00000000e-03, 3.16227766e-02, 1.00000000e+00, 3.16227766e+01,
+       1.00000000e+03]),
+                         &#x27;pca__n_components&#x27;: [2, 5, 10]},
              scoring=make_scorer(mean_squared_error, squared=False))</pre></div></div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-2" type="checkbox" ><label for="sk-estimator-id-2" class="sk-toggleable__label sk-toggleable__label-arrow">estimator: Pipeline</label><div class="sk-toggleable__content"><pre>Pipeline(steps=[(&#x27;scale&#x27;, StandardScaler()), (&#x27;pca&#x27;, PCA()), (&#x27;lm&#x27;, Lasso())])</pre></div></div></div><div class="sk-serial"><div class="sk-item"><div class="sk-serial"><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-3" type="checkbox" ><label for="sk-estimator-id-3" class="sk-toggleable__label sk-toggleable__label-arrow">StandardScaler</label><div class="sk-toggleable__content"><pre>StandardScaler()</pre></div></div></div><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-4" type="checkbox" ><label for="sk-estimator-id-4" class="sk-toggleable__label sk-toggleable__label-arrow">PCA</label><div class="sk-toggleable__content"><pre>PCA()</pre></div></div></div><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-5" type="checkbox" ><label for="sk-estimator-id-5" class="sk-toggleable__label sk-toggleable__label-arrow">Lasso</label><div class="sk-toggleable__content"><pre>Lasso()</pre></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
 </div>
 </div>
@@ -623,7 +670,7 @@ document.write(`
 
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
 
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">w_dencoded</span><span class="p">,</span> <span class="n">w_d</span><span class="o">.</span><span class="n">scaled</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">ordinal_encoded</span><span class="p">,</span> <span class="n">w_d</span><span class="o">.</span><span class="n">scaled</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 
 <span class="n">ols</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 <span class="n">predictions</span> <span class="o">=</span> <span class="n">ols</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
@@ -647,16 +694,16 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV] END ......................................., score=0.085 total time=   0.0s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV] END ......................................., score=0.062 total time=   0.0s
 [CV] END ......................................., score=0.233 total time=   0.0s
-[CV] END ......................................., score=0.081 total time=   0.0s
-[CV] END ......................................., score=0.072 total time=   0.0s
-[CV] END ..........................., score=6013520687107.255 total time=   0.0s
-[CV] END ......................................., score=0.061 total time=   0.0s
-[CV] END ......................................., score=0.108 total time=   0.0s
-[CV] END ......................................., score=0.179 total time=   0.0s
-[CV] END ......................................., score=0.109 total time=   0.0s
-[CV] END ......................................., score=0.103 total time=   0.0s
+[CV] END ......................................., score=0.110 total time=   0.0s
+[CV] END ......................................., score=0.083 total time=   0.0s
+[CV] END ......................................., score=0.105 total time=   0.0s
+[CV] END ......................................., score=0.078 total time=   0.0s
+[CV] END ......................................., score=0.116 total time=   0.0s
+[CV] END ......................................., score=0.184 total time=   0.0s
+[CV] END ......................................., score=0.115 total time=   0.0s
+[CV] END ......................................., score=0.116 total time=   0.0s
 </pre></div>
 </div>
 </div>
@@ -667,7 +714,22 @@ document.write(`
 <h2><span class="section-number">3.4. </span>Bayesian ridge regression (L2)<a class="headerlink" href="#bayesian-ridge-regression-l2" title="Permalink to this headline">#</a></h2>
 <p>Bayesian regression techniques can be used to include regularization parameters in the estimation procedure: the regularization parameter is not set in a hard sense but tuned to the data at hand.</p>
 <p>This can be done by introducing uninformative priors over the hyper parameters of the model. The regularization used in Ridge regression and classification is equivalent to finding a maximum a posteriori estimation under a Gaussian prior over the coefficients with precision . Instead of setting lambda manually, it is possible to treat it as a random variable to be estimated from the data.</p>
-<div class="cell tag_remove-input docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bayes</span> <span class="o">=</span> <span class="n">BayesianRidge</span><span class="p">(</span><span class="n">compute_score</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">predictions_b</span> <span class="o">=</span> <span class="n">bayes</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+
+<span class="n">p_unscaled_b</span> <span class="o">=</span> <span class="p">[</span><span class="n">rev_min_max_func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">w_d</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">predictions_b</span><span class="p">]</span>
+<span class="n">bayes</span>
+</pre></div>
+</div>
+</div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_html"><style>#sk-container-id-3 {color: black;}#sk-container-id-3 pre{padding: 0;}#sk-container-id-3 div.sk-toggleable {background-color: white;}#sk-container-id-3 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-3 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-3 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-3 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-3 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-3 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-3 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-3 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-3 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-3 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-3 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-3 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-3 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-3 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-3 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-3 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-3 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-3 div.sk-item {position: relative;z-index: 1;}#sk-container-id-3 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-3 div.sk-item::before, #sk-container-id-3 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-3 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-3 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-3 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-3 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-3 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-3 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-3 div.sk-label-container {text-align: center;}#sk-container-id-3 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-3 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-3" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>BayesianRidge(compute_score=True, max_iter=30)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-7" type="checkbox" checked><label for="sk-estimator-id-7" class="sk-toggleable__label sk-toggleable__label-arrow">BayesianRidge</label><div class="sk-toggleable__content"><pre>BayesianRidge(compute_score=True, max_iter=30)</pre></div></div></div></div></div></div></div>
 </div>
@@ -680,16 +742,16 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV] END ......................................., score=0.057 total time=   0.0s
-[CV] END ......................................., score=0.229 total time=   0.0s
-[CV] END ......................................., score=0.092 total time=   0.0s
-[CV] END ......................................., score=0.075 total time=   0.0s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV] END ......................................., score=0.053 total time=   0.0s
+[CV] END ......................................., score=0.233 total time=   0.0s
+[CV] END ......................................., score=0.117 total time=   0.0s
+[CV] END ......................................., score=0.076 total time=   0.0s
+[CV] END ......................................., score=0.098 total time=   0.0s
 [CV] END ......................................., score=0.078 total time=   0.0s
-[CV] END ......................................., score=0.053 total time=   0.0s
-[CV] END ......................................., score=0.096 total time=   0.0s
-[CV] END ......................................., score=0.184 total time=   0.0s
-[CV] END ......................................., score=0.100 total time=   0.0s
-[CV] END ......................................., score=0.094 total time=   0.0s
+[CV] END ......................................., score=0.114 total time=   0.0s
+[CV] END ......................................., score=0.191 total time=   0.0s
+[CV] END ......................................., score=0.118 total time=   0.0s
+[CV] END ......................................., score=0.114 total time=   0.0s
 </pre></div>
 </div>
 </div>
@@ -736,16 +798,16 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV] END ......................................., score=0.059 total time=   0.3s
-[CV] END ......................................., score=0.230 total time=   0.3s
-[CV] END ......................................., score=0.095 total time=   0.2s
-[CV] END ......................................., score=0.081 total time=   0.3s
-[CV] END ......................................., score=0.078 total time=   0.2s
-[CV] END ......................................., score=0.052 total time=   0.3s
-[CV] END ......................................., score=0.098 total time=   0.2s
-[CV] END ......................................., score=0.193 total time=   0.2s
-[CV] END ......................................., score=0.103 total time=   0.3s
-[CV] END ......................................., score=0.089 total time=   0.3s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV] END ......................................., score=0.062 total time=   0.2s
+[CV] END ......................................., score=0.233 total time=   0.2s
+[CV] END ......................................., score=0.116 total time=   0.2s
+[CV] END ......................................., score=0.083 total time=   0.2s
+[CV] END ......................................., score=0.101 total time=   0.2s
+[CV] END ......................................., score=0.079 total time=   0.2s
+[CV] END ......................................., score=0.116 total time=   0.2s
+[CV] END ......................................., score=0.191 total time=   0.2s
+[CV] END ......................................., score=0.115 total time=   0.2s
+[CV] END ......................................., score=0.116 total time=   0.2s
 </pre></div>
 </div>
 </div>
@@ -771,7 +833,7 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/3a3e2f17d4378cf3c53444b4917b65f5a445b74c18415f9176432e52d5f8a350.png" src="_images/3a3e2f17d4378cf3c53444b4917b65f5a445b74c18415f9176432e52d5f8a350.png" />
+<img alt="_images/5fcfbcc52b73a0e57dd0e4b0a00f649da664d0a72b38062570bbadacf8aeb4bb.png" src="_images/5fcfbcc52b73a0e57dd0e4b0a00f649da664d0a72b38062570bbadacf8aeb4bb.png" />
 </div>
 </div>
 <div class="cell tag_remove-input docutils container">
@@ -780,12 +842,12 @@ document.write(`
 
 Git branch: glm_p
 
-statsmodels: 0.13.5
-numpy      : 1.24.2
 scipy      : 1.10.1
+matplotlib : 3.7.1
+numpy      : 1.24.2
+statsmodels: 0.13.5
 seaborn    : 0.12.2
 pandas     : 2.0.0
-matplotlib : 3.7.1
 </pre></div>
 </div>
 </div>
@@ -830,7 +892,7 @@ matplotlib : 3.7.1
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2. </span>Regression</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Modèles linéaires</p>
       </div>
     </a>
     <a class="right-next"

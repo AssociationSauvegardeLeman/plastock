@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2. Regression &#8212; Plaststock</title>
+    <title>2. Modèles linéaires &#8212; Plaststock</title>
   
   
   
@@ -59,6 +59,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'regression';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -143,7 +145,7 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analyses</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="pca.html">1. PCA/AFDM</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Regression</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Modèles linéaires</a></li>
 <li class="toctree-l1"><a class="reference internal" href="other_linear_models.html">3. Autres modèles linéaires</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Annex</span></p>
@@ -289,7 +291,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Regression</h1>
+    <h1>Modèles linéaires</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -299,30 +301,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ligne-d-eau">2.1. Ligne d’eau</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regression-des-moindres-carres-ordinaires-mco">2.1.1. Régression des moindres carrés ordinaires (MCO)</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qq-plot">2.1.1.1. QQ plot</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hsitogram">2.1.1.2. Hsitogram</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sans-la-variable-d-orientation">2.1.1.3. Sans la variable d’orientation</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2.1.1.4. QQ plot</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sans-la-variable-de-frequentation">2.1.1.5. Sans la variable de frequentation</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2.1.1.6. QQ plot</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-considerations-liste-non-exhaustive">2.1. Les considérations (liste non exhaustive)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#valeurs-non-negatives">2.1.1. Valeurs non négatives</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#colinearite-des-variables-independantes">2.1.2. Colinéarité des variables indépendantes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-categorielles">2.1.3. Variables catégorielles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-donnees">2.1.4. Les données</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plage-seche">2.2. Plage seche</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">2.2.1. Régression des moindres carrés ordinaires (MCO)</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2.2.1.1. QQ plot</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#histogram">2.2.1.2. Histogram</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">2.2.1.3. Sans la variable d’orientation</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">2.2.1.4. QQ plot</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sans-la-variable-de-distance">2.2.1.5. Sans la variable de distance</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">2.2.1.6. QQ plot</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#colinearite">2.2. Colinéarité</a></li>
 </ul>
             </nav>
         </div>
@@ -351,8 +337,8 @@ document.write(`
 <span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
 <span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
 
-<span class="kn">from</span> <span class="nn">plastockmethods</span> <span class="kn">import</span> <span class="n">name_the_zones</span><span class="p">,</span> <span class="n">name_the_particles</span><span class="p">,</span> <span class="n">frequentation_name</span><span class="p">,</span> <span class="n">situation_name</span>
-<span class="kn">from</span> <span class="nn">plastockmethods</span> <span class="kn">import</span> <span class="n">particle_groups</span><span class="p">,</span> <span class="n">name_the_substrate</span><span class="p">,</span> <span class="n">name_the_distance</span><span class="p">,</span> <span class="n">table_css_styles</span>
+<span class="kn">from</span> <span class="nn">plastockmethods</span> <span class="kn">import</span> <span class="n">name_zones</span><span class="p">,</span> <span class="n">name_particles</span><span class="p">,</span> <span class="n">name_frequentation</span><span class="p">,</span> <span class="n">name_situation</span>
+<span class="kn">from</span> <span class="nn">plastockmethods</span> <span class="kn">import</span> <span class="n">particle_groups</span><span class="p">,</span> <span class="n">name_substrate</span><span class="p">,</span> <span class="n">name_distance</span><span class="p">,</span> <span class="n">table_css_styles</span>
 
 <span class="k">def</span> <span class="nf">translate_describe</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">value_column</span><span class="p">):</span>
     <span class="n">described</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
@@ -368,980 +354,659 @@ document.write(`
     <span class="k">return</span> <span class="n">df</span>
 
 <span class="n">work_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/end_pipe/long_form_micro.csv&quot;</span><span class="p">)</span>
-<span class="n">wide_form</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/end_pipe/aggregated_micro_results.csv&quot;</span><span class="p">)</span>
+<span class="n">wide_form</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/aggregated_micro_results.csv&quot;</span><span class="p">)</span>
 <span class="n">beach_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/end_pipe/asl_beaches.csv&quot;</span><span class="p">)</span>
 
 <span class="n">wdx</span> <span class="o">=</span> <span class="n">work_data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="n">wdx</span><span class="p">[</span><span class="s2">&quot;position&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wdx</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">name_the_zones</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
-<span class="n">wdx</span><span class="p">[</span><span class="s2">&quot;frequentation&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wdx</span><span class="o">.</span><span class="n">frequentation</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">frequentation_name</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
-<span class="n">wdx</span><span class="p">[</span><span class="s2">&quot;situation&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wdx</span><span class="o">.</span><span class="n">situation</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">situation_name</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
-<span class="n">wdx</span><span class="p">[</span><span class="s2">&quot;distance&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wdx</span><span class="o">.</span><span class="n">distance</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">name_the_distance</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
-<span class="n">wdx</span><span class="p">[</span><span class="s2">&quot;substrat&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wdx</span><span class="o">.</span><span class="n">substrat</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">name_the_substrate</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+<span class="n">wdx</span><span class="p">[</span><span class="s2">&quot;position&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wdx</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">name_zones</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+<span class="n">wdx</span><span class="p">[</span><span class="s2">&quot;frequentation&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wdx</span><span class="o">.</span><span class="n">frequentation</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">name_frequentation</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+<span class="n">wdx</span><span class="p">[</span><span class="s2">&quot;situation&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wdx</span><span class="o">.</span><span class="n">situation</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">name_situation</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+<span class="n">wdx</span><span class="p">[</span><span class="s2">&quot;distance&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wdx</span><span class="o">.</span><span class="n">distance</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">name_distance</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+<span class="n">wdx</span><span class="p">[</span><span class="s2">&quot;substrat&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wdx</span><span class="o">.</span><span class="n">substrat</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">name_substrate</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 </details>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="regression">
-<h1><span class="section-number">2. </span>Regression<a class="headerlink" href="#regression" title="Permalink to this headline">#</a></h1>
-<p>La position des échantillons sur la plage (ligne d’eau, plage-seche) représente différentes conditions d’échantillonnage. C’est pourquoi nous les traiterons séparément.</p>
-<p>Les fragments durs et souple sont combinés pour chaque échantillon.</p>
-<p>method = <a class="reference external" href="https://www.statsmodels.org/stable/regression.html">statsmodels linear regression</a></p>
-<p>from the stasmodels: <em>Linear models with independently and identically distributed errors, and for errors with heteroscedasticity or autocorrelation. This module allows estimation by ordinary least squares (OLS), weighted least squares (WLS), generalized least squares (GLS), and feasible generalized least squares with autocorrelated AR(p) errors.</em></p>
-<div class="section" id="ligne-d-eau">
-<h2><span class="section-number">2.1. </span>Ligne d’eau<a class="headerlink" href="#ligne-d-eau" title="Permalink to this headline">#</a></h2>
+<div class="tex2jax_ignore mathjax_ignore section" id="modeles-lineaires">
+<h1><span class="section-number">2. </span>Modèles linéaires<a class="headerlink" href="#modeles-lineaires" title="Permalink to this headline">#</a></h1>
+<p>Les méthodes suivantes sont destinées à la régression dans laquelle la valeur cible est censée être une combinaison linéaire des caractéristiques. Si <span class="math notranslate nohighlight">\(\hat{y}\)</span> est la valeur prédite: <span class="math notranslate nohighlight">\(\hat{y}(w, x) = w_0 + w_1 x_1 + ... + w_p x_p\)</span></p>
+<p><strong>Méthodes :</strong></p>
+<ol class="arabic simple">
+<li><p>statsmodels: <a class="reference external" href="https://www.statsmodels.org/stable/regression.html">statsmodels linear regression</a></p></li>
+<li><p>sklearn: <a class="reference external" href="https://scikit-learn.org/stable/modules/linear_model.html">scikit-learn</a></p></li>
+</ol>
+<div class="section" id="les-considerations-liste-non-exhaustive">
+<h2><span class="section-number">2.1. </span>Les considérations (liste non exhaustive)<a class="headerlink" href="#les-considerations-liste-non-exhaustive" title="Permalink to this headline">#</a></h2>
+<div class="section" id="valeurs-non-negatives">
+<h3><span class="section-number">2.1.1. </span>Valeurs non négatives<a class="headerlink" href="#valeurs-non-negatives" title="Permalink to this headline">#</a></h3>
+<p>Les coefficients doivent être non négatifs parce qu’ils représentent des quantités physiques ou naturelles non négatives.</p>
+<ol class="arabic simple">
+<li><p>distance</p></li>
+<li><p>fréquentation</p></li>
+<li><p>calibre de substrat</p></li>
+<li><p>situation: degré d’urbanisation</p></li>
+</ol>
+</div>
+<div class="section" id="colinearite-des-variables-independantes">
+<h3><span class="section-number">2.1.2. </span>Colinéarité des variables indépendantes<a class="headerlink" href="#colinearite-des-variables-independantes" title="Permalink to this headline">#</a></h3>
+<p>La multicolinéarité est un problème courant dans l’analyse de régression lorsque les variables indépendantes d’un modèle de régression sont fortement corrélées entre elles. Cela peut créer des problèmes dans l’interprétation du modèle et la stabilité des estimations des coefficients.</p>
+<p><strong>Variables catégorielles ordinales :</strong> Avec les variables catégorielles ordinales (c’est-à-dire les catégories avec un ordre significatif), la multicolinéarité peut se produire si les catégories sont étroitement espacées ou s’il existe une forte corrélation entre la variable ordinale et une autre variable continue ou catégorielle.</p>
+<p>L’utilisation de l’analyes des composantes principale (ACP) avec la régression linéaire peut aider à atténuer la multicolinéarité et à réduire le risque de surajustement lorsque vous avez un grand nombre de caractéristiques corrélées. Toutefois, il est essentiel de trouver un équilibre entre le nombre de composantes principales retenues et la variance qu’elles expliquent, car une réduction trop agressive de la dimensionnalité peut entraîner une perte d’informations et de pouvoir prédictif.</p>
+</div>
+<div class="section" id="variables-categorielles">
+<h3><span class="section-number">2.1.3. </span>Variables catégorielles<a class="headerlink" href="#variables-categorielles" title="Permalink to this headline">#</a></h3>
+<p>L’analyse de régression porte généralement sur des variables dépendantes et indépendantes continues (numériques). Si ces résultats comportent des variables indépendantes catégorielles, il existe des techniques et des modèles spécifiques pour les intégrer dans une analyse de régression. Les variables catégorielles peuvent être nominales (catégories non ordonnées) ou ordinales (catégories ordonnées).</p>
+<p><strong>approches courantes pour incorporer des variables catégorielles dans l’analyse:</strong></p>
+<p><strong>Régression par variable muette :</strong> (variable indicatrice) : Il s’agit de l’approche la plus courante lorsqu’il s’agit de variables catégorielles nominales. Vous créez des variables fictives binaires (0 ou 1) pour représenter les catégories. Pour une variable catégorielle comportant k catégories, vous créez k-1 variables nominales. La catégorie omise sert de catégorie de référence. Chaque variable muette indique si une observation appartient ou non à une catégorie spécifique. Ces variables binaires sont ensuite incluses en tant que variables prédictives dans le modèle de régression.</p>
+<p><strong>Codage de l’effet :</strong> Le codage de l’effet est une alternative au codage muette, et il est utilisé lorsque vous souhaitez comparer chaque catégorie à la moyenne générale. Il crée k-1 variables nominales, mais au lieu de comparer chaque catégorie à une catégorie de référence, il compare chaque catégorie à la moyenne générale.</p>
+<p><strong>Régression ordinale :</strong> Les modèles de régression ordinale s’addresse dans les cas dont les catégories ont un ordre naturel (par exemple, faible, moyen, élevé). Ces modèles tiennent compte de la nature ordinale de la variable et estiment l’impact des catégories sur la variable dépendante en tenant compte de leur ordre.</p>
+</div>
+<div class="section" id="les-donnees">
+<h3><span class="section-number">2.1.4. </span>Les données<a class="headerlink" href="#les-donnees" title="Permalink to this headline">#</a></h3>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
-#T_9e371 tr:nth-child(even) {
+#T_8b0a5 tr:nth-child(even) {
   background-color: rgba(139, 69, 19, 0.08);
 }
-#T_9e371 tr:nth-child(odd) {
+#T_8b0a5 tr:nth-child(odd) {
   background: #FFF;
 }
-#T_9e371 tr {
+#T_8b0a5 tr {
   font-size: 14px;
+  padding: 10px;
 }
-#T_9e371 th:nth-child(1) {
+#T_8b0a5 th:nth-child(1) {
   background-color: #FFF;
 }
-#T_9e371 caption {
+#T_8b0a5 caption {
   caption-side: bottom;
   font-size: 16px;
   text-align: left;
   margin-top: 15px;
 }
 </style>
-<table id="T_9e371">
-  <caption>Les données sont regroupées en deux groupes par échantillon: 1. fibres, 2. fragment.</caption>
+<table id="T_8b0a5">
+  <caption>Les données sont regroupées en deux groupes par échantillon: 1. fibres, 2. fragment. Note: Les résultats sont échelonnés entre 0 et 1 au moment de l'analyse.</caption>
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_9e371_level0_col0" class="col_heading level0 col0" >orientation</th>
-      <th id="T_9e371_level0_col1" class="col_heading level0 col1" >substrat</th>
-      <th id="T_9e371_level0_col2" class="col_heading level0 col2" >frequentation</th>
-      <th id="T_9e371_level0_col3" class="col_heading level0 col3" >situation</th>
-      <th id="T_9e371_level0_col4" class="col_heading level0 col4" >distance</th>
-      <th id="T_9e371_level0_col5" class="col_heading level0 col5" >objet</th>
-      <th id="T_9e371_level0_col6" class="col_heading level0 col6" >compte</th>
+      <th id="T_8b0a5_level0_col0" class="col_heading level0 col0" >echantillon</th>
+      <th id="T_8b0a5_level0_col1" class="col_heading level0 col1" >position</th>
+      <th id="T_8b0a5_level0_col2" class="col_heading level0 col2" >orientation</th>
+      <th id="T_8b0a5_level0_col3" class="col_heading level0 col3" >frequentation</th>
+      <th id="T_8b0a5_level0_col4" class="col_heading level0 col4" >situation</th>
+      <th id="T_8b0a5_level0_col5" class="col_heading level0 col5" >distance</th>
+      <th id="T_8b0a5_level0_col6" class="col_heading level0 col6" >substrat</th>
+      <th id="T_8b0a5_level0_col7" class="col_heading level0 col7" >objet</th>
+      <th id="T_8b0a5_level0_col8" class="col_heading level0 col8" >compte</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_9e371_level0_row0" class="row_heading level0 row0" >0</th>
-      <td id="T_9e371_row0_col0" class="data row0 col0" >NE</td>
-      <td id="T_9e371_row0_col1" class="data row0 col1" >galet</td>
-      <td id="T_9e371_row0_col2" class="data row0 col2" >élévée</td>
-      <td id="T_9e371_row0_col3" class="data row0 col3" >campagne</td>
-      <td id="T_9e371_row0_col4" class="data row0 col4" >< 100m</td>
-      <td id="T_9e371_row0_col5" class="data row0 col5" >fragment</td>
-      <td id="T_9e371_row0_col6" class="data row0 col6" >0.000000</td>
+      <th id="T_8b0a5_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_8b0a5_row0_col0" class="data row0 col0" >74_Amp_1</td>
+      <td id="T_8b0a5_row0_col1" class="data row0 col1" >ligne-d'eau</td>
+      <td id="T_8b0a5_row0_col2" class="data row0 col2" >NE</td>
+      <td id="T_8b0a5_row0_col3" class="data row0 col3" >élévée</td>
+      <td id="T_8b0a5_row0_col4" class="data row0 col4" >campagne</td>
+      <td id="T_8b0a5_row0_col5" class="data row0 col5" >< 100m</td>
+      <td id="T_8b0a5_row0_col6" class="data row0 col6" >galet</td>
+      <td id="T_8b0a5_row0_col7" class="data row0 col7" >fragment</td>
+      <td id="T_8b0a5_row0_col8" class="data row0 col8" >0</td>
     </tr>
     <tr>
-      <th id="T_9e371_level0_row1" class="row_heading level0 row1" >1</th>
-      <td id="T_9e371_row1_col0" class="data row1 col0" >NNE</td>
-      <td id="T_9e371_row1_col1" class="data row1 col1" >galet</td>
-      <td id="T_9e371_row1_col2" class="data row1 col2" >élévée</td>
-      <td id="T_9e371_row1_col3" class="data row1 col3" >campagne</td>
-      <td id="T_9e371_row1_col4" class="data row1 col4" >< 100m</td>
-      <td id="T_9e371_row1_col5" class="data row1 col5" >fragment</td>
-      <td id="T_9e371_row1_col6" class="data row1 col6" >0.024834</td>
+      <th id="T_8b0a5_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_8b0a5_row1_col0" class="data row1 col0" >74_Amp_10</td>
+      <td id="T_8b0a5_row1_col1" class="data row1 col1" >plage-seche</td>
+      <td id="T_8b0a5_row1_col2" class="data row1 col2" >NNE</td>
+      <td id="T_8b0a5_row1_col3" class="data row1 col3" >élévée</td>
+      <td id="T_8b0a5_row1_col4" class="data row1 col4" >campagne</td>
+      <td id="T_8b0a5_row1_col5" class="data row1 col5" >< 100m</td>
+      <td id="T_8b0a5_row1_col6" class="data row1 col6" >galet</td>
+      <td id="T_8b0a5_row1_col7" class="data row1 col7" >fragment</td>
+      <td id="T_8b0a5_row1_col8" class="data row1 col8" >62</td>
     </tr>
     <tr>
-      <th id="T_9e371_level0_row2" class="row_heading level0 row2" >2</th>
-      <td id="T_9e371_row2_col0" class="data row2 col0" >NE</td>
-      <td id="T_9e371_row2_col1" class="data row2 col1" >galet</td>
-      <td id="T_9e371_row2_col2" class="data row2 col2" >élévée</td>
-      <td id="T_9e371_row2_col3" class="data row2 col3" >campagne</td>
-      <td id="T_9e371_row2_col4" class="data row2 col4" >< 100m</td>
-      <td id="T_9e371_row2_col5" class="data row2 col5" >fragment</td>
-      <td id="T_9e371_row2_col6" class="data row2 col6" >0.000000</td>
+      <th id="T_8b0a5_level0_row2" class="row_heading level0 row2" >2</th>
+      <td id="T_8b0a5_row2_col0" class="data row2 col0" >74_Amp_2</td>
+      <td id="T_8b0a5_row2_col1" class="data row2 col1" >ligne-d'eau</td>
+      <td id="T_8b0a5_row2_col2" class="data row2 col2" >NNE</td>
+      <td id="T_8b0a5_row2_col3" class="data row2 col3" >élévée</td>
+      <td id="T_8b0a5_row2_col4" class="data row2 col4" >campagne</td>
+      <td id="T_8b0a5_row2_col5" class="data row2 col5" >< 100m</td>
+      <td id="T_8b0a5_row2_col6" class="data row2 col6" >galet</td>
+      <td id="T_8b0a5_row2_col7" class="data row2 col7" >fragment</td>
+      <td id="T_8b0a5_row2_col8" class="data row2 col8" >15</td>
     </tr>
     <tr>
-      <th id="T_9e371_level0_row3" class="row_heading level0 row3" >3</th>
-      <td id="T_9e371_row3_col0" class="data row3 col0" >NNE</td>
-      <td id="T_9e371_row3_col1" class="data row3 col1" >galet</td>
-      <td id="T_9e371_row3_col2" class="data row3 col2" >élévée</td>
-      <td id="T_9e371_row3_col3" class="data row3 col3" >campagne</td>
-      <td id="T_9e371_row3_col4" class="data row3 col4" >< 100m</td>
-      <td id="T_9e371_row3_col5" class="data row3 col5" >fragment</td>
-      <td id="T_9e371_row3_col6" class="data row3 col6" >0.004967</td>
+      <th id="T_8b0a5_level0_row3" class="row_heading level0 row3" >3</th>
+      <td id="T_8b0a5_row3_col0" class="data row3 col0" >74_Amp_3</td>
+      <td id="T_8b0a5_row3_col1" class="data row3 col1" >ligne-d'eau</td>
+      <td id="T_8b0a5_row3_col2" class="data row3 col2" >NE</td>
+      <td id="T_8b0a5_row3_col3" class="data row3 col3" >élévée</td>
+      <td id="T_8b0a5_row3_col4" class="data row3 col4" >campagne</td>
+      <td id="T_8b0a5_row3_col5" class="data row3 col5" >< 100m</td>
+      <td id="T_8b0a5_row3_col6" class="data row3 col6" >galet</td>
+      <td id="T_8b0a5_row3_col7" class="data row3 col7" >fragment</td>
+      <td id="T_8b0a5_row3_col8" class="data row3 col8" >0</td>
     </tr>
     <tr>
-      <th id="T_9e371_level0_row4" class="row_heading level0 row4" >4</th>
-      <td id="T_9e371_row4_col0" class="data row4 col0" >NNO</td>
-      <td id="T_9e371_row4_col1" class="data row4 col1" >galet</td>
-      <td id="T_9e371_row4_col2" class="data row4 col2" >moyenne</td>
-      <td id="T_9e371_row4_col3" class="data row4 col3" >campagne</td>
-      <td id="T_9e371_row4_col4" class="data row4 col4" >< 100m</td>
-      <td id="T_9e371_row4_col5" class="data row4 col5" >fragment</td>
-      <td id="T_9e371_row4_col6" class="data row4 col6" >0.014901</td>
+      <th id="T_8b0a5_level0_row4" class="row_heading level0 row4" >4</th>
+      <td id="T_8b0a5_row4_col0" class="data row4 col0" >74_Amp_4</td>
+      <td id="T_8b0a5_row4_col1" class="data row4 col1" >ligne-d'eau</td>
+      <td id="T_8b0a5_row4_col2" class="data row4 col2" >NNE</td>
+      <td id="T_8b0a5_row4_col3" class="data row4 col3" >élévée</td>
+      <td id="T_8b0a5_row4_col4" class="data row4 col4" >campagne</td>
+      <td id="T_8b0a5_row4_col5" class="data row4 col5" >< 100m</td>
+      <td id="T_8b0a5_row4_col6" class="data row4 col6" >galet</td>
+      <td id="T_8b0a5_row4_col7" class="data row4 col7" >fragment</td>
+      <td id="T_8b0a5_row4_col8" class="data row4 col8" >3</td>
     </tr>
   </tbody>
 </table>
 </div></div>
 </div>
-<div class="section" id="regression-des-moindres-carres-ordinaires-mco">
-<h3><span class="section-number">2.1.1. </span>Régression des moindres carrés ordinaires (MCO)<a class="headerlink" href="#regression-des-moindres-carres-ordinaires-mco" title="Permalink to this headline">#</a></h3>
-<p><strong>Toutes les variables</strong></p>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html"><table class="simpletable">
-<caption>OLS Regression Results</caption>
-<tr>
-  <th>Dep. Variable:</th>         <td>compte</td>      <th>  R-squared (uncentered):</th>      <td>   0.553</td>
-</tr>
-<tr>
-  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared (uncentered):</th> <td>   0.496</td>
-</tr>
-<tr>
-  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th>          <td>   9.735</td>
-</tr>
-<tr>
-  <th>Date:</th>             <td>Thu, 12 Oct 2023</td> <th>  Prob (F-statistic):</th>          <td>5.78e-23</td>
-</tr>
-<tr>
-  <th>Time:</th>                 <td>09:17:20</td>     <th>  Log-Likelihood:    </th>          <td>  178.31</td>
-</tr>
-<tr>
-  <th>No. Observations:</th>      <td>   222</td>      <th>  AIC:               </th>          <td>  -306.6</td>
-</tr>
-<tr>
-  <th>Df Residuals:</th>          <td>   197</td>      <th>  BIC:               </th>          <td>  -221.6</td>
-</tr>
-<tr>
-  <th>Df Model:</th>              <td>    25</td>      <th>                     </th>              <td> </td>   
-</tr>
-<tr>
-  <th>Covariance Type:</th>      <td>nonrobust</td>    <th>                     </th>              <td> </td>   
-</tr>
-</table>
-<table class="simpletable">
-<tr>
-              <td></td>                <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
-</tr>
-<tr>
-  <th>orientation_ENE</th>          <td>    0.2757</td> <td>    0.082</td> <td>    3.358</td> <td> 0.001</td> <td>    0.114</td> <td>    0.438</td>
-</tr>
-<tr>
-  <th>orientation_ESE</th>          <td>    0.1694</td> <td>    0.113</td> <td>    1.502</td> <td> 0.135</td> <td>   -0.053</td> <td>    0.392</td>
-</tr>
-<tr>
-  <th>orientation_N</th>            <td>    0.1039</td> <td>    0.065</td> <td>    1.587</td> <td> 0.114</td> <td>   -0.025</td> <td>    0.233</td>
-</tr>
-<tr>
-  <th>orientation_NE</th>           <td>    0.1219</td> <td>    0.084</td> <td>    1.456</td> <td> 0.147</td> <td>   -0.043</td> <td>    0.287</td>
-</tr>
-<tr>
-  <th>orientation_NNE</th>          <td>    0.1372</td> <td>    0.074</td> <td>    1.853</td> <td> 0.065</td> <td>   -0.009</td> <td>    0.283</td>
-</tr>
-<tr>
-  <th>orientation_NNO</th>          <td>    0.0742</td> <td>    0.063</td> <td>    1.179</td> <td> 0.240</td> <td>   -0.050</td> <td>    0.198</td>
-</tr>
-<tr>
-  <th>orientation_NO</th>           <td>    0.1901</td> <td>    0.064</td> <td>    2.982</td> <td> 0.003</td> <td>    0.064</td> <td>    0.316</td>
-</tr>
-<tr>
-  <th>orientation_O</th>            <td>    0.1180</td> <td>    0.089</td> <td>    1.319</td> <td> 0.189</td> <td>   -0.058</td> <td>    0.294</td>
-</tr>
-<tr>
-  <th>orientation_ONO</th>          <td>    0.1019</td> <td>    0.093</td> <td>    1.094</td> <td> 0.275</td> <td>   -0.082</td> <td>    0.286</td>
-</tr>
-<tr>
-  <th>orientation_OSO</th>          <td>    0.1409</td> <td>    0.085</td> <td>    1.654</td> <td> 0.100</td> <td>   -0.027</td> <td>    0.309</td>
-</tr>
-<tr>
-  <th>orientation_S</th>            <td>    0.1113</td> <td>    0.078</td> <td>    1.422</td> <td> 0.157</td> <td>   -0.043</td> <td>    0.266</td>
-</tr>
-<tr>
-  <th>orientation_SE</th>           <td>    0.1689</td> <td>    0.061</td> <td>    2.750</td> <td> 0.007</td> <td>    0.048</td> <td>    0.290</td>
-</tr>
-<tr>
-  <th>orientation_SO</th>           <td>    0.1907</td> <td>    0.075</td> <td>    2.534</td> <td> 0.012</td> <td>    0.042</td> <td>    0.339</td>
-</tr>
-<tr>
-  <th>orientation_SSE</th>          <td>    0.0864</td> <td>    0.076</td> <td>    1.133</td> <td> 0.259</td> <td>   -0.064</td> <td>    0.237</td>
-</tr>
-<tr>
-  <th>orientation_SSO</th>          <td>    0.1188</td> <td>    0.076</td> <td>    1.567</td> <td> 0.119</td> <td>   -0.031</td> <td>    0.268</td>
-</tr>
-<tr>
-  <th>substrat_gravier</th>         <td>   -0.0048</td> <td>    0.046</td> <td>   -0.103</td> <td> 0.918</td> <td>   -0.096</td> <td>    0.086</td>
-</tr>
-<tr>
-  <th>substrat_sable fin</th>       <td>    0.0619</td> <td>    0.026</td> <td>    2.381</td> <td> 0.018</td> <td>    0.011</td> <td>    0.113</td>
-</tr>
-<tr>
-  <th>substrat_sable grosssier</th> <td>   -0.0312</td> <td>    0.043</td> <td>   -0.731</td> <td> 0.466</td> <td>   -0.116</td> <td>    0.053</td>
-</tr>
-<tr>
-  <th>frequentation_moyenne</th>    <td>    0.0623</td> <td>    0.051</td> <td>    1.210</td> <td> 0.228</td> <td>   -0.039</td> <td>    0.164</td>
-</tr>
-<tr>
-  <th>frequentation_élévée</th>     <td>   -0.0359</td> <td>    0.069</td> <td>   -0.522</td> <td> 0.602</td> <td>   -0.172</td> <td>    0.100</td>
-</tr>
-<tr>
-  <th>situation_urbain</th>         <td>   -0.0089</td> <td>    0.034</td> <td>   -0.262</td> <td> 0.794</td> <td>   -0.076</td> <td>    0.058</td>
-</tr>
-<tr>
-  <th>distance_500 - 1000m</th>     <td>    0.0185</td> <td>    0.108</td> <td>    0.172</td> <td> 0.864</td> <td>   -0.194</td> <td>    0.231</td>
-</tr>
-<tr>
-  <th>distance_< 100m</th>          <td>    0.0081</td> <td>    0.025</td> <td>    0.330</td> <td> 0.742</td> <td>   -0.040</td> <td>    0.057</td>
-</tr>
-<tr>
-  <th>distance_> 1000m</th>         <td>   -0.0858</td> <td>    0.063</td> <td>   -1.359</td> <td> 0.176</td> <td>   -0.210</td> <td>    0.039</td>
-</tr>
-<tr>
-  <th>objet_fragment</th>           <td>   -0.0930</td> <td>    0.015</td> <td>   -6.030</td> <td> 0.000</td> <td>   -0.123</td> <td>   -0.063</td>
-</tr>
-</table>
-<table class="simpletable">
-<tr>
-  <th>Omnibus:</th>       <td>234.304</td> <th>  Durbin-Watson:     </th> <td>   1.736</td>
-</tr>
-<tr>
-  <th>Prob(Omnibus):</th> <td> 0.000</td>  <th>  Jarque-Bera (JB):  </th> <td>8583.985</td>
-</tr>
-<tr>
-  <th>Skew:</th>          <td> 4.162</td>  <th>  Prob(JB):          </th> <td>    0.00</td>
-</tr>
-<tr>
-  <th>Kurtosis:</th>      <td>32.304</td>  <th>  Cond. No.          </th> <td>    48.2</td>
-</tr>
-</table><br/><br/>Notes:<br/>[1] R² is computed without centering (uncentered) since the model does not contain a constant.<br/>[2] Standard Errors assume that the covariance matrix of the errors is correctly specified.</div></div>
-</div>
-<p><strong>Residuals</strong></p>
-<p>Dans la régression linéaire, un <em>residual</em> est la différence entre la valeur réelle et la valeur prédite par le modèle (y-ŷ) pour un point donné. Un modèle de régression des moindres carrés minimise la somme des carrés des résidus</p>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<img alt="_images/0f8cc1514eaf7b79502dd5bcfa346f13b137249eb4ea3217271a64711337e35f.png" src="_images/0f8cc1514eaf7b79502dd5bcfa346f13b137249eb4ea3217271a64711337e35f.png" />
 </div>
 </div>
-<div class="section" id="qq-plot">
-<h4><span class="section-number">2.1.1.1. </span>QQ plot<a class="headerlink" href="#qq-plot" title="Permalink to this headline">#</a></h4>
-<p>Un graphique q-q est un graphique des quantiles du premier ensemble de données par rapport aux quantiles du second ensemble de données. Par quantile, nous entendons la fraction (ou le pourcentage) de points inférieurs à la valeur donnée. Ainsi, le quantile 0,3 (ou 30 %) est le point auquel 30 % des données sont inférieures et 70 % supérieures à cette valeur.</p>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<img alt="_images/88c57e5384b29f38b039e98e1137eb63b3c7d6d93accaa23e961097cc065d1eb.png" src="_images/88c57e5384b29f38b039e98e1137eb63b3c7d6d93accaa23e961097cc065d1eb.png" />
-</div>
-</div>
-</div>
-<div class="section" id="hsitogram">
-<h4><span class="section-number">2.1.1.2. </span>Hsitogram<a class="headerlink" href="#hsitogram" title="Permalink to this headline">#</a></h4>
-<p>Histogramme des observations par rapport aux prévisions. Résultats limités à &gt; 0</p>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<img alt="_images/320a8b83ed0147aaf455c87fa04c66a132b734cec01a7f8e725c3e468a5f279e.png" src="_images/320a8b83ed0147aaf455c87fa04c66a132b734cec01a7f8e725c3e468a5f279e.png" />
-</div>
-</div>
-</div>
-<div class="section" id="sans-la-variable-d-orientation">
-<h4><span class="section-number">2.1.1.3. </span>Sans la variable d’orientation<a class="headerlink" href="#sans-la-variable-d-orientation" title="Permalink to this headline">#</a></h4>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html"><table class="simpletable">
-<caption>OLS Regression Results</caption>
-<tr>
-  <th>Dep. Variable:</th>         <td>compte</td>      <th>  R-squared (uncentered):</th>      <td>   0.483</td>
-</tr>
-<tr>
-  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared (uncentered):</th> <td>   0.459</td>
-</tr>
-<tr>
-  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th>          <td>   19.80</td>
-</tr>
-<tr>
-  <th>Date:</th>             <td>Thu, 12 Oct 2023</td> <th>  Prob (F-statistic):</th>          <td>1.40e-25</td>
-</tr>
-<tr>
-  <th>Time:</th>                 <td>09:17:20</td>     <th>  Log-Likelihood:    </th>          <td>  162.25</td>
-</tr>
-<tr>
-  <th>No. Observations:</th>      <td>   222</td>      <th>  AIC:               </th>          <td>  -304.5</td>
-</tr>
-<tr>
-  <th>Df Residuals:</th>          <td>   212</td>      <th>  BIC:               </th>          <td>  -270.5</td>
-</tr>
-<tr>
-  <th>Df Model:</th>              <td>    10</td>      <th>                     </th>              <td> </td>   
-</tr>
-<tr>
-  <th>Covariance Type:</th>      <td>nonrobust</td>    <th>                     </th>              <td> </td>   
-</tr>
-</table>
-<table class="simpletable">
-<tr>
-              <td></td>                <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
-</tr>
-<tr>
-  <th>substrat_gravier</th>         <td>    0.0302</td> <td>    0.026</td> <td>    1.160</td> <td> 0.247</td> <td>   -0.021</td> <td>    0.081</td>
-</tr>
-<tr>
-  <th>substrat_sable fin</th>       <td>    0.0893</td> <td>    0.021</td> <td>    4.282</td> <td> 0.000</td> <td>    0.048</td> <td>    0.130</td>
-</tr>
-<tr>
-  <th>substrat_sable grosssier</th> <td>    0.0402</td> <td>    0.031</td> <td>    1.304</td> <td> 0.194</td> <td>   -0.021</td> <td>    0.101</td>
-</tr>
-<tr>
-  <th>frequentation_moyenne</th>    <td>    0.1494</td> <td>    0.023</td> <td>    6.556</td> <td> 0.000</td> <td>    0.105</td> <td>    0.194</td>
-</tr>
-<tr>
-  <th>frequentation_élévée</th>     <td>    0.0907</td> <td>    0.023</td> <td>    3.963</td> <td> 0.000</td> <td>    0.046</td> <td>    0.136</td>
-</tr>
-<tr>
-  <th>situation_urbain</th>         <td>   -0.0335</td> <td>    0.020</td> <td>   -1.708</td> <td> 0.089</td> <td>   -0.072</td> <td>    0.005</td>
-</tr>
-<tr>
-  <th>distance_500 - 1000m</th>     <td>    0.0511</td> <td>    0.069</td> <td>    0.742</td> <td> 0.459</td> <td>   -0.085</td> <td>    0.187</td>
-</tr>
-<tr>
-  <th>distance_< 100m</th>          <td>   -0.0008</td> <td>    0.017</td> <td>   -0.046</td> <td> 0.964</td> <td>   -0.035</td> <td>    0.033</td>
-</tr>
-<tr>
-  <th>distance_> 1000m</th>         <td>    0.0063</td> <td>    0.034</td> <td>    0.188</td> <td> 0.851</td> <td>   -0.060</td> <td>    0.072</td>
-</tr>
-<tr>
-  <th>objet_fragment</th>           <td>   -0.0861</td> <td>    0.016</td> <td>   -5.422</td> <td> 0.000</td> <td>   -0.117</td> <td>   -0.055</td>
-</tr>
-</table>
-<table class="simpletable">
-<tr>
-  <th>Omnibus:</th>       <td>225.668</td> <th>  Durbin-Watson:     </th> <td>   1.684</td>
-</tr>
-<tr>
-  <th>Prob(Omnibus):</th> <td> 0.000</td>  <th>  Jarque-Bera (JB):  </th> <td>6792.683</td>
-</tr>
-<tr>
-  <th>Skew:</th>          <td> 4.003</td>  <th>  Prob(JB):          </th> <td>    0.00</td>
-</tr>
-<tr>
-  <th>Kurtosis:</th>      <td>28.889</td>  <th>  Cond. No.          </th> <td>    11.2</td>
-</tr>
-</table><br/><br/>Notes:<br/>[1] R² is computed without centering (uncentered) since the model does not contain a constant.<br/>[2] Standard Errors assume that the covariance matrix of the errors is correctly specified.</div></div>
-</div>
-</div>
-<div class="section" id="id1">
-<h4><span class="section-number">2.1.1.4. </span>QQ plot<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h4>
-<p>Un graphique q-q est un graphique des quantiles du premier ensemble de données par rapport aux quantiles du second ensemble de données. Par quantile, nous entendons la fraction (ou le pourcentage) de points inférieurs à la valeur donnée. Ainsi, le quantile 0,3 (ou 30 %) est le point auquel 30 % des données sont inférieures et 70 % supérieures à cette valeur.</p>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<img alt="_images/8867669fc9de572695a888db8c78d2932b787f1277be408e9ffa42982f3073df.png" src="_images/8867669fc9de572695a888db8c78d2932b787f1277be408e9ffa42982f3073df.png" />
-</div>
-</div>
-</div>
-<div class="section" id="sans-la-variable-de-frequentation">
-<h4><span class="section-number">2.1.1.5. </span>Sans la variable de frequentation<a class="headerlink" href="#sans-la-variable-de-frequentation" title="Permalink to this headline">#</a></h4>
-<div class="cell tag_hide-input docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
+<div class="section" id="colinearite">
+<h2><span class="section-number">2.2. </span>Colinéarité<a class="headerlink" href="#colinearite" title="Permalink to this headline">#</a></h2>
+<p><strong>Les données sont fournies dans une catégorie ordinale pour la plupart des variables catégorielles.</strong></p>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;orientation&quot;</span><span class="p">,</span> <span class="s2">&quot;substrat&quot;</span><span class="p">,</span> <span class="s2">&quot;situation&quot;</span><span class="p">,</span> <span class="s2">&quot;objet&quot;</span><span class="p">,</span> <span class="s2">&quot;situation&quot;</span><span class="p">,</span> <span class="s2">&quot;distance&quot;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">MinMaxScaler</span>
 
-<span class="c1"># make dumby variables</span>
-<span class="n">x_dum</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">w_d</span><span class="p">[</span><span class="n">x_cols</span><span class="p">],</span> <span class="n">drop_first</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">Y</span> <span class="o">=</span> <span class="n">w_d</span><span class="p">[</span><span class="s2">&quot;compte&quot;</span><span class="p">]</span>
+<span class="n">co_data</span> <span class="o">=</span> <span class="n">w_d</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">encode_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;substrat&#39;</span><span class="p">,</span><span class="s1">&#39;frequentation&#39;</span><span class="p">,</span> <span class="s1">&#39;situation&#39;</span><span class="p">,</span> <span class="s1">&#39;distance&#39;</span><span class="p">,</span> <span class="s1">&#39;orientation&#39;</span><span class="p">]</span>
+<span class="n">x_dum</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">co_data</span><span class="p">[</span><span class="n">encode_cols</span><span class="p">],</span> <span class="n">drop_first</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">model_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">co_data</span><span class="p">[[</span><span class="s1">&#39;echantillon&#39;</span><span class="p">,</span> <span class="s1">&#39;compte&#39;</span><span class="p">]],</span> <span class="n">x_dum</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="n">an_ols</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">x_dum</span><span class="p">)</span>
-<span class="n">ols_fit</span> <span class="o">=</span> <span class="n">an_ols</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
-<span class="n">ols_fit</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+<span class="n">stdsc</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">()</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">model_data</span><span class="p">[</span><span class="n">x_dum</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">model_data</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="o">*</span><span class="n">x_dum</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> <span class="s1">&#39;echantillon&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">y</span><span class="p">[</span><span class="s1">&#39;compte&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">stdsc</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-</details>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># from table A2-2</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">w_d</span><span class="o">.</span><span class="n">substrat</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<span class="n">weights</span> <span class="o">=</span> <span class="p">[{</span><span class="n">x</span><span class="p">:</span><span class="n">f</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">/</span><span class="n">f</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">f</span><span class="o">.</span><span class="n">index</span><span class="p">}]</span>
+<span class="n">weights</span>
+</pre></div>
+</div>
+</div>
 <div class="cell_output docutils container">
-<div class="output text_html"><table class="simpletable">
-<caption>OLS Regression Results</caption>
-<tr>
-  <th>Dep. Variable:</th>         <td>compte</td>      <th>  R-squared (uncentered):</th>      <td>   0.537</td>
-</tr>
-<tr>
-  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared (uncentered):</th> <td>   0.483</td>
-</tr>
-<tr>
-  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th>          <td>   10.02</td>
-</tr>
-<tr>
-  <th>Date:</th>             <td>Thu, 12 Oct 2023</td> <th>  Prob (F-statistic):</th>          <td>1.32e-22</td>
-</tr>
-<tr>
-  <th>Time:</th>                 <td>09:17:20</td>     <th>  Log-Likelihood:    </th>          <td>  174.40</td>
-</tr>
-<tr>
-  <th>No. Observations:</th>      <td>   222</td>      <th>  AIC:               </th>          <td>  -302.8</td>
-</tr>
-<tr>
-  <th>Df Residuals:</th>          <td>   199</td>      <th>  BIC:               </th>          <td>  -224.5</td>
-</tr>
-<tr>
-  <th>Df Model:</th>              <td>    23</td>      <th>                     </th>              <td> </td>   
-</tr>
-<tr>
-  <th>Covariance Type:</th>      <td>nonrobust</td>    <th>                     </th>              <td> </td>   
-</tr>
-</table>
-<table class="simpletable">
-<tr>
-              <td></td>                <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
-</tr>
-<tr>
-  <th>orientation_ENE</th>          <td>    0.2373</td> <td>    0.079</td> <td>    3.010</td> <td> 0.003</td> <td>    0.082</td> <td>    0.393</td>
-</tr>
-<tr>
-  <th>orientation_ESE</th>          <td>    0.0883</td> <td>    0.060</td> <td>    1.462</td> <td> 0.145</td> <td>   -0.031</td> <td>    0.208</td>
-</tr>
-<tr>
-  <th>orientation_N</th>            <td>    0.1302</td> <td>    0.041</td> <td>    3.213</td> <td> 0.002</td> <td>    0.050</td> <td>    0.210</td>
-</tr>
-<tr>
-  <th>orientation_NE</th>           <td>    0.0799</td> <td>    0.040</td> <td>    2.009</td> <td> 0.046</td> <td>    0.001</td> <td>    0.158</td>
-</tr>
-<tr>
-  <th>orientation_NNE</th>          <td>    0.1324</td> <td>    0.046</td> <td>    2.902</td> <td> 0.004</td> <td>    0.042</td> <td>    0.222</td>
-</tr>
-<tr>
-  <th>orientation_NNO</th>          <td>    0.1327</td> <td>    0.038</td> <td>    3.455</td> <td> 0.001</td> <td>    0.057</td> <td>    0.208</td>
-</tr>
-<tr>
-  <th>orientation_NO</th>           <td>    0.2123</td> <td>    0.032</td> <td>    6.617</td> <td> 0.000</td> <td>    0.149</td> <td>    0.276</td>
-</tr>
-<tr>
-  <th>orientation_O</th>            <td>    0.0822</td> <td>    0.049</td> <td>    1.680</td> <td> 0.094</td> <td>   -0.014</td> <td>    0.179</td>
-</tr>
-<tr>
-  <th>orientation_ONO</th>          <td>    0.0673</td> <td>    0.055</td> <td>    1.229</td> <td> 0.221</td> <td>   -0.041</td> <td>    0.175</td>
-</tr>
-<tr>
-  <th>orientation_OSO</th>          <td>    0.1034</td> <td>    0.040</td> <td>    2.597</td> <td> 0.010</td> <td>    0.025</td> <td>    0.182</td>
-</tr>
-<tr>
-  <th>orientation_S</th>            <td>    0.1113</td> <td>    0.054</td> <td>    2.072</td> <td> 0.040</td> <td>    0.005</td> <td>    0.217</td>
-</tr>
-<tr>
-  <th>orientation_SE</th>           <td>    0.1548</td> <td>    0.048</td> <td>    3.254</td> <td> 0.001</td> <td>    0.061</td> <td>    0.249</td>
-</tr>
-<tr>
-  <th>orientation_SO</th>           <td>    0.1596</td> <td>    0.034</td> <td>    4.657</td> <td> 0.000</td> <td>    0.092</td> <td>    0.227</td>
-</tr>
-<tr>
-  <th>orientation_SSE</th>          <td>    0.0890</td> <td>    0.048</td> <td>    1.856</td> <td> 0.065</td> <td>   -0.006</td> <td>    0.183</td>
-</tr>
-<tr>
-  <th>orientation_SSO</th>          <td>    0.1165</td> <td>    0.055</td> <td>    2.124</td> <td> 0.035</td> <td>    0.008</td> <td>    0.225</td>
-</tr>
-<tr>
-  <th>substrat_gravier</th>         <td>    0.0394</td> <td>    0.037</td> <td>    1.080</td> <td> 0.281</td> <td>   -0.033</td> <td>    0.111</td>
-</tr>
-<tr>
-  <th>substrat_sable fin</th>       <td>    0.0641</td> <td>    0.026</td> <td>    2.485</td> <td> 0.014</td> <td>    0.013</td> <td>    0.115</td>
-</tr>
-<tr>
-  <th>substrat_sable grosssier</th> <td>   -0.0805</td> <td>    0.037</td> <td>   -2.177</td> <td> 0.031</td> <td>   -0.153</td> <td>   -0.008</td>
-</tr>
-<tr>
-  <th>situation_urbain</th>         <td>   -0.0240</td> <td>    0.013</td> <td>   -1.811</td> <td> 0.072</td> <td>   -0.050</td> <td>    0.002</td>
-</tr>
-<tr>
-  <th>objet_fragment</th>           <td>   -0.0911</td> <td>    0.016</td> <td>   -5.842</td> <td> 0.000</td> <td>   -0.122</td> <td>   -0.060</td>
-</tr>
-<tr>
-  <th>situation_urbain</th>         <td>   -0.0240</td> <td>    0.013</td> <td>   -1.811</td> <td> 0.072</td> <td>   -0.050</td> <td>    0.002</td>
-</tr>
-<tr>
-  <th>distance_500 - 1000m</th>     <td>    0.0719</td> <td>    0.075</td> <td>    0.962</td> <td> 0.337</td> <td>   -0.075</td> <td>    0.219</td>
-</tr>
-<tr>
-  <th>distance_< 100m</th>          <td>    0.0114</td> <td>    0.025</td> <td>    0.458</td> <td> 0.648</td> <td>   -0.038</td> <td>    0.061</td>
-</tr>
-<tr>
-  <th>distance_> 1000m</th>         <td>    0.0010</td> <td>    0.042</td> <td>    0.024</td> <td> 0.981</td> <td>   -0.083</td> <td>    0.085</td>
-</tr>
-</table>
-<table class="simpletable">
-<tr>
-  <th>Omnibus:</th>       <td>229.463</td> <th>  Durbin-Watson:     </th> <td>   1.671</td>
-</tr>
-<tr>
-  <th>Prob(Omnibus):</th> <td> 0.000</td>  <th>  Jarque-Bera (JB):  </th> <td>7584.568</td>
-</tr>
-<tr>
-  <th>Skew:</th>          <td> 4.068</td>  <th>  Prob(JB):          </th> <td>    0.00</td>
-</tr>
-<tr>
-  <th>Kurtosis:</th>      <td>30.454</td>  <th>  Cond. No.          </th> <td>5.75e+16</td>
-</tr>
-</table><br/><br/>Notes:<br/>[1] R² is computed without centering (uncentered) since the model does not contain a constant.<br/>[2] Standard Errors assume that the covariance matrix of the errors is correctly specified.<br/>[3] The smallest eigenvalue is 8.59e-32. This might indicate that there are<br/>strong multicollinearity problems or that the design matrix is singular.</div></div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[{&#39;sable fin&#39;: 0.5253456221198156,
+  &#39;galet&#39;: 0.2119815668202765,
+  &#39;gravier&#39;: 0.1336405529953917,
+  &#39;sable grosssier&#39;: 0.12903225806451613}]
+</pre></div>
 </div>
 </div>
-<div class="section" id="id2">
-<h4><span class="section-number">2.1.1.6. </span>QQ plot<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h4>
-<p>Un graphique q-q est un graphique des quantiles du premier ensemble de données par rapport aux quantiles du second ensemble de données. Par quantile, nous entendons la fraction (ou le pourcentage) de points inférieurs à la valeur donnée. Ainsi, le quantile 0,3 (ou 30 %) est le point auquel 30 % des données sont inférieures et 70 % supérieures à cette valeur.</p>
-<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">use</span> <span class="ow">in</span> <span class="n">encode_cols</span><span class="p">:</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">co_data</span><span class="p">[(</span><span class="n">co_data</span><span class="o">.</span><span class="n">substrat</span> <span class="o">==</span> <span class="s1">&#39;sable fin&#39;</span><span class="p">)]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">use</span><span class="p">)</span><span class="o">.</span><span class="n">echantillon</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+    
+    <span class="n">t</span> <span class="o">=</span> <span class="n">co_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">use</span><span class="p">)</span><span class="o">.</span><span class="n">echantillon</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+    <span class="c1"># print(t.sum())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">n</span><span class="o">/</span><span class="n">t</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 <div class="cell_output docutils container">
-<img alt="_images/9182f5c16af3b5f3025e2b3f1836e20772e4e879ae19c603f01701606de6dafd.png" src="_images/9182f5c16af3b5f3025e2b3f1836e20772e4e879ae19c603f01701606de6dafd.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>substrat
+sable fin    0.525346
+Name: echantillon, dtype: float64
+
+frequentation
+moyenne    0.027650
+élévée     0.497696
+Name: echantillon, dtype: float64
+
+situation
+campagne    0.317972
+urbain      0.207373
+Name: echantillon, dtype: float64
+
+distance
+100 - 500m    0.299539
+&lt; 100m        0.225806
+Name: echantillon, dtype: float64
+
+orientation
+N      0.036866
+NE     0.129032
+NNE    0.013825
+NO     0.027650
+O      0.027650
+ONO    0.018433
+OSO    0.009217
+S      0.064516
+SO     0.142857
+SSE    0.023041
+SSO    0.032258
+Name: echantillon, dtype: float64
+</pre></div>
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;substrat_galet&#39;</span><span class="p">,</span> <span class="s1">&#39;substrat_gravier&#39;</span><span class="p">,</span> <span class="s1">&#39;substrat_sable fin&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;substrat_sable grosssier&#39;</span><span class="p">,</span> <span class="s1">&#39;frequentation_faible&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;frequentation_moyenne&#39;</span><span class="p">,</span> <span class="s1">&#39;frequentation_élévée&#39;</span><span class="p">,</span> <span class="s1">&#39;situation_campagne&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;situation_urbain&#39;</span><span class="p">,</span> <span class="s1">&#39;distance_100 - 500m&#39;</span><span class="p">,</span> <span class="s1">&#39;distance_500 - 1000m&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;distance_&lt; 100m&#39;</span><span class="p">,</span> <span class="s1">&#39;distance_&gt; 1000m&#39;</span><span class="p">]</span>
+
+
+<span class="n">correlate_columns</span> <span class="o">=</span> <span class="n">model_data</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
+<span class="n">cor_matrix</span> <span class="o">=</span> <span class="n">model_data</span><span class="p">[</span><span class="n">correlate_columns</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+<span class="n">heatmap_data</span> <span class="o">=</span> <span class="n">cor_matrix</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">usage</span><span class="p">,</span> <span class="n">usage</span><span class="p">]</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">heatmap_data</span><span class="p">,</span> <span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
 </div>
 </div>
-<div class="section" id="plage-seche">
-<h2><span class="section-number">2.2. </span>Plage seche<a class="headerlink" href="#plage-seche" title="Permalink to this headline">#</a></h2>
-<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><style type="text/css">
-#T_9b84a tr:nth-child(even) {
-  background-color: rgba(139, 69, 19, 0.08);
-}
-#T_9b84a tr:nth-child(odd) {
-  background: #FFF;
-}
-#T_9b84a tr {
-  font-size: 14px;
-}
-#T_9b84a th:nth-child(1) {
-  background-color: #FFF;
-}
-#T_9b84a caption {
-  caption-side: bottom;
-  font-size: 16px;
-  text-align: left;
-  margin-top: 15px;
-}
+<img alt="_images/3bc3b471d7d639227a971006e93e31bcaf1793e7d76c836cb8ebd236b11996da.png" src="_images/3bc3b471d7d639227a971006e93e31bcaf1793e7d76c836cb8ebd236b11996da.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">orientation</span>  <span class="o">=</span>  <span class="p">[</span><span class="s1">&#39;orientation_E&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;orientation_ENE&#39;</span><span class="p">,</span> <span class="s1">&#39;orientation_ESE&#39;</span><span class="p">,</span> <span class="s1">&#39;orientation_N&#39;</span><span class="p">,</span> <span class="s1">&#39;orientation_NE&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;orientation_NNE&#39;</span><span class="p">,</span> <span class="s1">&#39;orientation_NNO&#39;</span><span class="p">,</span> <span class="s1">&#39;orientation_NO&#39;</span><span class="p">,</span> <span class="s1">&#39;orientation_O&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;orientation_ONO&#39;</span><span class="p">,</span> <span class="s1">&#39;orientation_OSO&#39;</span><span class="p">,</span> <span class="s1">&#39;orientation_S&#39;</span><span class="p">,</span> <span class="s1">&#39;orientation_SE&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;orientation_SO&#39;</span><span class="p">,</span> <span class="s1">&#39;orientation_SSE&#39;</span><span class="p">,</span> <span class="s1">&#39;orientation_SSO&#39;</span><span class="p">]</span>
+
+<span class="n">heatmap_data</span> <span class="o">=</span> <span class="n">cor_matrix</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">usage</span><span class="p">,</span> <span class="n">orientation</span><span class="p">]</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">heatmap_data</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/c64e0f9d95469d4f6c10b9de8a9f46a7ee6812bb242faa333ec76994eb37376f.png" src="_images/c64e0f9d95469d4f6c10b9de8a9f46a7ee6812bb242faa333ec76994eb37376f.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create an empty DataFrame to store p-values</span>
+<span class="n">p_values</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">cor_matrix</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">cor_matrix</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+
+<span class="c1"># Loop through the columns and rows of the correlation matrix</span>
+<span class="k">for</span> <span class="n">col1</span> <span class="ow">in</span> <span class="n">cor_matrix</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">col2</span> <span class="ow">in</span> <span class="n">cor_matrix</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">col1</span> <span class="o">!=</span> <span class="n">col2</span><span class="p">:</span>
+            <span class="c1"># Calculate the Pearson correlation coefficient and its p-value</span>
+            <span class="n">corr</span><span class="p">,</span> <span class="n">p_value</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">pearsonr</span><span class="p">(</span><span class="n">model_data</span><span class="p">[</span><span class="n">col1</span><span class="p">],</span> <span class="n">model_data</span><span class="p">[</span><span class="n">col2</span><span class="p">])</span>
+            <span class="n">p_values</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">col1</span><span class="p">,</span> <span class="n">col2</span><span class="p">]</span> <span class="o">=</span> <span class="n">p_value</span>
+
+
+<span class="n">p_mask</span> <span class="o">=</span> <span class="n">p_values</span> <span class="o">&lt;=</span> <span class="mf">0.05</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">p_mask</span><span class="p">[</span><span class="s1">&#39;substrat_sable fin&#39;</span><span class="p">],</span> <span class="n">cor_matrix</span><span class="p">[</span><span class="s1">&#39;substrat_sable fin&#39;</span><span class="p">]],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
 </style>
-<table id="T_9b84a">
-  <caption>Les données sont regroupées en deux groupes par échantillon: 1. fibres, 2. fragment.</caption>
+<table border="1" class="dataframe">
   <thead>
-    <tr>
-      <th class="blank level0" >&nbsp;</th>
-      <th id="T_9b84a_level0_col0" class="col_heading level0 col0" >orientation</th>
-      <th id="T_9b84a_level0_col1" class="col_heading level0 col1" >substrat</th>
-      <th id="T_9b84a_level0_col2" class="col_heading level0 col2" >frequentation</th>
-      <th id="T_9b84a_level0_col3" class="col_heading level0 col3" >situation</th>
-      <th id="T_9b84a_level0_col4" class="col_heading level0 col4" >distance</th>
-      <th id="T_9b84a_level0_col5" class="col_heading level0 col5" >objet</th>
-      <th id="T_9b84a_level0_col6" class="col_heading level0 col6" >compte</th>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>substrat_sable fin</th>
+      <th>substrat_sable fin</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_9b84a_level0_row0" class="row_heading level0 row0" >0</th>
-      <td id="T_9b84a_row0_col0" class="data row0 col0" >NNE</td>
-      <td id="T_9b84a_row0_col1" class="data row0 col1" >galet</td>
-      <td id="T_9b84a_row0_col2" class="data row0 col2" >élévée</td>
-      <td id="T_9b84a_row0_col3" class="data row0 col3" >campagne</td>
-      <td id="T_9b84a_row0_col4" class="data row0 col4" >< 100m</td>
-      <td id="T_9b84a_row0_col5" class="data row0 col5" >fragment</td>
-      <td id="T_9b84a_row0_col6" class="data row0 col6" >0.023911</td>
+      <th>substrat_galet</th>
+      <td>True</td>
+      <td>-0.545651</td>
     </tr>
     <tr>
-      <th id="T_9b84a_level0_row1" class="row_heading level0 row1" >1</th>
-      <td id="T_9b84a_row1_col0" class="data row1 col0" >NE</td>
-      <td id="T_9b84a_row1_col1" class="data row1 col1" >galet</td>
-      <td id="T_9b84a_row1_col2" class="data row1 col2" >élévée</td>
-      <td id="T_9b84a_row1_col3" class="data row1 col3" >campagne</td>
-      <td id="T_9b84a_row1_col4" class="data row1 col4" >< 100m</td>
-      <td id="T_9b84a_row1_col5" class="data row1 col5" >fragment</td>
-      <td id="T_9b84a_row1_col6" class="data row1 col6" >0.005013</td>
+      <th>substrat_gravier</th>
+      <td>True</td>
+      <td>-0.413194</td>
     </tr>
     <tr>
-      <th id="T_9b84a_level0_row2" class="row_heading level0 row2" >2</th>
-      <td id="T_9b84a_row2_col0" class="data row2 col0" >NE</td>
-      <td id="T_9b84a_row2_col1" class="data row2 col1" >galet</td>
-      <td id="T_9b84a_row2_col2" class="data row2 col2" >élévée</td>
-      <td id="T_9b84a_row2_col3" class="data row2 col3" >campagne</td>
-      <td id="T_9b84a_row2_col4" class="data row2 col4" >< 100m</td>
-      <td id="T_9b84a_row2_col5" class="data row2 col5" >fragment</td>
-      <td id="T_9b84a_row2_col6" class="data row2 col6" >0.008099</td>
+      <th>substrat_sable fin</th>
+      <td>False</td>
+      <td>1.000000</td>
     </tr>
     <tr>
-      <th id="T_9b84a_level0_row3" class="row_heading level0 row3" >3</th>
-      <td id="T_9b84a_row3_col0" class="data row3 col0" >NE</td>
-      <td id="T_9b84a_row3_col1" class="data row3 col1" >galet</td>
-      <td id="T_9b84a_row3_col2" class="data row3 col2" >élévée</td>
-      <td id="T_9b84a_row3_col3" class="data row3 col3" >campagne</td>
-      <td id="T_9b84a_row3_col4" class="data row3 col4" >< 100m</td>
-      <td id="T_9b84a_row3_col5" class="data row3 col5" >fragment</td>
-      <td id="T_9b84a_row3_col6" class="data row3 col6" >0.004242</td>
+      <th>substrat_sable grosssier</th>
+      <td>True</td>
+      <td>-0.404932</td>
     </tr>
     <tr>
-      <th id="T_9b84a_level0_row4" class="row_heading level0 row4" >4</th>
-      <td id="T_9b84a_row4_col0" class="data row4 col0" >NNE</td>
-      <td id="T_9b84a_row4_col1" class="data row4 col1" >galet</td>
-      <td id="T_9b84a_row4_col2" class="data row4 col2" >élévée</td>
-      <td id="T_9b84a_row4_col3" class="data row4 col3" >campagne</td>
-      <td id="T_9b84a_row4_col4" class="data row4 col4" >< 100m</td>
-      <td id="T_9b84a_row4_col5" class="data row4 col5" >fragment</td>
-      <td id="T_9b84a_row4_col6" class="data row4 col6" >0.001928</td>
+      <th>frequentation_faible</th>
+      <td>True</td>
+      <td>-0.205829</td>
+    </tr>
+    <tr>
+      <th>frequentation_moyenne</th>
+      <td>True</td>
+      <td>-0.329746</td>
+    </tr>
+    <tr>
+      <th>frequentation_élévée</th>
+      <td>True</td>
+      <td>0.401541</td>
+    </tr>
+    <tr>
+      <th>situation_campagne</th>
+      <td>False</td>
+      <td>-0.087728</td>
+    </tr>
+    <tr>
+      <th>situation_urbain</th>
+      <td>False</td>
+      <td>0.087728</td>
+    </tr>
+    <tr>
+      <th>distance_100 - 500m</th>
+      <td>True</td>
+      <td>0.133124</td>
+    </tr>
+    <tr>
+      <th>distance_500 - 1000m</th>
+      <td>True</td>
+      <td>-0.101468</td>
+    </tr>
+    <tr>
+      <th>distance_&lt; 100m</th>
+      <td>False</td>
+      <td>0.002664</td>
+    </tr>
+    <tr>
+      <th>distance_&gt; 1000m</th>
+      <td>True</td>
+      <td>-0.254535</td>
+    </tr>
+    <tr>
+      <th>orientation_E</th>
+      <td>False</td>
+      <td>-0.071583</td>
+    </tr>
+    <tr>
+      <th>orientation_ENE</th>
+      <td>True</td>
+      <td>-0.101468</td>
+    </tr>
+    <tr>
+      <th>orientation_ESE</th>
+      <td>True</td>
+      <td>-0.144170</td>
+    </tr>
+    <tr>
+      <th>orientation_N</th>
+      <td>False</td>
+      <td>0.024235</td>
+    </tr>
+    <tr>
+      <th>orientation_NE</th>
+      <td>True</td>
+      <td>0.138644</td>
+    </tr>
+    <tr>
+      <th>orientation_NNE</th>
+      <td>False</td>
+      <td>-0.079985</td>
+    </tr>
+    <tr>
+      <th>orientation_NNO</th>
+      <td>True</td>
+      <td>-0.231232</td>
+    </tr>
+    <tr>
+      <th>orientation_NO</th>
+      <td>True</td>
+      <td>-0.206196</td>
+    </tr>
+    <tr>
+      <th>orientation_O</th>
+      <td>True</td>
+      <td>0.121311</td>
+    </tr>
+    <tr>
+      <th>orientation_ONO</th>
+      <td>False</td>
+      <td>0.047723</td>
+    </tr>
+    <tr>
+      <th>orientation_OSO</th>
+      <td>True</td>
+      <td>-0.226196</td>
+    </tr>
+    <tr>
+      <th>orientation_S</th>
+      <td>True</td>
+      <td>0.197556</td>
+    </tr>
+    <tr>
+      <th>orientation_SE</th>
+      <td>True</td>
+      <td>-0.192076</td>
+    </tr>
+    <tr>
+      <th>orientation_SO</th>
+      <td>True</td>
+      <td>0.333550</td>
+    </tr>
+    <tr>
+      <th>orientation_SSE</th>
+      <td>False</td>
+      <td>-0.032763</td>
+    </tr>
+    <tr>
+      <th>orientation_SSO</th>
+      <td>False</td>
+      <td>0.006630</td>
     </tr>
   </tbody>
 </table>
-</div></div>
+</div></div></div>
 </div>
-<div class="section" id="id3">
-<h3><span class="section-number">2.2.1. </span>Régression des moindres carrés ordinaires (MCO)<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
-<p><strong>Toutes les variables</strong></p>
-<div class="cell tag_remove-input docutils container">
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">Pipeline</span>
+<span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span>
+<span class="kn">from</span> <span class="nn">sklearn.compose</span> <span class="kn">import</span> <span class="n">ColumnTransformer</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">MinMaxScaler</span><span class="p">,</span> <span class="n">OneHotEncoder</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">cross_validate</span>
+
+
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span><span class="p">,</span> <span class="n">OneHotEncoder</span>
+<span class="n">categorical_features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;orientation&#39;</span><span class="p">,</span> <span class="s1">&#39;frequentation&#39;</span><span class="p">,</span> <span class="s1">&#39;situation&#39;</span><span class="p">,</span> <span class="s1">&#39;distance&#39;</span><span class="p">,</span> <span class="s1">&#39;objet&#39;</span><span class="p">]</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">w_d</span><span class="p">[[</span><span class="o">*</span><span class="n">categorical_features</span><span class="p">]]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">w_d</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">w_d</span><span class="o">.</span><span class="n">columns</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">123</span><span class="p">)</span>
+
+<span class="c1"># transformer for categorical features</span>
+<span class="n">categorical_features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;orientation&#39;</span><span class="p">,</span> <span class="s1">&#39;frequentation&#39;</span><span class="p">,</span> <span class="s1">&#39;situation&#39;</span><span class="p">,</span> <span class="s1">&#39;distance&#39;</span><span class="p">,</span> <span class="s1">&#39;objet&#39;</span><span class="p">]</span>
+<span class="n">numeric_features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;compte&#39;</span><span class="p">]</span>
+<span class="n">categorical_transformer</span> <span class="o">=</span>  <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">handle_unknown</span> <span class="o">=</span> <span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+
+<span class="c1"># transformer for numerical features</span>
+<span class="n">numeric_transformer</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
+
+<span class="n">preprocessor</span> <span class="o">=</span> <span class="n">ColumnTransformer</span><span class="p">(</span>
+    <span class="p">[</span>
+        <span class="p">(</span><span class="s1">&#39;one-hot-encoder&#39;</span><span class="p">,</span> <span class="n">categorical_transformer</span><span class="p">,</span> <span class="n">categorical_features</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;standard_scaler&#39;</span><span class="p">,</span> <span class="n">numeric_transformer</span><span class="p">,</span> <span class="n">numeric_features</span><span class="p">)</span>
+    <span class="p">],</span>
+    <span class="n">remainder</span> <span class="o">=</span> <span class="s1">&#39;drop&#39;</span>
+<span class="p">)</span>
+
+<span class="n">pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span>
+    <span class="p">[</span>
+        <span class="p">(</span><span class="s1">&#39;preprocessing&#39;</span><span class="p">,</span> <span class="n">preprocessor</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;clf&#39;</span><span class="p">,</span> <span class="n">LinearRegression</span><span class="p">())</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">make_pipeline</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">make_pipeline</span><span class="p">(</span><span class="n">preprocessor</span><span class="p">,</span> <span class="n">LinearRegression</span><span class="p">())</span>
+<span class="n">model</span>
+</pre></div>
+</div>
+</div>
 <div class="cell_output docutils container">
-<div class="output text_html"><table class="simpletable">
-<caption>OLS Regression Results</caption>
-<tr>
-  <th>Dep. Variable:</th>         <td>compte</td>      <th>  R-squared (uncentered):</th>      <td>   0.542</td>
-</tr>
-<tr>
-  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared (uncentered):</th> <td>   0.489</td>
-</tr>
-<tr>
-  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th>          <td>   10.21</td>
-</tr>
-<tr>
-  <th>Date:</th>             <td>Thu, 12 Oct 2023</td> <th>  Prob (F-statistic):</th>          <td>4.32e-22</td>
-</tr>
-<tr>
-  <th>Time:</th>                 <td>09:18:12</td>     <th>  Log-Likelihood:    </th>          <td>  274.35</td>
-</tr>
-<tr>
-  <th>No. Observations:</th>      <td>   212</td>      <th>  AIC:               </th>          <td>  -504.7</td>
-</tr>
-<tr>
-  <th>Df Residuals:</th>          <td>   190</td>      <th>  BIC:               </th>          <td>  -430.9</td>
-</tr>
-<tr>
-  <th>Df Model:</th>              <td>    22</td>      <th>                     </th>              <td> </td>   
-</tr>
-<tr>
-  <th>Covariance Type:</th>      <td>nonrobust</td>    <th>                     </th>              <td> </td>   
-</tr>
-</table>
-<table class="simpletable">
-<tr>
-              <td></td>                <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
-</tr>
-<tr>
-  <th>orientation_N</th>            <td>    0.0086</td> <td>    0.049</td> <td>    0.176</td> <td> 0.860</td> <td>   -0.087</td> <td>    0.104</td>
-</tr>
-<tr>
-  <th>orientation_NE</th>           <td>    0.0369</td> <td>    0.046</td> <td>    0.805</td> <td> 0.422</td> <td>   -0.054</td> <td>    0.127</td>
-</tr>
-<tr>
-  <th>orientation_NNE</th>          <td>    0.0218</td> <td>    0.048</td> <td>    0.452</td> <td> 0.652</td> <td>   -0.073</td> <td>    0.117</td>
-</tr>
-<tr>
-  <th>orientation_NNO</th>          <td>   -0.0689</td> <td>    0.066</td> <td>   -1.038</td> <td> 0.301</td> <td>   -0.200</td> <td>    0.062</td>
-</tr>
-<tr>
-  <th>orientation_NO</th>           <td>    0.0110</td> <td>    0.055</td> <td>    0.201</td> <td> 0.841</td> <td>   -0.097</td> <td>    0.119</td>
-</tr>
-<tr>
-  <th>orientation_O</th>            <td>    0.0656</td> <td>    0.048</td> <td>    1.368</td> <td> 0.173</td> <td>   -0.029</td> <td>    0.160</td>
-</tr>
-<tr>
-  <th>orientation_ONO</th>          <td>    0.0016</td> <td>    0.049</td> <td>    0.033</td> <td> 0.974</td> <td>   -0.096</td> <td>    0.099</td>
-</tr>
-<tr>
-  <th>orientation_OSO</th>          <td>   -0.0816</td> <td>    0.049</td> <td>   -1.673</td> <td> 0.096</td> <td>   -0.178</td> <td>    0.015</td>
-</tr>
-<tr>
-  <th>orientation_S</th>            <td>    0.0601</td> <td>    0.054</td> <td>    1.105</td> <td> 0.271</td> <td>   -0.047</td> <td>    0.167</td>
-</tr>
-<tr>
-  <th>orientation_SE</th>           <td>    0.0228</td> <td>    0.068</td> <td>    0.336</td> <td> 0.738</td> <td>   -0.111</td> <td>    0.157</td>
-</tr>
-<tr>
-  <th>orientation_SO</th>           <td>    0.0248</td> <td>    0.039</td> <td>    0.632</td> <td> 0.528</td> <td>   -0.053</td> <td>    0.102</td>
-</tr>
-<tr>
-  <th>orientation_SSE</th>          <td>   -0.0105</td> <td>    0.059</td> <td>   -0.177</td> <td> 0.860</td> <td>   -0.128</td> <td>    0.107</td>
-</tr>
-<tr>
-  <th>orientation_SSO</th>          <td>    0.0241</td> <td>    0.062</td> <td>    0.386</td> <td> 0.700</td> <td>   -0.099</td> <td>    0.147</td>
-</tr>
-<tr>
-  <th>substrat_gravier</th>         <td>    0.1321</td> <td>    0.027</td> <td>    4.805</td> <td> 0.000</td> <td>    0.078</td> <td>    0.186</td>
-</tr>
-<tr>
-  <th>substrat_sable fin</th>       <td>   -0.0053</td> <td>    0.023</td> <td>   -0.228</td> <td> 0.820</td> <td>   -0.051</td> <td>    0.041</td>
-</tr>
-<tr>
-  <th>substrat_sable grosssier</th> <td>    0.0243</td> <td>    0.042</td> <td>    0.583</td> <td> 0.561</td> <td>   -0.058</td> <td>    0.106</td>
-</tr>
-<tr>
-  <th>frequentation_moyenne</th>    <td>    0.1376</td> <td>    0.051</td> <td>    2.719</td> <td> 0.007</td> <td>    0.038</td> <td>    0.237</td>
-</tr>
-<tr>
-  <th>frequentation_élévée</th>     <td>    0.0363</td> <td>    0.038</td> <td>    0.952</td> <td> 0.342</td> <td>   -0.039</td> <td>    0.112</td>
-</tr>
-<tr>
-  <th>situation_urbain</th>         <td>    0.0020</td> <td>    0.021</td> <td>    0.096</td> <td> 0.924</td> <td>   -0.039</td> <td>    0.043</td>
-</tr>
-<tr>
-  <th>distance_< 100m</th>          <td>   -0.0079</td> <td>    0.019</td> <td>   -0.422</td> <td> 0.673</td> <td>   -0.045</td> <td>    0.029</td>
-</tr>
-<tr>
-  <th>distance_> 1000m</th>         <td>   -0.0279</td> <td>    0.050</td> <td>   -0.556</td> <td> 0.579</td> <td>   -0.127</td> <td>    0.071</td>
-</tr>
-<tr>
-  <th>objet_fragment</th>           <td>   -0.0548</td> <td>    0.010</td> <td>   -5.705</td> <td> 0.000</td> <td>   -0.074</td> <td>   -0.036</td>
-</tr>
-</table>
-<table class="simpletable">
-<tr>
-  <th>Omnibus:</th>       <td>268.407</td> <th>  Durbin-Watson:     </th> <td>   2.110</td> 
-</tr>
-<tr>
-  <th>Prob(Omnibus):</th> <td> 0.000</td>  <th>  Jarque-Bera (JB):  </th> <td>23582.024</td>
-</tr>
-<tr>
-  <th>Skew:</th>          <td> 5.152</td>  <th>  Prob(JB):          </th> <td>    0.00</td> 
-</tr>
-<tr>
-  <th>Kurtosis:</th>      <td>53.631</td>  <th>  Cond. No.          </th> <td>    53.3</td> 
-</tr>
-</table><br/><br/>Notes:<br/>[1] R² is computed without centering (uncentered) since the model does not contain a constant.<br/>[2] Standard Errors assume that the covariance matrix of the errors is correctly specified.</div></div>
+<div class="output text_html"><style>#sk-container-id-1 {color: black;}#sk-container-id-1 pre{padding: 0;}#sk-container-id-1 div.sk-toggleable {background-color: white;}#sk-container-id-1 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-1 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-1 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-1 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-1 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-1 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-1 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-1 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-1 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-1 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-1 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-1 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-1 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-1 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-1 div.sk-item {position: relative;z-index: 1;}#sk-container-id-1 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-1 div.sk-item::before, #sk-container-id-1 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-1 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-1 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-1 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-1 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-1 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-1 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-1 div.sk-label-container {text-align: center;}#sk-container-id-1 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-1 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>Pipeline(steps=[(&#x27;columntransformer&#x27;,
+                 ColumnTransformer(transformers=[(&#x27;one-hot-encoder&#x27;,
+                                                  OneHotEncoder(handle_unknown=&#x27;ignore&#x27;),
+                                                  [&#x27;orientation&#x27;,
+                                                   &#x27;frequentation&#x27;, &#x27;situation&#x27;,
+                                                   &#x27;distance&#x27;, &#x27;objet&#x27;]),
+                                                 (&#x27;standard_scaler&#x27;,
+                                                  StandardScaler(),
+                                                  [&#x27;compte&#x27;])])),
+                (&#x27;linearregression&#x27;, LinearRegression())])</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" ><label for="sk-estimator-id-1" class="sk-toggleable__label sk-toggleable__label-arrow">Pipeline</label><div class="sk-toggleable__content"><pre>Pipeline(steps=[(&#x27;columntransformer&#x27;,
+                 ColumnTransformer(transformers=[(&#x27;one-hot-encoder&#x27;,
+                                                  OneHotEncoder(handle_unknown=&#x27;ignore&#x27;),
+                                                  [&#x27;orientation&#x27;,
+                                                   &#x27;frequentation&#x27;, &#x27;situation&#x27;,
+                                                   &#x27;distance&#x27;, &#x27;objet&#x27;]),
+                                                 (&#x27;standard_scaler&#x27;,
+                                                  StandardScaler(),
+                                                  [&#x27;compte&#x27;])])),
+                (&#x27;linearregression&#x27;, LinearRegression())])</pre></div></div></div><div class="sk-serial"><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-2" type="checkbox" ><label for="sk-estimator-id-2" class="sk-toggleable__label sk-toggleable__label-arrow">columntransformer: ColumnTransformer</label><div class="sk-toggleable__content"><pre>ColumnTransformer(transformers=[(&#x27;one-hot-encoder&#x27;,
+                                 OneHotEncoder(handle_unknown=&#x27;ignore&#x27;),
+                                 [&#x27;orientation&#x27;, &#x27;frequentation&#x27;, &#x27;situation&#x27;,
+                                  &#x27;distance&#x27;, &#x27;objet&#x27;]),
+                                (&#x27;standard_scaler&#x27;, StandardScaler(),
+                                 [&#x27;compte&#x27;])])</pre></div></div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-3" type="checkbox" ><label for="sk-estimator-id-3" class="sk-toggleable__label sk-toggleable__label-arrow">one-hot-encoder</label><div class="sk-toggleable__content"><pre>[&#x27;orientation&#x27;, &#x27;frequentation&#x27;, &#x27;situation&#x27;, &#x27;distance&#x27;, &#x27;objet&#x27;]</pre></div></div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-4" type="checkbox" ><label for="sk-estimator-id-4" class="sk-toggleable__label sk-toggleable__label-arrow">OneHotEncoder</label><div class="sk-toggleable__content"><pre>OneHotEncoder(handle_unknown=&#x27;ignore&#x27;)</pre></div></div></div></div></div></div><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-5" type="checkbox" ><label for="sk-estimator-id-5" class="sk-toggleable__label sk-toggleable__label-arrow">standard_scaler</label><div class="sk-toggleable__content"><pre>[&#x27;compte&#x27;]</pre></div></div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-6" type="checkbox" ><label for="sk-estimator-id-6" class="sk-toggleable__label sk-toggleable__label-arrow">StandardScaler</label><div class="sk-toggleable__content"><pre>StandardScaler()</pre></div></div></div></div></div></div></div></div><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-7" type="checkbox" ><label for="sk-estimator-id-7" class="sk-toggleable__label sk-toggleable__label-arrow">LinearRegression</label><div class="sk-toggleable__content"><pre>LinearRegression()</pre></div></div></div></div></div></div></div></div></div>
 </div>
-<p><strong>Residuals</strong></p>
-<p>Dans la régression linéaire, un <em>residual</em> est la différence entre la valeur réelle et la valeur prédite par le modèle (y-ŷ) pour un point donné. Un modèle de régression des moindres carrés minimise la somme des carrés des résidus</p>
-<div class="cell tag_remove-input docutils container">
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">sklearn.compose</span> <span class="kn">import</span> <span class="n">ColumnTransformer</span>
+<span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">Pipeline</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span><span class="p">,</span> <span class="n">OneHotEncoder</span>
+<span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+
+<span class="c1"># Create a DataFrame with sample data (replace this with your data)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Cat1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;Cat2&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39;Y&#39;</span><span class="p">,</span> <span class="s1">&#39;Z&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39;Z&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;Cat3&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;N&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;Cat4&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;High&#39;</span><span class="p">,</span> <span class="s1">&#39;Low&#39;</span><span class="p">,</span> <span class="s1">&#39;Medium&#39;</span><span class="p">,</span> <span class="s1">&#39;Low&#39;</span><span class="p">,</span> <span class="s1">&#39;High&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;Cat5&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Yes&#39;</span><span class="p">,</span> <span class="s1">&#39;No&#39;</span><span class="p">,</span> <span class="s1">&#39;Yes&#39;</span><span class="p">,</span> <span class="s1">&#39;No&#39;</span><span class="p">,</span> <span class="s1">&#39;No&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;Target&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">11</span><span class="p">]}</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="c1"># List of categorical column names and target variable name</span>
+<span class="n">categorical_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Cat1&#39;</span><span class="p">,</span> <span class="s1">&#39;Cat2&#39;</span><span class="p">,</span> <span class="s1">&#39;Cat3&#39;</span><span class="p">,</span> <span class="s1">&#39;Cat4&#39;</span><span class="p">,</span> <span class="s1">&#39;Cat5&#39;</span><span class="p">]</span>
+<span class="n">target_col</span> <span class="o">=</span> <span class="s1">&#39;Target&#39;</span>
+
+<span class="c1"># Define the transformations for the pipeline</span>
+<span class="n">categorical_transformer</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[</span>
+    <span class="p">(</span><span class="s1">&#39;onehot&#39;</span><span class="p">,</span> <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">sparse</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">handle_unknown</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">))</span>
+<span class="p">])</span>
+
+<span class="n">numeric_transformer</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[</span>
+    <span class="p">(</span><span class="s1">&#39;scaler&#39;</span><span class="p">,</span> <span class="n">StandardScaler</span><span class="p">())</span>
+<span class="p">])</span>
+
+<span class="c1"># Create a column transformer to apply transformations to appropriate columns</span>
+<span class="n">preprocessor</span> <span class="o">=</span> <span class="n">ColumnTransformer</span><span class="p">(</span>
+    <span class="n">transformers</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">(</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="n">categorical_transformer</span><span class="p">,</span> <span class="n">categorical_cols</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;num&#39;</span><span class="p">,</span> <span class="n">numeric_transformer</span><span class="p">,</span> <span class="p">[</span><span class="n">target_col</span><span class="p">])</span>
+    <span class="p">])</span>
+
+<span class="c1"># Create the pipeline</span>
+<span class="n">pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[</span>
+    <span class="p">(</span><span class="s1">&#39;preprocessor&#39;</span><span class="p">,</span> <span class="n">preprocessor</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;reduce_dim&#39;</span><span class="p">,</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">3</span><span class="p">)),</span>  <span class="c1"># You can adjust the number of components</span>
+    <span class="p">(</span><span class="s1">&#39;regressor&#39;</span><span class="p">,</span> <span class="n">LinearRegression</span><span class="p">())</span>
+<span class="p">])</span>
+
+<span class="c1"># Split data into X (features) and y (target)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">target_col</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">target_col</span><span class="p">]</span>
+
+<span class="c1"># Fit the pipeline on the data</span>
+<span class="c1"># pipeline.fit(X, y)</span>
+
+<span class="c1"># # Predict using the pipeline</span>
+<span class="c1"># y_pred = pipeline.predict(X)</span>
+
+<span class="c1"># # You can now assess the model&#39;s performance and use it for predictions</span>
+<span class="c1"># y_pred = pipeline.predict(X_test)</span>
+<span class="n">pipeline</span>
+</pre></div>
+</div>
+</div>
 <div class="cell_output docutils container">
-<img alt="_images/ad8da9cb8cdb03f9c89cb44cca79e1998dd12cd3b2b00de8cfca2b3987af9d58.png" src="_images/ad8da9cb8cdb03f9c89cb44cca79e1998dd12cd3b2b00de8cfca2b3987af9d58.png" />
-</div>
-</div>
-<div class="section" id="id4">
-<h4><span class="section-number">2.2.1.1. </span>QQ plot<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h4>
-<p>Un graphique q-q est un graphique des quantiles du premier ensemble de données par rapport aux quantiles du second ensemble de données. Par quantile, nous entendons la fraction (ou le pourcentage) de points inférieurs à la valeur donnée. Ainsi, le quantile 0,3 (ou 30 %) est le point auquel 30 % des données sont inférieures et 70 % supérieures à cette valeur.</p>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<img alt="_images/1e6f9488f01b8efb9905db4f068fa35b671b839e8f158cdda87683b87548ea60.png" src="_images/1e6f9488f01b8efb9905db4f068fa35b671b839e8f158cdda87683b87548ea60.png" />
-</div>
-</div>
-</div>
-<div class="section" id="histogram">
-<h4><span class="section-number">2.2.1.2. </span>Histogram<a class="headerlink" href="#histogram" title="Permalink to this headline">#</a></h4>
-<p>Histogramme des observations par rapport aux prévisions. Résultats limités à &gt; 0</p>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<img alt="_images/f281a0823b1f030e57475c487e52af83694ee76d411cd987b78a8b84c5ee218d.png" src="_images/f281a0823b1f030e57475c487e52af83694ee76d411cd987b78a8b84c5ee218d.png" />
-</div>
-</div>
-</div>
-<div class="section" id="id5">
-<h4><span class="section-number">2.2.1.3. </span>Sans la variable d’orientation<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h4>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html"><table class="simpletable">
-<caption>OLS Regression Results</caption>
-<tr>
-  <th>Dep. Variable:</th>         <td>compte</td>      <th>  R-squared (uncentered):</th>      <td>   0.468</td>
-</tr>
-<tr>
-  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared (uncentered):</th> <td>   0.444</td>
-</tr>
-<tr>
-  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th>          <td>   19.83</td>
-</tr>
-<tr>
-  <th>Date:</th>             <td>Thu, 12 Oct 2023</td> <th>  Prob (F-statistic):</th>          <td>1.12e-23</td>
-</tr>
-<tr>
-  <th>Time:</th>                 <td>09:18:12</td>     <th>  Log-Likelihood:    </th>          <td>  258.48</td>
-</tr>
-<tr>
-  <th>No. Observations:</th>      <td>   212</td>      <th>  AIC:               </th>          <td>  -499.0</td>
-</tr>
-<tr>
-  <th>Df Residuals:</th>          <td>   203</td>      <th>  BIC:               </th>          <td>  -468.8</td>
-</tr>
-<tr>
-  <th>Df Model:</th>              <td>     9</td>      <th>                     </th>              <td> </td>   
-</tr>
-<tr>
-  <th>Covariance Type:</th>      <td>nonrobust</td>    <th>                     </th>              <td> </td>   
-</tr>
-</table>
-<table class="simpletable">
-<tr>
-              <td></td>                <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
-</tr>
-<tr>
-  <th>substrat_gravier</th>         <td>    0.1221</td> <td>    0.022</td> <td>    5.572</td> <td> 0.000</td> <td>    0.079</td> <td>    0.165</td>
-</tr>
-<tr>
-  <th>substrat_sable fin</th>       <td>    0.0271</td> <td>    0.018</td> <td>    1.468</td> <td> 0.144</td> <td>   -0.009</td> <td>    0.063</td>
-</tr>
-<tr>
-  <th>substrat_sable grosssier</th> <td>    0.0374</td> <td>    0.022</td> <td>    1.693</td> <td> 0.092</td> <td>   -0.006</td> <td>    0.081</td>
-</tr>
-<tr>
-  <th>frequentation_moyenne</th>    <td>    0.1128</td> <td>    0.021</td> <td>    5.448</td> <td> 0.000</td> <td>    0.072</td> <td>    0.154</td>
-</tr>
-<tr>
-  <th>frequentation_élévée</th>     <td>    0.0329</td> <td>    0.020</td> <td>    1.677</td> <td> 0.095</td> <td>   -0.006</td> <td>    0.072</td>
-</tr>
-<tr>
-  <th>situation_urbain</th>         <td>   -0.0056</td> <td>    0.012</td> <td>   -0.478</td> <td> 0.633</td> <td>   -0.029</td> <td>    0.017</td>
-</tr>
-<tr>
-  <th>distance_< 100m</th>          <td>    0.0038</td> <td>    0.010</td> <td>    0.365</td> <td> 0.715</td> <td>   -0.017</td> <td>    0.024</td>
-</tr>
-<tr>
-  <th>distance_> 1000m</th>         <td>   -0.0571</td> <td>    0.036</td> <td>   -1.585</td> <td> 0.114</td> <td>   -0.128</td> <td>    0.014</td>
-</tr>
-<tr>
-  <th>objet_fragment</th>           <td>   -0.0544</td> <td>    0.010</td> <td>   -5.441</td> <td> 0.000</td> <td>   -0.074</td> <td>   -0.035</td>
-</tr>
-</table>
-<table class="simpletable">
-<tr>
-  <th>Omnibus:</th>       <td>296.386</td> <th>  Durbin-Watson:     </th> <td>   1.916</td> 
-</tr>
-<tr>
-  <th>Prob(Omnibus):</th> <td> 0.000</td>  <th>  Jarque-Bera (JB):  </th> <td>33213.036</td>
-</tr>
-<tr>
-  <th>Skew:</th>          <td> 6.082</td>  <th>  Prob(JB):          </th> <td>    0.00</td> 
-</tr>
-<tr>
-  <th>Kurtosis:</th>      <td>63.100</td>  <th>  Cond. No.          </th> <td>    12.0</td> 
-</tr>
-</table><br/><br/>Notes:<br/>[1] R² is computed without centering (uncentered) since the model does not contain a constant.<br/>[2] Standard Errors assume that the covariance matrix of the errors is correctly specified.</div></div>
-</div>
-</div>
-<div class="section" id="id6">
-<h4><span class="section-number">2.2.1.4. </span>QQ plot<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h4>
-<p>Un graphique q-q est un graphique des quantiles du premier ensemble de données par rapport aux quantiles du second ensemble de données. Par quantile, nous entendons la fraction (ou le pourcentage) de points inférieurs à la valeur donnée. Ainsi, le quantile 0,3 (ou 30 %) est le point auquel 30 % des données sont inférieures et 70 % supérieures à cette valeur.</p>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<img alt="_images/8d957997b5754f685c959d625c97b3b9ac8842f945b9d9ab6ff4efc7b0db3bc8.png" src="_images/8d957997b5754f685c959d625c97b3b9ac8842f945b9d9ab6ff4efc7b0db3bc8.png" />
-</div>
-</div>
-</div>
-<div class="section" id="sans-la-variable-de-distance">
-<h4><span class="section-number">2.2.1.5. </span>Sans la variable de distance<a class="headerlink" href="#sans-la-variable-de-distance" title="Permalink to this headline">#</a></h4>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html"><table class="simpletable">
-<caption>OLS Regression Results</caption>
-<tr>
-  <th>Dep. Variable:</th>         <td>compte</td>      <th>  R-squared (uncentered):</th>      <td>   0.519</td>
-</tr>
-<tr>
-  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared (uncentered):</th> <td>   0.469</td>
-</tr>
-<tr>
-  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th>          <td>   10.35</td>
-</tr>
-<tr>
-  <th>Date:</th>             <td>Thu, 12 Oct 2023</td> <th>  Prob (F-statistic):</th>          <td>2.84e-21</td>
-</tr>
-<tr>
-  <th>Time:</th>                 <td>09:18:12</td>     <th>  Log-Likelihood:    </th>          <td>  269.16</td>
-</tr>
-<tr>
-  <th>No. Observations:</th>      <td>   212</td>      <th>  AIC:               </th>          <td>  -498.3</td>
-</tr>
-<tr>
-  <th>Df Residuals:</th>          <td>   192</td>      <th>  BIC:               </th>          <td>  -431.2</td>
-</tr>
-<tr>
-  <th>Df Model:</th>              <td>    20</td>      <th>                     </th>              <td> </td>   
-</tr>
-<tr>
-  <th>Covariance Type:</th>      <td>nonrobust</td>    <th>                     </th>              <td> </td>   
-</tr>
-</table>
-<table class="simpletable">
-<tr>
-              <td></td>                <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
-</tr>
-<tr>
-  <th>orientation_N</th>            <td>    0.1087</td> <td>    0.026</td> <td>    4.107</td> <td> 0.000</td> <td>    0.057</td> <td>    0.161</td>
-</tr>
-<tr>
-  <th>orientation_NE</th>           <td>    0.1020</td> <td>    0.028</td> <td>    3.682</td> <td> 0.000</td> <td>    0.047</td> <td>    0.157</td>
-</tr>
-<tr>
-  <th>orientation_NNE</th>          <td>    0.0885</td> <td>    0.028</td> <td>    3.117</td> <td> 0.002</td> <td>    0.032</td> <td>    0.144</td>
-</tr>
-<tr>
-  <th>orientation_NNO</th>          <td>    0.0892</td> <td>    0.035</td> <td>    2.582</td> <td> 0.011</td> <td>    0.021</td> <td>    0.157</td>
-</tr>
-<tr>
-  <th>orientation_NO</th>           <td>    0.1246</td> <td>    0.036</td> <td>    3.504</td> <td> 0.001</td> <td>    0.054</td> <td>    0.195</td>
-</tr>
-<tr>
-  <th>orientation_O</th>            <td>    0.1129</td> <td>    0.037</td> <td>    3.074</td> <td> 0.002</td> <td>    0.040</td> <td>    0.185</td>
-</tr>
-<tr>
-  <th>orientation_ONO</th>          <td>    0.0504</td> <td>    0.038</td> <td>    1.330</td> <td> 0.185</td> <td>   -0.024</td> <td>    0.125</td>
-</tr>
-<tr>
-  <th>orientation_OSO</th>          <td>   -0.0284</td> <td>    0.035</td> <td>   -0.820</td> <td> 0.413</td> <td>   -0.097</td> <td>    0.040</td>
-</tr>
-<tr>
-  <th>orientation_S</th>            <td>    0.1621</td> <td>    0.035</td> <td>    4.652</td> <td> 0.000</td> <td>    0.093</td> <td>    0.231</td>
-</tr>
-<tr>
-  <th>orientation_SE</th>           <td>    0.1533</td> <td>    0.050</td> <td>    3.046</td> <td> 0.003</td> <td>    0.054</td> <td>    0.253</td>
-</tr>
-<tr>
-  <th>orientation_SO</th>           <td>    0.0788</td> <td>    0.024</td> <td>    3.230</td> <td> 0.001</td> <td>    0.031</td> <td>    0.127</td>
-</tr>
-<tr>
-  <th>orientation_SSE</th>          <td>    0.1086</td> <td>    0.039</td> <td>    2.787</td> <td> 0.006</td> <td>    0.032</td> <td>    0.185</td>
-</tr>
-<tr>
-  <th>orientation_SSO</th>          <td>    0.1458</td> <td>    0.042</td> <td>    3.452</td> <td> 0.001</td> <td>    0.062</td> <td>    0.229</td>
-</tr>
-<tr>
-  <th>substrat_gravier</th>         <td>    0.1487</td> <td>    0.027</td> <td>    5.456</td> <td> 0.000</td> <td>    0.095</td> <td>    0.202</td>
-</tr>
-<tr>
-  <th>substrat_sable fin</th>       <td>   -0.0165</td> <td>    0.022</td> <td>   -0.752</td> <td> 0.453</td> <td>   -0.060</td> <td>    0.027</td>
-</tr>
-<tr>
-  <th>substrat_sable grosssier</th> <td>   -0.0358</td> <td>    0.035</td> <td>   -1.035</td> <td> 0.302</td> <td>   -0.104</td> <td>    0.032</td>
-</tr>
-<tr>
-  <th>situation_urbain</th>         <td>   -0.0161</td> <td>    0.009</td> <td>   -1.812</td> <td> 0.072</td> <td>   -0.034</td> <td>    0.001</td>
-</tr>
-<tr>
-  <th>objet_fragment</th>           <td>   -0.0545</td> <td>    0.010</td> <td>   -5.570</td> <td> 0.000</td> <td>   -0.074</td> <td>   -0.035</td>
-</tr>
-<tr>
-  <th>situation_urbain</th>         <td>   -0.0161</td> <td>    0.009</td> <td>   -1.812</td> <td> 0.072</td> <td>   -0.034</td> <td>    0.001</td>
-</tr>
-<tr>
-  <th>distance_< 100m</th>          <td>   -0.0286</td> <td>    0.018</td> <td>   -1.600</td> <td> 0.111</td> <td>   -0.064</td> <td>    0.007</td>
-</tr>
-<tr>
-  <th>distance_> 1000m</th>         <td>    0.0578</td> <td>    0.042</td> <td>    1.374</td> <td> 0.171</td> <td>   -0.025</td> <td>    0.141</td>
-</tr>
-</table>
-<table class="simpletable">
-<tr>
-  <th>Omnibus:</th>       <td>284.248</td> <th>  Durbin-Watson:     </th> <td>   2.187</td> 
-</tr>
-<tr>
-  <th>Prob(Omnibus):</th> <td> 0.000</td>  <th>  Jarque-Bera (JB):  </th> <td>30502.454</td>
-</tr>
-<tr>
-  <th>Skew:</th>          <td> 5.632</td>  <th>  Prob(JB):          </th> <td>    0.00</td> 
-</tr>
-<tr>
-  <th>Kurtosis:</th>      <td>60.673</td>  <th>  Cond. No.          </th> <td>2.31e+16</td> 
-</tr>
-</table><br/><br/>Notes:<br/>[1] R² is computed without centering (uncentered) since the model does not contain a constant.<br/>[2] Standard Errors assume that the covariance matrix of the errors is correctly specified.<br/>[3] The smallest eigenvalue is 6.03e-31. This might indicate that there are<br/>strong multicollinearity problems or that the design matrix is singular.</div></div>
-</div>
-</div>
-<div class="section" id="id7">
-<h4><span class="section-number">2.2.1.6. </span>QQ plot<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h4>
-<p>Un graphique q-q est un graphique des quantiles du premier ensemble de données par rapport aux quantiles du second ensemble de données. Par quantile, nous entendons la fraction (ou le pourcentage) de points inférieurs à la valeur donnée. Ainsi, le quantile 0,3 (ou 30 %) est le point auquel 30 % des données sont inférieures et 70 % supérieures à cette valeur.</p>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<img alt="_images/512a16c53f9b3da3594f8730a26189b8b7d9d3a669f4ddfc5b64d6cb2d5684af.png" src="_images/512a16c53f9b3da3594f8730a26189b8b7d9d3a669f4ddfc5b64d6cb2d5684af.png" />
-</div>
+<div class="output text_html"><style>#sk-container-id-2 {color: black;}#sk-container-id-2 pre{padding: 0;}#sk-container-id-2 div.sk-toggleable {background-color: white;}#sk-container-id-2 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-2 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-2 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-2 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-2 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-2 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-2 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-2 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-2 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-2 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-2 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-2 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-2 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-2 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-2 div.sk-item {position: relative;z-index: 1;}#sk-container-id-2 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-2 div.sk-item::before, #sk-container-id-2 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-2 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-2 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-2 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-2 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-2 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-2 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-2 div.sk-label-container {text-align: center;}#sk-container-id-2 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-2 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-2" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>Pipeline(steps=[(&#x27;preprocessor&#x27;,
+                 ColumnTransformer(transformers=[(&#x27;cat&#x27;,
+                                                  Pipeline(steps=[(&#x27;onehot&#x27;,
+                                                                   OneHotEncoder(handle_unknown=&#x27;ignore&#x27;,
+                                                                                 sparse=False))]),
+                                                  [&#x27;Cat1&#x27;, &#x27;Cat2&#x27;, &#x27;Cat3&#x27;,
+                                                   &#x27;Cat4&#x27;, &#x27;Cat5&#x27;]),
+                                                 (&#x27;num&#x27;,
+                                                  Pipeline(steps=[(&#x27;scaler&#x27;,
+                                                                   StandardScaler())]),
+                                                  [&#x27;Target&#x27;])])),
+                (&#x27;reduce_dim&#x27;, PCA(n_components=3)),
+                (&#x27;regressor&#x27;, LinearRegression())])</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-8" type="checkbox" ><label for="sk-estimator-id-8" class="sk-toggleable__label sk-toggleable__label-arrow">Pipeline</label><div class="sk-toggleable__content"><pre>Pipeline(steps=[(&#x27;preprocessor&#x27;,
+                 ColumnTransformer(transformers=[(&#x27;cat&#x27;,
+                                                  Pipeline(steps=[(&#x27;onehot&#x27;,
+                                                                   OneHotEncoder(handle_unknown=&#x27;ignore&#x27;,
+                                                                                 sparse=False))]),
+                                                  [&#x27;Cat1&#x27;, &#x27;Cat2&#x27;, &#x27;Cat3&#x27;,
+                                                   &#x27;Cat4&#x27;, &#x27;Cat5&#x27;]),
+                                                 (&#x27;num&#x27;,
+                                                  Pipeline(steps=[(&#x27;scaler&#x27;,
+                                                                   StandardScaler())]),
+                                                  [&#x27;Target&#x27;])])),
+                (&#x27;reduce_dim&#x27;, PCA(n_components=3)),
+                (&#x27;regressor&#x27;, LinearRegression())])</pre></div></div></div><div class="sk-serial"><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-9" type="checkbox" ><label for="sk-estimator-id-9" class="sk-toggleable__label sk-toggleable__label-arrow">preprocessor: ColumnTransformer</label><div class="sk-toggleable__content"><pre>ColumnTransformer(transformers=[(&#x27;cat&#x27;,
+                                 Pipeline(steps=[(&#x27;onehot&#x27;,
+                                                  OneHotEncoder(handle_unknown=&#x27;ignore&#x27;,
+                                                                sparse=False))]),
+                                 [&#x27;Cat1&#x27;, &#x27;Cat2&#x27;, &#x27;Cat3&#x27;, &#x27;Cat4&#x27;, &#x27;Cat5&#x27;]),
+                                (&#x27;num&#x27;,
+                                 Pipeline(steps=[(&#x27;scaler&#x27;, StandardScaler())]),
+                                 [&#x27;Target&#x27;])])</pre></div></div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-10" type="checkbox" ><label for="sk-estimator-id-10" class="sk-toggleable__label sk-toggleable__label-arrow">cat</label><div class="sk-toggleable__content"><pre>[&#x27;Cat1&#x27;, &#x27;Cat2&#x27;, &#x27;Cat3&#x27;, &#x27;Cat4&#x27;, &#x27;Cat5&#x27;]</pre></div></div></div><div class="sk-serial"><div class="sk-item"><div class="sk-serial"><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-11" type="checkbox" ><label for="sk-estimator-id-11" class="sk-toggleable__label sk-toggleable__label-arrow">OneHotEncoder</label><div class="sk-toggleable__content"><pre>OneHotEncoder(handle_unknown=&#x27;ignore&#x27;, sparse=False)</pre></div></div></div></div></div></div></div></div><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-12" type="checkbox" ><label for="sk-estimator-id-12" class="sk-toggleable__label sk-toggleable__label-arrow">num</label><div class="sk-toggleable__content"><pre>[&#x27;Target&#x27;]</pre></div></div></div><div class="sk-serial"><div class="sk-item"><div class="sk-serial"><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-13" type="checkbox" ><label for="sk-estimator-id-13" class="sk-toggleable__label sk-toggleable__label-arrow">StandardScaler</label><div class="sk-toggleable__content"><pre>StandardScaler()</pre></div></div></div></div></div></div></div></div></div></div><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-14" type="checkbox" ><label for="sk-estimator-id-14" class="sk-toggleable__label sk-toggleable__label-arrow">PCA</label><div class="sk-toggleable__content"><pre>PCA(n_components=3)</pre></div></div></div><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-15" type="checkbox" ><label for="sk-estimator-id-15" class="sk-toggleable__label sk-toggleable__label-arrow">LinearRegression</label><div class="sk-toggleable__content"><pre>LinearRegression()</pre></div></div></div></div></div></div></div></div></div>
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
@@ -1349,17 +1014,13 @@ document.write(`
 
 Git branch: glm_p
 
-seaborn    : 0.12.2
-matplotlib : 3.7.1
 scipy      : 1.10.1
 statsmodels: 0.13.5
-pandas     : 2.0.0
 numpy      : 1.24.2
+matplotlib : 3.7.1
+pandas     : 2.0.0
+seaborn    : 0.12.2
 </pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_remove-input docutils container">
 </div>
 </div>
 </div>
@@ -1433,30 +1094,14 @@ numpy      : 1.24.2
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ligne-d-eau">2.1. Ligne d’eau</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regression-des-moindres-carres-ordinaires-mco">2.1.1. Régression des moindres carrés ordinaires (MCO)</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qq-plot">2.1.1.1. QQ plot</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hsitogram">2.1.1.2. Hsitogram</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sans-la-variable-d-orientation">2.1.1.3. Sans la variable d’orientation</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2.1.1.4. QQ plot</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sans-la-variable-de-frequentation">2.1.1.5. Sans la variable de frequentation</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2.1.1.6. QQ plot</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-considerations-liste-non-exhaustive">2.1. Les considérations (liste non exhaustive)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#valeurs-non-negatives">2.1.1. Valeurs non négatives</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#colinearite-des-variables-independantes">2.1.2. Colinéarité des variables indépendantes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-categorielles">2.1.3. Variables catégorielles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-donnees">2.1.4. Les données</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plage-seche">2.2. Plage seche</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">2.2.1. Régression des moindres carrés ordinaires (MCO)</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2.2.1.1. QQ plot</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#histogram">2.2.1.2. Histogram</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">2.2.1.3. Sans la variable d’orientation</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">2.2.1.4. QQ plot</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sans-la-variable-de-distance">2.2.1.5. Sans la variable de distance</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">2.2.1.6. QQ plot</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#colinearite">2.2. Colinéarité</a></li>
 </ul>
   </nav></div>
 
