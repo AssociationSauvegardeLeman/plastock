@@ -1,0 +1,1241 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>location summary methods &#8212; Plaststock</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'location_summary_test';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="References" href="references.html" />
+    <link rel="prev" title="Attribute summary methods" href="attribute_summary_test.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Plaststock</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analyses</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="pca.html">1. PCA/AFDM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regression.html">2. Modèles linéaires</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other_linear_models.html">3. Autres modèles linéaires</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Annex</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="random_variables.html">Variables aléatoires</a></li>
+<li class="toctree-l1"><a class="reference internal" href="location_summary.html">Microplastiques plage et position</a></li>
+<li class="toctree-l1"><a class="reference internal" href="location_attributes.html">Microplastiques plage et attribut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="macro_summary.html">Macro déchets plage et position</a></li>
+<li class="toctree-l1"><a class="reference internal" href="macro_attributes.html">Macro déchets plage et attribut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="attribute_summary_test.html">Attribute summary methods</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">location summary methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/hammerdirt-analyst/plastock" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hammerdirt-analyst/plastock/issues/new?title=Issue%20on%20page%20%2Flocation_summary_test.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>location summary methods</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#donnees">Données</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#micro">micro</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#macro">macro</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compte-moyen-par-echantillon-et-plage">Compte moyen par échantillon et plage</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#micro-table-a1-4">Micro table A1-4</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#macro-table-a3-3">Macro table A3-3</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compte-moyenne-par-position">Compte moyenne par position</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#micro-table-a1-5">Micro table A1-5</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#macro-table-a3-4">Macro table A3-4</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nombre-moyen-par-forme-et-plage">Nombre moyen par forme et plage</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#souple">souple</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fibres">fibres</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nombre-moyen-par-forme-et-position">Nombre moyen par forme et position</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ligne-deau">ligne deau</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#plage-seche">plage seche</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> watermark
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
+<span class="kn">from</span> <span class="nn">slugify</span> <span class="kn">import</span> <span class="n">slugify</span>
+
+<span class="kn">from</span> <span class="nn">plastockmethods</span> <span class="kn">import</span> <span class="n">name_zones</span><span class="p">,</span> <span class="n">name_particles</span><span class="p">,</span> <span class="n">name_frequentation</span><span class="p">,</span> <span class="n">name_situation</span>
+<span class="kn">from</span> <span class="nn">plastockmethods</span> <span class="kn">import</span> <span class="n">particle_groups</span><span class="p">,</span> <span class="n">name_substrate</span><span class="p">,</span> <span class="n">name_distance</span><span class="p">,</span> <span class="n">table_css_styles</span>
+
+<span class="c1"># miro data</span>
+<span class="n">work_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/end_pipe/long_form_micro.csv&quot;</span><span class="p">)</span>
+<span class="n">beach_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/end_pipe/asl_beaches.csv&quot;</span><span class="p">)</span>
+
+<span class="c1"># macro data</span>
+<span class="n">new_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/macro_current.csv&quot;</span><span class="p">)</span>
+<span class="n">beach_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/pstock_beaches_current.csv&quot;</span><span class="p">)</span>
+
+<span class="n">new_column_names</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Position&quot;</span><span class="p">:</span><span class="s2">&quot;position&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Substrat&quot;</span><span class="p">:</span><span class="s2">&quot;substrat&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Date&quot;</span><span class="p">:</span><span class="s2">&quot;date&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Code&quot;</span><span class="p">:</span><span class="s2">&quot;code&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Quantité&quot;</span><span class="p">:</span><span class="s2">&quot;quantite&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Aire&quot;</span><span class="p">:</span><span class="s2">&quot;area&quot;</span>
+<span class="p">}</span>
+
+<span class="n">length_key</span> <span class="o">=</span> <span class="n">beach_data</span><span class="p">[[</span><span class="s2">&quot;Plage&quot;</span><span class="p">,</span><span class="s2">&quot;length&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="s2">&quot;Plage&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;Plage&quot;</span><span class="p">)</span>
+<span class="n">work_datad</span> <span class="o">=</span> <span class="n">new_data</span><span class="p">[[</span><span class="s2">&quot;Plage&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">new_column_names</span><span class="o">.</span><span class="n">keys</span><span class="p">()]]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">work_datad</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">new_column_names</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">work_datad</span><span class="p">[</span><span class="s2">&quot;length&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">work_datad</span><span class="o">.</span><span class="n">Plage</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">length_key</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;length&quot;</span><span class="p">])</span>
+<span class="n">work_datad</span><span class="p">[</span><span class="s2">&quot;slug&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">work_datad</span><span class="o">.</span><span class="n">Plage</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">slugify</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">work_datad</span><span class="p">[</span><span class="s2">&quot;echantillon&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">work_datad</span><span class="o">.</span><span class="n">slug</span><span class="p">,</span> <span class="n">work_datad</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]))</span>
+<span class="n">work_datad</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">work_datad</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;mixed&quot;</span><span class="p">,</span> <span class="n">dayfirst</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">work_datad</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">work_datad</span><span class="p">[[</span><span class="s2">&quot;position&quot;</span><span class="p">,</span> <span class="s2">&quot;substrat&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">work_datad</span><span class="p">[[</span><span class="s2">&quot;position&quot;</span><span class="p">,</span> <span class="s2">&quot;substrat&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;int&quot;</span><span class="p">)</span>
+<span class="n">event_total</span> <span class="o">=</span> <span class="n">work_datad</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;echantillon&quot;</span><span class="p">,</span> <span class="s2">&quot;Plage&quot;</span><span class="p">,</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="s2">&quot;position&quot;</span><span class="p">,</span> <span class="s2">&quot;area&quot;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">quantite</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">event_total</span><span class="p">[</span><span class="s2">&quot;pcs/m²&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">event_total</span><span class="o">.</span><span class="n">quantite</span><span class="o">/</span><span class="n">event_total</span><span class="o">.</span><span class="n">area</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="location-summary-methods">
+<h1>location summary methods<a class="headerlink" href="#location-summary-methods" title="Permalink to this headline">#</a></h1>
+<p>Cela concerne: location_summary.ipynb, macro_summary.ipynb</p>
+<div class="section" id="donnees">
+<h2>Données<a class="headerlink" href="#donnees" title="Permalink to this headline">#</a></h2>
+<div class="section" id="micro">
+<h3>micro<a class="headerlink" href="#micro" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">work_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Plage</th>
+      <th>echantillon</th>
+      <th>orientation</th>
+      <th>position</th>
+      <th>substrat</th>
+      <th>frequentation</th>
+      <th>situation</th>
+      <th>distance</th>
+      <th>objet</th>
+      <th>compte</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Amphion</td>
+      <td>74_Amp_1</td>
+      <td>NE</td>
+      <td>1</td>
+      <td>4</td>
+      <td>3</td>
+      <td>1</td>
+      <td>1</td>
+      <td>fibres</td>
+      <td>97</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Amphion</td>
+      <td>74_Amp_10</td>
+      <td>NNE</td>
+      <td>2</td>
+      <td>4</td>
+      <td>3</td>
+      <td>1</td>
+      <td>1</td>
+      <td>fibres</td>
+      <td>140</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Amphion</td>
+      <td>74_Amp_2</td>
+      <td>NNE</td>
+      <td>1</td>
+      <td>4</td>
+      <td>3</td>
+      <td>1</td>
+      <td>1</td>
+      <td>fibres</td>
+      <td>121</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Amphion</td>
+      <td>74_Amp_3</td>
+      <td>NE</td>
+      <td>1</td>
+      <td>4</td>
+      <td>3</td>
+      <td>1</td>
+      <td>1</td>
+      <td>fibres</td>
+      <td>31</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Amphion</td>
+      <td>74_Amp_4</td>
+      <td>NNE</td>
+      <td>1</td>
+      <td>4</td>
+      <td>3</td>
+      <td>1</td>
+      <td>1</td>
+      <td>fibres</td>
+      <td>179</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="macro">
+<h3>macro<a class="headerlink" href="#macro" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">event_total</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>echantillon</th>
+      <th>Plage</th>
+      <th>date</th>
+      <th>position</th>
+      <th>area</th>
+      <th>quantite</th>
+      <th>pcs/m²</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>(amphion, 01.02.2022)</td>
+      <td>Amphion</td>
+      <td>2022-02-01</td>
+      <td>1</td>
+      <td>98</td>
+      <td>67</td>
+      <td>0.683673</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>(amphion, 01.02.2022)</td>
+      <td>Amphion</td>
+      <td>2022-02-01</td>
+      <td>2</td>
+      <td>342</td>
+      <td>796</td>
+      <td>2.327485</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>(amphion, 03.05.2022)</td>
+      <td>Amphion</td>
+      <td>2022-05-03</td>
+      <td>1</td>
+      <td>98</td>
+      <td>19</td>
+      <td>0.193878</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>(amphion, 03.05.2022)</td>
+      <td>Amphion</td>
+      <td>2022-05-03</td>
+      <td>2</td>
+      <td>342</td>
+      <td>383</td>
+      <td>1.119883</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>(amphion, 18.10.2022)</td>
+      <td>Amphion</td>
+      <td>2022-10-18</td>
+      <td>1</td>
+      <td>98</td>
+      <td>246</td>
+      <td>2.510204</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="compte-moyen-par-echantillon-et-plage">
+<h3>Compte moyen par échantillon et plage<a class="headerlink" href="#compte-moyen-par-echantillon-et-plage" title="Permalink to this headline">#</a></h3>
+<p>Cela concerne: Table A1-4, A1-5, A3-3, A3-4</p>
+<div class="section" id="micro-table-a1-4">
+<h4>Micro table A1-4<a class="headerlink" href="#micro-table-a1-4" title="Permalink to this headline">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># table A1-4</span>
+<span class="n">work_data</span><span class="p">[</span><span class="s2">&quot;particules&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">work_data</span><span class="p">[</span><span class="s2">&quot;compte&quot;</span><span class="p">]</span>
+<span class="n">sample_totals</span> <span class="o">=</span> <span class="n">work_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;Plage&quot;</span><span class="p">,</span><span class="s2">&quot;echantillon&quot;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span> <span class="n">particules</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">df2</span> <span class="o">=</span> <span class="n">sample_totals</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">sample_totals</span><span class="o">.</span><span class="n">particules</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count     217.000000
+mean      180.133641
+std       267.619523
+min         0.000000
+25%        70.000000
+50%       121.000000
+75%       198.000000
+max      2991.000000
+Name: particules, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="macro-table-a3-3">
+<h4>Macro table A3-3<a class="headerlink" href="#macro-table-a3-3" title="Permalink to this headline">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># table A3-3</span>
+<span class="n">sample_totalsd</span> <span class="o">=</span> <span class="n">event_total</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;echantillon&quot;</span><span class="p">,</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="s2">&quot;Plage&quot;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="s2">&quot;pcs/m²&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">df2d</span> <span class="o">=</span> <span class="n">sample_totalsd</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">value_column</span> <span class="o">=</span> <span class="s2">&quot;moyenne&quot;</span>
+
+<span class="n">sample_totalsd</span><span class="p">[</span><span class="s2">&quot;pcs/m²&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    98.000000
+mean      1.447740
+std       1.691432
+min       0.049057
+25%       0.380307
+50%       0.783439
+75%       1.890987
+max       8.680434
+Name: pcs/m², dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="compte-moyenne-par-position">
+<h3>Compte moyenne par position<a class="headerlink" href="#compte-moyenne-par-position" title="Permalink to this headline">#</a></h3>
+<div class="section" id="micro-table-a1-5">
+<h4>Micro table A1-5<a class="headerlink" href="#micro-table-a1-5" title="Permalink to this headline">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># table A1-5</span>
+<span class="n">position_totals</span> <span class="o">=</span> <span class="n">work_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;Plage&quot;</span><span class="p">,</span><span class="s2">&quot;echantillon&quot;</span><span class="p">,</span> <span class="s2">&quot;position&quot;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">particules</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">position_sample_totals</span> <span class="o">=</span> <span class="n">position_totals</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;echantillon&quot;</span><span class="p">,</span> <span class="s2">&quot;Plage&quot;</span><span class="p">,</span> <span class="s2">&quot;position&quot;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">particules</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="n">summary_ligne_deau</span> <span class="o">=</span> <span class="n">position_sample_totals</span><span class="p">[</span><span class="n">position_sample_totals</span><span class="o">.</span><span class="n">position</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">particules</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+<span class="n">summary_plage_seche</span> <span class="o">=</span> <span class="n">position_sample_totals</span><span class="p">[</span><span class="n">position_sample_totals</span><span class="o">.</span><span class="n">position</span> <span class="o">==</span> <span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">particules</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+
+<span class="n">summary_ligne_deau</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    111.000000
+mean     116.837838
+std      125.527146
+min       19.000000
+25%       53.500000
+50%       85.000000
+75%      129.000000
+max      884.000000
+Name: particules, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">summary_plage_seche</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count     106.000000
+mean      246.415094
+std       349.507132
+min         0.000000
+25%       105.000000
+50%       170.000000
+75%       238.250000
+max      2991.000000
+Name: particules, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="macro-table-a3-4">
+<h4>Macro table A3-4<a class="headerlink" href="#macro-table-a3-4" title="Permalink to this headline">#</a></h4>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    95.000000
+mean      0.842366
+std       1.261876
+min       0.019048
+25%       0.179830
+50%       0.375000
+75%       0.914443
+max       7.595960
+Name: pcs/m², dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">summary_plage_seched</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    88.000000
+mean      0.702884
+std       0.735364
+min       0.005263
+25%       0.181847
+50%       0.404547
+75%       1.075806
+max       3.069231
+Name: pcs/m², dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="nombre-moyen-par-forme-et-plage">
+<h3>Nombre moyen par forme et plage<a class="headerlink" href="#nombre-moyen-par-forme-et-plage" title="Permalink to this headline">#</a></h3>
+<p>Concernant table A1-6</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Plage</th>
+      <th>echantillon</th>
+      <th>objet</th>
+      <th>particules</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Amphion</td>
+      <td>74_Amp_1</td>
+      <td>fdure</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Amphion</td>
+      <td>74_Amp_1</td>
+      <td>fibres</td>
+      <td>97</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Amphion</td>
+      <td>74_Amp_1</td>
+      <td>souple</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Amphion</td>
+      <td>74_Amp_10</td>
+      <td>fdure</td>
+      <td>38</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Amphion</td>
+      <td>74_Amp_10</td>
+      <td>fibres</td>
+      <td>140</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><strong>dur</strong></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    217.000000
+mean      23.525346
+std       58.124073
+min        0.000000
+25%        3.000000
+50%       11.000000
+75%       23.000000
+max      696.000000
+Name: particules, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="souple">
+<h4>souple<a class="headerlink" href="#souple" title="Permalink to this headline">#</a></h4>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    217.000000
+mean      18.778802
+std       60.139706
+min        0.000000
+25%        0.000000
+50%        4.000000
+75%       14.000000
+max      604.000000
+Name: particules, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="fibres">
+<h4>fibres<a class="headerlink" href="#fibres" title="Permalink to this headline">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tex_fibres</span> <span class="o">=</span> <span class="n">forme_totals</span><span class="p">[</span><span class="n">forme_totals</span><span class="o">.</span><span class="n">objet</span><span class="o">==</span><span class="s2">&quot;fibres&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">particules</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+<span class="n">tex_fibres</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count     217.000000
+mean      137.829493
+std       211.692897
+min         0.000000
+25%        54.000000
+50%        98.000000
+75%       156.000000
+max      2593.000000
+Name: particules, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="nombre-moyen-par-forme-et-position">
+<h3>Nombre moyen par forme et position<a class="headerlink" href="#nombre-moyen-par-forme-et-position" title="Permalink to this headline">#</a></h3>
+<p>Concernant table A1-8 et A1-9</p>
+<div class="section" id="ligne-deau">
+<h4>ligne deau<a class="headerlink" href="#ligne-deau" title="Permalink to this headline">#</a></h4>
+<p><strong>dur</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">position_totals</span> <span class="o">=</span> <span class="n">work_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;Plage&quot;</span><span class="p">,</span><span class="s2">&quot;echantillon&quot;</span><span class="p">,</span> <span class="s2">&quot;position&quot;</span><span class="p">,</span> <span class="s2">&quot;objet&quot;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">particules</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">position_totals</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Plage</th>
+      <th>echantillon</th>
+      <th>position</th>
+      <th>objet</th>
+      <th>particules</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Amphion</td>
+      <td>74_Amp_1</td>
+      <td>1</td>
+      <td>fdure</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Amphion</td>
+      <td>74_Amp_1</td>
+      <td>1</td>
+      <td>fibres</td>
+      <td>97</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Amphion</td>
+      <td>74_Amp_1</td>
+      <td>1</td>
+      <td>souple</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Amphion</td>
+      <td>74_Amp_10</td>
+      <td>2</td>
+      <td>fdure</td>
+      <td>38</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Amphion</td>
+      <td>74_Amp_10</td>
+      <td>2</td>
+      <td>fibres</td>
+      <td>140</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    111.000000
+mean      12.243243
+std       16.400785
+min        0.000000
+25%        2.000000
+50%        7.000000
+75%       14.000000
+max      112.000000
+Name: particules, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>souple</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">leau_souple</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    111.000000
+mean      17.864865
+std       81.222868
+min        0.000000
+25%        0.000000
+50%        1.000000
+75%        3.500000
+max      604.000000
+Name: particules, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>fibres</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">leau_fibre</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    111.000000
+mean      86.729730
+std       58.658169
+min       17.000000
+25%       39.000000
+50%       72.000000
+75%      116.500000
+max      273.000000
+Name: particules, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="plage-seche">
+<h4>plage seche<a class="headerlink" href="#plage-seche" title="Permalink to this headline">#</a></h4>
+<p><strong>dur</strong></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    106.000000
+mean      35.339623
+std       79.953783
+min        0.000000
+25%        8.000000
+50%       15.000000
+75%       30.750000
+max      696.000000
+Name: particules, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>souple</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plage_souple</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    106.000000
+mean      19.735849
+std       22.959302
+min        0.000000
+25%        5.000000
+50%       11.000000
+75%       26.750000
+max      153.000000
+Name: particules, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>fibres</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plage_fibre</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count     106.000000
+mean      191.339623
+std       287.980783
+min         0.000000
+25%        78.500000
+50%       124.000000
+75%       187.000000
+max      2593.000000
+Name: particules, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Git repo: https://github.com/hammerdirt-analyst/plastock.git
+
+Git branch: tests
+
+numpy : 1.24.2
+pandas: 2.0.0
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="attribute_summary_test.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Attribute summary methods</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="references.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">References</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#donnees">Données</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#micro">micro</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#macro">macro</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compte-moyen-par-echantillon-et-plage">Compte moyen par échantillon et plage</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#micro-table-a1-4">Micro table A1-4</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#macro-table-a3-3">Macro table A3-3</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compte-moyenne-par-position">Compte moyenne par position</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#micro-table-a1-5">Micro table A1-5</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#macro-table-a3-4">Macro table A3-4</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nombre-moyen-par-forme-et-plage">Nombre moyen par forme et plage</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#souple">souple</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fibres">fibres</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nombre-moyen-par-forme-et-position">Nombre moyen par forme et position</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ligne-deau">ligne deau</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#plage-seche">plage seche</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Roger Erismann, Alexis Pochelon
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p> Association pour la Sauvegarde du Léman et hammerdirt 2023 </p>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
