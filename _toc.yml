@@ -17,4 +17,6 @@ parts:
   - file: location_attributes
   - file: macro_summary
   - file: macro_attributes
+  - file: attribute_summary_test
+  - file: location_summary_test
   - file: references
