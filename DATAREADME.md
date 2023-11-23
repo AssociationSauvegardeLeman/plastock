@@ -14,6 +14,8 @@ __This concerns only the contents of the end_pipe file__
 
 4. data/end_pipe/geo_long_form.csv: Long form surveys with geo data for each row
 
+5. data/end_pipe/long_form_micro.csv: The cleaned survey results of the microplastics
+
 ## maps and images
 
 1. resources/maps/intro_map.jpeg: Basic map with survey locations.
