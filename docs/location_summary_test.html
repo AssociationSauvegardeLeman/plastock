@@ -62,8 +62,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'location_summary_test';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="References" href="references.html" />
-    <link rel="prev" title="Attribute summary methods" href="attribute_summary_test.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -147,14 +145,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="other_linear_models.html">3. Autres modèles linéaires</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Annex</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="random_variables.html">Variables aléatoires</a></li>
 <li class="toctree-l1"><a class="reference internal" href="location_summary.html">Microplastiques plage et position</a></li>
 <li class="toctree-l1"><a class="reference internal" href="location_attributes.html">Microplastiques plage et attribut</a></li>
 <li class="toctree-l1"><a class="reference internal" href="macro_summary.html">Macro déchets plage et position</a></li>
 <li class="toctree-l1"><a class="reference internal" href="macro_attributes.html">Macro déchets plage et attribut</a></li>
-<li class="toctree-l1"><a class="reference internal" href="attribute_summary_test.html">Attribute summary methods</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">location summary methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
 </ul>
 
@@ -351,12 +347,13 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> watermark
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">from</span> <span class="nn">myst_nb</span> <span class="kn">import</span> <span class="n">glue</span>
 <span class="kn">from</span> <span class="nn">slugify</span> <span class="kn">import</span> <span class="n">slugify</span>
-<span class="kn">import</span> <span class="nn">unittest</span>
 
-<span class="kn">from</span> <span class="nn">plastockmethods</span> <span class="kn">import</span> <span class="n">name_zones</span><span class="p">,</span> <span class="n">name_particles</span><span class="p">,</span> <span class="n">name_frequentation</span><span class="p">,</span> <span class="n">name_situation</span>
-<span class="kn">from</span> <span class="nn">plastockmethods</span> <span class="kn">import</span> <span class="n">particle_groups</span><span class="p">,</span> <span class="n">name_substrate</span><span class="p">,</span> <span class="n">name_distance</span><span class="p">,</span> <span class="n">table_css_styles</span>
+<span class="kn">from</span> <span class="nn">plastockconf</span> <span class="kn">import</span> <span class="n">name_zones</span><span class="p">,</span> <span class="n">name_particles</span><span class="p">,</span> <span class="n">name_frequentation</span><span class="p">,</span> <span class="n">name_situation</span>
+<span class="kn">from</span> <span class="nn">plastockconf</span> <span class="kn">import</span> <span class="n">particle_groups</span><span class="p">,</span> <span class="n">name_substrate</span><span class="p">,</span> <span class="n">name_distance</span><span class="p">,</span> <span class="n">table_css_styles</span>
 
 <span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Union</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Callable</span>
 
@@ -397,7 +394,7 @@ document.write(`
     <span class="s2">&quot;Substrat&quot;</span><span class="p">:</span><span class="s2">&quot;substrat&quot;</span><span class="p">,</span>
     <span class="s2">&quot;Date&quot;</span><span class="p">:</span><span class="s2">&quot;date&quot;</span><span class="p">,</span>
     <span class="s2">&quot;Code&quot;</span><span class="p">:</span><span class="s2">&quot;code&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Quantité&quot;</span><span class="p">:</span><span class="s2">&quot;quantite&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Quantité&quot;</span><span class="p">:</span><span class="s2">&quot;quantité&quot;</span><span class="p">,</span>
     <span class="s2">&quot;Aire&quot;</span><span class="p">:</span><span class="s2">&quot;area&quot;</span>
 <span class="p">}</span>
 
@@ -410,12 +407,68 @@ document.write(`
 <span class="n">work_datad</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">work_datad</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;mixed&quot;</span><span class="p">,</span> <span class="n">dayfirst</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">work_datad</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">work_datad</span><span class="p">[[</span><span class="s2">&quot;position&quot;</span><span class="p">,</span> <span class="s2">&quot;substrat&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">work_datad</span><span class="p">[[</span><span class="s2">&quot;position&quot;</span><span class="p">,</span> <span class="s2">&quot;substrat&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;int&quot;</span><span class="p">)</span>
-<span class="n">event_total</span> <span class="o">=</span> <span class="n">work_datad</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;echantillon&quot;</span><span class="p">,</span> <span class="s2">&quot;Plage&quot;</span><span class="p">,</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="s2">&quot;position&quot;</span><span class="p">,</span> <span class="s2">&quot;area&quot;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">quantite</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">event_total</span><span class="p">[</span><span class="s2">&quot;pcs/m²&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">event_total</span><span class="o">.</span><span class="n">quantite</span><span class="o">/</span><span class="n">event_total</span><span class="o">.</span><span class="n">area</span>
+<span class="n">event_total</span> <span class="o">=</span> <span class="n">work_datad</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;echantillon&quot;</span><span class="p">,</span> <span class="s2">&quot;Plage&quot;</span><span class="p">,</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="s2">&quot;position&quot;</span><span class="p">,</span> <span class="s2">&quot;area&quot;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="s1">&#39;quantité&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">event_total</span><span class="p">[</span><span class="s2">&quot;pcs/m²&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">event_total</span><span class="p">[</span><span class="s1">&#39;quantité&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">event_total</span><span class="o">.</span><span class="n">area</span>
 </pre></div>
 </div>
 </div>
 </details>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">58</span>
+<span class="g g-Whitespace">     </span><span class="mi">56</span> <span class="n">work_datad</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">new_column_names</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">57</span> <span class="n">work_datad</span><span class="p">[</span><span class="s2">&quot;length&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">work_datad</span><span class="o">.</span><span class="n">Plage</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">length_key</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;length&quot;</span><span class="p">])</span>
+<span class="ne">---&gt; </span><span class="mi">58</span> <span class="n">work_datad</span><span class="p">[</span><span class="s2">&quot;slug&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">work_datad</span><span class="o">.</span><span class="n">Plage</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">slugify</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="g g-Whitespace">     </span><span class="mi">59</span> <span class="n">work_datad</span><span class="p">[</span><span class="s2">&quot;echantillon&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">work_datad</span><span class="o">.</span><span class="n">slug</span><span class="p">,</span> <span class="n">work_datad</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]))</span>
+<span class="g g-Whitespace">     </span><span class="mi">60</span> <span class="n">work_datad</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">work_datad</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;mixed&quot;</span><span class="p">,</span> <span class="n">dayfirst</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="nn">File ~/anaconda3/envs/plastock/lib/python3.9/site-packages/pandas/core/series.py:4631,</span> in <span class="ni">Series.apply</span><span class="nt">(self, func, convert_dtype, args, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4521</span> <span class="k">def</span> <span class="nf">apply</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">4522</span>     <span class="bp">self</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">4523</span>     <span class="n">func</span><span class="p">:</span> <span class="n">AggFuncType</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4526</span>     <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">4527</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataFrame</span> <span class="o">|</span> <span class="n">Series</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">4528</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">4529</span><span class="sd">     Invoke function on values of Series.</span>
+<span class="g g-Whitespace">   </span><span class="mi">4530</span><span class="sd"> </span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4629</span><span class="sd">     dtype: float64</span>
+<span class="g g-Whitespace">   </span><span class="mi">4630</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">4631</span>     <span class="k">return</span> <span class="n">SeriesApply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">,</span> <span class="n">convert_dtype</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">()</span>
+
+<span class="nn">File ~/anaconda3/envs/plastock/lib/python3.9/site-packages/pandas/core/apply.py:1025,</span> in <span class="ni">SeriesApply.apply</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1022</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_str</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1024</span> <span class="c1"># self.f is Callable</span>
+<span class="ne">-&gt; </span><span class="mi">1025</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_standard</span><span class="p">()</span>
+
+<span class="nn">File ~/anaconda3/envs/plastock/lib/python3.9/site-packages/pandas/core/apply.py:1076,</span> in <span class="ni">SeriesApply.apply_standard</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1074</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1075</span>         <span class="n">values</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">object</span><span class="p">)</span><span class="o">.</span><span class="n">_values</span>
+<span class="ne">-&gt; </span><span class="mi">1076</span>         <span class="n">mapped</span> <span class="o">=</span> <span class="n">lib</span><span class="o">.</span><span class="n">map_infer</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1077</span>             <span class="n">values</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1078</span>             <span class="n">f</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1079</span>             <span class="n">convert</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">convert_dtype</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1080</span>         <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1082</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">mapped</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">mapped</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">ABCSeries</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1083</span>     <span class="c1"># GH#43986 Need to do list(mapped) in order to get treated as nested</span>
+<span class="g g-Whitespace">   </span><span class="mi">1084</span>     <span class="c1">#  See also GH#25959 regarding EA support</span>
+<span class="g g-Whitespace">   </span><span class="mi">1085</span>     <span class="k">return</span> <span class="n">obj</span><span class="o">.</span><span class="n">_constructor_expanddim</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">mapped</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="n">obj</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+
+<span class="nn">File ~/anaconda3/envs/plastock/lib/python3.9/site-packages/pandas/_libs/lib.pyx:2834,</span> in <span class="ni">pandas._libs.lib.map_infer</span><span class="nt">()</span>
+
+<span class="nn">Cell In[1], line 58,</span> in <span class="ni">&lt;lambda&gt;</span><span class="nt">(x)</span>
+<span class="g g-Whitespace">     </span><span class="mi">56</span> <span class="n">work_datad</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">new_column_names</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">57</span> <span class="n">work_datad</span><span class="p">[</span><span class="s2">&quot;length&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">work_datad</span><span class="o">.</span><span class="n">Plage</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">length_key</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;length&quot;</span><span class="p">])</span>
+<span class="ne">---&gt; </span><span class="mi">58</span> <span class="n">work_datad</span><span class="p">[</span><span class="s2">&quot;slug&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">work_datad</span><span class="o">.</span><span class="n">Plage</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">slugify</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="g g-Whitespace">     </span><span class="mi">59</span> <span class="n">work_datad</span><span class="p">[</span><span class="s2">&quot;echantillon&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">work_datad</span><span class="o">.</span><span class="n">slug</span><span class="p">,</span> <span class="n">work_datad</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]))</span>
+<span class="g g-Whitespace">     </span><span class="mi">60</span> <span class="n">work_datad</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">work_datad</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;mixed&quot;</span><span class="p">,</span> <span class="n">dayfirst</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;slugify&#39; is not defined
+</pre></div>
+</div>
+</div>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="location-summary-methods">
 <h1>location summary methods<a class="headerlink" href="#location-summary-methods" title="Permalink to this headline">#</a></h1>
@@ -464,16 +517,6 @@ document.write(`
 </div>
 </div>
 </details>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>test_aggregate_dataframe (__main__.TestAggregateDataFrame) ... ok
-
-----------------------------------------------------------------------
-Ran 1 test in 0.005s
-
-OK
-</pre></div>
-</div>
-</div>
 </div>
 </div>
 </div>
@@ -487,106 +530,6 @@ OK
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Plage</th>
-      <th>echantillon</th>
-      <th>orientation</th>
-      <th>position</th>
-      <th>substrat</th>
-      <th>frequentation</th>
-      <th>situation</th>
-      <th>distance</th>
-      <th>objet</th>
-      <th>compte</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Amphion</td>
-      <td>74_Amp_1</td>
-      <td>NE</td>
-      <td>1</td>
-      <td>4</td>
-      <td>3</td>
-      <td>1</td>
-      <td>1</td>
-      <td>fibres</td>
-      <td>97</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Amphion</td>
-      <td>74_Amp_10</td>
-      <td>NNE</td>
-      <td>2</td>
-      <td>4</td>
-      <td>3</td>
-      <td>1</td>
-      <td>1</td>
-      <td>fibres</td>
-      <td>140</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Amphion</td>
-      <td>74_Amp_2</td>
-      <td>NNE</td>
-      <td>1</td>
-      <td>4</td>
-      <td>3</td>
-      <td>1</td>
-      <td>1</td>
-      <td>fibres</td>
-      <td>121</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Amphion</td>
-      <td>74_Amp_3</td>
-      <td>NE</td>
-      <td>1</td>
-      <td>4</td>
-      <td>3</td>
-      <td>1</td>
-      <td>1</td>
-      <td>fibres</td>
-      <td>31</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Amphion</td>
-      <td>74_Amp_4</td>
-      <td>NNE</td>
-      <td>1</td>
-      <td>4</td>
-      <td>3</td>
-      <td>1</td>
-      <td>1</td>
-      <td>fibres</td>
-      <td>179</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 </div>
 <div class="section" id="macro">
@@ -597,88 +540,6 @@ OK
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>echantillon</th>
-      <th>Plage</th>
-      <th>date</th>
-      <th>position</th>
-      <th>area</th>
-      <th>quantite</th>
-      <th>pcs/m²</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>(amphion, 01.02.2022)</td>
-      <td>Amphion</td>
-      <td>2022-02-01</td>
-      <td>1</td>
-      <td>98</td>
-      <td>67</td>
-      <td>0.683673</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>(amphion, 01.02.2022)</td>
-      <td>Amphion</td>
-      <td>2022-02-01</td>
-      <td>2</td>
-      <td>342</td>
-      <td>796</td>
-      <td>2.327485</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>(amphion, 03.05.2022)</td>
-      <td>Amphion</td>
-      <td>2022-05-03</td>
-      <td>1</td>
-      <td>98</td>
-      <td>19</td>
-      <td>0.193878</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>(amphion, 03.05.2022)</td>
-      <td>Amphion</td>
-      <td>2022-05-03</td>
-      <td>2</td>
-      <td>342</td>
-      <td>383</td>
-      <td>1.119883</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>(amphion, 18.10.2022)</td>
-      <td>Amphion</td>
-      <td>2022-10-18</td>
-      <td>1</td>
-      <td>98</td>
-      <td>246</td>
-      <td>2.510204</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 </div>
 <div class="section" id="compte-moyen-par-echantillon-et-plage">
@@ -696,19 +557,6 @@ OK
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count     217.000000
-mean      180.133641
-std       267.619523
-min         0.000000
-25%        70.000000
-50%       121.000000
-75%       198.000000
-max      2991.000000
-Name: particules, dtype: float64
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -718,19 +566,6 @@ Name: particules, dtype: float64
 
 <span class="n">st</span> <span class="o">=</span> <span class="n">aggregate_dataframe</span><span class="p">(</span><span class="n">work_data</span><span class="p">,</span> <span class="n">groupby_columns</span><span class="o">=</span><span class="n">groupby_columns</span><span class="p">,</span> <span class="n">aggregation_functions</span><span class="o">=</span><span class="n">agg_function</span><span class="p">)</span>
 <span class="n">st</span><span class="p">[</span><span class="n">v_o_i</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count     217.000000
-mean      180.133641
-std       267.619523
-min         0.000000
-25%        70.000000
-50%       121.000000
-75%       198.000000
-max      2991.000000
-Name: particules, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -749,19 +584,6 @@ Name: particules, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    98.000000
-mean      1.447740
-std       1.691432
-min       0.049057
-25%       0.380307
-50%       0.783439
-75%       1.890987
-max       8.680434
-Name: pcs/m², dtype: float64
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -771,19 +593,6 @@ Name: pcs/m², dtype: float64
 
 <span class="n">std</span> <span class="o">=</span> <span class="n">aggregate_dataframe</span><span class="p">(</span><span class="n">event_total</span><span class="p">,</span> <span class="n">groupby_columns</span><span class="o">=</span><span class="n">groupby_columns</span><span class="p">,</span> <span class="n">aggregation_functions</span><span class="o">=</span><span class="n">agg_function</span><span class="p">)</span>
 <span class="n">std</span><span class="p">[</span><span class="n">v_o_i</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    98.000000
-mean      1.447740
-std       1.691432
-min       0.049057
-25%       0.380307
-50%       0.783439
-75%       1.890987
-max       8.680434
-Name: pcs/m², dtype: float64
 </pre></div>
 </div>
 </div>
@@ -807,36 +616,10 @@ Name: pcs/m², dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    111.000000
-mean     116.837838
-std      125.527146
-min       19.000000
-25%       53.500000
-50%       85.000000
-75%      129.000000
-max      884.000000
-Name: particules, dtype: float64
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">summary_plage_seche</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count     106.000000
-mean      246.415094
-std       349.507132
-min         0.000000
-25%       105.000000
-50%       170.000000
-75%       238.250000
-max      2991.000000
-Name: particules, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -847,8 +630,6 @@ Name: particules, dtype: float64
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">position_totalsd</span> <span class="o">=</span> <span class="n">event_total</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;Plage&quot;</span><span class="p">,</span><span class="s2">&quot;echantillon&quot;</span><span class="p">,</span><span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="s2">&quot;position&quot;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="s2">&quot;pcs/m²&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="c1"># position_totals[&quot;position&quot;] = position_totals.position.apply(lambda x: name_the_zones[x])</span>
-<span class="c1"># position_totals[&quot;objet&quot;] = position_totals.objet.apply(lambda x: particle_groups[x])</span>
 <span class="n">df4d</span> <span class="o">=</span> <span class="n">position_totalsd</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;Plage&quot;</span><span class="p">,</span><span class="s2">&quot;position&quot;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="s2">&quot;pcs/m²&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 
 <span class="n">summary_ligne_deaud</span> <span class="o">=</span> <span class="n">position_totalsd</span><span class="p">[</span><span class="n">position_totalsd</span><span class="o">.</span><span class="n">position</span> <span class="o">==</span> <span class="mi">1</span><span class="p">][</span><span class="s2">&quot;pcs/m²&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -858,36 +639,10 @@ Name: particules, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    95.000000
-mean      0.842366
-std       1.261876
-min       0.019048
-25%       0.179830
-50%       0.375000
-75%       0.914443
-max       7.595960
-Name: pcs/m², dtype: float64
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">summary_plage_seched</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    88.000000
-mean      0.702884
-std       0.735364
-min       0.005263
-25%       0.181847
-50%       0.404547
-75%       1.075806
-max       3.069231
-Name: pcs/m², dtype: float64
 </pre></div>
 </div>
 </div>
@@ -905,70 +660,6 @@ Name: pcs/m², dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Plage</th>
-      <th>echantillon</th>
-      <th>objet</th>
-      <th>particules</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Amphion</td>
-      <td>74_Amp_1</td>
-      <td>fdure</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Amphion</td>
-      <td>74_Amp_1</td>
-      <td>fibres</td>
-      <td>97</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Amphion</td>
-      <td>74_Amp_1</td>
-      <td>souple</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Amphion</td>
-      <td>74_Amp_10</td>
-      <td>fdure</td>
-      <td>38</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Amphion</td>
-      <td>74_Amp_10</td>
-      <td>fibres</td>
-      <td>140</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 <p><strong>dur</strong></p>
 <div class="cell docutils container">
@@ -976,19 +667,6 @@ Name: pcs/m², dtype: float64
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tex_dure</span> <span class="o">=</span> <span class="n">forme_totals</span><span class="p">[</span><span class="n">forme_totals</span><span class="o">.</span><span class="n">objet</span><span class="o">==</span><span class="s2">&quot;fdure&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">particules</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 
 <span class="n">tex_dure</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    217.000000
-mean      23.525346
-std       58.124073
-min        0.000000
-25%        3.000000
-50%       11.000000
-75%       23.000000
-max      696.000000
-Name: particules, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -1002,19 +680,6 @@ Name: particules, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    217.000000
-mean      18.778802
-std       60.139706
-min        0.000000
-25%        0.000000
-50%        4.000000
-75%       14.000000
-max      604.000000
-Name: particules, dtype: float64
-</pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="fibres">
@@ -1023,19 +688,6 @@ Name: particules, dtype: float64
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tex_fibres</span> <span class="o">=</span> <span class="n">forme_totals</span><span class="p">[</span><span class="n">forme_totals</span><span class="o">.</span><span class="n">objet</span><span class="o">==</span><span class="s2">&quot;fibres&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">particules</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 <span class="n">tex_fibres</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count     217.000000
-mean      137.829493
-std       211.692897
-min         0.000000
-25%        54.000000
-50%        98.000000
-75%       156.000000
-max      2593.000000
-Name: particules, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -1055,76 +707,6 @@ Name: particules, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Plage</th>
-      <th>echantillon</th>
-      <th>position</th>
-      <th>objet</th>
-      <th>particules</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Amphion</td>
-      <td>74_Amp_1</td>
-      <td>1</td>
-      <td>fdure</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Amphion</td>
-      <td>74_Amp_1</td>
-      <td>1</td>
-      <td>fibres</td>
-      <td>97</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Amphion</td>
-      <td>74_Amp_1</td>
-      <td>1</td>
-      <td>souple</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Amphion</td>
-      <td>74_Amp_10</td>
-      <td>2</td>
-      <td>fdure</td>
-      <td>38</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Amphion</td>
-      <td>74_Amp_10</td>
-      <td>2</td>
-      <td>fibres</td>
-      <td>140</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1136,19 +718,6 @@ Name: particules, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    111.000000
-mean      12.243243
-std       16.400785
-min        0.000000
-25%        2.000000
-50%        7.000000
-75%       14.000000
-max      112.000000
-Name: particules, dtype: float64
-</pre></div>
-</div>
-</div>
 </div>
 <p><strong>souple</strong></p>
 <div class="cell docutils container">
@@ -1157,37 +726,11 @@ Name: particules, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    111.000000
-mean      17.864865
-std       81.222868
-min        0.000000
-25%        0.000000
-50%        1.000000
-75%        3.500000
-max      604.000000
-Name: particules, dtype: float64
-</pre></div>
-</div>
-</div>
 </div>
 <p><strong>fibres</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">leau_fibre</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    111.000000
-mean      86.729730
-std       58.658169
-min       17.000000
-25%       39.000000
-50%       72.000000
-75%      116.500000
-max      273.000000
-Name: particules, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -1206,37 +749,11 @@ Name: particules, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    106.000000
-mean      35.339623
-std       79.953783
-min        0.000000
-25%        8.000000
-50%       15.000000
-75%       30.750000
-max      696.000000
-Name: particules, dtype: float64
-</pre></div>
-</div>
-</div>
 </div>
 <p><strong>souple</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plage_souple</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    106.000000
-mean      19.735849
-std       22.959302
-min        0.000000
-25%        5.000000
-50%       11.000000
-75%       26.750000
-max      153.000000
-Name: particules, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -1248,31 +765,8 @@ Name: particules, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count     106.000000
-mean      191.339623
-std       287.980783
-min         0.000000
-25%        78.500000
-50%       124.000000
-75%       187.000000
-max      2593.000000
-Name: particules, dtype: float64
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Git repo: https://github.com/hammerdirt-analyst/plastock.git
-
-Git branch: main
-
-numpy : 1.24.2
-pandas: 2.0.0
-</pre></div>
-</div>
-</div>
 </div>
 </div>
 </div>
@@ -1310,24 +804,6 @@ pandas: 2.0.0
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="attribute_summary_test.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Attribute summary methods</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="references.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">References</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div></div>
   
 </div>

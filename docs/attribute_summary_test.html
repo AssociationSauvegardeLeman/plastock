@@ -62,8 +62,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'attribute_summary_test';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="location summary methods" href="location_summary_test.html" />
-    <link rel="prev" title="Macro déchets plage et attribut" href="macro_attributes.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -147,14 +145,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="other_linear_models.html">3. Autres modèles linéaires</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Annex</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="random_variables.html">Variables aléatoires</a></li>
 <li class="toctree-l1"><a class="reference internal" href="location_summary.html">Microplastiques plage et position</a></li>
 <li class="toctree-l1"><a class="reference internal" href="location_attributes.html">Microplastiques plage et attribut</a></li>
 <li class="toctree-l1"><a class="reference internal" href="macro_summary.html">Macro déchets plage et position</a></li>
 <li class="toctree-l1"><a class="reference internal" href="macro_attributes.html">Macro déchets plage et attribut</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Attribute summary methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="location_summary_test.html">location summary methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
 </ul>
 
@@ -360,38 +356,10 @@ document.write(`
 <span class="kn">from</span> <span class="nn">slugify</span> <span class="kn">import</span> <span class="n">slugify</span>
 <span class="kn">import</span> <span class="nn">unittest</span>
 
-<span class="kn">from</span> <span class="nn">plastockmethods</span> <span class="kn">import</span> <span class="n">name_zones</span><span class="p">,</span> <span class="n">name_particles</span><span class="p">,</span> <span class="n">name_frequentation</span><span class="p">,</span> <span class="n">name_situation</span>
-<span class="kn">from</span> <span class="nn">plastockmethods</span> <span class="kn">import</span> <span class="n">particle_groups</span><span class="p">,</span> <span class="n">name_substrate</span><span class="p">,</span> <span class="n">name_distance</span><span class="p">,</span> <span class="n">table_css_styles</span>
+<span class="kn">from</span> <span class="nn">plastockconf</span> <span class="kn">import</span> <span class="n">name_zones</span><span class="p">,</span> <span class="n">name_particles</span><span class="p">,</span> <span class="n">name_frequentation</span><span class="p">,</span> <span class="n">name_situation</span>
+<span class="kn">from</span> <span class="nn">plastockconf</span> <span class="kn">import</span> <span class="n">particle_groups</span><span class="p">,</span> <span class="n">name_substrate</span><span class="p">,</span> <span class="n">name_distance</span><span class="p">,</span> <span class="n">table_css_styles</span>
 
-<span class="k">def</span> <span class="nf">attribute_summary</span><span class="p">(</span><span class="n">some_data</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">vals</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">voi</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Résume les attributs d&#39;un DataFrame basé sur des groupes spécifiques.</span>
-
-<span class="sd">    Cette fonction regroupe les données de &#39;some_data&#39; par &#39;echantillon&#39; et une variable d&#39;intérêt &#39;voi&#39;,</span>
-<span class="sd">    calcule la somme des valeurs de la colonne spécifiée par &#39;vals&#39; pour chaque groupe, puis fournit</span>
-<span class="sd">    des statistiques descriptives pour chaque groupe.</span>
-
-<span class="sd">    Args:</span>
-<span class="sd">        some_data (pd.DataFrame): Le DataFrame contenant les données à analyser.</span>
-<span class="sd">        vals (str): Le nom de la colonne dont les valeurs sont résumées.</span>
-<span class="sd">        voi (str): Le nom de la variable d&#39;intérêt utilisée pour le groupement.</span>
-
-<span class="sd">    Returns:</span>
-<span class="sd">        pd.DataFrame: Un DataFrame contenant les statistiques descriptives pour chaque valeur de &#39;voi&#39;,</span>
-<span class="sd">        incluant le nombre d&#39;observations, la valeur maximale, la valeur minimale, la moyenne, l&#39;écart-type, etc.</span>
-
-<span class="sd">    Le DataFrame résultant est indexé par &#39;voi&#39; avec le nom de l&#39;index supprimé pour une présentation plus claire.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    
-    <span class="n">groupby</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;echantillon&#39;</span><span class="p">,</span> <span class="n">voi</span><span class="p">]</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="n">some_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">groupby</span><span class="p">,</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="n">vals</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-    
-    <span class="n">data_summary</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">voi</span><span class="p">,</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="n">vals</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
-    <span class="n">data_summary</span><span class="p">[[</span><span class="s1">&#39;count&#39;</span><span class="p">,</span> <span class="s1">&#39;max&#39;</span><span class="p">,</span> <span class="s1">&#39;min&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">data_summary</span><span class="p">[[</span><span class="s1">&#39;count&#39;</span><span class="p">,</span> <span class="s1">&#39;max&#39;</span><span class="p">,</span> <span class="s1">&#39;min&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;int&#39;</span><span class="p">)</span>
-    <span class="n">data_summary</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="n">voi</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    <span class="n">data_summary</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="kc">None</span>
-    
-    <span class="k">return</span> <span class="n">data_summary</span>
+<span class="kn">from</span> <span class="nn">plastock</span> <span class="kn">import</span> <span class="n">attribute_summary</span><span class="p">,</span> <span class="n">attribute_summary_test</span>
 
 <span class="n">work_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/end_pipe/long_form_micro.csv&quot;</span><span class="p">)</span>
 <span class="n">beach_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/end_pipe/asl_beaches.csv&quot;</span><span class="p">)</span>
@@ -399,6 +367,12 @@ document.write(`
 </div>
 </div>
 </details>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The watermark extension is already loaded. To reload it, use:
+  %reload_ext watermark
+</pre></div>
+</div>
+</div>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="attribute-summary-methods">
 <h1>Attribute summary methods<a class="headerlink" href="#attribute-summary-methods" title="Permalink to this headline">#</a></h1>
@@ -430,7 +404,7 @@ document.write(`
         <span class="n">voi</span> <span class="o">=</span> <span class="s1">&#39;category&#39;</span>
 
         <span class="c1"># Call the function</span>
-        <span class="n">result</span> <span class="o">=</span> <span class="n">attribute_summary</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">vals</span><span class="p">,</span> <span class="n">voi</span><span class="p">)</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">attribute_summary_test</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">vals</span><span class="p">,</span> <span class="n">voi</span><span class="p">)</span>
 
         <span class="c1"># Define the expected output</span>
         <span class="n">expected_data</span> <span class="o">=</span> <span class="p">{</span>
@@ -460,7 +434,7 @@ document.write(`
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>test_attribute_summary (__main__.TestAttributeSummary) ... ok
 
 ----------------------------------------------------------------------
-Ran 1 test in 0.016s
+Ran 1 test in 0.012s
 
 OK
 </pre></div>
@@ -1912,24 +1886,6 @@ numpy : 1.24.2
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="macro_attributes.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Macro déchets plage et attribut</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="location_summary_test.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">location summary methods</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div></div>
   
 </div>
