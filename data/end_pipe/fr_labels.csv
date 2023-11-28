@@ -401,9 +401,9 @@ G170,Bois (transformé)
 G171,Autre bois < 50cm
 G172,Autres bois > 50cm
 G173,Autres bois
-Gfrags,"Fragments de plastique: G80, G79, G78, G75"
+Gfrags,"Fragments de plastique: G80, G79, G78, G77, G76, G75"
 Gcaps,"Couvercles en plastique bouteille:  G21, G22, G23, G24"
-Gfoams,"Fragments de polystyrène expansé: G76, G81, G82, G83"
+Gfoams,"Fragments de polystyrène expansé: G81, G82, G83"
 G216,"déchets divers (bois travaillé, pièces métalliques)"
 Baumschule,Pépinière
 Friedhof,Cimetière

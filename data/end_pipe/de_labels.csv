@@ -349,8 +349,8 @@ G170,Holz (verarbeitet)
 G171,Sonstiges Holz < 50cm
 G172,Sonstiges Holz > 50 cm
 G173,Sonstiges
-Gfrags,"Fragmentierte Kunststoffe:G80, G79, G78, G75, G76, G77"
+Gfrags,"Fragmentierte Kunststoffe: G80, G79, G78, G77, G76, G75"
 Gcaps,"plastic caps, lid rings: G21, G22, G23, G24"
-Gfoams,Expandiertes Polystyrol
+Gfoams,"Fragmentierte Expandiertes Polystyrol:  G81, G82, G83"
 G216,"diverser Müll (bearbeitetes Holz, Metallteile)"
 code,"Fragmentierte Kunststoffe:G80, G79, G78, G75, G76, G77"
