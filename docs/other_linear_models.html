@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3. Autres modèles linéaires &#8212; Plaststock</title>
+    <title>Autres modèles linéaires &#8212; Plaststock</title>
   
   
   
@@ -62,8 +62,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'other_linear_models';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Variables aléatoires" href="random_variables.html" />
-    <link rel="prev" title="2. Modèles linéaires" href="regression.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -141,10 +139,10 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analyses</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="pca.html">1. PCA/AFDM</a></li>
 <li class="toctree-l1"><a class="reference internal" href="regression.html">2. Modèles linéaires</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Autres modèles linéaires</a></li>
+<li class="toctree-l1"><a class="reference internal" href="macro_object_results.html">3. Déchets Sauvages</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Annex</span></p>
 <ul class="nav bd-sidenav">
@@ -299,20 +297,20 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ligne-d-eau">3.1. Ligne d’eau</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gridsearch-with-pca">3.2. Gridsearch with PCA</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-validated-results-mean-squared-error">3.2.1. Cross validated results: mean squared error</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ligne-d-eau">Ligne d’eau</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gridsearch-with-pca">Gridsearch with PCA</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-validated-results-mean-squared-error">Cross validated results: mean squared error</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression-sklearn">3.3. Linear regression, sklearn</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3.3.1. Cross validated results: mean squared error</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression-sklearn">Linear regression, sklearn</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Cross validated results: mean squared error</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bayesian-ridge-regression-l2">3.4. Bayesian ridge regression (L2)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">3.4.1. Cross validated results: mean squared error</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bayesian-ridge-regression-l2">Bayesian ridge regression (L2)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Cross validated results: mean squared error</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lasso-l1">3.5. Lasso (L1)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lasso-l1">Lasso (L1)</a></li>
 </ul>
             </nav>
         </div>
@@ -373,11 +371,11 @@ document.write(`
 </details>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="autres-modeles-lineaires">
-<h1><span class="section-number">3. </span>Autres modèles linéaires<a class="headerlink" href="#autres-modeles-lineaires" title="Permalink to this headline">#</a></h1>
+<h1>Autres modèles linéaires<a class="headerlink" href="#autres-modeles-lineaires" title="Permalink to this headline">#</a></h1>
 <p>La position des échantillons sur la plage (ligne d’eau, plage-seche) représente différentes conditions d’échantillonnage. C’est pourquoi nous les traiterons séparément.</p>
 <p>Les fragments durs et souple sont combinés pour chaque échantillon.</p>
 <div class="section" id="ligne-d-eau">
-<h2><span class="section-number">3.1. </span>Ligne d’eau<a class="headerlink" href="#ligne-d-eau" title="Permalink to this headline">#</a></h2>
+<h2>Ligne d’eau<a class="headerlink" href="#ligne-d-eau" title="Permalink to this headline">#</a></h2>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -539,7 +537,7 @@ document.write(`
 </div>
 </div>
 <div class="section" id="gridsearch-with-pca">
-<h2><span class="section-number">3.2. </span>Gridsearch with PCA<a class="headerlink" href="#gridsearch-with-pca" title="Permalink to this headline">#</a></h2>
+<h2>Gridsearch with PCA<a class="headerlink" href="#gridsearch-with-pca" title="Permalink to this headline">#</a></h2>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -581,7 +579,7 @@ document.write(`
 </details>
 </div>
 <div class="section" id="cross-validated-results-mean-squared-error">
-<h3><span class="section-number">3.2.1. </span>Cross validated results: mean squared error<a class="headerlink" href="#cross-validated-results-mean-squared-error" title="Permalink to this headline">#</a></h3>
+<h3>Cross validated results: mean squared error<a class="headerlink" href="#cross-validated-results-mean-squared-error" title="Permalink to this headline">#</a></h3>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -638,7 +636,7 @@ document.write(`
 </div>
 </div>
 <div class="section" id="linear-regression-sklearn">
-<h2><span class="section-number">3.3. </span>Linear regression, sklearn<a class="headerlink" href="#linear-regression-sklearn" title="Permalink to this headline">#</a></h2>
+<h2>Linear regression, sklearn<a class="headerlink" href="#linear-regression-sklearn" title="Permalink to this headline">#</a></h2>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -686,7 +684,7 @@ document.write(`
 <div class="output text_html"><style>#sk-container-id-2 {color: black;}#sk-container-id-2 pre{padding: 0;}#sk-container-id-2 div.sk-toggleable {background-color: white;}#sk-container-id-2 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-2 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-2 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-2 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-2 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-2 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-2 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-2 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-2 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-2 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-2 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-2 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-2 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-2 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-2 div.sk-item {position: relative;z-index: 1;}#sk-container-id-2 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-2 div.sk-item::before, #sk-container-id-2 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-2 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-2 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-2 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-2 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-2 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-2 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-2 div.sk-label-container {text-align: center;}#sk-container-id-2 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-2 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-2" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>LinearRegression()</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-6" type="checkbox" checked><label for="sk-estimator-id-6" class="sk-toggleable__label sk-toggleable__label-arrow">LinearRegression</label><div class="sk-toggleable__content"><pre>LinearRegression()</pre></div></div></div></div></div></div></div>
 </div>
 <div class="section" id="id1">
-<h3><span class="section-number">3.3.1. </span>Cross validated results: mean squared error<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<h3>Cross validated results: mean squared error<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">results_l</span> <span class="o">=</span> <span class="n">cross_validate</span><span class="p">(</span><span class="n">ols</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">scoring</span> <span class="o">=</span> <span class="n">rmse</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
@@ -711,7 +709,7 @@ document.write(`
 </div>
 </div>
 <div class="section" id="bayesian-ridge-regression-l2">
-<h2><span class="section-number">3.4. </span>Bayesian ridge regression (L2)<a class="headerlink" href="#bayesian-ridge-regression-l2" title="Permalink to this headline">#</a></h2>
+<h2>Bayesian ridge regression (L2)<a class="headerlink" href="#bayesian-ridge-regression-l2" title="Permalink to this headline">#</a></h2>
 <p>Bayesian regression techniques can be used to include regularization parameters in the estimation procedure: the regularization parameter is not set in a hard sense but tuned to the data at hand.</p>
 <p>This can be done by introducing uninformative priors over the hyper parameters of the model. The regularization used in Ridge regression and classification is equivalent to finding a maximum a posteriori estimation under a Gaussian prior over the coefficients with precision . Instead of setting lambda manually, it is possible to treat it as a random variable to be estimated from the data.</p>
 <div class="cell tag_hide-input docutils container">
@@ -734,7 +732,7 @@ document.write(`
 <div class="output text_html"><style>#sk-container-id-3 {color: black;}#sk-container-id-3 pre{padding: 0;}#sk-container-id-3 div.sk-toggleable {background-color: white;}#sk-container-id-3 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-3 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-3 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-3 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-3 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-3 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-3 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-3 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-3 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-3 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-3 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-3 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-3 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-3 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-3 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-3 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-3 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-3 div.sk-item {position: relative;z-index: 1;}#sk-container-id-3 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-3 div.sk-item::before, #sk-container-id-3 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-3 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-3 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-3 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-3 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-3 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-3 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-3 div.sk-label-container {text-align: center;}#sk-container-id-3 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-3 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-3" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>BayesianRidge(compute_score=True, max_iter=30)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-7" type="checkbox" checked><label for="sk-estimator-id-7" class="sk-toggleable__label sk-toggleable__label-arrow">BayesianRidge</label><div class="sk-toggleable__content"><pre>BayesianRidge(compute_score=True, max_iter=30)</pre></div></div></div></div></div></div></div>
 </div>
 <div class="section" id="id2">
-<h3><span class="section-number">3.4.1. </span>Cross validated results: mean squared error<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<h3>Cross validated results: mean squared error<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">results_b</span> <span class="o">=</span> <span class="n">cross_validate</span><span class="p">(</span><span class="n">bayes</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">scoring</span> <span class="o">=</span> <span class="n">rmse</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
@@ -759,7 +757,7 @@ document.write(`
 </div>
 </div>
 <div class="section" id="lasso-l1">
-<h2><span class="section-number">3.5. </span>Lasso (L1)<a class="headerlink" href="#lasso-l1" title="Permalink to this headline">#</a></h2>
+<h2>Lasso (L1)<a class="headerlink" href="#lasso-l1" title="Permalink to this headline">#</a></h2>
 <p>The primary goal of LASSO regression is to find a balance between model simplicity and accuracy. It achieves this by adding a penalty term to the traditional linear regression model, which encourages sparse solutions where some coefficients are forced to be exactly zero. This feature makes LASSO particularly useful for feature selection, as it can automatically identify and discard irrelevant or redundant variables.</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
@@ -886,24 +884,6 @@ pandas     : 2.0.0
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="regression.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2. </span>Modèles linéaires</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="random_variables.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Variables aléatoires</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div></div>
   
 </div>
@@ -922,20 +902,20 @@ pandas     : 2.0.0
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ligne-d-eau">3.1. Ligne d’eau</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gridsearch-with-pca">3.2. Gridsearch with PCA</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-validated-results-mean-squared-error">3.2.1. Cross validated results: mean squared error</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ligne-d-eau">Ligne d’eau</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gridsearch-with-pca">Gridsearch with PCA</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-validated-results-mean-squared-error">Cross validated results: mean squared error</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression-sklearn">3.3. Linear regression, sklearn</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3.3.1. Cross validated results: mean squared error</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression-sklearn">Linear regression, sklearn</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Cross validated results: mean squared error</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bayesian-ridge-regression-l2">3.4. Bayesian ridge regression (L2)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">3.4.1. Cross validated results: mean squared error</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bayesian-ridge-regression-l2">Bayesian ridge regression (L2)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Cross validated results: mean squared error</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lasso-l1">3.5. Lasso (L1)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lasso-l1">Lasso (L1)</a></li>
 </ul>
   </nav></div>
 
