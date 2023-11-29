@@ -1,0 +1,210 @@
+slug,lake,river_name,size,class,distance,attribute_type
+hafeli,Brienzersee,Lütschine,6,6,843,river intersection
+hafeli,Brienzersee,Aare,5,4,112,river intersection
+oben-am-see,Brienzersee,Kanal Aarboden,18,8,1367,river intersection
+wycheley,Brienzersee,Kanal Aarboden,18,8,1445,river intersection
+oben-am-see,Brienzersee,Aare,6,4,481,river intersection
+wycheley,Brienzersee,Aare,6,4,86,river intersection
+oben-am-see,Brienzersee,Fulbach,9,9,293,river intersection
+wycheley,Brienzersee,Fulbach,9,9,261,river intersection
+oben-am-see,Brienzersee,Lammbach,9,9,471,river intersection
+wycheley,Brienzersee,Lammbach,9,9,844,river intersection
+oben-am-see,Brienzersee,Glyssibach,10,10,791,river intersection
+wycheley,Brienzersee,Glyssibach,10,10,1200,river intersection
+route-13,Lago Maggiore,Riale Brima,9,9,1320,river intersection
+ascona-traghetto-spiaggia,Lago Maggiore,Riale Brima,9,9,1427,river intersection
+sentiero-giro-del-golf-spiaggia,Lago Maggiore,Maggia,4,5,1199,river intersection
+isole-di-brissago-porto,Lago Maggiore,not available,10,10,95,river intersection
+pacha-mama-gerra,Lago Maggiore,not available,10,10,308,river intersection
+gerra-gambarogno,Lago Maggiore,not available,10,10,1473,river intersection
+san-nazzaro-gambarogno,Lago Maggiore,not available,10,10,1346,river intersection
+pacha-mama-gerra,Lago Maggiore,not available,9,9,118,river intersection
+gerra-gambarogno,Lago Maggiore,not available,9,9,207,river intersection
+san-nazzaro-gambarogno,Lago Maggiore,not available,9,9,1331,river intersection
+vira-gambarogno,Lago Maggiore,not available,9,9,1170,river intersection
+vira-spiaggia-left-of-river,Lago Maggiore,not available,9,9,1024,river intersection
+magadino-lido,Lago Maggiore,not available,9,9,1476,river intersection
+magadino-lido,Lago Maggiore,Ticino,3,4,819,river intersection
+magadino-lido,Lago Maggiore,Isolone,10,10,1108,river intersection
+rivapiana,Lago Maggiore,Navegna,9,9,1195,river intersection
+rivapiana,Lago Maggiore,Riale Ramnosa,10,10,1126,river intersection
+rivapiana,Lago Maggiore,Riale Rabissale,10,10,590,river intersection
+rivapiana,Lago Maggiore,Ramogna,10,10,459,river intersection
+walensee_walenstadt_wysse,Walensee,Helgenbach,10,10,95,river intersection
+seemuhlestrasse-strand,Walensee,Helgenbach,10,10,1261,river intersection
+seez,Walensee,Helgenbach,10,10,349,river intersection
+gasi-strand,Walensee,Flybach,9,9,1167,river intersection
+linthdammweg,Walensee,Flybach,9,9,475,river intersection
+seeflechsen,Walensee,Flybach,9,9,1110,river intersection
+flibach-river-right-bank,Walensee,Flybach,9,9,122,river intersection
+linth_route9brucke,Walensee,Flybach,9,9,1291,river intersection
+linth_mollis,Walensee,Flybach,9,9,116,river intersection
+gasi-strand,Walensee,Linthkanal,15,5,749,river intersection
+linthdammweg,Walensee,Linthkanal,15,5,1065,river intersection
+seeflechsen,Walensee,Linthkanal,15,5,463,river intersection
+flibach-river-right-bank,Walensee,Linthkanal,15,5,43,river intersection
+linth_mollis,Walensee,Linthkanal,15,5,872,river intersection
+gasi-strand,Walensee,Linth,5,5,1032,river intersection
+seeflechsen,Walensee,Linth,5,5,451,river intersection
+flibach-river-right-bank,Walensee,Linth,5,5,512,river intersection
+linth_route9brucke,Walensee,Linth,5,5,1294,river intersection
+linth_route9brucke,Walensee,Filzbach,9,9,210,river intersection
+muhlehorn-dorf,Walensee,Meerenbach,9,9,623,river intersection
+muhlehorn-dorf,Walensee,Rötibach,9,9,106,river intersection
+murg-bad,Walensee,Murgbach,8,8,1450,river intersection
+untertenzen,Walensee,Talbach,9,9,480,river intersection
+mols-rocks,Walensee,Talbach (Mols),9,9,538,river intersection
+walensee_walenstadt_wysse,Walensee,Seez,6,6,936,river intersection
+mols-rocks,Walensee,Seez,6,6,865,river intersection
+seemuhlestrasse-strand,Walensee,Seez,6,6,194,river intersection
+seez_spennwiesenbrucke,Walensee,Seez,6,6,1269,river intersection
+seez,Walensee,Seez,6,6,1152,river intersection
+walensee_walenstadt_wysse,Walensee,Kanal Platz,18,8,218,river intersection
+mols-rocks,Walensee,Kanal Platz,18,8,1016,river intersection
+seemuhlestrasse-strand,Walensee,Kanal Platz,18,8,1006,river intersection
+seez_spennwiesenbrucke,Walensee,Kanal Platz,18,8,1026,river intersection
+seez,Walensee,Kanal Platz,18,8,114,river intersection
+walensee_walenstadt_wysse,Walensee,Tscherlerbach,8,8,98,river intersection
+seemuhlestrasse-strand,Walensee,Tscherlerbach,8,8,899,river intersection
+seez_spennwiesenbrucke,Walensee,Tscherlerbach,8,8,1077,river intersection
+seez,Walensee,Tscherlerbach,8,8,160,river intersection
+la-pecherie,Le Léman,L'Aubonne,9,9,422,river intersection
+la-pecherie,Le Léman,L'Eau Noire,10,10,629,river intersection
+tiger-duck-beach,Le Léman,La Mèbre,8,8,333,river intersection
+parc-des-pierrettes,Le Léman,La Mèbre,8,8,333,river intersection
+plage-de-st-sulpice,Le Léman,La Mèbre,8,8,874,river intersection
+vidy-ruines,Le Léman,La Mèbre,8,8,449,river intersection
+plage-de-dorigny,Le Léman,La Mèbre,8,8,1450,river intersection
+vidy,Le Léman,La Mèbre,8,8,48,river intersection
+lacleman_vidy_santie,Le Léman,La Mèbre,8,8,1480,river intersection
+preverenges,Le Léman,Le Venoge,8,7,1263,river intersection
+preverenges-le-sout,Le Léman,Le Venoge,8,7,988,river intersection
+saint-sulpice,Le Léman,Le Venoge,8,7,586,river intersection
+tolochenaz,Le Léman,La Morges,9,9,668,river intersection
+la-morges,Le Léman,La Morges,9,9,1449,river intersection
+boiron,Le Léman,Le Boiron de Nyon,9,9,1316,river intersection
+tolochenaz,Le Léman,Le Boiron de Nyon,9,9,1039,river intersection
+grand-clos,Le Léman,Canal Stockalper,18,8,1131,river intersection
+grand-clos,Le Léman,Le Rhône,2,4,1114,river intersection
+vidy-ruines,Le Léman,Le Flon,10,10,751,river intersection
+vidy,Le Léman,Le Flon,10,10,960,river intersection
+lacleman_vidy_santie,Le Léman,Le Flon,10,10,267,river intersection
+rolle-plage,Le Léman,Le Flon de Tartegnin,10,10,31,river intersection
+baby-plage-geneva,Le Léman,Le Rhône,1,4,603,river intersection
+pont-sous-terre,Le Léman,Le Rhône,1,4,1491,river intersection
+baby-plage-ii-geneve,Le Léman,Le Rhône,1,4,289,river intersection
+rocky-plage,Le Léman,Le Rhône,1,4,48,river intersection
+quai-maria-belgia,Le Léman,La Veveyse,8,8,1049,river intersection
+oyonne,Le Léman,La Veveyse,8,8,335,river intersection
+arabie,Le Léman,La Veveyse,8,8,777,river intersection
+veveyse,Le Léman,La Veveyse,8,8,275,river intersection
+quai-maria-belgia,Le Léman,L'Ognona,10,10,153,river intersection
+anarchy-beach,Le Léman,L'Ognona,10,10,1484,river intersection
+oyonne,Le Léman,L'Ognona,10,10,1406,river intersection
+bain-des-dames,Le Léman,L'Ognona,10,10,1342,river intersection
+arabie,Le Léman,L'Ognona,10,10,145,river intersection
+veveyse,Le Léman,L'Ognona,10,10,25,river intersection
+le-port,Le Léman,L'Ognona,10,10,123,river intersection
+ognonnaz-1,Le Léman,L'Ognona,10,10,1342,river intersection
+maladaire,Le Léman,Baye de Clarens,9,9,1272,river intersection
+le-pierrier,Le Léman,Baye de Clarens,9,9,433,river intersection
+baye-de-clarens,Le Léman,Baye de Clarens,9,9,364,river intersection
+pierrier-sud,Le Léman,Baye de Clarens,9,9,99,river intersection
+baye-de-montreux-g,Le Léman,Baye de Montreux,9,9,1281,river intersection
+baye-de-montreux-d,Le Léman,Baye de Montreux,9,9,1399,river intersection
+grand-clos,Le Léman,Le Tové,10,10,1372,river intersection
+zuerichsee_staefa_hennm,Zürichsee,Tobelbach,9,9,94,river intersection
+zurichsee_kusnachterhorn_thirkell-whitej,Zürichsee,Dorfbach,9,9,68,river intersection
+kusnachter-dorfbach-tobelweg-1-4,Zürichsee,Dorfbach,9,9,41,river intersection
+zurichsee_wollishofen_langendorfm,Zürichsee,Wildbach,9,9,847,river intersection
+zuerichsee_zurich_kullg,Zürichsee,Wildbach,9,9,115,river intersection
+zurichsee-feldeggstr-banningersand,Zürichsee,Wildbach,9,9,1133,river intersection
+zurcher-strand,Zürichsee,Limmat,4,4,173,river intersection
+zuerichsee_zurich_kullg,Zürichsee,Limmat,4,4,259,river intersection
+zurichsee-feldeggstr-banningersand,Zürichsee,Limmat,4,4,877,river intersection
+sihl_zuerich_scherfs,Zürichsee,Limmat,4,4,66,river intersection
+zurcher-strand,Zürichsee,Schanzengraben,20,10,494,river intersection
+zuerichsee_zurich_kullg,Zürichsee,Schanzengraben,20,10,1464,river intersection
+zurichsee-feldeggstr-banningersand,Zürichsee,Schanzengraben,20,10,816,river intersection
+sihl_zuerich_scherfs,Zürichsee,Schanzengraben,20,10,1130,river intersection
+zuerichsee_richterswil_benkoem_2,Zürichsee,Reidbach,10,10,87,river intersection
+zuerichsee_waedenswil_colomboc_1,Zürichsee,Reidbach,10,10,1229,river intersection
+pfafikon-bad,Zürichsee,Sarenbach,9,9,473,river intersection
+pfafikon-bad,Zürichsee,Staldenbach,9,9,615,river intersection
+schmerikon-bahnhof-strand,Zürichsee,Alt Linth,17,7,271,river intersection
+aabach,Zürichsee,Alt Linth,17,7,425,river intersection
+schmerikon-bahnhof-strand,Zürichsee,Linthkanal,5,5,848,river intersection
+aabach,Zürichsee,Linthkanal,5,5,489,river intersection
+schmerikon-bahnhof-strand,Zürichsee,Steinenbach,17,7,741,river intersection
+aabach,Zürichsee,Steinenbach,17,7,290,river intersection
+schmerikon-bahnhof-strand,Zürichsee,Aabach,7,8,671,river intersection
+aabach,Zürichsee,Aabach,7,8,234,river intersection
+rastplatz-stampf,Zürichsee,Wagnerbach,9,9,665,river intersection
+jona-river-rastplatz,Zürichsee,Wagnerbach,9,9,1016,river intersection
+strandbeiz,Zürichsee,Wagnerbach,9,9,513,river intersection
+rastplatz-stampf,Zürichsee,Jona,7,7,1454,river intersection
+jona-river-rastplatz,Zürichsee,Jona,7,7,1395,river intersection
+strandbeiz,Zürichsee,Jona,7,7,1497,river intersection
+foce-del-cassarate,Lago di Lugano,Cassarate,7,7,1087,river intersection
+lido,Lago di Lugano,Cassarate,7,7,48,river intersection
+lugano-centro,Lago di Lugano,Cassarate,7,7,23,river intersection
+spiaggia-parco-ciani,Lago di Lugano,Cassarate,7,7,867,river intersection
+mullermatte,Bielersee,La Thielle,6,6,841,river intersection
+strandboden-biel,Bielersee,La Thielle,6,6,60,river intersection
+nidau-strand,Bielersee,La Thielle,6,6,633,river intersection
+mullermatte,Bielersee,La Suze,7,7,639,river intersection
+strandboden-biel,Bielersee,La Suze,7,7,283,river intersection
+nidau-strand,Bielersee,La Suze,7,7,396,river intersection
+mullermatte,Bielersee,Aare,14,4,545,river intersection
+strandboden-biel,Bielersee,Aare,14,4,137,river intersection
+nidau-strand,Bielersee,Aare,14,4,577,river intersection
+zugerseecholler_cham_blarerm,Zugersee,Lorze,6,5,895,river intersection
+evole-plage,Lac de Neuchâtel,Le Seyon,8,8,510,river intersection
+plage-de-serriere,Lac de Neuchâtel,Le Seyon,8,8,240,river intersection
+pointe-dareuse,Lac de Neuchâtel,L'Areuse,7,7,1247,river intersection
+pointe-dareuse,Lac de Neuchâtel,Le Vivier,9,7,53,river intersection
+signalpain,Lac de Neuchâtel,La Brine,9,9,1210,river intersection
+pecos-plage,Lac de Neuchâtel,La Brine,9,9,91,river intersection
+signalpain,Lac de Neuchâtel,Le Bey,9,9,1428,river intersection
+pecos-plage,Lac de Neuchâtel,Le Bey,9,9,798,river intersection
+la-petite-plage,Lac de Neuchâtel,La Thielle,6,6,1310,river intersection
+signalpain,Lac de Neuchâtel,La Thielle,6,6,1314,river intersection
+la-petite-plage,Lac de Neuchâtel,Canal Oriental,18,8,1065,river intersection
+signalpain,Lac de Neuchâtel,Canal Oriental,18,8,454,river intersection
+la-petite-plage,Lac de Neuchâtel,Le Buron,8,8,663,river intersection
+signalpain,Lac de Neuchâtel,Le Buron,8,8,96,river intersection
+nouvelle-plage,Lac de Neuchâtel,Ruisseau de Crêt Moron,10,10,89,river intersection
+impromptu_cudrefin,Lac de Neuchâtel,Ruisseau de la Molliette,9,9,798,river intersection
+neuenburgersee_cudrefin_mattera,Lac de Neuchâtel,Ruisseau de la Molliette,9,9,16,river intersection
+weissenau-neuhaus,Thunersee,Schifffahrtskanal,20,10,633,river intersection
+weissenau-neuhaus,Thunersee,Aare,5,4,1410,river intersection
+weissenau-neuhaus,Thunersee,Lombach,7,7,1253,river intersection
+sundbach-strand,Thunersee,Lombach,7,7,931,river intersection
+sundbach-strand,Thunersee,not available,9,9,1459,river intersection
+sundbach-strand,Thunersee,not available,10,10,43,river intersection
+sundbach-strand,Thunersee,Chrutbach,10,10,165,river intersection
+thun-strandbad,Thunersee,Hünibach,9,9,31,river intersection
+thun-strandbad,Thunersee,Aare,5,4,1022,river intersection
+delta-park,Thunersee,Kander,5,5,1289,river intersection
+camping-gwatt-strand,Thunersee,Kander,5,5,1374,river intersection
+bielersee_vinelz_fankhausers,Bielersee,Mülibach,10,10,1240,river intersection
+erlach-camping-strand,Bielersee,Mülibach,10,10,483,river intersection
+camp-des-peches,Bielersee,Canal de la Thielle,15,5,688,river intersection
+gals-reserve,Bielersee,Canal de la Thielle,15,5,1156,river intersection
+erlach-camping-strand,Bielersee,Ruisseau de Vaux,9,9,777,river intersection
+camp-des-peches,Bielersee,Ruisseau de Vaux,9,9,291,river intersection
+gals-reserve,Bielersee,Ruisseau de Vaux,9,9,816,river intersection
+unterdsee_ermatingen_brunkem,Untersee,Anderbach,8,8,329,river intersection
+bodensee_steinach_dolder_a,Bodensee,Steinach,9,9,840,river intersection
+bodensee_horn_huberm,Bodensee,Steinach,9,9,696,river intersection
+bodensee_steinach_dolder_a,Bodensee,Aach (Arbon),8,8,889,river intersection
+greifensee_fallanden_meistery,Greifensee,Glatt,7,6,787,river intersection
+greifensee_fallanden_simmenc,Greifensee,Glatt,7,6,918,river intersection
+katzensee_regensdorfzuerichaffoltern_stueberj,Katzensee,Furtbach,9,9,1065,river intersection
+greifensee_uster_fischerb_-2,Greifensee,Dorfbach,10,10,445,river intersection
+greifensee_uster_fischerb_1,Greifensee,Dorfbach,10,10,1158,river intersection
+greifensee_maur_simmenc,Greifensee,Dorfbach,9,9,1322,river intersection
+greifensee_maur_simmenc,Greifensee,Mönchaltorfer Aa,8,8,1047,river intersection
+sempachersee_sempach_tampec,Sempachsee,Lipperütibach,9,9,1240,river intersection
+sempachersee_sempach_tampec,Sempachsee,Gross Aa,8,8,1269,river intersection
+sempachersee_sempach_tampec,Sempachsee,Chli Aa,9,9,465,river intersection
