@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2. Modèles linéaires &#8212; Plaststock</title>
+    <title>Modèles linéaires &#8212; Plaststock</title>
   
   
   
@@ -64,8 +64,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'regression';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="3. Déchets Sauvages" href="macro_object_results.html" />
-    <link rel="prev" title="1. PCA/AFDM" href="pca.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -143,10 +141,9 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analyses</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="pca.html">1. PCA/AFDM</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Modèles linéaires</a></li>
-<li class="toctree-l1"><a class="reference internal" href="macro_object_results.html">3. Déchets Sauvages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="macro_object_results.html">2. Déchets Sauvages</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Annex</span></p>
 <ul class="nav bd-sidenav">
@@ -301,14 +298,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-considerations-liste-non-exhaustive">2.1. Les considérations (liste non exhaustive)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#valeurs-non-negatives">2.1.1. Valeurs non négatives</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#colinearite-des-variables-independantes">2.1.2. Colinéarité des variables indépendantes</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-categorielles">2.1.3. Variables catégorielles</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-donnees">2.1.4. Les données</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-considerations-liste-non-exhaustive">Les considérations (liste non exhaustive)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#valeurs-non-negatives">Valeurs non négatives</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#colinearite-des-variables-independantes">Colinéarité des variables indépendantes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-categorielles">Variables catégorielles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-donnees">Les données</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#colinearite">2.2. Colinéarité</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#colinearite">Colinéarité</a></li>
 </ul>
             </nav>
         </div>
@@ -369,7 +366,7 @@ document.write(`
 </details>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="modeles-lineaires">
-<h1><span class="section-number">2. </span>Modèles linéaires<a class="headerlink" href="#modeles-lineaires" title="Permalink to this headline">#</a></h1>
+<h1>Modèles linéaires<a class="headerlink" href="#modeles-lineaires" title="Permalink to this headline">#</a></h1>
 <p>Les méthodes suivantes sont destinées à la régression dans laquelle la valeur cible est censée être une combinaison linéaire des caractéristiques. Si <span class="math notranslate nohighlight">\(\hat{y}\)</span> est la valeur prédite: <span class="math notranslate nohighlight">\(\hat{y}(w, x) = w_0 + w_1 x_1 + ... + w_p x_p\)</span></p>
 <p><strong>Méthodes :</strong></p>
 <ol class="arabic simple">
@@ -377,9 +374,9 @@ document.write(`
 <li><p>sklearn: <a class="reference external" href="https://scikit-learn.org/stable/modules/linear_model.html">scikit-learn</a></p></li>
 </ol>
 <div class="section" id="les-considerations-liste-non-exhaustive">
-<h2><span class="section-number">2.1. </span>Les considérations (liste non exhaustive)<a class="headerlink" href="#les-considerations-liste-non-exhaustive" title="Permalink to this headline">#</a></h2>
+<h2>Les considérations (liste non exhaustive)<a class="headerlink" href="#les-considerations-liste-non-exhaustive" title="Permalink to this headline">#</a></h2>
 <div class="section" id="valeurs-non-negatives">
-<h3><span class="section-number">2.1.1. </span>Valeurs non négatives<a class="headerlink" href="#valeurs-non-negatives" title="Permalink to this headline">#</a></h3>
+<h3>Valeurs non négatives<a class="headerlink" href="#valeurs-non-negatives" title="Permalink to this headline">#</a></h3>
 <p>Les coefficients doivent être non négatifs parce qu’ils représentent des quantités physiques ou naturelles non négatives.</p>
 <ol class="arabic simple">
 <li><p>distance</p></li>
@@ -389,13 +386,13 @@ document.write(`
 </ol>
 </div>
 <div class="section" id="colinearite-des-variables-independantes">
-<h3><span class="section-number">2.1.2. </span>Colinéarité des variables indépendantes<a class="headerlink" href="#colinearite-des-variables-independantes" title="Permalink to this headline">#</a></h3>
+<h3>Colinéarité des variables indépendantes<a class="headerlink" href="#colinearite-des-variables-independantes" title="Permalink to this headline">#</a></h3>
 <p>La multicolinéarité est un problème courant dans l’analyse de régression lorsque les variables indépendantes d’un modèle de régression sont fortement corrélées entre elles. Cela peut créer des problèmes dans l’interprétation du modèle et la stabilité des estimations des coefficients.</p>
 <p><strong>Variables catégorielles ordinales :</strong> Avec les variables catégorielles ordinales (c’est-à-dire les catégories avec un ordre significatif), la multicolinéarité peut se produire si les catégories sont étroitement espacées ou s’il existe une forte corrélation entre la variable ordinale et une autre variable continue ou catégorielle.</p>
 <p>L’utilisation de l’analyes des composantes principale (ACP) avec la régression linéaire peut aider à atténuer la multicolinéarité et à réduire le risque de surajustement lorsque vous avez un grand nombre de caractéristiques corrélées. Toutefois, il est essentiel de trouver un équilibre entre le nombre de composantes principales retenues et la variance qu’elles expliquent, car une réduction trop agressive de la dimensionnalité peut entraîner une perte d’informations et de pouvoir prédictif.</p>
 </div>
 <div class="section" id="variables-categorielles">
-<h3><span class="section-number">2.1.3. </span>Variables catégorielles<a class="headerlink" href="#variables-categorielles" title="Permalink to this headline">#</a></h3>
+<h3>Variables catégorielles<a class="headerlink" href="#variables-categorielles" title="Permalink to this headline">#</a></h3>
 <p>L’analyse de régression porte généralement sur des variables dépendantes et indépendantes continues (numériques). Si ces résultats comportent des variables indépendantes catégorielles, il existe des techniques et des modèles spécifiques pour les intégrer dans une analyse de régression. Les variables catégorielles peuvent être nominales (catégories non ordonnées) ou ordinales (catégories ordonnées).</p>
 <p><strong>approches courantes pour incorporer des variables catégorielles dans l’analyse:</strong></p>
 <p><strong>Régression par variable muette :</strong> (variable indicatrice) : Il s’agit de l’approche la plus courante lorsqu’il s’agit de variables catégorielles nominales. Vous créez des variables fictives binaires (0 ou 1) pour représenter les catégories. Pour une variable catégorielle comportant k catégories, vous créez k-1 variables nominales. La catégorie omise sert de catégorie de référence. Chaque variable muette indique si une observation appartient ou non à une catégorie spécifique. Ces variables binaires sont ensuite incluses en tant que variables prédictives dans le modèle de régression.</p>
@@ -403,7 +400,7 @@ document.write(`
 <p><strong>Régression ordinale :</strong> Les modèles de régression ordinale s’addresse dans les cas dont les catégories ont un ordre naturel (par exemple, faible, moyen, élevé). Ces modèles tiennent compte de la nature ordinale de la variable et estiment l’impact des catégories sur la variable dépendante en tenant compte de leur ordre.</p>
 </div>
 <div class="section" id="les-donnees">
-<h3><span class="section-number">2.1.4. </span>Les données<a class="headerlink" href="#les-donnees" title="Permalink to this headline">#</a></h3>
+<h3>Les données<a class="headerlink" href="#les-donnees" title="Permalink to this headline">#</a></h3>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
@@ -511,7 +508,7 @@ document.write(`
 </div>
 </div>
 <div class="section" id="colinearite">
-<h2><span class="section-number">2.2. </span>Colinéarité<a class="headerlink" href="#colinearite" title="Permalink to this headline">#</a></h2>
+<h2>Colinéarité<a class="headerlink" href="#colinearite" title="Permalink to this headline">#</a></h2>
 <p><strong>Les données sont fournies dans une catégorie ordinale pour la plupart des variables catégorielles.</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1045,24 +1042,6 @@ numpy      : 1.24.2
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="pca.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>PCA/AFDM</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="macro_object_results.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3. </span>Déchets Sauvages</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div></div>
   
 </div>
@@ -1081,14 +1060,14 @@ numpy      : 1.24.2
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-considerations-liste-non-exhaustive">2.1. Les considérations (liste non exhaustive)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#valeurs-non-negatives">2.1.1. Valeurs non négatives</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#colinearite-des-variables-independantes">2.1.2. Colinéarité des variables indépendantes</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-categorielles">2.1.3. Variables catégorielles</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-donnees">2.1.4. Les données</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-considerations-liste-non-exhaustive">Les considérations (liste non exhaustive)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#valeurs-non-negatives">Valeurs non négatives</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#colinearite-des-variables-independantes">Colinéarité des variables indépendantes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-categorielles">Variables catégorielles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-donnees">Les données</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#colinearite">2.2. Colinéarité</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#colinearite">Colinéarité</a></li>
 </ul>
   </nav></div>
 

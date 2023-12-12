@@ -7,7 +7,6 @@ parts:
   numbered: true
   chapters:
   - file: pca
-  - file: regression
   - file: macro_object_results
 - caption: Annex
   numbered: False
