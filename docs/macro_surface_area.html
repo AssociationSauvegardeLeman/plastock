@@ -1,0 +1,3335 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2. Macros déchets m² &#8212; Plaststock</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'macro_surface_area';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="3. Résultats précédents" href="macro_object_results.html" />
+    <link rel="prev" title="1. PCA/AFDM" href="pca.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Plaststock</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analyses</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="pca.html">1. PCA/AFDM</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Macros déchets m²</a></li>
+<li class="toctree-l1"><a class="reference internal" href="macro_object_results.html">3. Résultats précédents</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Annex</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="random_variables.html">Variables aléatoires</a></li>
+<li class="toctree-l1"><a class="reference internal" href="location_summary.html">Microplastiques plage et position</a></li>
+<li class="toctree-l1"><a class="reference internal" href="location_attributes.html">Microplastiques plage et attribut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="macro_summary.html">Macro déchets plage et position</a></li>
+<li class="toctree-l1"><a class="reference internal" href="macro_attributes.html">Macro déchets plage et attribut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/hammerdirt-analyst/plastock" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hammerdirt-analyst/plastock/issues/new?title=Issue%20on%20page%20%2Fmacro_surface_area.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Macros déchets m²</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resume-des-resultats">2.1. Resumé des résultats</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#differences-entre-les-types-de-plage">2.1.1. Différences entre les types de plage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exigences-particulieres-donnees-plastock">2.1.2. Exigences particulières données plastock</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#la-distribution-de-la-variable-de-substrat-apres-la-reattribution-des-12-echantillons-en-question">2.1.2.1. La distribution de la variable de substrat après la réattribution des 12 échantillons en question.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-objets-trouves-en-fonction-de-leur-utilisation">2.2. Les objets trouvés en fonction de leur utilisation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-objets-les-plus-courants-plastock">2.3. Les objets les plus courants Plastock</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-des-objets-les-plus-courants">2.3.1. Définition des <em>objets les plus courants</em></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimation-des-parametres-et-predictions">2.4. Estimation des paramètres et prédictions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#random-forest">2.4.1. Random Forest</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#approximation-bayesienne-par-grille">2.4.2. Approximation Bayésienne par Grille</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="cell tag_remove-input docutils container">
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="macros-dechets-m2">
+<h1><span class="section-number">2. </span>Macros déchets m²<a class="headerlink" href="#macros-dechets-m2" title="Permalink to this headline">#</a></h1>
+<div class="section" id="resume-des-resultats">
+<h2><span class="section-number">2.1. </span>Resumé des résultats<a class="headerlink" href="#resume-des-resultats" title="Permalink to this headline">#</a></h2>
+<div class="section" id="differences-entre-les-types-de-plage">
+<h3><span class="section-number">2.1.1. </span>Différences entre les types de plage<a class="headerlink" href="#differences-entre-les-types-de-plage" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="exigences-particulieres-donnees-plastock">
+<h3><span class="section-number">2.1.2. </span>Exigences particulières données plastock<a class="headerlink" href="#exigences-particulieres-donnees-plastock" title="Permalink to this headline">#</a></h3>
+<p>La quantité de déchets sauvages par mètre de plage correspond au nombre total d’objets identifiés divisé par la longueur du rivage. Pour les données Plastock, cela signifie que nous devons considérer la position un (ligne d’eau) et la position deux (plage sèche) ensemble. De plus, il y a <strong>douze échantillons où le substrat était différent entre la position un et la position deux</strong>. Par conséquent, ces 12 échantillons ont tous été classés dans la catégorie Sables grossiers.</p>
+<div class="section" id="la-distribution-de-la-variable-de-substrat-apres-la-reattribution-des-12-echantillons-en-question">
+<h4><span class="section-number">2.1.2.1. </span>La distribution de la variable de substrat après la réattribution des 12 échantillons en question.<a class="headerlink" href="#la-distribution-de-la-variable-de-substrat-apres-la-reattribution-des-12-echantillons-en-question" title="Permalink to this headline">#</a></h4>
+<ol class="arabic simple">
+<li><p>Sables fins : 27%</p></li>
+<li><p>Sables Grossiers : 32%</p></li>
+<li><p>Graviers : 16%</p></li>
+<li><p>Cailloux : 25%</p></li>
+</ol>
+<p>La variable “position” n’est pas prise en compte. Cela signifie que les déchets par mètre carré sont considérés comme la somme de la surface de la position 1 et de la surface de la position 2 pour chaque échantillon <a class="reference internal" href="macro_attributes.html#macro-attributes"><span class="std std-ref">Macro déchets plage et attribut</span></a>.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+#T_0c9dd tr:nth-child(even) {
+  background-color: rgba(139, 69, 19, 0.08);
+}
+#T_0c9dd tr:nth-child(odd) {
+  background: #FFF;
+}
+#T_0c9dd tr {
+  font-size: 14px;
+  padding: 10px;
+}
+#T_0c9dd th:nth-child(1) {
+  background-color: #FFF;
+}
+#T_0c9dd caption {
+  caption-side: bottom;
+  font-size: 16px;
+  text-align: left;
+  margin-top: 15px;
+}
+</style>
+<table id="T_0c9dd">
+  <caption>Les valeurs doivent correspondre au table A4-1 dans l'annexe 'Macro déchets plage et attribut'</caption>
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_0c9dd_level0_col0" class="col_heading level0 col0" >count</th>
+      <th id="T_0c9dd_level0_col1" class="col_heading level0 col1" >mean</th>
+      <th id="T_0c9dd_level0_col2" class="col_heading level0 col2" >std</th>
+      <th id="T_0c9dd_level0_col3" class="col_heading level0 col3" >min</th>
+      <th id="T_0c9dd_level0_col4" class="col_heading level0 col4" >25%</th>
+      <th id="T_0c9dd_level0_col5" class="col_heading level0 col5" >50%</th>
+      <th id="T_0c9dd_level0_col6" class="col_heading level0 col6" >75%</th>
+      <th id="T_0c9dd_level0_col7" class="col_heading level0 col7" >max</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_0c9dd_level0_row0" class="row_heading level0 row0" >1</th>
+      <td id="T_0c9dd_row0_col0" class="data row0 col0" >27.00</td>
+      <td id="T_0c9dd_row0_col1" class="data row0 col1" >1.04</td>
+      <td id="T_0c9dd_row0_col2" class="data row0 col2" >0.88</td>
+      <td id="T_0c9dd_row0_col3" class="data row0 col3" >0.09</td>
+      <td id="T_0c9dd_row0_col4" class="data row0 col4" >0.46</td>
+      <td id="T_0c9dd_row0_col5" class="data row0 col5" >0.70</td>
+      <td id="T_0c9dd_row0_col6" class="data row0 col6" >1.32</td>
+      <td id="T_0c9dd_row0_col7" class="data row0 col7" >3.64</td>
+    </tr>
+    <tr>
+      <th id="T_0c9dd_level0_row1" class="row_heading level0 row1" >2</th>
+      <td id="T_0c9dd_row1_col0" class="data row1 col0" >31.00</td>
+      <td id="T_0c9dd_row1_col1" class="data row1 col1" >0.45</td>
+      <td id="T_0c9dd_row1_col2" class="data row1 col2" >0.42</td>
+      <td id="T_0c9dd_row1_col3" class="data row1 col3" >0.08</td>
+      <td id="T_0c9dd_row1_col4" class="data row1 col4" >0.18</td>
+      <td id="T_0c9dd_row1_col5" class="data row1 col5" >0.38</td>
+      <td id="T_0c9dd_row1_col6" class="data row1 col6" >0.52</td>
+      <td id="T_0c9dd_row1_col7" class="data row1 col7" >1.93</td>
+    </tr>
+    <tr>
+      <th id="T_0c9dd_level0_row2" class="row_heading level0 row2" >3</th>
+      <td id="T_0c9dd_row2_col0" class="data row2 col0" >16.00</td>
+      <td id="T_0c9dd_row2_col1" class="data row2 col1" >0.32</td>
+      <td id="T_0c9dd_row2_col2" class="data row2 col2" >0.36</td>
+      <td id="T_0c9dd_row2_col3" class="data row2 col3" >0.03</td>
+      <td id="T_0c9dd_row2_col4" class="data row2 col4" >0.10</td>
+      <td id="T_0c9dd_row2_col5" class="data row2 col5" >0.20</td>
+      <td id="T_0c9dd_row2_col6" class="data row2 col6" >0.30</td>
+      <td id="T_0c9dd_row2_col7" class="data row2 col7" >1.39</td>
+    </tr>
+    <tr>
+      <th id="T_0c9dd_level0_row3" class="row_heading level0 row3" >4</th>
+      <td id="T_0c9dd_row3_col0" class="data row3 col0" >36.00</td>
+      <td id="T_0c9dd_row3_col1" class="data row3 col1" >0.51</td>
+      <td id="T_0c9dd_row3_col2" class="data row3 col2" >0.56</td>
+      <td id="T_0c9dd_row3_col3" class="data row3 col3" >0.04</td>
+      <td id="T_0c9dd_row3_col4" class="data row3 col4" >0.10</td>
+      <td id="T_0c9dd_row3_col5" class="data row3 col5" >0.21</td>
+      <td id="T_0c9dd_row3_col6" class="data row3 col6" >0.72</td>
+      <td id="T_0c9dd_row3_col7" class="data row3 col7" >1.96</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="les-objets-trouves-en-fonction-de-leur-utilisation">
+<h2><span class="section-number">2.2. </span>Les objets trouvés en fonction de leur utilisation<a class="headerlink" href="#les-objets-trouves-en-fonction-de-leur-utilisation" title="Permalink to this headline">#</a></h2>
+<p>Le type d’utilité est basé sur l’utilisation de l’objet avant qu’il ne soit jeté ou sur la description de l’objet si l’utilisation initiale est indéterminée. Les objets identifiés sont classés dans l’une des 260 catégories prédéfinies. Les catégories sont regroupées en fonction de leur utilisation ou de leur description.</p>
+<ul class="simple">
+<li><p>Eaux usées : objets rejetés par les stations d’épuration, y compris les objets susceptibles d’être jetés dans les toilettes.</p></li>
+<li><p>Microplastiques (&lt; 5 mm) : plastiques fragmentés et résines plastiques de préproduction.</p></li>
+<li><p>Infrastructure : objets liés à la construction et à l’entretien des bâtiments, des routes et des réseaux d’eau et d’électricité.</p></li>
+<li><p>Alimentation et boisson : tous les matériaux liés à la consommation de nourriture et de boissons.</p></li>
+<li><p>Agriculture : principalement des feuilles industrielles, par exemple, paillis et bâches de culture, serres, fumigation du sol, films d’emballage de balles. Comprend les plastiques durs pour les clôtures agricoles, les pots de fleurs, etc.</p></li>
+<li><p>Tabac : principalement des filtres de cigarettes, y compris tous les matériaux liés au tabagisme.</p></li>
+<li><p>Loisirs : objets liés au sport et aux loisirs, par exemple, pêche, chasse, randonnée, etc.</p></li>
+<li><p>Emballages non alimentaires et non liés au tabac : matériaux d’emballage non identifiés comme étant liés à la nourriture, aux boissons ou au tabac.</p></li>
+<li><p>Fragments de plastique : morceaux de plastique d’origine ou d’utilisation indéterminée.</p></li>
+<li><p>Objets personnels : accessoires, articles d’hygiène et vêtements.</p></li>
+</ul>
+<p>Pour des informations détaillées sur la composition des groupes, consultez <a class="reference external" href="https://hammerdirt-analyst.github.io/IQAASL-End-0f-Sampling-2021/code_groups.html">IQAASL - DE</a> ou <a class="reference external" href="https://www.plagespropres.ch/code_groups.html">IQAASL - EN</a>.
+<br></p>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+#T_4f376 tr:nth-child(even) {
+  background-color: rgba(139, 69, 19, 0.08);
+}
+#T_4f376 tr:nth-child(odd) {
+  background: #FFF;
+}
+#T_4f376 tr {
+  font-size: 10px;
+}
+#T_4f376 th {
+  background-color: #FFF;
+  font-size: 12px;
+  text-align: left;
+  width: auto;
+}
+#T_4f376 td {
+  padding: 4px;
+  font-size: 12px;
+}
+#T_4f376 caption {
+  caption-side: bottom;
+  font-size: 1em;
+  text-align: left;
+}
+#T_4f376_row0_col0, #T_4f376_row0_col1, #T_4f376_row0_col2, #T_4f376_row0_col3, #T_4f376_row0_col4, #T_4f376_row0_col5, #T_4f376_row0_col6, #T_4f376_row0_col7, #T_4f376_row0_col8, #T_4f376_row0_col9, #T_4f376_row0_col11, #T_4f376_row0_col12, #T_4f376_row1_col6, #T_4f376_row2_col5, #T_4f376_row2_col6, #T_4f376_row3_col5, #T_4f376_row3_col11, #T_4f376_row4_col1, #T_4f376_row4_col5, #T_4f376_row4_col9, #T_4f376_row5_col2, #T_4f376_row5_col5, #T_4f376_row5_col9, #T_4f376_row7_col5, #T_4f376_row7_col9, #T_4f376_row7_col11, #T_4f376_row8_col5, #T_4f376_row9_col0, #T_4f376_row9_col1, #T_4f376_row9_col2, #T_4f376_row9_col3, #T_4f376_row9_col4, #T_4f376_row9_col5, #T_4f376_row9_col6, #T_4f376_row9_col7, #T_4f376_row9_col8, #T_4f376_row9_col9, #T_4f376_row9_col10, #T_4f376_row9_col11, #T_4f376_row9_col12, #T_4f376_row10_col2, #T_4f376_row10_col5, #T_4f376_row10_col6, #T_4f376_row10_col11 {
+  background-color: rgba(255,255,255, .5);
+  color: black;
+}
+#T_4f376_row0_col10, #T_4f376_row1_col1, #T_4f376_row2_col1, #T_4f376_row2_col11, #T_4f376_row3_col1, #T_4f376_row4_col7, #T_4f376_row4_col11, #T_4f376_row5_col7, #T_4f376_row7_col7, #T_4f376_row10_col7, #T_4f376_row10_col8 {
+  background-color: rgba(254,254,254, .5);
+  color: black;
+}
+#T_4f376_row1_col0 {
+  background-color: rgba(200,200,200, .5);
+  color: black;
+}
+#T_4f376_row1_col2, #T_4f376_row2_col12, #T_4f376_row7_col8 {
+  background-color: rgba(248,248,248, .5);
+  color: black;
+}
+#T_4f376_row1_col3 {
+  background-color: rgba(180,180,180, .5);
+  color: black;
+}
+#T_4f376_row1_col4 {
+  background-color: rgba(242,242,242, .5);
+  color: black;
+}
+#T_4f376_row1_col5 {
+  background-color: rgba(237,237,237, .5);
+  color: black;
+}
+#T_4f376_row1_col7, #T_4f376_row3_col6, #T_4f376_row4_col6, #T_4f376_row4_col8, #T_4f376_row5_col0, #T_4f376_row7_col6, #T_4f376_row8_col6 {
+  background-color: rgba(251,251,251, .5);
+  color: black;
+}
+#T_4f376_row1_col8, #T_4f376_row7_col10, #T_4f376_row8_col12 {
+  background-color: rgba(246,246,246, .5);
+  color: black;
+}
+#T_4f376_row1_col9, #T_4f376_row2_col2, #T_4f376_row4_col2, #T_4f376_row5_col3, #T_4f376_row7_col12, #T_4f376_row10_col1 {
+  background-color: rgba(252,252,252, .5);
+  color: black;
+}
+#T_4f376_row1_col10 {
+  background-color: rgba(36,36,36, .5);
+  color: black;
+}
+#T_4f376_row1_col11, #T_4f376_row2_col7, #T_4f376_row3_col4, #T_4f376_row4_col4, #T_4f376_row4_col12, #T_4f376_row5_col1, #T_4f376_row5_col4, #T_4f376_row5_col6, #T_4f376_row5_col11, #T_4f376_row5_col12, #T_4f376_row7_col1, #T_4f376_row7_col2, #T_4f376_row7_col4, #T_4f376_row10_col12 {
+  background-color: rgba(253,253,253, .5);
+  color: black;
+}
+#T_4f376_row1_col12, #T_4f376_row6_col2, #T_4f376_row6_col6, #T_4f376_row7_col0 {
+  background-color: rgba(245,245,245, .5);
+  color: black;
+}
+#T_4f376_row2_col0 {
+  background-color: rgba(219,219,219, .5);
+  color: black;
+}
+#T_4f376_row2_col3 {
+  background-color: rgba(167,167,167, .5);
+  color: black;
+}
+#T_4f376_row2_col4 {
+  background-color: rgba(222,222,222, .5);
+  color: black;
+}
+#T_4f376_row2_col8, #T_4f376_row8_col1 {
+  background-color: rgba(250,250,250, .5);
+  color: black;
+}
+#T_4f376_row2_col9 {
+  background-color: rgba(84,84,84, .5);
+  color: black;
+}
+#T_4f376_row2_col10 {
+  background-color: rgba(254,233,212, .5);
+  color: black;
+}
+#T_4f376_row3_col0 {
+  background-color: rgba(228,228,228, .5);
+  color: black;
+}
+#T_4f376_row3_col2, #T_4f376_row3_col12, #T_4f376_row5_col8, #T_4f376_row5_col10, #T_4f376_row8_col7, #T_4f376_row8_col11, #T_4f376_row10_col9 {
+  background-color: rgba(249,249,249, .5);
+  color: black;
+}
+#T_4f376_row3_col3 {
+  background-color: rgba(94,94,94, .5);
+  color: black;
+}
+#T_4f376_row3_col7 {
+  background-color: rgba(207,207,207, .5);
+  color: black;
+}
+#T_4f376_row3_col8 {
+  background-color: rgba(163,163,163, .5);
+  color: black;
+}
+#T_4f376_row3_col9, #T_4f376_row10_col4 {
+  background-color: rgba(243,243,243, .5);
+  color: black;
+}
+#T_4f376_row3_col10 {
+  background-color: rgba(41,41,41, .5);
+  color: black;
+}
+#T_4f376_row4_col0, #T_4f376_row6_col12 {
+  background-color: rgba(195,195,195, .5);
+  color: black;
+}
+#T_4f376_row4_col3 {
+  background-color: rgba(226,226,226, .5);
+  color: black;
+}
+#T_4f376_row4_col10 {
+  background-color: rgba(236,236,236, .5);
+  color: black;
+}
+#T_4f376_row6_col0 {
+  background-color: rgba(253,195,142, .5);
+  color: black;
+}
+#T_4f376_row6_col1, #T_4f376_row8_col3 {
+  background-color: rgba(224,224,224, .5);
+  color: black;
+}
+#T_4f376_row6_col3 {
+  background-color: rgba(254,239,224, .5);
+  color: black;
+}
+#T_4f376_row6_col4 {
+  background-color: rgba(164,164,164, .5);
+  color: black;
+}
+#T_4f376_row6_col5 {
+  background-color: rgba(175,175,175, .5);
+  color: black;
+}
+#T_4f376_row6_col7 {
+  background-color: rgba(95,95,95, .5);
+  color: black;
+}
+#T_4f376_row6_col8 {
+  background-color: rgba(204,204,204, .5);
+  color: black;
+}
+#T_4f376_row6_col9 {
+  background-color: rgba(90,90,90, .5);
+  color: black;
+}
+#T_4f376_row6_col10 {
+  background-color: rgba(127,39,4, .5);
+  color: black;
+}
+#T_4f376_row6_col11 {
+  background-color: rgba(241,241,241, .5);
+  color: black;
+}
+#T_4f376_row7_col3, #T_4f376_row8_col0, #T_4f376_row8_col2 {
+  background-color: rgba(247,247,247, .5);
+  color: black;
+}
+#T_4f376_row8_col4 {
+  background-color: rgba(179,179,179, .5);
+  color: black;
+}
+#T_4f376_row8_col8 {
+  background-color: rgba(239,239,239, .5);
+  color: black;
+}
+#T_4f376_row8_col9, #T_4f376_row10_col3 {
+  background-color: rgba(240,240,240, .5);
+  color: black;
+}
+#T_4f376_row8_col10 {
+  background-color: rgba(235,235,235, .5);
+  color: black;
+}
+#T_4f376_row10_col0 {
+  background-color: rgba(183,183,183, .5);
+  color: black;
+}
+#T_4f376_row10_col10 {
+  background-color: rgba(209,209,209, .5);
+  color: black;
+}
+</style>
+<table id="T_4f376">
+  <caption>Les résultats des objets par utilisation pour chaque ville du projet: Amphion à Hemance</caption>
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_4f376_level0_col0" class="col_heading level0 col0" >Amphion</th>
+      <th id="T_4f376_level0_col1" class="col_heading level0 col1" >Anthy</th>
+      <th id="T_4f376_level0_col2" class="col_heading level0 col2" >Aubonne</th>
+      <th id="T_4f376_level0_col3" class="col_heading level0 col3" >Bouveret</th>
+      <th id="T_4f376_level0_col4" class="col_heading level0 col4" >Clarens</th>
+      <th id="T_4f376_level0_col5" class="col_heading level0 col5" >Crans</th>
+      <th id="T_4f376_level0_col6" class="col_heading level0 col6" >Cully</th>
+      <th id="T_4f376_level0_col7" class="col_heading level0 col7" >Excenevex</th>
+      <th id="T_4f376_level0_col8" class="col_heading level0 col8" >Genève</th>
+      <th id="T_4f376_level0_col9" class="col_heading level0 col9" >Gland</th>
+      <th id="T_4f376_level0_col10" class="col_heading level0 col10" >Grangettes</th>
+      <th id="T_4f376_level0_col11" class="col_heading level0 col11" >Hermance</th>
+      <th id="T_4f376_level0_col12" class="col_heading level0 col12" >Cumulé</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_4f376_level0_row0" class="row_heading level0 row0" >Agriculture</th>
+      <td id="T_4f376_row0_col0" class="data row0 col0" >0,00</td>
+      <td id="T_4f376_row0_col1" class="data row0 col1" >0,00</td>
+      <td id="T_4f376_row0_col2" class="data row0 col2" >0,00</td>
+      <td id="T_4f376_row0_col3" class="data row0 col3" >0,00</td>
+      <td id="T_4f376_row0_col4" class="data row0 col4" >0,00</td>
+      <td id="T_4f376_row0_col5" class="data row0 col5" >0,00</td>
+      <td id="T_4f376_row0_col6" class="data row0 col6" >0,00</td>
+      <td id="T_4f376_row0_col7" class="data row0 col7" >0,00</td>
+      <td id="T_4f376_row0_col8" class="data row0 col8" >0,00</td>
+      <td id="T_4f376_row0_col9" class="data row0 col9" >0,00</td>
+      <td id="T_4f376_row0_col10" class="data row0 col10" >0,00</td>
+      <td id="T_4f376_row0_col11" class="data row0 col11" >0,00</td>
+      <td id="T_4f376_row0_col12" class="data row0 col12" >0,00</td>
+    </tr>
+    <tr>
+      <th id="T_4f376_level0_row1" class="row_heading level0 row1" >Nourriture et boissons</th>
+      <td id="T_4f376_row1_col0" class="data row1 col0" >0,15</td>
+      <td id="T_4f376_row1_col1" class="data row1 col1" >0,00</td>
+      <td id="T_4f376_row1_col2" class="data row1 col2" >0,03</td>
+      <td id="T_4f376_row1_col3" class="data row1 col3" >0,18</td>
+      <td id="T_4f376_row1_col4" class="data row1 col4" >0,05</td>
+      <td id="T_4f376_row1_col5" class="data row1 col5" >0,06</td>
+      <td id="T_4f376_row1_col6" class="data row1 col6" >0,00</td>
+      <td id="T_4f376_row1_col7" class="data row1 col7" >0,01</td>
+      <td id="T_4f376_row1_col8" class="data row1 col8" >0,03</td>
+      <td id="T_4f376_row1_col9" class="data row1 col9" >0,01</td>
+      <td id="T_4f376_row1_col10" class="data row1 col10" >0,39</td>
+      <td id="T_4f376_row1_col11" class="data row1 col11" >0,01</td>
+      <td id="T_4f376_row1_col12" class="data row1 col12" >0,04</td>
+    </tr>
+    <tr>
+      <th id="T_4f376_level0_row2" class="row_heading level0 row2" >Infrastructures</th>
+      <td id="T_4f376_row2_col0" class="data row2 col0" >0,11</td>
+      <td id="T_4f376_row2_col1" class="data row2 col1" >0,00</td>
+      <td id="T_4f376_row2_col2" class="data row2 col2" >0,01</td>
+      <td id="T_4f376_row2_col3" class="data row2 col3" >0,20</td>
+      <td id="T_4f376_row2_col4" class="data row2 col4" >0,10</td>
+      <td id="T_4f376_row2_col5" class="data row2 col5" >0,00</td>
+      <td id="T_4f376_row2_col6" class="data row2 col6" >0,00</td>
+      <td id="T_4f376_row2_col7" class="data row2 col7" >0,01</td>
+      <td id="T_4f376_row2_col8" class="data row2 col8" >0,02</td>
+      <td id="T_4f376_row2_col9" class="data row2 col9" >0,33</td>
+      <td id="T_4f376_row2_col10" class="data row2 col10" >0,49</td>
+      <td id="T_4f376_row2_col11" class="data row2 col11" >0,00</td>
+      <td id="T_4f376_row2_col12" class="data row2 col12" >0,03</td>
+    </tr>
+    <tr>
+      <th id="T_4f376_level0_row3" class="row_heading level0 row3" >Micro-plastiques (< 5mm)</th>
+      <td id="T_4f376_row3_col0" class="data row3 col0" >0,08</td>
+      <td id="T_4f376_row3_col1" class="data row3 col1" >0,00</td>
+      <td id="T_4f376_row3_col2" class="data row3 col2" >0,02</td>
+      <td id="T_4f376_row3_col3" class="data row3 col3" >0,32</td>
+      <td id="T_4f376_row3_col4" class="data row3 col4" >0,01</td>
+      <td id="T_4f376_row3_col5" class="data row3 col5" >0,00</td>
+      <td id="T_4f376_row3_col6" class="data row3 col6" >0,01</td>
+      <td id="T_4f376_row3_col7" class="data row3 col7" >0,13</td>
+      <td id="T_4f376_row3_col8" class="data row3 col8" >0,21</td>
+      <td id="T_4f376_row3_col9" class="data row3 col9" >0,04</td>
+      <td id="T_4f376_row3_col10" class="data row3 col10" >0,39</td>
+      <td id="T_4f376_row3_col11" class="data row3 col11" >0,00</td>
+      <td id="T_4f376_row3_col12" class="data row3 col12" >0,02</td>
+    </tr>
+    <tr>
+      <th id="T_4f376_level0_row4" class="row_heading level0 row4" >Emballage non alimentaire</th>
+      <td id="T_4f376_row4_col0" class="data row4 col0" >0,16</td>
+      <td id="T_4f376_row4_col1" class="data row4 col1" >0,00</td>
+      <td id="T_4f376_row4_col2" class="data row4 col2" >0,01</td>
+      <td id="T_4f376_row4_col3" class="data row4 col3" >0,09</td>
+      <td id="T_4f376_row4_col4" class="data row4 col4" >0,01</td>
+      <td id="T_4f376_row4_col5" class="data row4 col5" >0,00</td>
+      <td id="T_4f376_row4_col6" class="data row4 col6" >0,01</td>
+      <td id="T_4f376_row4_col7" class="data row4 col7" >0,00</td>
+      <td id="T_4f376_row4_col8" class="data row4 col8" >0,01</td>
+      <td id="T_4f376_row4_col9" class="data row4 col9" >0,00</td>
+      <td id="T_4f376_row4_col10" class="data row4 col10" >0,06</td>
+      <td id="T_4f376_row4_col11" class="data row4 col11" >0,00</td>
+      <td id="T_4f376_row4_col12" class="data row4 col12" >0,01</td>
+    </tr>
+    <tr>
+      <th id="T_4f376_level0_row5" class="row_heading level0 row5" >Articles personnels</th>
+      <td id="T_4f376_row5_col0" class="data row5 col0" >0,01</td>
+      <td id="T_4f376_row5_col1" class="data row5 col1" >0,01</td>
+      <td id="T_4f376_row5_col2" class="data row5 col2" >0,00</td>
+      <td id="T_4f376_row5_col3" class="data row5 col3" >0,01</td>
+      <td id="T_4f376_row5_col4" class="data row5 col4" >0,01</td>
+      <td id="T_4f376_row5_col5" class="data row5 col5" >0,00</td>
+      <td id="T_4f376_row5_col6" class="data row5 col6" >0,01</td>
+      <td id="T_4f376_row5_col7" class="data row5 col7" >0,00</td>
+      <td id="T_4f376_row5_col8" class="data row5 col8" >0,02</td>
+      <td id="T_4f376_row5_col9" class="data row5 col9" >0,00</td>
+      <td id="T_4f376_row5_col10" class="data row5 col10" >0,02</td>
+      <td id="T_4f376_row5_col11" class="data row5 col11" >0,00</td>
+      <td id="T_4f376_row5_col12" class="data row5 col12" >0,01</td>
+    </tr>
+    <tr>
+      <th id="T_4f376_level0_row6" class="row_heading level0 row6" >Morceaux de plastique</th>
+      <td id="T_4f376_row6_col0" class="data row6 col0" >0,58</td>
+      <td id="T_4f376_row6_col1" class="data row6 col1" >0,09</td>
+      <td id="T_4f376_row6_col2" class="data row6 col2" >0,04</td>
+      <td id="T_4f376_row6_col3" class="data row6 col3" >0,47</td>
+      <td id="T_4f376_row6_col4" class="data row6 col4" >0,20</td>
+      <td id="T_4f376_row6_col5" class="data row6 col5" >0,19</td>
+      <td id="T_4f376_row6_col6" class="data row6 col6" >0,04</td>
+      <td id="T_4f376_row6_col7" class="data row6 col7" >0,31</td>
+      <td id="T_4f376_row6_col8" class="data row6 col8" >0,14</td>
+      <td id="T_4f376_row6_col9" class="data row6 col9" >0,32</td>
+      <td id="T_4f376_row6_col10" class="data row6 col10" >1,13</td>
+      <td id="T_4f376_row6_col11" class="data row6 col11" >0,05</td>
+      <td id="T_4f376_row6_col12" class="data row6 col12" >0,16</td>
+    </tr>
+    <tr>
+      <th id="T_4f376_level0_row7" class="row_heading level0 row7" >Loisirs</th>
+      <td id="T_4f376_row7_col0" class="data row7 col0" >0,04</td>
+      <td id="T_4f376_row7_col1" class="data row7 col1" >0,01</td>
+      <td id="T_4f376_row7_col2" class="data row7 col2" >0,00</td>
+      <td id="T_4f376_row7_col3" class="data row7 col3" >0,03</td>
+      <td id="T_4f376_row7_col4" class="data row7 col4" >0,01</td>
+      <td id="T_4f376_row7_col5" class="data row7 col5" >0,00</td>
+      <td id="T_4f376_row7_col6" class="data row7 col6" >0,01</td>
+      <td id="T_4f376_row7_col7" class="data row7 col7" >0,00</td>
+      <td id="T_4f376_row7_col8" class="data row7 col8" >0,02</td>
+      <td id="T_4f376_row7_col9" class="data row7 col9" >0,00</td>
+      <td id="T_4f376_row7_col10" class="data row7 col10" >0,03</td>
+      <td id="T_4f376_row7_col11" class="data row7 col11" >0,00</td>
+      <td id="T_4f376_row7_col12" class="data row7 col12" >0,01</td>
+    </tr>
+    <tr>
+      <th id="T_4f376_level0_row8" class="row_heading level0 row8" >Tabac</th>
+      <td id="T_4f376_row8_col0" class="data row8 col0" >0,03</td>
+      <td id="T_4f376_row8_col1" class="data row8 col1" >0,02</td>
+      <td id="T_4f376_row8_col2" class="data row8 col2" >0,03</td>
+      <td id="T_4f376_row8_col3" class="data row8 col3" >0,09</td>
+      <td id="T_4f376_row8_col4" class="data row8 col4" >0,18</td>
+      <td id="T_4f376_row8_col5" class="data row8 col5" >0,00</td>
+      <td id="T_4f376_row8_col6" class="data row8 col6" >0,01</td>
+      <td id="T_4f376_row8_col7" class="data row8 col7" >0,02</td>
+      <td id="T_4f376_row8_col8" class="data row8 col8" >0,06</td>
+      <td id="T_4f376_row8_col9" class="data row8 col9" >0,06</td>
+      <td id="T_4f376_row8_col10" class="data row8 col10" >0,07</td>
+      <td id="T_4f376_row8_col11" class="data row8 col11" >0,02</td>
+      <td id="T_4f376_row8_col12" class="data row8 col12" >0,03</td>
+    </tr>
+    <tr>
+      <th id="T_4f376_level0_row9" class="row_heading level0 row9" >Non classé</th>
+      <td id="T_4f376_row9_col0" class="data row9 col0" >0,00</td>
+      <td id="T_4f376_row9_col1" class="data row9 col1" >0,00</td>
+      <td id="T_4f376_row9_col2" class="data row9 col2" >0,00</td>
+      <td id="T_4f376_row9_col3" class="data row9 col3" >0,00</td>
+      <td id="T_4f376_row9_col4" class="data row9 col4" >0,00</td>
+      <td id="T_4f376_row9_col5" class="data row9 col5" >0,00</td>
+      <td id="T_4f376_row9_col6" class="data row9 col6" >0,00</td>
+      <td id="T_4f376_row9_col7" class="data row9 col7" >0,00</td>
+      <td id="T_4f376_row9_col8" class="data row9 col8" >0,00</td>
+      <td id="T_4f376_row9_col9" class="data row9 col9" >0,00</td>
+      <td id="T_4f376_row9_col10" class="data row9 col10" >0,00</td>
+      <td id="T_4f376_row9_col11" class="data row9 col11" >0,00</td>
+      <td id="T_4f376_row9_col12" class="data row9 col12" >0,00</td>
+    </tr>
+    <tr>
+      <th id="T_4f376_level0_row10" class="row_heading level0 row10" >Eaux usées</th>
+      <td id="T_4f376_row10_col0" class="data row10 col0" >0,18</td>
+      <td id="T_4f376_row10_col1" class="data row10 col1" >0,01</td>
+      <td id="T_4f376_row10_col2" class="data row10 col2" >0,00</td>
+      <td id="T_4f376_row10_col3" class="data row10 col3" >0,05</td>
+      <td id="T_4f376_row10_col4" class="data row10 col4" >0,04</td>
+      <td id="T_4f376_row10_col5" class="data row10 col5" >0,00</td>
+      <td id="T_4f376_row10_col6" class="data row10 col6" >0,00</td>
+      <td id="T_4f376_row10_col7" class="data row10 col7" >0,00</td>
+      <td id="T_4f376_row10_col8" class="data row10 col8" >0,00</td>
+      <td id="T_4f376_row10_col9" class="data row10 col9" >0,02</td>
+      <td id="T_4f376_row10_col10" class="data row10 col10" >0,13</td>
+      <td id="T_4f376_row10_col11" class="data row10 col11" >0,00</td>
+      <td id="T_4f376_row10_col12" class="data row10 col12" >0,01</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+#T_d6d29 tr:nth-child(even) {
+  background-color: rgba(139, 69, 19, 0.08);
+}
+#T_d6d29 tr:nth-child(odd) {
+  background: #FFF;
+}
+#T_d6d29 tr {
+  font-size: 10px;
+}
+#T_d6d29 th {
+  background-color: #FFF;
+  font-size: 12px;
+  text-align: left;
+  width: auto;
+}
+#T_d6d29 td {
+  padding: 4px;
+  font-size: 12px;
+}
+#T_d6d29 caption {
+  caption-side: bottom;
+  font-size: 1em;
+  text-align: left;
+}
+#T_d6d29_row0_col0, #T_d6d29_row1_col10, #T_d6d29_row2_col6, #T_d6d29_row2_col7, #T_d6d29_row3_col10, #T_d6d29_row4_col1, #T_d6d29_row5_col6, #T_d6d29_row6_col10, #T_d6d29_row7_col3, #T_d6d29_row7_col4, #T_d6d29_row7_col12, #T_d6d29_row8_col10, #T_d6d29_row10_col2 {
+  background-color: rgba(252,252,252, .5);
+  color: black;
+}
+#T_d6d29_row0_col1, #T_d6d29_row0_col2, #T_d6d29_row0_col3, #T_d6d29_row0_col4, #T_d6d29_row0_col6, #T_d6d29_row0_col7, #T_d6d29_row0_col8, #T_d6d29_row0_col9, #T_d6d29_row0_col10, #T_d6d29_row0_col11, #T_d6d29_row0_col12, #T_d6d29_row1_col2, #T_d6d29_row2_col10, #T_d6d29_row3_col0, #T_d6d29_row3_col9, #T_d6d29_row4_col2, #T_d6d29_row4_col7, #T_d6d29_row4_col8, #T_d6d29_row5_col1, #T_d6d29_row5_col2, #T_d6d29_row7_col2, #T_d6d29_row7_col7, #T_d6d29_row8_col1, #T_d6d29_row8_col7, #T_d6d29_row8_col9, #T_d6d29_row9_col0, #T_d6d29_row9_col1, #T_d6d29_row9_col2, #T_d6d29_row9_col3, #T_d6d29_row9_col4, #T_d6d29_row9_col5, #T_d6d29_row9_col6, #T_d6d29_row9_col7, #T_d6d29_row9_col8, #T_d6d29_row9_col9, #T_d6d29_row9_col10, #T_d6d29_row9_col11, #T_d6d29_row9_col12, #T_d6d29_row10_col7, #T_d6d29_row10_col10 {
+  background-color: rgba(255,255,255, .5);
+  color: black;
+}
+#T_d6d29_row0_col5, #T_d6d29_row4_col5 {
+  background-color: rgba(223,223,223, .5);
+  color: black;
+}
+#T_d6d29_row1_col0 {
+  background-color: rgba(218,218,218, .5);
+  color: black;
+}
+#T_d6d29_row1_col1 {
+  background-color: rgba(235,235,235, .5);
+  color: black;
+}
+#T_d6d29_row1_col3, #T_d6d29_row10_col0 {
+  background-color: rgba(243,243,243, .5);
+  color: black;
+}
+#T_d6d29_row1_col4, #T_d6d29_row2_col1, #T_d6d29_row3_col5, #T_d6d29_row3_col12, #T_d6d29_row4_col0, #T_d6d29_row7_col11, #T_d6d29_row10_col6 {
+  background-color: rgba(249,249,249, .5);
+  color: black;
+}
+#T_d6d29_row1_col5 {
+  background-color: rgba(143,143,143, .5);
+  color: black;
+}
+#T_d6d29_row1_col6 {
+  background-color: rgba(239,239,239, .5);
+  color: black;
+}
+#T_d6d29_row1_col7, #T_d6d29_row1_col8, #T_d6d29_row2_col4, #T_d6d29_row5_col0, #T_d6d29_row8_col0, #T_d6d29_row8_col6, #T_d6d29_row10_col9 {
+  background-color: rgba(247,247,247, .5);
+  color: black;
+}
+#T_d6d29_row1_col9, #T_d6d29_row3_col11 {
+  background-color: rgba(240,240,240, .5);
+  color: black;
+}
+#T_d6d29_row1_col11 {
+  background-color: rgba(214,214,214, .5);
+  color: black;
+}
+#T_d6d29_row1_col12 {
+  background-color: rgba(245,245,245, .5);
+  color: black;
+}
+#T_d6d29_row2_col0, #T_d6d29_row6_col9 {
+  background-color: rgba(176,176,176, .5);
+  color: black;
+}
+#T_d6d29_row2_col2, #T_d6d29_row8_col5 {
+  background-color: rgba(220,220,220, .5);
+  color: black;
+}
+#T_d6d29_row2_col3, #T_d6d29_row8_col2 {
+  background-color: rgba(244,244,244, .5);
+  color: black;
+}
+#T_d6d29_row2_col5 {
+  background-color: rgba(226,226,226, .5);
+  color: black;
+}
+#T_d6d29_row2_col8, #T_d6d29_row4_col9, #T_d6d29_row5_col4, #T_d6d29_row7_col1, #T_d6d29_row7_col6 {
+  background-color: rgba(251,251,251, .5);
+  color: black;
+}
+#T_d6d29_row2_col9, #T_d6d29_row2_col12, #T_d6d29_row4_col11, #T_d6d29_row5_col5, #T_d6d29_row7_col0 {
+  background-color: rgba(248,248,248, .5);
+  color: black;
+}
+#T_d6d29_row2_col11, #T_d6d29_row3_col7, #T_d6d29_row3_col8, #T_d6d29_row4_col6 {
+  background-color: rgba(250,250,250, .5);
+  color: black;
+}
+#T_d6d29_row3_col1, #T_d6d29_row4_col12, #T_d6d29_row5_col3, #T_d6d29_row5_col7, #T_d6d29_row5_col9, #T_d6d29_row5_col11, #T_d6d29_row5_col12, #T_d6d29_row7_col9, #T_d6d29_row10_col3, #T_d6d29_row10_col12 {
+  background-color: rgba(253,253,253, .5);
+  color: black;
+}
+#T_d6d29_row3_col2, #T_d6d29_row6_col8 {
+  background-color: rgba(236,236,236, .5);
+  color: black;
+}
+#T_d6d29_row3_col3 {
+  background-color: rgba(211,211,211, .5);
+  color: black;
+}
+#T_d6d29_row3_col4 {
+  background-color: rgba(225,225,225, .5);
+  color: black;
+}
+#T_d6d29_row3_col6, #T_d6d29_row4_col3, #T_d6d29_row4_col4, #T_d6d29_row4_col10, #T_d6d29_row5_col8, #T_d6d29_row5_col10, #T_d6d29_row7_col8, #T_d6d29_row7_col10, #T_d6d29_row10_col1, #T_d6d29_row10_col4, #T_d6d29_row10_col8 {
+  background-color: rgba(254,254,254, .5);
+  color: black;
+}
+#T_d6d29_row6_col0 {
+  background-color: rgba(198,198,198, .5);
+  color: black;
+}
+#T_d6d29_row6_col1 {
+  background-color: rgba(59,59,59, .5);
+  color: black;
+}
+#T_d6d29_row6_col2 {
+  background-color: rgba(228,228,228, .5);
+  color: black;
+}
+#T_d6d29_row6_col3 {
+  background-color: rgba(121,121,121, .5);
+  color: black;
+}
+#T_d6d29_row6_col4 {
+  background-color: rgba(213,213,213, .5);
+  color: black;
+}
+#T_d6d29_row6_col5 {
+  background-color: rgba(253,195,141, .5);
+  color: black;
+}
+#T_d6d29_row6_col6 {
+  background-color: rgba(219,219,219, .5);
+  color: black;
+}
+#T_d6d29_row6_col7 {
+  background-color: rgba(238,238,238, .5);
+  color: black;
+}
+#T_d6d29_row6_col11 {
+  background-color: rgba(146,146,146, .5);
+  color: black;
+}
+#T_d6d29_row6_col12 {
+  background-color: rgba(195,195,195, .5);
+  color: black;
+}
+#T_d6d29_row7_col5, #T_d6d29_row8_col12 {
+  background-color: rgba(246,246,246, .5);
+  color: black;
+}
+#T_d6d29_row8_col3 {
+  background-color: rgba(242,242,242, .5);
+  color: black;
+}
+#T_d6d29_row8_col4 {
+  background-color: rgba(234,234,234, .5);
+  color: black;
+}
+#T_d6d29_row8_col8 {
+  background-color: rgba(216,216,216, .5);
+  color: black;
+}
+#T_d6d29_row8_col11 {
+  background-color: rgba(151,151,151, .5);
+  color: black;
+}
+#T_d6d29_row10_col5 {
+  background-color: rgba(232,232,232, .5);
+  color: black;
+}
+#T_d6d29_row10_col11 {
+  background-color: rgba(241,241,241, .5);
+  color: black;
+}
+</style>
+<table id="T_d6d29">
+  <caption>Les résultats des objets par utilisation pour chaque ville du projet: Lugirn à Vevey</caption>
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_d6d29_level0_col0" class="col_heading level0 col0" >Lugrin</th>
+      <th id="T_d6d29_level0_col1" class="col_heading level0 col1" >Lutry</th>
+      <th id="T_d6d29_level0_col2" class="col_heading level0 col2" >Meillerie</th>
+      <th id="T_d6d29_level0_col3" class="col_heading level0 col3" >Préverenges</th>
+      <th id="T_d6d29_level0_col4" class="col_heading level0 col4" >Rolle</th>
+      <th id="T_d6d29_level0_col5" class="col_heading level0 col5" >Saint-disdille</th>
+      <th id="T_d6d29_level0_col6" class="col_heading level0 col6" >Savonière</th>
+      <th id="T_d6d29_level0_col7" class="col_heading level0 col7" >Tolochenaz</th>
+      <th id="T_d6d29_level0_col8" class="col_heading level0 col8" >Tougues</th>
+      <th id="T_d6d29_level0_col9" class="col_heading level0 col9" >Versoix</th>
+      <th id="T_d6d29_level0_col10" class="col_heading level0 col10" >Vevey</th>
+      <th id="T_d6d29_level0_col11" class="col_heading level0 col11" >Vidy</th>
+      <th id="T_d6d29_level0_col12" class="col_heading level0 col12" >Cumulé</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_d6d29_level0_row0" class="row_heading level0 row0" >Agriculture</th>
+      <td id="T_d6d29_row0_col0" class="data row0 col0" >0,01</td>
+      <td id="T_d6d29_row0_col1" class="data row0 col1" >0,00</td>
+      <td id="T_d6d29_row0_col2" class="data row0 col2" >0,00</td>
+      <td id="T_d6d29_row0_col3" class="data row0 col3" >0,00</td>
+      <td id="T_d6d29_row0_col4" class="data row0 col4" >0,00</td>
+      <td id="T_d6d29_row0_col5" class="data row0 col5" >0,10</td>
+      <td id="T_d6d29_row0_col6" class="data row0 col6" >0,00</td>
+      <td id="T_d6d29_row0_col7" class="data row0 col7" >0,00</td>
+      <td id="T_d6d29_row0_col8" class="data row0 col8" >0,00</td>
+      <td id="T_d6d29_row0_col9" class="data row0 col9" >0,00</td>
+      <td id="T_d6d29_row0_col10" class="data row0 col10" >0,00</td>
+      <td id="T_d6d29_row0_col11" class="data row0 col11" >0,00</td>
+      <td id="T_d6d29_row0_col12" class="data row0 col12" >0,00</td>
+    </tr>
+    <tr>
+      <th id="T_d6d29_level0_row1" class="row_heading level0 row1" >Nourriture et boissons</th>
+      <td id="T_d6d29_row1_col0" class="data row1 col0" >0,11</td>
+      <td id="T_d6d29_row1_col1" class="data row1 col1" >0,07</td>
+      <td id="T_d6d29_row1_col2" class="data row1 col2" >0,00</td>
+      <td id="T_d6d29_row1_col3" class="data row1 col3" >0,04</td>
+      <td id="T_d6d29_row1_col4" class="data row1 col4" >0,02</td>
+      <td id="T_d6d29_row1_col5" class="data row1 col5" >0,24</td>
+      <td id="T_d6d29_row1_col6" class="data row1 col6" >0,06</td>
+      <td id="T_d6d29_row1_col7" class="data row1 col7" >0,03</td>
+      <td id="T_d6d29_row1_col8" class="data row1 col8" >0,03</td>
+      <td id="T_d6d29_row1_col9" class="data row1 col9" >0,05</td>
+      <td id="T_d6d29_row1_col10" class="data row1 col10" >0,01</td>
+      <td id="T_d6d29_row1_col11" class="data row1 col11" >0,12</td>
+      <td id="T_d6d29_row1_col12" class="data row1 col12" >0,04</td>
+    </tr>
+    <tr>
+      <th id="T_d6d29_level0_row2" class="row_heading level0 row2" >Infrastructures</th>
+      <td id="T_d6d29_row2_col0" class="data row2 col0" >0,19</td>
+      <td id="T_d6d29_row2_col1" class="data row2 col1" >0,02</td>
+      <td id="T_d6d29_row2_col2" class="data row2 col2" >0,10</td>
+      <td id="T_d6d29_row2_col3" class="data row2 col3" >0,04</td>
+      <td id="T_d6d29_row2_col4" class="data row2 col4" >0,03</td>
+      <td id="T_d6d29_row2_col5" class="data row2 col5" >0,09</td>
+      <td id="T_d6d29_row2_col6" class="data row2 col6" >0,01</td>
+      <td id="T_d6d29_row2_col7" class="data row2 col7" >0,01</td>
+      <td id="T_d6d29_row2_col8" class="data row2 col8" >0,01</td>
+      <td id="T_d6d29_row2_col9" class="data row2 col9" >0,02</td>
+      <td id="T_d6d29_row2_col10" class="data row2 col10" >0,00</td>
+      <td id="T_d6d29_row2_col11" class="data row2 col11" >0,02</td>
+      <td id="T_d6d29_row2_col12" class="data row2 col12" >0,03</td>
+    </tr>
+    <tr>
+      <th id="T_d6d29_level0_row3" class="row_heading level0 row3" >Micro-plastiques (< 5mm)</th>
+      <td id="T_d6d29_row3_col0" class="data row3 col0" >0,00</td>
+      <td id="T_d6d29_row3_col1" class="data row3 col1" >0,00</td>
+      <td id="T_d6d29_row3_col2" class="data row3 col2" >0,07</td>
+      <td id="T_d6d29_row3_col3" class="data row3 col3" >0,12</td>
+      <td id="T_d6d29_row3_col4" class="data row3 col4" >0,09</td>
+      <td id="T_d6d29_row3_col5" class="data row3 col5" >0,02</td>
+      <td id="T_d6d29_row3_col6" class="data row3 col6" >0,00</td>
+      <td id="T_d6d29_row3_col7" class="data row3 col7" >0,02</td>
+      <td id="T_d6d29_row3_col8" class="data row3 col8" >0,02</td>
+      <td id="T_d6d29_row3_col9" class="data row3 col9" >0,00</td>
+      <td id="T_d6d29_row3_col10" class="data row3 col10" >0,01</td>
+      <td id="T_d6d29_row3_col11" class="data row3 col11" >0,05</td>
+      <td id="T_d6d29_row3_col12" class="data row3 col12" >0,02</td>
+    </tr>
+    <tr>
+      <th id="T_d6d29_level0_row4" class="row_heading level0 row4" >Emballage non alimentaire</th>
+      <td id="T_d6d29_row4_col0" class="data row4 col0" >0,02</td>
+      <td id="T_d6d29_row4_col1" class="data row4 col1" >0,01</td>
+      <td id="T_d6d29_row4_col2" class="data row4 col2" >0,00</td>
+      <td id="T_d6d29_row4_col3" class="data row4 col3" >0,00</td>
+      <td id="T_d6d29_row4_col4" class="data row4 col4" >0,00</td>
+      <td id="T_d6d29_row4_col5" class="data row4 col5" >0,10</td>
+      <td id="T_d6d29_row4_col6" class="data row4 col6" >0,02</td>
+      <td id="T_d6d29_row4_col7" class="data row4 col7" >0,00</td>
+      <td id="T_d6d29_row4_col8" class="data row4 col8" >0,00</td>
+      <td id="T_d6d29_row4_col9" class="data row4 col9" >0,01</td>
+      <td id="T_d6d29_row4_col10" class="data row4 col10" >0,00</td>
+      <td id="T_d6d29_row4_col11" class="data row4 col11" >0,02</td>
+      <td id="T_d6d29_row4_col12" class="data row4 col12" >0,01</td>
+    </tr>
+    <tr>
+      <th id="T_d6d29_level0_row5" class="row_heading level0 row5" >Articles personnels</th>
+      <td id="T_d6d29_row5_col0" class="data row5 col0" >0,03</td>
+      <td id="T_d6d29_row5_col1" class="data row5 col1" >0,00</td>
+      <td id="T_d6d29_row5_col2" class="data row5 col2" >0,00</td>
+      <td id="T_d6d29_row5_col3" class="data row5 col3" >0,00</td>
+      <td id="T_d6d29_row5_col4" class="data row5 col4" >0,01</td>
+      <td id="T_d6d29_row5_col5" class="data row5 col5" >0,02</td>
+      <td id="T_d6d29_row5_col6" class="data row5 col6" >0,01</td>
+      <td id="T_d6d29_row5_col7" class="data row5 col7" >0,00</td>
+      <td id="T_d6d29_row5_col8" class="data row5 col8" >0,00</td>
+      <td id="T_d6d29_row5_col9" class="data row5 col9" >0,00</td>
+      <td id="T_d6d29_row5_col10" class="data row5 col10" >0,00</td>
+      <td id="T_d6d29_row5_col11" class="data row5 col11" >0,00</td>
+      <td id="T_d6d29_row5_col12" class="data row5 col12" >0,01</td>
+    </tr>
+    <tr>
+      <th id="T_d6d29_level0_row6" class="row_heading level0 row6" >Morceaux de plastique</th>
+      <td id="T_d6d29_row6_col0" class="data row6 col0" >0,15</td>
+      <td id="T_d6d29_row6_col1" class="data row6 col1" >0,36</td>
+      <td id="T_d6d29_row6_col2" class="data row6 col2" >0,08</td>
+      <td id="T_d6d29_row6_col3" class="data row6 col3" >0,27</td>
+      <td id="T_d6d29_row6_col4" class="data row6 col4" >0,12</td>
+      <td id="T_d6d29_row6_col5" class="data row6 col5" >0,58</td>
+      <td id="T_d6d29_row6_col6" class="data row6 col6" >0,11</td>
+      <td id="T_d6d29_row6_col7" class="data row6 col7" >0,06</td>
+      <td id="T_d6d29_row6_col8" class="data row6 col8" >0,06</td>
+      <td id="T_d6d29_row6_col9" class="data row6 col9" >0,19</td>
+      <td id="T_d6d29_row6_col10" class="data row6 col10" >0,01</td>
+      <td id="T_d6d29_row6_col11" class="data row6 col11" >0,23</td>
+      <td id="T_d6d29_row6_col12" class="data row6 col12" >0,16</td>
+    </tr>
+    <tr>
+      <th id="T_d6d29_level0_row7" class="row_heading level0 row7" >Loisirs</th>
+      <td id="T_d6d29_row7_col0" class="data row7 col0" >0,03</td>
+      <td id="T_d6d29_row7_col1" class="data row7 col1" >0,01</td>
+      <td id="T_d6d29_row7_col2" class="data row7 col2" >0,00</td>
+      <td id="T_d6d29_row7_col3" class="data row7 col3" >0,01</td>
+      <td id="T_d6d29_row7_col4" class="data row7 col4" >0,01</td>
+      <td id="T_d6d29_row7_col5" class="data row7 col5" >0,03</td>
+      <td id="T_d6d29_row7_col6" class="data row7 col6" >0,01</td>
+      <td id="T_d6d29_row7_col7" class="data row7 col7" >0,00</td>
+      <td id="T_d6d29_row7_col8" class="data row7 col8" >0,00</td>
+      <td id="T_d6d29_row7_col9" class="data row7 col9" >0,01</td>
+      <td id="T_d6d29_row7_col10" class="data row7 col10" >0,00</td>
+      <td id="T_d6d29_row7_col11" class="data row7 col11" >0,02</td>
+      <td id="T_d6d29_row7_col12" class="data row7 col12" >0,01</td>
+    </tr>
+    <tr>
+      <th id="T_d6d29_level0_row8" class="row_heading level0 row8" >Tabac</th>
+      <td id="T_d6d29_row8_col0" class="data row8 col0" >0,03</td>
+      <td id="T_d6d29_row8_col1" class="data row8 col1" >0,00</td>
+      <td id="T_d6d29_row8_col2" class="data row8 col2" >0,04</td>
+      <td id="T_d6d29_row8_col3" class="data row8 col3" >0,05</td>
+      <td id="T_d6d29_row8_col4" class="data row8 col4" >0,07</td>
+      <td id="T_d6d29_row8_col5" class="data row8 col5" >0,10</td>
+      <td id="T_d6d29_row8_col6" class="data row8 col6" >0,03</td>
+      <td id="T_d6d29_row8_col7" class="data row8 col7" >0,00</td>
+      <td id="T_d6d29_row8_col8" class="data row8 col8" >0,11</td>
+      <td id="T_d6d29_row8_col9" class="data row8 col9" >0,00</td>
+      <td id="T_d6d29_row8_col10" class="data row8 col10" >0,01</td>
+      <td id="T_d6d29_row8_col11" class="data row8 col11" >0,22</td>
+      <td id="T_d6d29_row8_col12" class="data row8 col12" >0,03</td>
+    </tr>
+    <tr>
+      <th id="T_d6d29_level0_row9" class="row_heading level0 row9" >Non classé</th>
+      <td id="T_d6d29_row9_col0" class="data row9 col0" >0,00</td>
+      <td id="T_d6d29_row9_col1" class="data row9 col1" >0,00</td>
+      <td id="T_d6d29_row9_col2" class="data row9 col2" >0,00</td>
+      <td id="T_d6d29_row9_col3" class="data row9 col3" >0,00</td>
+      <td id="T_d6d29_row9_col4" class="data row9 col4" >0,00</td>
+      <td id="T_d6d29_row9_col5" class="data row9 col5" >0,00</td>
+      <td id="T_d6d29_row9_col6" class="data row9 col6" >0,00</td>
+      <td id="T_d6d29_row9_col7" class="data row9 col7" >0,00</td>
+      <td id="T_d6d29_row9_col8" class="data row9 col8" >0,00</td>
+      <td id="T_d6d29_row9_col9" class="data row9 col9" >0,00</td>
+      <td id="T_d6d29_row9_col10" class="data row9 col10" >0,00</td>
+      <td id="T_d6d29_row9_col11" class="data row9 col11" >0,00</td>
+      <td id="T_d6d29_row9_col12" class="data row9 col12" >0,00</td>
+    </tr>
+    <tr>
+      <th id="T_d6d29_level0_row10" class="row_heading level0 row10" >Eaux usées</th>
+      <td id="T_d6d29_row10_col0" class="data row10 col0" >0,04</td>
+      <td id="T_d6d29_row10_col1" class="data row10 col1" >0,00</td>
+      <td id="T_d6d29_row10_col2" class="data row10 col2" >0,01</td>
+      <td id="T_d6d29_row10_col3" class="data row10 col3" >0,01</td>
+      <td id="T_d6d29_row10_col4" class="data row10 col4" >0,00</td>
+      <td id="T_d6d29_row10_col5" class="data row10 col5" >0,07</td>
+      <td id="T_d6d29_row10_col6" class="data row10 col6" >0,02</td>
+      <td id="T_d6d29_row10_col7" class="data row10 col7" >0,00</td>
+      <td id="T_d6d29_row10_col8" class="data row10 col8" >0,00</td>
+      <td id="T_d6d29_row10_col9" class="data row10 col9" >0,03</td>
+      <td id="T_d6d29_row10_col10" class="data row10 col10" >0,00</td>
+      <td id="T_d6d29_row10_col11" class="data row10 col11" >0,05</td>
+      <td id="T_d6d29_row10_col12" class="data row10 col12" >0,01</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+</div>
+<div class="section" id="les-objets-les-plus-courants-plastock">
+<h2><span class="section-number">2.3. </span>Les objets les plus courants Plastock<a class="headerlink" href="#les-objets-les-plus-courants-plastock" title="Permalink to this headline">#</a></h2>
+<div class="section" id="definition-des-objets-les-plus-courants">
+<h3><span class="section-number">2.3.1. </span>Définition des <em>objets les plus courants</em><a class="headerlink" href="#definition-des-objets-les-plus-courants" title="Permalink to this headline">#</a></h3>
+<p>Les <em>objets les plus courants</em> peuvent être sélectionnés de plusieurs manières. On peut également les appeler les <em>objets d’intérêt</em>. Dans le cadre de ce rapport, nous nous concentrons sur les objets qui représentent une proportion plus importante des résultats que les autres. Nous avons utilisé deux critères de sélection : i. la quantité, ii. le taux d’échec.</p>
+<ol class="arabic simple">
+<li><p>Quanité: Si un objet a une quantité totale qui le place dans les dix premiers, il est considéré comme ‘courant’.</p></li>
+<li><p>Taux d’échec: Si un objet a été trouvé dans au moins la moitié des échantillons, il est ÉGALEMENT considéré comme ‘courant’.</p></li>
+</ol>
+<p>Par conséquent, pour cette étude, les ‘objets les plus courants’ sont ceux qui se trouvent soit dans les dix premiers en termes de nombre total de pièces de déchets ET/OU qui ont été trouvés dans au moins 50% des enquêtes. Pour Plastock, les objets les plus courants représentent 89% du montant total ou 24’156/27’493 <a class="reference internal" href="macro_object_results.html#most-common-p"><span class="std std-ref">Les plus courants</span></a>.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">w_df</span> <span class="o">=</span> <span class="n">plastock_report</span><span class="o">.</span><span class="n">w_df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">cities</span> <span class="o">=</span> <span class="n">w_df</span><span class="o">.</span><span class="n">city</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">rc</span><span class="o">.</span><span class="n">a_cumulative_report</span><span class="p">(</span><span class="n">w_df</span><span class="p">[(</span><span class="n">w_df</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">most_common</span><span class="o">.</span><span class="n">index</span><span class="p">))],</span> <span class="n">feature_name</span><span class="o">=</span><span class="s1">&#39;city&#39;</span><span class="p">,</span> <span class="n">object_column</span><span class="o">=</span><span class="s1">&#39;code&#39;</span><span class="p">,</span> <span class="n">table_split</span><span class="o">=</span><span class="n">cone</span><span class="p">)</span>
+
+<span class="n">rc</span><span class="o">.</span><span class="n">translated_and_style_for_display</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">plastock_report</span><span class="o">.</span><span class="n">lang_maps</span><span class="p">[</span><span class="n">plastock_report</span><span class="o">.</span><span class="n">language</span><span class="p">],</span> <span class="n">plastock_report</span><span class="o">.</span><span class="n">language</span><span class="p">,</span> <span class="n">gradient</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">set_caption</span><span class="p">(</span><span class="s2">&quot;Les résultats des objets les plus courants de Plastock pour chaque ville du projet: Amphion à Hemance&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+#T_110e3 tr:nth-child(even) {
+  background-color: rgba(139, 69, 19, 0.08);
+}
+#T_110e3 tr:nth-child(odd) {
+  background: #FFF;
+}
+#T_110e3 tr {
+  font-size: 10px;
+}
+#T_110e3 th {
+  background-color: #FFF;
+  font-size: 12px;
+  text-align: left;
+  width: auto;
+}
+#T_110e3 td {
+  padding: 4px;
+  font-size: 12px;
+}
+#T_110e3 caption {
+  caption-side: bottom;
+  font-size: 1em;
+  text-align: left;
+}
+#T_110e3_row0_col0, #T_110e3_row0_col1, #T_110e3_row0_col4, #T_110e3_row0_col5, #T_110e3_row0_col6, #T_110e3_row0_col9, #T_110e3_row0_col11, #T_110e3_row0_col12, #T_110e3_row1_col0, #T_110e3_row1_col2, #T_110e3_row1_col5, #T_110e3_row1_col6, #T_110e3_row1_col11, #T_110e3_row1_col12, #T_110e3_row2_col5, #T_110e3_row3_col1, #T_110e3_row3_col6, #T_110e3_row3_col9, #T_110e3_row4_col5, #T_110e3_row4_col6, #T_110e3_row4_col8, #T_110e3_row4_col9, #T_110e3_row4_col10, #T_110e3_row4_col11, #T_110e3_row5_col1, #T_110e3_row5_col2, #T_110e3_row5_col5, #T_110e3_row5_col6, #T_110e3_row5_col7, #T_110e3_row5_col9, #T_110e3_row5_col11, #T_110e3_row5_col12, #T_110e3_row6_col0, #T_110e3_row6_col1, #T_110e3_row6_col2, #T_110e3_row6_col5, #T_110e3_row6_col6, #T_110e3_row6_col7, #T_110e3_row6_col9, #T_110e3_row6_col11, #T_110e3_row6_col12, #T_110e3_row7_col2, #T_110e3_row7_col5, #T_110e3_row7_col6, #T_110e3_row7_col7, #T_110e3_row7_col11, #T_110e3_row8_col1, #T_110e3_row8_col5, #T_110e3_row8_col9, #T_110e3_row8_col11, #T_110e3_row9_col5, #T_110e3_row9_col6, #T_110e3_row9_col11 {
+  background-color: rgba(255,255,255, .5);
+  color: black;
+}
+#T_110e3_row0_col2, #T_110e3_row3_col11, #T_110e3_row4_col4, #T_110e3_row7_col1, #T_110e3_row7_col12, #T_110e3_row8_col4, #T_110e3_row8_col12, #T_110e3_row9_col2, #T_110e3_row9_col7, #T_110e3_row9_col8 {
+  background-color: rgba(253,253,253, .5);
+  color: black;
+}
+#T_110e3_row0_col3 {
+  background-color: rgba(199,199,199, .5);
+  color: black;
+}
+#T_110e3_row0_col7, #T_110e3_row1_col10, #T_110e3_row2_col9 {
+  background-color: rgba(240,240,240, .5);
+  color: black;
+}
+#T_110e3_row0_col8 {
+  background-color: rgba(232,232,232, .5);
+  color: black;
+}
+#T_110e3_row0_col10 {
+  background-color: rgba(238,238,238, .5);
+  color: black;
+}
+#T_110e3_row1_col1, #T_110e3_row1_col4, #T_110e3_row1_col7, #T_110e3_row4_col1, #T_110e3_row4_col2, #T_110e3_row4_col7, #T_110e3_row4_col12, #T_110e3_row5_col0, #T_110e3_row5_col3, #T_110e3_row5_col8, #T_110e3_row6_col4, #T_110e3_row6_col8, #T_110e3_row7_col8, #T_110e3_row8_col7, #T_110e3_row9_col1 {
+  background-color: rgba(254,254,254, .5);
+  color: black;
+}
+#T_110e3_row1_col3, #T_110e3_row2_col3 {
+  background-color: rgba(225,225,225, .5);
+  color: black;
+}
+#T_110e3_row1_col8, #T_110e3_row1_col9 {
+  background-color: rgba(243,243,243, .5);
+  color: black;
+}
+#T_110e3_row2_col0, #T_110e3_row3_col8, #T_110e3_row4_col0 {
+  background-color: rgba(248,248,248, .5);
+  color: black;
+}
+#T_110e3_row2_col1 {
+  background-color: rgba(250,250,250, .5);
+  color: black;
+}
+#T_110e3_row2_col2, #T_110e3_row3_col12 {
+  background-color: rgba(247,247,247, .5);
+  color: black;
+}
+#T_110e3_row2_col4 {
+  background-color: rgba(179,179,179, .5);
+  color: black;
+}
+#T_110e3_row2_col6, #T_110e3_row3_col2, #T_110e3_row8_col6, #T_110e3_row9_col12 {
+  background-color: rgba(251,251,251, .5);
+  color: black;
+}
+#T_110e3_row2_col7, #T_110e3_row2_col11 {
+  background-color: rgba(249,249,249, .5);
+  color: black;
+}
+#T_110e3_row2_col8 {
+  background-color: rgba(239,239,239, .5);
+  color: black;
+}
+#T_110e3_row2_col10 {
+  background-color: rgba(235,235,235, .5);
+  color: black;
+}
+#T_110e3_row2_col12, #T_110e3_row4_col3, #T_110e3_row9_col4 {
+  background-color: rgba(246,246,246, .5);
+  color: black;
+}
+#T_110e3_row3_col0 {
+  background-color: rgba(226,226,226, .5);
+  color: black;
+}
+#T_110e3_row3_col3, #T_110e3_row9_col0, #T_110e3_row10_col1 {
+  background-color: rgba(224,224,224, .5);
+  color: black;
+}
+#T_110e3_row3_col4, #T_110e3_row10_col2, #T_110e3_row10_col6 {
+  background-color: rgba(245,245,245, .5);
+  color: black;
+}
+#T_110e3_row3_col5 {
+  background-color: rgba(237,237,237, .5);
+  color: black;
+}
+#T_110e3_row3_col7, #T_110e3_row7_col9, #T_110e3_row8_col2, #T_110e3_row8_col8 {
+  background-color: rgba(252,252,252, .5);
+  color: black;
+}
+#T_110e3_row3_col10 {
+  background-color: rgba(88,88,88, .5);
+  color: black;
+}
+#T_110e3_row5_col4, #T_110e3_row6_col10 {
+  background-color: rgba(242,242,242, .5);
+  color: black;
+}
+#T_110e3_row5_col10 {
+  background-color: rgba(206,206,206, .5);
+  color: black;
+}
+#T_110e3_row6_col3, #T_110e3_row7_col10 {
+  background-color: rgba(219,219,219, .5);
+  color: black;
+}
+#T_110e3_row7_col0 {
+  background-color: rgba(200,200,200, .5);
+  color: black;
+}
+#T_110e3_row7_col3, #T_110e3_row7_col4 {
+  background-color: rgba(244,244,244, .5);
+  color: black;
+}
+#T_110e3_row8_col0 {
+  background-color: rgba(205,205,205, .5);
+  color: black;
+}
+#T_110e3_row8_col3 {
+  background-color: rgba(227,227,227, .5);
+  color: black;
+}
+#T_110e3_row8_col10, #T_110e3_row9_col3 {
+  background-color: rgba(236,236,236, .5);
+  color: black;
+}
+#T_110e3_row9_col9 {
+  background-color: rgba(137,137,137, .5);
+  color: black;
+}
+#T_110e3_row9_col10 {
+  background-color: rgba(131,131,131, .5);
+  color: black;
+}
+#T_110e3_row10_col0 {
+  background-color: rgba(253,195,142, .5);
+  color: black;
+}
+#T_110e3_row10_col3 {
+  background-color: rgba(254,239,224, .5);
+  color: black;
+}
+#T_110e3_row10_col4 {
+  background-color: rgba(164,164,164, .5);
+  color: black;
+}
+#T_110e3_row10_col5 {
+  background-color: rgba(175,175,175, .5);
+  color: black;
+}
+#T_110e3_row10_col7 {
+  background-color: rgba(95,95,95, .5);
+  color: black;
+}
+#T_110e3_row10_col8 {
+  background-color: rgba(204,204,204, .5);
+  color: black;
+}
+#T_110e3_row10_col9 {
+  background-color: rgba(90,90,90, .5);
+  color: black;
+}
+#T_110e3_row10_col10 {
+  background-color: rgba(127,39,4, .5);
+  color: black;
+}
+#T_110e3_row10_col11 {
+  background-color: rgba(241,241,241, .5);
+  color: black;
+}
+#T_110e3_row10_col12 {
+  background-color: rgba(195,195,195, .5);
+  color: black;
+}
+</style>
+<table id="T_110e3">
+  <caption>Les résultats des objets les plus courants de Plastock pour chaque ville du projet: Amphion à Hemance</caption>
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_110e3_level0_col0" class="col_heading level0 col0" >Amphion</th>
+      <th id="T_110e3_level0_col1" class="col_heading level0 col1" >Anthy</th>
+      <th id="T_110e3_level0_col2" class="col_heading level0 col2" >Aubonne</th>
+      <th id="T_110e3_level0_col3" class="col_heading level0 col3" >Bouveret</th>
+      <th id="T_110e3_level0_col4" class="col_heading level0 col4" >Clarens</th>
+      <th id="T_110e3_level0_col5" class="col_heading level0 col5" >Crans</th>
+      <th id="T_110e3_level0_col6" class="col_heading level0 col6" >Cully</th>
+      <th id="T_110e3_level0_col7" class="col_heading level0 col7" >Excenevex</th>
+      <th id="T_110e3_level0_col8" class="col_heading level0 col8" >Genève</th>
+      <th id="T_110e3_level0_col9" class="col_heading level0 col9" >Gland</th>
+      <th id="T_110e3_level0_col10" class="col_heading level0 col10" >Grangettes</th>
+      <th id="T_110e3_level0_col11" class="col_heading level0 col11" >Hermance</th>
+      <th id="T_110e3_level0_col12" class="col_heading level0 col12" >Cumulé</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_110e3_level0_row0" class="row_heading level0 row0" >Fragments de plastique angulaires <5mm</th>
+      <td id="T_110e3_row0_col0" class="data row0 col0" >0,00</td>
+      <td id="T_110e3_row0_col1" class="data row0 col1" >0,00</td>
+      <td id="T_110e3_row0_col2" class="data row0 col2" >0,00</td>
+      <td id="T_110e3_row0_col3" class="data row0 col3" >0,15</td>
+      <td id="T_110e3_row0_col4" class="data row0 col4" >0,00</td>
+      <td id="T_110e3_row0_col5" class="data row0 col5" >0,00</td>
+      <td id="T_110e3_row0_col6" class="data row0 col6" >0,00</td>
+      <td id="T_110e3_row0_col7" class="data row0 col7" >0,05</td>
+      <td id="T_110e3_row0_col8" class="data row0 col8" >0,07</td>
+      <td id="T_110e3_row0_col9" class="data row0 col9" >0,00</td>
+      <td id="T_110e3_row0_col10" class="data row0 col10" >0,06</td>
+      <td id="T_110e3_row0_col11" class="data row0 col11" >0,00</td>
+      <td id="T_110e3_row0_col12" class="data row0 col12" >0,00</td>
+    </tr>
+    <tr>
+      <th id="T_110e3_level0_row1" class="row_heading level0 row1" >Pellets industriels (gpi)</th>
+      <td id="T_110e3_row1_col0" class="data row1 col0" >0,00</td>
+      <td id="T_110e3_row1_col1" class="data row1 col1" >0,00</td>
+      <td id="T_110e3_row1_col2" class="data row1 col2" >0,00</td>
+      <td id="T_110e3_row1_col3" class="data row1 col3" >0,09</td>
+      <td id="T_110e3_row1_col4" class="data row1 col4" >0,00</td>
+      <td id="T_110e3_row1_col5" class="data row1 col5" >0,00</td>
+      <td id="T_110e3_row1_col6" class="data row1 col6" >0,00</td>
+      <td id="T_110e3_row1_col7" class="data row1 col7" >0,00</td>
+      <td id="T_110e3_row1_col8" class="data row1 col8" >0,04</td>
+      <td id="T_110e3_row1_col9" class="data row1 col9" >0,04</td>
+      <td id="T_110e3_row1_col10" class="data row1 col10" >0,05</td>
+      <td id="T_110e3_row1_col11" class="data row1 col11" >0,00</td>
+      <td id="T_110e3_row1_col12" class="data row1 col12" >0,00</td>
+    </tr>
+    <tr>
+      <th id="T_110e3_level0_row2" class="row_heading level0 row2" >Mégots et filtres à cigarettes</th>
+      <td id="T_110e3_row2_col0" class="data row2 col0" >0,03</td>
+      <td id="T_110e3_row2_col1" class="data row2 col1" >0,02</td>
+      <td id="T_110e3_row2_col2" class="data row2 col2" >0,03</td>
+      <td id="T_110e3_row2_col3" class="data row2 col3" >0,09</td>
+      <td id="T_110e3_row2_col4" class="data row2 col4" >0,18</td>
+      <td id="T_110e3_row2_col5" class="data row2 col5" >0,00</td>
+      <td id="T_110e3_row2_col6" class="data row2 col6" >0,01</td>
+      <td id="T_110e3_row2_col7" class="data row2 col7" >0,02</td>
+      <td id="T_110e3_row2_col8" class="data row2 col8" >0,06</td>
+      <td id="T_110e3_row2_col9" class="data row2 col9" >0,06</td>
+      <td id="T_110e3_row2_col10" class="data row2 col10" >0,07</td>
+      <td id="T_110e3_row2_col11" class="data row2 col11" >0,02</td>
+      <td id="T_110e3_row2_col12" class="data row2 col12" >0,03</td>
+    </tr>
+    <tr>
+      <th id="T_110e3_level0_row3" class="row_heading level0 row3" >Emballages de bonbons, de snacks</th>
+      <td id="T_110e3_row3_col0" class="data row3 col0" >0,09</td>
+      <td id="T_110e3_row3_col1" class="data row3 col1" >0,00</td>
+      <td id="T_110e3_row3_col2" class="data row3 col2" >0,01</td>
+      <td id="T_110e3_row3_col3" class="data row3 col3" >0,09</td>
+      <td id="T_110e3_row3_col4" class="data row3 col4" >0,04</td>
+      <td id="T_110e3_row3_col5" class="data row3 col5" >0,06</td>
+      <td id="T_110e3_row3_col6" class="data row3 col6" >0,00</td>
+      <td id="T_110e3_row3_col7" class="data row3 col7" >0,01</td>
+      <td id="T_110e3_row3_col8" class="data row3 col8" >0,03</td>
+      <td id="T_110e3_row3_col9" class="data row3 col9" >0,00</td>
+      <td id="T_110e3_row3_col10" class="data row3 col10" >0,33</td>
+      <td id="T_110e3_row3_col11" class="data row3 col11" >0,00</td>
+      <td id="T_110e3_row3_col12" class="data row3 col12" >0,03</td>
+    </tr>
+    <tr>
+      <th id="T_110e3_level0_row4" class="row_heading level0 row4" >Bâtonnets de sucette</th>
+      <td id="T_110e3_row4_col0" class="data row4 col0" >0,03</td>
+      <td id="T_110e3_row4_col1" class="data row4 col1" >0,00</td>
+      <td id="T_110e3_row4_col2" class="data row4 col2" >0,00</td>
+      <td id="T_110e3_row4_col3" class="data row4 col3" >0,03</td>
+      <td id="T_110e3_row4_col4" class="data row4 col4" >0,01</td>
+      <td id="T_110e3_row4_col5" class="data row4 col5" >0,00</td>
+      <td id="T_110e3_row4_col6" class="data row4 col6" >0,00</td>
+      <td id="T_110e3_row4_col7" class="data row4 col7" >0,00</td>
+      <td id="T_110e3_row4_col8" class="data row4 col8" >0,00</td>
+      <td id="T_110e3_row4_col9" class="data row4 col9" >0,00</td>
+      <td id="T_110e3_row4_col10" class="data row4 col10" >0,00</td>
+      <td id="T_110e3_row4_col11" class="data row4 col11" >0,00</td>
+      <td id="T_110e3_row4_col12" class="data row4 col12" >0,00</td>
+    </tr>
+    <tr>
+      <th id="T_110e3_level0_row5" class="row_heading level0 row5" >Mousse de plastique pour l'isolation thermique</th>
+      <td id="T_110e3_row5_col0" class="data row5 col0" >0,00</td>
+      <td id="T_110e3_row5_col1" class="data row5 col1" >0,00</td>
+      <td id="T_110e3_row5_col2" class="data row5 col2" >0,00</td>
+      <td id="T_110e3_row5_col3" class="data row5 col3" >0,00</td>
+      <td id="T_110e3_row5_col4" class="data row5 col4" >0,05</td>
+      <td id="T_110e3_row5_col5" class="data row5 col5" >0,00</td>
+      <td id="T_110e3_row5_col6" class="data row5 col6" >0,00</td>
+      <td id="T_110e3_row5_col7" class="data row5 col7" >0,00</td>
+      <td id="T_110e3_row5_col8" class="data row5 col8" >0,00</td>
+      <td id="T_110e3_row5_col9" class="data row5 col9" >0,00</td>
+      <td id="T_110e3_row5_col10" class="data row5 col10" >0,13</td>
+      <td id="T_110e3_row5_col11" class="data row5 col11" >0,00</td>
+      <td id="T_110e3_row5_col12" class="data row5 col12" >0,00</td>
+    </tr>
+    <tr>
+      <th id="T_110e3_level0_row6" class="row_heading level0 row6" >Déchets de construction en plastique</th>
+      <td id="T_110e3_row6_col0" class="data row6 col0" >0,00</td>
+      <td id="T_110e3_row6_col1" class="data row6 col1" >0,00</td>
+      <td id="T_110e3_row6_col2" class="data row6 col2" >0,00</td>
+      <td id="T_110e3_row6_col3" class="data row6 col3" >0,11</td>
+      <td id="T_110e3_row6_col4" class="data row6 col4" >0,00</td>
+      <td id="T_110e3_row6_col5" class="data row6 col5" >0,00</td>
+      <td id="T_110e3_row6_col6" class="data row6 col6" >0,00</td>
+      <td id="T_110e3_row6_col7" class="data row6 col7" >0,00</td>
+      <td id="T_110e3_row6_col8" class="data row6 col8" >0,00</td>
+      <td id="T_110e3_row6_col9" class="data row6 col9" >0,00</td>
+      <td id="T_110e3_row6_col10" class="data row6 col10" >0,05</td>
+      <td id="T_110e3_row6_col11" class="data row6 col11" >0,00</td>
+      <td id="T_110e3_row6_col12" class="data row6 col12" >0,00</td>
+    </tr>
+    <tr>
+      <th id="T_110e3_level0_row7" class="row_heading level0 row7" >Coton-tige</th>
+      <td id="T_110e3_row7_col0" class="data row7 col0" >0,15</td>
+      <td id="T_110e3_row7_col1" class="data row7 col1" >0,01</td>
+      <td id="T_110e3_row7_col2" class="data row7 col2" >0,00</td>
+      <td id="T_110e3_row7_col3" class="data row7 col3" >0,04</td>
+      <td id="T_110e3_row7_col4" class="data row7 col4" >0,04</td>
+      <td id="T_110e3_row7_col5" class="data row7 col5" >0,00</td>
+      <td id="T_110e3_row7_col6" class="data row7 col6" >0,00</td>
+      <td id="T_110e3_row7_col7" class="data row7 col7" >0,00</td>
+      <td id="T_110e3_row7_col8" class="data row7 col8" >0,00</td>
+      <td id="T_110e3_row7_col9" class="data row7 col9" >0,01</td>
+      <td id="T_110e3_row7_col10" class="data row7 col10" >0,11</td>
+      <td id="T_110e3_row7_col11" class="data row7 col11" >0,00</td>
+      <td id="T_110e3_row7_col12" class="data row7 col12" >0,00</td>
+    </tr>
+    <tr>
+      <th id="T_110e3_level0_row8" class="row_heading level0 row8" >Couvercles en plastique bouteille:  g21, g22, g23, g24</th>
+      <td id="T_110e3_row8_col0" class="data row8 col0" >0,14</td>
+      <td id="T_110e3_row8_col1" class="data row8 col1" >0,00</td>
+      <td id="T_110e3_row8_col2" class="data row8 col2" >0,01</td>
+      <td id="T_110e3_row8_col3" class="data row8 col3" >0,09</td>
+      <td id="T_110e3_row8_col4" class="data row8 col4" >0,01</td>
+      <td id="T_110e3_row8_col5" class="data row8 col5" >0,00</td>
+      <td id="T_110e3_row8_col6" class="data row8 col6" >0,01</td>
+      <td id="T_110e3_row8_col7" class="data row8 col7" >0,00</td>
+      <td id="T_110e3_row8_col8" class="data row8 col8" >0,01</td>
+      <td id="T_110e3_row8_col9" class="data row8 col9" >0,00</td>
+      <td id="T_110e3_row8_col10" class="data row8 col10" >0,06</td>
+      <td id="T_110e3_row8_col11" class="data row8 col11" >0,00</td>
+      <td id="T_110e3_row8_col12" class="data row8 col12" >0,01</td>
+    </tr>
+    <tr>
+      <th id="T_110e3_level0_row9" class="row_heading level0 row9" >Fragments de polystyrène expansé: g81, g82, g83</th>
+      <td id="T_110e3_row9_col0" class="data row9 col0" >0,09</td>
+      <td id="T_110e3_row9_col1" class="data row9 col1" >0,00</td>
+      <td id="T_110e3_row9_col2" class="data row9 col2" >0,00</td>
+      <td id="T_110e3_row9_col3" class="data row9 col3" >0,06</td>
+      <td id="T_110e3_row9_col4" class="data row9 col4" >0,03</td>
+      <td id="T_110e3_row9_col5" class="data row9 col5" >0,00</td>
+      <td id="T_110e3_row9_col6" class="data row9 col6" >0,00</td>
+      <td id="T_110e3_row9_col7" class="data row9 col7" >0,01</td>
+      <td id="T_110e3_row9_col8" class="data row9 col8" >0,01</td>
+      <td id="T_110e3_row9_col9" class="data row9 col9" >0,24</td>
+      <td id="T_110e3_row9_col10" class="data row9 col10" >0,26</td>
+      <td id="T_110e3_row9_col11" class="data row9 col11" >0,00</td>
+      <td id="T_110e3_row9_col12" class="data row9 col12" >0,01</td>
+    </tr>
+    <tr>
+      <th id="T_110e3_level0_row10" class="row_heading level0 row10" >Fragments de plastique: g80, g79, g78, g77, g76, g75</th>
+      <td id="T_110e3_row10_col0" class="data row10 col0" >0,58</td>
+      <td id="T_110e3_row10_col1" class="data row10 col1" >0,09</td>
+      <td id="T_110e3_row10_col2" class="data row10 col2" >0,04</td>
+      <td id="T_110e3_row10_col3" class="data row10 col3" >0,47</td>
+      <td id="T_110e3_row10_col4" class="data row10 col4" >0,20</td>
+      <td id="T_110e3_row10_col5" class="data row10 col5" >0,19</td>
+      <td id="T_110e3_row10_col6" class="data row10 col6" >0,04</td>
+      <td id="T_110e3_row10_col7" class="data row10 col7" >0,31</td>
+      <td id="T_110e3_row10_col8" class="data row10 col8" >0,14</td>
+      <td id="T_110e3_row10_col9" class="data row10 col9" >0,32</td>
+      <td id="T_110e3_row10_col10" class="data row10 col10" >1,13</td>
+      <td id="T_110e3_row10_col11" class="data row10 col11" >0,05</td>
+      <td id="T_110e3_row10_col12" class="data row10 col12" >0,16</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<br>
+<br>
+Résultats de Lugrin à Vidy :<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+#T_03b8b tr:nth-child(even) {
+  background-color: rgba(139, 69, 19, 0.08);
+}
+#T_03b8b tr:nth-child(odd) {
+  background: #FFF;
+}
+#T_03b8b tr {
+  font-size: 10px;
+}
+#T_03b8b th {
+  background-color: #FFF;
+  font-size: 12px;
+  text-align: left;
+  width: auto;
+}
+#T_03b8b td {
+  padding: 4px;
+  font-size: 12px;
+}
+#T_03b8b caption {
+  caption-side: bottom;
+  font-size: 1em;
+  text-align: left;
+}
+#T_03b8b_row0_col0, #T_03b8b_row0_col1, #T_03b8b_row0_col3, #T_03b8b_row0_col6, #T_03b8b_row0_col7, #T_03b8b_row0_col9, #T_03b8b_row0_col10, #T_03b8b_row0_col12, #T_03b8b_row1_col0, #T_03b8b_row1_col1, #T_03b8b_row1_col2, #T_03b8b_row1_col4, #T_03b8b_row1_col5, #T_03b8b_row1_col6, #T_03b8b_row1_col7, #T_03b8b_row1_col8, #T_03b8b_row1_col9, #T_03b8b_row1_col10, #T_03b8b_row1_col12, #T_03b8b_row2_col1, #T_03b8b_row2_col7, #T_03b8b_row2_col9, #T_03b8b_row3_col2, #T_03b8b_row4_col2, #T_03b8b_row4_col9, #T_03b8b_row4_col10, #T_03b8b_row5_col0, #T_03b8b_row5_col1, #T_03b8b_row5_col3, #T_03b8b_row5_col4, #T_03b8b_row5_col6, #T_03b8b_row5_col7, #T_03b8b_row5_col8, #T_03b8b_row5_col10, #T_03b8b_row5_col12, #T_03b8b_row6_col1, #T_03b8b_row6_col2, #T_03b8b_row6_col4, #T_03b8b_row6_col6, #T_03b8b_row6_col7, #T_03b8b_row6_col8, #T_03b8b_row6_col9, #T_03b8b_row6_col10, #T_03b8b_row6_col11, #T_03b8b_row6_col12, #T_03b8b_row7_col1, #T_03b8b_row7_col4, #T_03b8b_row7_col7, #T_03b8b_row7_col10, #T_03b8b_row8_col2, #T_03b8b_row8_col7, #T_03b8b_row8_col8, #T_03b8b_row9_col10 {
+  background-color: rgba(255,255,255, .5);
+  color: black;
+}
+#T_03b8b_row0_col2, #T_03b8b_row8_col6, #T_03b8b_row9_col4 {
+  background-color: rgba(250,250,250, .5);
+  color: black;
+}
+#T_03b8b_row0_col4, #T_03b8b_row10_col8 {
+  background-color: rgba(236,236,236, .5);
+  color: black;
+}
+#T_03b8b_row0_col5, #T_03b8b_row0_col8, #T_03b8b_row4_col0, #T_03b8b_row4_col7, #T_03b8b_row7_col3, #T_03b8b_row7_col12, #T_03b8b_row8_col12, #T_03b8b_row9_col7 {
+  background-color: rgba(253,253,253, .5);
+  color: black;
+}
+#T_03b8b_row0_col11, #T_03b8b_row2_col0, #T_03b8b_row2_col6, #T_03b8b_row8_col11 {
+  background-color: rgba(248,248,248, .5);
+  color: black;
+}
+#T_03b8b_row1_col3, #T_03b8b_row3_col11, #T_03b8b_row8_col5 {
+  background-color: rgba(225,225,225, .5);
+  color: black;
+}
+#T_03b8b_row1_col11, #T_03b8b_row3_col4, #T_03b8b_row3_col8, #T_03b8b_row4_col5, #T_03b8b_row5_col5, #T_03b8b_row7_col6, #T_03b8b_row8_col0, #T_03b8b_row9_col1 {
+  background-color: rgba(249,249,249, .5);
+  color: black;
+}
+#T_03b8b_row2_col2, #T_03b8b_row3_col3, #T_03b8b_row3_col6, #T_03b8b_row7_col0, #T_03b8b_row9_col3 {
+  background-color: rgba(244,244,244, .5);
+  color: black;
+}
+#T_03b8b_row2_col3 {
+  background-color: rgba(242,242,242, .5);
+  color: black;
+}
+#T_03b8b_row2_col4, #T_03b8b_row7_col5 {
+  background-color: rgba(234,234,234, .5);
+  color: black;
+}
+#T_03b8b_row2_col5 {
+  background-color: rgba(220,220,220, .5);
+  color: black;
+}
+#T_03b8b_row2_col8 {
+  background-color: rgba(216,216,216, .5);
+  color: black;
+}
+#T_03b8b_row2_col10, #T_03b8b_row3_col1, #T_03b8b_row3_col10, #T_03b8b_row4_col6, #T_03b8b_row4_col11, #T_03b8b_row5_col2, #T_03b8b_row5_col11, #T_03b8b_row7_col2, #T_03b8b_row8_col1, #T_03b8b_row9_col8, #T_03b8b_row10_col10 {
+  background-color: rgba(252,252,252, .5);
+  color: black;
+}
+#T_03b8b_row2_col11 {
+  background-color: rgba(151,151,151, .5);
+  color: black;
+}
+#T_03b8b_row2_col12 {
+  background-color: rgba(246,246,246, .5);
+  color: black;
+}
+#T_03b8b_row3_col0, #T_03b8b_row9_col2 {
+  background-color: rgba(224,224,224, .5);
+  color: black;
+}
+#T_03b8b_row3_col5 {
+  background-color: rgba(177,177,177, .5);
+  color: black;
+}
+#T_03b8b_row3_col7, #T_03b8b_row3_col12, #T_03b8b_row7_col9 {
+  background-color: rgba(247,247,247, .5);
+  color: black;
+}
+#T_03b8b_row3_col9 {
+  background-color: rgba(245,245,245, .5);
+  color: black;
+}
+#T_03b8b_row4_col1 {
+  background-color: rgba(240,240,240, .5);
+  color: black;
+}
+#T_03b8b_row4_col3, #T_03b8b_row4_col4, #T_03b8b_row4_col8, #T_03b8b_row4_col12, #T_03b8b_row6_col0, #T_03b8b_row6_col3, #T_03b8b_row6_col5, #T_03b8b_row7_col8, #T_03b8b_row8_col3, #T_03b8b_row8_col4, #T_03b8b_row8_col10, #T_03b8b_row9_col6, #T_03b8b_row9_col9, #T_03b8b_row9_col11 {
+  background-color: rgba(254,254,254, .5);
+  color: black;
+}
+#T_03b8b_row5_col9, #T_03b8b_row8_col9, #T_03b8b_row9_col12 {
+  background-color: rgba(251,251,251, .5);
+  color: black;
+}
+#T_03b8b_row7_col11, #T_03b8b_row9_col5 {
+  background-color: rgba(243,243,243, .5);
+  color: black;
+}
+#T_03b8b_row9_col0 {
+  background-color: rgba(202,202,202, .5);
+  color: black;
+}
+#T_03b8b_row10_col0 {
+  background-color: rgba(198,198,198, .5);
+  color: black;
+}
+#T_03b8b_row10_col1 {
+  background-color: rgba(59,59,59, .5);
+  color: black;
+}
+#T_03b8b_row10_col2 {
+  background-color: rgba(228,228,228, .5);
+  color: black;
+}
+#T_03b8b_row10_col3 {
+  background-color: rgba(121,121,121, .5);
+  color: black;
+}
+#T_03b8b_row10_col4 {
+  background-color: rgba(213,213,213, .5);
+  color: black;
+}
+#T_03b8b_row10_col5 {
+  background-color: rgba(253,195,141, .5);
+  color: black;
+}
+#T_03b8b_row10_col6 {
+  background-color: rgba(219,219,219, .5);
+  color: black;
+}
+#T_03b8b_row10_col7 {
+  background-color: rgba(238,238,238, .5);
+  color: black;
+}
+#T_03b8b_row10_col9 {
+  background-color: rgba(176,176,176, .5);
+  color: black;
+}
+#T_03b8b_row10_col11 {
+  background-color: rgba(146,146,146, .5);
+  color: black;
+}
+#T_03b8b_row10_col12 {
+  background-color: rgba(195,195,195, .5);
+  color: black;
+}
+</style>
+<table id="T_03b8b">
+  <caption>Les résultats des objets les plus courants de Plastock pour chaque ville du projet: Lugirn à Vevey</caption>
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_03b8b_level0_col0" class="col_heading level0 col0" >Lugrin</th>
+      <th id="T_03b8b_level0_col1" class="col_heading level0 col1" >Lutry</th>
+      <th id="T_03b8b_level0_col2" class="col_heading level0 col2" >Meillerie</th>
+      <th id="T_03b8b_level0_col3" class="col_heading level0 col3" >Préverenges</th>
+      <th id="T_03b8b_level0_col4" class="col_heading level0 col4" >Rolle</th>
+      <th id="T_03b8b_level0_col5" class="col_heading level0 col5" >Saint-disdille</th>
+      <th id="T_03b8b_level0_col6" class="col_heading level0 col6" >Savonière</th>
+      <th id="T_03b8b_level0_col7" class="col_heading level0 col7" >Tolochenaz</th>
+      <th id="T_03b8b_level0_col8" class="col_heading level0 col8" >Tougues</th>
+      <th id="T_03b8b_level0_col9" class="col_heading level0 col9" >Versoix</th>
+      <th id="T_03b8b_level0_col10" class="col_heading level0 col10" >Vevey</th>
+      <th id="T_03b8b_level0_col11" class="col_heading level0 col11" >Vidy</th>
+      <th id="T_03b8b_level0_col12" class="col_heading level0 col12" >Cumulé</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_03b8b_level0_row0" class="row_heading level0 row0" >Fragments de plastique angulaires <5mm</th>
+      <td id="T_03b8b_row0_col0" class="data row0 col0" >0,00</td>
+      <td id="T_03b8b_row0_col1" class="data row0 col1" >0,00</td>
+      <td id="T_03b8b_row0_col2" class="data row0 col2" >0,02</td>
+      <td id="T_03b8b_row0_col3" class="data row0 col3" >0,00</td>
+      <td id="T_03b8b_row0_col4" class="data row0 col4" >0,06</td>
+      <td id="T_03b8b_row0_col5" class="data row0 col5" >0,01</td>
+      <td id="T_03b8b_row0_col6" class="data row0 col6" >0,00</td>
+      <td id="T_03b8b_row0_col7" class="data row0 col7" >0,00</td>
+      <td id="T_03b8b_row0_col8" class="data row0 col8" >0,00</td>
+      <td id="T_03b8b_row0_col9" class="data row0 col9" >0,00</td>
+      <td id="T_03b8b_row0_col10" class="data row0 col10" >0,00</td>
+      <td id="T_03b8b_row0_col11" class="data row0 col11" >0,03</td>
+      <td id="T_03b8b_row0_col12" class="data row0 col12" >0,00</td>
+    </tr>
+    <tr>
+      <th id="T_03b8b_level0_row1" class="row_heading level0 row1" >Pellets industriels (gpi)</th>
+      <td id="T_03b8b_row1_col0" class="data row1 col0" >0,00</td>
+      <td id="T_03b8b_row1_col1" class="data row1 col1" >0,00</td>
+      <td id="T_03b8b_row1_col2" class="data row1 col2" >0,00</td>
+      <td id="T_03b8b_row1_col3" class="data row1 col3" >0,09</td>
+      <td id="T_03b8b_row1_col4" class="data row1 col4" >0,00</td>
+      <td id="T_03b8b_row1_col5" class="data row1 col5" >0,00</td>
+      <td id="T_03b8b_row1_col6" class="data row1 col6" >0,00</td>
+      <td id="T_03b8b_row1_col7" class="data row1 col7" >0,00</td>
+      <td id="T_03b8b_row1_col8" class="data row1 col8" >0,00</td>
+      <td id="T_03b8b_row1_col9" class="data row1 col9" >0,00</td>
+      <td id="T_03b8b_row1_col10" class="data row1 col10" >0,00</td>
+      <td id="T_03b8b_row1_col11" class="data row1 col11" >0,02</td>
+      <td id="T_03b8b_row1_col12" class="data row1 col12" >0,00</td>
+    </tr>
+    <tr>
+      <th id="T_03b8b_level0_row2" class="row_heading level0 row2" >Mégots et filtres à cigarettes</th>
+      <td id="T_03b8b_row2_col0" class="data row2 col0" >0,03</td>
+      <td id="T_03b8b_row2_col1" class="data row2 col1" >0,00</td>
+      <td id="T_03b8b_row2_col2" class="data row2 col2" >0,04</td>
+      <td id="T_03b8b_row2_col3" class="data row2 col3" >0,05</td>
+      <td id="T_03b8b_row2_col4" class="data row2 col4" >0,07</td>
+      <td id="T_03b8b_row2_col5" class="data row2 col5" >0,10</td>
+      <td id="T_03b8b_row2_col6" class="data row2 col6" >0,03</td>
+      <td id="T_03b8b_row2_col7" class="data row2 col7" >0,00</td>
+      <td id="T_03b8b_row2_col8" class="data row2 col8" >0,11</td>
+      <td id="T_03b8b_row2_col9" class="data row2 col9" >0,00</td>
+      <td id="T_03b8b_row2_col10" class="data row2 col10" >0,01</td>
+      <td id="T_03b8b_row2_col11" class="data row2 col11" >0,22</td>
+      <td id="T_03b8b_row2_col12" class="data row2 col12" >0,03</td>
+    </tr>
+    <tr>
+      <th id="T_03b8b_level0_row3" class="row_heading level0 row3" >Emballages de bonbons, de snacks</th>
+      <td id="T_03b8b_row3_col0" class="data row3 col0" >0,10</td>
+      <td id="T_03b8b_row3_col1" class="data row3 col1" >0,01</td>
+      <td id="T_03b8b_row3_col2" class="data row3 col2" >0,00</td>
+      <td id="T_03b8b_row3_col3" class="data row3 col3" >0,04</td>
+      <td id="T_03b8b_row3_col4" class="data row3 col4" >0,02</td>
+      <td id="T_03b8b_row3_col5" class="data row3 col5" >0,19</td>
+      <td id="T_03b8b_row3_col6" class="data row3 col6" >0,04</td>
+      <td id="T_03b8b_row3_col7" class="data row3 col7" >0,03</td>
+      <td id="T_03b8b_row3_col8" class="data row3 col8" >0,02</td>
+      <td id="T_03b8b_row3_col9" class="data row3 col9" >0,04</td>
+      <td id="T_03b8b_row3_col10" class="data row3 col10" >0,01</td>
+      <td id="T_03b8b_row3_col11" class="data row3 col11" >0,09</td>
+      <td id="T_03b8b_row3_col12" class="data row3 col12" >0,03</td>
+    </tr>
+    <tr>
+      <th id="T_03b8b_level0_row4" class="row_heading level0 row4" >Bâtonnets de sucette</th>
+      <td id="T_03b8b_row4_col0" class="data row4 col0" >0,01</td>
+      <td id="T_03b8b_row4_col1" class="data row4 col1" >0,05</td>
+      <td id="T_03b8b_row4_col2" class="data row4 col2" >0,00</td>
+      <td id="T_03b8b_row4_col3" class="data row4 col3" >0,00</td>
+      <td id="T_03b8b_row4_col4" class="data row4 col4" >0,00</td>
+      <td id="T_03b8b_row4_col5" class="data row4 col5" >0,02</td>
+      <td id="T_03b8b_row4_col6" class="data row4 col6" >0,01</td>
+      <td id="T_03b8b_row4_col7" class="data row4 col7" >0,00</td>
+      <td id="T_03b8b_row4_col8" class="data row4 col8" >0,00</td>
+      <td id="T_03b8b_row4_col9" class="data row4 col9" >0,00</td>
+      <td id="T_03b8b_row4_col10" class="data row4 col10" >0,00</td>
+      <td id="T_03b8b_row4_col11" class="data row4 col11" >0,01</td>
+      <td id="T_03b8b_row4_col12" class="data row4 col12" >0,00</td>
+    </tr>
+    <tr>
+      <th id="T_03b8b_level0_row5" class="row_heading level0 row5" >Mousse de plastique pour l'isolation thermique</th>
+      <td id="T_03b8b_row5_col0" class="data row5 col0" >0,00</td>
+      <td id="T_03b8b_row5_col1" class="data row5 col1" >0,00</td>
+      <td id="T_03b8b_row5_col2" class="data row5 col2" >0,01</td>
+      <td id="T_03b8b_row5_col3" class="data row5 col3" >0,00</td>
+      <td id="T_03b8b_row5_col4" class="data row5 col4" >0,00</td>
+      <td id="T_03b8b_row5_col5" class="data row5 col5" >0,02</td>
+      <td id="T_03b8b_row5_col6" class="data row5 col6" >0,00</td>
+      <td id="T_03b8b_row5_col7" class="data row5 col7" >0,00</td>
+      <td id="T_03b8b_row5_col8" class="data row5 col8" >0,00</td>
+      <td id="T_03b8b_row5_col9" class="data row5 col9" >0,01</td>
+      <td id="T_03b8b_row5_col10" class="data row5 col10" >0,00</td>
+      <td id="T_03b8b_row5_col11" class="data row5 col11" >0,01</td>
+      <td id="T_03b8b_row5_col12" class="data row5 col12" >0,00</td>
+    </tr>
+    <tr>
+      <th id="T_03b8b_level0_row6" class="row_heading level0 row6" >Déchets de construction en plastique</th>
+      <td id="T_03b8b_row6_col0" class="data row6 col0" >0,00</td>
+      <td id="T_03b8b_row6_col1" class="data row6 col1" >0,00</td>
+      <td id="T_03b8b_row6_col2" class="data row6 col2" >0,00</td>
+      <td id="T_03b8b_row6_col3" class="data row6 col3" >0,00</td>
+      <td id="T_03b8b_row6_col4" class="data row6 col4" >0,00</td>
+      <td id="T_03b8b_row6_col5" class="data row6 col5" >0,00</td>
+      <td id="T_03b8b_row6_col6" class="data row6 col6" >0,00</td>
+      <td id="T_03b8b_row6_col7" class="data row6 col7" >0,00</td>
+      <td id="T_03b8b_row6_col8" class="data row6 col8" >0,00</td>
+      <td id="T_03b8b_row6_col9" class="data row6 col9" >0,00</td>
+      <td id="T_03b8b_row6_col10" class="data row6 col10" >0,00</td>
+      <td id="T_03b8b_row6_col11" class="data row6 col11" >0,00</td>
+      <td id="T_03b8b_row6_col12" class="data row6 col12" >0,00</td>
+    </tr>
+    <tr>
+      <th id="T_03b8b_level0_row7" class="row_heading level0 row7" >Coton-tige</th>
+      <td id="T_03b8b_row7_col0" class="data row7 col0" >0,04</td>
+      <td id="T_03b8b_row7_col1" class="data row7 col1" >0,00</td>
+      <td id="T_03b8b_row7_col2" class="data row7 col2" >0,01</td>
+      <td id="T_03b8b_row7_col3" class="data row7 col3" >0,01</td>
+      <td id="T_03b8b_row7_col4" class="data row7 col4" >0,00</td>
+      <td id="T_03b8b_row7_col5" class="data row7 col5" >0,07</td>
+      <td id="T_03b8b_row7_col6" class="data row7 col6" >0,02</td>
+      <td id="T_03b8b_row7_col7" class="data row7 col7" >0,00</td>
+      <td id="T_03b8b_row7_col8" class="data row7 col8" >0,00</td>
+      <td id="T_03b8b_row7_col9" class="data row7 col9" >0,03</td>
+      <td id="T_03b8b_row7_col10" class="data row7 col10" >0,00</td>
+      <td id="T_03b8b_row7_col11" class="data row7 col11" >0,04</td>
+      <td id="T_03b8b_row7_col12" class="data row7 col12" >0,00</td>
+    </tr>
+    <tr>
+      <th id="T_03b8b_level0_row8" class="row_heading level0 row8" >Couvercles en plastique bouteille:  g21, g22, g23, g24</th>
+      <td id="T_03b8b_row8_col0" class="data row8 col0" >0,02</td>
+      <td id="T_03b8b_row8_col1" class="data row8 col1" >0,01</td>
+      <td id="T_03b8b_row8_col2" class="data row8 col2" >0,00</td>
+      <td id="T_03b8b_row8_col3" class="data row8 col3" >0,00</td>
+      <td id="T_03b8b_row8_col4" class="data row8 col4" >0,00</td>
+      <td id="T_03b8b_row8_col5" class="data row8 col5" >0,09</td>
+      <td id="T_03b8b_row8_col6" class="data row8 col6" >0,02</td>
+      <td id="T_03b8b_row8_col7" class="data row8 col7" >0,00</td>
+      <td id="T_03b8b_row8_col8" class="data row8 col8" >0,00</td>
+      <td id="T_03b8b_row8_col9" class="data row8 col9" >0,01</td>
+      <td id="T_03b8b_row8_col10" class="data row8 col10" >0,00</td>
+      <td id="T_03b8b_row8_col11" class="data row8 col11" >0,02</td>
+      <td id="T_03b8b_row8_col12" class="data row8 col12" >0,01</td>
+    </tr>
+    <tr>
+      <th id="T_03b8b_level0_row9" class="row_heading level0 row9" >Fragments de polystyrène expansé: g81, g82, g83</th>
+      <td id="T_03b8b_row9_col0" class="data row9 col0" >0,14</td>
+      <td id="T_03b8b_row9_col1" class="data row9 col1" >0,02</td>
+      <td id="T_03b8b_row9_col2" class="data row9 col2" >0,09</td>
+      <td id="T_03b8b_row9_col3" class="data row9 col3" >0,04</td>
+      <td id="T_03b8b_row9_col4" class="data row9 col4" >0,02</td>
+      <td id="T_03b8b_row9_col5" class="data row9 col5" >0,04</td>
+      <td id="T_03b8b_row9_col6" class="data row9 col6" >0,00</td>
+      <td id="T_03b8b_row9_col7" class="data row9 col7" >0,00</td>
+      <td id="T_03b8b_row9_col8" class="data row9 col8" >0,01</td>
+      <td id="T_03b8b_row9_col9" class="data row9 col9" >0,00</td>
+      <td id="T_03b8b_row9_col10" class="data row9 col10" >0,00</td>
+      <td id="T_03b8b_row9_col11" class="data row9 col11" >0,00</td>
+      <td id="T_03b8b_row9_col12" class="data row9 col12" >0,01</td>
+    </tr>
+    <tr>
+      <th id="T_03b8b_level0_row10" class="row_heading level0 row10" >Fragments de plastique: g80, g79, g78, g77, g76, g75</th>
+      <td id="T_03b8b_row10_col0" class="data row10 col0" >0,15</td>
+      <td id="T_03b8b_row10_col1" class="data row10 col1" >0,36</td>
+      <td id="T_03b8b_row10_col2" class="data row10 col2" >0,08</td>
+      <td id="T_03b8b_row10_col3" class="data row10 col3" >0,27</td>
+      <td id="T_03b8b_row10_col4" class="data row10 col4" >0,12</td>
+      <td id="T_03b8b_row10_col5" class="data row10 col5" >0,58</td>
+      <td id="T_03b8b_row10_col6" class="data row10 col6" >0,11</td>
+      <td id="T_03b8b_row10_col7" class="data row10 col7" >0,06</td>
+      <td id="T_03b8b_row10_col8" class="data row10 col8" >0,06</td>
+      <td id="T_03b8b_row10_col9" class="data row10 col9" >0,19</td>
+      <td id="T_03b8b_row10_col10" class="data row10 col10" >0,01</td>
+      <td id="T_03b8b_row10_col11" class="data row10 col11" >0,23</td>
+      <td id="T_03b8b_row10_col12" class="data row10 col12" >0,16</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+</div>
+</div>
+<div class="section" id="estimation-des-parametres-et-predictions">
+<h2><span class="section-number">2.4. </span>Estimation des paramètres et prédictions<a class="headerlink" href="#estimation-des-parametres-et-predictions" title="Permalink to this headline">#</a></h2>
+<div class="section" id="random-forest">
+<span id="random-forest-sa"></span><h3><span class="section-number">2.4.1. </span>Random Forest<a class="headerlink" href="#random-forest" title="Permalink to this headline">#</a></h3>
+<p>Source : <a class="reference external" href="https://scikit-learn.org/0.16/modules/generated/sklearn.ensemble.RandomForestRegressor.html">scikit-learn random forest</a></p>
+<p>criterion : <code class="docutils literal notranslate"><span class="pre">absolute</span> <span class="pre">error</span></code></p>
+<p>La régression avec forêt aléatoire est une technique d’apprentissage automatique (machine learning) utilisée pour prédire des résultats continus (par opposition aux catégories dans la classification). C’est une méthode d’apprentissage ensembliste, ce qui signifie qu’elle combine les prédictions de plusieurs algorithmes d’apprentissage automatique pour produire des prédictions plus précises.</p>
+<div class="sd-tab-set docutils">
+<input id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+Toutes les conditions</label><div class="sd-tab-content docutils">
+<p><img alt="_images/89261abd8fab1f2402d34aa1d3d5b223b7626dab597fed9bfa59d35bea725aa9.png" src="_images/89261abd8fab1f2402d34aa1d3d5b223b7626dab597fed9bfa59d35bea725aa9.png" /></p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+Graviers</label><div class="sd-tab-content docutils">
+<p><img alt="_images/61a6a0278e37526c0f1374ea2f89316d76c80ae89c18850c6101c1eac2d16bcc.png" src="_images/61a6a0278e37526c0f1374ea2f89316d76c80ae89c18850c6101c1eac2d16bcc.png" /></p>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+Sables</label><div class="sd-tab-content docutils">
+<p><img alt="_images/78568bc6f0fdb3639074343e1652f69fc3d39bcf9d2e347bec7d039f2ec46f78.png" src="_images/78568bc6f0fdb3639074343e1652f69fc3d39bcf9d2e347bec7d039f2ec46f78.png" /></p>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+Ville et haute Fréquentation</label><div class="sd-tab-content docutils">
+<p><img alt="_images/6991afe2bb8550631fd16bc44f34172d3bae9f13a44ed86f7fc6ea746fe148c0.png" src="_images/6991afe2bb8550631fd16bc44f34172d3bae9f13a44ed86f7fc6ea746fe148c0.png" /></p>
+</div>
+<input id="sd-tab-item-4" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
+Campagne et haute fréquentation</label><div class="sd-tab-content docutils">
+<p><img alt="_images/d3d1b4d9cfb7761c8f9ea5db6da48511f9ee99b522073f66c26b01b71bbdf869.png" src="_images/d3d1b4d9cfb7761c8f9ea5db6da48511f9ee99b522073f66c26b01b71bbdf869.png" /></p>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
+Campagne et parking &lt;= 500 m</label><div class="sd-tab-content docutils">
+<p><img alt="_images/ab27b7ce44ebd98b5055407c19254c1f54ed44649ca33254e75caefec4bdffd9.png" src="_images/ab27b7ce44ebd98b5055407c19254c1f54ed44649ca33254e75caefec4bdffd9.png" /></p>
+</div>
+<input id="sd-tab-item-6" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-6">
+Ville et parking &lt;= 500 m</label><div class="sd-tab-content docutils">
+<p><img alt="_images/190c7d47ef89f98eddb00cbbbd6c17bda8df292d8794d2cf61b441a9a973b761.png" src="_images/190c7d47ef89f98eddb00cbbbd6c17bda8df292d8794d2cf61b441a9a973b761.png" /></p>
+</div>
+<input checked="checked" id="sd-tab-item-7" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-7">
+Résultats</label><div class="sd-tab-content docutils">
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
+<div class="sd-col sd-d-flex-column docutils">
+<p><span class="output text_html"><style type="text/css">
+#T_65d3c tr:nth-child(even) {
+  background-color: rgba(139, 69, 19, 0.08);
+}
+#T_65d3c tr:nth-child(odd) {
+  background: #FFF;
+}
+#T_65d3c tr {
+  font-size: 14px;
+  padding: 10px;
+}
+#T_65d3c th:nth-child(1) {
+  background-color: #FFF;
+}
+#T_65d3c caption {
+  caption-side: top;
+  font-size: 12px;
+  text-align: left;
+  margin-top: 12px;
+}
+</style>
+<table id="T_65d3c">
+  <caption>Toutes les conditions</caption>
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_65d3c_level0_col0" class="col_heading level0 col0" >observée</th>
+      <th id="T_65d3c_level0_col1" class="col_heading level0 col1" >prédiction</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_65d3c_level0_row0" class="row_heading level0 row0" >1%</th>
+      <td id="T_65d3c_row0_col0" class="data row0 col0" >0.05</td>
+      <td id="T_65d3c_row0_col1" class="data row0 col1" >0.09</td>
+    </tr>
+    <tr>
+      <th id="T_65d3c_level0_row1" class="row_heading level0 row1" >25%</th>
+      <td id="T_65d3c_row1_col0" class="data row1 col0" >0.21</td>
+      <td id="T_65d3c_row1_col1" class="data row1 col1" >0.26</td>
+    </tr>
+    <tr>
+      <th id="T_65d3c_level0_row2" class="row_heading level0 row2" >50%</th>
+      <td id="T_65d3c_row2_col0" class="data row2 col0" >0.46</td>
+      <td id="T_65d3c_row2_col1" class="data row2 col1" >0.46</td>
+    </tr>
+    <tr>
+      <th id="T_65d3c_level0_row3" class="row_heading level0 row3" >75%</th>
+      <td id="T_65d3c_row3_col0" class="data row3 col0" >0.85</td>
+      <td id="T_65d3c_row3_col1" class="data row3 col1" >0.61</td>
+    </tr>
+    <tr>
+      <th id="T_65d3c_level0_row4" class="row_heading level0 row4" >99%</th>
+      <td id="T_65d3c_row4_col0" class="data row4 col0" >2.81</td>
+      <td id="T_65d3c_row4_col1" class="data row4 col1" >2.07</td>
+    </tr>
+    <tr>
+      <th id="T_65d3c_level0_row5" class="row_heading level0 row5" >Moyenne</th>
+      <td id="T_65d3c_row5_col0" class="data row5 col0" >0.67</td>
+      <td id="T_65d3c_row5_col1" class="data row5 col1" >0.54</td>
+    </tr>
+  </tbody>
+</table>
+</span></p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p>Les modèles ont fait l’objet d’un bootstrap, 100 itérations pour chaque scénario. Les résultats estimés sont la collection de toutes les prédictions de chaque itération.</p>
+<p>Par exemple, le tableau intitulé “Gravier” présente les résultats observés et prévus pour les plages ayant un substrat de 3 ou 4.</p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p><span class="output text_html"><style type="text/css">
+#T_13725 tr:nth-child(even) {
+  background-color: rgba(139, 69, 19, 0.08);
+}
+#T_13725 tr:nth-child(odd) {
+  background: #FFF;
+}
+#T_13725 tr {
+  font-size: 14px;
+  padding: 10px;
+}
+#T_13725 th:nth-child(1) {
+  background-color: #FFF;
+}
+#T_13725 caption {
+  caption-side: top;
+  font-size: 12px;
+  text-align: left;
+  margin-top: 12px;
+}
+</style>
+<table id="T_13725">
+  <caption>Graviers</caption>
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_13725_level0_col0" class="col_heading level0 col0" >observée</th>
+      <th id="T_13725_level0_col1" class="col_heading level0 col1" >prédiction</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_13725_level0_row0" class="row_heading level0 row0" >1%</th>
+      <td id="T_13725_row0_col0" class="data row0 col0" >0.03</td>
+      <td id="T_13725_row0_col1" class="data row0 col1" >0.13</td>
+    </tr>
+    <tr>
+      <th id="T_13725_level0_row1" class="row_heading level0 row1" >25%</th>
+      <td id="T_13725_row1_col0" class="data row1 col0" >0.12</td>
+      <td id="T_13725_row1_col1" class="data row1 col1" >0.36</td>
+    </tr>
+    <tr>
+      <th id="T_13725_level0_row2" class="row_heading level0 row2" >50%</th>
+      <td id="T_13725_row2_col0" class="data row2 col0" >0.24</td>
+      <td id="T_13725_row2_col1" class="data row2 col1" >0.52</td>
+    </tr>
+    <tr>
+      <th id="T_13725_level0_row3" class="row_heading level0 row3" >75%</th>
+      <td id="T_13725_row3_col0" class="data row3 col0" >0.90</td>
+      <td id="T_13725_row3_col1" class="data row3 col1" >0.73</td>
+    </tr>
+    <tr>
+      <th id="T_13725_level0_row4" class="row_heading level0 row4" >99%</th>
+      <td id="T_13725_row4_col0" class="data row4 col0" >1.91</td>
+      <td id="T_13725_row4_col1" class="data row4 col1" >1.35</td>
+    </tr>
+    <tr>
+      <th id="T_13725_level0_row5" class="row_heading level0 row5" >Moyenne</th>
+      <td id="T_13725_row5_col0" class="data row5 col0" >0.52</td>
+      <td id="T_13725_row5_col1" class="data row5 col1" >0.56</td>
+    </tr>
+  </tbody>
+</table>
+</span></p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p><span class="output text_html"><style type="text/css">
+#T_0bf58 tr:nth-child(even) {
+  background-color: rgba(139, 69, 19, 0.08);
+}
+#T_0bf58 tr:nth-child(odd) {
+  background: #FFF;
+}
+#T_0bf58 tr {
+  font-size: 14px;
+  padding: 10px;
+}
+#T_0bf58 th:nth-child(1) {
+  background-color: #FFF;
+}
+#T_0bf58 caption {
+  caption-side: top;
+  font-size: 12px;
+  text-align: left;
+  margin-top: 12px;
+}
+</style>
+<table id="T_0bf58">
+  <caption>Sables</caption>
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_0bf58_level0_col0" class="col_heading level0 col0" >observée</th>
+      <th id="T_0bf58_level0_col1" class="col_heading level0 col1" >prédiction</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_0bf58_level0_row0" class="row_heading level0 row0" >1%</th>
+      <td id="T_0bf58_row0_col0" class="data row0 col0" >0.08</td>
+      <td id="T_0bf58_row0_col1" class="data row0 col1" >0.12</td>
+    </tr>
+    <tr>
+      <th id="T_0bf58_level0_row1" class="row_heading level0 row1" >25%</th>
+      <td id="T_0bf58_row1_col0" class="data row1 col0" >0.33</td>
+      <td id="T_0bf58_row1_col1" class="data row1 col1" >0.34</td>
+    </tr>
+    <tr>
+      <th id="T_0bf58_level0_row2" class="row_heading level0 row2" >50%</th>
+      <td id="T_0bf58_row2_col0" class="data row2 col0" >0.52</td>
+      <td id="T_0bf58_row2_col1" class="data row2 col1" >0.52</td>
+    </tr>
+    <tr>
+      <th id="T_0bf58_level0_row3" class="row_heading level0 row3" >75%</th>
+      <td id="T_0bf58_row3_col0" class="data row3 col0" >0.83</td>
+      <td id="T_0bf58_row3_col1" class="data row3 col1" >0.63</td>
+    </tr>
+    <tr>
+      <th id="T_0bf58_level0_row4" class="row_heading level0 row4" >99%</th>
+      <td id="T_0bf58_row4_col0" class="data row4 col0" >3.15</td>
+      <td id="T_0bf58_row4_col1" class="data row4 col1" >2.25</td>
+    </tr>
+    <tr>
+      <th id="T_0bf58_level0_row5" class="row_heading level0 row5" >Moyenne</th>
+      <td id="T_0bf58_row5_col0" class="data row5 col0" >0.77</td>
+      <td id="T_0bf58_row5_col1" class="data row5 col1" >0.59</td>
+    </tr>
+  </tbody>
+</table>
+</span></p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p><span class="output text_html"><style type="text/css">
+#T_11ace tr:nth-child(even) {
+  background-color: rgba(139, 69, 19, 0.08);
+}
+#T_11ace tr:nth-child(odd) {
+  background: #FFF;
+}
+#T_11ace tr {
+  font-size: 14px;
+  padding: 10px;
+}
+#T_11ace th:nth-child(1) {
+  background-color: #FFF;
+}
+#T_11ace caption {
+  caption-side: top;
+  font-size: 12px;
+  text-align: left;
+  margin-top: 12px;
+}
+</style>
+<table id="T_11ace">
+  <caption>Urban, Fréquentation Elévée</caption>
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_11ace_level0_col0" class="col_heading level0 col0" >observée</th>
+      <th id="T_11ace_level0_col1" class="col_heading level0 col1" >prédiction</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_11ace_level0_row0" class="row_heading level0 row0" >1%</th>
+      <td id="T_11ace_row0_col0" class="data row0 col0" >0.05</td>
+      <td id="T_11ace_row0_col1" class="data row0 col1" >0.29</td>
+    </tr>
+    <tr>
+      <th id="T_11ace_level0_row1" class="row_heading level0 row1" >25%</th>
+      <td id="T_11ace_row1_col0" class="data row1 col0" >0.36</td>
+      <td id="T_11ace_row1_col1" class="data row1 col1" >0.52</td>
+    </tr>
+    <tr>
+      <th id="T_11ace_level0_row2" class="row_heading level0 row2" >50%</th>
+      <td id="T_11ace_row2_col0" class="data row2 col0" >0.52</td>
+      <td id="T_11ace_row2_col1" class="data row2 col1" >0.57</td>
+    </tr>
+    <tr>
+      <th id="T_11ace_level0_row3" class="row_heading level0 row3" >75%</th>
+      <td id="T_11ace_row3_col0" class="data row3 col0" >0.69</td>
+      <td id="T_11ace_row3_col1" class="data row3 col1" >0.68</td>
+    </tr>
+    <tr>
+      <th id="T_11ace_level0_row4" class="row_heading level0 row4" >99%</th>
+      <td id="T_11ace_row4_col0" class="data row4 col0" >1.76</td>
+      <td id="T_11ace_row4_col1" class="data row4 col1" >1.18</td>
+    </tr>
+    <tr>
+      <th id="T_11ace_level0_row5" class="row_heading level0 row5" >Moyenne</th>
+      <td id="T_11ace_row5_col0" class="data row5 col0" >0.59</td>
+      <td id="T_11ace_row5_col1" class="data row5 col1" >0.61</td>
+    </tr>
+  </tbody>
+</table>
+</span></p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p><span class="output text_html"><style type="text/css">
+#T_aa846 tr:nth-child(even) {
+  background-color: rgba(139, 69, 19, 0.08);
+}
+#T_aa846 tr:nth-child(odd) {
+  background: #FFF;
+}
+#T_aa846 tr {
+  font-size: 14px;
+  padding: 10px;
+}
+#T_aa846 th:nth-child(1) {
+  background-color: #FFF;
+}
+#T_aa846 caption {
+  caption-side: top;
+  font-size: 12px;
+  text-align: left;
+  margin-top: 12px;
+}
+</style>
+<table id="T_aa846">
+  <caption>Campagne, Fréquentation Eléveé</caption>
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_aa846_level0_col0" class="col_heading level0 col0" >observée</th>
+      <th id="T_aa846_level0_col1" class="col_heading level0 col1" >prédiction</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_aa846_level0_row0" class="row_heading level0 row0" >1%</th>
+      <td id="T_aa846_row0_col0" class="data row0 col0" >0.10</td>
+      <td id="T_aa846_row0_col1" class="data row0 col1" >0.24</td>
+    </tr>
+    <tr>
+      <th id="T_aa846_level0_row1" class="row_heading level0 row1" >25%</th>
+      <td id="T_aa846_row1_col0" class="data row1 col0" >0.26</td>
+      <td id="T_aa846_row1_col1" class="data row1 col1" >0.38</td>
+    </tr>
+    <tr>
+      <th id="T_aa846_level0_row2" class="row_heading level0 row2" >50%</th>
+      <td id="T_aa846_row2_col0" class="data row2 col0" >0.52</td>
+      <td id="T_aa846_row2_col1" class="data row2 col1" >0.48</td>
+    </tr>
+    <tr>
+      <th id="T_aa846_level0_row3" class="row_heading level0 row3" >75%</th>
+      <td id="T_aa846_row3_col0" class="data row3 col0" >0.95</td>
+      <td id="T_aa846_row3_col1" class="data row3 col1" >0.63</td>
+    </tr>
+    <tr>
+      <th id="T_aa846_level0_row4" class="row_heading level0 row4" >99%</th>
+      <td id="T_aa846_row4_col0" class="data row4 col0" >2.20</td>
+      <td id="T_aa846_row4_col1" class="data row4 col1" >1.29</td>
+    </tr>
+    <tr>
+      <th id="T_aa846_level0_row5" class="row_heading level0 row5" >Moyenne</th>
+      <td id="T_aa846_row5_col0" class="data row5 col0" >0.71</td>
+      <td id="T_aa846_row5_col1" class="data row5 col1" >0.54</td>
+    </tr>
+  </tbody>
+</table>
+</span></p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p><span class="output text_html"><style type="text/css">
+#T_e48ee tr:nth-child(even) {
+  background-color: rgba(139, 69, 19, 0.08);
+}
+#T_e48ee tr:nth-child(odd) {
+  background: #FFF;
+}
+#T_e48ee tr {
+  font-size: 14px;
+  padding: 10px;
+}
+#T_e48ee th:nth-child(1) {
+  background-color: #FFF;
+}
+#T_e48ee caption {
+  caption-side: top;
+  font-size: 12px;
+  text-align: left;
+  margin-top: 12px;
+}
+</style>
+<table id="T_e48ee">
+  <caption>Campagne, <= 500 m du parking</caption>
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_e48ee_level0_col0" class="col_heading level0 col0" >observée</th>
+      <th id="T_e48ee_level0_col1" class="col_heading level0 col1" >prédiction</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_e48ee_level0_row0" class="row_heading level0 row0" >1%</th>
+      <td id="T_e48ee_row0_col0" class="data row0 col0" >0.04</td>
+      <td id="T_e48ee_row0_col1" class="data row0 col1" >0.13</td>
+    </tr>
+    <tr>
+      <th id="T_e48ee_level0_row1" class="row_heading level0 row1" >25%</th>
+      <td id="T_e48ee_row1_col0" class="data row1 col0" >0.22</td>
+      <td id="T_e48ee_row1_col1" class="data row1 col1" >0.38</td>
+    </tr>
+    <tr>
+      <th id="T_e48ee_level0_row2" class="row_heading level0 row2" >50%</th>
+      <td id="T_e48ee_row2_col0" class="data row2 col0" >0.54</td>
+      <td id="T_e48ee_row2_col1" class="data row2 col1" >0.51</td>
+    </tr>
+    <tr>
+      <th id="T_e48ee_level0_row3" class="row_heading level0 row3" >75%</th>
+      <td id="T_e48ee_row3_col0" class="data row3 col0" >1.21</td>
+      <td id="T_e48ee_row3_col1" class="data row3 col1" >0.67</td>
+    </tr>
+    <tr>
+      <th id="T_e48ee_level0_row4" class="row_heading level0 row4" >99%</th>
+      <td id="T_e48ee_row4_col0" class="data row4 col0" >3.17</td>
+      <td id="T_e48ee_row4_col1" class="data row4 col1" >2.22</td>
+    </tr>
+    <tr>
+      <th id="T_e48ee_level0_row5" class="row_heading level0 row5" >Moyenne</th>
+      <td id="T_e48ee_row5_col0" class="data row5 col0" >0.81</td>
+      <td id="T_e48ee_row5_col1" class="data row5 col1" >0.62</td>
+    </tr>
+  </tbody>
+</table>
+</span></p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p><span class="output text_html"><style type="text/css">
+#T_5932c tr:nth-child(even) {
+  background-color: rgba(139, 69, 19, 0.08);
+}
+#T_5932c tr:nth-child(odd) {
+  background: #FFF;
+}
+#T_5932c tr {
+  font-size: 14px;
+  padding: 10px;
+}
+#T_5932c th:nth-child(1) {
+  background-color: #FFF;
+}
+#T_5932c caption {
+  caption-side: top;
+  font-size: 12px;
+  text-align: left;
+  margin-top: 12px;
+}
+</style>
+<table id="T_5932c">
+  <caption>Urban, <= 500 m du parking</caption>
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_5932c_level0_col0" class="col_heading level0 col0" >observée</th>
+      <th id="T_5932c_level0_col1" class="col_heading level0 col1" >prédiction</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_5932c_level0_row0" class="row_heading level0 row0" >1%</th>
+      <td id="T_5932c_row0_col0" class="data row0 col0" >0.05</td>
+      <td id="T_5932c_row0_col1" class="data row0 col1" >0.25</td>
+    </tr>
+    <tr>
+      <th id="T_5932c_level0_row1" class="row_heading level0 row1" >25%</th>
+      <td id="T_5932c_row1_col0" class="data row1 col0" >0.36</td>
+      <td id="T_5932c_row1_col1" class="data row1 col1" >0.50</td>
+    </tr>
+    <tr>
+      <th id="T_5932c_level0_row2" class="row_heading level0 row2" >50%</th>
+      <td id="T_5932c_row2_col0" class="data row2 col0" >0.52</td>
+      <td id="T_5932c_row2_col1" class="data row2 col1" >0.57</td>
+    </tr>
+    <tr>
+      <th id="T_5932c_level0_row3" class="row_heading level0 row3" >75%</th>
+      <td id="T_5932c_row3_col0" class="data row3 col0" >0.69</td>
+      <td id="T_5932c_row3_col1" class="data row3 col1" >0.67</td>
+    </tr>
+    <tr>
+      <th id="T_5932c_level0_row4" class="row_heading level0 row4" >99%</th>
+      <td id="T_5932c_row4_col0" class="data row4 col0" >1.76</td>
+      <td id="T_5932c_row4_col1" class="data row4 col1" >1.22</td>
+    </tr>
+    <tr>
+      <th id="T_5932c_level0_row5" class="row_heading level0 row5" >Moyenne</th>
+      <td id="T_5932c_row5_col0" class="data row5 col0" >0.59</td>
+      <td id="T_5932c_row5_col1" class="data row5 col1" >0.61</td>
+    </tr>
+  </tbody>
+</table>
+</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+</div>
+<div class="section" id="approximation-bayesienne-par-grille">
+<span id="grid-approx-p"></span><h3><span class="section-number">2.4.2. </span>Approximation Bayésienne par Grille<a class="headerlink" href="#approximation-bayesienne-par-grille" title="Permalink to this headline">#</a></h3>
+<p>Source : <a class="reference external" href="https://hammerdirt-analyst.github.io/feb_2024/titlepage.html">hammerdirt</a></p>
+<p>application : <a class="reference external" href="https://hammerdirt-analyst.github.io/solid-waste-team/grid_approximation.html">solid-waste-team</a></p>
+<p>prior : beta(1,1)</p>
+<p>Cas d’utilisation : Cette méthode est une approche manuelle de l’inférence Bayésienne. Elle est particulièrement utile lorsque vous souhaitez incorporer des croyances antérieures et mettre à jour ces croyances avec des données observées.</p>
+<p>Mise en œuvre : Implique la définition d’une grille de valeurs de paramètres et le calcul de la vraisemblance des données observées à chaque point de cette grille. En multipliant par la probabilité a priori et en normalisant, on obtient la distribution a posteriori. Cela peut être fait pour chaque condition séparément ou pour toutes les conditions ensemble, bien que cela soit plus intensif en termes de calcul.</p>
+<div class="sd-tab-set docutils">
+<input id="sd-tab-item-8" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-8">
+Toutes les conditions</label><div class="sd-tab-content docutils">
+<p><img alt="_images/b520fed4be781a6d05d1822de6c0570a9eb6400c560b16fb576a8b35da8172a6.png" src="_images/b520fed4be781a6d05d1822de6c0570a9eb6400c560b16fb576a8b35da8172a6.png" /></p>
+</div>
+<input id="sd-tab-item-9" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-9">
+Graviers</label><div class="sd-tab-content docutils">
+<p><img alt="_images/5b6b357c0693d319a6b7f8b4de5391c0a6ce4a23042a5ebe61895077469aeb94.png" src="_images/5b6b357c0693d319a6b7f8b4de5391c0a6ce4a23042a5ebe61895077469aeb94.png" /></p>
+</div>
+<input id="sd-tab-item-10" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-10">
+Sables</label><div class="sd-tab-content docutils">
+<p><img alt="_images/0e2d072c2422e5a59e37f78e49d76d85c11decfd1ceefb2a0243813468575de5.png" src="_images/0e2d072c2422e5a59e37f78e49d76d85c11decfd1ceefb2a0243813468575de5.png" /></p>
+</div>
+<input id="sd-tab-item-11" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-11">
+Ville et haute Fréquentation</label><div class="sd-tab-content docutils">
+<p><img alt="_images/f2bcc08773b255529edabed21ddb93aa20ce23da69a8317c4247b5967e83e1f3.png" src="_images/f2bcc08773b255529edabed21ddb93aa20ce23da69a8317c4247b5967e83e1f3.png" /></p>
+</div>
+<input id="sd-tab-item-12" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-12">
+Campagne et haute fréquentation</label><div class="sd-tab-content docutils">
+<p><img alt="_images/1e5c23301a9b0ed6159ca759f683f80e3d0999626871b0ac01da2dac040feb83.png" src="_images/1e5c23301a9b0ed6159ca759f683f80e3d0999626871b0ac01da2dac040feb83.png" /></p>
+</div>
+<input id="sd-tab-item-13" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-13">
+Campagne et parking &lt;= 500 m</label><div class="sd-tab-content docutils">
+<p><img alt="_images/462496c5348146ff919e8e81088980618d45e369921e8b2dadcca82eb491a734.png" src="_images/462496c5348146ff919e8e81088980618d45e369921e8b2dadcca82eb491a734.png" /></p>
+</div>
+<input id="sd-tab-item-14" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-14">
+Ville et parking &lt;= 500 m</label><div class="sd-tab-content docutils">
+<p><img alt="_images/afc3e92c406b77cc8719b92d2fddf40f72c0bb26efc595a7eb0658f504804d23.png" src="_images/afc3e92c406b77cc8719b92d2fddf40f72c0bb26efc595a7eb0658f504804d23.png" /></p>
+</div>
+<input checked="checked" id="sd-tab-item-15" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-15">
+Résultats</label><div class="sd-tab-content docutils">
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
+<div class="sd-col sd-d-flex-column docutils">
+<p><span class="output text_html"><style type="text/css">
+#T_1a1e6 tr:nth-child(even) {
+  background-color: rgba(139, 69, 19, 0.08);
+}
+#T_1a1e6 tr:nth-child(odd) {
+  background: #FFF;
+}
+#T_1a1e6 tr {
+  font-size: 14px;
+  padding: 10px;
+}
+#T_1a1e6 th:nth-child(1) {
+  background-color: #FFF;
+}
+#T_1a1e6 caption {
+  caption-side: top;
+  font-size: 12px;
+  text-align: left;
+  margin-top: 12px;
+}
+</style>
+<table id="T_1a1e6">
+  <caption>Toutes les conditions</caption>
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_1a1e6_level0_col0" class="col_heading level0 col0" >observée</th>
+      <th id="T_1a1e6_level0_col1" class="col_heading level0 col1" >prédiction</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_1a1e6_level0_row0" class="row_heading level0 row0" >1%</th>
+      <td id="T_1a1e6_row0_col0" class="data row0 col0" >0.05</td>
+      <td id="T_1a1e6_row0_col1" class="data row0 col1" >0.00</td>
+    </tr>
+    <tr>
+      <th id="T_1a1e6_level0_row1" class="row_heading level0 row1" >25%</th>
+      <td id="T_1a1e6_row1_col0" class="data row1 col0" >0.21</td>
+      <td id="T_1a1e6_row1_col1" class="data row1 col1" >0.18</td>
+    </tr>
+    <tr>
+      <th id="T_1a1e6_level0_row2" class="row_heading level0 row2" >50%</th>
+      <td id="T_1a1e6_row2_col0" class="data row2 col0" >0.46</td>
+      <td id="T_1a1e6_row2_col1" class="data row2 col1" >0.38</td>
+    </tr>
+    <tr>
+      <th id="T_1a1e6_level0_row3" class="row_heading level0 row3" >75%</th>
+      <td id="T_1a1e6_row3_col0" class="data row3 col0" >0.85</td>
+      <td id="T_1a1e6_row3_col1" class="data row3 col1" >0.78</td>
+    </tr>
+    <tr>
+      <th id="T_1a1e6_level0_row4" class="row_heading level0 row4" >99%</th>
+      <td id="T_1a1e6_row4_col0" class="data row4 col0" >2.81</td>
+      <td id="T_1a1e6_row4_col1" class="data row4 col1" >5.60</td>
+    </tr>
+    <tr>
+      <th id="T_1a1e6_level0_row5" class="row_heading level0 row5" >Moyenne</th>
+      <td id="T_1a1e6_row5_col0" class="data row5 col0" >0.67</td>
+      <td id="T_1a1e6_row5_col1" class="data row5 col1" >0.71</td>
+    </tr>
+  </tbody>
+</table>
+</span></p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p>Prédictions : Fournit une distribution de valeurs possibles de pcs/m, offrant une idée de la fourchette et de l’incertitude des prédictions. Particulièrement utile lorsque la prise de décision nécessite de comprendre l’incertitude ou la variabilité des prédictions.</p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p><span class="output text_html"><style type="text/css">
+#T_3397a tr:nth-child(even) {
+  background-color: rgba(139, 69, 19, 0.08);
+}
+#T_3397a tr:nth-child(odd) {
+  background: #FFF;
+}
+#T_3397a tr {
+  font-size: 14px;
+  padding: 10px;
+}
+#T_3397a th:nth-child(1) {
+  background-color: #FFF;
+}
+#T_3397a caption {
+  caption-side: top;
+  font-size: 12px;
+  text-align: left;
+  margin-top: 12px;
+}
+</style>
+<table id="T_3397a">
+  <caption>Graviers</caption>
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_3397a_level0_col0" class="col_heading level0 col0" >observée</th>
+      <th id="T_3397a_level0_col1" class="col_heading level0 col1" >prédiction</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_3397a_level0_row0" class="row_heading level0 row0" >1%</th>
+      <td id="T_3397a_row0_col0" class="data row0 col0" >0.03</td>
+      <td id="T_3397a_row0_col1" class="data row0 col1" >0.00</td>
+    </tr>
+    <tr>
+      <th id="T_3397a_level0_row1" class="row_heading level0 row1" >25%</th>
+      <td id="T_3397a_row1_col0" class="data row1 col0" >0.12</td>
+      <td id="T_3397a_row1_col1" class="data row1 col1" >0.28</td>
+    </tr>
+    <tr>
+      <th id="T_3397a_level0_row2" class="row_heading level0 row2" >50%</th>
+      <td id="T_3397a_row2_col0" class="data row2 col0" >0.24</td>
+      <td id="T_3397a_row2_col1" class="data row2 col1" >0.71</td>
+    </tr>
+    <tr>
+      <th id="T_3397a_level0_row3" class="row_heading level0 row3" >75%</th>
+      <td id="T_3397a_row3_col0" class="data row3 col0" >0.90</td>
+      <td id="T_3397a_row3_col1" class="data row3 col1" >1.33</td>
+    </tr>
+    <tr>
+      <th id="T_3397a_level0_row4" class="row_heading level0 row4" >99%</th>
+      <td id="T_3397a_row4_col0" class="data row4 col0" >1.91</td>
+      <td id="T_3397a_row4_col1" class="data row4 col1" >5.20</td>
+    </tr>
+    <tr>
+      <th id="T_3397a_level0_row5" class="row_heading level0 row5" >Moyenne</th>
+      <td id="T_3397a_row5_col0" class="data row5 col0" >0.52</td>
+      <td id="T_3397a_row5_col1" class="data row5 col1" >1.15</td>
+    </tr>
+  </tbody>
+</table>
+</span></p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p><span class="output text_html"><style type="text/css">
+#T_98434 tr:nth-child(even) {
+  background-color: rgba(139, 69, 19, 0.08);
+}
+#T_98434 tr:nth-child(odd) {
+  background: #FFF;
+}
+#T_98434 tr {
+  font-size: 14px;
+  padding: 10px;
+}
+#T_98434 th:nth-child(1) {
+  background-color: #FFF;
+}
+#T_98434 caption {
+  caption-side: top;
+  font-size: 12px;
+  text-align: left;
+  margin-top: 12px;
+}
+</style>
+<table id="T_98434">
+  <caption>Sable</caption>
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_98434_level0_col0" class="col_heading level0 col0" >observée</th>
+      <th id="T_98434_level0_col1" class="col_heading level0 col1" >prédiction</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_98434_level0_row0" class="row_heading level0 row0" >1%</th>
+      <td id="T_98434_row0_col0" class="data row0 col0" >0.08</td>
+      <td id="T_98434_row0_col1" class="data row0 col1" >0.00</td>
+    </tr>
+    <tr>
+      <th id="T_98434_level0_row1" class="row_heading level0 row1" >25%</th>
+      <td id="T_98434_row1_col0" class="data row1 col0" >0.33</td>
+      <td id="T_98434_row1_col1" class="data row1 col1" >0.17</td>
+    </tr>
+    <tr>
+      <th id="T_98434_level0_row2" class="row_heading level0 row2" >50%</th>
+      <td id="T_98434_row2_col0" class="data row2 col0" >0.52</td>
+      <td id="T_98434_row2_col1" class="data row2 col1" >0.40</td>
+    </tr>
+    <tr>
+      <th id="T_98434_level0_row3" class="row_heading level0 row3" >75%</th>
+      <td id="T_98434_row3_col0" class="data row3 col0" >0.83</td>
+      <td id="T_98434_row3_col1" class="data row3 col1" >1.31</td>
+    </tr>
+    <tr>
+      <th id="T_98434_level0_row4" class="row_heading level0 row4" >99%</th>
+      <td id="T_98434_row4_col0" class="data row4 col0" >3.15</td>
+      <td id="T_98434_row4_col1" class="data row4 col1" >4.68</td>
+    </tr>
+    <tr>
+      <th id="T_98434_level0_row5" class="row_heading level0 row5" >Moyenne</th>
+      <td id="T_98434_row5_col0" class="data row5 col0" >0.77</td>
+      <td id="T_98434_row5_col1" class="data row5 col1" >0.84</td>
+    </tr>
+  </tbody>
+</table>
+</span></p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p><span class="output text_html"><style type="text/css">
+#T_69d76 tr:nth-child(even) {
+  background-color: rgba(139, 69, 19, 0.08);
+}
+#T_69d76 tr:nth-child(odd) {
+  background: #FFF;
+}
+#T_69d76 tr {
+  font-size: 14px;
+  padding: 10px;
+}
+#T_69d76 th:nth-child(1) {
+  background-color: #FFF;
+}
+#T_69d76 caption {
+  caption-side: top;
+  font-size: 12px;
+  text-align: left;
+  margin-top: 12px;
+}
+</style>
+<table id="T_69d76">
+  <caption>Ville et haut fréquentation</caption>
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_69d76_level0_col0" class="col_heading level0 col0" >observée</th>
+      <th id="T_69d76_level0_col1" class="col_heading level0 col1" >prédiction</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_69d76_level0_row0" class="row_heading level0 row0" >1%</th>
+      <td id="T_69d76_row0_col0" class="data row0 col0" >0.05</td>
+      <td id="T_69d76_row0_col1" class="data row0 col1" >0.00</td>
+    </tr>
+    <tr>
+      <th id="T_69d76_level0_row1" class="row_heading level0 row1" >25%</th>
+      <td id="T_69d76_row1_col0" class="data row1 col0" >0.36</td>
+      <td id="T_69d76_row1_col1" class="data row1 col1" >0.21</td>
+    </tr>
+    <tr>
+      <th id="T_69d76_level0_row2" class="row_heading level0 row2" >50%</th>
+      <td id="T_69d76_row2_col0" class="data row2 col0" >0.52</td>
+      <td id="T_69d76_row2_col1" class="data row2 col1" >0.44</td>
+    </tr>
+    <tr>
+      <th id="T_69d76_level0_row3" class="row_heading level0 row3" >75%</th>
+      <td id="T_69d76_row3_col0" class="data row3 col0" >0.69</td>
+      <td id="T_69d76_row3_col1" class="data row3 col1" >1.21</td>
+    </tr>
+    <tr>
+      <th id="T_69d76_level0_row4" class="row_heading level0 row4" >99%</th>
+      <td id="T_69d76_row4_col0" class="data row4 col0" >1.76</td>
+      <td id="T_69d76_row4_col1" class="data row4 col1" >4.77</td>
+    </tr>
+    <tr>
+      <th id="T_69d76_level0_row5" class="row_heading level0 row5" >Moyenne</th>
+      <td id="T_69d76_row5_col0" class="data row5 col0" >0.59</td>
+      <td id="T_69d76_row5_col1" class="data row5 col1" >1.03</td>
+    </tr>
+  </tbody>
+</table>
+</span></p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p><span class="output text_html"><style type="text/css">
+#T_54f01 tr:nth-child(even) {
+  background-color: rgba(139, 69, 19, 0.08);
+}
+#T_54f01 tr:nth-child(odd) {
+  background: #FFF;
+}
+#T_54f01 tr {
+  font-size: 14px;
+  padding: 10px;
+}
+#T_54f01 th:nth-child(1) {
+  background-color: #FFF;
+}
+#T_54f01 caption {
+  caption-side: top;
+  font-size: 12px;
+  text-align: left;
+  margin-top: 12px;
+}
+</style>
+<table id="T_54f01">
+  <caption>Campagne et haut fréquentation</caption>
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_54f01_level0_col0" class="col_heading level0 col0" >observée</th>
+      <th id="T_54f01_level0_col1" class="col_heading level0 col1" >prédiction</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_54f01_level0_row0" class="row_heading level0 row0" >1%</th>
+      <td id="T_54f01_row0_col0" class="data row0 col0" >0.10</td>
+      <td id="T_54f01_row0_col1" class="data row0 col1" >0.00</td>
+    </tr>
+    <tr>
+      <th id="T_54f01_level0_row1" class="row_heading level0 row1" >25%</th>
+      <td id="T_54f01_row1_col0" class="data row1 col0" >0.26</td>
+      <td id="T_54f01_row1_col1" class="data row1 col1" >0.15</td>
+    </tr>
+    <tr>
+      <th id="T_54f01_level0_row2" class="row_heading level0 row2" >50%</th>
+      <td id="T_54f01_row2_col0" class="data row2 col0" >0.52</td>
+      <td id="T_54f01_row2_col1" class="data row2 col1" >0.46</td>
+    </tr>
+    <tr>
+      <th id="T_54f01_level0_row3" class="row_heading level0 row3" >75%</th>
+      <td id="T_54f01_row3_col0" class="data row3 col0" >0.95</td>
+      <td id="T_54f01_row3_col1" class="data row3 col1" >1.28</td>
+    </tr>
+    <tr>
+      <th id="T_54f01_level0_row4" class="row_heading level0 row4" >99%</th>
+      <td id="T_54f01_row4_col0" class="data row4 col0" >2.20</td>
+      <td id="T_54f01_row4_col1" class="data row4 col1" >5.83</td>
+    </tr>
+    <tr>
+      <th id="T_54f01_level0_row5" class="row_heading level0 row5" >Moyenne</th>
+      <td id="T_54f01_row5_col0" class="data row5 col0" >0.71</td>
+      <td id="T_54f01_row5_col1" class="data row5 col1" >1.01</td>
+    </tr>
+  </tbody>
+</table>
+</span></p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p><span class="output text_html"><style type="text/css">
+#T_cdb5f tr:nth-child(even) {
+  background-color: rgba(139, 69, 19, 0.08);
+}
+#T_cdb5f tr:nth-child(odd) {
+  background: #FFF;
+}
+#T_cdb5f tr {
+  font-size: 14px;
+  padding: 10px;
+}
+#T_cdb5f th:nth-child(1) {
+  background-color: #FFF;
+}
+#T_cdb5f caption {
+  caption-side: top;
+  font-size: 12px;
+  text-align: left;
+  margin-top: 12px;
+}
+</style>
+<table id="T_cdb5f">
+  <caption>Campagne et distance <= 500 m</caption>
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_cdb5f_level0_col0" class="col_heading level0 col0" >observée</th>
+      <th id="T_cdb5f_level0_col1" class="col_heading level0 col1" >prédiction</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_cdb5f_level0_row0" class="row_heading level0 row0" >1%</th>
+      <td id="T_cdb5f_row0_col0" class="data row0 col0" >0.04</td>
+      <td id="T_cdb5f_row0_col1" class="data row0 col1" >0.00</td>
+    </tr>
+    <tr>
+      <th id="T_cdb5f_level0_row1" class="row_heading level0 row1" >25%</th>
+      <td id="T_cdb5f_row1_col0" class="data row1 col0" >0.22</td>
+      <td id="T_cdb5f_row1_col1" class="data row1 col1" >0.24</td>
+    </tr>
+    <tr>
+      <th id="T_cdb5f_level0_row2" class="row_heading level0 row2" >50%</th>
+      <td id="T_cdb5f_row2_col0" class="data row2 col0" >0.54</td>
+      <td id="T_cdb5f_row2_col1" class="data row2 col1" >0.78</td>
+    </tr>
+    <tr>
+      <th id="T_cdb5f_level0_row3" class="row_heading level0 row3" >75%</th>
+      <td id="T_cdb5f_row3_col0" class="data row3 col0" >1.21</td>
+      <td id="T_cdb5f_row3_col1" class="data row3 col1" >1.42</td>
+    </tr>
+    <tr>
+      <th id="T_cdb5f_level0_row4" class="row_heading level0 row4" >99%</th>
+      <td id="T_cdb5f_row4_col0" class="data row4 col0" >3.17</td>
+      <td id="T_cdb5f_row4_col1" class="data row4 col1" >5.17</td>
+    </tr>
+    <tr>
+      <th id="T_cdb5f_level0_row5" class="row_heading level0 row5" >Moyenne</th>
+      <td id="T_cdb5f_row5_col0" class="data row5 col0" >0.81</td>
+      <td id="T_cdb5f_row5_col1" class="data row5 col1" >1.11</td>
+    </tr>
+  </tbody>
+</table>
+</span></p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p><span class="output text_html"><style type="text/css">
+#T_5619b tr:nth-child(even) {
+  background-color: rgba(139, 69, 19, 0.08);
+}
+#T_5619b tr:nth-child(odd) {
+  background: #FFF;
+}
+#T_5619b tr {
+  font-size: 14px;
+  padding: 10px;
+}
+#T_5619b th:nth-child(1) {
+  background-color: #FFF;
+}
+#T_5619b caption {
+  caption-side: top;
+  font-size: 12px;
+  text-align: left;
+  margin-top: 12px;
+}
+</style>
+<table id="T_5619b">
+  <caption>Ville et distance <= 500 m</caption>
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_5619b_level0_col0" class="col_heading level0 col0" >observée</th>
+      <th id="T_5619b_level0_col1" class="col_heading level0 col1" >prédiction</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_5619b_level0_row0" class="row_heading level0 row0" >1%</th>
+      <td id="T_5619b_row0_col0" class="data row0 col0" >0.05</td>
+      <td id="T_5619b_row0_col1" class="data row0 col1" >0.00</td>
+    </tr>
+    <tr>
+      <th id="T_5619b_level0_row1" class="row_heading level0 row1" >25%</th>
+      <td id="T_5619b_row1_col0" class="data row1 col0" >0.36</td>
+      <td id="T_5619b_row1_col1" class="data row1 col1" >0.18</td>
+    </tr>
+    <tr>
+      <th id="T_5619b_level0_row2" class="row_heading level0 row2" >50%</th>
+      <td id="T_5619b_row2_col0" class="data row2 col0" >0.52</td>
+      <td id="T_5619b_row2_col1" class="data row2 col1" >0.43</td>
+    </tr>
+    <tr>
+      <th id="T_5619b_level0_row3" class="row_heading level0 row3" >75%</th>
+      <td id="T_5619b_row3_col0" class="data row3 col0" >0.69</td>
+      <td id="T_5619b_row3_col1" class="data row3 col1" >1.02</td>
+    </tr>
+    <tr>
+      <th id="T_5619b_level0_row4" class="row_heading level0 row4" >99%</th>
+      <td id="T_5619b_row4_col0" class="data row4 col0" >1.76</td>
+      <td id="T_5619b_row4_col1" class="data row4 col1" >5.21</td>
+    </tr>
+    <tr>
+      <th id="T_5619b_level0_row5" class="row_heading level0 row5" >Moyenne</th>
+      <td id="T_5619b_row5_col0" class="data row5 col0" >0.59</td>
+      <td id="T_5619b_row5_col1" class="data row5 col1" >0.91</td>
+    </tr>
+  </tbody>
+</table>
+</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># t = rc.translate_for_display(plastock_report.inventory, amap=language_maps[&#39;fr&#39;], lan=&#39;fr&#39;)</span>
+<span class="c1"># t[&#39;objet&#39;] = t.code.apply(lambda x: codes.loc[x, &#39;fr&#39;])</span>
+<span class="c1"># t = t[[t.columns[0], t.columns[-1], *t.columns[1:-1]]]</span>
+<span class="c1"># t.set_index([&#39;code&#39;, &#39;objet&#39;], inplace=True)</span>
+<span class="c1"># t.index.name = None</span>
+<span class="c1"># t.style.set_table_styles(conf_.table_css_styles).format(**conf_.format_kwargs)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Git repo: https://github.com/hammerdirt-analyst/plastock.git
+
+Git branch: main
+
+pandas    : 2.0.0
+matplotlib: 3.7.1
+numpy     : 1.24.2
+seaborn   : 0.12.2
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="pca.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>PCA/AFDM</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="macro_object_results.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Résultats précédents</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resume-des-resultats">2.1. Resumé des résultats</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#differences-entre-les-types-de-plage">2.1.1. Différences entre les types de plage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exigences-particulieres-donnees-plastock">2.1.2. Exigences particulières données plastock</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#la-distribution-de-la-variable-de-substrat-apres-la-reattribution-des-12-echantillons-en-question">2.1.2.1. La distribution de la variable de substrat après la réattribution des 12 échantillons en question.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-objets-trouves-en-fonction-de-leur-utilisation">2.2. Les objets trouvés en fonction de leur utilisation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-objets-les-plus-courants-plastock">2.3. Les objets les plus courants Plastock</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-des-objets-les-plus-courants">2.3.1. Définition des <em>objets les plus courants</em></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimation-des-parametres-et-predictions">2.4. Estimation des paramètres et prédictions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#random-forest">2.4.1. Random Forest</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#approximation-bayesienne-par-grille">2.4.2. Approximation Bayésienne par Grille</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Roger Erismann, Alexis Pochelon
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p> Association pour la Sauvegarde du Léman et hammerdirt 2023 </p>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
