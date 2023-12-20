@@ -137,11 +137,11 @@ street_groups = [str_surface, str_ped_br, str_main, str_auto, str_combined]
 format_kwargs = dict(precision=2, thousands="'", decimal=",")
 
 # this defines the css rules for the note-book table displays
-header_row = {'selector':'th', 'props': f'background-color: #FFF; font-size:12px; text-align:left; width: auto;'}
+header_row = {'selector':'th', 'props': f'background-color: #FFF; font-size:12px; text-align:left; width: auto; word-break: keep-all;'}
 even_rows = {"selector": 'tr:nth-child(even)', 'props': f'background-color: rgba(139, 69, 19, 0.08);'}
 odd_rows = {'selector': 'tr:nth-child(odd)', 'props': 'background: #FFF;'}
 table_font = {'selector': 'tr', 'props': 'font-size: 10px;'}
-table_data = {'selector': 'td', 'props': 'padding:4px; font-size:12px;'}
+table_data = {'selector': 'td', 'props': 'padding:4px; font-size:12px;text-align: center;'}
 table_caption = {'selector': 'caption', 'props': 'caption-side: bottom; font-size:1em; text-align: left;'}
 table_css_styles = [even_rows, odd_rows, table_font, header_row, table_data, table_caption]
 

@@ -66,11 +66,12 @@ substrate_colors = {
     4:"darkslategrey"
 }
 
-header_row = {'selector': 'th:nth-child(1)', 'props': f'background-color: #FFF;'}
-even_rows = {"selector": 'tr:nth-child(even)', 'props': f'background-color: rgba(139, 69, 19, 0.08);'}
+header_row = {'selector': 'th:nth-child(1)', 'props': 'background-color: #FFF; white-space: nowrap; word-break: keep-all;'}
+even_rows = {"selector": 'tr:nth-child(even)', 'props': 'background-color: rgba(139, 69, 19, 0.08);'}
 odd_rows = {'selector': 'tr:nth-child(odd)', 'props': 'background: #FFF;'}
-table_font = {'selector': 'tr', 'props': 'font-size: 14px; padding:10px;'}
+table_font = {'selector': 'tr', 'props': 'font-size: 14px; padding:6px;'}
+t_data = {'selector': 'td', 'props': 'padding:4px; text-align: center;'}
 caption_bottom = {'selector': 'caption','props': 'caption-side: bottom; font-size:16px; text-align: left; margin-top:15px;'}
 caption_top = {'selector': 'caption','props': 'caption-side: top; font-size:12px; text-align: left; margin-top:12px;'}
-table_css_styles = [even_rows, odd_rows, table_font, header_row, caption_bottom]
+table_css_styles = [even_rows, odd_rows, table_font, header_row, t_data, caption_bottom]
 table_css_styles_top = [even_rows, odd_rows, table_font, header_row, caption_top]

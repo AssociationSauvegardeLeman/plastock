@@ -326,7 +326,7 @@ def translate_for_display(df: pd.DataFrame, amap: pd.DataFrame, lan: str):
     
     return df
 
-def translated_and_style_for_display(df, amap, lan, gradient: bool = True):
+def translated_and_style_for_display(df, amap, lan, capitalize: str = 'index', gradient: bool = True):
     """
     Translate, style, and format a DataFrame for display.
 
@@ -337,6 +337,7 @@ def translated_and_style_for_display(df, amap, lan, gradient: bool = True):
         df (pd.DataFrame): The input DataFrame to be translated and styled.
         amap (pd.DataFrame): A DataFrame containing language mappings.
         lan (str): The target language code for translation.
+        capitalize (str, optional): Whether to capitalize the DataFrame. Defaults to index.
         gradient (bool, optional): Whether to apply a color gradient to the DataFrame. Defaults to True.
 
     Returns:
@@ -360,7 +361,15 @@ def translated_and_style_for_display(df, amap, lan, gradient: bool = True):
         d = d.applymap(color_gradient, cmap=conf_.newcmp)
     d.applymap(lambda x: 'color: #E5E5E5' if pd.isnull(x) else '')
     d.applymap(lambda x: 'background: #E5E5E5' if pd.isnull(x) else '')
-    return d.format_index(str.capitalize, axis=1).format_index(str.capitalize, axis=0)
+    
+    if capitalize == 'index':
+        return d.format_index(str.capitalize, axis=0)
+    elif capitalize == 'columns':
+        return d.format_index(str.capitalize, axis=1)
+    elif capitalize == 'both':
+        return d.format_index(str.capitalize, axis=1).format_index(str.capitalize, axis=0)
+    else:
+        return d
 
 
 def display_tabular_data_by_column_values(df, column_one: dict, column_two: dict, index: str):
