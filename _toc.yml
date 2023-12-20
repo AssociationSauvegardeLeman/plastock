@@ -7,6 +7,7 @@ parts:
   numbered: true
   chapters:
   - file: pca
+  - file: micro_results
   - file: macro_surface_area
   - file: macro_object_results
 - caption: Annex
