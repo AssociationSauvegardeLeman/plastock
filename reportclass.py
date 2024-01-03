@@ -649,7 +649,7 @@ def report_data(a_start, df, beaches, codes, add_columns: List = None, use_gfrag
     return top_label, a_start['language'], w_df, w_d
 
 
-geo_h = conf_.geo_h
+geo_h =  ['project', 'parent_boundary', 'feature_type',  'feature_name', 'city', 'region', 'slug']
 
 
 def categorize_work_data(df, labels, columns_of_interest: List[str] = geo_h, sample_id: str = 'loc_date'):
@@ -921,7 +921,7 @@ class ReportClass:
     
     @property
     def available_features(self):
-        available = [x for x in conf_.geo_h if x in self.features.keys()]
+        available = [x for x in geo_h if x in self.features.keys()]
         return available
     
     @property
