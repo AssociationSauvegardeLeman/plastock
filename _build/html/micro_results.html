@@ -62,7 +62,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'micro_results';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="3. Macros déchets m²" href="macro_surface_area.html" />
+    <link rel="next" title="3. Plastock Macros déchets" href="macro_surface_area.html" />
     <link rel="prev" title="1. PCA/AFDM" href="pca.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
@@ -144,9 +144,8 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="pca.html">1. PCA/AFDM</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Micros particules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="macro_surface_area.html">3. Macros déchets m²</a></li>
-<li class="toctree-l1"><a class="reference internal" href="macro_object_results.html">4. Situation</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="macro_surface_area.html">3. Plastock Macros déchets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="macro_object_results.html">4. Résultats précédents</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Annex</span></p>
 <ul class="nav bd-sidenav">
@@ -328,288 +327,304 @@ document.write(`
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
+<div class="cell tag_remove-input docutils container">
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># First initialize the fig variable to a figure</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="c1"># Add a 3d axis to the figure</span>
-<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
-<span class="kn">from</span> <span class="nn">mpl_toolkits.mplot3d.art3d</span> <span class="kn">import</span> <span class="n">Poly3DCollection</span>
-
- 
-<span class="n">vertices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">],</span><span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
-<span class="n">vertices</span><span class="p">[</span><span class="mi">0</span><span class="p">,:]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="n">vertices</span><span class="p">[</span><span class="mi">1</span><span class="p">,:]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="n">vertices</span><span class="p">[</span><span class="mi">2</span><span class="p">,:]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="n">vertices</span> <span class="o">=</span> <span class="n">vertices</span> <span class="o">-</span> <span class="mi">1</span> <span class="c1">#(adjust the indices by one since python starts with zero indexing)</span>
-
-<span class="c1"># Define an array with dimensions 8 by 3</span>
-<span class="c1"># 8 for each vertex</span>
-<span class="c1"># -&gt; indices will be vertex1=0, v2=1, v3=2 ...</span>
-<span class="c1"># 3 for each coordinate</span>
-<span class="c1"># -&gt; indices will be x=0,y=1,z=1</span>
-<span class="n">cube</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
-
-<span class="c1"># Define x values</span>
-<span class="n">cube</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-<span class="c1"># Define y values</span>
-<span class="n">cube</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-<span class="c1"># Define z values</span>
-<span class="n">cube</span><span class="p">[:,</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-<span class="n">faces</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">faces</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">]))</span>
-<span class="n">faces</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">]))</span>
-<span class="n">faces</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">]))</span>
-<span class="n">faces</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">]))</span>
-<span class="n">faces</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">]))</span>
-<span class="n">faces</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">]))</span>
-<span class="c1"># Bottom face</span>
-<span class="n">faces</span><span class="p">[</span><span class="mi">0</span><span class="p">][:,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">faces</span><span class="p">[</span><span class="mi">0</span><span class="p">][:,</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">faces</span><span class="p">[</span><span class="mi">0</span><span class="p">][:,</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
-<span class="c1"># Top face</span>
-<span class="n">faces</span><span class="p">[</span><span class="mi">1</span><span class="p">][:,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">faces</span><span class="p">[</span><span class="mi">1</span><span class="p">][:,</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">faces</span><span class="p">[</span><span class="mi">1</span><span class="p">][:,</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
-<span class="c1"># Left Face</span>
-<span class="n">faces</span><span class="p">[</span><span class="mi">2</span><span class="p">][:,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">faces</span><span class="p">[</span><span class="mi">2</span><span class="p">][:,</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">faces</span><span class="p">[</span><span class="mi">2</span><span class="p">][:,</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
-<span class="c1"># Left Face</span>
-<span class="n">faces</span><span class="p">[</span><span class="mi">3</span><span class="p">][:,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">faces</span><span class="p">[</span><span class="mi">3</span><span class="p">][:,</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">faces</span><span class="p">[</span><span class="mi">3</span><span class="p">][:,</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
-<span class="c1"># front face</span>
-<span class="n">faces</span><span class="p">[</span><span class="mi">4</span><span class="p">][:,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">faces</span><span class="p">[</span><span class="mi">4</span><span class="p">][:,</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">faces</span><span class="p">[</span><span class="mi">4</span><span class="p">][:,</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
-<span class="c1"># front face</span>
-<span class="n">faces</span><span class="p">[</span><span class="mi">5</span><span class="p">][:,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">faces</span><span class="p">[</span><span class="mi">5</span><span class="p">][:,</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">faces</span><span class="p">[</span><span class="mi">5</span><span class="p">][:,</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
-<span class="c1"># ax.add_collection3d(Poly3DCollection(faces, facecolors=&#39;cyan&#39;, linewidths=1, edgecolors=&#39;k&#39;, alpha=.25))</span>
-
-
-<span class="c1"># ax.plot(cube[vertices[0,:],0],cube[vertices[0,:],1],cube[vertices[0,:],2],color=&#39;r&#39;)</span>
-<span class="c1"># ax.plot(cube[vertices[1,:],0],cube[vertices[1,:],1],cube[vertices[1,:],2],color=&#39;r&#39;)</span>
-<span class="c1"># ax.plot(cube[vertices[2,:],0],cube[vertices[2,:],1],cube[vertices[2,:],2],color=&#39;r&#39;)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cube</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">work_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;X&#39;)
-</pre></div>
-</div>
-<img alt="_images/a8a30c5a285142bb0843749637453cd12274eac40a6af80ed6df001c4f8c7a17.png" src="_images/a8a30c5a285142bb0843749637453cd12274eac40a6af80ed6df001c4f8c7a17.png" />
-</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Plage</th>
+      <th>échantillon</th>
+      <th>orientation</th>
+      <th>position</th>
+      <th>substrat</th>
+      <th>fréquentation</th>
+      <th>situation</th>
+      <th>distance</th>
+      <th>objet</th>
+      <th>compte</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Amphion</td>
+      <td>74_Amp_1</td>
+      <td>NE</td>
+      <td>1</td>
+      <td>4</td>
+      <td>3</td>
+      <td>1</td>
+      <td>1</td>
+      <td>fibres</td>
+      <td>97</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Amphion</td>
+      <td>74_Amp_10</td>
+      <td>NNE</td>
+      <td>2</td>
+      <td>4</td>
+      <td>3</td>
+      <td>1</td>
+      <td>1</td>
+      <td>fibres</td>
+      <td>140</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Amphion</td>
+      <td>74_Amp_2</td>
+      <td>NNE</td>
+      <td>1</td>
+      <td>4</td>
+      <td>3</td>
+      <td>1</td>
+      <td>1</td>
+      <td>fibres</td>
+      <td>121</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Amphion</td>
+      <td>74_Amp_3</td>
+      <td>NE</td>
+      <td>1</td>
+      <td>4</td>
+      <td>3</td>
+      <td>1</td>
+      <td>1</td>
+      <td>fibres</td>
+      <td>31</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Amphion</td>
+      <td>74_Amp_4</td>
+      <td>NNE</td>
+      <td>1</td>
+      <td>4</td>
+      <td>3</td>
+      <td>1</td>
+      <td>1</td>
+      <td>fibres</td>
+      <td>179</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cube</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">work_datai</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0., 0., 0.],
-       [0., 1., 0.],
-       [0., 0., 1.],
-       [0., 1., 1.],
-       [1., 0., 0.],
-       [1., 1., 0.],
-       [1., 0., 1.],
-       [1., 1., 1.]])
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Plage</th>
+      <th>échantillon</th>
+      <th>orientation</th>
+      <th>position</th>
+      <th>substrat</th>
+      <th>fréquentation</th>
+      <th>situation</th>
+      <th>distance</th>
+      <th>objet</th>
+      <th>compte</th>
+      <th>slug</th>
+      <th>region</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Amphion</td>
+      <td>74_Amp_1</td>
+      <td>NE</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>1</td>
+      <td>1</td>
+      <td>fibres</td>
+      <td>97</td>
+      <td>amphion</td>
+      <td>Grand lac</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Amphion</td>
+      <td>74_Amp_10</td>
+      <td>NNE</td>
+      <td>2</td>
+      <td>2</td>
+      <td>3</td>
+      <td>1</td>
+      <td>1</td>
+      <td>fibres</td>
+      <td>140</td>
+      <td>amphion</td>
+      <td>Grand lac</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Amphion</td>
+      <td>74_Amp_2</td>
+      <td>NNE</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>1</td>
+      <td>1</td>
+      <td>fibres</td>
+      <td>121</td>
+      <td>amphion</td>
+      <td>Grand lac</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Amphion</td>
+      <td>74_Amp_3</td>
+      <td>NE</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>1</td>
+      <td>1</td>
+      <td>fibres</td>
+      <td>31</td>
+      <td>amphion</td>
+      <td>Grand lac</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Amphion</td>
+      <td>74_Amp_4</td>
+      <td>NNE</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>1</td>
+      <td>1</td>
+      <td>fibres</td>
+      <td>179</td>
+      <td>amphion</td>
+      <td>Grand lac</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cube</span><span class="p">[</span><span class="n">vertices</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">regions</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0., 0., 0.],
-       [1., 0., 1.],
-       [1., 0., 0.],
-       [1., 1., 1.],
-       [0., 1., 0.],
-       [0., 1., 1.],
-       [1., 1., 0.],
-       [0., 0., 1.]])
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vertices</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 6, 4, 7, 1, 3, 5, 2])
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>alabel</th>
+    </tr>
+    <tr>
+      <th>slug</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>anarchy-beach</th>
+      <td>Haut lac</td>
+    </tr>
+    <tr>
+      <th>arabie</th>
+      <td>Haut lac</td>
+    </tr>
+    <tr>
+      <th>bain-des-dames</th>
+      <td>Haut lac</td>
+    </tr>
+    <tr>
+      <th>baye-de-clarens</th>
+      <td>Haut lac</td>
+    </tr>
+    <tr>
+      <th>baye-de-montreux-d</th>
+      <td>Haut lac</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
 <div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<img alt="_images/e9b849bc36cc72f861f7bd101687986ef55d319dd0fb2ec222ee372ac3998ca3.png" src="_images/e9b849bc36cc72f861f7bd101687986ef55d319dd0fb2ec222ee372ac3998ca3.png" />
 </div>
+<div class="cell tag_remove-input docutils container">
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.cluster</span> <span class="kn">import</span> <span class="n">hierarchy</span>
-<span class="kn">from</span> <span class="nn">scipy.spatial.distance</span> <span class="kn">import</span> <span class="n">squareform</span>
-<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">spearmanr</span>
-<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
-<span class="kn">from</span> <span class="nn">sklearn.inspection</span> <span class="kn">import</span> <span class="n">permutation_importance</span>
-
-<span class="k">def</span> <span class="nf">plot_permutation_importance</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">ax</span><span class="p">):</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="n">permutation_importance</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">n_repeats</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-    <span class="n">perm_sorted_idx</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">importances_mean</span><span class="o">.</span><span class="n">argsort</span><span class="p">()</span>
-
-    <span class="n">ax</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span>
-        <span class="n">result</span><span class="o">.</span><span class="n">importances</span><span class="p">[</span><span class="n">perm_sorted_idx</span><span class="p">]</span><span class="o">.</span><span class="n">T</span><span class="p">,</span>
-        <span class="n">vert</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-        <span class="n">labels</span><span class="o">=</span><span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="n">perm_sorted_idx</span><span class="p">],</span>
-    <span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">ax</span>
-
-<span class="n">test_xt</span> <span class="o">=</span> <span class="n">work_datai</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="c1"># the sides of the object used to sample</span>
-<span class="n">test_xt</span><span class="p">[</span><span class="s1">&#39;pcs_m&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">test_xt</span><span class="p">[</span><span class="s1">&#39;compte&#39;</span><span class="p">]</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span><span class="o">*</span><span class="mi">10000</span>
-
- <span class="c1"># Prepare data for regression</span>
-<span class="n">scenario_data</span> <span class="o">=</span> <span class="n">test_x</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="n">scenario_data</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">y_scaler</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">()</span>
-<span class="n">y_scaled</span> <span class="o">=</span> <span class="n">y_scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">scenario_data</span><span class="p">[</span><span class="s1">&#39;pcs_m&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
-
-<span class="c1"># Initialize the OneHotEncoder</span>
-<span class="c1"># here we encode the ordinal data</span>
-<span class="n">encoder</span> <span class="o">=</span> <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">sparse_output</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-
-<span class="n">X</span> <span class="o">=</span> <span class="n">scenario_data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;pcs_m&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
-
-<span class="c1"># Apply the encoder to the categorical columns</span>
-<span class="c1"># encoded_data = encoder.fit_transform(scenario_data[[&#39;fréquentation&#39;, &#39;distance&#39;, &#39;substrat&#39;]])</span>
-<span class="c1"># Create a DataFrame with the encoded data</span>
-<span class="c1"># X_encoded = pd.DataFrame(encoded_data, columns=encoder.get_feature_names_out([&#39;fréquentation&#39;, &#39;distance&#39;, &#39;substrat&#39;]))</span>
-<span class="c1"># X_encoded[&quot;Plage&quot;] = scenario_data.Plage</span>
-
-
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y_scaled</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
-
-<span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
-<span class="n">corr</span> <span class="o">=</span> <span class="n">spearmanr</span><span class="p">(</span><span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">correlation</span>
-
-<span class="c1"># Ensure the correlation matrix is symmetric</span>
-<span class="n">corr</span> <span class="o">=</span> <span class="p">(</span><span class="n">corr</span> <span class="o">+</span> <span class="n">corr</span><span class="o">.</span><span class="n">T</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
-<span class="n">np</span><span class="o">.</span><span class="n">fill_diagonal</span><span class="p">(</span><span class="n">corr</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-
-<span class="c1"># We convert the correlation matrix to a distance matrix before performing</span>
-<span class="c1"># hierarchical clustering using Ward&#39;s linkage.</span>
-<span class="n">distance_matrix</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">corr</span><span class="p">)</span>
-<span class="n">dist_linkage</span> <span class="o">=</span> <span class="n">hierarchy</span><span class="o">.</span><span class="n">ward</span><span class="p">(</span><span class="n">squareform</span><span class="p">(</span><span class="n">distance_matrix</span><span class="p">))</span>
-<span class="n">dendro</span> <span class="o">=</span> <span class="n">hierarchy</span><span class="o">.</span><span class="n">dendrogram</span><span class="p">(</span>
-    <span class="n">dist_linkage</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">to_list</span><span class="p">(),</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">,</span> <span class="n">leaf_rotation</span><span class="o">=</span><span class="mi">90</span>
-<span class="p">)</span>
-<span class="n">dendro_idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">dendro</span><span class="p">[</span><span class="s2">&quot;ivl&quot;</span><span class="p">]))</span>
-
-<span class="n">ax2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">corr</span><span class="p">[</span><span class="n">dendro</span><span class="p">[</span><span class="s2">&quot;leaves&quot;</span><span class="p">],</span> <span class="p">:][:,</span> <span class="n">dendro</span><span class="p">[</span><span class="s2">&quot;leaves&quot;</span><span class="p">]])</span>
-<span class="n">ax2</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">dendro_idx</span><span class="p">)</span>
-<span class="n">ax2</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="n">dendro_idx</span><span class="p">)</span>
-<span class="n">ax2</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">dendro</span><span class="p">[</span><span class="s2">&quot;ivl&quot;</span><span class="p">],</span> <span class="n">rotation</span><span class="o">=</span><span class="s2">&quot;vertical&quot;</span><span class="p">)</span>
-<span class="n">ax2</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">(</span><span class="n">dendro</span><span class="p">[</span><span class="s2">&quot;ivl&quot;</span><span class="p">])</span>
-<span class="n">_</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-</pre></div>
+<div class="cell tag_remove-input docutils container">
 </div>
+<div class="cell tag_remove-input docutils container">
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;fréquentation&#39;, &#39;situation&#39;, &#39;distance&#39;, &#39;substrat&#39;], dtype=&#39;object&#39;)
-Index([&#39;fréquentation&#39;, &#39;situation&#39;, &#39;distance&#39;, &#39;substrat&#39;], dtype=&#39;object&#39;)
-</pre></div>
-</div>
-<img alt="_images/23f556cb0201c29c12df469f48d7305a8ae5ff3751840a1083498425d7dc5a04.png" src="_images/23f556cb0201c29c12df469f48d7305a8ae5ff3751840a1083498425d7dc5a04.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y_scaled</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
-
-<span class="n">cluster_ids</span> <span class="o">=</span> <span class="n">hierarchy</span><span class="o">.</span><span class="n">fcluster</span><span class="p">(</span><span class="n">dist_linkage</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">criterion</span><span class="o">=</span><span class="s2">&quot;distance&quot;</span><span class="p">)</span>
-<span class="n">cluster_id_to_feature_ids</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">cluster_id</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">cluster_ids</span><span class="p">):</span>
-    <span class="n">cluster_id_to_feature_ids</span><span class="p">[</span><span class="n">cluster_id</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span>
-<span class="n">selected_features</span> <span class="o">=</span> <span class="p">[</span><span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">cluster_id_to_feature_ids</span><span class="o">.</span><span class="n">values</span><span class="p">()]</span>
-<span class="n">selected_features_names</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="n">selected_features</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">selected_features_names</span><span class="p">)</span>
-
-<span class="n">X_train_sel</span> <span class="o">=</span> <span class="n">X_train</span><span class="p">[</span><span class="n">selected_features_names</span><span class="p">]</span>
-<span class="n">X_test_sel</span> <span class="o">=</span> <span class="n">X_test</span><span class="p">[</span><span class="n">selected_features_names</span><span class="p">]</span>
-
-<span class="n">clf_sel</span> <span class="o">=</span> <span class="n">RandomForestRegressor</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="n">estimators</span><span class="p">,</span> <span class="n">criterion</span><span class="o">=</span><span class="s2">&quot;absolute_error&quot;</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
-<span class="n">clf_sel</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_sel</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span>
-    <span class="s2">&quot;Baseline accuracy on test data with features removed:&quot;</span>
-    <span class="sa">f</span><span class="s2">&quot; </span><span class="si">{</span><span class="n">clf_sel</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test_sel</span><span class="p">,</span><span class="w"> </span><span class="n">y_test</span><span class="p">)</span><span class="si">:</span><span class="s2">.2</span><span class="si">}</span><span class="s2">&quot;</span>
-<span class="p">)</span>
-
-<span class="n">selected_features_names</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;fréquentation&#39;], dtype=&#39;object&#39;)
-Baseline accuracy on test data with features removed: 0.037
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;fréquentation&#39;], dtype=&#39;object&#39;)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-<span class="n">ax</span> <span class="o">=</span> <span class="n">plot_permutation_importance</span><span class="p">(</span><span class="n">clf_sel</span><span class="p">,</span> <span class="n">X_test_sel</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">ax</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Permutation Importances on selected subset of features</span><span class="se">\n</span><span class="s2">(test set)&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Decrease in accuracy score&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/c6049b0feda7e7e1114463383805b45f9a7598f37e6c4355132f31befbde9cbb.png" src="_images/c6049b0feda7e7e1114463383805b45f9a7598f37e6c4355132f31befbde9cbb.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># feat_importances = pd.DataFrame(feature_importance, index=imp_cols, columns=[&quot;Importance&quot;])</span>
-
-<span class="c1"># feat_importances = feat_importances.sort_values(by=&quot;Importance&quot;, ascending=False)</span>
-
-<span class="c1"># fig, ax = plt.subplots()</span>
-
-<span class="c1"># sns.barplot(feat_importances, y=feat_importances.index, x=&quot;Importance&quot;, ax=ax)</span>
-<span class="c1"># ax.tick_params(which=&#39;both&#39;, axis=&#39;x&#39;, labelrotation=45)</span>
-<span class="c1"># ax.set_title(&quot;Importance des variables, postion = Ligne d&#39;eau&quot;, loc=&#39;left&#39;)</span>
-<span class="c1"># plt.tight_layout()</span>
-<span class="c1"># plt.savefig(&#39;variable_importance.png&#39;)</span>
-<span class="c1"># plt.show()</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_remove-input docutils container">
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
@@ -662,42 +677,42 @@ Baseline accuracy on test data with features removed: 0.037
 <input id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-0">
 Toutes les conditions</label><div class="sd-tab-content docutils">
-<p><img alt="_images/7ad50de59332349836f179c04184d43b5ea1026746f1a1f6537883ac5e2ab3ae.png" src="_images/7ad50de59332349836f179c04184d43b5ea1026746f1a1f6537883ac5e2ab3ae.png" /></p>
+<p><img alt="_images/1eee17ebd3116898135b68e59207b63e147e53d0ef37dd5f0f74ba7112d6d870.png" src="_images/1eee17ebd3116898135b68e59207b63e147e53d0ef37dd5f0f74ba7112d6d870.png" /></p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-1">
 Fréquentation moyenne</label><div class="sd-tab-content docutils">
-<p><img alt="_images/346a39f45e4af6099451d7e096d2deb526f7c9f36e3b3ea49e0243a33f28f427.png" src="_images/346a39f45e4af6099451d7e096d2deb526f7c9f36e3b3ea49e0243a33f28f427.png" /></p>
+<p><img alt="_images/e9877b29225f7c4f852b6d1a5f0cc6da9095b50a3e9301c15154bc4027cf3426.png" src="_images/e9877b29225f7c4f852b6d1a5f0cc6da9095b50a3e9301c15154bc4027cf3426.png" /></p>
 </div>
 <input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-2">
 Haute fréquentation</label><div class="sd-tab-content docutils">
-<p><img alt="_images/8a5f9ffdf83fad0fa1fae0aa399cfaa8ce00d2d23ba5768f708f221dee51a509.png" src="_images/8a5f9ffdf83fad0fa1fae0aa399cfaa8ce00d2d23ba5768f708f221dee51a509.png" /></p>
+<p><img alt="_images/2d0cc76bb09a4f6694b456d3619a1c9a4af3d4af6c0bd4bf3782ccf28332e4b2.png" src="_images/2d0cc76bb09a4f6694b456d3619a1c9a4af3d4af6c0bd4bf3782ccf28332e4b2.png" /></p>
 </div>
 <input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-3">
 Cailloux</label><div class="sd-tab-content docutils">
-<p><img alt="_images/caaeae375b1fc980fbf24af6f0ec4fb5bf51a2b9dde7464dd5e965f9839c00c3.png" src="_images/caaeae375b1fc980fbf24af6f0ec4fb5bf51a2b9dde7464dd5e965f9839c00c3.png" /></p>
+<p><img alt="_images/6a95351d8c9989904ea97f6c43486ca69a664dd29aecc42df4bd746643271651.png" src="_images/6a95351d8c9989904ea97f6c43486ca69a664dd29aecc42df4bd746643271651.png" /></p>
 </div>
 <input id="sd-tab-item-4" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-4">
 Sables fins</label><div class="sd-tab-content docutils">
-<p><img alt="_images/593fd0e6fd97732b802a400105d897ed16b98d85f1f4479cd1ecfcca58122ebe.png" src="_images/593fd0e6fd97732b802a400105d897ed16b98d85f1f4479cd1ecfcca58122ebe.png" /></p>
+<p><img alt="_images/b79bbd0d6419a34fabcdcb07c70fcb9f4586d3d0bd548e64d77075b902317641.png" src="_images/b79bbd0d6419a34fabcdcb07c70fcb9f4586d3d0bd548e64d77075b902317641.png" /></p>
 </div>
 <input id="sd-tab-item-5" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-5">
 Plage seche et sable fins</label><div class="sd-tab-content docutils">
-<p><img alt="_images/13dd6610d37a47db17cfc48574a4da940b5c3a501b9d64d292e536af7b4aa0c7.png" src="_images/13dd6610d37a47db17cfc48574a4da940b5c3a501b9d64d292e536af7b4aa0c7.png" /></p>
+<p><img alt="_images/1bbca7f72ecf0e8ef41fce034bf2c48bf8936710ceff55e1768ae2113f9d6393.png" src="_images/1bbca7f72ecf0e8ef41fce034bf2c48bf8936710ceff55e1768ae2113f9d6393.png" /></p>
 </div>
 <input id="sd-tab-item-6" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-6">
 Plage seche</label><div class="sd-tab-content docutils">
-<p><img alt="_images/ffe4b9fc6b05c12be6b3ce54a08c9d6977b5f8483d62650fdee7b89f66b49696.png" src="_images/ffe4b9fc6b05c12be6b3ce54a08c9d6977b5f8483d62650fdee7b89f66b49696.png" /></p>
+<p><img alt="_images/6ad171412cf6f80735ae73817c5125d33ccf2b391d25b1e3322b86e2191a392e.png" src="_images/6ad171412cf6f80735ae73817c5125d33ccf2b391d25b1e3322b86e2191a392e.png" /></p>
 </div>
 <input id="sd-tab-item-7" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-7">
 Ligne d’eau</label><div class="sd-tab-content docutils">
-<p><img alt="_images/e9b849bc36cc72f861f7bd101687986ef55d319dd0fb2ec222ee372ac3998ca3.png" src="_images/e9b849bc36cc72f861f7bd101687986ef55d319dd0fb2ec222ee372ac3998ca3.png" /></p>
+<p><img alt="_images/bd2f8bf569d301ecbcb5afa278776e1d47872fa47b079d8134de87e35a419bbc.png" src="_images/bd2f8bf569d301ecbcb5afa278776e1d47872fa47b079d8134de87e35a419bbc.png" /></p>
 </div>
 <input checked="checked" id="sd-tab-item-8" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-8">
@@ -706,67 +721,67 @@ Résultats</label><div class="sd-tab-content docutils">
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <p><span class="output text_html"><style type="text/css">
-#T_b50ef tr:nth-child(even) {
+#T_1e324 tr:nth-child(even) {
   background-color: rgba(139, 69, 19, 0.08);
 }
-#T_b50ef tr:nth-child(odd) {
+#T_1e324 tr:nth-child(odd) {
   background: #FFF;
 }
-#T_b50ef tr {
+#T_1e324 tr {
   font-size: 14px;
   padding: 6px;
 }
-#T_b50ef th:nth-child(1) {
+#T_1e324 th:nth-child(1) {
   background-color: #FFF;
   white-space: nowrap;
   word-break: keep-all;
 }
-#T_b50ef caption {
+#T_1e324 caption {
   caption-side: top;
   font-size: 12px;
   text-align: left;
   margin-top: 12px;
 }
 </style>
-<table id="T_b50ef">
-  <caption>Ligne d'eau</caption>
+<table id="T_1e324">
+  <caption>Tous les positions</caption>
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_b50ef_level0_col0" class="col_heading level0 col0" >observée</th>
-      <th id="T_b50ef_level0_col1" class="col_heading level0 col1" >prédiction</th>
+      <th id="T_1e324_level0_col0" class="col_heading level0 col0" >observée</th>
+      <th id="T_1e324_level0_col1" class="col_heading level0 col1" >prédiction</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_b50ef_level0_row0" class="row_heading level0 row0" >1%</th>
-      <td id="T_b50ef_row0_col0" class="data row0 col0" >0</td>
-      <td id="T_b50ef_row0_col1" class="data row0 col1" >3'650</td>
+      <th id="T_1e324_level0_row0" class="row_heading level0 row0" >1%</th>
+      <td id="T_1e324_row0_col0" class="data row0 col0" >0</td>
+      <td id="T_1e324_row0_col1" class="data row0 col1" >51</td>
     </tr>
     <tr>
-      <th id="T_b50ef_level0_row1" class="row_heading level0 row1" >25%</th>
-      <td id="T_b50ef_row1_col0" class="data row1 col0" >7'000</td>
-      <td id="T_b50ef_row1_col1" class="data row1 col1" >10'120</td>
+      <th id="T_1e324_level0_row1" class="row_heading level0 row1" >25%</th>
+      <td id="T_1e324_row1_col0" class="data row1 col0" >70</td>
+      <td id="T_1e324_row1_col1" class="data row1 col1" >114</td>
     </tr>
     <tr>
-      <th id="T_b50ef_level0_row2" class="row_heading level0 row2" >50%</th>
-      <td id="T_b50ef_row2_col0" class="data row2 col0" >12'100</td>
-      <td id="T_b50ef_row2_col1" class="data row2 col1" >12'775</td>
+      <th id="T_1e324_level0_row2" class="row_heading level0 row2" >50%</th>
+      <td id="T_1e324_row2_col0" class="data row2 col0" >121</td>
+      <td id="T_1e324_row2_col1" class="data row2 col1" >130</td>
     </tr>
     <tr>
-      <th id="T_b50ef_level0_row3" class="row_heading level0 row3" >75%</th>
-      <td id="T_b50ef_row3_col0" class="data row3 col0" >19'800</td>
-      <td id="T_b50ef_row3_col1" class="data row3 col1" >15'338</td>
+      <th id="T_1e324_level0_row3" class="row_heading level0 row3" >75%</th>
+      <td id="T_1e324_row3_col0" class="data row3 col0" >198</td>
+      <td id="T_1e324_row3_col1" class="data row3 col1" >141</td>
     </tr>
     <tr>
-      <th id="T_b50ef_level0_row4" class="row_heading level0 row4" >99%</th>
-      <td id="T_b50ef_row4_col0" class="data row4 col0" >106'016</td>
-      <td id="T_b50ef_row4_col1" class="data row4 col1" >169'305</td>
+      <th id="T_1e324_level0_row4" class="row_heading level0 row4" >99%</th>
+      <td id="T_1e324_row4_col0" class="data row4 col0" >1'060</td>
+      <td id="T_1e324_row4_col1" class="data row4 col1" >177</td>
     </tr>
     <tr>
-      <th id="T_b50ef_level0_row5" class="row_heading level0 row5" >Moyenne</th>
-      <td id="T_b50ef_row5_col0" class="data row5 col0" >18'013</td>
-      <td id="T_b50ef_row5_col1" class="data row5 col1" >17'423</td>
+      <th id="T_1e324_level0_row5" class="row_heading level0 row5" >Moyenne</th>
+      <td id="T_1e324_row5_col0" class="data row5 col0" >180</td>
+      <td id="T_1e324_row5_col1" class="data row5 col1" >127</td>
     </tr>
   </tbody>
 </table>
@@ -778,67 +793,67 @@ Résultats</label><div class="sd-tab-content docutils">
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <p><span class="output text_html"><style type="text/css">
-#T_5bf41 tr:nth-child(even) {
+#T_92b0d tr:nth-child(even) {
   background-color: rgba(139, 69, 19, 0.08);
 }
-#T_5bf41 tr:nth-child(odd) {
+#T_92b0d tr:nth-child(odd) {
   background: #FFF;
 }
-#T_5bf41 tr {
+#T_92b0d tr {
   font-size: 14px;
   padding: 6px;
 }
-#T_5bf41 th:nth-child(1) {
+#T_92b0d th:nth-child(1) {
   background-color: #FFF;
   white-space: nowrap;
   word-break: keep-all;
 }
-#T_5bf41 caption {
+#T_92b0d caption {
   caption-side: top;
   font-size: 12px;
   text-align: left;
   margin-top: 12px;
 }
 </style>
-<table id="T_5bf41">
+<table id="T_92b0d">
   <caption>Fréquentation moyenne</caption>
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_5bf41_level0_col0" class="col_heading level0 col0" >observée</th>
-      <th id="T_5bf41_level0_col1" class="col_heading level0 col1" >prédiction</th>
+      <th id="T_92b0d_level0_col0" class="col_heading level0 col0" >observée</th>
+      <th id="T_92b0d_level0_col1" class="col_heading level0 col1" >prédiction</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_5bf41_level0_row0" class="row_heading level0 row0" >1%</th>
-      <td id="T_5bf41_row0_col0" class="data row0 col0" >2'648</td>
-      <td id="T_5bf41_row0_col1" class="data row0 col1" >5'580</td>
+      <th id="T_92b0d_level0_row0" class="row_heading level0 row0" >1%</th>
+      <td id="T_92b0d_row0_col0" class="data row0 col0" >8</td>
+      <td id="T_92b0d_row0_col1" class="data row0 col1" >55</td>
     </tr>
     <tr>
-      <th id="T_5bf41_level0_row1" class="row_heading level0 row1" >25%</th>
-      <td id="T_5bf41_row1_col0" class="data row1 col0" >7'200</td>
-      <td id="T_5bf41_row1_col1" class="data row1 col1" >10'125</td>
+      <th id="T_92b0d_level0_row1" class="row_heading level0 row1" >25%</th>
+      <td id="T_92b0d_row1_col0" class="data row1 col0" >59</td>
+      <td id="T_92b0d_row1_col1" class="data row1 col1" >76</td>
     </tr>
     <tr>
-      <th id="T_5bf41_level0_row2" class="row_heading level0 row2" >50%</th>
-      <td id="T_5bf41_row2_col0" class="data row2 col0" >11'700</td>
-      <td id="T_5bf41_row2_col1" class="data row2 col1" >14'108</td>
+      <th id="T_92b0d_level0_row2" class="row_heading level0 row2" >50%</th>
+      <td id="T_92b0d_row2_col0" class="data row2 col0" >113</td>
+      <td id="T_92b0d_row2_col1" class="data row2 col1" >114</td>
     </tr>
     <tr>
-      <th id="T_5bf41_level0_row3" class="row_heading level0 row3" >75%</th>
-      <td id="T_5bf41_row3_col0" class="data row3 col0" >20'900</td>
-      <td id="T_5bf41_row3_col1" class="data row3 col1" >26'825</td>
+      <th id="T_92b0d_level0_row3" class="row_heading level0 row3" >75%</th>
+      <td id="T_92b0d_row3_col0" class="data row3 col0" >200</td>
+      <td id="T_92b0d_row3_col1" class="data row3 col1" >158</td>
     </tr>
     <tr>
-      <th id="T_5bf41_level0_row4" class="row_heading level0 row4" >99%</th>
-      <td id="T_5bf41_row4_col0" class="data row4 col0" >216'516</td>
-      <td id="T_5bf41_row4_col1" class="data row4 col1" >198'132</td>
+      <th id="T_92b0d_level0_row4" class="row_heading level0 row4" >99%</th>
+      <td id="T_92b0d_row4_col0" class="data row4 col0" >1'982</td>
+      <td id="T_92b0d_row4_col1" class="data row4 col1" >606</td>
     </tr>
     <tr>
-      <th id="T_5bf41_level0_row5" class="row_heading level0 row5" >Moyenne</th>
-      <td id="T_5bf41_row5_col0" class="data row5 col0" >26'784</td>
-      <td id="T_5bf41_row5_col1" class="data row5 col1" >25'416</td>
+      <th id="T_92b0d_level0_row5" class="row_heading level0 row5" >Moyenne</th>
+      <td id="T_92b0d_row5_col0" class="data row5 col0" >233</td>
+      <td id="T_92b0d_row5_col1" class="data row5 col1" >156</td>
     </tr>
   </tbody>
 </table>
@@ -846,67 +861,67 @@ Résultats</label><div class="sd-tab-content docutils">
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <p><span class="output text_html"><style type="text/css">
-#T_c3423 tr:nth-child(even) {
+#T_fdc6e tr:nth-child(even) {
   background-color: rgba(139, 69, 19, 0.08);
 }
-#T_c3423 tr:nth-child(odd) {
+#T_fdc6e tr:nth-child(odd) {
   background: #FFF;
 }
-#T_c3423 tr {
+#T_fdc6e tr {
   font-size: 14px;
   padding: 6px;
 }
-#T_c3423 th:nth-child(1) {
+#T_fdc6e th:nth-child(1) {
   background-color: #FFF;
   white-space: nowrap;
   word-break: keep-all;
 }
-#T_c3423 caption {
+#T_fdc6e caption {
   caption-side: top;
   font-size: 12px;
   text-align: left;
   margin-top: 12px;
 }
 </style>
-<table id="T_c3423">
+<table id="T_fdc6e">
   <caption>Fréquentation élevée</caption>
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_c3423_level0_col0" class="col_heading level0 col0" >observée</th>
-      <th id="T_c3423_level0_col1" class="col_heading level0 col1" >prédiction</th>
+      <th id="T_fdc6e_level0_col0" class="col_heading level0 col0" >observée</th>
+      <th id="T_fdc6e_level0_col1" class="col_heading level0 col1" >prédiction</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_c3423_level0_row0" class="row_heading level0 row0" >1%</th>
-      <td id="T_c3423_row0_col0" class="data row0 col0" >0</td>
-      <td id="T_c3423_row0_col1" class="data row0 col1" >4'580</td>
+      <th id="T_fdc6e_level0_row0" class="row_heading level0 row0" >1%</th>
+      <td id="T_fdc6e_row0_col0" class="data row0 col0" >0</td>
+      <td id="T_fdc6e_row0_col1" class="data row0 col1" >66</td>
     </tr>
     <tr>
-      <th id="T_c3423_level0_row1" class="row_heading level0 row1" >25%</th>
-      <td id="T_c3423_row1_col0" class="data row1 col0" >7'150</td>
-      <td id="T_c3423_row1_col1" class="data row1 col1" >10'455</td>
+      <th id="T_fdc6e_level0_row1" class="row_heading level0 row1" >25%</th>
+      <td id="T_fdc6e_row1_col0" class="data row1 col0" >72</td>
+      <td id="T_fdc6e_row1_col1" class="data row1 col1" >113</td>
     </tr>
     <tr>
-      <th id="T_c3423_level0_row2" class="row_heading level0 row2" >50%</th>
-      <td id="T_c3423_row2_col0" class="data row2 col0" >12'450</td>
-      <td id="T_c3423_row2_col1" class="data row2 col1" >12'280</td>
+      <th id="T_fdc6e_level0_row2" class="row_heading level0 row2" >50%</th>
+      <td id="T_fdc6e_row2_col0" class="data row2 col0" >124</td>
+      <td id="T_fdc6e_row2_col1" class="data row2 col1" >126</td>
     </tr>
     <tr>
-      <th id="T_c3423_level0_row3" class="row_heading level0 row3" >75%</th>
-      <td id="T_c3423_row3_col0" class="data row3 col0" >19'400</td>
-      <td id="T_c3423_row3_col1" class="data row3 col1" >14'740</td>
+      <th id="T_fdc6e_level0_row3" class="row_heading level0 row3" >75%</th>
+      <td id="T_fdc6e_row3_col0" class="data row3 col0" >194</td>
+      <td id="T_fdc6e_row3_col1" class="data row3 col1" >135</td>
     </tr>
     <tr>
-      <th id="T_c3423_level0_row4" class="row_heading level0 row4" >99%</th>
-      <td id="T_c3423_row4_col0" class="data row4 col0" >100'571</td>
-      <td id="T_c3423_row4_col1" class="data row4 col1" >33'546</td>
+      <th id="T_fdc6e_level0_row4" class="row_heading level0 row4" >99%</th>
+      <td id="T_fdc6e_row4_col0" class="data row4 col0" >1'006</td>
+      <td id="T_fdc6e_row4_col1" class="data row4 col1" >173</td>
     </tr>
     <tr>
-      <th id="T_c3423_level0_row5" class="row_heading level0 row5" >Moyenne</th>
-      <td id="T_c3423_row5_col0" class="data row5 col0" >16'623</td>
-      <td id="T_c3423_row5_col1" class="data row5 col1" >12'932</td>
+      <th id="T_fdc6e_level0_row5" class="row_heading level0 row5" >Moyenne</th>
+      <td id="T_fdc6e_row5_col0" class="data row5 col0" >166</td>
+      <td id="T_fdc6e_row5_col1" class="data row5 col1" >122</td>
     </tr>
   </tbody>
 </table>
@@ -914,67 +929,67 @@ Résultats</label><div class="sd-tab-content docutils">
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <p><span class="output text_html"><style type="text/css">
-#T_c2b69 tr:nth-child(even) {
+#T_c21d8 tr:nth-child(even) {
   background-color: rgba(139, 69, 19, 0.08);
 }
-#T_c2b69 tr:nth-child(odd) {
+#T_c21d8 tr:nth-child(odd) {
   background: #FFF;
 }
-#T_c2b69 tr {
+#T_c21d8 tr {
   font-size: 14px;
   padding: 6px;
 }
-#T_c2b69 th:nth-child(1) {
+#T_c21d8 th:nth-child(1) {
   background-color: #FFF;
   white-space: nowrap;
   word-break: keep-all;
 }
-#T_c2b69 caption {
+#T_c21d8 caption {
   caption-side: top;
   font-size: 12px;
   text-align: left;
   margin-top: 12px;
 }
 </style>
-<table id="T_c2b69">
+<table id="T_c21d8">
   <caption>Cailloux</caption>
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_c2b69_level0_col0" class="col_heading level0 col0" >observée</th>
-      <th id="T_c2b69_level0_col1" class="col_heading level0 col1" >prédiction</th>
+      <th id="T_c21d8_level0_col0" class="col_heading level0 col0" >observée</th>
+      <th id="T_c21d8_level0_col1" class="col_heading level0 col1" >prédiction</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_c2b69_level0_row0" class="row_heading level0 row0" >1%</th>
-      <td id="T_c2b69_row0_col0" class="data row0 col0" >2'645</td>
-      <td id="T_c2b69_row0_col1" class="data row0 col1" >4'660</td>
+      <th id="T_c21d8_level0_row0" class="row_heading level0 row0" >1%</th>
+      <td id="T_c21d8_row0_col0" class="data row0 col0" >15</td>
+      <td id="T_c21d8_row0_col1" class="data row0 col1" >58</td>
     </tr>
     <tr>
-      <th id="T_c2b69_level0_row1" class="row_heading level0 row1" >25%</th>
-      <td id="T_c2b69_row1_col0" class="data row1 col0" >5'750</td>
-      <td id="T_c2b69_row1_col1" class="data row1 col1" >7'599</td>
+      <th id="T_c21d8_level0_row1" class="row_heading level0 row1" >25%</th>
+      <td id="T_c21d8_row1_col0" class="data row1 col0" >60</td>
+      <td id="T_c21d8_row1_col1" class="data row1 col1" >78</td>
     </tr>
     <tr>
-      <th id="T_c2b69_level0_row2" class="row_heading level0 row2" >50%</th>
-      <td id="T_c2b69_row2_col0" class="data row2 col0" >9'250</td>
-      <td id="T_c2b69_row2_col1" class="data row2 col1" >11'460</td>
+      <th id="T_c21d8_level0_row2" class="row_heading level0 row2" >50%</th>
+      <td id="T_c21d8_row2_col0" class="data row2 col0" >90</td>
+      <td id="T_c21d8_row2_col1" class="data row2 col1" >96</td>
     </tr>
     <tr>
-      <th id="T_c2b69_level0_row3" class="row_heading level0 row3" >75%</th>
-      <td id="T_c2b69_row3_col0" class="data row3 col0" >15'575</td>
-      <td id="T_c2b69_row3_col1" class="data row3 col1" >14'795</td>
+      <th id="T_c21d8_level0_row3" class="row_heading level0 row3" >75%</th>
+      <td id="T_c21d8_row3_col0" class="data row3 col0" >185</td>
+      <td id="T_c21d8_row3_col1" class="data row3 col1" >123</td>
     </tr>
     <tr>
-      <th id="T_c2b69_level0_row4" class="row_heading level0 row4" >99%</th>
-      <td id="T_c2b69_row4_col0" class="data row4 col0" >51'605</td>
-      <td id="T_c2b69_row4_col1" class="data row4 col1" >22'730</td>
+      <th id="T_c21d8_level0_row4" class="row_heading level0 row4" >99%</th>
+      <td id="T_c21d8_row4_col0" class="data row4 col0" >1'882</td>
+      <td id="T_c21d8_row4_col1" class="data row4 col1" >193</td>
     </tr>
     <tr>
-      <th id="T_c2b69_level0_row5" class="row_heading level0 row5" >Moyenne</th>
-      <td id="T_c2b69_row5_col0" class="data row5 col0" >12'520</td>
-      <td id="T_c2b69_row5_col1" class="data row5 col1" >11'533</td>
+      <th id="T_c21d8_level0_row5" class="row_heading level0 row5" >Moyenne</th>
+      <td id="T_c21d8_row5_col0" class="data row5 col0" >207</td>
+      <td id="T_c21d8_row5_col1" class="data row5 col1" >103</td>
     </tr>
   </tbody>
 </table>
@@ -982,67 +997,67 @@ Résultats</label><div class="sd-tab-content docutils">
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <p><span class="output text_html"><style type="text/css">
-#T_5bf70 tr:nth-child(even) {
+#T_6b309 tr:nth-child(even) {
   background-color: rgba(139, 69, 19, 0.08);
 }
-#T_5bf70 tr:nth-child(odd) {
+#T_6b309 tr:nth-child(odd) {
   background: #FFF;
 }
-#T_5bf70 tr {
+#T_6b309 tr {
   font-size: 14px;
   padding: 6px;
 }
-#T_5bf70 th:nth-child(1) {
+#T_6b309 th:nth-child(1) {
   background-color: #FFF;
   white-space: nowrap;
   word-break: keep-all;
 }
-#T_5bf70 caption {
+#T_6b309 caption {
   caption-side: top;
   font-size: 12px;
   text-align: left;
   margin-top: 12px;
 }
 </style>
-<table id="T_5bf70">
+<table id="T_6b309">
   <caption>Sables fins</caption>
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_5bf70_level0_col0" class="col_heading level0 col0" >observée</th>
-      <th id="T_5bf70_level0_col1" class="col_heading level0 col1" >prédiction</th>
+      <th id="T_6b309_level0_col0" class="col_heading level0 col0" >observée</th>
+      <th id="T_6b309_level0_col1" class="col_heading level0 col1" >prédiction</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_5bf70_level0_row0" class="row_heading level0 row0" >1%</th>
-      <td id="T_5bf70_row0_col0" class="data row0 col0" >0</td>
-      <td id="T_5bf70_row0_col1" class="data row0 col1" >6'525</td>
+      <th id="T_6b309_level0_row0" class="row_heading level0 row0" >1%</th>
+      <td id="T_6b309_row0_col0" class="data row0 col0" >0</td>
+      <td id="T_6b309_row0_col1" class="data row0 col1" >44</td>
     </tr>
     <tr>
-      <th id="T_5bf70_level0_row1" class="row_heading level0 row1" >25%</th>
-      <td id="T_5bf70_row1_col0" class="data row1 col0" >8'275</td>
-      <td id="T_5bf70_row1_col1" class="data row1 col1" >11'645</td>
+      <th id="T_6b309_level0_row1" class="row_heading level0 row1" >25%</th>
+      <td id="T_6b309_row1_col0" class="data row1 col0" >78</td>
+      <td id="T_6b309_row1_col1" class="data row1 col1" >125</td>
     </tr>
     <tr>
-      <th id="T_5bf70_level0_row2" class="row_heading level0 row2" >50%</th>
-      <td id="T_5bf70_row2_col0" class="data row2 col0" >13'200</td>
-      <td id="T_5bf70_row2_col1" class="data row2 col1" >12'845</td>
+      <th id="T_6b309_level0_row2" class="row_heading level0 row2" >50%</th>
+      <td id="T_6b309_row2_col0" class="data row2 col0" >130</td>
+      <td id="T_6b309_row2_col1" class="data row2 col1" >133</td>
     </tr>
     <tr>
-      <th id="T_5bf70_level0_row3" class="row_heading level0 row3" >75%</th>
-      <td id="T_5bf70_row3_col0" class="data row3 col0" >20'000</td>
-      <td id="T_5bf70_row3_col1" class="data row3 col1" >14'480</td>
+      <th id="T_6b309_level0_row3" class="row_heading level0 row3" >75%</th>
+      <td id="T_6b309_row3_col0" class="data row3 col0" >200</td>
+      <td id="T_6b309_row3_col1" class="data row3 col1" >140</td>
     </tr>
     <tr>
-      <th id="T_5bf70_level0_row4" class="row_heading level0 row4" >99%</th>
-      <td id="T_5bf70_row4_col0" class="data row4 col0" >85'969</td>
-      <td id="T_5bf70_row4_col1" class="data row4 col1" >58'321</td>
+      <th id="T_6b309_level0_row4" class="row_heading level0 row4" >99%</th>
+      <td id="T_6b309_row4_col0" class="data row4 col0" >807</td>
+      <td id="T_6b309_row4_col1" class="data row4 col1" >555</td>
     </tr>
     <tr>
-      <th id="T_5bf70_level0_row5" class="row_heading level0 row5" >Moyenne</th>
-      <td id="T_5bf70_row5_col0" class="data row5 col0" >16'969</td>
-      <td id="T_5bf70_row5_col1" class="data row5 col1" >14'361</td>
+      <th id="T_6b309_level0_row5" class="row_heading level0 row5" >Moyenne</th>
+      <td id="T_6b309_row5_col0" class="data row5 col0" >166</td>
+      <td id="T_6b309_row5_col1" class="data row5 col1" >146</td>
     </tr>
   </tbody>
 </table>
@@ -1050,67 +1065,67 @@ Résultats</label><div class="sd-tab-content docutils">
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <p><span class="output text_html"><style type="text/css">
-#T_67983 tr:nth-child(even) {
+#T_21a81 tr:nth-child(even) {
   background-color: rgba(139, 69, 19, 0.08);
 }
-#T_67983 tr:nth-child(odd) {
+#T_21a81 tr:nth-child(odd) {
   background: #FFF;
 }
-#T_67983 tr {
+#T_21a81 tr {
   font-size: 14px;
   padding: 6px;
 }
-#T_67983 th:nth-child(1) {
+#T_21a81 th:nth-child(1) {
   background-color: #FFF;
   white-space: nowrap;
   word-break: keep-all;
 }
-#T_67983 caption {
+#T_21a81 caption {
   caption-side: top;
   font-size: 12px;
   text-align: left;
   margin-top: 12px;
 }
 </style>
-<table id="T_67983">
+<table id="T_21a81">
   <caption>Plage seche et fibres</caption>
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_67983_level0_col0" class="col_heading level0 col0" >observée</th>
-      <th id="T_67983_level0_col1" class="col_heading level0 col1" >prédiction</th>
+      <th id="T_21a81_level0_col0" class="col_heading level0 col0" >observée</th>
+      <th id="T_21a81_level0_col1" class="col_heading level0 col1" >prédiction</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_67983_level0_row0" class="row_heading level0 row0" >1%</th>
-      <td id="T_67983_row0_col0" class="data row0 col0" >0</td>
-      <td id="T_67983_row0_col1" class="data row0 col1" >6'015</td>
+      <th id="T_21a81_level0_row0" class="row_heading level0 row0" >1%</th>
+      <td id="T_21a81_row0_col0" class="data row0 col0" >0</td>
+      <td id="T_21a81_row0_col1" class="data row0 col1" >78</td>
     </tr>
     <tr>
-      <th id="T_67983_level0_row1" class="row_heading level0 row1" >25%</th>
-      <td id="T_67983_row1_col0" class="data row1 col0" >7'850</td>
-      <td id="T_67983_row1_col1" class="data row1 col1" >10'855</td>
+      <th id="T_21a81_level0_row1" class="row_heading level0 row1" >25%</th>
+      <td id="T_21a81_row1_col0" class="data row1 col0" >78</td>
+      <td id="T_21a81_row1_col1" class="data row1 col1" >113</td>
     </tr>
     <tr>
-      <th id="T_67983_level0_row2" class="row_heading level0 row2" >50%</th>
-      <td id="T_67983_row2_col0" class="data row2 col0" >12'400</td>
-      <td id="T_67983_row2_col1" class="data row2 col1" >13'650</td>
+      <th id="T_21a81_level0_row2" class="row_heading level0 row2" >50%</th>
+      <td id="T_21a81_row2_col0" class="data row2 col0" >124</td>
+      <td id="T_21a81_row2_col1" class="data row2 col1" >125</td>
     </tr>
     <tr>
-      <th id="T_67983_level0_row3" class="row_heading level0 row3" >75%</th>
-      <td id="T_67983_row3_col0" class="data row3 col0" >18'700</td>
-      <td id="T_67983_row3_col1" class="data row3 col1" >20'789</td>
+      <th id="T_21a81_level0_row3" class="row_heading level0 row3" >75%</th>
+      <td id="T_21a81_row3_col0" class="data row3 col0" >187</td>
+      <td id="T_21a81_row3_col1" class="data row3 col1" >144</td>
     </tr>
     <tr>
-      <th id="T_67983_level0_row4" class="row_heading level0 row4" >99%</th>
-      <td id="T_67983_row4_col0" class="data row4 col0" >88'180</td>
-      <td id="T_67983_row4_col1" class="data row4 col1" >76'400</td>
+      <th id="T_21a81_level0_row4" class="row_heading level0 row4" >99%</th>
+      <td id="T_21a81_row4_col0" class="data row4 col0" >882</td>
+      <td id="T_21a81_row4_col1" class="data row4 col1" >793</td>
     </tr>
     <tr>
-      <th id="T_67983_level0_row5" class="row_heading level0 row5" >Moyenne</th>
-      <td id="T_67983_row5_col0" class="data row5 col0" >19'134</td>
-      <td id="T_67983_row5_col1" class="data row5 col1" >19'958</td>
+      <th id="T_21a81_level0_row5" class="row_heading level0 row5" >Moyenne</th>
+      <td id="T_21a81_row5_col0" class="data row5 col0" >191</td>
+      <td id="T_21a81_row5_col1" class="data row5 col1" >170</td>
     </tr>
   </tbody>
 </table>
@@ -1118,67 +1133,67 @@ Résultats</label><div class="sd-tab-content docutils">
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <p><span class="output text_html"><style type="text/css">
-#T_66fe7 tr:nth-child(even) {
+#T_80a94 tr:nth-child(even) {
   background-color: rgba(139, 69, 19, 0.08);
 }
-#T_66fe7 tr:nth-child(odd) {
+#T_80a94 tr:nth-child(odd) {
   background: #FFF;
 }
-#T_66fe7 tr {
+#T_80a94 tr {
   font-size: 14px;
   padding: 6px;
 }
-#T_66fe7 th:nth-child(1) {
+#T_80a94 th:nth-child(1) {
   background-color: #FFF;
   white-space: nowrap;
   word-break: keep-all;
 }
-#T_66fe7 caption {
+#T_80a94 caption {
   caption-side: top;
   font-size: 12px;
   text-align: left;
   margin-top: 12px;
 }
 </style>
-<table id="T_66fe7">
+<table id="T_80a94">
   <caption>Plage seche</caption>
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_66fe7_level0_col0" class="col_heading level0 col0" >observée</th>
-      <th id="T_66fe7_level0_col1" class="col_heading level0 col1" >prédiction</th>
+      <th id="T_80a94_level0_col0" class="col_heading level0 col0" >observée</th>
+      <th id="T_80a94_level0_col1" class="col_heading level0 col1" >prédiction</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_66fe7_level0_row0" class="row_heading level0 row0" >1%</th>
-      <td id="T_66fe7_row0_col0" class="data row0 col0" >0</td>
-      <td id="T_66fe7_row0_col1" class="data row0 col1" >7'740</td>
+      <th id="T_80a94_level0_row0" class="row_heading level0 row0" >1%</th>
+      <td id="T_80a94_row0_col0" class="data row0 col0" >0</td>
+      <td id="T_80a94_row0_col1" class="data row0 col1" >94</td>
     </tr>
     <tr>
-      <th id="T_66fe7_level0_row1" class="row_heading level0 row1" >25%</th>
-      <td id="T_66fe7_row1_col0" class="data row1 col0" >10'500</td>
-      <td id="T_66fe7_row1_col1" class="data row1 col1" >14'900</td>
+      <th id="T_80a94_level0_row1" class="row_heading level0 row1" >25%</th>
+      <td id="T_80a94_row1_col0" class="data row1 col0" >105</td>
+      <td id="T_80a94_row1_col1" class="data row1 col1" >155</td>
     </tr>
     <tr>
-      <th id="T_66fe7_level0_row2" class="row_heading level0 row2" >50%</th>
-      <td id="T_66fe7_row2_col0" class="data row2 col0" >17'000</td>
-      <td id="T_66fe7_row2_col1" class="data row2 col1" >18'378</td>
+      <th id="T_80a94_level0_row2" class="row_heading level0 row2" >50%</th>
+      <td id="T_80a94_row2_col0" class="data row2 col0" >170</td>
+      <td id="T_80a94_row2_col1" class="data row2 col1" >168</td>
     </tr>
     <tr>
-      <th id="T_66fe7_level0_row3" class="row_heading level0 row3" >75%</th>
-      <td id="T_66fe7_row3_col0" class="data row3 col0" >23'825</td>
-      <td id="T_66fe7_row3_col1" class="data row3 col1" >25'540</td>
+      <th id="T_80a94_level0_row3" class="row_heading level0 row3" >75%</th>
+      <td id="T_80a94_row3_col0" class="data row3 col0" >238</td>
+      <td id="T_80a94_row3_col1" class="data row3 col1" >186</td>
     </tr>
     <tr>
-      <th id="T_66fe7_level0_row4" class="row_heading level0 row4" >99%</th>
-      <td id="T_66fe7_row4_col0" class="data row4 col0" >147'120</td>
-      <td id="T_66fe7_row4_col1" class="data row4 col1" >103'100</td>
+      <th id="T_80a94_level0_row4" class="row_heading level0 row4" >99%</th>
+      <td id="T_80a94_row4_col0" class="data row4 col0" >1'471</td>
+      <td id="T_80a94_row4_col1" class="data row4 col1" >1'201</td>
     </tr>
     <tr>
-      <th id="T_66fe7_level0_row5" class="row_heading level0 row5" >Moyenne</th>
-      <td id="T_66fe7_row5_col0" class="data row5 col0" >24'642</td>
-      <td id="T_66fe7_row5_col1" class="data row5 col1" >25'443</td>
+      <th id="T_80a94_level0_row5" class="row_heading level0 row5" >Moyenne</th>
+      <td id="T_80a94_row5_col0" class="data row5 col0" >246</td>
+      <td id="T_80a94_row5_col1" class="data row5 col1" >230</td>
     </tr>
   </tbody>
 </table>
@@ -1186,67 +1201,67 @@ Résultats</label><div class="sd-tab-content docutils">
 </div>
 <div class="sd-col sd-d-flex-column docutils">
 <p><span class="output text_html"><style type="text/css">
-#T_68f11 tr:nth-child(even) {
+#T_b82c8 tr:nth-child(even) {
   background-color: rgba(139, 69, 19, 0.08);
 }
-#T_68f11 tr:nth-child(odd) {
+#T_b82c8 tr:nth-child(odd) {
   background: #FFF;
 }
-#T_68f11 tr {
+#T_b82c8 tr {
   font-size: 14px;
   padding: 6px;
 }
-#T_68f11 th:nth-child(1) {
+#T_b82c8 th:nth-child(1) {
   background-color: #FFF;
   white-space: nowrap;
   word-break: keep-all;
 }
-#T_68f11 caption {
+#T_b82c8 caption {
   caption-side: top;
   font-size: 12px;
   text-align: left;
   margin-top: 12px;
 }
 </style>
-<table id="T_68f11">
+<table id="T_b82c8">
   <caption>Ligne d'eau</caption>
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_68f11_level0_col0" class="col_heading level0 col0" >observée</th>
-      <th id="T_68f11_level0_col1" class="col_heading level0 col1" >prédiction</th>
+      <th id="T_b82c8_level0_col0" class="col_heading level0 col0" >observée</th>
+      <th id="T_b82c8_level0_col1" class="col_heading level0 col1" >prédiction</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_68f11_level0_row0" class="row_heading level0 row0" >1%</th>
-      <td id="T_68f11_row0_col0" class="data row0 col0" >20</td>
-      <td id="T_68f11_row0_col1" class="data row0 col1" >39</td>
+      <th id="T_b82c8_level0_row0" class="row_heading level0 row0" >1%</th>
+      <td id="T_b82c8_row0_col0" class="data row0 col0" >20</td>
+      <td id="T_b82c8_row0_col1" class="data row0 col1" >41</td>
     </tr>
     <tr>
-      <th id="T_68f11_level0_row1" class="row_heading level0 row1" >25%</th>
-      <td id="T_68f11_row1_col0" class="data row1 col0" >54</td>
-      <td id="T_68f11_row1_col1" class="data row1 col1" >90</td>
+      <th id="T_b82c8_level0_row1" class="row_heading level0 row1" >25%</th>
+      <td id="T_b82c8_row1_col0" class="data row1 col0" >54</td>
+      <td id="T_b82c8_row1_col1" class="data row1 col1" >81</td>
     </tr>
     <tr>
-      <th id="T_68f11_level0_row2" class="row_heading level0 row2" >50%</th>
-      <td id="T_68f11_row2_col0" class="data row2 col0" >85</td>
-      <td id="T_68f11_row2_col1" class="data row2 col1" >116</td>
+      <th id="T_b82c8_level0_row2" class="row_heading level0 row2" >50%</th>
+      <td id="T_b82c8_row2_col0" class="data row2 col0" >85</td>
+      <td id="T_b82c8_row2_col1" class="data row2 col1" >103</td>
     </tr>
     <tr>
-      <th id="T_68f11_level0_row3" class="row_heading level0 row3" >75%</th>
-      <td id="T_68f11_row3_col0" class="data row3 col0" >129</td>
-      <td id="T_68f11_row3_col1" class="data row3 col1" >140</td>
+      <th id="T_b82c8_level0_row3" class="row_heading level0 row3" >75%</th>
+      <td id="T_b82c8_row3_col0" class="data row3 col0" >129</td>
+      <td id="T_b82c8_row3_col1" class="data row3 col1" >122</td>
     </tr>
     <tr>
-      <th id="T_68f11_level0_row4" class="row_heading level0 row4" >99%</th>
-      <td id="T_68f11_row4_col0" class="data row4 col0" >687</td>
-      <td id="T_68f11_row4_col1" class="data row4 col1" >631</td>
+      <th id="T_b82c8_level0_row4" class="row_heading level0 row4" >99%</th>
+      <td id="T_b82c8_row4_col0" class="data row4 col0" >687</td>
+      <td id="T_b82c8_row4_col1" class="data row4 col1" >610</td>
     </tr>
     <tr>
-      <th id="T_68f11_level0_row5" class="row_heading level0 row5" >Moyenne</th>
-      <td id="T_68f11_row5_col0" class="data row5 col0" >117</td>
-      <td id="T_68f11_row5_col1" class="data row5 col1" >137</td>
+      <th id="T_b82c8_level0_row5" class="row_heading level0 row5" >Moyenne</th>
+      <td id="T_b82c8_row5_col0" class="data row5 col0" >117</td>
+      <td id="T_b82c8_row5_col1" class="data row5 col1" >120</td>
     </tr>
   </tbody>
 </table>
@@ -1267,10 +1282,11 @@ Résultats</label><div class="sd-tab-content docutils">
 
 Git branch: dec20
 
+scipy     : 1.10.1
+numpy     : 1.24.2
 seaborn   : 0.12.2
 pandas    : 2.0.0
 matplotlib: 3.7.1
-numpy     : 1.24.2
 </pre></div>
 </div>
 </div>
@@ -1323,7 +1339,7 @@ numpy     : 1.24.2
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3. </span>Macros déchets m²</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Plastock Macros déchets</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
