@@ -6,11 +6,23 @@ same directory as this file.
 
 """
 import pandas as pd
+import numpy as np
 from plastockconf import table_css_styles
 import matplotlib.pyplot as plt
 import seaborn as sns
 from myst_nb import glue
 
+from plastockconf import table_css_styles_top, format_kwargs
+
+
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.utils import resample
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import OneHotEncoder
+
+from scipy.stats import beta
+from scipy.stats import multinomial
 
 def capitalize_x_tick_labels(an_ax):
     an_ax.set_xticks(an_ax.get_xticks().tolist())
@@ -177,7 +189,7 @@ def attribute_summary_grid(data, vals, voi, figname, labels: dict = None, stat="
 
 
 def add_table_to_page(table, table_no, caption, section, page, rule, format_index='both',
-                      format_kwargs: dict = dict(precision=2, thousands="'", decimal=",")) -> pd.DataFrame:
+                      format_kwargs: dict = format_kwargs) -> pd.DataFrame:
     """
     Ajoute un tableau à une page dans un document.
 
@@ -199,7 +211,7 @@ def add_table_to_page(table, table_no, caption, section, page, rule, format_inde
     Returns:
         pd.DataFrame: Le tableau formaté avec la légende spécifiée et prêt à être ajouté au document.
     """
-    caption = f'<b>Table {section}{page}-{table_no}: </b>{caption} {rule}'
+    caption = f'<b>Table {section}{page}-{table_no} :</b> {caption} {rule}'
     if format_index == 'both':
         table = table.format_index(str.capitalize, axis=1).format_index(str.capitalize, axis=0).format(**format_kwargs)
     if format_index == 'columns':
@@ -208,3 +220,288 @@ def add_table_to_page(table, table_no, caption, section, page, rule, format_inde
         table = table.format_index(str.capitalize, axis=0).format(**format_kwargs)
     
     return table.set_caption(caption)
+
+def reindex_df(category, df, index):
+    df = df.reindex(index=index)
+    return df
+def calculate_combined_stats(category, data: pd.DataFrame = None, index=None, val_column='pcs_m'):
+    # Descriptive statistics of the sample density and quantity of pieces found
+    # Aggregates the data on category and sample_id
+    grouped = data.groupby([category, 'échantillon'], as_index=False)[val_column].sum()
+    
+    group_summary = grouped.groupby(category, as_index=True).agg(
+        {'échantillon': 'nunique', val_column: ['mean', 'median']})
+    group_summary.columns = group_summary.columns.droplevel(0)
+    
+    # Calculating percentage of total samples
+    group_summary['percentage'] = (group_summary['nunique'] / data['échantillon'].nunique()) * 100
+    group_summary.reset_index(drop=False, inplace=True)
+    
+    # Renaming columns for clarity
+    group_summary.rename(columns={'nunique': 'échantillons', 'mean': 'Moyenne', 'median': 'Médiane', 'percentage': '%'},
+                         inplace=True)
+    group_summary.set_index(category, inplace=True, drop=True)
+    
+    # Make the index labels if required
+    if index is not None:
+        group_summary = reindex_df(category, group_summary, index=index)
+    
+    return group_summary.style.set_table_styles(table_css_styles).format(precision=2).hide(axis=0, names=True)
+
+
+def analyze_scenario(scenario_data, func, n_iterations=100):
+    """
+    Analyze a specific scenario using Random Forest regression with bootstrapping,
+    and calculate feature importances.
+
+    :param data: DataFrame containing the dataset.
+    :param feature_1: The name of the first feature for filtering.
+    :param feature_1_value: The value of the first feature to filter by.
+    :param feature_2: The name of the second feature for filtering.
+    :param feature_2_value: The value of the second feature to filter by.
+    :param n_iterations: Number of bootstrap iterations. Default is 100.
+    :param bin_width: Width of each bin for histogram. Default is 0.2.
+    :return: A tuple containing bins, bin probabilities, flattened predictions, and feature importances.
+    """
+    
+    # Prepare data for regression
+    y_scaler = MinMaxScaler()
+    y_scaled = y_scaler.fit_transform(scenario_data['pcs_m'].values.reshape(-1, 1)).flatten()
+    
+    # Initialize the OneHotEncoder
+    # here we encode the ordinal data
+    encoder = OneHotEncoder(sparse_output=False)
+    
+    X = scenario_data.drop('pcs_m', axis=1)
+    
+    # Apply the encoder to the categorical columns
+    encoded_data = encoder.fit_transform(scenario_data[['fréquentation', 'situation', 'distance', 'substrat']])
+    # Create a DataFrame with the encoded data
+    X_encoded = pd.DataFrame(encoded_data, columns=encoder.get_feature_names_out(
+        ['fréquentation', 'situation', 'distance', 'substrat']))
+    
+    X_train, X_test, y_train, y_test = train_test_split(X_encoded, y_scaled, test_size=0.2, random_state=42)
+    
+    # Bootstrap predictions and accumulate feature importances
+    bootstrap_predictions = []
+    feature_importances_accumulated = np.zeros(X_train.shape[1])
+    
+    # Collect diagnostic at each repetition
+    cum_mse = []
+    cum_r2 = []
+    
+    for _ in range(n_iterations):
+        X_train_sample, y_train_sample = resample(X_train, y_train)
+        rf_model_sample = func
+        rf_model_sample.fit(X_train_sample, y_train_sample)
+        
+        pred = rf_model_sample.predict(X_test)
+        
+        r2 = r2_score(y_test, pred)
+        pred = y_scaler.inverse_transform(pred.reshape(-1, 1)).flatten()
+        bootstrap_predictions.append(pred)
+        mse = mean_squared_error(y_test, pred)
+        
+        feature_importances_accumulated += rf_model_sample.feature_importances_
+        
+        cum_mse.append(mse)
+        cum_r2.append(r2)
+        
+        # Average feature importances
+    feature_importances = feature_importances_accumulated / n_iterations
+    
+    # Flatten the predictions array
+    predictions_flat = np.array(bootstrap_predictions).flatten()
+    
+    return predictions_flat, feature_importances, cum_mse, cum_r2
+
+
+def plot_histogram(predictions, observed, title="", reference='camp-dist-1', display=False):
+    fig, ax = plt.subplots(figsize=(10, 6))
+    sns.histplot(predictions, bins=20, stat="probability", ax=ax, label='prédictions', zorder=1)
+    sns.histplot(observed, bins=20, stat="probability", label='observée', zorder=0, ax=ax)
+    plt.title(title, loc='left')
+    plt.xlabel('pcs/m')
+    plt.ylabel('Densité de Probabilité')
+    plt.legend()
+    glue(reference, fig, display=display)
+    plt.close()
+
+
+def evalutate_model(r2s, mses, label, model='random-forest'):
+    r2 = np.round(np.mean(r2s), 2)
+    mse = np.round(np.mean(mses), 2)
+    results = {"cross validated error": r2, "mean² error": mse, 'model': model}
+    return pd.DataFrame(results, index=[label])
+
+
+# Calculating quantiles for Scenario 2
+q_uants = [0.01, 0.25, 0.5, 0.75, 0.99]
+index = ['1%', '25%', '50%', '75%', '99%', 'Moyenne']
+
+
+def makeqdf(observed, predicted, index=index, quants=q_uants, caption=""):
+    o_q = np.quantile(observed, quants)
+    m_o = np.mean(observed)
+    o_p = np.quantile(predicted, quants)
+    m_p = np.mean(predicted)
+    
+    results = {'observée': [*o_q, m_o], 'prédiction': [*o_p, m_p]}
+    return pd.DataFrame(results, index=index).style.set_table_styles(table_css_styles_top).format(
+        precision=2).set_caption(caption)
+
+
+def sum_a_b(zipped):
+    for element in zipped:
+        # the new beta distribution would be
+        # total success, (total tries - total success)
+        new_element_0 = np.array([np.array([x[0], x[1] - x[0]]) for x in element[0]])
+        new_element_1 = np.array([x for x in element[1]])
+        t3 = new_element_0 + new_element_1
+        
+        yield t3
+
+
+# Grid approximation
+# grid_val_index = np.linspace(0, 5.99, 600)
+groupby_columns = ['sample_id', 'location', 'date', 'city', 'orchards', 'vineyards', 'buildings', 'forest',
+                   'undefined', 'public_services', 'streets']
+
+
+def draw_a_beta_value(generator):
+    d = next(generator)
+    # drawing a random number from the beta distribution
+    # this is the the chance p, that a binomial distribution will
+    # result in True.
+    my_beta = [beta(x[0], x[1]).rvs(1) for x in d]
+    yield my_beta
+
+
+def binomial_probability_of_failure(generator):
+    # in this case failure means exceeding the value
+    # for trash a success is never exceeding the value
+    d = next(generator)
+    di = [x[0] for x in d]
+    yield di
+
+
+def bin_land_use_values(*, data: pd.DataFrame, column: str, num_bins: int = 4) -> pd.DataFrame:
+    """
+    Bins the specified column's values into a given number of bins and adds a new column to the DataFrame with these bin labels.
+
+    Args:
+        data (pd.DataFrame): The DataFrame to modify.
+        column (str): The name of the column to bin.
+        num_bins (int, optional): The number of bins to use. Defaults to 20.
+
+    Returns:
+        pd.DataFrame: The modified DataFrame with an additional column for binned values.
+    """
+    data[f'{column}_bin'] = pd.cut(data[column], bins=num_bins, labels=[1, 2, 3, 4], include_lowest=True)
+    return data
+
+
+def calculate_likelihood(*, aggregated_data: pd.DataFrame, bin_density_column: str, pcs_column: str = 'pcs/m',
+                         grid_range: np.ndarray = None, bins: list = None) -> pd.DataFrame:
+    """
+    Calculates the likelihood of observing the aggregated pcs/m data for each grid point and bin density value.
+
+    Args:
+        aggregated_data (pd.DataFrame): The aggregated data to be used for likelihood calculation.
+        bin_density_column (str): The column representing bin density numbers.
+        pcs_column (str, optional): The pcs/m column to use for calculation. Defaults to 'pcs/m'.
+        grid_range (np.ndarray, optional): The range of grid values. Defaults to np.linspace(0, 9.99, 1000).
+
+    Returns:
+        pd.DataFrame: A DataFrame with likelihood values for each grid value and bin density number.
+    """
+    likelihood_df = pd.DataFrame(index=grid_range)
+    
+    for bin_value in bins:
+        bin_data = aggregated_data[aggregated_data[bin_density_column] == bin_value]
+        if bin_data.empty:
+            likelihoods = [np.array([1, 1]) for grid_point in grid_range]
+        else:
+            likelihoods = [np.array([(bin_data[pcs_column] > grid_point).sum(), len(bin_data)]) for grid_point in
+                           grid_range]
+        likelihood_df[f'Likelihood_{bin_value}'] = likelihoods
+    return likelihood_df
+
+
+def calculate_beta_prior(*, grid_range: np.ndarray = [],
+                         bin_density_numbers: list = list(range(1, 21))) -> pd.DataFrame:
+    """
+    Calculates a Beta(1, 1) prior for each value in the specified grid range for each bin density number.
+
+    Args:
+        grid_range (np.ndarray, optional): The range of grid values. Defaults to np.linspace(0, 9.99, 1000).
+        bin_density_numbers (List[int], optional): List of bin density numbers. Defaults to range(1, 21).
+
+    Returns:
+        pd.DataFrame: A DataFrame with Beta(1, 1) prior values for each grid value and bin density number.
+    """
+    prior_df = pd.DataFrame(index=grid_range)
+    prior_values = np.array([1, 1])  # Constant value since Beta(1, 1) is uniform
+    
+    for bin_number in bin_density_numbers:
+        prior_df[f'Bin_{bin_number}'] = [prior_values for grid_point in grid_range]
+    return prior_df
+
+
+def define_posterior(likelihood, prior, grid_val_index: np.array = None):
+    # the alpha, beta parameters of the likelihood and prior are assembled
+    alpha_beta = list(zip(likelihood.values, prior.values))
+    a_b_sum = sum_a_b(alpha_beta)
+    
+    posteriors = []
+    for i in grid_val_index:
+        # the sum of successes and failures for the scenario at the given
+        # grid value are used as the alpha, beta parameters of the beta distribtion
+        # for the binomial/bernouli probability that a sample will exceed the grid
+        # value i.
+        st = binomial_probability_of_failure(draw_a_beta_value(a_b_sum))
+        val = next(st)
+        posteriors.append(val)
+    
+    # return posterior probabilities with gird index and column labels
+    post_grid_pstock = pd.DataFrame(posteriors, index=grid_val_index, columns=prior.columns)
+    
+    # identify the x scale of the grid
+    post_grid_pstock['X'] = post_grid_pstock.index
+    
+    # this column is the normalized probabilities that a sample
+    # will exceed a value on the grid.
+    post_grid_pstock['norm'] = post_grid_pstock['Bin_1'] / post_grid_pstock['Bin_1'].sum()
+    
+    return post_grid_pstock
+
+
+def non_zero(alist):
+    # find the first non-zero object in an array
+    # return the index number and the value.
+    for i, anum in enumerate(alist):
+        if anum != 0:
+            return i, anum
+    return None
+
+
+def draw_sample_from_multinomial(normed, n=100):
+    # the norm column from the posterior data frame is
+    # used as the probabilities of a multinomial distribution
+    rv = multinomial(1, normed.values)
+    y = rv.rvs(n)
+    
+    indexes = []
+    for i in range(0, len(y)):
+        indexes.append(non_zero(y[i])[0])
+    return indexes
+
+
+def posterior_predictions(p_g_p):
+    p_norm = p_g_p['norm']
+    
+    indexes = draw_sample_from_multinomial(p_norm)
+    results_scale = p_g_p.reset_index(drop=True)
+    sample_totals = results_scale.loc[indexes, "X"]
+    
+    return sample_totals

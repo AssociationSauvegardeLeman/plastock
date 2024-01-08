@@ -18,4 +18,5 @@ parts:
   - file: location_attributes
   - file: macro_summary
   - file: macro_attributes
+  - file: data_processing
   - file: references
