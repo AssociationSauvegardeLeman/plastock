@@ -300,7 +300,10 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-files-and-description">Data files and description</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maps-and-images">maps and images</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maps-and-images">maps and images</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#map-data">Map data:</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shape-files">shape files</a></li>
 </ul>
             </nav>
@@ -321,18 +324,37 @@ document.write(`
 <p><strong>This concerns only the contents of the end_pipe file</strong></p>
 <ol class="arabic simple">
 <li><p>data/end_pipe/asl_beaches.csv: GPS and location specific details</p></li>
-<li><p>data/end_pipe/micro_results.csv: The cleaned survey results of the microplastics</p></li>
-<li><p>data/end_pipe/u_all_data.csv: The trash data</p></li>
-<li><p>data/end_pipe/geo_long_form.csv: Long form surveys with geo data for each row</p></li>
-<li><p>data/end_pipe/long_form_micro.csv: The cleaned survey results of the microplastics</p></li>
+<li><p>data/end_pipe/city_map.csv: maps beach name to city</p></li>
+<li><p>data/end_pipe/codes.csv: code definitions and matrerial data</p></li>
+<li><p>data/end_pipe/de_labels.csv: converts common english labels to german</p></li>
+<li><p>data/end_pipe/fr_labels.csv: converts common english labels to french</p></li>
+<li><p>data/end_pipe/hist_leman.csv: the historical data for lac leman</p></li>
+<li><p>data/end_pipe/lac_leman_regions.csv: maps the beach name to a region</p></li>
+<li><p>data/end_pipe/micro_results.csv: the cleaned survey results of the microplastics in wide form</p></li>
+<li><p>data/end_pipe/macro_current.csv: the litter survey results</p></li>
+<li><p>data/end_pipe/macro_data_linearm.csv: the data used in the previous results chapter (aggregated to linear meters)</p></li>
+<li><p>data/end_pipe/macro_data_msquared.csv: the data used in the Macro dechets chapter (aggregated to m²)</p></li>
+<li><p>data/end_pipe/long_form_micro.csv: The cleaned survey results of the microplastics in long form</p></li>
+<li><p>data/end_pipe/pstock_beaches_current.csv: Maps beach name to feature variables</p></li>
+<li><p>data/end_pipe/swt_all.csv: The 2023 survey results from Saint Sulpice</p></li>
 </ol>
 </div>
 <div class="section" id="maps-and-images">
 <h2>maps and images<a class="headerlink" href="#maps-and-images" title="Permalink to this headline">#</a></h2>
 <ol class="arabic simple">
-<li><p>resources/maps/intro_map.jpeg: Basic map with survey locations.</p></li>
 <li><p>resources/maps/annex_map_regions.jpeg: Map with cummulative totals by region and points for min and max values.</p></li>
+<li><p>resources/maps/chapter_two_map.jpg.jpeg: Chapter two Map of average pcs of trash per meter squared</p></li>
+<li><p>resources/maps/chapter_three_map.jpg.jpeg: Chapter three map of average pcs of trach per meter of shore line</p></li>
+<li><p>resources/maps/regions_map.jpeg: Display of the survey locations and the regions they are assigned to.</p></li>
 </ol>
+<div class="section" id="map-data">
+<h3>Map data:<a class="headerlink" href="#map-data" title="Permalink to this headline">#</a></h3>
+<ol class="arabic simple">
+<li><p>resources/maps/plastock_lm.csv: the data to make the chapter three maps (plastock results)</p></li>
+<li><p>resources/maps/plastock_mq.csv: the data to make the chpater two maps</p></li>
+<li><p>resources/maps/previous_results.csv: the data to make the chapter three maps (previous results)</p></li>
+</ol>
+</div>
 </div>
 <div class="section" id="shape-files">
 <h2>shape files<a class="headerlink" href="#shape-files" title="Permalink to this headline">#</a></h2>
@@ -393,7 +415,10 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-files-and-description">Data files and description</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maps-and-images">maps and images</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maps-and-images">maps and images</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#map-data">Map data:</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shape-files">shape files</a></li>
 </ul>
   </nav></div>
