@@ -1,6 +1,8 @@
 # DATA README
 
-The data is cleaned and stored here as it is made available. Therefore this document will change as the project continues.
+The historical data of all the beach litter surveys on Lac Léman. This data was collected and or maintained by hammerdirt. Over the years different organizations have done beach litter surveys using the MLW system. There was no official _maintainer_ of the data. The role was assumed by hammerdirt, a local association from Montreux, Switzerland.
+
+The data uses the MLW codes from ([Guidance on Monitoring Marine Litter](https://mcc.jrc.ec.europa.eu/documents/201702074014.pdf)). The code definitions have been translated to french and german, new codes have been added that represent items that are found regularly but are not in the original code base. 
 
 ## Data files and description
 
@@ -34,7 +36,9 @@ __This concerns only the contents of the end_pipe file__
 
 14. data/end_pipe/swt_all.csv: The 2023 survey results from Saint Sulpice
 
-## maps and images
+## Resources
+
+### Maps and images
 
 1. resources/maps/annex_map_regions.jpeg: Map with cummulative totals by region and points for min and max values.
 
