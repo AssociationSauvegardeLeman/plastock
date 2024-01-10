@@ -441,7 +441,7 @@ def calculate_beta_prior(*, grid_range: np.ndarray = [],
         pd.DataFrame: A DataFrame with Beta(1, 1) prior values for each grid value and bin density number.
     """
     prior_df = pd.DataFrame(index=grid_range)
-    prior_values = np.array([1, 1])  # Constant value since Beta(1, 1) is uniform
+    prior_values = np.array([1, 1])  # since Beta(1, 1) is = odds at all points
     
     for bin_number in bin_density_numbers:
         prior_df[f'Bin_{bin_number}'] = [prior_values for grid_point in grid_range]
