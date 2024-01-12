@@ -316,13 +316,14 @@ def analyze_scenario(scenario_data, func, n_iterations=100):
     return predictions_flat, feature_importances, cum_mse, cum_r2
 
 
-def plot_histogram(predictions, observed, title="", reference='camp-dist-1', display=False):
+def plot_histogram(predictions, observed, title="", reference='camp-dist-1', display=False, xlabel='pcs/m',
+                   ylabel='Densité de Probabilité'):
     fig, ax = plt.subplots(figsize=(10, 6))
     sns.histplot(predictions, bins=20, stat="probability", ax=ax, label='prédictions', zorder=1)
     sns.histplot(observed, bins=20, stat="probability", label='observée', zorder=0, ax=ax)
     plt.title(title, loc='left')
-    plt.xlabel('pcs/m')
-    plt.ylabel('Densité de Probabilité')
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
     plt.legend()
     glue(reference, fig, display=display)
     plt.close()
