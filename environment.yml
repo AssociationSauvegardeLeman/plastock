@@ -1,22 +1,18 @@
-name: dscy
+name: plastock_xportable
 channels:
   - conda-forge
   - defaults
 dependencies:
-  - python=3.10.0
-  - scipy
-  - pandas
+  - python=3.9
+  - pandas=2.0.3
   - matplotlib
-  - jupyterlab
-  - python-slugify
-  - bokeh
-  - jupyter_bokeh
-  - reportlab
-  - pymc
-  - mlxtend
   - scikit-learn
-  - statsmodels
+  - ipython
+  - geopandas
   - seaborn
-  - arviz
-  - bambi
-prefix: /home/roger/anaconda3/envs/dscy
+  - sphinx
+  - jupyterlab
+  - jupyter-book
+  - python-slugify
+  - watermark
+

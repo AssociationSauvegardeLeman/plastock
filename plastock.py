@@ -445,13 +445,15 @@ def calculate_beta_prior(*, grid_range: np.ndarray = [],
     prior_values = np.array([1, 1])  # since Beta(1, 1) is = odds at all points
     
     for bin_number in bin_density_numbers:
-        prior_df[f'Bin_{bin_number}'] = [prior_values for grid_point in grid_range]
+        prior_df[f'Bin_{bin_number}'] = [prior_values for _ in grid_range]
     return prior_df
 
 
 def define_posterior(likelihood, prior, grid_val_index: np.array = None):
     # the alpha, beta parameters of the likelihood and prior are assembled
     alpha_beta = list(zip(likelihood.values, prior.values))
+    # this is a generator that yields the sum of the alpha, beta parameters
+    # of the likelihood and prior. It generates one value for each point on the grid.
     a_b_sum = sum_a_b(alpha_beta)
     
     posteriors = []
