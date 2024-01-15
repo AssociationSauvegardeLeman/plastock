@@ -1,0 +1,223 @@
+orientation,substrat,frequentation,situation,distance,objet,compte
+NE,galet,élévée,campagne,< 100m,fragment,0.0
+NNE,galet,élévée,campagne,< 100m,fragment,0.024834437086092717
+NE,galet,élévée,campagne,< 100m,fragment,0.0
+NNE,galet,élévée,campagne,< 100m,fragment,0.004966887417218543
+NNO,galet,moyenne,campagne,< 100m,fragment,0.014900662251655629
+NNO,galet,moyenne,campagne,< 100m,fragment,0.039735099337748346
+NNO,galet,moyenne,campagne,< 100m,fragment,0.016556291390728478
+NE,sable fin,élévée,campagne,< 100m,fragment,0.05629139072847682
+NE,sable fin,élévée,campagne,< 100m,fragment,0.0347682119205298
+NE,sable fin,élévée,campagne,< 100m,fragment,0.019867549668874173
+NE,sable fin,élévée,campagne,< 100m,fragment,0.008278145695364239
+NE,sable fin,élévée,campagne,< 100m,fragment,0.004966887417218543
+NE,sable fin,élévée,campagne,< 100m,fragment,0.004966887417218543
+NE,sable fin,élévée,campagne,< 100m,fragment,0.0033112582781456954
+NNE,galet,moyenne,campagne,100 - 500m,fragment,0.026490066225165563
+N,galet,moyenne,campagne,100 - 500m,fragment,0.014900662251655629
+NNO,galet,moyenne,campagne,100 - 500m,fragment,0.009933774834437087
+N,sable grosssier,faible,urbain,500 - 1000m,fragment,0.05132450331125828
+N,galet,moyenne,campagne,< 100m,fragment,0.02814569536423841
+N,galet,moyenne,campagne,< 100m,fragment,0.041390728476821195
+NNO,galet,moyenne,campagne,< 100m,fragment,0.12086092715231789
+NNO,galet,moyenne,campagne,< 100m,fragment,0.026490066225165563
+NNO,galet,moyenne,campagne,< 100m,fragment,0.0016556291390728477
+NO,galet,moyenne,campagne,< 100m,fragment,0.06953642384105961
+NO,sable grosssier,élévée,campagne,100 - 500m,fragment,0.018211920529801324
+NO,sable grosssier,élévée,campagne,100 - 500m,fragment,0.008278145695364239
+NO,sable grosssier,élévée,campagne,100 - 500m,fragment,0.019867549668874173
+NO,sable grosssier,élévée,campagne,100 - 500m,fragment,0.008278145695364239
+NO,sable grosssier,élévée,campagne,100 - 500m,fragment,0.013245033112582781
+NO,sable grosssier,élévée,campagne,100 - 500m,fragment,0.011589403973509934
+NNE,sable fin,élévée,urbain,100 - 500m,fragment,0.0016556291390728477
+N,sable fin,élévée,urbain,100 - 500m,fragment,0.004966887417218543
+N,sable fin,élévée,urbain,100 - 500m,fragment,0.0016556291390728477
+N,sable fin,élévée,urbain,100 - 500m,fragment,0.009933774834437087
+N,sable fin,élévée,urbain,100 - 500m,fragment,0.03145695364238411
+OSO,gravier,élévée,urbain,100 - 500m,fragment,0.004966887417218543
+OSO,gravier,élévée,urbain,100 - 500m,fragment,0.0016556291390728477
+OSO,gravier,élévée,urbain,100 - 500m,fragment,0.006622516556291391
+OSO,gravier,élévée,urbain,100 - 500m,fragment,0.014900662251655629
+NE,gravier,élévée,urbain,100 - 500m,fragment,0.004966887417218543
+NE,gravier,élévée,urbain,100 - 500m,fragment,0.0016556291390728477
+NE,gravier,élévée,urbain,100 - 500m,fragment,0.018211920529801327
+NE,gravier,élévée,urbain,100 - 500m,fragment,0.013245033112582783
+NE,gravier,élévée,urbain,100 - 500m,fragment,0.0016556291390728477
+NE,gravier,élévée,urbain,100 - 500m,fragment,0.0016556291390728477
+NO,galet,élévée,campagne,< 100m,fragment,0.016556291390728478
+NO,galet,élévée,campagne,< 100m,fragment,0.0033112582781456954
+OSO,galet,élévée,campagne,< 100m,fragment,0.056291390728476824
+ESE,gravier,élévée,campagne,100 - 500m,fragment,0.004966887417218543
+ESE,gravier,élévée,campagne,100 - 500m,fragment,0.019867549668874173
+ESE,gravier,élévée,campagne,100 - 500m,fragment,0.0016556291390728477
+ONO,galet,moyenne,campagne,> 1000m,fragment,0.008278145695364239
+O,galet,moyenne,campagne,> 1000m,fragment,0.013245033112582781
+OSO,galet,moyenne,campagne,> 1000m,fragment,0.004966887417218543
+OSO,galet,moyenne,campagne,> 1000m,fragment,0.061258278145695365
+SO,galet,moyenne,campagne,> 1000m,fragment,0.02152317880794702
+SSO,galet,élévée,urbain,< 100m,fragment,0.013245033112582781
+SSO,galet,élévée,urbain,< 100m,fragment,0.008278145695364239
+SSO,galet,élévée,urbain,< 100m,fragment,0.011589403973509934
+SSO,galet,élévée,urbain,< 100m,fragment,0.0033112582781456954
+SSE,sable grosssier,faible,campagne,500 - 1000m,fragment,0.0033112582781456954
+SO,gravier,faible,campagne,< 100m,fragment,0.018211920529801324
+E,sable grosssier,moyenne,campagne,< 100m,fragment,0.023178807947019868
+NO,sable fin,moyenne,campagne,100 - 500m,fragment,0.8543046357615894
+NO,sable fin,moyenne,campagne,100 - 500m,fragment,0.29139072847682124
+NO,sable fin,moyenne,campagne,100 - 500m,fragment,0.016556291390728478
+NO,sable fin,moyenne,campagne,100 - 500m,fragment,0.533112582781457
+SSE,galet,élévée,urbain,100 - 500m,fragment,0.0
+SE,galet,élévée,urbain,100 - 500m,fragment,0.013245033112582781
+SE,galet,élévée,urbain,100 - 500m,fragment,0.006622516556291391
+SE,galet,élévée,urbain,100 - 500m,fragment,0.0033112582781456954
+SSE,gravier,moyenne,campagne,< 100m,fragment,0.0033112582781456954
+S,gravier,moyenne,campagne,< 100m,fragment,0.009933774834437087
+SSE,gravier,moyenne,campagne,< 100m,fragment,0.013245033112582781
+SO,sable fin,élévée,campagne,100 - 500m,fragment,0.03145695364238411
+SO,sable fin,élévée,campagne,100 - 500m,fragment,0.06953642384105961
+SO,sable fin,élévée,campagne,100 - 500m,fragment,1.0662251655629138
+SO,sable fin,élévée,campagne,100 - 500m,fragment,0.38079470198675497
+SO,sable fin,élévée,campagne,100 - 500m,fragment,0.0695364238410596
+SO,sable fin,élévée,campagne,100 - 500m,fragment,0.10099337748344371
+SO,sable fin,élévée,campagne,100 - 500m,fragment,0.02814569536423841
+SO,sable fin,élévée,campagne,100 - 500m,fragment,0.06291390728476821
+SO,sable fin,élévée,campagne,100 - 500m,fragment,0.03145695364238411
+SO,sable fin,élévée,campagne,100 - 500m,fragment,0.09271523178807947
+SSO,sable fin,élévée,urbain,< 100m,fragment,0.052980132450331126
+S,sable fin,élévée,urbain,< 100m,fragment,0.021523178807947022
+SSO,sable fin,élévée,urbain,< 100m,fragment,0.057947019867549666
+SSO,sable fin,élévée,urbain,< 100m,fragment,0.029801324503311258
+SSO,sable fin,élévée,urbain,< 100m,fragment,0.043046357615894044
+S,sable fin,élévée,urbain,< 100m,fragment,0.0380794701986755
+S,sable fin,élévée,urbain,< 100m,fragment,0.08112582781456953
+S,sable fin,élévée,urbain,< 100m,fragment,0.0380794701986755
+SSE,sable fin,élévée,urbain,< 100m,fragment,0.07781456953642384
+SSE,sable fin,élévée,urbain,< 100m,fragment,0.0380794701986755
+SE,sable grosssier,faible,campagne,> 1000m,fragment,0.004966887417218543
+SE,sable grosssier,faible,campagne,> 1000m,fragment,0.0016556291390728477
+ENE,sable grosssier,faible,campagne,> 1000m,fragment,0.011589403973509934
+ENE,sable grosssier,faible,campagne,> 1000m,fragment,0.009933774834437087
+SO,sable fin,élévée,urbain,100 - 500m,fragment,0.0033112582781456954
+SO,sable fin,élévée,urbain,100 - 500m,fragment,0.018211920529801327
+SO,sable fin,élévée,urbain,100 - 500m,fragment,0.0016556291390728477
+S,sable fin,élévée,urbain,100 - 500m,fragment,0.0033112582781456954
+S,sable fin,élévée,urbain,100 - 500m,fragment,0.024834437086092714
+SSE,sable fin,élévée,urbain,100 - 500m,fragment,0.0016556291390728477
+ONO,sable fin,élévée,campagne,100 - 500m,fragment,0.023178807947019868
+ONO,sable fin,élévée,campagne,100 - 500m,fragment,0.014900662251655629
+O,sable fin,élévée,campagne,100 - 500m,fragment,0.0016556291390728477
+O,sable fin,élévée,campagne,100 - 500m,fragment,0.033112582781456956
+O,sable fin,élévée,campagne,100 - 500m,fragment,0.09768211920529801
+OSO,sable fin,élévée,campagne,100 - 500m,fragment,0.0
+OSO,sable fin,élévée,campagne,100 - 500m,fragment,0.008278145695364239
+NE,galet,élévée,campagne,< 100m,fibres,0.1605960264900662
+NNE,galet,élévée,campagne,< 100m,fibres,0.20033112582781457
+NE,galet,élévée,campagne,< 100m,fibres,0.05132450331125828
+NNE,galet,élévée,campagne,< 100m,fibres,0.29635761589403975
+NNO,galet,moyenne,campagne,< 100m,fibres,0.048013245033112585
+NNO,galet,moyenne,campagne,< 100m,fibres,0.054635761589403975
+NNO,galet,moyenne,campagne,< 100m,fibres,0.10099337748344371
+NE,sable fin,élévée,campagne,< 100m,fibres,0.1390728476821192
+NE,sable fin,élévée,campagne,< 100m,fibres,0.1804635761589404
+NE,sable fin,élévée,campagne,< 100m,fibres,0.06456953642384106
+NE,sable fin,élévée,campagne,< 100m,fibres,0.054635761589403975
+NE,sable fin,élévée,campagne,< 100m,fibres,0.20695364238410596
+NE,sable fin,élévée,campagne,< 100m,fibres,0.1986754966887417
+NE,sable fin,élévée,campagne,< 100m,fibres,0.20860927152317882
+NNE,galet,moyenne,campagne,100 - 500m,fibres,0.18211920529801323
+N,galet,moyenne,campagne,100 - 500m,fibres,0.20860927152317882
+NNO,galet,moyenne,campagne,100 - 500m,fibres,0.10927152317880795
+N,sable grosssier,faible,urbain,500 - 1000m,fibres,0.04304635761589404
+N,galet,moyenne,campagne,< 100m,fibres,0.13079470198675497
+N,galet,moyenne,campagne,< 100m,fibres,0.3658940397350993
+NNO,galet,moyenne,campagne,< 100m,fibres,0.43211920529801323
+NNO,galet,moyenne,campagne,< 100m,fibres,0.19039735099337748
+NNO,galet,moyenne,campagne,< 100m,fibres,0.19205298013245034
+NO,galet,moyenne,campagne,< 100m,fibres,0.1870860927152318
+NO,sable grosssier,élévée,campagne,100 - 500m,fibres,0.10430463576158941
+NO,sable grosssier,élévée,campagne,100 - 500m,fibres,0.26655629139072845
+NO,sable grosssier,élévée,campagne,100 - 500m,fibres,0.0347682119205298
+NO,sable grosssier,élévée,campagne,100 - 500m,fibres,0.033112582781456956
+NO,sable grosssier,élévée,campagne,100 - 500m,fibres,0.07119205298013245
+NO,sable grosssier,élévée,campagne,100 - 500m,fibres,0.08278145695364239
+NNE,sable fin,élévée,urbain,100 - 500m,fibres,0.03642384105960265
+N,sable fin,élévée,urbain,100 - 500m,fibres,0.20198675496688742
+N,sable fin,élévée,urbain,100 - 500m,fibres,0.05132450331125828
+N,sable fin,élévée,urbain,100 - 500m,fibres,0.0347682119205298
+N,sable fin,élévée,urbain,100 - 500m,fibres,0.19701986754966888
+OSO,gravier,élévée,urbain,100 - 500m,fibres,0.13079470198675497
+OSO,gravier,élévée,urbain,100 - 500m,fibres,0.041390728476821195
+OSO,gravier,élévée,urbain,100 - 500m,fibres,0.11423841059602649
+OSO,gravier,élévée,urbain,100 - 500m,fibres,0.12582781456953643
+NE,gravier,élévée,urbain,100 - 500m,fibres,0.061258278145695365
+NE,gravier,élévée,urbain,100 - 500m,fibres,0.10099337748344371
+NE,gravier,élévée,urbain,100 - 500m,fibres,0.13245033112582782
+NE,gravier,élévée,urbain,100 - 500m,fibres,0.10264900662251655
+NE,gravier,élévée,urbain,100 - 500m,fibres,0.057947019867549666
+NE,gravier,élévée,urbain,100 - 500m,fibres,0.1390728476821192
+NO,galet,élévée,campagne,< 100m,fibres,0.18211920529801323
+NO,galet,élévée,campagne,< 100m,fibres,0.039735099337748346
+OSO,galet,élévée,campagne,< 100m,fibres,0.347682119205298
+ESE,gravier,élévée,campagne,100 - 500m,fibres,0.09768211920529801
+ESE,gravier,élévée,campagne,100 - 500m,fibres,0.22185430463576158
+ESE,gravier,élévée,campagne,100 - 500m,fibres,0.14735099337748345
+ONO,galet,moyenne,campagne,> 1000m,fibres,0.06456953642384106
+O,galet,moyenne,campagne,> 1000m,fibres,0.08443708609271523
+OSO,galet,moyenne,campagne,> 1000m,fibres,0.1423841059602649
+OSO,galet,moyenne,campagne,> 1000m,fibres,0.04966887417218543
+SO,galet,moyenne,campagne,> 1000m,fibres,0.0695364238410596
+SSO,galet,élévée,urbain,< 100m,fibres,0.0728476821192053
+SSO,galet,élévée,urbain,< 100m,fibres,0.1390728476821192
+SSO,galet,élévée,urbain,< 100m,fibres,0.0695364238410596
+SSO,galet,élévée,urbain,< 100m,fibres,0.041390728476821195
+SSE,sable grosssier,faible,campagne,500 - 1000m,fibres,0.028145695364238412
+SO,gravier,faible,campagne,< 100m,fibres,0.19370860927152317
+E,sable grosssier,moyenne,campagne,< 100m,fibres,0.04304635761589404
+NO,sable fin,moyenne,campagne,100 - 500m,fibres,0.2996688741721854
+NO,sable fin,moyenne,campagne,100 - 500m,fibres,0.18543046357615894
+NO,sable fin,moyenne,campagne,100 - 500m,fibres,0.14735099337748345
+NO,sable fin,moyenne,campagne,100 - 500m,fibres,0.4519867549668874
+SSE,galet,élévée,urbain,100 - 500m,fibres,0.20860927152317882
+SE,galet,élévée,urbain,100 - 500m,fibres,0.10099337748344371
+SE,galet,élévée,urbain,100 - 500m,fibres,0.11258278145695365
+SE,galet,élévée,urbain,100 - 500m,fibres,0.06456953642384106
+SSE,gravier,moyenne,campagne,< 100m,fibres,0.029801324503311258
+S,gravier,moyenne,campagne,< 100m,fibres,0.1771523178807947
+SSE,gravier,moyenne,campagne,< 100m,fibres,0.12417218543046357
+SO,sable fin,élévée,campagne,100 - 500m,fibres,0.29635761589403975
+SO,sable fin,élévée,campagne,100 - 500m,fibres,0.08774834437086093
+SO,sable fin,élévée,campagne,100 - 500m,fibres,0.3973509933774834
+SO,sable fin,élévée,campagne,100 - 500m,fibres,0.4155629139072848
+SO,sable fin,élévée,campagne,100 - 500m,fibres,0.059602649006622516
+SO,sable fin,élévée,campagne,100 - 500m,fibres,0.11092715231788079
+SO,sable fin,élévée,campagne,100 - 500m,fibres,0.11423841059602649
+SO,sable fin,élévée,campagne,100 - 500m,fibres,0.18211920529801323
+SO,sable fin,élévée,campagne,100 - 500m,fibres,0.2185430463576159
+SO,sable fin,élévée,campagne,100 - 500m,fibres,0.19536423841059603
+SSO,sable fin,élévée,urbain,< 100m,fibres,0.11092715231788079
+S,sable fin,élévée,urbain,< 100m,fibres,0.11920529801324503
+SSO,sable fin,élévée,urbain,< 100m,fibres,0.046357615894039736
+SSO,sable fin,élévée,urbain,< 100m,fibres,0.09933774834437085
+SSO,sable fin,élévée,urbain,< 100m,fibres,0.26490066225165565
+S,sable fin,élévée,urbain,< 100m,fibres,0.16225165562913907
+S,sable fin,élévée,urbain,< 100m,fibres,0.24006622516556292
+S,sable fin,élévée,urbain,< 100m,fibres,0.29304635761589404
+SSE,sable fin,élévée,urbain,< 100m,fibres,0.13741721854304637
+SSE,sable fin,élévée,urbain,< 100m,fibres,0.11920529801324503
+SE,sable grosssier,faible,campagne,> 1000m,fibres,0.08940397350993377
+SE,sable grosssier,faible,campagne,> 1000m,fibres,0.08940397350993377
+ENE,sable grosssier,faible,campagne,> 1000m,fibres,0.1357615894039735
+ENE,sable grosssier,faible,campagne,> 1000m,fibres,0.2913907284768212
+SO,sable fin,élévée,urbain,100 - 500m,fibres,0.16887417218543047
+SO,sable fin,élévée,urbain,100 - 500m,fibres,0.3344370860927152
+SO,sable fin,élévée,urbain,100 - 500m,fibres,0.06456953642384106
+S,sable fin,élévée,urbain,100 - 500m,fibres,0.039735099337748346
+S,sable fin,élévée,urbain,100 - 500m,fibres,0.059602649006622516
+SSE,sable fin,élévée,urbain,100 - 500m,fibres,0.056291390728476824
+ONO,sable fin,élévée,campagne,100 - 500m,fibres,0.11258278145695365
+ONO,sable fin,élévée,campagne,100 - 500m,fibres,0.16556291390728478
+O,sable fin,élévée,campagne,100 - 500m,fibres,0.059602649006622516
+O,sable fin,élévée,campagne,100 - 500m,fibres,0.061258278145695365
+O,sable fin,élévée,campagne,100 - 500m,fibres,0.3294701986754967
+OSO,sable fin,élévée,campagne,100 - 500m,fibres,0.057947019867549666
+OSO,sable fin,élévée,campagne,100 - 500m,fibres,0.08774834437086093
