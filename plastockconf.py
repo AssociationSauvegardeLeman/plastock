@@ -1,4 +1,4 @@
-name_zones = {1:"ligne d'eau", 2:"plage seche"}
+name_zones = {1:"ligne d'eau", 2:"plage sèche"}
 
 name_particles = {
     "fbr":"fibre rouge",

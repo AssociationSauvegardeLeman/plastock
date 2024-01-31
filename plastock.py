@@ -25,7 +25,7 @@ from scipy.stats import beta
 from scipy.stats import multinomial
 
 def capitalize_x_tick_labels(an_ax):
-    an_ax.set_xticks(an_ax.get_xticks().tolist())
+    an_ax.set_xticks(an_ax.get_xticks())
     an_ax.set_xticklabels([x.get_text().capitalize() for x in an_ax.get_xticklabels()])
 
 
