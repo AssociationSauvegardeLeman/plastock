@@ -25,7 +25,7 @@ from scipy.stats import beta
 from scipy.stats import multinomial
 
 def capitalize_x_tick_labels(an_ax):
-    an_ax.set_xticks(an_ax.get_xticks().tolist())
+    an_ax.set_xticks(an_ax.get_xticks())
     an_ax.set_xticklabels([x.get_text().capitalize() for x in an_ax.get_xticklabels()])
 
 
@@ -134,7 +134,7 @@ def attribute_summary_test(some_data: pd.DataFrame, vals: str, voi: str, as_type
 
 
 def attribute_summary_grid(data, vals, voi, figname, labels: dict = None, stat="probability", ylim: int = 1000,
-                           xlim: int = 1000, figsize: tuple = (8, 7), object_column: str = "Particules"):
+                           xlim: int = 1000, figsize: tuple = (8, 7), object_column: str = "Particules", hue_order: list = None):
     """
     Résumé des attributs sous forme de grille de graphiques
 
@@ -148,6 +148,11 @@ def attribute_summary_grid(data, vals, voi, figname, labels: dict = None, stat="
         figname (str): Le nom du graphique à générer et afficher.
         labels (dict, optional): Un dictionnaire de correspondance pour les étiquettes de groupes (par défaut, None).
         stat (str, optional): Le type de statistique à afficher dans l'histogramme ('probability' par défaut).
+        ylim (int, optional): La limite pour l'axe des ordonnées (par défaut, 1000).
+        xlim (int, optional): La limite pour l'axe des abscisses (par défaut, 1000).
+        figsize (tuple, optional): La taille de la figure à générer (par défaut, (8, 7)).
+        object_column (str, optional): Le nom de la colonne contenant les objets (par défaut, "Particules").
+        hue_order (list, optional): L'ordre des étiquettes de groupe pour le graphique (par défaut, None).
 
     Returns:
         Un objet de figure matplotlib, attaché à un objet myst_nb.glue. La figure comporte quatre objets d'axe : un
@@ -159,10 +164,18 @@ def attribute_summary_grid(data, vals, voi, figname, labels: dict = None, stat="
     
     fig, axs = plt.subplots(2, 2, figsize=figsize)
     
-    sns.scatterplot(some_data, x="échantillon", y=vals, hue=voi, ax=axs[0, 0])
-    sns.boxplot(some_data, x=voi, y=vals, hue=voi, showfliers=True, ax=axs[0, 1], dodge=False)
-    sns.histplot(some_data, x=vals, hue=voi, ax=axs[1, 0], stat=stat, kde=True)
-    sns.ecdfplot(some_data, x=vals, hue=voi, ax=axs[1, 1])
+    if hue_order:
+        sns.scatterplot(data=some_data, x="échantillon", y=vals, hue=voi, ax=axs[0, 0], hue_order=hue_order)
+        sns.boxplot(data=some_data, x=voi, y=vals, hue=voi, showfliers=True, ax=axs[0, 1], dodge=False,
+                    order=hue_order)
+        sns.histplot(data=some_data, x=vals, hue=voi, ax=axs[1, 0], stat=stat, kde=True, hue_order=hue_order)
+        sns.ecdfplot(data=some_data, x=vals, hue=voi, ax=axs[1, 1], hue_order=hue_order)
+    else:
+        sns.scatterplot(some_data, x="échantillon", y=vals, hue=voi, ax=axs[0, 0])
+        sns.boxplot(some_data, x=voi, y=vals, hue=voi, showfliers=True, ax=axs[0, 1], dodge=False)
+        sns.histplot(some_data, x=vals, hue=voi, ax=axs[1, 0], stat=stat, kde=True)
+        sns.ecdfplot(some_data, x=vals, hue=voi, ax=axs[1, 1])
+    
     axs[0, 0].set_ylim(-.01, ylim)
     axs[0, 1].set_ylim(-.01, ylim)
     axs[1, 1].set_xlim(-.01, xlim)
@@ -171,7 +184,7 @@ def attribute_summary_grid(data, vals, voi, figname, labels: dict = None, stat="
     axs[0, 0].set_xlabel("Échantillon")
     axs[0, 0].set_ylabel(object_column)
     capitalize_legend_components(axs[0, 0])
-    axs[0, 1].get_legend().remove()
+    # axs[0, 1].get_legend().remove()
     axs[1, 0].set_xlabel(object_column)
     axs[1, 0].set_ylabel("Probabilité")
     axs[0, 1].set_xlabel("")

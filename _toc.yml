@@ -8,14 +8,14 @@ parts:
   chapters:
   - file: micro_results
   - file: macro_surface_area
-  - file: macro_object_results
+  - file: resultats_precedents
 - caption: Annex
   numbered: False
   chapters:
   - file: random_variables
-  - file: location_summary
-  - file: location_attributes
-  - file: macro_summary
-  - file: macro_attributes
+  - file: micro_plage_position
+  - file: micro_plage_attributes
+  - file: macro_plage_position
+  - file: macro_plage_attributes
   - file: data_processing
   - file: references
