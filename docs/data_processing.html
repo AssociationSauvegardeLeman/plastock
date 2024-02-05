@@ -66,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="References" href="references.html" />
-    <link rel="prev" title="Macro déchets plage et attribut" href="macro_attributes.html" />
+    <link rel="prev" title="Macro déchets plage et attribut" href="macro_plage_attributes.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -166,15 +166,15 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="micro_results.html">1. Micros particules</a></li>
 <li class="toctree-l1"><a class="reference internal" href="macro_surface_area.html">2. Pla’stock Macros déchets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="macro_object_results.html">3. Résultats précédents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resultats_precedents.html">3. Résultats précédents</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Annex</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="random_variables.html">Variables aléatoires</a></li>
-<li class="toctree-l1"><a class="reference internal" href="location_summary.html">Microplastiques plage et position</a></li>
-<li class="toctree-l1"><a class="reference internal" href="location_attributes.html">Microplastiques plage et attribut</a></li>
-<li class="toctree-l1"><a class="reference internal" href="macro_summary.html">Macro déchets plage et position</a></li>
-<li class="toctree-l1"><a class="reference internal" href="macro_attributes.html">Macro déchets plage et attribut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="micro_plage_position.html">Microplastiques plage et position</a></li>
+<li class="toctree-l1"><a class="reference internal" href="micro_plage_attributes.html">Microplastiques plage et attribut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="macro_plage_position.html">Macro déchets plage et position</a></li>
+<li class="toctree-l1"><a class="reference internal" href="macro_plage_attributes.html">Macro déchets plage et attribut</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Data processing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
 </ul>
@@ -421,429 +421,429 @@ document.write(`
 <h4>Mètres carrés<a class="headerlink" href="#metres-carres" title="Permalink to this heading">#</a></h4>
 <p>Pour illustrer les changements apportés aux données, considérons deux échantillons et deux codes (G27, Gfrags). Le premier échantillon est Amphion le 2022-02-01 et le second est Clarens le 2022-01-16. À Amphion, il y a plusieurs valeurs pour les mêmes codes le même jour. Il en va de même pour Clarens, mais à Clarens, il y a également deux substrats pour la plage. Notez que les codes G78 et G79 font partie du code combiné Gfrags.</p>
 <div class="output text_html"><style type="text/css">
-#T_dd6e3 tr:nth-child(even) {
+#T_c746c tr:nth-child(even) {
   background-color: rgba(139, 69, 19, 0.08);
 }
-#T_dd6e3 tr:nth-child(odd) {
+#T_c746c tr:nth-child(odd) {
   background: #FFF;
 }
-#T_dd6e3 tr {
+#T_c746c tr {
   font-size: 14px;
   padding: 6px;
 }
-#T_dd6e3 th:nth-child(1) {
+#T_c746c th:nth-child(1) {
   background-color: #FFF;
   white-space: nowrap;
   word-break: keep-all;
 }
-#T_dd6e3 td {
+#T_c746c td {
   padding: 4px;
   text-align: center;
 }
-#T_dd6e3 caption {
+#T_c746c caption {
   caption-side: bottom;
   font-size: 14px;
   text-align: left;
   margin-top: 14px;
 }
 </style>
-<table id="T_dd6e3">
+<table id="T_c746c">
   <caption><b>Table A5-1 :</b> Les résultats de l'échantillon avant la combinaison des codes, des substrats et de la position</caption>
   <thead>
     <tr>
-      <th id="T_dd6e3_level0_col0" class="col_heading level0 col0" >Plage</th>
-      <th id="T_dd6e3_level0_col1" class="col_heading level0 col1" >Date</th>
-      <th id="T_dd6e3_level0_col2" class="col_heading level0 col2" >Position</th>
-      <th id="T_dd6e3_level0_col3" class="col_heading level0 col3" >Substrat</th>
-      <th id="T_dd6e3_level0_col4" class="col_heading level0 col4" >Aire</th>
-      <th id="T_dd6e3_level0_col5" class="col_heading level0 col5" >Code</th>
-      <th id="T_dd6e3_level0_col6" class="col_heading level0 col6" >Quantité</th>
-      <th id="T_dd6e3_level0_col7" class="col_heading level0 col7" >pcs/m²</th>
+      <th id="T_c746c_level0_col0" class="col_heading level0 col0" >Plage</th>
+      <th id="T_c746c_level0_col1" class="col_heading level0 col1" >Date</th>
+      <th id="T_c746c_level0_col2" class="col_heading level0 col2" >Position</th>
+      <th id="T_c746c_level0_col3" class="col_heading level0 col3" >Substrat</th>
+      <th id="T_c746c_level0_col4" class="col_heading level0 col4" >Aire</th>
+      <th id="T_c746c_level0_col5" class="col_heading level0 col5" >Code</th>
+      <th id="T_c746c_level0_col6" class="col_heading level0 col6" >Quantité</th>
+      <th id="T_c746c_level0_col7" class="col_heading level0 col7" >pcs/m²</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td id="T_dd6e3_row0_col0" class="data row0 col0" >Amphion</td>
-      <td id="T_dd6e3_row0_col1" class="data row0 col1" >01.02.2022</td>
-      <td id="T_dd6e3_row0_col2" class="data row0 col2" >2</td>
-      <td id="T_dd6e3_row0_col3" class="data row0 col3" >4,00</td>
-      <td id="T_dd6e3_row0_col4" class="data row0 col4" >342</td>
-      <td id="T_dd6e3_row0_col5" class="data row0 col5" >G27</td>
-      <td id="T_dd6e3_row0_col6" class="data row0 col6" >4</td>
-      <td id="T_dd6e3_row0_col7" class="data row0 col7" >0,01</td>
+      <td id="T_c746c_row0_col0" class="data row0 col0" >Amphion</td>
+      <td id="T_c746c_row0_col1" class="data row0 col1" >01.02.2022</td>
+      <td id="T_c746c_row0_col2" class="data row0 col2" >2</td>
+      <td id="T_c746c_row0_col3" class="data row0 col3" >4,00</td>
+      <td id="T_c746c_row0_col4" class="data row0 col4" >342</td>
+      <td id="T_c746c_row0_col5" class="data row0 col5" >G27</td>
+      <td id="T_c746c_row0_col6" class="data row0 col6" >4</td>
+      <td id="T_c746c_row0_col7" class="data row0 col7" >0,01</td>
     </tr>
     <tr>
-      <td id="T_dd6e3_row1_col0" class="data row1 col0" >Amphion</td>
-      <td id="T_dd6e3_row1_col1" class="data row1 col1" >01.02.2022</td>
-      <td id="T_dd6e3_row1_col2" class="data row1 col2" >1</td>
-      <td id="T_dd6e3_row1_col3" class="data row1 col3" >4,00</td>
-      <td id="T_dd6e3_row1_col4" class="data row1 col4" >98</td>
-      <td id="T_dd6e3_row1_col5" class="data row1 col5" >G78</td>
-      <td id="T_dd6e3_row1_col6" class="data row1 col6" >8</td>
-      <td id="T_dd6e3_row1_col7" class="data row1 col7" >0,08</td>
+      <td id="T_c746c_row1_col0" class="data row1 col0" >Amphion</td>
+      <td id="T_c746c_row1_col1" class="data row1 col1" >01.02.2022</td>
+      <td id="T_c746c_row1_col2" class="data row1 col2" >1</td>
+      <td id="T_c746c_row1_col3" class="data row1 col3" >4,00</td>
+      <td id="T_c746c_row1_col4" class="data row1 col4" >98</td>
+      <td id="T_c746c_row1_col5" class="data row1 col5" >G78</td>
+      <td id="T_c746c_row1_col6" class="data row1 col6" >8</td>
+      <td id="T_c746c_row1_col7" class="data row1 col7" >0,08</td>
     </tr>
     <tr>
-      <td id="T_dd6e3_row2_col0" class="data row2 col0" >Amphion</td>
-      <td id="T_dd6e3_row2_col1" class="data row2 col1" >01.02.2022</td>
-      <td id="T_dd6e3_row2_col2" class="data row2 col2" >2</td>
-      <td id="T_dd6e3_row2_col3" class="data row2 col3" >4,00</td>
-      <td id="T_dd6e3_row2_col4" class="data row2 col4" >342</td>
-      <td id="T_dd6e3_row2_col5" class="data row2 col5" >G78</td>
-      <td id="T_dd6e3_row2_col6" class="data row2 col6" >86</td>
-      <td id="T_dd6e3_row2_col7" class="data row2 col7" >0,25</td>
+      <td id="T_c746c_row2_col0" class="data row2 col0" >Amphion</td>
+      <td id="T_c746c_row2_col1" class="data row2 col1" >01.02.2022</td>
+      <td id="T_c746c_row2_col2" class="data row2 col2" >2</td>
+      <td id="T_c746c_row2_col3" class="data row2 col3" >4,00</td>
+      <td id="T_c746c_row2_col4" class="data row2 col4" >342</td>
+      <td id="T_c746c_row2_col5" class="data row2 col5" >G78</td>
+      <td id="T_c746c_row2_col6" class="data row2 col6" >86</td>
+      <td id="T_c746c_row2_col7" class="data row2 col7" >0,25</td>
     </tr>
     <tr>
-      <td id="T_dd6e3_row3_col0" class="data row3 col0" >Amphion</td>
-      <td id="T_dd6e3_row3_col1" class="data row3 col1" >01.02.2022</td>
-      <td id="T_dd6e3_row3_col2" class="data row3 col2" >1</td>
-      <td id="T_dd6e3_row3_col3" class="data row3 col3" >4,00</td>
-      <td id="T_dd6e3_row3_col4" class="data row3 col4" >98</td>
-      <td id="T_dd6e3_row3_col5" class="data row3 col5" >G79</td>
-      <td id="T_dd6e3_row3_col6" class="data row3 col6" >12</td>
-      <td id="T_dd6e3_row3_col7" class="data row3 col7" >0,12</td>
+      <td id="T_c746c_row3_col0" class="data row3 col0" >Amphion</td>
+      <td id="T_c746c_row3_col1" class="data row3 col1" >01.02.2022</td>
+      <td id="T_c746c_row3_col2" class="data row3 col2" >1</td>
+      <td id="T_c746c_row3_col3" class="data row3 col3" >4,00</td>
+      <td id="T_c746c_row3_col4" class="data row3 col4" >98</td>
+      <td id="T_c746c_row3_col5" class="data row3 col5" >G79</td>
+      <td id="T_c746c_row3_col6" class="data row3 col6" >12</td>
+      <td id="T_c746c_row3_col7" class="data row3 col7" >0,12</td>
     </tr>
     <tr>
-      <td id="T_dd6e3_row4_col0" class="data row4 col0" >Amphion</td>
-      <td id="T_dd6e3_row4_col1" class="data row4 col1" >01.02.2022</td>
-      <td id="T_dd6e3_row4_col2" class="data row4 col2" >2</td>
-      <td id="T_dd6e3_row4_col3" class="data row4 col3" >4,00</td>
-      <td id="T_dd6e3_row4_col4" class="data row4 col4" >342</td>
-      <td id="T_dd6e3_row4_col5" class="data row4 col5" >G79</td>
-      <td id="T_dd6e3_row4_col6" class="data row4 col6" >225</td>
-      <td id="T_dd6e3_row4_col7" class="data row4 col7" >0,66</td>
+      <td id="T_c746c_row4_col0" class="data row4 col0" >Amphion</td>
+      <td id="T_c746c_row4_col1" class="data row4 col1" >01.02.2022</td>
+      <td id="T_c746c_row4_col2" class="data row4 col2" >2</td>
+      <td id="T_c746c_row4_col3" class="data row4 col3" >4,00</td>
+      <td id="T_c746c_row4_col4" class="data row4 col4" >342</td>
+      <td id="T_c746c_row4_col5" class="data row4 col5" >G79</td>
+      <td id="T_c746c_row4_col6" class="data row4 col6" >225</td>
+      <td id="T_c746c_row4_col7" class="data row4 col7" >0,66</td>
     </tr>
     <tr>
-      <td id="T_dd6e3_row5_col0" class="data row5 col0" >Amphion</td>
-      <td id="T_dd6e3_row5_col1" class="data row5 col1" >01.02.2022</td>
-      <td id="T_dd6e3_row5_col2" class="data row5 col2" >2</td>
-      <td id="T_dd6e3_row5_col3" class="data row5 col3" >4,00</td>
-      <td id="T_dd6e3_row5_col4" class="data row5 col4" >342</td>
-      <td id="T_dd6e3_row5_col5" class="data row5 col5" >G79</td>
-      <td id="T_dd6e3_row5_col6" class="data row5 col6" >3</td>
-      <td id="T_dd6e3_row5_col7" class="data row5 col7" >0,01</td>
+      <td id="T_c746c_row5_col0" class="data row5 col0" >Amphion</td>
+      <td id="T_c746c_row5_col1" class="data row5 col1" >01.02.2022</td>
+      <td id="T_c746c_row5_col2" class="data row5 col2" >2</td>
+      <td id="T_c746c_row5_col3" class="data row5 col3" >4,00</td>
+      <td id="T_c746c_row5_col4" class="data row5 col4" >342</td>
+      <td id="T_c746c_row5_col5" class="data row5 col5" >G79</td>
+      <td id="T_c746c_row5_col6" class="data row5 col6" >3</td>
+      <td id="T_c746c_row5_col7" class="data row5 col7" >0,01</td>
     </tr>
     <tr>
-      <td id="T_dd6e3_row6_col0" class="data row6 col0" >Clarens</td>
-      <td id="T_dd6e3_row6_col1" class="data row6 col1" >16.01.2022</td>
-      <td id="T_dd6e3_row6_col2" class="data row6 col2" >2</td>
-      <td id="T_dd6e3_row6_col3" class="data row6 col3" >2,00</td>
-      <td id="T_dd6e3_row6_col4" class="data row6 col4" >273</td>
-      <td id="T_dd6e3_row6_col5" class="data row6 col5" >G78</td>
-      <td id="T_dd6e3_row6_col6" class="data row6 col6" >5</td>
-      <td id="T_dd6e3_row6_col7" class="data row6 col7" >0,02</td>
+      <td id="T_c746c_row6_col0" class="data row6 col0" >Clarens</td>
+      <td id="T_c746c_row6_col1" class="data row6 col1" >16.01.2022</td>
+      <td id="T_c746c_row6_col2" class="data row6 col2" >2</td>
+      <td id="T_c746c_row6_col3" class="data row6 col3" >2,00</td>
+      <td id="T_c746c_row6_col4" class="data row6 col4" >273</td>
+      <td id="T_c746c_row6_col5" class="data row6 col5" >G78</td>
+      <td id="T_c746c_row6_col6" class="data row6 col6" >5</td>
+      <td id="T_c746c_row6_col7" class="data row6 col7" >0,02</td>
     </tr>
     <tr>
-      <td id="T_dd6e3_row7_col0" class="data row7 col0" >Clarens</td>
-      <td id="T_dd6e3_row7_col1" class="data row7 col1" >16.01.2022</td>
-      <td id="T_dd6e3_row7_col2" class="data row7 col2" >1</td>
-      <td id="T_dd6e3_row7_col3" class="data row7 col3" >4,00</td>
-      <td id="T_dd6e3_row7_col4" class="data row7 col4" >67</td>
-      <td id="T_dd6e3_row7_col5" class="data row7 col5" >G27</td>
-      <td id="T_dd6e3_row7_col6" class="data row7 col6" >3</td>
-      <td id="T_dd6e3_row7_col7" class="data row7 col7" >0,04</td>
+      <td id="T_c746c_row7_col0" class="data row7 col0" >Clarens</td>
+      <td id="T_c746c_row7_col1" class="data row7 col1" >16.01.2022</td>
+      <td id="T_c746c_row7_col2" class="data row7 col2" >1</td>
+      <td id="T_c746c_row7_col3" class="data row7 col3" >4,00</td>
+      <td id="T_c746c_row7_col4" class="data row7 col4" >67</td>
+      <td id="T_c746c_row7_col5" class="data row7 col5" >G27</td>
+      <td id="T_c746c_row7_col6" class="data row7 col6" >3</td>
+      <td id="T_c746c_row7_col7" class="data row7 col7" >0,04</td>
     </tr>
     <tr>
-      <td id="T_dd6e3_row8_col0" class="data row8 col0" >Clarens</td>
-      <td id="T_dd6e3_row8_col1" class="data row8 col1" >16.01.2022</td>
-      <td id="T_dd6e3_row8_col2" class="data row8 col2" >2</td>
-      <td id="T_dd6e3_row8_col3" class="data row8 col3" >2,00</td>
-      <td id="T_dd6e3_row8_col4" class="data row8 col4" >273</td>
-      <td id="T_dd6e3_row8_col5" class="data row8 col5" >G27</td>
-      <td id="T_dd6e3_row8_col6" class="data row8 col6" >8</td>
-      <td id="T_dd6e3_row8_col7" class="data row8 col7" >0,03</td>
+      <td id="T_c746c_row8_col0" class="data row8 col0" >Clarens</td>
+      <td id="T_c746c_row8_col1" class="data row8 col1" >16.01.2022</td>
+      <td id="T_c746c_row8_col2" class="data row8 col2" >2</td>
+      <td id="T_c746c_row8_col3" class="data row8 col3" >2,00</td>
+      <td id="T_c746c_row8_col4" class="data row8 col4" >273</td>
+      <td id="T_c746c_row8_col5" class="data row8 col5" >G27</td>
+      <td id="T_c746c_row8_col6" class="data row8 col6" >8</td>
+      <td id="T_c746c_row8_col7" class="data row8 col7" >0,03</td>
     </tr>
   </tbody>
 </table>
 </div><p>Pour combiner les données, nous devons additionner les surfaces pour chaque échantillon, appliquer la nouvelle surface à tous les comptages d’objets pour cet échantillon et ce jour, et supprimer la variable de position. Pour Amphion, la surface totale est de 342 + 98 = 440 m², pour Clarens 273 + 67 = 340 m².</p>
 <div class="output text_html"><style type="text/css">
-#T_97ddb tr:nth-child(even) {
+#T_485a9 tr:nth-child(even) {
   background-color: rgba(139, 69, 19, 0.08);
 }
-#T_97ddb tr:nth-child(odd) {
+#T_485a9 tr:nth-child(odd) {
   background: #FFF;
 }
-#T_97ddb tr {
+#T_485a9 tr {
   font-size: 14px;
   padding: 6px;
 }
-#T_97ddb th:nth-child(1) {
+#T_485a9 th:nth-child(1) {
   background-color: #FFF;
   white-space: nowrap;
   word-break: keep-all;
 }
-#T_97ddb td {
+#T_485a9 td {
   padding: 4px;
   text-align: center;
 }
-#T_97ddb caption {
+#T_485a9 caption {
   caption-side: bottom;
   font-size: 14px;
   text-align: left;
   margin-top: 14px;
 }
 </style>
-<table id="T_97ddb">
+<table id="T_485a9">
   <caption><b>Table A5-2 :</b> La variable position est supprimée et les surfaces sont combinées pour chaque position de chaque échantillon. Cependant, le substrat à Clarens n'est pas corrigé.</caption>
   <thead>
     <tr>
-      <th id="T_97ddb_level0_col0" class="col_heading level0 col0" >échantillon</th>
-      <th id="T_97ddb_level0_col1" class="col_heading level0 col1" >Plage</th>
-      <th id="T_97ddb_level0_col2" class="col_heading level0 col2" >Substrat</th>
-      <th id="T_97ddb_level0_col3" class="col_heading level0 col3" >Aire</th>
-      <th id="T_97ddb_level0_col4" class="col_heading level0 col4" >Code</th>
-      <th id="T_97ddb_level0_col5" class="col_heading level0 col5" >Quantité</th>
+      <th id="T_485a9_level0_col0" class="col_heading level0 col0" >échantillon</th>
+      <th id="T_485a9_level0_col1" class="col_heading level0 col1" >Plage</th>
+      <th id="T_485a9_level0_col2" class="col_heading level0 col2" >Substrat</th>
+      <th id="T_485a9_level0_col3" class="col_heading level0 col3" >Aire</th>
+      <th id="T_485a9_level0_col4" class="col_heading level0 col4" >Code</th>
+      <th id="T_485a9_level0_col5" class="col_heading level0 col5" >Quantité</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td id="T_97ddb_row0_col0" class="data row0 col0" >('amphion', '01.02.2022')</td>
-      <td id="T_97ddb_row0_col1" class="data row0 col1" >Amphion</td>
-      <td id="T_97ddb_row0_col2" class="data row0 col2" >4</td>
-      <td id="T_97ddb_row0_col3" class="data row0 col3" >440</td>
-      <td id="T_97ddb_row0_col4" class="data row0 col4" >G79</td>
-      <td id="T_97ddb_row0_col5" class="data row0 col5" >3</td>
+      <td id="T_485a9_row0_col0" class="data row0 col0" >('amphion', '01.02.2022')</td>
+      <td id="T_485a9_row0_col1" class="data row0 col1" >Amphion</td>
+      <td id="T_485a9_row0_col2" class="data row0 col2" >4</td>
+      <td id="T_485a9_row0_col3" class="data row0 col3" >440</td>
+      <td id="T_485a9_row0_col4" class="data row0 col4" >G79</td>
+      <td id="T_485a9_row0_col5" class="data row0 col5" >3</td>
     </tr>
     <tr>
-      <td id="T_97ddb_row1_col0" class="data row1 col0" >('amphion', '01.02.2022')</td>
-      <td id="T_97ddb_row1_col1" class="data row1 col1" >Amphion</td>
-      <td id="T_97ddb_row1_col2" class="data row1 col2" >4</td>
-      <td id="T_97ddb_row1_col3" class="data row1 col3" >440</td>
-      <td id="T_97ddb_row1_col4" class="data row1 col4" >G27</td>
-      <td id="T_97ddb_row1_col5" class="data row1 col5" >4</td>
+      <td id="T_485a9_row1_col0" class="data row1 col0" >('amphion', '01.02.2022')</td>
+      <td id="T_485a9_row1_col1" class="data row1 col1" >Amphion</td>
+      <td id="T_485a9_row1_col2" class="data row1 col2" >4</td>
+      <td id="T_485a9_row1_col3" class="data row1 col3" >440</td>
+      <td id="T_485a9_row1_col4" class="data row1 col4" >G27</td>
+      <td id="T_485a9_row1_col5" class="data row1 col5" >4</td>
     </tr>
     <tr>
-      <td id="T_97ddb_row2_col0" class="data row2 col0" >('amphion', '01.02.2022')</td>
-      <td id="T_97ddb_row2_col1" class="data row2 col1" >Amphion</td>
-      <td id="T_97ddb_row2_col2" class="data row2 col2" >4</td>
-      <td id="T_97ddb_row2_col3" class="data row2 col3" >440</td>
-      <td id="T_97ddb_row2_col4" class="data row2 col4" >G78</td>
-      <td id="T_97ddb_row2_col5" class="data row2 col5" >8</td>
+      <td id="T_485a9_row2_col0" class="data row2 col0" >('amphion', '01.02.2022')</td>
+      <td id="T_485a9_row2_col1" class="data row2 col1" >Amphion</td>
+      <td id="T_485a9_row2_col2" class="data row2 col2" >4</td>
+      <td id="T_485a9_row2_col3" class="data row2 col3" >440</td>
+      <td id="T_485a9_row2_col4" class="data row2 col4" >G78</td>
+      <td id="T_485a9_row2_col5" class="data row2 col5" >8</td>
     </tr>
     <tr>
-      <td id="T_97ddb_row3_col0" class="data row3 col0" >('amphion', '01.02.2022')</td>
-      <td id="T_97ddb_row3_col1" class="data row3 col1" >Amphion</td>
-      <td id="T_97ddb_row3_col2" class="data row3 col2" >4</td>
-      <td id="T_97ddb_row3_col3" class="data row3 col3" >440</td>
-      <td id="T_97ddb_row3_col4" class="data row3 col4" >G79</td>
-      <td id="T_97ddb_row3_col5" class="data row3 col5" >12</td>
+      <td id="T_485a9_row3_col0" class="data row3 col0" >('amphion', '01.02.2022')</td>
+      <td id="T_485a9_row3_col1" class="data row3 col1" >Amphion</td>
+      <td id="T_485a9_row3_col2" class="data row3 col2" >4</td>
+      <td id="T_485a9_row3_col3" class="data row3 col3" >440</td>
+      <td id="T_485a9_row3_col4" class="data row3 col4" >G79</td>
+      <td id="T_485a9_row3_col5" class="data row3 col5" >12</td>
     </tr>
     <tr>
-      <td id="T_97ddb_row4_col0" class="data row4 col0" >('amphion', '01.02.2022')</td>
-      <td id="T_97ddb_row4_col1" class="data row4 col1" >Amphion</td>
-      <td id="T_97ddb_row4_col2" class="data row4 col2" >4</td>
-      <td id="T_97ddb_row4_col3" class="data row4 col3" >440</td>
-      <td id="T_97ddb_row4_col4" class="data row4 col4" >G78</td>
-      <td id="T_97ddb_row4_col5" class="data row4 col5" >86</td>
+      <td id="T_485a9_row4_col0" class="data row4 col0" >('amphion', '01.02.2022')</td>
+      <td id="T_485a9_row4_col1" class="data row4 col1" >Amphion</td>
+      <td id="T_485a9_row4_col2" class="data row4 col2" >4</td>
+      <td id="T_485a9_row4_col3" class="data row4 col3" >440</td>
+      <td id="T_485a9_row4_col4" class="data row4 col4" >G78</td>
+      <td id="T_485a9_row4_col5" class="data row4 col5" >86</td>
     </tr>
     <tr>
-      <td id="T_97ddb_row5_col0" class="data row5 col0" >('amphion', '01.02.2022')</td>
-      <td id="T_97ddb_row5_col1" class="data row5 col1" >Amphion</td>
-      <td id="T_97ddb_row5_col2" class="data row5 col2" >4</td>
-      <td id="T_97ddb_row5_col3" class="data row5 col3" >440</td>
-      <td id="T_97ddb_row5_col4" class="data row5 col4" >G79</td>
-      <td id="T_97ddb_row5_col5" class="data row5 col5" >225</td>
+      <td id="T_485a9_row5_col0" class="data row5 col0" >('amphion', '01.02.2022')</td>
+      <td id="T_485a9_row5_col1" class="data row5 col1" >Amphion</td>
+      <td id="T_485a9_row5_col2" class="data row5 col2" >4</td>
+      <td id="T_485a9_row5_col3" class="data row5 col3" >440</td>
+      <td id="T_485a9_row5_col4" class="data row5 col4" >G79</td>
+      <td id="T_485a9_row5_col5" class="data row5 col5" >225</td>
     </tr>
     <tr>
-      <td id="T_97ddb_row6_col0" class="data row6 col0" >('clarens', '16.01.2022')</td>
-      <td id="T_97ddb_row6_col1" class="data row6 col1" >Clarens</td>
-      <td id="T_97ddb_row6_col2" class="data row6 col2" >2</td>
-      <td id="T_97ddb_row6_col3" class="data row6 col3" >340</td>
-      <td id="T_97ddb_row6_col4" class="data row6 col4" >G78</td>
-      <td id="T_97ddb_row6_col5" class="data row6 col5" >5</td>
+      <td id="T_485a9_row6_col0" class="data row6 col0" >('clarens', '16.01.2022')</td>
+      <td id="T_485a9_row6_col1" class="data row6 col1" >Clarens</td>
+      <td id="T_485a9_row6_col2" class="data row6 col2" >2</td>
+      <td id="T_485a9_row6_col3" class="data row6 col3" >340</td>
+      <td id="T_485a9_row6_col4" class="data row6 col4" >G78</td>
+      <td id="T_485a9_row6_col5" class="data row6 col5" >5</td>
     </tr>
     <tr>
-      <td id="T_97ddb_row7_col0" class="data row7 col0" >('clarens', '16.01.2022')</td>
-      <td id="T_97ddb_row7_col1" class="data row7 col1" >Clarens</td>
-      <td id="T_97ddb_row7_col2" class="data row7 col2" >2</td>
-      <td id="T_97ddb_row7_col3" class="data row7 col3" >340</td>
-      <td id="T_97ddb_row7_col4" class="data row7 col4" >G27</td>
-      <td id="T_97ddb_row7_col5" class="data row7 col5" >8</td>
+      <td id="T_485a9_row7_col0" class="data row7 col0" >('clarens', '16.01.2022')</td>
+      <td id="T_485a9_row7_col1" class="data row7 col1" >Clarens</td>
+      <td id="T_485a9_row7_col2" class="data row7 col2" >2</td>
+      <td id="T_485a9_row7_col3" class="data row7 col3" >340</td>
+      <td id="T_485a9_row7_col4" class="data row7 col4" >G27</td>
+      <td id="T_485a9_row7_col5" class="data row7 col5" >8</td>
     </tr>
     <tr>
-      <td id="T_97ddb_row8_col0" class="data row8 col0" >('clarens', '16.01.2022')</td>
-      <td id="T_97ddb_row8_col1" class="data row8 col1" >Clarens</td>
-      <td id="T_97ddb_row8_col2" class="data row8 col2" >4</td>
-      <td id="T_97ddb_row8_col3" class="data row8 col3" >340</td>
-      <td id="T_97ddb_row8_col4" class="data row8 col4" >G27</td>
-      <td id="T_97ddb_row8_col5" class="data row8 col5" >3</td>
+      <td id="T_485a9_row8_col0" class="data row8 col0" >('clarens', '16.01.2022')</td>
+      <td id="T_485a9_row8_col1" class="data row8 col1" >Clarens</td>
+      <td id="T_485a9_row8_col2" class="data row8 col2" >4</td>
+      <td id="T_485a9_row8_col3" class="data row8 col3" >340</td>
+      <td id="T_485a9_row8_col4" class="data row8 col4" >G27</td>
+      <td id="T_485a9_row8_col5" class="data row8 col5" >3</td>
     </tr>
   </tbody>
 </table>
 </div><p>Après avoir combiné tous les totaux de codes pour chaque échantillon et remplacé le substrat 4 par le substrat 2 dans toutes les localités qui ont des valeurs de substrat distinctes pour la position, nous nous retrouvons encore avec des codes en double sur un échantillon.</p>
 <div class="output text_html"><style type="text/css">
-#T_6c011 tr:nth-child(even) {
+#T_434a6 tr:nth-child(even) {
   background-color: rgba(139, 69, 19, 0.08);
 }
-#T_6c011 tr:nth-child(odd) {
+#T_434a6 tr:nth-child(odd) {
   background: #FFF;
 }
-#T_6c011 tr {
+#T_434a6 tr {
   font-size: 14px;
   padding: 6px;
 }
-#T_6c011 th:nth-child(1) {
+#T_434a6 th:nth-child(1) {
   background-color: #FFF;
   white-space: nowrap;
   word-break: keep-all;
 }
-#T_6c011 td {
+#T_434a6 td {
   padding: 4px;
   text-align: center;
 }
-#T_6c011 caption {
+#T_434a6 caption {
   caption-side: bottom;
   font-size: 14px;
   text-align: left;
   margin-top: 14px;
 }
 </style>
-<table id="T_6c011">
+<table id="T_434a6">
   <caption><b>Table A5-3 :</b> Après avoir combiné les codes et supprimé la variable de la position, il reste des codes en double pour l'échantillon de Clarens.</caption>
   <thead>
     <tr>
-      <th id="T_6c011_level0_col0" class="col_heading level0 col0" >échantillon</th>
-      <th id="T_6c011_level0_col1" class="col_heading level0 col1" >Plage</th>
-      <th id="T_6c011_level0_col2" class="col_heading level0 col2" >Substrat</th>
-      <th id="T_6c011_level0_col3" class="col_heading level0 col3" >Aire</th>
-      <th id="T_6c011_level0_col4" class="col_heading level0 col4" >Code</th>
-      <th id="T_6c011_level0_col5" class="col_heading level0 col5" >Quantité</th>
-      <th id="T_6c011_level0_col6" class="col_heading level0 col6" >pcs/m²</th>
+      <th id="T_434a6_level0_col0" class="col_heading level0 col0" >échantillon</th>
+      <th id="T_434a6_level0_col1" class="col_heading level0 col1" >Plage</th>
+      <th id="T_434a6_level0_col2" class="col_heading level0 col2" >Substrat</th>
+      <th id="T_434a6_level0_col3" class="col_heading level0 col3" >Aire</th>
+      <th id="T_434a6_level0_col4" class="col_heading level0 col4" >Code</th>
+      <th id="T_434a6_level0_col5" class="col_heading level0 col5" >Quantité</th>
+      <th id="T_434a6_level0_col6" class="col_heading level0 col6" >pcs/m²</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td id="T_6c011_row0_col0" class="data row0 col0" >('clarens', '16.01.2022')</td>
-      <td id="T_6c011_row0_col1" class="data row0 col1" >Clarens</td>
-      <td id="T_6c011_row0_col2" class="data row0 col2" >2</td>
-      <td id="T_6c011_row0_col3" class="data row0 col3" >340</td>
-      <td id="T_6c011_row0_col4" class="data row0 col4" >G78</td>
-      <td id="T_6c011_row0_col5" class="data row0 col5" >5</td>
-      <td id="T_6c011_row0_col6" class="data row0 col6" >0,01</td>
+      <td id="T_434a6_row0_col0" class="data row0 col0" >('clarens', '16.01.2022')</td>
+      <td id="T_434a6_row0_col1" class="data row0 col1" >Clarens</td>
+      <td id="T_434a6_row0_col2" class="data row0 col2" >2</td>
+      <td id="T_434a6_row0_col3" class="data row0 col3" >340</td>
+      <td id="T_434a6_row0_col4" class="data row0 col4" >G78</td>
+      <td id="T_434a6_row0_col5" class="data row0 col5" >5</td>
+      <td id="T_434a6_row0_col6" class="data row0 col6" >0,01</td>
     </tr>
     <tr>
-      <td id="T_6c011_row1_col0" class="data row1 col0" >('clarens', '16.01.2022')</td>
-      <td id="T_6c011_row1_col1" class="data row1 col1" >Clarens</td>
-      <td id="T_6c011_row1_col2" class="data row1 col2" >2</td>
-      <td id="T_6c011_row1_col3" class="data row1 col3" >340</td>
-      <td id="T_6c011_row1_col4" class="data row1 col4" >G27</td>
-      <td id="T_6c011_row1_col5" class="data row1 col5" >8</td>
-      <td id="T_6c011_row1_col6" class="data row1 col6" >0,02</td>
+      <td id="T_434a6_row1_col0" class="data row1 col0" >('clarens', '16.01.2022')</td>
+      <td id="T_434a6_row1_col1" class="data row1 col1" >Clarens</td>
+      <td id="T_434a6_row1_col2" class="data row1 col2" >2</td>
+      <td id="T_434a6_row1_col3" class="data row1 col3" >340</td>
+      <td id="T_434a6_row1_col4" class="data row1 col4" >G27</td>
+      <td id="T_434a6_row1_col5" class="data row1 col5" >8</td>
+      <td id="T_434a6_row1_col6" class="data row1 col6" >0,02</td>
     </tr>
     <tr>
-      <td id="T_6c011_row2_col0" class="data row2 col0" >('clarens', '16.01.2022')</td>
-      <td id="T_6c011_row2_col1" class="data row2 col1" >Clarens</td>
-      <td id="T_6c011_row2_col2" class="data row2 col2" >2</td>
-      <td id="T_6c011_row2_col3" class="data row2 col3" >340</td>
-      <td id="T_6c011_row2_col4" class="data row2 col4" >G27</td>
-      <td id="T_6c011_row2_col5" class="data row2 col5" >3</td>
-      <td id="T_6c011_row2_col6" class="data row2 col6" >0,01</td>
+      <td id="T_434a6_row2_col0" class="data row2 col0" >('clarens', '16.01.2022')</td>
+      <td id="T_434a6_row2_col1" class="data row2 col1" >Clarens</td>
+      <td id="T_434a6_row2_col2" class="data row2 col2" >2</td>
+      <td id="T_434a6_row2_col3" class="data row2 col3" >340</td>
+      <td id="T_434a6_row2_col4" class="data row2 col4" >G27</td>
+      <td id="T_434a6_row2_col5" class="data row2 col5" >3</td>
+      <td id="T_434a6_row2_col6" class="data row2 col6" >0,01</td>
     </tr>
     <tr>
-      <td id="T_6c011_row3_col0" class="data row3 col0" >('amphion', '01.02.2022')</td>
-      <td id="T_6c011_row3_col1" class="data row3 col1" >Amphion</td>
-      <td id="T_6c011_row3_col2" class="data row3 col2" >4</td>
-      <td id="T_6c011_row3_col3" class="data row3 col3" >440</td>
-      <td id="T_6c011_row3_col4" class="data row3 col4" >G27</td>
-      <td id="T_6c011_row3_col5" class="data row3 col5" >4</td>
-      <td id="T_6c011_row3_col6" class="data row3 col6" >0,01</td>
+      <td id="T_434a6_row3_col0" class="data row3 col0" >('amphion', '01.02.2022')</td>
+      <td id="T_434a6_row3_col1" class="data row3 col1" >Amphion</td>
+      <td id="T_434a6_row3_col2" class="data row3 col2" >4</td>
+      <td id="T_434a6_row3_col3" class="data row3 col3" >440</td>
+      <td id="T_434a6_row3_col4" class="data row3 col4" >G27</td>
+      <td id="T_434a6_row3_col5" class="data row3 col5" >4</td>
+      <td id="T_434a6_row3_col6" class="data row3 col6" >0,01</td>
     </tr>
     <tr>
-      <td id="T_6c011_row4_col0" class="data row4 col0" >('amphion', '01.02.2022')</td>
-      <td id="T_6c011_row4_col1" class="data row4 col1" >Amphion</td>
-      <td id="T_6c011_row4_col2" class="data row4 col2" >4</td>
-      <td id="T_6c011_row4_col3" class="data row4 col3" >440</td>
-      <td id="T_6c011_row4_col4" class="data row4 col4" >G78</td>
-      <td id="T_6c011_row4_col5" class="data row4 col5" >94</td>
-      <td id="T_6c011_row4_col6" class="data row4 col6" >0,21</td>
+      <td id="T_434a6_row4_col0" class="data row4 col0" >('amphion', '01.02.2022')</td>
+      <td id="T_434a6_row4_col1" class="data row4 col1" >Amphion</td>
+      <td id="T_434a6_row4_col2" class="data row4 col2" >4</td>
+      <td id="T_434a6_row4_col3" class="data row4 col3" >440</td>
+      <td id="T_434a6_row4_col4" class="data row4 col4" >G78</td>
+      <td id="T_434a6_row4_col5" class="data row4 col5" >94</td>
+      <td id="T_434a6_row4_col6" class="data row4 col6" >0,21</td>
     </tr>
     <tr>
-      <td id="T_6c011_row5_col0" class="data row5 col0" >('amphion', '01.02.2022')</td>
-      <td id="T_6c011_row5_col1" class="data row5 col1" >Amphion</td>
-      <td id="T_6c011_row5_col2" class="data row5 col2" >4</td>
-      <td id="T_6c011_row5_col3" class="data row5 col3" >440</td>
-      <td id="T_6c011_row5_col4" class="data row5 col4" >G79</td>
-      <td id="T_6c011_row5_col5" class="data row5 col5" >240</td>
-      <td id="T_6c011_row5_col6" class="data row5 col6" >0,55</td>
+      <td id="T_434a6_row5_col0" class="data row5 col0" >('amphion', '01.02.2022')</td>
+      <td id="T_434a6_row5_col1" class="data row5 col1" >Amphion</td>
+      <td id="T_434a6_row5_col2" class="data row5 col2" >4</td>
+      <td id="T_434a6_row5_col3" class="data row5 col3" >440</td>
+      <td id="T_434a6_row5_col4" class="data row5 col4" >G79</td>
+      <td id="T_434a6_row5_col5" class="data row5 col5" >240</td>
+      <td id="T_434a6_row5_col6" class="data row5 col6" >0,55</td>
     </tr>
   </tbody>
 </table>
 </div><p>Dans la dernière étape, les codes qui doivent être combinés (G78 et G79) sont placés sous un seul code et les données sont agrégées à l’identifiant de l’échantillon (date et lieu de l’échantillon).</p>
 <div class="output text_html"><style type="text/css">
-#T_e7494 tr:nth-child(even) {
+#T_ed226 tr:nth-child(even) {
   background-color: rgba(139, 69, 19, 0.08);
 }
-#T_e7494 tr:nth-child(odd) {
+#T_ed226 tr:nth-child(odd) {
   background: #FFF;
 }
-#T_e7494 tr {
+#T_ed226 tr {
   font-size: 14px;
   padding: 6px;
 }
-#T_e7494 th:nth-child(1) {
+#T_ed226 th:nth-child(1) {
   background-color: #FFF;
   white-space: nowrap;
   word-break: keep-all;
 }
-#T_e7494 td {
+#T_ed226 td {
   padding: 4px;
   text-align: center;
 }
-#T_e7494 caption {
+#T_ed226 caption {
   caption-side: bottom;
   font-size: 14px;
   text-align: left;
   margin-top: 14px;
 }
 </style>
-<table id="T_e7494">
+<table id="T_ed226">
   <caption><b>Table A5-4 :</b> The density of sample if the areas are combined. The result for each sample is the sum of the different results for the different positions and substrates for each sample.</caption>
   <thead>
     <tr>
-      <th id="T_e7494_level0_col0" class="col_heading level0 col0" >échantillon</th>
-      <th id="T_e7494_level0_col1" class="col_heading level0 col1" >Plage</th>
-      <th id="T_e7494_level0_col2" class="col_heading level0 col2" >Substrat</th>
-      <th id="T_e7494_level0_col3" class="col_heading level0 col3" >Aire</th>
-      <th id="T_e7494_level0_col4" class="col_heading level0 col4" >Code</th>
-      <th id="T_e7494_level0_col5" class="col_heading level0 col5" >Quantité</th>
-      <th id="T_e7494_level0_col6" class="col_heading level0 col6" >pcs/m²</th>
+      <th id="T_ed226_level0_col0" class="col_heading level0 col0" >échantillon</th>
+      <th id="T_ed226_level0_col1" class="col_heading level0 col1" >Plage</th>
+      <th id="T_ed226_level0_col2" class="col_heading level0 col2" >Substrat</th>
+      <th id="T_ed226_level0_col3" class="col_heading level0 col3" >Aire</th>
+      <th id="T_ed226_level0_col4" class="col_heading level0 col4" >Code</th>
+      <th id="T_ed226_level0_col5" class="col_heading level0 col5" >Quantité</th>
+      <th id="T_ed226_level0_col6" class="col_heading level0 col6" >pcs/m²</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td id="T_e7494_row0_col0" class="data row0 col0" >('amphion', '01.02.2022')</td>
-      <td id="T_e7494_row0_col1" class="data row0 col1" >Amphion</td>
-      <td id="T_e7494_row0_col2" class="data row0 col2" >4</td>
-      <td id="T_e7494_row0_col3" class="data row0 col3" >440</td>
-      <td id="T_e7494_row0_col4" class="data row0 col4" >G27</td>
-      <td id="T_e7494_row0_col5" class="data row0 col5" >4</td>
-      <td id="T_e7494_row0_col6" class="data row0 col6" >0,01</td>
+      <td id="T_ed226_row0_col0" class="data row0 col0" >('amphion', '01.02.2022')</td>
+      <td id="T_ed226_row0_col1" class="data row0 col1" >Amphion</td>
+      <td id="T_ed226_row0_col2" class="data row0 col2" >4</td>
+      <td id="T_ed226_row0_col3" class="data row0 col3" >440</td>
+      <td id="T_ed226_row0_col4" class="data row0 col4" >G27</td>
+      <td id="T_ed226_row0_col5" class="data row0 col5" >4</td>
+      <td id="T_ed226_row0_col6" class="data row0 col6" >0,01</td>
     </tr>
     <tr>
-      <td id="T_e7494_row1_col0" class="data row1 col0" >('amphion', '01.02.2022')</td>
-      <td id="T_e7494_row1_col1" class="data row1 col1" >Amphion</td>
-      <td id="T_e7494_row1_col2" class="data row1 col2" >4</td>
-      <td id="T_e7494_row1_col3" class="data row1 col3" >440</td>
-      <td id="T_e7494_row1_col4" class="data row1 col4" >Gfrags</td>
-      <td id="T_e7494_row1_col5" class="data row1 col5" >334</td>
-      <td id="T_e7494_row1_col6" class="data row1 col6" >0,76</td>
+      <td id="T_ed226_row1_col0" class="data row1 col0" >('amphion', '01.02.2022')</td>
+      <td id="T_ed226_row1_col1" class="data row1 col1" >Amphion</td>
+      <td id="T_ed226_row1_col2" class="data row1 col2" >4</td>
+      <td id="T_ed226_row1_col3" class="data row1 col3" >440</td>
+      <td id="T_ed226_row1_col4" class="data row1 col4" >Gfrags</td>
+      <td id="T_ed226_row1_col5" class="data row1 col5" >334</td>
+      <td id="T_ed226_row1_col6" class="data row1 col6" >0,76</td>
     </tr>
     <tr>
-      <td id="T_e7494_row2_col0" class="data row2 col0" >('clarens', '16.01.2022')</td>
-      <td id="T_e7494_row2_col1" class="data row2 col1" >Clarens</td>
-      <td id="T_e7494_row2_col2" class="data row2 col2" >2</td>
-      <td id="T_e7494_row2_col3" class="data row2 col3" >340</td>
-      <td id="T_e7494_row2_col4" class="data row2 col4" >G27</td>
-      <td id="T_e7494_row2_col5" class="data row2 col5" >11</td>
-      <td id="T_e7494_row2_col6" class="data row2 col6" >0,03</td>
+      <td id="T_ed226_row2_col0" class="data row2 col0" >('clarens', '16.01.2022')</td>
+      <td id="T_ed226_row2_col1" class="data row2 col1" >Clarens</td>
+      <td id="T_ed226_row2_col2" class="data row2 col2" >2</td>
+      <td id="T_ed226_row2_col3" class="data row2 col3" >340</td>
+      <td id="T_ed226_row2_col4" class="data row2 col4" >G27</td>
+      <td id="T_ed226_row2_col5" class="data row2 col5" >11</td>
+      <td id="T_ed226_row2_col6" class="data row2 col6" >0,03</td>
     </tr>
     <tr>
-      <td id="T_e7494_row3_col0" class="data row3 col0" >('clarens', '16.01.2022')</td>
-      <td id="T_e7494_row3_col1" class="data row3 col1" >Clarens</td>
-      <td id="T_e7494_row3_col2" class="data row3 col2" >2</td>
-      <td id="T_e7494_row3_col3" class="data row3 col3" >340</td>
-      <td id="T_e7494_row3_col4" class="data row3 col4" >Gfrags</td>
-      <td id="T_e7494_row3_col5" class="data row3 col5" >5</td>
-      <td id="T_e7494_row3_col6" class="data row3 col6" >0,01</td>
+      <td id="T_ed226_row3_col0" class="data row3 col0" >('clarens', '16.01.2022')</td>
+      <td id="T_ed226_row3_col1" class="data row3 col1" >Clarens</td>
+      <td id="T_ed226_row3_col2" class="data row3 col2" >2</td>
+      <td id="T_ed226_row3_col3" class="data row3 col3" >340</td>
+      <td id="T_ed226_row3_col4" class="data row3 col4" >Gfrags</td>
+      <td id="T_ed226_row3_col5" class="data row3 col5" >5</td>
+      <td id="T_ed226_row3_col6" class="data row3 col6" >0,01</td>
     </tr>
   </tbody>
 </table>
@@ -852,66 +852,66 @@ document.write(`
 <h4>La différence<a class="headerlink" href="#la-difference" title="Permalink to this heading">#</a></h4>
 <p>Si les surfaces des positions ne sont pas combinées, les valeurs attendues sont beaucoup plus faibles. En effet, nous sommes obligés de prendre la moyenne de la densité des deux positions et des substrats pour chaque échantillon.</p>
 <div class="output text_html"><style type="text/css">
-#T_bdddc tr:nth-child(even) {
+#T_9913a tr:nth-child(even) {
   background-color: rgba(139, 69, 19, 0.08);
 }
-#T_bdddc tr:nth-child(odd) {
+#T_9913a tr:nth-child(odd) {
   background: #FFF;
 }
-#T_bdddc tr {
+#T_9913a tr {
   font-size: 14px;
   padding: 6px;
 }
-#T_bdddc th:nth-child(1) {
+#T_9913a th:nth-child(1) {
   background-color: #FFF;
   white-space: nowrap;
   word-break: keep-all;
 }
-#T_bdddc td {
+#T_9913a td {
   padding: 4px;
   text-align: center;
 }
-#T_bdddc caption {
+#T_9913a caption {
   caption-side: bottom;
   font-size: 14px;
   text-align: left;
   margin-top: 14px;
 }
 </style>
-<table id="T_bdddc">
+<table id="T_9913a">
   <caption><b>Table A5-5 :</b> La densité de l'échantillon si les zones et les substrats ne sont pas combinés pour chaque échantillon.</caption>
   <thead>
     <tr>
-      <th id="T_bdddc_level0_col0" class="col_heading level0 col0" >Plage</th>
-      <th id="T_bdddc_level0_col1" class="col_heading level0 col1" >Date</th>
-      <th id="T_bdddc_level0_col2" class="col_heading level0 col2" >Code</th>
-      <th id="T_bdddc_level0_col3" class="col_heading level0 col3" >pcs/m²</th>
+      <th id="T_9913a_level0_col0" class="col_heading level0 col0" >Plage</th>
+      <th id="T_9913a_level0_col1" class="col_heading level0 col1" >Date</th>
+      <th id="T_9913a_level0_col2" class="col_heading level0 col2" >Code</th>
+      <th id="T_9913a_level0_col3" class="col_heading level0 col3" >pcs/m²</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td id="T_bdddc_row0_col0" class="data row0 col0" >Amphion</td>
-      <td id="T_bdddc_row0_col1" class="data row0 col1" >01.02.2022</td>
-      <td id="T_bdddc_row0_col2" class="data row0 col2" >G27</td>
-      <td id="T_bdddc_row0_col3" class="data row0 col3" >0,01</td>
+      <td id="T_9913a_row0_col0" class="data row0 col0" >Amphion</td>
+      <td id="T_9913a_row0_col1" class="data row0 col1" >01.02.2022</td>
+      <td id="T_9913a_row0_col2" class="data row0 col2" >G27</td>
+      <td id="T_9913a_row0_col3" class="data row0 col3" >0,01</td>
     </tr>
     <tr>
-      <td id="T_bdddc_row1_col0" class="data row1 col0" >Amphion</td>
-      <td id="T_bdddc_row1_col1" class="data row1 col1" >01.02.2022</td>
-      <td id="T_bdddc_row1_col2" class="data row1 col2" >Gfrags</td>
-      <td id="T_bdddc_row1_col3" class="data row1 col3" >0,56</td>
+      <td id="T_9913a_row1_col0" class="data row1 col0" >Amphion</td>
+      <td id="T_9913a_row1_col1" class="data row1 col1" >01.02.2022</td>
+      <td id="T_9913a_row1_col2" class="data row1 col2" >Gfrags</td>
+      <td id="T_9913a_row1_col3" class="data row1 col3" >0,56</td>
     </tr>
     <tr>
-      <td id="T_bdddc_row2_col0" class="data row2 col0" >Clarens</td>
-      <td id="T_bdddc_row2_col1" class="data row2 col1" >16.01.2022</td>
-      <td id="T_bdddc_row2_col2" class="data row2 col2" >G27</td>
-      <td id="T_bdddc_row2_col3" class="data row2 col3" >0,04</td>
+      <td id="T_9913a_row2_col0" class="data row2 col0" >Clarens</td>
+      <td id="T_9913a_row2_col1" class="data row2 col1" >16.01.2022</td>
+      <td id="T_9913a_row2_col2" class="data row2 col2" >G27</td>
+      <td id="T_9913a_row2_col3" class="data row2 col3" >0,04</td>
     </tr>
     <tr>
-      <td id="T_bdddc_row3_col0" class="data row3 col0" >Clarens</td>
-      <td id="T_bdddc_row3_col1" class="data row3 col1" >16.01.2022</td>
-      <td id="T_bdddc_row3_col2" class="data row3 col2" >Gfrags</td>
-      <td id="T_bdddc_row3_col3" class="data row3 col3" >0,02</td>
+      <td id="T_9913a_row3_col0" class="data row3 col0" >Clarens</td>
+      <td id="T_9913a_row3_col1" class="data row3 col1" >16.01.2022</td>
+      <td id="T_9913a_row3_col2" class="data row3 col2" >Gfrags</td>
+      <td id="T_9913a_row3_col3" class="data row3 col3" >0,02</td>
     </tr>
   </tbody>
 </table>
@@ -971,57 +971,57 @@ document.write(`
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
-#T_a3112 tr:nth-child(even) {
+#T_0c1ff tr:nth-child(even) {
   background-color: rgba(139, 69, 19, 0.08);
 }
-#T_a3112 tr:nth-child(odd) {
+#T_0c1ff tr:nth-child(odd) {
   background: #FFF;
 }
-#T_a3112 tr {
+#T_0c1ff tr {
   font-size: 10px;
 }
-#T_a3112 th {
+#T_0c1ff th {
   background-color: #FFF;
   font-size: 12px;
   text-align: left;
   width: auto;
   word-break: keep-all;
 }
-#T_a3112 td {
+#T_0c1ff td {
   padding: 4px;
   font-size: 12px;
   text-align: center;
 }
-#T_a3112 caption {
+#T_0c1ff caption {
   caption-side: bottom;
   font-size: 1em;
   text-align: left;
 }
 </style>
-<table id="T_a3112">
+<table id="T_0c1ff">
   <caption><b>Table A5-6 :</b> Haut lac, la distribution attendue des résultats des échantillons pour 2024.</caption>
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_a3112_level0_col0" class="col_heading level0 col0" >moyenne</th>
-      <th id="T_a3112_level0_col1" class="col_heading level0 col1" >écart-type</th>
-      <th id="T_a3112_level0_col2" class="col_heading level0 col2" >min</th>
-      <th id="T_a3112_level0_col3" class="col_heading level0 col3" >25%</th>
-      <th id="T_a3112_level0_col4" class="col_heading level0 col4" >50%</th>
-      <th id="T_a3112_level0_col5" class="col_heading level0 col5" >75%</th>
-      <th id="T_a3112_level0_col6" class="col_heading level0 col6" >max</th>
+      <th id="T_0c1ff_level0_col0" class="col_heading level0 col0" >moyenne</th>
+      <th id="T_0c1ff_level0_col1" class="col_heading level0 col1" >écart-type</th>
+      <th id="T_0c1ff_level0_col2" class="col_heading level0 col2" >min</th>
+      <th id="T_0c1ff_level0_col3" class="col_heading level0 col3" >25%</th>
+      <th id="T_0c1ff_level0_col4" class="col_heading level0 col4" >50%</th>
+      <th id="T_0c1ff_level0_col5" class="col_heading level0 col5" >75%</th>
+      <th id="T_0c1ff_level0_col6" class="col_heading level0 col6" >max</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_a3112_level0_row0" class="row_heading level0 row0" >Haut lac</th>
-      <td id="T_a3112_row0_col0" class="data row0 col0" >3,42</td>
-      <td id="T_a3112_row0_col1" class="data row0 col1" >3,51</td>
-      <td id="T_a3112_row0_col2" class="data row0 col2" >0,00</td>
-      <td id="T_a3112_row0_col3" class="data row0 col3" >0,63</td>
-      <td id="T_a3112_row0_col4" class="data row0 col4" >2,25</td>
-      <td id="T_a3112_row0_col5" class="data row0 col5" >5,16</td>
-      <td id="T_a3112_row0_col6" class="data row0 col6" >16,69</td>
+      <th id="T_0c1ff_level0_row0" class="row_heading level0 row0" >Haut lac</th>
+      <td id="T_0c1ff_row0_col0" class="data row0 col0" >3,33</td>
+      <td id="T_0c1ff_row0_col1" class="data row0 col1" >3,25</td>
+      <td id="T_0c1ff_row0_col2" class="data row0 col2" >0,00</td>
+      <td id="T_0c1ff_row0_col3" class="data row0 col3" >0,88</td>
+      <td id="T_0c1ff_row0_col4" class="data row0 col4" >2,31</td>
+      <td id="T_0c1ff_row0_col5" class="data row0 col5" >4,86</td>
+      <td id="T_0c1ff_row0_col6" class="data row0 col6" >15,85</td>
     </tr>
   </tbody>
 </table>
@@ -1030,187 +1030,187 @@ document.write(`
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
-#T_36857 tr:nth-child(even) {
+#T_535b4 tr:nth-child(even) {
   background-color: rgba(139, 69, 19, 0.08);
 }
-#T_36857 tr:nth-child(odd) {
+#T_535b4 tr:nth-child(odd) {
   background: #FFF;
 }
-#T_36857 tr {
+#T_535b4 tr {
   font-size: 10px;
 }
-#T_36857 th {
+#T_535b4 th {
   background-color: #FFF;
   font-size: 12px;
   text-align: left;
   width: auto;
   word-break: keep-all;
 }
-#T_36857 td {
+#T_535b4 td {
   padding: 4px;
   font-size: 12px;
   text-align: center;
 }
-#T_36857 caption {
+#T_535b4 caption {
   caption-side: bottom;
   font-size: 1em;
   text-align: left;
 }
 </style>
-<table id="T_36857">
+<table id="T_535b4">
   <caption><b>Table A5-7 :</b> Haut lac, La distribution attendue des objets les plus courants 2024..</caption>
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_36857_level0_col0" class="col_heading level0 col0" >moyenne</th>
-      <th id="T_36857_level0_col1" class="col_heading level0 col1" >écart-type</th>
-      <th id="T_36857_level0_col2" class="col_heading level0 col2" >min</th>
-      <th id="T_36857_level0_col3" class="col_heading level0 col3" >25%</th>
-      <th id="T_36857_level0_col4" class="col_heading level0 col4" >50%</th>
-      <th id="T_36857_level0_col5" class="col_heading level0 col5" >75%</th>
-      <th id="T_36857_level0_col6" class="col_heading level0 col6" >max</th>
+      <th id="T_535b4_level0_col0" class="col_heading level0 col0" >moyenne</th>
+      <th id="T_535b4_level0_col1" class="col_heading level0 col1" >écart-type</th>
+      <th id="T_535b4_level0_col2" class="col_heading level0 col2" >min</th>
+      <th id="T_535b4_level0_col3" class="col_heading level0 col3" >25%</th>
+      <th id="T_535b4_level0_col4" class="col_heading level0 col4" >50%</th>
+      <th id="T_535b4_level0_col5" class="col_heading level0 col5" >75%</th>
+      <th id="T_535b4_level0_col6" class="col_heading level0 col6" >max</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_36857_level0_row0" class="row_heading level0 row0" >Fragments de plastique: g80, g79, g78, g77, g76, g75</th>
-      <td id="T_36857_row0_col0" class="data row0 col0" >1,33</td>
-      <td id="T_36857_row0_col1" class="data row0 col1" >1,56</td>
-      <td id="T_36857_row0_col2" class="data row0 col2" >0,00</td>
-      <td id="T_36857_row0_col3" class="data row0 col3" >0,18</td>
-      <td id="T_36857_row0_col4" class="data row0 col4" >0,80</td>
-      <td id="T_36857_row0_col5" class="data row0 col5" >1,77</td>
-      <td id="T_36857_row0_col6" class="data row0 col6" >7,83</td>
+      <th id="T_535b4_level0_row0" class="row_heading level0 row0" >Fragments de plastique: g80, g79, g78, g77, g76, g75</th>
+      <td id="T_535b4_row0_col0" class="data row0 col0" >1,21</td>
+      <td id="T_535b4_row0_col1" class="data row0 col1" >1,36</td>
+      <td id="T_535b4_row0_col2" class="data row0 col2" >0,00</td>
+      <td id="T_535b4_row0_col3" class="data row0 col3" >0,22</td>
+      <td id="T_535b4_row0_col4" class="data row0 col4" >0,76</td>
+      <td id="T_535b4_row0_col5" class="data row0 col5" >1,67</td>
+      <td id="T_535b4_row0_col6" class="data row0 col6" >7,11</td>
     </tr>
     <tr>
-      <th id="T_36857_level0_row1" class="row_heading level0 row1" >Mégots et filtres à cigarettes</th>
-      <td id="T_36857_row1_col0" class="data row1 col0" >0,55</td>
-      <td id="T_36857_row1_col1" class="data row1 col1" >0,70</td>
-      <td id="T_36857_row1_col2" class="data row1 col2" >0,00</td>
-      <td id="T_36857_row1_col3" class="data row1 col3" >0,11</td>
-      <td id="T_36857_row1_col4" class="data row1 col4" >0,28</td>
-      <td id="T_36857_row1_col5" class="data row1 col5" >0,70</td>
-      <td id="T_36857_row1_col6" class="data row1 col6" >5,32</td>
+      <th id="T_535b4_level0_row1" class="row_heading level0 row1" >Mégots et filtres à cigarettes</th>
+      <td id="T_535b4_row1_col0" class="data row1 col0" >0,48</td>
+      <td id="T_535b4_row1_col1" class="data row1 col1" >0,65</td>
+      <td id="T_535b4_row1_col2" class="data row1 col2" >0,00</td>
+      <td id="T_535b4_row1_col3" class="data row1 col3" >0,10</td>
+      <td id="T_535b4_row1_col4" class="data row1 col4" >0,28</td>
+      <td id="T_535b4_row1_col5" class="data row1 col5" >0,56</td>
+      <td id="T_535b4_row1_col6" class="data row1 col6" >5,12</td>
     </tr>
     <tr>
-      <th id="T_36857_level0_row2" class="row_heading level0 row2" >Fragments de polystyrène expansé: g81, g82, g83</th>
-      <td id="T_36857_row2_col0" class="data row2 col0" >0,59</td>
-      <td id="T_36857_row2_col1" class="data row2 col1" >1,20</td>
-      <td id="T_36857_row2_col2" class="data row2 col2" >0,00</td>
-      <td id="T_36857_row2_col3" class="data row2 col3" >0,12</td>
-      <td id="T_36857_row2_col4" class="data row2 col4" >0,26</td>
-      <td id="T_36857_row2_col5" class="data row2 col5" >0,64</td>
-      <td id="T_36857_row2_col6" class="data row2 col6" >13,40</td>
+      <th id="T_535b4_level0_row2" class="row_heading level0 row2" >Fragments de polystyrène expansé: g81, g82, g83</th>
+      <td id="T_535b4_row2_col0" class="data row2 col0" >0,53</td>
+      <td id="T_535b4_row2_col1" class="data row2 col1" >1,09</td>
+      <td id="T_535b4_row2_col2" class="data row2 col2" >0,00</td>
+      <td id="T_535b4_row2_col3" class="data row2 col3" >0,10</td>
+      <td id="T_535b4_row2_col4" class="data row2 col4" >0,25</td>
+      <td id="T_535b4_row2_col5" class="data row2 col5" >0,58</td>
+      <td id="T_535b4_row2_col6" class="data row2 col6" >13,40</td>
     </tr>
     <tr>
-      <th id="T_36857_level0_row3" class="row_heading level0 row3" >Emballages de bonbons, de snacks</th>
-      <td id="T_36857_row3_col0" class="data row3 col0" >0,37</td>
-      <td id="T_36857_row3_col1" class="data row3 col1" >0,56</td>
-      <td id="T_36857_row3_col2" class="data row3 col2" >0,00</td>
-      <td id="T_36857_row3_col3" class="data row3 col3" >0,06</td>
-      <td id="T_36857_row3_col4" class="data row3 col4" >0,18</td>
-      <td id="T_36857_row3_col5" class="data row3 col5" >0,47</td>
-      <td id="T_36857_row3_col6" class="data row3 col6" >8,07</td>
+      <th id="T_535b4_level0_row3" class="row_heading level0 row3" >Emballages de bonbons, de snacks</th>
+      <td id="T_535b4_row3_col0" class="data row3 col0" >0,45</td>
+      <td id="T_535b4_row3_col1" class="data row3 col1" >1,05</td>
+      <td id="T_535b4_row3_col2" class="data row3 col2" >0,00</td>
+      <td id="T_535b4_row3_col3" class="data row3 col3" >0,07</td>
+      <td id="T_535b4_row3_col4" class="data row3 col4" >0,19</td>
+      <td id="T_535b4_row3_col5" class="data row3 col5" >0,51</td>
+      <td id="T_535b4_row3_col6" class="data row3 col6" >17,73</td>
     </tr>
     <tr>
-      <th id="T_36857_level0_row4" class="row_heading level0 row4" >Coton-tige</th>
-      <td id="T_36857_row4_col0" class="data row4 col0" >0,22</td>
-      <td id="T_36857_row4_col1" class="data row4 col1" >0,25</td>
-      <td id="T_36857_row4_col2" class="data row4 col2" >0,00</td>
-      <td id="T_36857_row4_col3" class="data row4 col3" >0,06</td>
-      <td id="T_36857_row4_col4" class="data row4 col4" >0,15</td>
-      <td id="T_36857_row4_col5" class="data row4 col5" >0,29</td>
-      <td id="T_36857_row4_col6" class="data row4 col6" >3,23</td>
+      <th id="T_535b4_level0_row4" class="row_heading level0 row4" >Coton-tige</th>
+      <td id="T_535b4_row4_col0" class="data row4 col0" >0,27</td>
+      <td id="T_535b4_row4_col1" class="data row4 col1" >0,99</td>
+      <td id="T_535b4_row4_col2" class="data row4 col2" >0,00</td>
+      <td id="T_535b4_row4_col3" class="data row4 col3" >0,06</td>
+      <td id="T_535b4_row4_col4" class="data row4 col4" >0,14</td>
+      <td id="T_535b4_row4_col5" class="data row4 col5" >0,28</td>
+      <td id="T_535b4_row4_col6" class="data row4 col6" >17,92</td>
     </tr>
     <tr>
-      <th id="T_36857_level0_row5" class="row_heading level0 row5" >Couvercles en plastique bouteille:  g21, g22, g23, g24</th>
-      <td id="T_36857_row5_col0" class="data row5 col0" >0,22</td>
-      <td id="T_36857_row5_col1" class="data row5 col1" >0,48</td>
-      <td id="T_36857_row5_col2" class="data row5 col2" >0,00</td>
-      <td id="T_36857_row5_col3" class="data row5 col3" >0,04</td>
-      <td id="T_36857_row5_col4" class="data row5 col4" >0,10</td>
-      <td id="T_36857_row5_col5" class="data row5 col5" >0,30</td>
-      <td id="T_36857_row5_col6" class="data row5 col6" >8,55</td>
+      <th id="T_535b4_level0_row5" class="row_heading level0 row5" >Couvercles en plastique bouteille:  g21, g22, g23, g24</th>
+      <td id="T_535b4_row5_col0" class="data row5 col0" >0,25</td>
+      <td id="T_535b4_row5_col1" class="data row5 col1" >0,60</td>
+      <td id="T_535b4_row5_col2" class="data row5 col2" >0,00</td>
+      <td id="T_535b4_row5_col3" class="data row5 col3" >0,04</td>
+      <td id="T_535b4_row5_col4" class="data row5 col4" >0,10</td>
+      <td id="T_535b4_row5_col5" class="data row5 col5" >0,27</td>
+      <td id="T_535b4_row5_col6" class="data row5 col6" >8,63</td>
     </tr>
     <tr>
-      <th id="T_36857_level0_row6" class="row_heading level0 row6" >Bâche, feuille plastique industrielle</th>
-      <td id="T_36857_row6_col0" class="data row6 col0" >1,56</td>
-      <td id="T_36857_row6_col1" class="data row6 col1" >3,17</td>
-      <td id="T_36857_row6_col2" class="data row6 col2" >0,00</td>
-      <td id="T_36857_row6_col3" class="data row6 col3" >0,02</td>
-      <td id="T_36857_row6_col4" class="data row6 col4" >0,05</td>
-      <td id="T_36857_row6_col5" class="data row6 col5" >1,13</td>
-      <td id="T_36857_row6_col6" class="data row6 col6" >19,50</td>
+      <th id="T_535b4_level0_row6" class="row_heading level0 row6" >Bâche, feuille plastique industrielle</th>
+      <td id="T_535b4_row6_col0" class="data row6 col0" >1,82</td>
+      <td id="T_535b4_row6_col1" class="data row6 col1" >3,41</td>
+      <td id="T_535b4_row6_col2" class="data row6 col2" >0,00</td>
+      <td id="T_535b4_row6_col3" class="data row6 col3" >0,02</td>
+      <td id="T_535b4_row6_col4" class="data row6 col4" >0,05</td>
+      <td id="T_535b4_row6_col5" class="data row6 col5" >2,06</td>
+      <td id="T_535b4_row6_col6" class="data row6 col6" >19,97</td>
     </tr>
     <tr>
-      <th id="T_36857_level0_row7" class="row_heading level0 row7" >Pellets industriels (gpi)</th>
-      <td id="T_36857_row7_col0" class="data row7 col0" >0,41</td>
-      <td id="T_36857_row7_col1" class="data row7 col1" >1,67</td>
-      <td id="T_36857_row7_col2" class="data row7 col2" >0,00</td>
-      <td id="T_36857_row7_col3" class="data row7 col3" >0,03</td>
-      <td id="T_36857_row7_col4" class="data row7 col4" >0,11</td>
-      <td id="T_36857_row7_col5" class="data row7 col5" >0,29</td>
-      <td id="T_36857_row7_col6" class="data row7 col6" >15,36</td>
+      <th id="T_535b4_level0_row7" class="row_heading level0 row7" >Pellets industriels (gpi)</th>
+      <td id="T_535b4_row7_col0" class="data row7 col0" >0,42</td>
+      <td id="T_535b4_row7_col1" class="data row7 col1" >1,67</td>
+      <td id="T_535b4_row7_col2" class="data row7 col2" >0,00</td>
+      <td id="T_535b4_row7_col3" class="data row7 col3" >0,02</td>
+      <td id="T_535b4_row7_col4" class="data row7 col4" >0,10</td>
+      <td id="T_535b4_row7_col5" class="data row7 col5" >0,32</td>
+      <td id="T_535b4_row7_col6" class="data row7 col6" >16,82</td>
     </tr>
     <tr>
-      <th id="T_36857_level0_row8" class="row_heading level0 row8" >Fragments de plastique angulaires <5mm</th>
-      <td id="T_36857_row8_col0" class="data row8 col0" >0,46</td>
-      <td id="T_36857_row8_col1" class="data row8 col1" >1,47</td>
-      <td id="T_36857_row8_col2" class="data row8 col2" >0,00</td>
-      <td id="T_36857_row8_col3" class="data row8 col3" >0,07</td>
-      <td id="T_36857_row8_col4" class="data row8 col4" >0,19</td>
-      <td id="T_36857_row8_col5" class="data row8 col5" >0,45</td>
-      <td id="T_36857_row8_col6" class="data row8 col6" >17,55</td>
+      <th id="T_535b4_level0_row8" class="row_heading level0 row8" >Fragments de plastique angulaires <5mm</th>
+      <td id="T_535b4_row8_col0" class="data row8 col0" >0,56</td>
+      <td id="T_535b4_row8_col1" class="data row8 col1" >2,04</td>
+      <td id="T_535b4_row8_col2" class="data row8 col2" >0,00</td>
+      <td id="T_535b4_row8_col3" class="data row8 col3" >0,06</td>
+      <td id="T_535b4_row8_col4" class="data row8 col4" >0,18</td>
+      <td id="T_535b4_row8_col5" class="data row8 col5" >0,44</td>
+      <td id="T_535b4_row8_col6" class="data row8 col6" >18,46</td>
     </tr>
     <tr>
-      <th id="T_36857_level0_row9" class="row_heading level0 row9" >Déchets de construction en plastique</th>
-      <td id="T_36857_row9_col0" class="data row9 col0" >0,25</td>
-      <td id="T_36857_row9_col1" class="data row9 col1" >0,70</td>
-      <td id="T_36857_row9_col2" class="data row9 col2" >0,00</td>
-      <td id="T_36857_row9_col3" class="data row9 col3" >0,05</td>
-      <td id="T_36857_row9_col4" class="data row9 col4" >0,12</td>
-      <td id="T_36857_row9_col5" class="data row9 col5" >0,30</td>
-      <td id="T_36857_row9_col6" class="data row9 col6" >14,27</td>
+      <th id="T_535b4_level0_row9" class="row_heading level0 row9" >Déchets de construction en plastique</th>
+      <td id="T_535b4_row9_col0" class="data row9 col0" >0,27</td>
+      <td id="T_535b4_row9_col1" class="data row9 col1" >0,69</td>
+      <td id="T_535b4_row9_col2" class="data row9 col2" >0,00</td>
+      <td id="T_535b4_row9_col3" class="data row9 col3" >0,05</td>
+      <td id="T_535b4_row9_col4" class="data row9 col4" >0,15</td>
+      <td id="T_535b4_row9_col5" class="data row9 col5" >0,32</td>
+      <td id="T_535b4_row9_col6" class="data row9 col6" >14,63</td>
     </tr>
     <tr>
-      <th id="T_36857_level0_row10" class="row_heading level0 row10" >Mousse de plastique pour l'isolation thermique</th>
-      <td id="T_36857_row10_col0" class="data row10 col0" >0,31</td>
-      <td id="T_36857_row10_col1" class="data row10 col1" >0,85</td>
-      <td id="T_36857_row10_col2" class="data row10 col2" >0,00</td>
-      <td id="T_36857_row10_col3" class="data row10 col3" >0,05</td>
-      <td id="T_36857_row10_col4" class="data row10 col4" >0,15</td>
-      <td id="T_36857_row10_col5" class="data row10 col5" >0,36</td>
-      <td id="T_36857_row10_col6" class="data row10 col6" >15,75</td>
+      <th id="T_535b4_level0_row10" class="row_heading level0 row10" >Mousse de plastique pour l'isolation thermique</th>
+      <td id="T_535b4_row10_col0" class="data row10 col0" >0,30</td>
+      <td id="T_535b4_row10_col1" class="data row10 col1" >0,46</td>
+      <td id="T_535b4_row10_col2" class="data row10 col2" >0,00</td>
+      <td id="T_535b4_row10_col3" class="data row10 col3" >0,06</td>
+      <td id="T_535b4_row10_col4" class="data row10 col4" >0,16</td>
+      <td id="T_535b4_row10_col5" class="data row10 col5" >0,41</td>
+      <td id="T_535b4_row10_col6" class="data row10 col6" >4,52</td>
     </tr>
     <tr>
-      <th id="T_36857_level0_row11" class="row_heading level0 row11" >Cartouches de fusil de chasse</th>
-      <td id="T_36857_row11_col0" class="data row11 col0" >0,24</td>
-      <td id="T_36857_row11_col1" class="data row11 col1" >1,26</td>
-      <td id="T_36857_row11_col2" class="data row11 col2" >0,00</td>
-      <td id="T_36857_row11_col3" class="data row11 col3" >0,01</td>
-      <td id="T_36857_row11_col4" class="data row11 col4" >0,04</td>
-      <td id="T_36857_row11_col5" class="data row11 col5" >0,13</td>
-      <td id="T_36857_row11_col6" class="data row11 col6" >16,07</td>
+      <th id="T_535b4_level0_row11" class="row_heading level0 row11" >Cartouches de fusil de chasse</th>
+      <td id="T_535b4_row11_col0" class="data row11 col0" >0,13</td>
+      <td id="T_535b4_row11_col1" class="data row11 col1" >0,77</td>
+      <td id="T_535b4_row11_col2" class="data row11 col2" >0,00</td>
+      <td id="T_535b4_row11_col3" class="data row11 col3" >0,01</td>
+      <td id="T_535b4_row11_col4" class="data row11 col4" >0,03</td>
+      <td id="T_535b4_row11_col5" class="data row11 col5" >0,11</td>
+      <td id="T_535b4_row11_col6" class="data row11 col6" >14,32</td>
     </tr>
     <tr>
-      <th id="T_36857_level0_row12" class="row_heading level0 row12" >Bâtonnets de sucette</th>
-      <td id="T_36857_row12_col0" class="data row12 col0" >0,13</td>
-      <td id="T_36857_row12_col1" class="data row12 col1" >0,76</td>
-      <td id="T_36857_row12_col2" class="data row12 col2" >0,00</td>
-      <td id="T_36857_row12_col3" class="data row12 col3" >0,02</td>
-      <td id="T_36857_row12_col4" class="data row12 col4" >0,05</td>
-      <td id="T_36857_row12_col5" class="data row12 col5" >0,10</td>
-      <td id="T_36857_row12_col6" class="data row12 col6" >13,79</td>
+      <th id="T_535b4_level0_row12" class="row_heading level0 row12" >Bâtonnets de sucette</th>
+      <td id="T_535b4_row12_col0" class="data row12 col0" >0,23</td>
+      <td id="T_535b4_row12_col1" class="data row12 col1" >1,41</td>
+      <td id="T_535b4_row12_col2" class="data row12 col2" >0,00</td>
+      <td id="T_535b4_row12_col3" class="data row12 col3" >0,01</td>
+      <td id="T_535b4_row12_col4" class="data row12 col4" >0,05</td>
+      <td id="T_535b4_row12_col5" class="data row12 col5" >0,10</td>
+      <td id="T_535b4_row12_col6" class="data row12 col6" >18,50</td>
     </tr>
     <tr>
-      <th id="T_36857_level0_row13" class="row_heading level0 row13" >Pailles et agitateurs</th>
-      <td id="T_36857_row13_col0" class="data row13 col0" >3,42</td>
-      <td id="T_36857_row13_col1" class="data row13 col1" >3,51</td>
-      <td id="T_36857_row13_col2" class="data row13 col2" >0,00</td>
-      <td id="T_36857_row13_col3" class="data row13 col3" >0,63</td>
-      <td id="T_36857_row13_col4" class="data row13 col4" >2,25</td>
-      <td id="T_36857_row13_col5" class="data row13 col5" >5,16</td>
-      <td id="T_36857_row13_col6" class="data row13 col6" >16,69</td>
+      <th id="T_535b4_level0_row13" class="row_heading level0 row13" >Pailles et agitateurs</th>
+      <td id="T_535b4_row13_col0" class="data row13 col0" >3,33</td>
+      <td id="T_535b4_row13_col1" class="data row13 col1" >3,25</td>
+      <td id="T_535b4_row13_col2" class="data row13 col2" >0,00</td>
+      <td id="T_535b4_row13_col3" class="data row13 col3" >0,88</td>
+      <td id="T_535b4_row13_col4" class="data row13 col4" >2,31</td>
+      <td id="T_535b4_row13_col5" class="data row13 col5" >4,86</td>
+      <td id="T_535b4_row13_col6" class="data row13 col6" >15,85</td>
     </tr>
   </tbody>
 </table>
@@ -1222,57 +1222,57 @@ document.write(`
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
-#T_a3272 tr:nth-child(even) {
+#T_9c23c tr:nth-child(even) {
   background-color: rgba(139, 69, 19, 0.08);
 }
-#T_a3272 tr:nth-child(odd) {
+#T_9c23c tr:nth-child(odd) {
   background: #FFF;
 }
-#T_a3272 tr {
+#T_9c23c tr {
   font-size: 10px;
 }
-#T_a3272 th {
+#T_9c23c th {
   background-color: #FFF;
   font-size: 12px;
   text-align: left;
   width: auto;
   word-break: keep-all;
 }
-#T_a3272 td {
+#T_9c23c td {
   padding: 4px;
   font-size: 12px;
   text-align: center;
 }
-#T_a3272 caption {
+#T_9c23c caption {
   caption-side: bottom;
   font-size: 1em;
   text-align: left;
 }
 </style>
-<table id="T_a3272">
+<table id="T_9c23c">
   <caption><b>Table A5-8 :</b> Grand lac, la distribution attendue des résultats des échantillons pour 2024.</caption>
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_a3272_level0_col0" class="col_heading level0 col0" >moyenne</th>
-      <th id="T_a3272_level0_col1" class="col_heading level0 col1" >écart-type</th>
-      <th id="T_a3272_level0_col2" class="col_heading level0 col2" >min</th>
-      <th id="T_a3272_level0_col3" class="col_heading level0 col3" >25%</th>
-      <th id="T_a3272_level0_col4" class="col_heading level0 col4" >50%</th>
-      <th id="T_a3272_level0_col5" class="col_heading level0 col5" >75%</th>
-      <th id="T_a3272_level0_col6" class="col_heading level0 col6" >max</th>
+      <th id="T_9c23c_level0_col0" class="col_heading level0 col0" >moyenne</th>
+      <th id="T_9c23c_level0_col1" class="col_heading level0 col1" >écart-type</th>
+      <th id="T_9c23c_level0_col2" class="col_heading level0 col2" >min</th>
+      <th id="T_9c23c_level0_col3" class="col_heading level0 col3" >25%</th>
+      <th id="T_9c23c_level0_col4" class="col_heading level0 col4" >50%</th>
+      <th id="T_9c23c_level0_col5" class="col_heading level0 col5" >75%</th>
+      <th id="T_9c23c_level0_col6" class="col_heading level0 col6" >max</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_a3272_level0_row0" class="row_heading level0 row0" >Grand lac</th>
-      <td id="T_a3272_row0_col0" class="data row0 col0" >2,24</td>
-      <td id="T_a3272_row0_col1" class="data row0 col1" >2,29</td>
-      <td id="T_a3272_row0_col2" class="data row0 col2" >0,00</td>
-      <td id="T_a3272_row0_col3" class="data row0 col3" >0,66</td>
-      <td id="T_a3272_row0_col4" class="data row0 col4" >1,58</td>
-      <td id="T_a3272_row0_col5" class="data row0 col5" >2,88</td>
-      <td id="T_a3272_row0_col6" class="data row0 col6" >13,13</td>
+      <th id="T_9c23c_level0_row0" class="row_heading level0 row0" >Grand lac</th>
+      <td id="T_9c23c_row0_col0" class="data row0 col0" >2,30</td>
+      <td id="T_9c23c_row0_col1" class="data row0 col1" >2,45</td>
+      <td id="T_9c23c_row0_col2" class="data row0 col2" >0,01</td>
+      <td id="T_9c23c_row0_col3" class="data row0 col3" >0,77</td>
+      <td id="T_9c23c_row0_col4" class="data row0 col4" >1,61</td>
+      <td id="T_9c23c_row0_col5" class="data row0 col5" >2,87</td>
+      <td id="T_9c23c_row0_col6" class="data row0 col6" >17,97</td>
     </tr>
   </tbody>
 </table>
@@ -1281,187 +1281,187 @@ document.write(`
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
-#T_dd090 tr:nth-child(even) {
+#T_8cb67 tr:nth-child(even) {
   background-color: rgba(139, 69, 19, 0.08);
 }
-#T_dd090 tr:nth-child(odd) {
+#T_8cb67 tr:nth-child(odd) {
   background: #FFF;
 }
-#T_dd090 tr {
+#T_8cb67 tr {
   font-size: 10px;
 }
-#T_dd090 th {
+#T_8cb67 th {
   background-color: #FFF;
   font-size: 12px;
   text-align: left;
   width: auto;
   word-break: keep-all;
 }
-#T_dd090 td {
+#T_8cb67 td {
   padding: 4px;
   font-size: 12px;
   text-align: center;
 }
-#T_dd090 caption {
+#T_8cb67 caption {
   caption-side: bottom;
   font-size: 1em;
   text-align: left;
 }
 </style>
-<table id="T_dd090">
+<table id="T_8cb67">
   <caption><b>Table A5-9 :</b> Grand lac, La distribution attendue des objets les plus courants 2024.</caption>
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_dd090_level0_col0" class="col_heading level0 col0" >moyenne</th>
-      <th id="T_dd090_level0_col1" class="col_heading level0 col1" >écart-type</th>
-      <th id="T_dd090_level0_col2" class="col_heading level0 col2" >min</th>
-      <th id="T_dd090_level0_col3" class="col_heading level0 col3" >25%</th>
-      <th id="T_dd090_level0_col4" class="col_heading level0 col4" >50%</th>
-      <th id="T_dd090_level0_col5" class="col_heading level0 col5" >75%</th>
-      <th id="T_dd090_level0_col6" class="col_heading level0 col6" >max</th>
+      <th id="T_8cb67_level0_col0" class="col_heading level0 col0" >moyenne</th>
+      <th id="T_8cb67_level0_col1" class="col_heading level0 col1" >écart-type</th>
+      <th id="T_8cb67_level0_col2" class="col_heading level0 col2" >min</th>
+      <th id="T_8cb67_level0_col3" class="col_heading level0 col3" >25%</th>
+      <th id="T_8cb67_level0_col4" class="col_heading level0 col4" >50%</th>
+      <th id="T_8cb67_level0_col5" class="col_heading level0 col5" >75%</th>
+      <th id="T_8cb67_level0_col6" class="col_heading level0 col6" >max</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_dd090_level0_row0" class="row_heading level0 row0" >Fragments de plastique: g80, g79, g78, g77, g76, g75</th>
-      <td id="T_dd090_row0_col0" class="data row0 col0" >0,99</td>
-      <td id="T_dd090_row0_col1" class="data row0 col1" >1,25</td>
-      <td id="T_dd090_row0_col2" class="data row0 col2" >0,00</td>
-      <td id="T_dd090_row0_col3" class="data row0 col3" >0,19</td>
-      <td id="T_dd090_row0_col4" class="data row0 col4" >0,55</td>
-      <td id="T_dd090_row0_col5" class="data row0 col5" >1,30</td>
-      <td id="T_dd090_row0_col6" class="data row0 col6" >7,76</td>
+      <th id="T_8cb67_level0_row0" class="row_heading level0 row0" >Fragments de plastique: g80, g79, g78, g77, g76, g75</th>
+      <td id="T_8cb67_row0_col0" class="data row0 col0" >1,07</td>
+      <td id="T_8cb67_row0_col1" class="data row0 col1" >1,60</td>
+      <td id="T_8cb67_row0_col2" class="data row0 col2" >0,00</td>
+      <td id="T_8cb67_row0_col3" class="data row0 col3" >0,22</td>
+      <td id="T_8cb67_row0_col4" class="data row0 col4" >0,52</td>
+      <td id="T_8cb67_row0_col5" class="data row0 col5" >1,22</td>
+      <td id="T_8cb67_row0_col6" class="data row0 col6" >15,93</td>
     </tr>
     <tr>
-      <th id="T_dd090_level0_row1" class="row_heading level0 row1" >Mégots et filtres à cigarettes</th>
-      <td id="T_dd090_row1_col0" class="data row1 col0" >0,48</td>
-      <td id="T_dd090_row1_col1" class="data row1 col1" >0,79</td>
-      <td id="T_dd090_row1_col2" class="data row1 col2" >0,00</td>
-      <td id="T_dd090_row1_col3" class="data row1 col3" >0,08</td>
-      <td id="T_dd090_row1_col4" class="data row1 col4" >0,21</td>
-      <td id="T_dd090_row1_col5" class="data row1 col5" >0,50</td>
-      <td id="T_dd090_row1_col6" class="data row1 col6" >6,45</td>
+      <th id="T_8cb67_level0_row1" class="row_heading level0 row1" >Mégots et filtres à cigarettes</th>
+      <td id="T_8cb67_row1_col0" class="data row1 col0" >0,45</td>
+      <td id="T_8cb67_row1_col1" class="data row1 col1" >0,65</td>
+      <td id="T_8cb67_row1_col2" class="data row1 col2" >0,00</td>
+      <td id="T_8cb67_row1_col3" class="data row1 col3" >0,09</td>
+      <td id="T_8cb67_row1_col4" class="data row1 col4" >0,22</td>
+      <td id="T_8cb67_row1_col5" class="data row1 col5" >0,53</td>
+      <td id="T_8cb67_row1_col6" class="data row1 col6" >6,16</td>
     </tr>
     <tr>
-      <th id="T_dd090_level0_row2" class="row_heading level0 row2" >Fragments de polystyrène expansé: g81, g82, g83</th>
-      <td id="T_dd090_row2_col0" class="data row2 col0" >0,28</td>
-      <td id="T_dd090_row2_col1" class="data row2 col1" >0,50</td>
-      <td id="T_dd090_row2_col2" class="data row2 col2" >0,00</td>
-      <td id="T_dd090_row2_col3" class="data row2 col3" >0,05</td>
-      <td id="T_dd090_row2_col4" class="data row2 col4" >0,14</td>
-      <td id="T_dd090_row2_col5" class="data row2 col5" >0,29</td>
-      <td id="T_dd090_row2_col6" class="data row2 col6" >5,04</td>
+      <th id="T_8cb67_level0_row2" class="row_heading level0 row2" >Fragments de polystyrène expansé: g81, g82, g83</th>
+      <td id="T_8cb67_row2_col0" class="data row2 col0" >0,33</td>
+      <td id="T_8cb67_row2_col1" class="data row2 col1" >0,75</td>
+      <td id="T_8cb67_row2_col2" class="data row2 col2" >0,00</td>
+      <td id="T_8cb67_row2_col3" class="data row2 col3" >0,05</td>
+      <td id="T_8cb67_row2_col4" class="data row2 col4" >0,12</td>
+      <td id="T_8cb67_row2_col5" class="data row2 col5" >0,31</td>
+      <td id="T_8cb67_row2_col6" class="data row2 col6" >8,40</td>
     </tr>
     <tr>
-      <th id="T_dd090_level0_row3" class="row_heading level0 row3" >Emballages de bonbons, de snacks</th>
-      <td id="T_dd090_row3_col0" class="data row3 col0" >0,22</td>
-      <td id="T_dd090_row3_col1" class="data row3 col1" >0,71</td>
-      <td id="T_dd090_row3_col2" class="data row3 col2" >0,00</td>
-      <td id="T_dd090_row3_col3" class="data row3 col3" >0,05</td>
-      <td id="T_dd090_row3_col4" class="data row3 col4" >0,13</td>
-      <td id="T_dd090_row3_col5" class="data row3 col5" >0,26</td>
-      <td id="T_dd090_row3_col6" class="data row3 col6" >15,33</td>
+      <th id="T_8cb67_level0_row3" class="row_heading level0 row3" >Emballages de bonbons, de snacks</th>
+      <td id="T_8cb67_row3_col0" class="data row3 col0" >0,23</td>
+      <td id="T_8cb67_row3_col1" class="data row3 col1" >0,66</td>
+      <td id="T_8cb67_row3_col2" class="data row3 col2" >0,00</td>
+      <td id="T_8cb67_row3_col3" class="data row3 col3" >0,05</td>
+      <td id="T_8cb67_row3_col4" class="data row3 col4" >0,13</td>
+      <td id="T_8cb67_row3_col5" class="data row3 col5" >0,29</td>
+      <td id="T_8cb67_row3_col6" class="data row3 col6" >14,15</td>
     </tr>
     <tr>
-      <th id="T_dd090_level0_row4" class="row_heading level0 row4" >Coton-tige</th>
-      <td id="T_dd090_row4_col0" class="data row4 col0" >0,21</td>
-      <td id="T_dd090_row4_col1" class="data row4 col1" >0,88</td>
-      <td id="T_dd090_row4_col2" class="data row4 col2" >0,00</td>
-      <td id="T_dd090_row4_col3" class="data row4 col3" >0,04</td>
-      <td id="T_dd090_row4_col4" class="data row4 col4" >0,10</td>
-      <td id="T_dd090_row4_col5" class="data row4 col5" >0,22</td>
-      <td id="T_dd090_row4_col6" class="data row4 col6" >17,40</td>
+      <th id="T_8cb67_level0_row4" class="row_heading level0 row4" >Coton-tige</th>
+      <td id="T_8cb67_row4_col0" class="data row4 col0" >0,16</td>
+      <td id="T_8cb67_row4_col1" class="data row4 col1" >0,17</td>
+      <td id="T_8cb67_row4_col2" class="data row4 col2" >0,00</td>
+      <td id="T_8cb67_row4_col3" class="data row4 col3" >0,03</td>
+      <td id="T_8cb67_row4_col4" class="data row4 col4" >0,10</td>
+      <td id="T_8cb67_row4_col5" class="data row4 col5" >0,22</td>
+      <td id="T_8cb67_row4_col6" class="data row4 col6" >0,86</td>
     </tr>
     <tr>
-      <th id="T_dd090_level0_row5" class="row_heading level0 row5" >Couvercles en plastique bouteille:  g21, g22, g23, g24</th>
-      <td id="T_dd090_row5_col0" class="data row5 col0" >0,15</td>
-      <td id="T_dd090_row5_col1" class="data row5 col1" >0,24</td>
-      <td id="T_dd090_row5_col2" class="data row5 col2" >0,00</td>
-      <td id="T_dd090_row5_col3" class="data row5 col3" >0,02</td>
-      <td id="T_dd090_row5_col4" class="data row5 col4" >0,06</td>
-      <td id="T_dd090_row5_col5" class="data row5 col5" >0,16</td>
-      <td id="T_dd090_row5_col6" class="data row5 col6" >1,64</td>
+      <th id="T_8cb67_level0_row5" class="row_heading level0 row5" >Couvercles en plastique bouteille:  g21, g22, g23, g24</th>
+      <td id="T_8cb67_row5_col0" class="data row5 col0" >0,17</td>
+      <td id="T_8cb67_row5_col1" class="data row5 col1" >0,26</td>
+      <td id="T_8cb67_row5_col2" class="data row5 col2" >0,00</td>
+      <td id="T_8cb67_row5_col3" class="data row5 col3" >0,02</td>
+      <td id="T_8cb67_row5_col4" class="data row5 col4" >0,07</td>
+      <td id="T_8cb67_row5_col5" class="data row5 col5" >0,19</td>
+      <td id="T_8cb67_row5_col6" class="data row5 col6" >1,52</td>
     </tr>
     <tr>
-      <th id="T_dd090_level0_row6" class="row_heading level0 row6" >Bâche, feuille plastique industrielle</th>
-      <td id="T_dd090_row6_col0" class="data row6 col0" >0,27</td>
-      <td id="T_dd090_row6_col1" class="data row6 col1" >1,18</td>
-      <td id="T_dd090_row6_col2" class="data row6 col2" >0,00</td>
-      <td id="T_dd090_row6_col3" class="data row6 col3" >0,04</td>
-      <td id="T_dd090_row6_col4" class="data row6 col4" >0,11</td>
-      <td id="T_dd090_row6_col5" class="data row6 col5" >0,25</td>
-      <td id="T_dd090_row6_col6" class="data row6 col6" >17,21</td>
+      <th id="T_8cb67_level0_row6" class="row_heading level0 row6" >Bâche, feuille plastique industrielle</th>
+      <td id="T_8cb67_row6_col0" class="data row6 col0" >0,30</td>
+      <td id="T_8cb67_row6_col1" class="data row6 col1" >1,39</td>
+      <td id="T_8cb67_row6_col2" class="data row6 col2" >0,00</td>
+      <td id="T_8cb67_row6_col3" class="data row6 col3" >0,04</td>
+      <td id="T_8cb67_row6_col4" class="data row6 col4" >0,09</td>
+      <td id="T_8cb67_row6_col5" class="data row6 col5" >0,22</td>
+      <td id="T_8cb67_row6_col6" class="data row6 col6" >16,24</td>
     </tr>
     <tr>
-      <th id="T_dd090_level0_row7" class="row_heading level0 row7" >Pellets industriels (gpi)</th>
-      <td id="T_dd090_row7_col0" class="data row7 col0" >0,92</td>
-      <td id="T_dd090_row7_col1" class="data row7 col1" >1,59</td>
-      <td id="T_dd090_row7_col2" class="data row7 col2" >0,00</td>
-      <td id="T_dd090_row7_col3" class="data row7 col3" >0,11</td>
-      <td id="T_dd090_row7_col4" class="data row7 col4" >0,34</td>
-      <td id="T_dd090_row7_col5" class="data row7 col5" >1,13</td>
-      <td id="T_dd090_row7_col6" class="data row7 col6" >10,03</td>
+      <th id="T_8cb67_level0_row7" class="row_heading level0 row7" >Pellets industriels (gpi)</th>
+      <td id="T_8cb67_row7_col0" class="data row7 col0" >0,81</td>
+      <td id="T_8cb67_row7_col1" class="data row7 col1" >1,03</td>
+      <td id="T_8cb67_row7_col2" class="data row7 col2" >0,00</td>
+      <td id="T_8cb67_row7_col3" class="data row7 col3" >0,14</td>
+      <td id="T_8cb67_row7_col4" class="data row7 col4" >0,49</td>
+      <td id="T_8cb67_row7_col5" class="data row7 col5" >1,15</td>
+      <td id="T_8cb67_row7_col6" class="data row7 col6" >10,33</td>
     </tr>
     <tr>
-      <th id="T_dd090_level0_row8" class="row_heading level0 row8" >Fragments de plastique angulaires <5mm</th>
-      <td id="T_dd090_row8_col0" class="data row8 col0" >0,52</td>
-      <td id="T_dd090_row8_col1" class="data row8 col1" >1,24</td>
-      <td id="T_dd090_row8_col2" class="data row8 col2" >0,00</td>
-      <td id="T_dd090_row8_col3" class="data row8 col3" >0,06</td>
-      <td id="T_dd090_row8_col4" class="data row8 col4" >0,24</td>
-      <td id="T_dd090_row8_col5" class="data row8 col5" >0,68</td>
-      <td id="T_dd090_row8_col6" class="data row8 col6" >19,31</td>
+      <th id="T_8cb67_level0_row8" class="row_heading level0 row8" >Fragments de plastique angulaires <5mm</th>
+      <td id="T_8cb67_row8_col0" class="data row8 col0" >0,54</td>
+      <td id="T_8cb67_row8_col1" class="data row8 col1" >1,21</td>
+      <td id="T_8cb67_row8_col2" class="data row8 col2" >0,00</td>
+      <td id="T_8cb67_row8_col3" class="data row8 col3" >0,08</td>
+      <td id="T_8cb67_row8_col4" class="data row8 col4" >0,29</td>
+      <td id="T_8cb67_row8_col5" class="data row8 col5" >0,73</td>
+      <td id="T_8cb67_row8_col6" class="data row8 col6" >17,41</td>
     </tr>
     <tr>
-      <th id="T_dd090_level0_row9" class="row_heading level0 row9" >Déchets de construction en plastique</th>
-      <td id="T_dd090_row9_col0" class="data row9 col0" >0,38</td>
-      <td id="T_dd090_row9_col1" class="data row9 col1" >2,05</td>
-      <td id="T_dd090_row9_col2" class="data row9 col2" >0,00</td>
-      <td id="T_dd090_row9_col3" class="data row9 col3" >0,01</td>
-      <td id="T_dd090_row9_col4" class="data row9 col4" >0,02</td>
-      <td id="T_dd090_row9_col5" class="data row9 col5" >0,04</td>
-      <td id="T_dd090_row9_col6" class="data row9 col6" >19,64</td>
+      <th id="T_8cb67_level0_row9" class="row_heading level0 row9" >Déchets de construction en plastique</th>
+      <td id="T_8cb67_row9_col0" class="data row9 col0" >0,45</td>
+      <td id="T_8cb67_row9_col1" class="data row9 col1" >2,24</td>
+      <td id="T_8cb67_row9_col2" class="data row9 col2" >0,00</td>
+      <td id="T_8cb67_row9_col3" class="data row9 col3" >0,01</td>
+      <td id="T_8cb67_row9_col4" class="data row9 col4" >0,02</td>
+      <td id="T_8cb67_row9_col5" class="data row9 col5" >0,04</td>
+      <td id="T_8cb67_row9_col6" class="data row9 col6" >19,40</td>
     </tr>
     <tr>
-      <th id="T_dd090_level0_row10" class="row_heading level0 row10" >Mousse de plastique pour l'isolation thermique</th>
-      <td id="T_dd090_row10_col0" class="data row10 col0" >0,21</td>
-      <td id="T_dd090_row10_col1" class="data row10 col1" >1,40</td>
-      <td id="T_dd090_row10_col2" class="data row10 col2" >0,00</td>
-      <td id="T_dd090_row10_col3" class="data row10 col3" >0,02</td>
-      <td id="T_dd090_row10_col4" class="data row10 col4" >0,05</td>
-      <td id="T_dd090_row10_col5" class="data row10 col5" >0,10</td>
-      <td id="T_dd090_row10_col6" class="data row10 col6" >17,23</td>
+      <th id="T_8cb67_level0_row10" class="row_heading level0 row10" >Mousse de plastique pour l'isolation thermique</th>
+      <td id="T_8cb67_row10_col0" class="data row10 col0" >0,26</td>
+      <td id="T_8cb67_row10_col1" class="data row10 col1" >1,62</td>
+      <td id="T_8cb67_row10_col2" class="data row10 col2" >0,00</td>
+      <td id="T_8cb67_row10_col3" class="data row10 col3" >0,02</td>
+      <td id="T_8cb67_row10_col4" class="data row10 col4" >0,05</td>
+      <td id="T_8cb67_row10_col5" class="data row10 col5" >0,11</td>
+      <td id="T_8cb67_row10_col6" class="data row10 col6" >19,87</td>
     </tr>
     <tr>
-      <th id="T_dd090_level0_row11" class="row_heading level0 row11" >Cartouches de fusil de chasse</th>
-      <td id="T_dd090_row11_col0" class="data row11 col0" >0,47</td>
-      <td id="T_dd090_row11_col1" class="data row11 col1" >2,44</td>
-      <td id="T_dd090_row11_col2" class="data row11 col2" >0,00</td>
-      <td id="T_dd090_row11_col3" class="data row11 col3" >0,01</td>
-      <td id="T_dd090_row11_col4" class="data row11 col4" >0,02</td>
-      <td id="T_dd090_row11_col5" class="data row11 col5" >0,05</td>
-      <td id="T_dd090_row11_col6" class="data row11 col6" >19,42</td>
+      <th id="T_8cb67_level0_row11" class="row_heading level0 row11" >Cartouches de fusil de chasse</th>
+      <td id="T_8cb67_row11_col0" class="data row11 col0" >0,62</td>
+      <td id="T_8cb67_row11_col1" class="data row11 col1" >2,76</td>
+      <td id="T_8cb67_row11_col2" class="data row11 col2" >0,00</td>
+      <td id="T_8cb67_row11_col3" class="data row11 col3" >0,01</td>
+      <td id="T_8cb67_row11_col4" class="data row11 col4" >0,02</td>
+      <td id="T_8cb67_row11_col5" class="data row11 col5" >0,06</td>
+      <td id="T_8cb67_row11_col6" class="data row11 col6" >19,64</td>
     </tr>
     <tr>
-      <th id="T_dd090_level0_row12" class="row_heading level0 row12" >Bâtonnets de sucette</th>
-      <td id="T_dd090_row12_col0" class="data row12 col0" >0,12</td>
-      <td id="T_dd090_row12_col1" class="data row12 col1" >0,86</td>
-      <td id="T_dd090_row12_col2" class="data row12 col2" >0,00</td>
-      <td id="T_dd090_row12_col3" class="data row12 col3" >0,01</td>
-      <td id="T_dd090_row12_col4" class="data row12 col4" >0,03</td>
-      <td id="T_dd090_row12_col5" class="data row12 col5" >0,07</td>
-      <td id="T_dd090_row12_col6" class="data row12 col6" >13,67</td>
+      <th id="T_8cb67_level0_row12" class="row_heading level0 row12" >Bâtonnets de sucette</th>
+      <td id="T_8cb67_row12_col0" class="data row12 col0" >0,11</td>
+      <td id="T_8cb67_row12_col1" class="data row12 col1" >0,75</td>
+      <td id="T_8cb67_row12_col2" class="data row12 col2" >0,00</td>
+      <td id="T_8cb67_row12_col3" class="data row12 col3" >0,01</td>
+      <td id="T_8cb67_row12_col4" class="data row12 col4" >0,03</td>
+      <td id="T_8cb67_row12_col5" class="data row12 col5" >0,06</td>
+      <td id="T_8cb67_row12_col6" class="data row12 col6" >14,84</td>
     </tr>
     <tr>
-      <th id="T_dd090_level0_row13" class="row_heading level0 row13" >Pailles et agitateurs</th>
-      <td id="T_dd090_row13_col0" class="data row13 col0" >2,24</td>
-      <td id="T_dd090_row13_col1" class="data row13 col1" >2,29</td>
-      <td id="T_dd090_row13_col2" class="data row13 col2" >0,00</td>
-      <td id="T_dd090_row13_col3" class="data row13 col3" >0,66</td>
-      <td id="T_dd090_row13_col4" class="data row13 col4" >1,58</td>
-      <td id="T_dd090_row13_col5" class="data row13 col5" >2,88</td>
-      <td id="T_dd090_row13_col6" class="data row13 col6" >13,13</td>
+      <th id="T_8cb67_level0_row13" class="row_heading level0 row13" >Pailles et agitateurs</th>
+      <td id="T_8cb67_row13_col0" class="data row13 col0" >2,30</td>
+      <td id="T_8cb67_row13_col1" class="data row13 col1" >2,45</td>
+      <td id="T_8cb67_row13_col2" class="data row13 col2" >0,01</td>
+      <td id="T_8cb67_row13_col3" class="data row13 col3" >0,77</td>
+      <td id="T_8cb67_row13_col4" class="data row13 col4" >1,61</td>
+      <td id="T_8cb67_row13_col5" class="data row13 col5" >2,87</td>
+      <td id="T_8cb67_row13_col6" class="data row13 col6" >17,97</td>
     </tr>
   </tbody>
 </table>
@@ -1473,57 +1473,57 @@ document.write(`
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
-#T_75e30 tr:nth-child(even) {
+#T_6d62f tr:nth-child(even) {
   background-color: rgba(139, 69, 19, 0.08);
 }
-#T_75e30 tr:nth-child(odd) {
+#T_6d62f tr:nth-child(odd) {
   background: #FFF;
 }
-#T_75e30 tr {
+#T_6d62f tr {
   font-size: 10px;
 }
-#T_75e30 th {
+#T_6d62f th {
   background-color: #FFF;
   font-size: 12px;
   text-align: left;
   width: auto;
   word-break: keep-all;
 }
-#T_75e30 td {
+#T_6d62f td {
   padding: 4px;
   font-size: 12px;
   text-align: center;
 }
-#T_75e30 caption {
+#T_6d62f caption {
   caption-side: bottom;
   font-size: 1em;
   text-align: left;
 }
 </style>
-<table id="T_75e30">
+<table id="T_6d62f">
   <caption><b>Table A5-10 :</b> Petit lac, la distribution attendue des résultats des échantillons pour 2024.</caption>
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_75e30_level0_col0" class="col_heading level0 col0" >moyenne</th>
-      <th id="T_75e30_level0_col1" class="col_heading level0 col1" >écart-type</th>
-      <th id="T_75e30_level0_col2" class="col_heading level0 col2" >min</th>
-      <th id="T_75e30_level0_col3" class="col_heading level0 col3" >25%</th>
-      <th id="T_75e30_level0_col4" class="col_heading level0 col4" >50%</th>
-      <th id="T_75e30_level0_col5" class="col_heading level0 col5" >75%</th>
-      <th id="T_75e30_level0_col6" class="col_heading level0 col6" >max</th>
+      <th id="T_6d62f_level0_col0" class="col_heading level0 col0" >moyenne</th>
+      <th id="T_6d62f_level0_col1" class="col_heading level0 col1" >écart-type</th>
+      <th id="T_6d62f_level0_col2" class="col_heading level0 col2" >min</th>
+      <th id="T_6d62f_level0_col3" class="col_heading level0 col3" >25%</th>
+      <th id="T_6d62f_level0_col4" class="col_heading level0 col4" >50%</th>
+      <th id="T_6d62f_level0_col5" class="col_heading level0 col5" >75%</th>
+      <th id="T_6d62f_level0_col6" class="col_heading level0 col6" >max</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_75e30_level0_row0" class="row_heading level0 row0" >Petit lac</th>
-      <td id="T_75e30_row0_col0" class="data row0 col0" >1,09</td>
-      <td id="T_75e30_row0_col1" class="data row0 col1" >1,30</td>
-      <td id="T_75e30_row0_col2" class="data row0 col2" >0,00</td>
-      <td id="T_75e30_row0_col3" class="data row0 col3" >0,28</td>
-      <td id="T_75e30_row0_col4" class="data row0 col4" >0,66</td>
-      <td id="T_75e30_row0_col5" class="data row0 col5" >1,33</td>
-      <td id="T_75e30_row0_col6" class="data row0 col6" >8,38</td>
+      <th id="T_6d62f_level0_row0" class="row_heading level0 row0" >Petit lac</th>
+      <td id="T_6d62f_row0_col0" class="data row0 col0" >1,09</td>
+      <td id="T_6d62f_row0_col1" class="data row0 col1" >1,19</td>
+      <td id="T_6d62f_row0_col2" class="data row0 col2" >0,01</td>
+      <td id="T_6d62f_row0_col3" class="data row0 col3" >0,31</td>
+      <td id="T_6d62f_row0_col4" class="data row0 col4" >0,67</td>
+      <td id="T_6d62f_row0_col5" class="data row0 col5" >1,44</td>
+      <td id="T_6d62f_row0_col6" class="data row0 col6" >8,96</td>
     </tr>
   </tbody>
 </table>
@@ -1532,187 +1532,187 @@ document.write(`
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
-#T_5b31c tr:nth-child(even) {
+#T_f472a tr:nth-child(even) {
   background-color: rgba(139, 69, 19, 0.08);
 }
-#T_5b31c tr:nth-child(odd) {
+#T_f472a tr:nth-child(odd) {
   background: #FFF;
 }
-#T_5b31c tr {
+#T_f472a tr {
   font-size: 10px;
 }
-#T_5b31c th {
+#T_f472a th {
   background-color: #FFF;
   font-size: 12px;
   text-align: left;
   width: auto;
   word-break: keep-all;
 }
-#T_5b31c td {
+#T_f472a td {
   padding: 4px;
   font-size: 12px;
   text-align: center;
 }
-#T_5b31c caption {
+#T_f472a caption {
   caption-side: bottom;
   font-size: 1em;
   text-align: left;
 }
 </style>
-<table id="T_5b31c">
+<table id="T_f472a">
   <caption><b>Table A5-11 :</b> Petit lac, La distribution attendue des objets les plus courants 2024.</caption>
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_5b31c_level0_col0" class="col_heading level0 col0" >moyenne</th>
-      <th id="T_5b31c_level0_col1" class="col_heading level0 col1" >écart-type</th>
-      <th id="T_5b31c_level0_col2" class="col_heading level0 col2" >min</th>
-      <th id="T_5b31c_level0_col3" class="col_heading level0 col3" >25%</th>
-      <th id="T_5b31c_level0_col4" class="col_heading level0 col4" >50%</th>
-      <th id="T_5b31c_level0_col5" class="col_heading level0 col5" >75%</th>
-      <th id="T_5b31c_level0_col6" class="col_heading level0 col6" >max</th>
+      <th id="T_f472a_level0_col0" class="col_heading level0 col0" >moyenne</th>
+      <th id="T_f472a_level0_col1" class="col_heading level0 col1" >écart-type</th>
+      <th id="T_f472a_level0_col2" class="col_heading level0 col2" >min</th>
+      <th id="T_f472a_level0_col3" class="col_heading level0 col3" >25%</th>
+      <th id="T_f472a_level0_col4" class="col_heading level0 col4" >50%</th>
+      <th id="T_f472a_level0_col5" class="col_heading level0 col5" >75%</th>
+      <th id="T_f472a_level0_col6" class="col_heading level0 col6" >max</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_5b31c_level0_row0" class="row_heading level0 row0" >Fragments de plastique: g80, g79, g78, g77, g76, g75</th>
-      <td id="T_5b31c_row0_col0" class="data row0 col0" >0,47</td>
-      <td id="T_5b31c_row0_col1" class="data row0 col1" >1,23</td>
-      <td id="T_5b31c_row0_col2" class="data row0 col2" >0,00</td>
-      <td id="T_5b31c_row0_col3" class="data row0 col3" >0,09</td>
-      <td id="T_5b31c_row0_col4" class="data row0 col4" >0,24</td>
-      <td id="T_5b31c_row0_col5" class="data row0 col5" >0,53</td>
-      <td id="T_5b31c_row0_col6" class="data row0 col6" >18,68</td>
+      <th id="T_f472a_level0_row0" class="row_heading level0 row0" >Fragments de plastique: g80, g79, g78, g77, g76, g75</th>
+      <td id="T_f472a_row0_col0" class="data row0 col0" >0,42</td>
+      <td id="T_f472a_row0_col1" class="data row0 col1" >0,78</td>
+      <td id="T_f472a_row0_col2" class="data row0 col2" >0,00</td>
+      <td id="T_f472a_row0_col3" class="data row0 col3" >0,09</td>
+      <td id="T_f472a_row0_col4" class="data row0 col4" >0,22</td>
+      <td id="T_f472a_row0_col5" class="data row0 col5" >0,53</td>
+      <td id="T_f472a_row0_col6" class="data row0 col6" >13,98</td>
     </tr>
     <tr>
-      <th id="T_5b31c_level0_row1" class="row_heading level0 row1" >Mégots et filtres à cigarettes</th>
-      <td id="T_5b31c_row1_col0" class="data row1 col0" >0,33</td>
-      <td id="T_5b31c_row1_col1" class="data row1 col1" >0,86</td>
-      <td id="T_5b31c_row1_col2" class="data row1 col2" >0,00</td>
-      <td id="T_5b31c_row1_col3" class="data row1 col3" >0,06</td>
-      <td id="T_5b31c_row1_col4" class="data row1 col4" >0,16</td>
-      <td id="T_5b31c_row1_col5" class="data row1 col5" >0,35</td>
-      <td id="T_5b31c_row1_col6" class="data row1 col6" >16,84</td>
+      <th id="T_f472a_level0_row1" class="row_heading level0 row1" >Mégots et filtres à cigarettes</th>
+      <td id="T_f472a_row1_col0" class="data row1 col0" >0,35</td>
+      <td id="T_f472a_row1_col1" class="data row1 col1" >0,82</td>
+      <td id="T_f472a_row1_col2" class="data row1 col2" >0,00</td>
+      <td id="T_f472a_row1_col3" class="data row1 col3" >0,06</td>
+      <td id="T_f472a_row1_col4" class="data row1 col4" >0,17</td>
+      <td id="T_f472a_row1_col5" class="data row1 col5" >0,40</td>
+      <td id="T_f472a_row1_col6" class="data row1 col6" >13,36</td>
     </tr>
     <tr>
-      <th id="T_5b31c_level0_row2" class="row_heading level0 row2" >Fragments de polystyrène expansé: g81, g82, g83</th>
-      <td id="T_5b31c_row2_col0" class="data row2 col0" >0,24</td>
-      <td id="T_5b31c_row2_col1" class="data row2 col1" >1,70</td>
-      <td id="T_5b31c_row2_col2" class="data row2 col2" >0,00</td>
-      <td id="T_5b31c_row2_col3" class="data row2 col3" >0,01</td>
-      <td id="T_5b31c_row2_col4" class="data row2 col4" >0,02</td>
-      <td id="T_5b31c_row2_col5" class="data row2 col5" >0,05</td>
-      <td id="T_5b31c_row2_col6" class="data row2 col6" >19,76</td>
+      <th id="T_f472a_level0_row2" class="row_heading level0 row2" >Fragments de polystyrène expansé: g81, g82, g83</th>
+      <td id="T_f472a_row2_col0" class="data row2 col0" >0,19</td>
+      <td id="T_f472a_row2_col1" class="data row2 col1" >1,48</td>
+      <td id="T_f472a_row2_col2" class="data row2 col2" >0,00</td>
+      <td id="T_f472a_row2_col3" class="data row2 col3" >0,01</td>
+      <td id="T_f472a_row2_col4" class="data row2 col4" >0,02</td>
+      <td id="T_f472a_row2_col5" class="data row2 col5" >0,05</td>
+      <td id="T_f472a_row2_col6" class="data row2 col6" >19,93</td>
     </tr>
     <tr>
-      <th id="T_5b31c_level0_row3" class="row_heading level0 row3" >Emballages de bonbons, de snacks</th>
-      <td id="T_5b31c_row3_col0" class="data row3 col0" >0,13</td>
-      <td id="T_5b31c_row3_col1" class="data row3 col1" >0,18</td>
-      <td id="T_5b31c_row3_col2" class="data row3 col2" >0,00</td>
-      <td id="T_5b31c_row3_col3" class="data row3 col3" >0,03</td>
-      <td id="T_5b31c_row3_col4" class="data row3 col4" >0,08</td>
-      <td id="T_5b31c_row3_col5" class="data row3 col5" >0,15</td>
-      <td id="T_5b31c_row3_col6" class="data row3 col6" >2,00</td>
+      <th id="T_f472a_level0_row3" class="row_heading level0 row3" >Emballages de bonbons, de snacks</th>
+      <td id="T_f472a_row3_col0" class="data row3 col0" >0,23</td>
+      <td id="T_f472a_row3_col1" class="data row3 col1" >1,26</td>
+      <td id="T_f472a_row3_col2" class="data row3 col2" >0,00</td>
+      <td id="T_f472a_row3_col3" class="data row3 col3" >0,04</td>
+      <td id="T_f472a_row3_col4" class="data row3 col4" >0,08</td>
+      <td id="T_f472a_row3_col5" class="data row3 col5" >0,15</td>
+      <td id="T_f472a_row3_col6" class="data row3 col6" >17,99</td>
     </tr>
     <tr>
-      <th id="T_5b31c_level0_row4" class="row_heading level0 row4" >Coton-tige</th>
-      <td id="T_5b31c_row4_col0" class="data row4 col0" >0,20</td>
-      <td id="T_5b31c_row4_col1" class="data row4 col1" >1,09</td>
-      <td id="T_5b31c_row4_col2" class="data row4 col2" >0,00</td>
-      <td id="T_5b31c_row4_col3" class="data row4 col3" >0,02</td>
-      <td id="T_5b31c_row4_col4" class="data row4 col4" >0,05</td>
-      <td id="T_5b31c_row4_col5" class="data row4 col5" >0,13</td>
-      <td id="T_5b31c_row4_col6" class="data row4 col6" >15,07</td>
+      <th id="T_f472a_level0_row4" class="row_heading level0 row4" >Coton-tige</th>
+      <td id="T_f472a_row4_col0" class="data row4 col0" >0,22</td>
+      <td id="T_f472a_row4_col1" class="data row4 col1" >0,98</td>
+      <td id="T_f472a_row4_col2" class="data row4 col2" >0,00</td>
+      <td id="T_f472a_row4_col3" class="data row4 col3" >0,02</td>
+      <td id="T_f472a_row4_col4" class="data row4 col4" >0,05</td>
+      <td id="T_f472a_row4_col5" class="data row4 col5" >0,12</td>
+      <td id="T_f472a_row4_col6" class="data row4 col6" >12,42</td>
     </tr>
     <tr>
-      <th id="T_5b31c_level0_row5" class="row_heading level0 row5" >Couvercles en plastique bouteille:  g21, g22, g23, g24</th>
-      <td id="T_5b31c_row5_col0" class="data row5 col0" >0,17</td>
-      <td id="T_5b31c_row5_col1" class="data row5 col1" >1,06</td>
-      <td id="T_5b31c_row5_col2" class="data row5 col2" >0,00</td>
-      <td id="T_5b31c_row5_col3" class="data row5 col3" >0,01</td>
-      <td id="T_5b31c_row5_col4" class="data row5 col4" >0,04</td>
-      <td id="T_5b31c_row5_col5" class="data row5 col5" >0,09</td>
-      <td id="T_5b31c_row5_col6" class="data row5 col6" >13,94</td>
+      <th id="T_f472a_level0_row5" class="row_heading level0 row5" >Couvercles en plastique bouteille:  g21, g22, g23, g24</th>
+      <td id="T_f472a_row5_col0" class="data row5 col0" >0,22</td>
+      <td id="T_f472a_row5_col1" class="data row5 col1" >1,42</td>
+      <td id="T_f472a_row5_col2" class="data row5 col2" >0,00</td>
+      <td id="T_f472a_row5_col3" class="data row5 col3" >0,01</td>
+      <td id="T_f472a_row5_col4" class="data row5 col4" >0,04</td>
+      <td id="T_f472a_row5_col5" class="data row5 col5" >0,09</td>
+      <td id="T_f472a_row5_col6" class="data row5 col6" >19,58</td>
     </tr>
     <tr>
-      <th id="T_5b31c_level0_row6" class="row_heading level0 row6" >Bâche, feuille plastique industrielle</th>
-      <td id="T_5b31c_row6_col0" class="data row6 col0" >3,27</td>
-      <td id="T_5b31c_row6_col1" class="data row6 col1" >5,19</td>
-      <td id="T_5b31c_row6_col2" class="data row6 col2" >0,00</td>
-      <td id="T_5b31c_row6_col3" class="data row6 col3" >0,20</td>
-      <td id="T_5b31c_row6_col4" class="data row6 col4" >0,64</td>
-      <td id="T_5b31c_row6_col5" class="data row6 col5" >4,37</td>
-      <td id="T_5b31c_row6_col6" class="data row6 col6" >19,91</td>
+      <th id="T_f472a_level0_row6" class="row_heading level0 row6" >Bâche, feuille plastique industrielle</th>
+      <td id="T_f472a_row6_col0" class="data row6 col0" >3,54</td>
+      <td id="T_f472a_row6_col1" class="data row6 col1" >5,42</td>
+      <td id="T_f472a_row6_col2" class="data row6 col2" >0,00</td>
+      <td id="T_f472a_row6_col3" class="data row6 col3" >0,26</td>
+      <td id="T_f472a_row6_col4" class="data row6 col4" >0,73</td>
+      <td id="T_f472a_row6_col5" class="data row6 col5" >4,86</td>
+      <td id="T_f472a_row6_col6" class="data row6 col6" >19,85</td>
     </tr>
     <tr>
-      <th id="T_5b31c_level0_row7" class="row_heading level0 row7" >Pellets industriels (gpi)</th>
-      <td id="T_5b31c_row7_col0" class="data row7 col0" >0,44</td>
-      <td id="T_5b31c_row7_col1" class="data row7 col1" >1,68</td>
-      <td id="T_5b31c_row7_col2" class="data row7 col2" >0,00</td>
-      <td id="T_5b31c_row7_col3" class="data row7 col3" >0,04</td>
-      <td id="T_5b31c_row7_col4" class="data row7 col4" >0,12</td>
-      <td id="T_5b31c_row7_col5" class="data row7 col5" >0,29</td>
-      <td id="T_5b31c_row7_col6" class="data row7 col6" >19,79</td>
+      <th id="T_f472a_level0_row7" class="row_heading level0 row7" >Pellets industriels (gpi)</th>
+      <td id="T_f472a_row7_col0" class="data row7 col0" >0,49</td>
+      <td id="T_f472a_row7_col1" class="data row7 col1" >1,70</td>
+      <td id="T_f472a_row7_col2" class="data row7 col2" >0,00</td>
+      <td id="T_f472a_row7_col3" class="data row7 col3" >0,03</td>
+      <td id="T_f472a_row7_col4" class="data row7 col4" >0,10</td>
+      <td id="T_f472a_row7_col5" class="data row7 col5" >0,34</td>
+      <td id="T_f472a_row7_col6" class="data row7 col6" >19,46</td>
     </tr>
     <tr>
-      <th id="T_5b31c_level0_row8" class="row_heading level0 row8" >Fragments de plastique angulaires <5mm</th>
-      <td id="T_5b31c_row8_col0" class="data row8 col0" >0,52</td>
-      <td id="T_5b31c_row8_col1" class="data row8 col1" >1,11</td>
-      <td id="T_5b31c_row8_col2" class="data row8 col2" >0,00</td>
-      <td id="T_5b31c_row8_col3" class="data row8 col3" >0,07</td>
-      <td id="T_5b31c_row8_col4" class="data row8 col4" >0,24</td>
-      <td id="T_5b31c_row8_col5" class="data row8 col5" >0,77</td>
-      <td id="T_5b31c_row8_col6" class="data row8 col6" >15,50</td>
+      <th id="T_f472a_level0_row8" class="row_heading level0 row8" >Fragments de plastique angulaires <5mm</th>
+      <td id="T_f472a_row8_col0" class="data row8 col0" >0,51</td>
+      <td id="T_f472a_row8_col1" class="data row8 col1" >1,26</td>
+      <td id="T_f472a_row8_col2" class="data row8 col2" >0,00</td>
+      <td id="T_f472a_row8_col3" class="data row8 col3" >0,06</td>
+      <td id="T_f472a_row8_col4" class="data row8 col4" >0,24</td>
+      <td id="T_f472a_row8_col5" class="data row8 col5" >0,74</td>
+      <td id="T_f472a_row8_col6" class="data row8 col6" >17,03</td>
     </tr>
     <tr>
-      <th id="T_5b31c_level0_row9" class="row_heading level0 row9" >Déchets de construction en plastique</th>
-      <td id="T_5b31c_row9_col0" class="data row9 col0" >0,84</td>
-      <td id="T_5b31c_row9_col1" class="data row9 col1" >3,29</td>
-      <td id="T_5b31c_row9_col2" class="data row9 col2" >0,00</td>
-      <td id="T_5b31c_row9_col3" class="data row9 col3" >0,01</td>
-      <td id="T_5b31c_row9_col4" class="data row9 col4" >0,02</td>
-      <td id="T_5b31c_row9_col5" class="data row9 col5" >0,04</td>
-      <td id="T_5b31c_row9_col6" class="data row9 col6" >19,91</td>
+      <th id="T_f472a_level0_row9" class="row_heading level0 row9" >Déchets de construction en plastique</th>
+      <td id="T_f472a_row9_col0" class="data row9 col0" >0,98</td>
+      <td id="T_f472a_row9_col1" class="data row9 col1" >3,27</td>
+      <td id="T_f472a_row9_col2" class="data row9 col2" >0,00</td>
+      <td id="T_f472a_row9_col3" class="data row9 col3" >0,00</td>
+      <td id="T_f472a_row9_col4" class="data row9 col4" >0,02</td>
+      <td id="T_f472a_row9_col5" class="data row9 col5" >0,03</td>
+      <td id="T_f472a_row9_col6" class="data row9 col6" >19,34</td>
     </tr>
     <tr>
-      <th id="T_5b31c_level0_row10" class="row_heading level0 row10" >Mousse de plastique pour l'isolation thermique</th>
-      <td id="T_5b31c_row10_col0" class="data row10 col0" >0,20</td>
-      <td id="T_5b31c_row10_col1" class="data row10 col1" >1,40</td>
-      <td id="T_5b31c_row10_col2" class="data row10 col2" >0,00</td>
-      <td id="T_5b31c_row10_col3" class="data row10 col3" >0,01</td>
-      <td id="T_5b31c_row10_col4" class="data row10 col4" >0,02</td>
-      <td id="T_5b31c_row10_col5" class="data row10 col5" >0,05</td>
-      <td id="T_5b31c_row10_col6" class="data row10 col6" >16,30</td>
+      <th id="T_f472a_level0_row10" class="row_heading level0 row10" >Mousse de plastique pour l'isolation thermique</th>
+      <td id="T_f472a_row10_col0" class="data row10 col0" >0,32</td>
+      <td id="T_f472a_row10_col1" class="data row10 col1" >1,72</td>
+      <td id="T_f472a_row10_col2" class="data row10 col2" >0,00</td>
+      <td id="T_f472a_row10_col3" class="data row10 col3" >0,01</td>
+      <td id="T_f472a_row10_col4" class="data row10 col4" >0,03</td>
+      <td id="T_f472a_row10_col5" class="data row10 col5" >0,06</td>
+      <td id="T_f472a_row10_col6" class="data row10 col6" >17,03</td>
     </tr>
     <tr>
-      <th id="T_5b31c_level0_row11" class="row_heading level0 row11" >Cartouches de fusil de chasse</th>
-      <td id="T_5b31c_row11_col0" class="data row11 col0" >1,05</td>
-      <td id="T_5b31c_row11_col1" class="data row11 col1" >3,52</td>
-      <td id="T_5b31c_row11_col2" class="data row11 col2" >0,00</td>
-      <td id="T_5b31c_row11_col3" class="data row11 col3" >0,01</td>
-      <td id="T_5b31c_row11_col4" class="data row11 col4" >0,02</td>
-      <td id="T_5b31c_row11_col5" class="data row11 col5" >0,04</td>
-      <td id="T_5b31c_row11_col6" class="data row11 col6" >19,92</td>
+      <th id="T_f472a_level0_row11" class="row_heading level0 row11" >Cartouches de fusil de chasse</th>
+      <td id="T_f472a_row11_col0" class="data row11 col0" >0,80</td>
+      <td id="T_f472a_row11_col1" class="data row11 col1" >2,98</td>
+      <td id="T_f472a_row11_col2" class="data row11 col2" >0,00</td>
+      <td id="T_f472a_row11_col3" class="data row11 col3" >0,01</td>
+      <td id="T_f472a_row11_col4" class="data row11 col4" >0,02</td>
+      <td id="T_f472a_row11_col5" class="data row11 col5" >0,04</td>
+      <td id="T_f472a_row11_col6" class="data row11 col6" >19,01</td>
     </tr>
     <tr>
-      <th id="T_5b31c_level0_row12" class="row_heading level0 row12" >Bâtonnets de sucette</th>
-      <td id="T_5b31c_row12_col0" class="data row12 col0" >0,40</td>
-      <td id="T_5b31c_row12_col1" class="data row12 col1" >2,25</td>
-      <td id="T_5b31c_row12_col2" class="data row12 col2" >0,00</td>
-      <td id="T_5b31c_row12_col3" class="data row12 col3" >0,01</td>
-      <td id="T_5b31c_row12_col4" class="data row12 col4" >0,02</td>
-      <td id="T_5b31c_row12_col5" class="data row12 col5" >0,05</td>
-      <td id="T_5b31c_row12_col6" class="data row12 col6" >19,63</td>
+      <th id="T_f472a_level0_row12" class="row_heading level0 row12" >Bâtonnets de sucette</th>
+      <td id="T_f472a_row12_col0" class="data row12 col0" >0,35</td>
+      <td id="T_f472a_row12_col1" class="data row12 col1" >2,02</td>
+      <td id="T_f472a_row12_col2" class="data row12 col2" >0,00</td>
+      <td id="T_f472a_row12_col3" class="data row12 col3" >0,01</td>
+      <td id="T_f472a_row12_col4" class="data row12 col4" >0,02</td>
+      <td id="T_f472a_row12_col5" class="data row12 col5" >0,04</td>
+      <td id="T_f472a_row12_col6" class="data row12 col6" >17,86</td>
     </tr>
     <tr>
-      <th id="T_5b31c_level0_row13" class="row_heading level0 row13" >Pailles et agitateurs</th>
-      <td id="T_5b31c_row13_col0" class="data row13 col0" >1,09</td>
-      <td id="T_5b31c_row13_col1" class="data row13 col1" >1,30</td>
-      <td id="T_5b31c_row13_col2" class="data row13 col2" >0,00</td>
-      <td id="T_5b31c_row13_col3" class="data row13 col3" >0,28</td>
-      <td id="T_5b31c_row13_col4" class="data row13 col4" >0,66</td>
-      <td id="T_5b31c_row13_col5" class="data row13 col5" >1,33</td>
-      <td id="T_5b31c_row13_col6" class="data row13 col6" >8,38</td>
+      <th id="T_f472a_level0_row13" class="row_heading level0 row13" >Pailles et agitateurs</th>
+      <td id="T_f472a_row13_col0" class="data row13 col0" >1,09</td>
+      <td id="T_f472a_row13_col1" class="data row13 col1" >1,19</td>
+      <td id="T_f472a_row13_col2" class="data row13 col2" >0,01</td>
+      <td id="T_f472a_row13_col3" class="data row13 col3" >0,31</td>
+      <td id="T_f472a_row13_col4" class="data row13 col4" >0,67</td>
+      <td id="T_f472a_row13_col5" class="data row13 col5" >1,44</td>
+      <td id="T_f472a_row13_col6" class="data row13 col6" >8,96</td>
     </tr>
   </tbody>
 </table>
@@ -1722,13 +1722,12 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Git repo: https://github.com/hammerdirt-analyst/plastock.git
 
-Git branch: main
+Git branch: feb5
 
-rpy2      : 3.5.11
-pandas    : 2.0.3
+matplotlib: 3.8.2
 numpy     : 1.26.3
 seaborn   : 0.13.1
-matplotlib: 3.8.2
+pandas    : 2.0.3
 </pre></div>
 </div>
 </div>
@@ -1741,27 +1740,7 @@ _"L’introduction simultanée de variables quantitatives et qualitatives (donn�
 
 Cette section est rédigée en R. Les données sont les mêmes que celles utilisées dans les sections précédentes. --><!-- ### AFDM 5 dimensions
 
-#### Valeurs Eigen et pourcentage cumulé de la variance --><div class="cell tag_remove-input docutils container">
-</div>
-<div class="cell tag_remove-input docutils container">
-</div>
-<div class="cell tag_remove-input docutils container">
-</div>
-<div class="cell tag_remove-input docutils container">
-</div>
-<div class="cell tag_remove-input docutils container">
-</div>
-<div class="cell tag_remove-input docutils container">
-</div>
-<div class="cell tag_remove-input docutils container">
-</div>
-<div class="cell tag_remove-input docutils container">
-</div>
-<div class="cell tag_remove-input docutils container">
-</div>
-<div class="cell tag_remove-input docutils container">
-</div>
-</section>
+#### Valeurs Eigen et pourcentage cumulé de la variance --></section>
 </section>
 </section>
 
@@ -1796,7 +1775,7 @@ Cette section est rédigée en R. Les données sont les mêmes que celles utilis
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="macro_attributes.html"
+       href="macro_plage_attributes.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">

@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'macro_surface_area';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="3. Résultats précédents" href="macro_object_results.html" />
+    <link rel="next" title="3. Résultats précédents" href="resultats_precedents.html" />
     <link rel="prev" title="1. Micros particules" href="micro_results.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -166,15 +166,15 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="micro_results.html">1. Micros particules</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Pla’stock Macros déchets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="macro_object_results.html">3. Résultats précédents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resultats_precedents.html">3. Résultats précédents</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Annex</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="random_variables.html">Variables aléatoires</a></li>
-<li class="toctree-l1"><a class="reference internal" href="location_summary.html">Microplastiques plage et position</a></li>
-<li class="toctree-l1"><a class="reference internal" href="location_attributes.html">Microplastiques plage et attribut</a></li>
-<li class="toctree-l1"><a class="reference internal" href="macro_summary.html">Macro déchets plage et position</a></li>
-<li class="toctree-l1"><a class="reference internal" href="macro_attributes.html">Macro déchets plage et attribut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="micro_plage_position.html">Microplastiques plage et position</a></li>
+<li class="toctree-l1"><a class="reference internal" href="micro_plage_attributes.html">Microplastiques plage et attribut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="macro_plage_position.html">Macro déchets plage et position</a></li>
+<li class="toctree-l1"><a class="reference internal" href="macro_plage_attributes.html">Macro déchets plage et attribut</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data_processing.html">Data processing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
 </ul>
@@ -409,13 +409,13 @@ document.write(`
 <p class="sd-card-text"><b>Fig 2.1 :</b> Carte des résultats de l’étude. Densité moyenne de déchets par site d’échantillonnage. Le diamètre du marqueur est relatif à la densité moyenne de déchets par mètre carré de plage.</p>
 </div>
 </div>
-<p>Le résultat moyen était de 0,66 déchets par mètre² (pcs/m²). L’objet le plus courant est le plastique fragmenté, qui représente 41 % du total des objets (0,26 pièce/m²), suivi des mégots de cigarettes, qui représentent 11 % du total (0,07 pièce/m²).  Les objets les plus courants, (<a class="reference internal" href="#mc-sa"><span class="std std-ref">plus courants</span></a>), en 2022 avaient tous été identifiés lors de campagnes antérieures sur le lac. Il convient de noter que six des objets les plus courants identifiés dans les études Pla’stock sont également les plus courants dans la région OSPAR (<a class="reference internal" href="macro_object_results.html#cor-ospar"><span class="std std-ref">OSPAR correspondance</span></a>).</p>
+<p>Le résultat moyen était de 0,66 déchets par mètre² (pcs/m²). L’objet le plus courant est le plastique fragmenté, qui représente 41 % du total des objets (0,26 pièce/m²), suivi des mégots de cigarettes, qui représentent 11 % du total (0,07 pièce/m²).  Les objets les plus courants, (<a class="reference internal" href="#mc-sa"><span class="std std-ref">plus courants</span></a>), en 2022 avaient tous été identifiés lors de campagnes antérieures sur le lac. Il convient de noter que six des objets les plus courants identifiés dans les études Pla’stock sont également les plus courants dans la région OSPAR (<a class="reference internal" href="resultats_precedents.html#cor-ospar"><span class="std std-ref">OSPAR correspondance</span></a>).</p>
 <p>Les échantillons ont été prélevés des deux côtés du lac et dans les trois régions. Le plus grand nombre d’échantillons a été collecté dans le Grand lac (47), suivi du Petit lac (27) et enfin du Haut lac (24). Le résultat moyen était le plus élevé dans le Haut lac (0,95 pcs/m²), suivi par le Grand lac (0,65 pcs/m²) et enfin le Petit lac (0,4 pcs/m²). Tous les objets les plus courants, à l’exception des capsules de bouteilles, ont également enregistré des valeurs moyennes plus élevées dans le Haut Lac. Cependant, la valeur médiane est la plus élevée dans le Grand lac et la différence entre la médiane et la moyenne est la plus élevée dans le Haut lac (<a class="reference internal" href="#mc-regional"><span class="std std-ref">régionalité</span></a>).</p>
 <p>Les résultats de l’enquête sur les objets tels que les mégots de cigarettes et les emballages de snacks devraient être plus élevés dans les endroits où le substrat est sablonneux et où il y a un accès à un parking. Les sites éloignés ou constitués d’un substrat de gravier présentent des niveaux plus élevés de plastiques fragmentés. Différents modèles ont été envisagés à l’aide d’une régression par forêt aléatoire (<a class="reference internal" href="#random-forest-sa"><span class="std std-ref">random forest</span></a>)  et d’une approximation par grille (<a class="reference internal" href="#grid-approx-p"><span class="std std-ref">grid approximation</span></a>).</p>
 <p><strong>Autres campganes :</strong></p>
 <p>Le Swiss Litter Report (<a class="reference external" href="http://www.stoppp.org/">Swiss Litter Report</a>) fait état d’une moyenne de 0,67 déchet par m². La moyenne déclarée pour les lacs était de 1,23 pcs/m², avec des chiffres élevés dans les zones urbaines de 1,03 pcs/m². Nous notons que ces valeurs se situent dans la fourchette que l’on pourrait attendre de la mer ionienne (0,67 pcs/m²) (<a class="reference internal" href="#ionian"><span class="std std-ref">Ionian</span></a>) ou de la mer méditerranée (0,61 pcs/m²)(<a class="reference internal" href="#mediteranean"><span class="std std-ref">Mediterranean</span></a>).</p>
 <p><strong>Perspectives 2024 :</strong></p>
-<p>Si nous utilisons la même logique que celle appliquée dans (<a class="reference internal" href="macro_object_results.html#previous-results"><span class="std std-ref">résulats précédents</span></a>), le résultat médian estimé pour 2024 se situe entre 0,43 pcs/m² et 0,62 pcs/m². Les sites avec un substrat de gravier ou plus éloignés auront des valeurs de comptage plus faibles pour les mégots de cigarettes et les emballages de snacks, mais des proportions plus élevées de plastiques fragmentés.</p>
+<p>Si nous utilisons la même logique que celle appliquée dans (<a class="reference internal" href="resultats_precedents.html#previous-results"><span class="std std-ref">résulats précédents</span></a>), le résultat médian estimé pour 2024 se situe entre 0,43 pcs/m² et 0,62 pcs/m². Les sites avec un substrat de gravier ou plus éloignés auront des valeurs de comptage plus faibles pour les mégots de cigarettes et les emballages de snacks, mais des proportions plus élevées de plastiques fragmentés.</p>
 <section id="resultats">
 <span id="sa-results"></span><h2><span class="section-number">2.1. </span>Résultats<a class="headerlink" href="#resultats" title="Permalink to this heading">#</a></h2>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
@@ -2544,8 +2544,8 @@ document.write(`
 </section>
 <section id="conditions-dechantillonnage">
 <h3><span class="section-number">2.1.3. </span>Conditions d’échantillonnage<a class="headerlink" href="#conditions-dechantillonnage" title="Permalink to this heading">#</a></h3>
-<p>Les enquêteurs ont classé les conditions à chaque emplacement d’échantillonnage selon quatre catégories, fréquentation, substrat, distance au parking et situation (ville/campagne). Les plages ayant un taux d’utilisation élevé représentaient 56% (55/98) de tous les échantillons. Les plages situés à moins de 500 mètres d’un parking représentent 84% (83/98). Le résumé en détail est disponible (<a class="reference internal" href="macro_attributes.html#macro-attributes"><span class="std std-ref">attributes</span></a>).</p>
-<p>Les catégories ont été combinées afin de réduire la covariance et d’améliorer l’interprétabilité. Les catégories ont été réduites de 4 à 2 dans le cas du substrat et de la distance au parking. La fréquence a été réduite à deux groupes en combinant les deux rangs les plus bas. Vous pouvez consulter les détails de la raison et de la manière dont nous procédons ici (<a class="reference internal" href="macro_object_results.html#correlations"><span class="std std-ref">correlations</span></a>). Les résultats sont présentés ci-dessous :</p>
+<p>Les enquêteurs ont classé les conditions à chaque emplacement d’échantillonnage selon quatre catégories, fréquentation, substrat, distance au parking et situation (ville/campagne). Les plages ayant un taux d’utilisation élevé représentaient 56% (55/98) de tous les échantillons. Les plages situés à moins de 500 mètres d’un parking représentent 84% (83/98). Le résumé en détail est disponible (<a class="reference internal" href="macro_plage_attributes.html#macro-attributes"><span class="std std-ref">attributes</span></a>).</p>
+<p>Les catégories ont été combinées afin de réduire la covariance et d’améliorer l’interprétabilité. Les catégories ont été réduites de 4 à 2 dans le cas du substrat et de la distance au parking. La fréquence a été réduite à deux groupes en combinant les deux rangs les plus bas. Vous pouvez consulter les détails de la raison et de la manière dont nous procédons ici (<a class="reference internal" href="resultats_precedents.html#correlations"><span class="std std-ref">correlations</span></a>). Les résultats sont présentés ci-dessous :</p>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
 <div class="sd-col sd-d-flex-column docutils">
@@ -4625,7 +4625,7 @@ seaborn   : 0.13.1
       </div>
     </a>
     <a class="right-next"
-       href="macro_object_results.html"
+       href="resultats_precedents.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
