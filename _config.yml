@@ -10,11 +10,11 @@ execute:
 #   url: https://github.com/hammerdirt-analyst/plastock
 
 # Add a bibtex file so that we can create citations
-bibtex_bibfiles:
- - references.bib
+# bibtex_bibfiles:
+#  - references.bib
 sphinx:
   config:
-    bibtex_reference_style: author_year
+    # bibtex_reference_style: author_year
     html_theme_options:
       use_download_button: false
       repository_url: https://github.com/hammerdirt-analyst/plastock
@@ -23,5 +23,5 @@ sphinx:
       
       extra_footer:
         <p>
-           Association pour la Sauvegarde du Léman et hammerdirt 2023
+           Association pour la Sauvegarde du Léman 2024
         </p>
