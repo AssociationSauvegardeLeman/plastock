@@ -48,10 +48,11 @@ A la loupe binoculaire, sous cloche au sein des locaux de l’ASL. On distingue 
 
 ### Limite de l’approche méthodologique
 
-Lors du traitement des échantillons à l’université de Genève, de leur transport et de la comptabilisation à l’ASL des comptaminations peuvent intervenir. Des blancs de laboratoires ont donc été effectué, résultats ci-dessous :
+Lors du traitement des échantillons à l’Université de Genève, de leur transport et de la comptabilisation à l’ASL des contaminations peuvent intervenir. Des blancs de laboratoires ont donc été effectué en reproduisant toutes les étapes allant du traitement de l'échantillon avec le NaI à la comptabilisation à l'ASL.
 
 
-| Blancs |Fibres transparente| Fibres noires | Fibres bleues |Fibres rouges|
+Tableau 4.1: Blancs de laboratoire effectués à l'UNIGE avec comptabilisation à l'ASL
+| Blancs |Fibres transparentes| Fibres noires | Fibres bleues |Fibres rouges|
 | :---: |:---: |:---: |:---: |:---: |
 | Blanc 1 |15|4|0|2|
 | Blanc 2 |39|7|4|0|
