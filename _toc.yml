@@ -6,6 +6,9 @@ parts:
 - caption: Analyses
   numbered: true
   chapters:
+  - file: introduction
+  - file: chapeter_2
+  - file: chapter_3
   - file: micro_results
   - file: macro_surface_area
   - file: resultats_precedents
