@@ -78,4 +78,20 @@ __Resampling__, _Wikepedia_, 2021, [https://en.wikipedia.org/wiki/Resampling_(st
 
 
 
+Boucher, J., Faure, F., Pompini, O., Plummer, Z., Wieser, O., & de Alencastro, L. F. (2019). (Micro) plastic fluxes and stocks in Lake Geneva basin. TrAC Trends in Analytical Chemistry, 112, 66-74.
 
+
+Faure, F., De Alencastro, L. F. (2018) Evaluation de la pollution par les plastiques dans les eaux de surface en Suisse.
+
+
+Gerdts, G. (2019). Defining the BASElines and standards for Microplastics ANalyses in European waters: Final report Project BASEMAN.
+
+MSFD Technical Subgroup on Marine Litter. 2013. A guidance document within the Common Implementation Strategy for the Marine Strategy Framework Directive 
+
+Frei, G., Peduzzi, S., Stoll, S., & Bruder, A. Assessment of microplastic contamination on lakeshores of Lake Lugano.
+
+Zbyszewski, M., Corcoran, P. L., & Hockin, A. (2014). Comparison of the distribution and degradation of plastic debris along shorelines of the Great Lakes, North America. Journal of Great Lakes Research, 40(2), 288-299.
+
+Imhof, H. K., Wiesheu, A. C., Anger, P. M., Niessner, R., Ivleva, N. P., & Laforsch, C. (2018). Variation in plastic abundance at different lake beach zones-A case study. Science of the Total Environment, 613, 530-537.
+
+Bridson, J. H., Patel, M., Lewis, A., Gaw, S., & Parker, K. (2020). Microplastic contamination in Auckland (New Zealand) beach sediments. Marine Pollution Bulletin, 151, 110867.

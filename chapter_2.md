@@ -8,16 +8,16 @@ Une sélection de 25 plages a été effectuée afin d’assurer une répartition
 
 ##  Phase 2: Elaboration des méthodes
 
-Que se soit pour les macro- ou les microplastiques, les méthodes de prélèvements et d’analyses ont été développées puis testées et validées par l’ASL. Elles sont compatibles avec les protocoles scientifiques utilisés par les différentes études ayant traité du même sujet en Europe (Baseman) et au niveau helvétique (OFEV). Leur application permet de comparer la situation observée sur le pourtour du Léman avec celles constatées ailleurs en Suisse ou en Europe. Le choix des méthodes avait été préalablement validé par le conseil scientifique de la CIPEL. (lien vers les protocoles micro et macro en annexe).
+Que se soit pour les macro- ou les microplastiques, les méthodes de prélèvements et d’analyses ont été développées puis testées et validées par l’ASL. Elles sont compatibles avec les protocoles scientifiques utilisés par les différentes études ayant traité du même sujet en Europe (Gerdts, 2019) et au niveau helvétique (OFEV). Leur application permet de comparer la situation observée sur le pourtour du Léman avec celles constatées ailleurs en Suisse ou en Europe. Le choix des méthodes avait été préalablement validé par le conseil scientifique de la CIPEL. (lien vers les protocoles micro et macro en annexe).
 
 ## Phase 3a : Terrain
 
-Les ramassages de déchets ont été opérés selon le concept de science participative à l’aide de bénévoles préalablement formés et munis d’un protocole qu’ils ont répété à quatre reprises, soit une fois par saison. Les données ont été saisies dans l’application Net’Léman de l’ASL qui permet de centraliser les données aux fins d’analyse. Le protocole de collecte et de saisie a été établi d’après les référentiels du Guide sur la surveillance des déchets marins dans les mers européennes publié par la Commission européenne en 2013. Son application permet de comparer les résultats obtenus sur les rives du Léman  avec les autres études effectuées aux niveaux national et européen. En ce qui concerne les microplastiques, les prélèvements ont été réalisés par les étudiantes en master avec l’appui de l’équipe ASL.
+Les ramassages de déchets ont été opérés selon le concept de science participative à l’aide de bénévoles préalablement formés et munis d’un protocole qu’ils ont répété à quatre reprises, soit une fois par saison. Les données ont été saisies dans l’application Net’Léman (netleman.app) de l’ASL qui permet de centraliser les données aux fins d’analyse. Le protocole de collecte et de saisie a été établi d’après les référentiels du Guide sur la surveillance des déchets marins dans les mers européennes publié par la Commission européenne en 2013 (MSFD, 2013). Son application permet de comparer les résultats obtenus sur les rives du Léman avec les autres études effectuées aux niveaux national et européen. En ce qui concerne les microplastiques, les prélèvements ont été réalisés par les étudiantes en master avec l’appui de l’équipe ASL.
 
 ## Phase 3b : Laboratoire
 
-La quantification du stock de microplastiques s’est déroulée dans les locaux de l’ASL, sous cloche. La caractérisation des échantillons a été effectuée par les étudiantes en master dans les laboratoires de l’UNIGE par microspectroscopie (FTIR-ATR). 
-Pour les macroplastiques, les données enregistrées dans l’application Net’Léman ont été vérifiées, puis analysées en vue de trier et déterminer les proportions des différents types de plastique.
+La quantification du stock de microplastiques s’est déroulée dans les locaux de l’ASL, sous cloche. La caractérisation des échantillons a été effectuée par les étudiantes en master dans les laboratoires de l’UNIGE par microspectroscopie (FTIR-ATR) selon la méthodologie décrite par Frei (Frei et al., 2021) 
+Pour les macroplastiques, les données enregistrées dans l’application Net’Léman ont été vérifiées, puis analysées en vue de déterminer les proportions des différents types de plastique.
 
 ## Phase 4 : Résultats
 

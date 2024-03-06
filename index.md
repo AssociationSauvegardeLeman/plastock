@@ -1,4 +1,4 @@
-# Pla'stock - count data
+# Pla'stock Léman
 
 *Statistiques descriptives et modèles du nombre de fragments de micro-plastiques et de déchets identifiés sur les plages du Léman.*
 

@@ -3,7 +3,7 @@ root: index
 options:
   only_build_toc_files: true
 parts:
-- caption: Analyses
+- caption: Rapport
   numbered: true
   chapters:
   - file: introduction
@@ -13,7 +13,7 @@ parts:
   - file: micro_results
   - file: macro_surface_area
   - file: resultats_precedents
-- caption: Annex
+- caption: Annexes
   numbered: False
   chapters:
   - file: random_variables

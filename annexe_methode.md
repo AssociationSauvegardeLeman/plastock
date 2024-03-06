@@ -6,9 +6,7 @@
 
 Le périmètre du Léman, plus grand lac d’Europe occidentale par son volume, est de 200 km. Ses rives ont été découpées en 25 tronçons de longueur équivalente et au moins une plage a été choisie dans chacun de ces secteurs selon ses caractéristiques (type de substrat, exposition, fréquentation, degré d’urbanisationdes alentours, etc.) et la diversité des milieux qui la constituent et ce, afin d’obtenir un échantillonnage représentatif de la réalité. 
 
-Incruster carte des secteurs
-
-La méthodologie de prélèvements et d’analyses a été testée et choisie pour être compatible avec les protocoles d’autres études européennes aux fins de comparaisons (Faure et al., 2014)(Frei et al. 2021). Ces décisions ont été validées par le groupe de travail « Pla’stock » de l’ASL et le Conseil scientifique de la CIPEL.
+La méthodologie de prélèvements et d’analyses a été testée et choisie pour être compatible avec les protocoles d’autres études européennes aux fins de comparaisons. Ces décisions ont été validées par le groupe de travail « Pla’stock » de l’ASL et le Conseil scientifique de la CIPEL.
 
  Le choix s’est porté sur neuf grandes plages de plus de 80 m de long, neuf de 50 à 80 m et sept de 15 à 50 m. Les surfaces inventoriées varient entre 16 m2 pour la plus petite et près de 2000 m2 pour la plus grande. Au total, ce sont quatre plages de moins de 100 m2, 15 de 100 à 500 m2, cinq de 500 à 1100 m2 et une de 1980 m2 qui ont été investiguées. De plus, une attention particulière a été portée au substrat afin d’avoir une bonne répartition entre les plages de sable, de graviers et de galets.
 
@@ -27,16 +25,11 @@ Chaque plage comprend deux sous-secteurs :
 
 Les microplastiques, de taille inférieure à 5mm, ont été prélevés et analysés par les collaborateurs et collaboratrices de l’ASL ainsi que par deux étudiantes dans le cadre de la réalisation de leurs travaux de master au sein du groupe de recherche du Dr Serge Stoll du Département F.-A. Forel des Sciences de l’environnement et de l’eau de l’Université de Genève. Un troisième master en cours étudie les courants qui peuvent influencer le degré d’accumulation de microplastiques sur les plages.
 
-La stratégie d’échantillonnage est inspirée de celle de Gerdts (2019). Sur chaque plage, une carotte de substrat est prélevée de manière aléatoire (positionnement préalable sur une carte) tous les 45 m2 en moyenne avec un profilé de 10cm de côté sur une profondeur de 5 cm. Cette profondeur correspond à celle utilisée dans le cadre d’études similaires (Faure & De Alencastro, 2014; Imhof et al., 2018; Zbyszewski et al., 2014). La méthode est adaptée de Bridson et al (2020). La position géographique de chaque échantillon est relevée au moyen d’un GPS et les récipients contenant ces derniers sont stockés à l’Université en chambre froide à 4° C.
+La stratégie d’échantillonnage est inspirée de Baseman (2018). Sur chaque plage, une carotte de substrat est prélevée de manière aléatoire (positionnement préalable sur une carte) tous les 45 m2 en moyenne avec un profilé de 10cm de côté sur une profondeur de 5 cm. Cette profondeur correspond à celle utilisée dans le cadre d’études similaires (Faure & De Alencastro, 2014; Imhof et al., 2018; Zbyszewski et al., 2014). La méthode est adaptée de Bridson et al (2020). La position géographique de chaque échantillon est relevée au moyen d’un GPS et les récipients contenant ces derniers sont stockés à l’Université en chambre froide à 4° C.
 
 Les récipients sont étiquetés de la manière suivante : 
 
-- Pays ; 
-- Région ; 
-- n° de station ; 
-- n° d’échantillon. 
-
-Les numéros d’échantillons sont définis de l’amont vers l’aval. 
+Pays ; Région ; n° de station ; n° d’échantillon. Les numéros d’échantillons sont définis de l’amont vers l’aval. 
 Exemple: Baby Plage à Genève : CH GE 01.1; CH GE 01.2 ; CH GE 01.3 ;… 
 
 Au total, 235 échantillons de 500 cm3 ont ainsi été prélevés en novembre 2021.
@@ -67,7 +60,7 @@ Tableau 4.1: Blancs de laboratoire effectués à l'UNIGE avec comptabilisation �
 
 A noter que seules des fibres ont été retrouvées dans les blancs.
 
-## Récolte, extraction et identification des macroplastiques
+## Récolte, d’extraction et d’identification des macroplastiques
 
 La récolte et le recensement des macroplastiques (≥ 5mm) et des microplastiques visibles à l’oeil nu (2 à 5 mm), ont été confiés à des personnes de la société civile qui se sont spontanément inscrites pour se livrer à cette expérience de science participative. Une centaine de bénévoles très motivés ont ainsi appliqué un protocole scientifique précis sur les plages sélectionnées par l’ASL en respectant une surface et un temps de travail donné. Le nombre d’intervenants, le secteur et le temps d’intervention doivent être rigoureusement respectés. En outre, la récolte des plus petits éléments (2 à 5 mm) demande une attention toute particulière.
 
