@@ -1,0 +1,756 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>5. Résultats &#8212; Pla&#39;stock</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'resultats';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Variables aléatoires" href="random_variables.html" />
+    <link rel="prev" title="4. Méthodes" href="chapter_4.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <header>
+  
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
+  
+  </header>
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Pla'stock</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Rapport</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter_2.html">2. Déroulement du projet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter_3.html">3. Questions de recherches et hypothèses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter_4.html">4. Méthodes</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Résultats</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Annex</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="random_variables.html">Variables aléatoires</a></li>
+<li class="toctree-l1"><a class="reference internal" href="micro_results.html">Micros particules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="micro_plage_position.html">Microplastiques plage et position</a></li>
+<li class="toctree-l1"><a class="reference internal" href="micro_plage_attributes.html">Microplastiques plage et attribut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="macro_surface_area.html">Macros déchets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="macro_plage_position.html">Macro déchets plage et position</a></li>
+<li class="toctree-l1"><a class="reference internal" href="macro_plage_attributes.html">Macro déchets plage et attribut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resultats_precedents.html">Résultats précédents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_processing.html">Data processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">Références</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/hammerdirt-analyst/plastock" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hammerdirt-analyst/plastock/issues/new?title=Issue%20on%20page%20%2Fresultats.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Résultats</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microplastiques-300-m-a-5-mm">5.1. Microplastiques (300 µm à 5 mm)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#repartition-des-microplastiques-sur-les-plages-du-leman">5.1.1. Répartition des microplastiques sur les plages du Léman</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#difference-entre-la-ligne-deau-et-la-plage-seche">5.1.2. Différence entre la ligne d’eau et la plage sèche</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#identification-des-particules-comptabilisees">5.1.3. Identification des particules comptabilisées</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparaison-avec-dautres-etudes">5.1.4. Comparaison avec d’autres études</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macroplastiques-2-mm">5.2. Macroplastiques (&gt; 2 mm)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#repartition-des-macroplastiques-sur-les-plages-du-leman">5.2.1. Répartition des macroplastiques sur les plages du Léman</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">5.2.2. Différence entre la ligne d’eau et la plage sèche</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-de-macroplastiques-sur-les-plages-du-leman">5.2.3. Types de macroplastiques sur les plages du Léman</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etude-des-principaux-dechets-recoltes">5.3. Etude des principaux déchets récoltés.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimation-du-stock">5.3.1. Estimation du stock</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">5.3.2. Comparaison avec d’autres études</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="resultats">
+<h1><span class="section-number">5. </span>Résultats<a class="headerlink" href="#resultats" title="Permalink to this heading">#</a></h1>
+<section id="microplastiques-300-m-a-5-mm">
+<h2><span class="section-number">5.1. </span>Microplastiques (300 µm à 5 mm)<a class="headerlink" href="#microplastiques-300-m-a-5-mm" title="Permalink to this heading">#</a></h2>
+<p>Les échantillons microplastiques ont été prélevés sur une surface de 10 cm x 10 cm et sur 5 cm de profondeur. Cette profondeur correspond à la norme prise en compte dans les études sur la teneur en microplastiques. Les résultats sont ensuite exprimés à l’échelle du mètre carré sur une profondeur de 5 cm.</p>
+<section id="repartition-des-microplastiques-sur-les-plages-du-leman">
+<h3><span class="section-number">5.1.1. </span>Répartition des microplastiques sur les plages du Léman<a class="headerlink" href="#repartition-des-microplastiques-sur-les-plages-du-leman" title="Permalink to this heading">#</a></h3>
+<p>En prenant la totalité des 217 échantillons analysés, les plages étudiées contiennent en moyenne 189 particules plastiques avec un écart-type de 278. Parmi ces échantillons, 3 se trouvent dans le 99ème percentile. Il s’agit d’un échantillon à la plage de la Pichette (VD) contenant 3143 et de deux à Port Choiseul (GE) contenant respectivement 1492 et 1076 particules. Pour la suite des analyses, ils n’ont donc pas été pris en compte.</p>
+<p>Tableau 5.1 :  A) Ensemble des données ; B) Données sous le 99ème percentile</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Ensemble des données</div>
+<p class="sd-card-text">tableaux</p>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text"><b>Tableau xx :</b> Valeurs globales du nombre de pièce identifiées comme étant du plastique par échantillons (particules/100 cm2)..</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Données sous le 99ème percentile</div>
+<p class="sd-card-text">tableaux</p>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text"><b>Tableau xx :</b> Valeurs globales du nombre de pièce identifiées comme étant du plastique par échantillons (particules/100 cm2).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>L’élimination du 99ème percentile n’a que peu d’impact sur la médiane (passage de 126 à 124 pièces par échantillon). En revanche, la moyenne passe de 189 à 165 et l’écart type de 278 à 156. L’élimination de ces trois données permet donc une plus grande robustesse et stabilité des données.</p>
+<div class="sd-card sd-sphinx-override sd-m-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<img alt="chapter two map" class="align-center" id="chapter-two-map" src="_images/chapter_two_map.jpg.jpeg" />
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text"><b>Fig xx :</b> Carte des résultats de l’étude. Densité moyenne de déchets par site d’échantillonnage. Le diamètre du marqueur est relatif à la densité moyenne de déchets par mètre carré de plage.</p>
+</div>
+</div>
+<p>En s’intéressant aux abondances sur chacune des plages et par secteur. Pour la ligne d’eau, les abondances moyennes fluctuent entre 19 particules par échantillon à Crans et 884 particules par échantillon à Préverenges. Sur la plage sèche, les échantillons contiennent entre 37 particules à Clarens et 1’016 au Bouveret.</p>
+<div class="sd-card sd-sphinx-override sd-m-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Abondance en microplastiques</div>
+<p class="sd-card-text">BLANK IMAGE: boxplots</p>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text"><b>Fig xx :</b> Abondance en microplastiques sur les 25 plages étudiées et par secteur.</p>
+</div>
+</div>
+</section>
+<section id="difference-entre-la-ligne-deau-et-la-plage-seche">
+<h3><span class="section-number">5.1.2. </span>Différence entre la ligne d’eau et la plage sèche<a class="headerlink" href="#difference-entre-la-ligne-deau-et-la-plage-seche" title="Permalink to this heading">#</a></h3>
+<p>Les médianes et moyennes sont nettement plus élevées sur la plage sèche que sur la ligne d’eau. Cette différence peut s’expliquer par une accumulation possible sur la plage sèche (qui peut être immergée ponctuellement lors de « crues » du lac) alors que la ligne d’eau est en permanence soumise aux vagues qui amènent et reprennent au fil du temps.</p>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Distinction entre les secteurs</div>
+<p class="sd-card-text">BLANK IMAGE: boxplots plageseche ligne d’eau</p>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text"><b>Fig xx :</b> Distinction entre les secteurs sur la ligne d’eau et ceux sur la plage sèche.</p>
+</div>
+</div>
+</section>
+<section id="identification-des-particules-comptabilisees">
+<h3><span class="section-number">5.1.3. </span>Identification des particules comptabilisées<a class="headerlink" href="#identification-des-particules-comptabilisees" title="Permalink to this heading">#</a></h3>
+<p>Parmi les 39’000 particules comptabilisées, la majorité sont des fibres (75%). Ensuite viennent les fragments anguleux souple (10%) et durs (9%). Les mousses représentent 4% des particules et les films 2%. Seules quelques microbilles de plastiques ont été recensées.</p>
+<div class="sd-card sd-sphinx-override sd-m-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Répartition des particules</div>
+<p class="sd-card-text">BLANK IMAGE: cammebert</p>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text"><b>Fig xx :</b> Répartition des particules comptabilisées par type de particules.</p>
+</div>
+</div>
+</section>
+<section id="comparaison-avec-dautres-etudes">
+<h3><span class="section-number">5.1.4. </span>Comparaison avec d’autres études<a class="headerlink" href="#comparaison-avec-dautres-etudes" title="Permalink to this heading">#</a></h3>
+<p>Avec le tableau ci-dessous, il est visible que les abondances mesurées dans le cadre de l’étude Pla’stock sont largement supérieure à la moyenne mesurée en 2014 sur le Léman et les autre lac Suisse. La comparaison avec la Méditerranée est encore plus flagrante.</p>
+<div class="sd-card sd-sphinx-override sd-m-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Etudes précedents</div>
+<p class="sd-card-text">Tableau: Comparaison avec d’autres études</p>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text"><b>Tableau xx :</b>Comparaison avec d’autres études ayant comptabilisé des microplastiques sur les plages.</p>
+</div>
+</div>
+<p>La valeur pondérée correspond à une interprétation des résultats sur la base de l’étude de Constant et al. 2019 qui a déterminé des coefficients d’identification pour chaque forme de particule. Ils sont respectivement de 0.37 pour les fibres, de 0.5 pour les particules rigides et de 0.74 pour les particules souples. Ces coefficients ont donc été appliqués aux données du projet pour avoir un aperçu des résultats.</p>
+<p>Pour extrapoler à l’ensemble des plages du Léman, la superficie a été estimée sur la base d’orthophotos et en se référant à la liste des plages de la CIPEL. Cette liste a dû être adaptée car certaines plages sont uniquement des espaces de baignade dépourvues de grèves sableuses ou avec des galets (enrochements, dalles en pierres ou en béton…).</p>
+<p>A l’inverse, 3 plages faisant partie de l’étude ont été rajoutées. Il s’agit d’une plage semi-privée à Crans, de la plage de la Pichette sur la commune de Corseaux et de la plage de l’Empereur à Noville (Grangettes). Au total, la superficie des 90 plages retenues correspond à 68’399 m2. Selon une première estimation, la contamination plastique pourrait s’élever à 524’346’734 particules sur les plages du Léman en se basant sur la moyenne pondérée et 1’232’071’187 sans pondération.</p>
+</section>
+</section>
+<section id="macroplastiques-2-mm">
+<h2><span class="section-number">5.2. </span>Macroplastiques (&gt; 2 mm)<a class="headerlink" href="#macroplastiques-2-mm" title="Permalink to this heading">#</a></h2>
+<section id="repartition-des-macroplastiques-sur-les-plages-du-leman">
+<h3><span class="section-number">5.2.1. </span>Répartition des macroplastiques sur les plages du Léman<a class="headerlink" href="#repartition-des-macroplastiques-sur-les-plages-du-leman" title="Permalink to this heading">#</a></h3>
+<p>Au fil des quatre session d’échantillonnage sur les 25 plages sélectionnées, une moyenne de 0,77 pièce de plastique par m2 a été retrouvée. Une concentration maximale de 7.6 pièces par m2 a été inventoriée sur la plage du Bouveret.</p>
+<div class="sd-card sd-sphinx-override sd-m-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Récapitulatif</div>
+<p class="sd-card-text">BlANK IMAGE: recapultatif de macro</p>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text"><b>Tableau xx :</b>Récapitulatif des quatre sessions d’échantillonnage. Les quatre passages se sont fait de manière répartie sur les quatre saisons. Les passages 3 et 4 ont été légèrement perturbé par les conditions météorologiques qui ont nécessité de décaler certains passages. La boîte de Tukey permet de constater la forte concentration des mesures entre 0.18 et 0.97 pièces par m2 avec ponctuellement des échantillons présentant des abondances nettement plus élevées pouvant atteindre 7.6 pièces/m2.</p>
+</div>
+</div>
+</section>
+<section id="id1">
+<h3><span class="section-number">5.2.2. </span>Différence entre la ligne d’eau et la plage sèche<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<p>Les résultats de la récolte de déchets sur les plages du Léman en 4 campagnes durant l’année 2022 sont exprimés en nombres de pièces par m2 prospecté.</p>
+<div class="sd-card sd-sphinx-override sd-m-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Concentration des déchets récoltés sur chacune des 25 plages</div>
+<p class="sd-card-text">BLANK IMAGE: boxplots macro ldeau/plageseche</p>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text"><b>Figure xx :</b>Concentration des déchets récoltés sur chacune des 25 plages lémaniques étudiées en 2022, toutes campagnes confondues.</p>
+</div>
+</div>
+<p>Sur la ligne d’eau, l’abondance moyenne varie de 0.12 pièce/m2 à Tolochenaz à 3.74 pièces/m2 au Bouveret et sur la plage sèche, de 0.12 pièce/m2 à Anthy-sur-Léman et Aubonne à 2,52 pièce/m2 aux Grangettes. Globalement, la densité de déchets tend à être plus élevée sur la ligne de rive, sauf à Port-Choiseul et à Gland où les déchets sont plus abondants sur la plage sèche. Dans ce dernier cas, il s’agit d’un très petit secteur (22 m2) régulièrement balayé par les vagues où se constitue une zone d’accumulation.</p>
+<p>A Excenevex en revanche, où la configuration du site présente une ligne d’eau très développée, l’abondance y est plus élevée que sur la plage. Dans ce cas notamment, l’intensité de l’entretien du site, très fréquenté, peut également influencer les quantités de plastiques retrouvées. Les résultats montrent bien les plastiques réellement présents sur les plages et non la totalité s’y déposant. En effet, les services communaux font déjà un grand travail de ramassage des grands macroplastiques, ce qu’indique le très faible nombre de bouteilles en PET retrouvées sur l’ensemble des passages (4 ?).</p>
+<p>Globalement, on constate que 7 sites sur les 25 sélectionnés ne contiennent que des quantités négligeables de plastiques, que ce soit sur la ligne d’eau ou sur la plage, 4 en accumulent beaucoup, 8 un peu moins et 6 relativement peu. Bref, la moitié des sites étudiés sont clairement impactés par des accumulations de macro-déchets de plastique. Ce sont pour la plupart des lieux plutôt étendus, fortement fréquentés et plus ou moins exposés aux courants, aux vents et aux vagues.</p>
+<div class="sd-card sd-sphinx-override sd-m-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Résultats par position</div>
+<p class="sd-card-text">BLANK IMAGE: boxplots macro ldeau/plageseche</p>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text"><b>Figure xx :</b>Les boîtes de Tukey des positions (ligne d’eau et plage sèche) sont comparables avec toutefois une fréquence beaucoup plus élevées de valeurs extrêmes. Ceci s’explique par une plus grande dépendance des facteurs externes</p>
+</div>
+</div>
+<div class="sd-card sd-sphinx-override sd-m-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Tableaux des résultats par position</div>
+<p class="sd-card-text">Tableau: table des résultats leau/pseche macro</p>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text"><b>Tableau xx :</b>Récapitulatif des échantillons en distinguant leur position. Les médianes sont comparables alors que la valeur maximale sur la ligne d’eau et plus de deux fois supérieure à celle de la plage sèche.</p>
+</div>
+</div>
+<p>Les moyennes et médianes des relevés sur la plage sèche et sur la ligne d’eau sont comparables entre les secteurs. Pour autant, les moyennes sont près de deux fois plus élevées que les médianes ce qui montre la grande variabilité des échantillonnages avec la présence régulière d’abondance élevée. Il est toutefois intéressant de constater le nombre de valeurs extrêmes sur la ligne d’eau. La valeur maximum est d’ailleurs plus de deux fois plus élevée sur la ligne d’eau que sur la plage sèche. Ceci pourrait s’expliquer par une plus grande influence des facteurs environnementaux (vagues, courants, vents).</p>
+</section>
+<section id="types-de-macroplastiques-sur-les-plages-du-leman">
+<h3><span class="section-number">5.2.3. </span>Types de macroplastiques sur les plages du Léman<a class="headerlink" href="#types-de-macroplastiques-sur-les-plages-du-leman" title="Permalink to this heading">#</a></h3>
+<p>Pour la suite des analyses, les résultats seront exprimés en nombre de pièces par mètre linéaire de plage afin d’avoir des points de comparaison avec d’autres études traitant des macroplastiques.</p>
+<p>La valeur médiane du nombre de déchets par mètre (pcs/m) pour l’ensemble des 98 échantillons récoltés sur les 25 plages de l’étude à raison de 1 par saison est de 2, soit 200 déchets pour 100 mètres. Cependant, les taux attendus peuvent varier en fonction de l’urbanisation du site et de son environnement proche, de sa fréquentation et du type de substrat.</p>
+</section>
+</section>
+<section id="etude-des-principaux-dechets-recoltes">
+<h2><span class="section-number">5.3. </span>Etude des principaux déchets récoltés.<a class="headerlink" href="#etude-des-principaux-dechets-recoltes" title="Permalink to this heading">#</a></h2>
+<p>La nature des objets et des fragments de plastique les plus souvent recensés (au moins 1 fois sur 2) et en plus grand nombre a été déterminée et conduit à la sélection des 11 premières catégories de déchets les plus abondants. Celles-ci englobent 89% des macro-plastiques récoltés, à savoir 24’156 déchets sur les 27’493 recueillis. Les critères de sélection sont ainsi le nombre d’items de chaque catégorie et/ou une fréquence minimale de 50% de présence dans les échantillonnages. Le tableau XXXx présente les différentes catégories de macro-plastiques retenues dans l’ordre d’abondance numérique avec mention de leur importance relative par rapport au nombre total de déchets et de leur fréquence d’échantillonage.</p>
+<div class="sd-card sd-sphinx-override sd-m-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+11 principales catégories déchets récoltés</div>
+<p class="sd-card-text">Tableau: résultats des objets les plus abondants</p>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text"><b>Tableau XXX</b> Taux de récupération des 11 principales catégories déchets récoltés et valeur médiane de leur abondance autour du Léman. Le taux de récupération dans ce tableau correspond au pourcentage d’échantillons dans lequel l’objet a été retrouvé. (Explication des codes en annexe).</p>
+</div>
+</div>
+<p>Les fragments de plastiques dont l’origine en tant qu’objet n’est pas identifiable constituent la large majorité des déchets récoltés et qu’ils sont retrouvés dans 97% des échantillons. Viennent ensuite divers objets d’usage courant et des matériaux plus ou moins fragmentés utilisés dans la construction, l’isolation, la confection, etc. La tendance est globalement la même en termes de présence dans les échantillons et par mètre linéaire de plage. A noter que les 11% de plastiques non qualifiés sont inclus dans le calcul de l’abondance relative de chaque catégorie principale.</p>
+<p>A noter le cas particulier des pellets industriels. Avec 1526 éléments récoltés, ce déchet arrive en 5ème place des déchets les plus abondants. Pour autant, la valeur médiane sur l’ensemble des plages est de 0. Ceci s’explique par un taux de récupération très faible (0,37).</p>
+<p>Les fibres plastiques du béton projeté qui sont actuellement regroupées avec les déchets de construction (G89) pourraient à terme être recensées avec leur propre code. Elles représentent 125 des 380 éléments comptabilisés parmi les déchets de construction.</p>
+<p>En s’intéressant de manière plus précises à la répartition de ces onze catégories principales, de fortes fluctuations sont visibles entre les différentes plages. Sans surprise, les fragments de plastiques sont dominants sur la quasi-totalité des plages. Parmi les éléments identifiables, les emballages de nourritures et les mégots sont très souvent retrouvés. Il est également intéressant de se pencher sur certains déchets particuliers. Par exemple, les coton-tiges sont présents en grande quantité à Amphion, Clarens, au Bouveret et aux Grangettes, donc plutôt sur les haut et grand lacs. En reprenant l’exemple des pellets industriels, il est intéressant de noter leur distribution particulière. Préverenges, avec une médiane de 0,82 pellets par mètre de plage fait office d’exception autour du Léman. Les trois autres plages avec le plus de pellets sont le Bouveret (0,42 pièces/m), les Grangettes et Baby plage (chacune 0,27 pièces/m).</p>
+<p>En s’intéressant aux différents sites, il est visible que les Grangettes et le Bouveret sont les sites où les déchets sont les plus abondants, et ce pour la plupart des objets. A l’inverse, la plage d’Excenevex, qui fait également partie des plages avec les plus grandes concentrations de plastiques, est principalement dominante au niveau des fragments de plastiques.</p>
+<div class="sd-card sd-sphinx-override sd-m-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Principaux déchets récoltés</div>
+<p class="sd-card-text">IMAGE BLANK: carte de chaleur (heat map) des résultats par site</p>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text"><b>figure xx</b> Valeur médiane des abondances recensées sur les plages du Léman en nombre de pièces par mètre linéaire.</p>
+</div>
+</div>
+<section id="estimation-du-stock">
+<h3><span class="section-number">5.3.1. </span>Estimation du stock<a class="headerlink" href="#estimation-du-stock" title="Permalink to this heading">#</a></h3>
+<p>Pour extrapoler à l’ensemble des plages du Léman, la longueur a été estimée sur la base d’orthophotos et en se référant à la liste des plages de la CIPEL. Cette liste a dû être adaptée car certaines plages sont uniquement des espaces de baignade dépourvues de grèves sableuses ou avec des galets (enrochements, dalles en pierres ou en béton…). A l’inverse, 3 plages faisant partie de l’étude ont été rajoutées. Il s’agit d’une plage semi-privée à Crans, de la plage de la Pichette sur la commune de Corseaux et de la plage de l’Empereur à Noville (Grangettes).
+Sur les 12’688 m de plages publiques, en extrapolant la moyenne de 3,42 pièces par mètre recensés dans le cadre du projet Pla’stock, il y aurait 43’392 morceaux de plastiques sur les plages du Léman.</p>
+</section>
+<section id="id2">
+<h3><span class="section-number">5.3.2. </span>Comparaison avec d’autres études<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<p>Les résultats de Pla’stock suggèrent que les quantités de certains déchets sauvages sont en baisse. Dans l’ensemble, l’étude fait état d’une valeur médiane de 2 pcs/m contre 3,7 à 4,4 pcs/m dans le passé. Cette réduction est conforme aux conclusions de 2020 - 2021 mais plus importante que prévue (SLR - IQAASL). A noter que l’effort de collecte adopté par les première et troisième études est comparable à celui consenti par Pla’stock.</p>
+<div class="sd-card sd-sphinx-override sd-m-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Résultats précédents</div>
+<p class="sd-card-text">Tableau : études précédents</p>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text"><b>Tableau xx</b>  Comparaison des résultats des campagnes de collecte de déchets sauvages au bord du Léman entre 2015 et 2022, déchets par mètre de rivage, nombre d’échantillons et nombre total de déchets récoltés.</p>
+</div>
+</div>
+<p>Les déchets dont la concentration sur les plages a le plus fortement diminué sont ceux liés à la consommation personnelle (mégots de cigarettes, emballages de snacks et bouchons de bouteilles en plastique). La diminution marquée de la densité de cotons-tiges en plastique (0,03 pcs/m contre 0,13 pcs/m) est inattendue et pourrait être attribuée à l’interdiction de la vente de ces articles en France.</p>
+<p>Sur la base des différentes sessions d’échantillonnage de ces dernières années, il est possible de prédire les abondances qui seront retrouvées sur les plages du Léman. Deux outils permettent de calculer ces prédictions : random forest et bayesian grid.</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Random forest</div>
+<p class="sd-card-text">Tableau : prédictions random forest</p>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text"><b>Tableau XXX</b>  Prédiction du nombre de pièce par mètre linéaire avec Random forest</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Grid approximation</div>
+<p class="sd-card-text">Tableau :prédictions grid approx</p>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text"><b>Tableau XXX</b>  Prédiction du nombre de pièce par mètre linéaire avec approximation Bayésienne par Grille</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+extrapolation des résulats</div>
+<p class="sd-card-text">Tableau : stock</p>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text"><b>Tableau XXX</b> Déchets présents sur les plages du Léman</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="chapter_4.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Méthodes</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="random_variables.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Variables aléatoires</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microplastiques-300-m-a-5-mm">5.1. Microplastiques (300 µm à 5 mm)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#repartition-des-microplastiques-sur-les-plages-du-leman">5.1.1. Répartition des microplastiques sur les plages du Léman</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#difference-entre-la-ligne-deau-et-la-plage-seche">5.1.2. Différence entre la ligne d’eau et la plage sèche</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#identification-des-particules-comptabilisees">5.1.3. Identification des particules comptabilisées</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparaison-avec-dautres-etudes">5.1.4. Comparaison avec d’autres études</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macroplastiques-2-mm">5.2. Macroplastiques (&gt; 2 mm)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#repartition-des-macroplastiques-sur-les-plages-du-leman">5.2.1. Répartition des macroplastiques sur les plages du Léman</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">5.2.2. Différence entre la ligne d’eau et la plage sèche</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-de-macroplastiques-sur-les-plages-du-leman">5.2.3. Types de macroplastiques sur les plages du Léman</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etude-des-principaux-dechets-recoltes">5.3. Etude des principaux déchets récoltés.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimation-du-stock">5.3.1. Estimation du stock</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">5.3.2. Comparaison avec d’autres études</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Roger Erismann, Alexis Pochelon
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p> Association pour la Sauvegarde du Léman 2024 </p>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

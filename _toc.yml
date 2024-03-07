@@ -10,16 +10,24 @@ parts:
   - file: chapter_2
   - file: chapter_3
   - file: chapter_4
+<<<<<<< HEAD
   - file: micro_results
   - file: macro_surface_area
   - file: resultats_precedents
 - caption: Annexes
+=======
+  - file: resultats  
+- caption: Annex
+>>>>>>> 341c588 (revised build and error checking)
   numbered: False
   chapters:
   - file: random_variables
+  - file: micro_results
   - file: micro_plage_position
   - file: micro_plage_attributes
+  - file: macro_surface_area
   - file: macro_plage_position
   - file: macro_plage_attributes
+  - file: resultats_precedents
   - file: data_processing
   - file: references
