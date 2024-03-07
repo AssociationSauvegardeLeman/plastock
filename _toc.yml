@@ -10,15 +10,8 @@ parts:
   - file: chapter_2
   - file: chapter_3
   - file: chapter_4
-<<<<<<< HEAD
-  - file: micro_results
-  - file: macro_surface_area
-  - file: resultats_precedents
-- caption: Annexes
-=======
   - file: resultats  
 - caption: Annex
->>>>>>> 341c588 (revised build and error checking)
   numbered: False
   chapters:
   - file: random_variables
