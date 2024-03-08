@@ -24,3 +24,4 @@ parts:
   - file: resultats_precedents
   - file: data_processing
   - file: references
+  - file: annexe_methode_detail

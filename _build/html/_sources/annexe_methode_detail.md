@@ -17,7 +17,7 @@ Exemple pour Baby Plage (GE) : CH_GE_01.1 ; CH_GE_01.2 ; CH_GE_01.3 ;…
 2)	Reporter les points sur le site
 3)	Prendre une photo du site avec les points de prélèvements placés.
 4)	Lors du prélèvement :
-	1 Prélever l’échantillon à l’aide du tube métallique
+	a.	Prélever l’échantillon à l’aide du tube métallique
     b.	Prendre en photo la carotte
     c.	Remplir la fiche de caractérisation de l’échantillon (à créer) avec :
         i.	Nom échantillon
