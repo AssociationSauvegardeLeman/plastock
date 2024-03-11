@@ -14,6 +14,8 @@ parts:
 - caption: Annex
   numbered: False
   chapters:
+  - file: annexe_methode_detail
+  - file: data_processing
   - file: random_variables
   - file: micro_results
   - file: micro_plage_position
@@ -22,6 +24,4 @@ parts:
   - file: macro_plage_position
   - file: macro_plage_attributes
   - file: resultats_precedents
-  - file: data_processing
   - file: references
-  - file: annexe_methode_detail
