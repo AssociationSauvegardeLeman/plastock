@@ -22,6 +22,4 @@ parts:
   - file: description_donnee
   - file: macro_plage_position
   - file: macro_plage_attributes
-  - file: macro_surface_area
-  - file: resultats_precedents
   - file: references
