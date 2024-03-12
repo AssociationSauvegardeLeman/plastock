@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'resultats';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Variables aléatoires" href="random_variables.html" />
+    <link rel="next" title="Méthodes" href="annexe_methode_detail.html" />
     <link rel="prev" title="4. Méthodes" href="chapter_4.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -172,17 +172,17 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Annex</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="random_variables.html">Variables aléatoires</a></li>
-<li class="toctree-l1"><a class="reference internal" href="micro_results.html">Micros particules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="micro_plage_position.html">Microplastiques plage et position</a></li>
-<li class="toctree-l1"><a class="reference internal" href="micro_plage_attributes.html">Microplastiques plage et attribut</a></li>
-<li class="toctree-l1"><a class="reference internal" href="macro_surface_area.html">Macros déchets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="macro_plage_position.html">Macro déchets plage et position</a></li>
-<li class="toctree-l1"><a class="reference internal" href="macro_plage_attributes.html">Macro déchets plage et attribut</a></li>
-<li class="toctree-l1"><a class="reference internal" href="resultats_precedents.html">Résultats précédents</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data_processing.html">Data processing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="references.html">Références</a></li>
 <li class="toctree-l1"><a class="reference internal" href="annexe_methode_detail.html">Méthodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="random_variables.html">Variables aléatoires</a></li>
+<li class="toctree-l1"><a class="reference internal" href="micro_plage_position.html">Microplastiques par plage et position</a></li>
+<li class="toctree-l1"><a class="reference internal" href="micro_plage_attributes.html">Microplastiques par variables explicatives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="micro_results.html">Prédiction de l’abondance en microplastiques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="description_donnee.html">Data processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="macro_plage_position.html">Macroplastiques par plage et position</a></li>
+<li class="toctree-l1"><a class="reference internal" href="macro_plage_attributes.html">Macroplastiques par variables explicatives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="macro_surface_area.html">Macros déchets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resultats_precedents.html">Résultats précédents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">Références</a></li>
 </ul>
 
     </div>
@@ -335,6 +335,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#difference-entre-la-ligne-deau-et-la-plage-seche">5.1.2. Différence entre la ligne d’eau et la plage sèche</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#identification-des-particules-comptabilisees">5.1.3. Identification des particules comptabilisées</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparaison-avec-dautres-etudes">5.1.4. Comparaison avec d’autres études</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prediction-des-abondances">5.1.5. Prédiction des abondances</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macroplastiques-2-mm">5.2. Macroplastiques (&gt; 2 mm)</a><ul class="nav section-nav flex-column">
@@ -367,7 +368,7 @@ document.write(`
 <section id="repartition-des-microplastiques-sur-les-plages-du-leman">
 <h3><span class="section-number">5.1.1. </span>Répartition des microplastiques sur les plages du Léman<a class="headerlink" href="#repartition-des-microplastiques-sur-les-plages-du-leman" title="Permalink to this heading">#</a></h3>
 <p>En prenant la totalité des 217 échantillons analysés, les plages étudiées contiennent en moyenne 189 particules plastiques avec un écart-type de 278. Parmi ces échantillons, 3 se trouvent dans le 99ème percentile. Il s’agit d’un échantillon à la plage de la Pichette (VD) contenant 3143 et de deux à Port Choiseul (GE) contenant respectivement 1492 et 1076 particules. Pour la suite des analyses, ils n’ont donc pas été pris en compte.</p>
-<p>Tableau 5.1 :  A) Ensemble des données ; B) Données sous le 99ème percentile</p>
+<p>Tableau 5.1 : Valeurs globales du nombre de pièces identifiées comme étant du plastique par échantillons (particules/100 cm²). La distinction est faite entre la prise en compte de l’ensemble des données et uniquement celles sous le 99ème percentile (3 données retirées).</p>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
 <div class="sd-col sd-d-flex-row docutils">
@@ -378,7 +379,6 @@ Ensemble des données</div>
 <p class="sd-card-text">tableaux</p>
 </div>
 <div class="sd-card-footer docutils">
-<p class="sd-card-text"><b>Tableau xx :</b> Valeurs globales du nombre de pièce identifiées comme étant du plastique par échantillons (particules/100 cm2)..</p>
 </div>
 </div>
 </div>
@@ -390,7 +390,6 @@ Données sous le 99ème percentile</div>
 <p class="sd-card-text">tableaux</p>
 </div>
 <div class="sd-card-footer docutils">
-<p class="sd-card-text"><b>Tableau xx :</b> Valeurs globales du nombre de pièce identifiées comme étant du plastique par échantillons (particules/100 cm2).</p>
 </div>
 </div>
 </div>
@@ -399,10 +398,10 @@ Données sous le 99ème percentile</div>
 <p>L’élimination du 99ème percentile n’a que peu d’impact sur la médiane (passage de 126 à 124 pièces par échantillon). En revanche, la moyenne passe de 189 à 165 et l’écart type de 278 à 156. L’élimination de ces trois données permet donc une plus grande robustesse et stabilité des données.</p>
 <div class="sd-card sd-sphinx-override sd-m-3 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
-<img alt="chapter two map" class="align-center" id="chapter-two-map" src="_images/chapter_two_map.jpg.jpeg" />
+<img alt="chapter two map" class="align-center" id="chapter-two-map" src="resources/maps/chapter_two_map.jpg.jpegAttentionàchanger!Ilfautlacartedesmicroplastiques" />
 </div>
 <div class="sd-card-footer docutils">
-<p class="sd-card-text"><b>Fig xx :</b> Carte des résultats de l’étude. Densité moyenne de déchets par site d’échantillonnage. Le diamètre du marqueur est relatif à la densité moyenne de déchets par mètre carré de plage.</p>
+<p class="sd-card-text"><b>Fig xx :</b> Carte des résultats de l’étude. Densité moyenne de microplastiques par 100 cm² et par site d’échantillonnage. Le diamètre du marqueur est relatif à la densité moyenne de déchets par mètre carré de plage.</p>
 </div>
 </div>
 <p>En s’intéressant aux abondances sur chacune des plages et par secteur. Pour la ligne d’eau, les abondances moyennes fluctuent entre 19 particules par échantillon à Crans et 884 particules par échantillon à Préverenges. Sur la plage sèche, les échantillons contiennent entre 37 particules à Clarens et 1’016 au Bouveret.</p>
@@ -413,13 +412,13 @@ Abondance en microplastiques</div>
 <p class="sd-card-text">BLANK IMAGE: boxplots</p>
 </div>
 <div class="sd-card-footer docutils">
-<p class="sd-card-text"><b>Fig xx :</b> Abondance en microplastiques sur les 25 plages étudiées et par secteur.</p>
+<p class="sd-card-text"><b>Fig xx :</b> Abondance en microplastiques sur les 25 plages étudiées et par secteur (particules/100cm²).</p>
 </div>
 </div>
 </section>
 <section id="difference-entre-la-ligne-deau-et-la-plage-seche">
 <h3><span class="section-number">5.1.2. </span>Différence entre la ligne d’eau et la plage sèche<a class="headerlink" href="#difference-entre-la-ligne-deau-et-la-plage-seche" title="Permalink to this heading">#</a></h3>
-<p>Les médianes et moyennes sont nettement plus élevées sur la plage sèche que sur la ligne d’eau. Cette différence peut s’expliquer par une accumulation possible sur la plage sèche (qui peut être immergée ponctuellement lors de « crues » du lac) alors que la ligne d’eau est en permanence soumise aux vagues qui amènent et reprennent au fil du temps.</p>
+<p>Les médianes et moyennes sont nettement plus élevées sur la plage sèche que sur la ligne d’eau. Cette différence peut s’expliquer par une accumulation possible sur la plage sèche (qui est immergée ponctuellement lors de crues du lac) alors que la ligne d’eau est en permanence soumise aux vagues qui amènent et reprennent les éléments au fil du temps.</p>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
@@ -427,7 +426,7 @@ Distinction entre les secteurs</div>
 <p class="sd-card-text">BLANK IMAGE: boxplots plageseche ligne d’eau</p>
 </div>
 <div class="sd-card-footer docutils">
-<p class="sd-card-text"><b>Fig xx :</b> Distinction entre les secteurs sur la ligne d’eau et ceux sur la plage sèche.</p>
+<p class="sd-card-text"><b>Fig xx :</b> Distinction entre les secteurs sur la ligne d’eau et ceux sur la plage sèche (particules/100cm²).</p>
 </div>
 </div>
 </section>
@@ -437,37 +436,102 @@ Distinction entre les secteurs</div>
 <div class="sd-card sd-sphinx-override sd-m-3 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
-Répartition des particules</div>
+Caractérisation physique des particules.</div>
 <p class="sd-card-text">BLANK IMAGE: cammebert</p>
 </div>
 <div class="sd-card-footer docutils">
-<p class="sd-card-text"><b>Fig xx :</b> Répartition des particules comptabilisées par type de particules.</p>
+<p class="sd-card-text"><b>Fig xx :</b> Répartition des particules comptabilisées par forme.</p>
 </div>
 </div>
 </section>
 <section id="comparaison-avec-dautres-etudes">
 <h3><span class="section-number">5.1.4. </span>Comparaison avec d’autres études<a class="headerlink" href="#comparaison-avec-dautres-etudes" title="Permalink to this heading">#</a></h3>
-<p>Avec le tableau ci-dessous, il est visible que les abondances mesurées dans le cadre de l’étude Pla’stock sont largement supérieure à la moyenne mesurée en 2014 sur le Léman et les autre lac Suisse. La comparaison avec la Méditerranée est encore plus flagrante.</p>
+<p>Avec le tableau ci-dessous, il est visible que les abondances mesurées dans le cadre de l’étude Pla’stock sont largement supérieures à la moyenne mesurée en 2014 sur le Léman et les autre lac Suisse. La comparaison avec la Méditerranée est encore plus flagrante.</p>
 <div class="sd-card sd-sphinx-override sd-m-3 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
-Etudes précedents</div>
-<p class="sd-card-text">Tableau: Comparaison avec d’autres études</p>
+Etudes précedentes</div>
+<p class="sd-card-text"><b>Tableau XX: </b>Comparaison avec d’autres études ayant comptabilisé des microplastiques sur les plages.</p>
 </div>
 <div class="sd-card-footer docutils">
-<p class="sd-card-text"><b>Tableau xx :</b>Comparaison avec d’autres études ayant comptabilisé des microplastiques sur les plages.</p>
+<p class="sd-card-text">à supprimer ?<b>Tableau xx :</b>Comparaison avec d’autres études ayant comptabilisé des microplastiques sur les plages.</p>
 </div>
 </div>
 <p>La valeur pondérée correspond à une interprétation des résultats sur la base de l’étude de Constant et al. 2019 qui a déterminé des coefficients d’identification pour chaque forme de particule. Ils sont respectivement de 0.37 pour les fibres, de 0.5 pour les particules rigides et de 0.74 pour les particules souples. Ces coefficients ont donc été appliqués aux données du projet pour avoir un aperçu des résultats.</p>
 <p>Pour extrapoler à l’ensemble des plages du Léman, la superficie a été estimée sur la base d’orthophotos et en se référant à la liste des plages de la CIPEL. Cette liste a dû être adaptée car certaines plages sont uniquement des espaces de baignade dépourvues de grèves sableuses ou avec des galets (enrochements, dalles en pierres ou en béton…).</p>
-<p>A l’inverse, 3 plages faisant partie de l’étude ont été rajoutées. Il s’agit d’une plage semi-privée à Crans, de la plage de la Pichette sur la commune de Corseaux et de la plage de l’Empereur à Noville (Grangettes). Au total, la superficie des 90 plages retenues correspond à 68’399 m2. Selon une première estimation, la contamination plastique pourrait s’élever à 524’346’734 particules sur les plages du Léman en se basant sur la moyenne pondérée et 1’232’071’187 sans pondération.</p>
+<p>A l’inverse, 3 plages faisant partie de l’étude ont été rajoutées. Il s’agit d’une plage semi-privée à Crans, de la plage de la Pichette sur la commune de Corseaux et de la plage de l’Empereur à Noville (Grangettes). Au total, la superficie des 90 plages retenues correspond à 68’399 m². Selon cette estimation, la contamination plastique s’élève à 524’346’734 particules sur les plages du Léman en se basant sur la moyenne pondérée et 1’232’071’187 sans pondération.</p>
+</section>
+<section id="prediction-des-abondances">
+<h3><span class="section-number">5.1.5. </span>Prédiction des abondances<a class="headerlink" href="#prediction-des-abondances" title="Permalink to this heading">#</a></h3>
+<p>Rajouter les éléments de prédiction par grille bayésienne
+Source : solid-waste-team</p>
+<p>prior : beta(1,1
+Les résultats présentés ci-dessus correspondent à ce qui a été réellement mesuré sur le terrain. Ce sont donc les valeurs de référence et de comparaison pour faire le lien avec les études précédentes. Aujourd’hui, certains outils mathématiques, tel que l’approximation par grille bayésienne, permettent d’établir une prédiction des abondances réelles sur les plages du Léman.
+ées.</p>
+<p>Mise en œuvre : Implique la définition d’une grille de valeurs de paramètres et le calcul de la vraisemblance des données observées à chaque point de cette grille. En multipliant par la probabilité a priori et en normalisant, on obtient la distribution a posteriori. Cela peut être fait pour chaque condition séparément ou pour toutes les conditions ensemble, bien que cela soit plus intensif en termes de calcul.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+Toutes les conditions {glue}micro-toutes-ga :::</label><div class="sd-tab-content docutils">
+<div class="sd-tab-item docutils">
+<p class="sd-tab-label rubric">Fréquentation moyenne {glue}micro-freqmoyenne-ga :::</p>
+<div class="sd-tab-content docutils">
+<div class="sd-tab-item docutils">
+<p class="sd-tab-label rubric">Haute fréquentation {glue}micro-freqelevee-ga :::</p>
+<div class="sd-tab-content docutils">
+<div class="sd-tab-item docutils">
+<p class="sd-tab-label rubric">Graviers {glue}micro-graviers-ga :::</p>
+<div class="sd-tab-content docutils">
+<div class="sd-tab-item docutils">
+<p class="sd-tab-label rubric">Sable {glue}micro-sable-ga :::</p>
+<div class="sd-tab-content docutils">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+Résultats :selected:</label><div class="sd-tab-content docutils">
+<div class="sd-col sd-d-flex-column docutils">
+<p></p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p></p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p></p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p></p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p></p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p></p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p></p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p></p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+</div>
+</div>
+</div>
 </section>
 </section>
 <section id="macroplastiques-2-mm">
 <h2><span class="section-number">5.2. </span>Macroplastiques (&gt; 2 mm)<a class="headerlink" href="#macroplastiques-2-mm" title="Permalink to this heading">#</a></h2>
 <section id="repartition-des-macroplastiques-sur-les-plages-du-leman">
 <h3><span class="section-number">5.2.1. </span>Répartition des macroplastiques sur les plages du Léman<a class="headerlink" href="#repartition-des-macroplastiques-sur-les-plages-du-leman" title="Permalink to this heading">#</a></h3>
-<p>Au fil des quatre session d’échantillonnage sur les 25 plages sélectionnées, une moyenne de 0,77 pièce de plastique par m2 a été retrouvée. Une concentration maximale de 7.6 pièces par m2 a été inventoriée sur la plage du Bouveret.</p>
+<p>Au fil des quatre session d’échantillonnage sur les 25 plages sélectionnées, une moyenne de 0,77 pièce de plastique par m² a été retrouvée. Une concentration maximale de 7.6 pièces par m² a été inventoriée sur la plage du Bouveret.</p>
 <div class="sd-card sd-sphinx-override sd-m-3 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
@@ -475,13 +539,13 @@ Récapitulatif</div>
 <p class="sd-card-text">BlANK IMAGE: recapultatif de macro</p>
 </div>
 <div class="sd-card-footer docutils">
-<p class="sd-card-text"><b>Tableau xx :</b>Récapitulatif des quatre sessions d’échantillonnage. Les quatre passages se sont fait de manière répartie sur les quatre saisons. Les passages 3 et 4 ont été légèrement perturbé par les conditions météorologiques qui ont nécessité de décaler certains passages. La boîte de Tukey permet de constater la forte concentration des mesures entre 0.18 et 0.97 pièces par m2 avec ponctuellement des échantillons présentant des abondances nettement plus élevées pouvant atteindre 7.6 pièces/m2.</p>
+<p class="sd-card-text"><b>Tableau xx :</b>Récapitulatif des quatre sessions d’échantillonnage. Les quatre passages se sont fait de manière répartie sur les quatre saisons. Les passages 3 et 4 ont été légèrement perturbé par les conditions météorologiques qui ont nécessité de décaler certains passages. La boîte de Tukey permet de constater la forte concentration des mesures entre 0.18 et 0.97 pièces par m² avec ponctuellement des échantillons présentant des abondances nettement plus élevées pouvant atteindre 7.6 pièces/m2.</p>
 </div>
 </div>
 </section>
 <section id="id1">
 <h3><span class="section-number">5.2.2. </span>Différence entre la ligne d’eau et la plage sèche<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
-<p>Les résultats de la récolte de déchets sur les plages du Léman en 4 campagnes durant l’année 2022 sont exprimés en nombres de pièces par m2 prospecté.</p>
+<p>Les résultats de la récolte de déchets sur les plages du Léman en 4 campagnes durant l’année 2022 sont exprimés en nombres de pièces par m² prospecté.</p>
 <div class="sd-card sd-sphinx-override sd-m-3 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
@@ -554,7 +618,7 @@ Principaux déchets récoltés</div>
 <section id="estimation-du-stock">
 <h3><span class="section-number">5.3.1. </span>Estimation du stock<a class="headerlink" href="#estimation-du-stock" title="Permalink to this heading">#</a></h3>
 <p>Pour extrapoler à l’ensemble des plages du Léman, la longueur a été estimée sur la base d’orthophotos et en se référant à la liste des plages de la CIPEL. Cette liste a dû être adaptée car certaines plages sont uniquement des espaces de baignade dépourvues de grèves sableuses ou avec des galets (enrochements, dalles en pierres ou en béton…). A l’inverse, 3 plages faisant partie de l’étude ont été rajoutées. Il s’agit d’une plage semi-privée à Crans, de la plage de la Pichette sur la commune de Corseaux et de la plage de l’Empereur à Noville (Grangettes).
-Sur les 12’688 m de plages publiques, en extrapolant la moyenne de 3,42 pièces par mètre recensés dans le cadre du projet Pla’stock, il y aurait 43’392 morceaux de plastiques sur les plages du Léman.</p>
+Sur les 12’688 m de plages publiques, en extrapolant la moyenne de 3,42 pièces par mètre recensés dans le cadre du projet Pla’stock, il y aurait 43’392 morceaux de plastiques sur les plages publiques du Léman.</p>
 </section>
 <section id="id2">
 <h3><span class="section-number">5.3.2. </span>Comparaison avec d’autres études<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
@@ -655,11 +719,11 @@ extrapolation des résulats</div>
       </div>
     </a>
     <a class="right-next"
-       href="random_variables.html"
+       href="annexe_methode_detail.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Variables aléatoires</p>
+        <p class="prev-next-title">Méthodes</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -684,6 +748,7 @@ extrapolation des résulats</div>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#difference-entre-la-ligne-deau-et-la-plage-seche">5.1.2. Différence entre la ligne d’eau et la plage sèche</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#identification-des-particules-comptabilisees">5.1.3. Identification des particules comptabilisées</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparaison-avec-dautres-etudes">5.1.4. Comparaison avec d’autres études</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prediction-des-abondances">5.1.5. Prédiction des abondances</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macroplastiques-2-mm">5.2. Macroplastiques (&gt; 2 mm)</a><ul class="nav section-nav flex-column">

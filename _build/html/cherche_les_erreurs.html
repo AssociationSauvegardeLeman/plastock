@@ -170,17 +170,17 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Annex</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="random_variables.html">Variables aléatoires</a></li>
-<li class="toctree-l1"><a class="reference internal" href="micro_results.html">Micros particules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="micro_plage_position.html">Microplastiques plage et position</a></li>
-<li class="toctree-l1"><a class="reference internal" href="micro_plage_attributes.html">Microplastiques plage et attribut</a></li>
-<li class="toctree-l1"><a class="reference internal" href="macro_surface_area.html">Macros déchets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="macro_plage_position.html">Macro déchets plage et position</a></li>
-<li class="toctree-l1"><a class="reference internal" href="macro_plage_attributes.html">Macro déchets plage et attribut</a></li>
-<li class="toctree-l1"><a class="reference internal" href="resultats_precedents.html">Résultats précédents</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data_processing.html">Data processing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="references.html">Références</a></li>
 <li class="toctree-l1"><a class="reference internal" href="annexe_methode_detail.html">Méthodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="random_variables.html">Variables aléatoires</a></li>
+<li class="toctree-l1"><a class="reference internal" href="micro_plage_position.html">Microplastiques par plage et position</a></li>
+<li class="toctree-l1"><a class="reference internal" href="micro_plage_attributes.html">Microplastiques par variables explicatives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="micro_results.html">Prédiction de l’abondance en microplastiques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="description_donnee.html">Data processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="macro_plage_position.html">Macroplastiques par plage et position</a></li>
+<li class="toctree-l1"><a class="reference internal" href="macro_plage_attributes.html">Macroplastiques par variables explicatives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="macro_surface_area.html">Macros déchets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resultats_precedents.html">Résultats précédents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">Références</a></li>
 </ul>
 
     </div>
@@ -386,12 +386,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The watermark extension is already loaded. To reload it, use:
-  %reload_ext watermark
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -400,6 +394,23 @@ document.write(`
 <span class="n">mone</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mone</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="n">mone</span><span class="p">[</span><span class="s2">&quot;échantillon&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">mone</span><span class="o">.</span><span class="n">Plage</span><span class="p">,</span> <span class="n">mone</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]))</span>
 <span class="n">mtwo</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/end_pipe/macro_current.csv&#39;</span><span class="p">)</span>
+
+<span class="c1"># these needed to be removed</span>
+<span class="c1"># not_these = [</span>
+<span class="c1">#     &#39;G9492&#39;,</span>
+<span class="c1">#     &#39;G989&#39;,</span>
+<span class="c1">#     &#39;G9147&#39;,</span>
+<span class="c1">#     &#39;G9135&#39;,</span>
+<span class="c1">#     &#39;G9134&#39;,</span>
+<span class="c1">#     &#39;G9493&#39;,</span>
+<span class="c1">#     &#39;G9145&#39;,</span>
+<span class="c1">#     &#39;G9331&#39;,</span>
+<span class="c1">#     &#39;G9146&#39;,</span>
+<span class="c1">#     &#39;G9491&#39;</span>
+<span class="c1">#     ]</span>
+
+<span class="c1"># mtwo = mtwo[~mtwo.Code.isin(not_these)]</span>
+<span class="c1"># mtwo.to_csv(&#39;data/end_pipe/macro_current.csv&#39;, index=False)</span>
 <span class="n">mtwo</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">mtwo</span><span class="o">.</span><span class="n">Date</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;mixed&#39;</span><span class="p">,</span> <span class="n">dayfirst</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">mtwo</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mtwo</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>
 
@@ -414,7 +425,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mone</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t1</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -439,14 +450,10 @@ document.write(`
       <th></th>
       <th>échantillon</th>
       <th>Plage</th>
-      <th>substrat</th>
       <th>date</th>
       <th>area</th>
-      <th>slug</th>
-      <th>code</th>
       <th>quantité</th>
-      <th>pcs/m²</th>
-      <th>region</th>
+      <th>code</th>
     </tr>
   </thead>
   <tbody>
@@ -454,148 +461,49 @@ document.write(`
       <th>0</th>
       <td>(Amphion, 2022-02-01)</td>
       <td>Amphion</td>
-      <td>4</td>
       <td>2022-02-01</td>
       <td>440</td>
-      <td>amphion</td>
-      <td>G159</td>
       <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
+      <td>G159</td>
     </tr>
     <tr>
       <th>1</th>
       <td>(Amphion, 2022-02-01)</td>
       <td>Amphion</td>
-      <td>4</td>
       <td>2022-02-01</td>
       <td>440</td>
-      <td>amphion</td>
-      <td>G10</td>
       <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
+      <td>G10</td>
     </tr>
     <tr>
       <th>2</th>
       <td>(Amphion, 2022-02-01)</td>
       <td>Amphion</td>
-      <td>4</td>
       <td>2022-02-01</td>
       <td>440</td>
-      <td>amphion</td>
-      <td>G103</td>
       <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
+      <td>G103</td>
     </tr>
     <tr>
       <th>3</th>
       <td>(Amphion, 2022-02-01)</td>
       <td>Amphion</td>
-      <td>4</td>
       <td>2022-02-01</td>
       <td>440</td>
-      <td>amphion</td>
-      <td>G106</td>
       <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
+      <td>G106</td>
     </tr>
     <tr>
       <th>4</th>
       <td>(Amphion, 2022-02-01)</td>
       <td>Amphion</td>
-      <td>4</td>
       <td>2022-02-01</td>
       <td>440</td>
-      <td>amphion</td>
-      <td>G117</td>
       <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>7149</th>
-      <td>(Vidy, 2022-10-18)</td>
-      <td>Vidy</td>
-      <td>1</td>
-      <td>2022-10-18</td>
-      <td>504</td>
-      <td>vidy</td>
-      <td>G95</td>
-      <td>17</td>
-      <td>0.033730</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>7150</th>
-      <td>(Vidy, 2022-10-18)</td>
-      <td>Vidy</td>
-      <td>1</td>
-      <td>2022-10-18</td>
-      <td>504</td>
-      <td>vidy</td>
-      <td>G97</td>
-      <td>1</td>
-      <td>0.001984</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>7151</th>
-      <td>(Vidy, 2022-10-18)</td>
-      <td>Vidy</td>
-      <td>1</td>
-      <td>2022-10-18</td>
-      <td>504</td>
-      <td>vidy</td>
-      <td>Gcaps</td>
-      <td>13</td>
-      <td>0.025794</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>7152</th>
-      <td>(Vidy, 2022-10-18)</td>
-      <td>Vidy</td>
-      <td>1</td>
-      <td>2022-10-18</td>
-      <td>504</td>
-      <td>vidy</td>
-      <td>Gfoams</td>
-      <td>1</td>
-      <td>0.001984</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>7153</th>
-      <td>(Vidy, 2022-10-18)</td>
-      <td>Vidy</td>
-      <td>1</td>
-      <td>2022-10-18</td>
-      <td>504</td>
-      <td>vidy</td>
-      <td>Gfrags</td>
-      <td>110</td>
-      <td>0.218254</td>
-      <td>Grand lac</td>
+      <td>G117</td>
     </tr>
   </tbody>
 </table>
-<p>7154 rows × 10 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -698,18 +606,18 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 2290 entries, 0 to 2289
+RangeIndex: 2147 entries, 0 to 2146
 Data columns (total 6 columns):
  #   Column       Non-Null Count  Dtype 
 ---  ------       --------------  ----- 
- 0   échantillon  2290 non-null   object
- 1   Plage        2290 non-null   object
- 2   date         2290 non-null   object
- 3   area         2290 non-null   int64 
- 4   quantité     2290 non-null   int64 
- 5   code         2290 non-null   object
+ 0   échantillon  2147 non-null   object
+ 1   Plage        2147 non-null   object
+ 2   date         2147 non-null   object
+ 3   area         2147 non-null   int64 
+ 4   quantité     2147 non-null   int64 
+ 5   code         2147 non-null   object
 dtypes: int64(2), object(4)
-memory usage: 107.5+ KB
+memory usage: 100.8+ KB
 </pre></div>
 </div>
 </div>
@@ -745,7 +653,7 @@ memory usage: 335.5+ KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>27493
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>28107
 </pre></div>
 </div>
 </div>
@@ -757,7 +665,7 @@ memory usage: 335.5+ KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>28483
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>28107
 </pre></div>
 </div>
 </div>
@@ -801,16 +709,7 @@ memory usage: 335.5+ KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;G9492&#39;,
- &#39;G9135&#39;,
- &#39;G9146&#39;,
- &#39;G9493&#39;,
- &#39;G9147&#39;,
- &#39;G9145&#39;,
- &#39;G9331&#39;,
- &#39;G9134&#39;,
- &#39;G9491&#39;,
- &#39;G989&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[]
 </pre></div>
 </div>
 </div>
@@ -824,7 +723,7 @@ memory usage: 335.5+ KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>376
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
 </pre></div>
 </div>
 </div>
@@ -858,7 +757,7 @@ memory usage: 335.5+ KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Il y a 614 plus d&#39;objets en t2
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Il y a 0 plus d&#39;objets en t2
 </pre></div>
 </div>
 </div>
@@ -873,15 +772,11 @@ memory usage: 335.5+ KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([   0,    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
-          0,    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
-          0,    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
-          0,    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
-          0,    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
-          0,    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
-          0,    0,    0, -614,    0,    0,    0,    0,    0,    0,    0,
-          0,    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
-          0,    0,    0,    0,    0,    0,    0,    0,    0,    0])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
 </pre></div>
 </div>
 </div>
@@ -926,12 +821,6 @@ memory usage: 335.5+ KB
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th>('Préverenges', '2022-08-13')</th>
-      <td>36</td>
-      <td>650</td>
-      <td>-614</td>
-    </tr>
   </tbody>
 </table>
 </div></div></div>
@@ -946,7 +835,7 @@ memory usage: 335.5+ KB
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mone</span><span class="p">[(</span><span class="n">mone</span><span class="o">.</span><span class="n">Plage</span> <span class="o">==</span> <span class="s2">&quot;Préverenges&quot;</span><span class="p">)</span><span class="o">&amp;</span><span class="p">(</span><span class="n">mone</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;2022-08-13&quot;</span><span class="p">)]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mone</span><span class="p">[(</span><span class="n">mone</span><span class="o">.</span><span class="n">Plage</span> <span class="o">==</span> <span class="s2">&quot;Préverenges&quot;</span><span class="p">)</span><span class="o">&amp;</span><span class="p">(</span><span class="n">mone</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;2022-08-13&quot;</span><span class="p">)</span><span class="o">&amp;</span><span class="p">(</span><span class="n">mone</span><span class="p">[</span><span class="s1">&#39;quantité&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)]</span>
 </pre></div>
 </div>
 </div>
@@ -983,861 +872,133 @@ memory usage: 335.5+ KB
   </thead>
   <tbody>
     <tr>
-      <th>4122</th>
+      <th>6722</th>
       <td>(Préverenges, 2022-08-13)</td>
       <td>Préverenges</td>
       <td>1</td>
       <td>2022-08-13</td>
-      <td>150</td>
+      <td>1111</td>
       <td>preverenges</td>
-      <td>G114</td>
-      <td>0</td>
-      <td>0.000000</td>
+      <td>G112</td>
+      <td>69</td>
+      <td>0.062106</td>
       <td>Grand lac</td>
     </tr>
     <tr>
-      <th>4123</th>
+      <th>6723</th>
       <td>(Préverenges, 2022-08-13)</td>
       <td>Préverenges</td>
       <td>1</td>
       <td>2022-08-13</td>
-      <td>150</td>
+      <td>1111</td>
       <td>preverenges</td>
-      <td>G131</td>
-      <td>0</td>
-      <td>0.000000</td>
+      <td>G113</td>
+      <td>5</td>
+      <td>0.004500</td>
       <td>Grand lac</td>
     </tr>
     <tr>
-      <th>4124</th>
+      <th>6724</th>
       <td>(Préverenges, 2022-08-13)</td>
       <td>Préverenges</td>
       <td>1</td>
       <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G148</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4125</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G211</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4126</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G31</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4127</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G35</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4128</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G66</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4129</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G70</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4130</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G905</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4131</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G914</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4132</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G922</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4133</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G931</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4134</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G932</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4135</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G95</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4136</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G97</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4137</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>Gcaps</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4138</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G159</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4139</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G10</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4140</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G103</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4141</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G106</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4142</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G117</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4143</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G2</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4144</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G25</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4145</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G74</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4146</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G89</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4147</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
+      <td>1111</td>
       <td>preverenges</td>
       <td>G125</td>
-      <td>0</td>
-      <td>0.000000</td>
+      <td>2</td>
+      <td>0.001800</td>
       <td>Grand lac</td>
     </tr>
     <tr>
-      <th>4148</th>
+      <th>6725</th>
       <td>(Préverenges, 2022-08-13)</td>
       <td>Préverenges</td>
       <td>1</td>
       <td>2022-08-13</td>
-      <td>150</td>
+      <td>1111</td>
       <td>preverenges</td>
-      <td>G135</td>
-      <td>0</td>
-      <td>0.000000</td>
+      <td>G131</td>
+      <td>1</td>
+      <td>0.000900</td>
       <td>Grand lac</td>
     </tr>
     <tr>
-      <th>4149</th>
+      <th>6726</th>
       <td>(Préverenges, 2022-08-13)</td>
       <td>Préverenges</td>
       <td>1</td>
       <td>2022-08-13</td>
-      <td>150</td>
+      <td>1111</td>
       <td>preverenges</td>
-      <td>G145</td>
-      <td>0</td>
-      <td>0.000000</td>
+      <td>G211</td>
+      <td>4</td>
+      <td>0.003600</td>
       <td>Grand lac</td>
     </tr>
     <tr>
-      <th>4150</th>
+      <th>6727</th>
       <td>(Préverenges, 2022-08-13)</td>
       <td>Préverenges</td>
       <td>1</td>
       <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G29</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4151</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G32</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4152</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G50</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4153</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G99</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4154</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G132</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4155</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G53</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4156</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G165</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4157</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G137</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4158</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G73</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4159</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G926</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4160</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G126</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4161</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G128</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4162</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G194</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4163</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
+      <td>1111</td>
       <td>preverenges</td>
       <td>G26</td>
-      <td>0</td>
-      <td>0.000000</td>
+      <td>1</td>
+      <td>0.000900</td>
       <td>Grand lac</td>
     </tr>
     <tr>
-      <th>4164</th>
+      <th>6728</th>
       <td>(Préverenges, 2022-08-13)</td>
       <td>Préverenges</td>
       <td>1</td>
       <td>2022-08-13</td>
-      <td>150</td>
+      <td>1111</td>
       <td>preverenges</td>
-      <td>G48</td>
-      <td>0</td>
-      <td>0.000000</td>
+      <td>G27</td>
+      <td>232</td>
+      <td>0.208821</td>
       <td>Grand lac</td>
     </tr>
     <tr>
-      <th>4165</th>
+      <th>6729</th>
       <td>(Préverenges, 2022-08-13)</td>
       <td>Préverenges</td>
       <td>1</td>
       <td>2022-08-13</td>
-      <td>150</td>
+      <td>1111</td>
       <td>preverenges</td>
-      <td>G901</td>
-      <td>0</td>
-      <td>0.000000</td>
+      <td>G30</td>
+      <td>28</td>
+      <td>0.025203</td>
       <td>Grand lac</td>
     </tr>
     <tr>
-      <th>4166</th>
+      <th>6730</th>
       <td>(Préverenges, 2022-08-13)</td>
       <td>Préverenges</td>
       <td>1</td>
       <td>2022-08-13</td>
-      <td>150</td>
+      <td>1111</td>
       <td>preverenges</td>
-      <td>G929</td>
-      <td>0</td>
-      <td>0.000000</td>
+      <td>G31</td>
+      <td>2</td>
+      <td>0.001800</td>
       <td>Grand lac</td>
     </tr>
     <tr>
-      <th>4167</th>
+      <th>6731</th>
       <td>(Préverenges, 2022-08-13)</td>
       <td>Préverenges</td>
       <td>1</td>
       <td>2022-08-13</td>
-      <td>150</td>
+      <td>1111</td>
       <td>preverenges</td>
-      <td>G101</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4168</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
+      <td>G32</td>
       <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G100</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4169</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G12</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4170</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G144</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4171</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G18</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4172</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G33</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4173</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G67</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4174</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G90</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4175</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G937</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4176</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G133</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4177</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G28</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4178</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G39</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4179</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G4</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4180</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G54</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4181</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G7</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4182</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G155</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4183</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G127</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4184</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G129</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4185</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G136</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4186</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G102</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>4187</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>150</td>
-      <td>preverenges</td>
-      <td>G139</td>
-      <td>0</td>
-      <td>0.000000</td>
+      <td>0.000900</td>
       <td>Grand lac</td>
     </tr>
     <tr>
@@ -1846,11 +1007,11 @@ memory usage: 335.5+ KB
       <td>Préverenges</td>
       <td>1</td>
       <td>2022-08-13</td>
-      <td>150</td>
+      <td>1111</td>
       <td>preverenges</td>
-      <td>G112</td>
-      <td>2</td>
-      <td>0.013333</td>
+      <td>G34</td>
+      <td>1</td>
+      <td>0.000900</td>
       <td>Grand lac</td>
     </tr>
     <tr>
@@ -1859,11 +1020,11 @@ memory usage: 335.5+ KB
       <td>Préverenges</td>
       <td>1</td>
       <td>2022-08-13</td>
-      <td>150</td>
+      <td>1111</td>
       <td>preverenges</td>
-      <td>G113</td>
-      <td>5</td>
-      <td>0.033333</td>
+      <td>G50</td>
+      <td>19</td>
+      <td>0.017102</td>
       <td>Grand lac</td>
     </tr>
     <tr>
@@ -1872,11 +1033,11 @@ memory usage: 335.5+ KB
       <td>Préverenges</td>
       <td>1</td>
       <td>2022-08-13</td>
-      <td>150</td>
+      <td>1111</td>
       <td>preverenges</td>
-      <td>G27</td>
-      <td>3</td>
-      <td>0.020000</td>
+      <td>G74</td>
+      <td>2</td>
+      <td>0.001800</td>
       <td>Grand lac</td>
     </tr>
     <tr>
@@ -1885,11 +1046,11 @@ memory usage: 335.5+ KB
       <td>Préverenges</td>
       <td>1</td>
       <td>2022-08-13</td>
-      <td>150</td>
+      <td>1111</td>
       <td>preverenges</td>
-      <td>G30</td>
-      <td>7</td>
-      <td>0.046667</td>
+      <td>G95</td>
+      <td>3</td>
+      <td>0.002700</td>
       <td>Grand lac</td>
     </tr>
     <tr>
@@ -1898,11 +1059,11 @@ memory usage: 335.5+ KB
       <td>Préverenges</td>
       <td>1</td>
       <td>2022-08-13</td>
-      <td>150</td>
+      <td>1111</td>
       <td>preverenges</td>
-      <td>G34</td>
-      <td>1</td>
-      <td>0.006667</td>
+      <td>Gcaps</td>
+      <td>3</td>
+      <td>0.002700</td>
       <td>Grand lac</td>
     </tr>
     <tr>
@@ -1911,11 +1072,11 @@ memory usage: 335.5+ KB
       <td>Préverenges</td>
       <td>1</td>
       <td>2022-08-13</td>
-      <td>150</td>
+      <td>1111</td>
       <td>preverenges</td>
       <td>Gfoams</td>
-      <td>8</td>
-      <td>0.053333</td>
+      <td>17</td>
+      <td>0.015302</td>
       <td>Grand lac</td>
     </tr>
     <tr>
@@ -1924,11 +1085,11 @@ memory usage: 335.5+ KB
       <td>Préverenges</td>
       <td>1</td>
       <td>2022-08-13</td>
-      <td>150</td>
+      <td>1111</td>
       <td>preverenges</td>
       <td>Gfrags</td>
-      <td>10</td>
-      <td>0.066667</td>
+      <td>260</td>
+      <td>0.234023</td>
       <td>Grand lac</td>
     </tr>
   </tbody>
@@ -1937,7 +1098,7 @@ memory usage: 335.5+ KB
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mtwo</span><span class="p">[(</span><span class="n">mtwo</span><span class="o">.</span><span class="n">Plage</span> <span class="o">==</span> <span class="s2">&quot;Préverenges&quot;</span><span class="p">)</span><span class="o">&amp;</span><span class="p">(</span><span class="n">mtwo</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;2022-08-13&quot;</span><span class="p">)]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mtwo</span><span class="p">[(</span><span class="n">mtwo</span><span class="o">.</span><span class="n">Plage</span> <span class="o">==</span> <span class="s2">&quot;Préverenges&quot;</span><span class="p">)</span><span class="o">&amp;</span><span class="p">(</span><span class="n">mtwo</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;2022-08-13&quot;</span><span class="p">)]</span>
 </pre></div>
 </div>
 </div>
@@ -1961,19 +1122,20 @@ memory usage: 335.5+ KB
     <tr style="text-align: right;">
       <th></th>
       <th>Plage</th>
-      <th>Aire</th>
+      <th>area</th>
       <th>Temps</th>
       <th>Position</th>
-      <th>Substrat</th>
-      <th>Date</th>
+      <th>substrat</th>
+      <th>date</th>
       <th>Saison</th>
       <th>Objet</th>
       <th>Détail</th>
-      <th>Code</th>
+      <th>code</th>
       <th>OPSAR</th>
       <th>UNEP</th>
-      <th>Quantité</th>
+      <th>quantité</th>
       <th>Poids</th>
+      <th>échantillon</th>
     </tr>
   </thead>
   <tbody>
@@ -1993,6 +1155,7 @@ memory usage: 335.5+ KB
       <td>RB01</td>
       <td>2</td>
       <td>0.001600</td>
+      <td>(Préverenges, 2022-08-13)</td>
     </tr>
     <tr>
       <th>127</th>
@@ -2010,6 +1173,7 @@ memory usage: 335.5+ KB
       <td>NaN</td>
       <td>1</td>
       <td>0.000280</td>
+      <td>(Préverenges, 2022-08-13)</td>
     </tr>
     <tr>
       <th>186</th>
@@ -2027,6 +1191,7 @@ memory usage: 335.5+ KB
       <td>NaN</td>
       <td>2</td>
       <td>0.000360</td>
+      <td>(Préverenges, 2022-08-13)</td>
     </tr>
     <tr>
       <th>262</th>
@@ -2044,6 +1209,7 @@ memory usage: 335.5+ KB
       <td>PL01</td>
       <td>3</td>
       <td>0.005250</td>
+      <td>(Préverenges, 2022-08-13)</td>
     </tr>
     <tr>
       <th>348</th>
@@ -2061,9 +1227,10 @@ memory usage: 335.5+ KB
       <td>PL10</td>
       <td>1</td>
       <td>0.012000</td>
+      <td>(Préverenges, 2022-08-13)</td>
     </tr>
     <tr>
-      <th>539</th>
+      <th>510</th>
       <td>Préverenges</td>
       <td>961</td>
       <td>490</td>
@@ -2078,9 +1245,10 @@ memory usage: 335.5+ KB
       <td>OT02</td>
       <td>3</td>
       <td>0.000540</td>
+      <td>(Préverenges, 2022-08-13)</td>
     </tr>
     <tr>
-      <th>607</th>
+      <th>578</th>
       <td>Préverenges</td>
       <td>150</td>
       <td>80</td>
@@ -2095,9 +1263,10 @@ memory usage: 335.5+ KB
       <td>PL06</td>
       <td>1</td>
       <td>0.008000</td>
+      <td>(Préverenges, 2022-08-13)</td>
     </tr>
     <tr>
-      <th>753</th>
+      <th>724</th>
       <td>Préverenges</td>
       <td>150</td>
       <td>80</td>
@@ -2112,9 +1281,10 @@ memory usage: 335.5+ KB
       <td>NaN</td>
       <td>7</td>
       <td>0.004100</td>
+      <td>(Préverenges, 2022-08-13)</td>
     </tr>
     <tr>
-      <th>754</th>
+      <th>725</th>
       <td>Préverenges</td>
       <td>961</td>
       <td>490</td>
@@ -2129,9 +1299,10 @@ memory usage: 335.5+ KB
       <td>NaN</td>
       <td>21</td>
       <td>0.012200</td>
+      <td>(Préverenges, 2022-08-13)</td>
     </tr>
     <tr>
-      <th>882</th>
+      <th>853</th>
       <td>Préverenges</td>
       <td>961</td>
       <td>490</td>
@@ -2146,9 +1317,10 @@ memory usage: 335.5+ KB
       <td>PL19</td>
       <td>19</td>
       <td>0.076000</td>
+      <td>(Préverenges, 2022-08-13)</td>
     </tr>
     <tr>
-      <th>921</th>
+      <th>892</th>
       <td>Préverenges</td>
       <td>150</td>
       <td>80</td>
@@ -2163,9 +1335,10 @@ memory usage: 335.5+ KB
       <td>NaN</td>
       <td>5</td>
       <td>0.000100</td>
+      <td>(Préverenges, 2022-08-13)</td>
     </tr>
     <tr>
-      <th>1043</th>
+      <th>1013</th>
       <td>Préverenges</td>
       <td>961</td>
       <td>490</td>
@@ -2180,9 +1353,10 @@ memory usage: 335.5+ KB
       <td>PL08</td>
       <td>1</td>
       <td>0.100000</td>
+      <td>(Préverenges, 2022-08-13)</td>
     </tr>
     <tr>
-      <th>1165</th>
+      <th>1135</th>
       <td>Préverenges</td>
       <td>150</td>
       <td>80</td>
@@ -2197,9 +1371,10 @@ memory usage: 335.5+ KB
       <td>PL11</td>
       <td>3</td>
       <td>0.000660</td>
+      <td>(Préverenges, 2022-08-13)</td>
     </tr>
     <tr>
-      <th>1166</th>
+      <th>1136</th>
       <td>Préverenges</td>
       <td>961</td>
       <td>490</td>
@@ -2214,9 +1389,10 @@ memory usage: 335.5+ KB
       <td>PL11</td>
       <td>229</td>
       <td>0.050380</td>
+      <td>(Préverenges, 2022-08-13)</td>
     </tr>
     <tr>
-      <th>1349</th>
+      <th>1292</th>
       <td>Préverenges</td>
       <td>150</td>
       <td>80</td>
@@ -2231,9 +1407,10 @@ memory usage: 335.5+ KB
       <td>NaN</td>
       <td>10</td>
       <td>0.003000</td>
+      <td>(Préverenges, 2022-08-13)</td>
     </tr>
     <tr>
-      <th>1350</th>
+      <th>1293</th>
       <td>Préverenges</td>
       <td>961</td>
       <td>490</td>
@@ -2248,9 +1425,10 @@ memory usage: 335.5+ KB
       <td>NaN</td>
       <td>232</td>
       <td>0.069600</td>
+      <td>(Préverenges, 2022-08-13)</td>
     </tr>
     <tr>
-      <th>1504</th>
+      <th>1447</th>
       <td>Préverenges</td>
       <td>961</td>
       <td>490</td>
@@ -2265,9 +1443,10 @@ memory usage: 335.5+ KB
       <td>NaN</td>
       <td>18</td>
       <td>0.054000</td>
+      <td>(Préverenges, 2022-08-13)</td>
     </tr>
     <tr>
-      <th>1759</th>
+      <th>1633</th>
       <td>Préverenges</td>
       <td>961</td>
       <td>490</td>
@@ -2282,9 +1461,10 @@ memory usage: 335.5+ KB
       <td>NaN</td>
       <td>2</td>
       <td>0.001600</td>
+      <td>(Préverenges, 2022-08-13)</td>
     </tr>
     <tr>
-      <th>1863</th>
+      <th>1737</th>
       <td>Préverenges</td>
       <td>961</td>
       <td>490</td>
@@ -2299,9 +1479,10 @@ memory usage: 335.5+ KB
       <td>OT05</td>
       <td>4</td>
       <td>0.000800</td>
+      <td>(Préverenges, 2022-08-13)</td>
     </tr>
     <tr>
-      <th>1924</th>
+      <th>1798</th>
       <td>Préverenges</td>
       <td>150</td>
       <td>80</td>
@@ -2316,9 +1497,10 @@ memory usage: 335.5+ KB
       <td>PL23</td>
       <td>2</td>
       <td>0.000050</td>
+      <td>(Préverenges, 2022-08-13)</td>
     </tr>
     <tr>
-      <th>1925</th>
+      <th>1799</th>
       <td>Préverenges</td>
       <td>961</td>
       <td>490</td>
@@ -2333,9 +1515,10 @@ memory usage: 335.5+ KB
       <td>PL23</td>
       <td>67</td>
       <td>0.001675</td>
+      <td>(Préverenges, 2022-08-13)</td>
     </tr>
     <tr>
-      <th>2141</th>
+      <th>2015</th>
       <td>Préverenges</td>
       <td>150</td>
       <td>80</td>
@@ -2350,9 +1533,10 @@ memory usage: 335.5+ KB
       <td>NaN</td>
       <td>8</td>
       <td>0.006400</td>
+      <td>(Préverenges, 2022-08-13)</td>
     </tr>
     <tr>
-      <th>2142</th>
+      <th>2016</th>
       <td>Préverenges</td>
       <td>961</td>
       <td>490</td>
@@ -2367,6 +1551,7 @@ memory usage: 335.5+ KB
       <td>NaN</td>
       <td>9</td>
       <td>0.007200</td>
+      <td>(Préverenges, 2022-08-13)</td>
     </tr>
   </tbody>
 </table>
