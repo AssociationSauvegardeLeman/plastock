@@ -3,12 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Data processing &#8212; Pla&#39;stock</title>
   
   
@@ -19,15 +18,15 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
@@ -38,14 +37,12 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
-  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
@@ -68,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Macroplastiques par plage et position" href="macro_plage_position.html" />
     <link rel="prev" title="Prédiction de l’abondance en microplastiques" href="micro_results.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -76,16 +73,7 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
-  
-  <div id="pst-scroll-pixel-helper"></div>
-
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
-
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -119,20 +107,12 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
-
-  <header>
   
-    <div class="bd-header navbar navbar-expand-lg bd-navbar">
-    </div>
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
   
-  </header>
-
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
-      
-      
-      
-        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -147,11 +127,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
   
 
 <a class="navbar-brand logo" href="index.html">
-  
   
   
   
@@ -288,22 +266,20 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
 `);
 </script>
 
-
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
 `);
 </script>
@@ -359,24 +335,24 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article">
+                <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="data-processing">
-<span id="id1"></span><h1>Data processing<a class="headerlink" href="#data-processing" title="Permalink to this heading">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="data-processing">
+<span id="id1"></span><h1>Data processing<a class="headerlink" href="#data-processing" title="Permalink to this headline">#</a></h1>
 <div class="cell tag_remove-input docutils container">
 </div>
-<section id="description-des-donnees-macroplastiques">
-<h2>Description des données macroplastiques<a class="headerlink" href="#description-des-donnees-macroplastiques" title="Permalink to this heading">#</a></h2>
+<div class="section" id="description-des-donnees-macroplastiques">
+<h2>Description des données macroplastiques<a class="headerlink" href="#description-des-donnees-macroplastiques" title="Permalink to this headline">#</a></h2>
 <p><strong>Cette méthode s’applique aux données sur les déchets visibles à l’oeil nu, mais pas aux microplastiques</strong></p>
-<section id="position">
-<h3>Position<a class="headerlink" href="#position" title="Permalink to this heading">#</a></h3>
+<div class="section" id="position">
+<h3>Position<a class="headerlink" href="#position" title="Permalink to this headline">#</a></h3>
 <p>Les inventaires des déchets menés précédemment sur le lac considéraient la plage comme une unité à part entière. Dans Pla’stock, chaque plage a été divisée en deux sections, la ligne d’eau et la plage sèche. Pour comparer les données de Pla’stock aux résultats précédents et à d’autres études de ce type, les résultats de Pla’stock doivent être transformés en une section pour une plage. En d’autres termes, nous devons combiner la surface des deux sections pour chaque échantillon.</p>
-</section>
-<section id="objets">
-<h3>Objets<a class="headerlink" href="#objets" title="Permalink to this heading">#</a></h3>
+</div>
+<div class="section" id="objets">
+<h3>Objets<a class="headerlink" href="#objets" title="Permalink to this headline">#</a></h3>
 <p>La variété des objets identifiés lors de chaque action dépend des déchets sur le terrain et du temps passé à compter, trier et identifier chaque objet collecté. Par conséquent, les seuls codes ou objets pris en considération sont ceux qui ont été identifiés pendant Pla’stock. Les données historiques sont filtrées pour les mêmes codes.</p>
-<section id="combinaison-d-objets-similaires">
-<h4>Combinaison d’objets similaires<a class="headerlink" href="#combinaison-d-objets-similaires" title="Permalink to this heading">#</a></h4>
+<div class="section" id="combinaison-d-objets-similaires">
+<h4>Combinaison d’objets similaires<a class="headerlink" href="#combinaison-d-objets-similaires" title="Permalink to this headline">#</a></h4>
 <p>Certaines catégories d’objets sont combinées. Cela signifie que nous modifions le code de certains éléments pour refléter les tendances de l’échantillonnage et tenir compte des différentes interprétations du protocole. Le tableau suivant résume la façon dont les codes sont combinés :</p>
 <ol class="arabic simple">
 <li><p>Gfrags: g80, g79, g78, g77, g76, g75</p></li>
@@ -423,12 +399,12 @@ document.write(`
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
-</section>
-</section>
-<section id="exemple">
-<h3>Exemple<a class="headerlink" href="#exemple" title="Permalink to this heading">#</a></h3>
-<section id="metres-carres">
-<h4>Mètres carrés<a class="headerlink" href="#metres-carres" title="Permalink to this heading">#</a></h4>
+</div>
+</div>
+<div class="section" id="exemple">
+<h3>Exemple<a class="headerlink" href="#exemple" title="Permalink to this headline">#</a></h3>
+<div class="section" id="metres-carres">
+<h4>Mètres carrés<a class="headerlink" href="#metres-carres" title="Permalink to this headline">#</a></h4>
 <p>Pour illustrer les changements apportés aux données, considérons deux échantillons et deux codes (G27, Gfrags). Le premier échantillon est Amphion le 2022-02-01 et le second est Clarens le 2022-01-16. À Amphion, il y a plusieurs valeurs pour les mêmes codes le même jour. Il en va de même pour Clarens, mais à Clarens, il y a également deux substrats pour la plage. Notez que les codes G78 et G79 font partie du code combiné Gfrags.</p>
 <div class="output text_html"><style type="text/css">
 #T_cd039 tr:nth-child(even) {
@@ -857,9 +833,9 @@ document.write(`
     </tr>
   </tbody>
 </table>
-</div></section>
-<section id="la-difference">
-<h4>La différence<a class="headerlink" href="#la-difference" title="Permalink to this heading">#</a></h4>
+</div></div>
+<div class="section" id="la-difference">
+<h4>La différence<a class="headerlink" href="#la-difference" title="Permalink to this headline">#</a></h4>
 <p>Si les surfaces des positions ne sont pas combinées, les valeurs attendues sont beaucoup plus faibles. En effet, nous sommes obligés de prendre la moyenne de la densité des deux positions et des substrats pour chaque échantillon.</p>
 <div class="output text_html"><style type="text/css">
 #T_39fed tr:nth-child(even) {
@@ -927,9 +903,9 @@ document.write(`
 </table>
 </div><p><strong>Problème de communication :</strong> Cela peut être difficile à communiquer. La moyenne pour une région est la moyenne de la densité totale par échantillon. C’est-à-dire le nombre total d’objets divisé par la surface totale. Cependant, dans ce cas, la moyenne de la région est la moyenne des moyennes par échantillon.</p>
 <p>Cela signifie que la médiane d’une région serait la médiane de la moyenne des moyennes par échantillon.</p>
-</section>
-<section id="metres-lineaires">
-<h4>Mètres linéaires<a class="headerlink" href="#metres-lineaires" title="Permalink to this heading">#</a></h4>
+</div>
+<div class="section" id="metres-lineaires">
+<h4>Mètres linéaires<a class="headerlink" href="#metres-lineaires" title="Permalink to this headline">#</a></h4>
 <p>L’opération de transformation des données en mètres linéaires est différente. Pour convertir toutes les plages en une seule section, nous abandonnons la variable superficie et la remplaçons par les données de longueur fournies. La longueur est la même pour les deux sections de chaque plage (les surfaces sont différentes), nous avons donc divisé la somme de tous les objets par la longueur donnée pour l’échantillon. Ce processus est conforme à la norme décrite dans le guide de surveillance des déchets marins.</p>
 <div class="cell tag_remove-input docutils container">
 </div>
@@ -939,11 +915,11 @@ document.write(`
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
-</section>
-</section>
-</section>
-<section id="analyse-et-inference">
-<h2>Analyse et inférence<a class="headerlink" href="#analyse-et-inference" title="Permalink to this heading">#</a></h2>
+</div>
+</div>
+</div>
+<div class="section" id="analyse-et-inference">
+<h2>Analyse et inférence<a class="headerlink" href="#analyse-et-inference" title="Permalink to this headline">#</a></h2>
 <p>We used two methods of approximation to infer the expected results: <em>Random Forest Regression</em> and <em>Bayesian grid approximation</em>. The random forest regression is centered around the average of the observed data. The samples drawn from the random forest regression do not approximate the distribution of the observed results, which are skewed. For predictions we have opted for the Bayesian grid approximation.</p>
 <p><strong>Bayesian Grid Approximation:</strong>
 <br /></p>
@@ -978,8 +954,8 @@ document.write(`
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
-<section id="haut-lac">
-<h3>Haut lac<a class="headerlink" href="#haut-lac" title="Permalink to this heading">#</a></h3>
+<div class="section" id="haut-lac">
+<h3>Haut lac<a class="headerlink" href="#haut-lac" title="Permalink to this headline">#</a></h3>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
@@ -1228,9 +1204,9 @@ document.write(`
 </table>
 </div></div>
 </div>
-</section>
-<section id="grand-lac">
-<h3>Grand lac<a class="headerlink" href="#grand-lac" title="Permalink to this heading">#</a></h3>
+</div>
+<div class="section" id="grand-lac">
+<h3>Grand lac<a class="headerlink" href="#grand-lac" title="Permalink to this headline">#</a></h3>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
@@ -1479,9 +1455,9 @@ document.write(`
 </table>
 </div></div>
 </div>
-</section>
-<section id="petit-lac">
-<h3>Petit lac<a class="headerlink" href="#petit-lac" title="Permalink to this heading">#</a></h3>
+</div>
+<div class="section" id="petit-lac">
+<h3>Petit lac<a class="headerlink" href="#petit-lac" title="Permalink to this headline">#</a></h3>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
@@ -1752,9 +1728,9 @@ _"L’introduction simultanée de variables quantitatives et qualitatives (donn�
 
 Cette section est rédigée en R. Les données sont les mêmes que celles utilisées dans les sections précédentes. --><!-- ### AFDM 5 dimensions
 
-#### Valeurs Eigen et pourcentage cumulé de la variance --></section>
-</section>
-</section>
+#### Valeurs Eigen et pourcentage cumulé de la variance --></div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -1781,10 +1757,11 @@ Cette section est rédigée en R. Les données sont les mêmes que celles utilis
 
               
               
-              
-              
-                <footer class="prev-next-footer">
+                <footer class="bd-footer-article">
                   
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="micro_results.html"
@@ -1804,7 +1781,10 @@ Cette section est rédigée en R. Les données sont les mêmes que celles utilis
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -1812,7 +1792,6 @@ Cette section est rédigée en R. Les données sont les mêmes que celles utilis
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1861,7 +1840,6 @@ By Roger Erismann, Alexis Pochelon
   
   <div class="footer-item">
     
-
   <p class="copyright">
     
       © Copyright 2022.
@@ -1891,8 +1869,8 @@ By Roger Erismann, Alexis Pochelon
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>
