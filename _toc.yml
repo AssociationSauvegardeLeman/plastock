@@ -15,13 +15,13 @@ parts:
   numbered: False
   chapters:
   - file: annexe_methode_detail
-  - file: (random_variables)
+  - file: random_variables
   - file: micro_plage_position
   - file: micro_plage_attributes
-  - file: (micro_results)
-  - file: Description_donnee
+  - file: micro_results
+  - file: description_donnee
   - file: macro_plage_position
   - file: macro_plage_attributes
-  - file: (macro_surface_area)
+  - file: macro_surface_area
   - file: resultats_precedents
   - file: references

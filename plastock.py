@@ -202,7 +202,7 @@ def attribute_summary_grid(data, vals, voi, figname, labels: dict = None, stat="
 
 
 def add_table_to_page(table, table_no, caption, section, page, rule, format_index='both',
-                      format_kwargs: dict = format_kwargs) -> pd.DataFrame:
+                      format_kwargs: dict = format_kwargs, label: bool = False) -> pd.DataFrame:
     """
     Ajoute un tableau à une page dans un document.
 
@@ -224,7 +224,15 @@ def add_table_to_page(table, table_no, caption, section, page, rule, format_inde
     Returns:
         pd.DataFrame: Le tableau formaté avec la légende spécifiée et prêt à être ajouté au document.
     """
-    caption = f'<b>Table {section}{page}-{table_no} :</b> {caption} {rule}'
+    
+    if not label:
+        caption = f'<b>Tableau {section}{page}-{table_no} :</b> {caption} {rule}'
+    if label:
+        if len(table_no) > 0:
+            caption = f'<b>Tableau {section}{page}-{table_no}'
+        else:
+            caption = f'<b>Tableau {section}{page}'
+        
     if format_index == 'both':
         table = table.format_index(str.capitalize, axis=1).format_index(str.capitalize, axis=0).format(**format_kwargs)
     if format_index == 'columns':
