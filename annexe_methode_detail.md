@@ -1,6 +1,4 @@
-# Méthodes
-
-## Stratégie d’échantillonnage
+# Méthodes détaillées pour l'échantillonage
 
 ## Échantillonnage de microplastiques
 
