@@ -93,7 +93,7 @@ def attribute_summary(some_data, vals, voi, columns: dict = None, labels: dict =
     
     # apply css styles to the styler object
     # apply mask to the styler object
-    d_sum = data_summary.style.set_table_styles(table_css_styles).format(precision=2)
+    d_sum = data_summary.style.set_table_styles(table_css_styles_top).format(precision=2)
     d_sum = d_sum.set_properties(subset=pd.IndexSlice[test_one, ["moyenne"]], **a_property)
     
     return d_sum.set_properties(subset=pd.IndexSlice[test_two, ["50%"]], **a_property)
@@ -228,10 +228,7 @@ def add_table_to_page(table, table_no, caption, section, page, rule, format_inde
     if not label:
         caption = f'<b>Tableau {section}{page}-{table_no} :</b> {caption} {rule}'
     if label:
-        if len(table_no) > 0:
-            caption = f'<b>Tableau {section}{page}-{table_no}'
-        else:
-            caption = f'<b>Tableau {section}{page}'
+        caption = " "
         
     if format_index == 'both':
         table = table.format_index(str.capitalize, axis=1).format_index(str.capitalize, axis=0).format(**format_kwargs)

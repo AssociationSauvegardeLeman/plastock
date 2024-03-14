@@ -3,6 +3,7 @@ import pandas as pd
 import setvariables as conf_
 from typing import List, Dict, Union, Tuple, Callable
 from matplotlib.colors import ListedColormap
+from plastockconf import table_css_styles_top
 
 
 
@@ -356,7 +357,7 @@ def translated_and_style_for_display(df, amap, lan, capitalize: str = 'index', g
         styled_df = translated_and_style_for_display(original_df, language_map, 'French', gradient=True)
     """
     d = translate_for_display(df, amap, lan)
-    d = d.style.format(**conf_.format_kwargs).set_table_styles(conf_.table_css_styles)
+    d = d.style.format(**conf_.format_kwargs).set_table_styles(table_css_styles_top)
     if gradient:
         d = d.applymap(color_gradient, cmap=conf_.newcmp)
     d.applymap(lambda x: 'color: #E5E5E5' if pd.isnull(x) else '')

@@ -1,0 +1,13 @@
+Auteurs,Lieu,Taille échantillonnée en mm,Particule/m2,Ecart type,médiane,min,max
+De Alencastro et Faure 2014,Léman,"0,3-5",2100,2000,1700,78,5000
+De Alencastro et Faure 2014,Lacs suisses,"0,3-5",1300,2000,270,20,7200
+De Alencastro et Faure 2014,Constance,"0,3-5",320,220,260,140,620
+De Alencastro et Faure 2014,Neuchâtel,"0,3-5",700,1100,220,67,2300
+De Alencastro et Faure 2014,Majeur,"0,3-5",1100,2300,180,20,6900
+De Alencastro et Faure 2014,Zurich,"0,3-5",460,350,480,89,800
+De Alencastro et Faure 2014,Brienz,"0,3-5",2500,3000,1200,89,7200
+Frei 2021,Lugano,"0,3-5",9044,14494,,733,45600
+Constant et al. 2019,Golf du Lion 1,"0,063-5",1100,1629,,145,4653
+Constant et al. 2019,Golf du Lion 2,"0,063-5",731,528,,298,2258
+Constant et al. 2019,Golf du Lion 3,"0,063-5",254,141,,92,567
+Constant et al. 2019,Golf du Lion 4,"0,063-5",290,292,,117,1152
