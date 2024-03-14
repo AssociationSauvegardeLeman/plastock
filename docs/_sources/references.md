@@ -3,7 +3,7 @@
 ## Science citoyenne et collecte de données
 
 (mlw_2013)=
-__Guidance on Monitoring of Marine Litter in European Seas.__, Galgani et all,  EUR 26113. Luxembourg (Luxembourg): 
+__Guidance on Monitoring of Marine Litter in European Seas__, Galgani et all,  EUR 26113. Luxembourg (Luxembourg): 
 Publications Office of the European Union; 2013. JRC83985 [https://publications.jrc.ec.europa.
 eu/repository/handle/JRC83985](https://publications.jrc.ec.europa.eu/repository/handle/JRC83985)
 
@@ -13,7 +13,7 @@ marine litter under the Marine Strategy Framework Directive__,  Galgani et all.,
 ISBN 978-92- 68-04093-5, doi:10.2760/59137, JRC133594 [https://literatur.thuenen.de/digbib_extern/dn067364.pdf](https://literatur.thuenen.de/digbib_extern/dn067364.pdf)
 
 (eu_threshold)=
-__A European threshold value and assessment method for macro litter on coastlines__ , Publications Office of the 
+__A European threshold value and assessment method for macro litter on coastlines__, Publications Office of the 
 European Union, Van Loon, et all , [https://publications.jrc.ec.europa.eu/repository/handle/JRC121707](https://publications.jrc.ec.europa.eu/repository/handle/JRC121707), ISBN 978-92-76-21444-1, doi:10.2760/54369, JRC121707.
 
 (csc_improving)=
@@ -23,21 +23,21 @@ __Improving big citizen science data: Moving beyond haphazard sampling__, _Amano
 __Marine Litter Assessment in the Adriatic and Ionian Seas__, _Vlachogianni et all_, 2017. IPA-Adriatic DeFishGear Project, MIO-ECSDE, HCMR and ISPRA. pp. 168 (ISBN: 978-960-6793-25-7)
 
 (mediteranean)=
-__Assessing marine litter on Mediterranean beaches:  Filling in the knowledge gaps via a participatory-science initiative__, _Vlachogianni, Th._, 2019, MIO-ECSDE, [MIO-ECSDE]((https://mio-ecsde.org/project/assessing-marine-litter-on-mediterranean-beaches-filling-in-the-knowledge-gaps-via-a-participatory-science-initiative-vlachogianni-th-mio-ecsde-2019/)
+__Assessing marine litter on Mediterranean beaches:  Filling in the knowledge gaps via a participatory-science initiative__, _Vlachogianni, Th._, 2019, MIO-ECSDE, [MIO-ECSDE](https://mio-ecsde.org/project/assessing-marine-litter-on-mediterranean-beaches-filling-in-the-knowledge-gaps-via-a-participatory-science-initiative-vlachogianni-th-mio-ecsde-2019/)
 
 __(Micro) plastic fluxes and stocks in Lake Geneva__, Boucher, J., Faure, F., Pompini, O., Plummer, Z., Wieser, O., & de Alencastro, L. F. (2019).  basin. TrAC Trends in Analytical Chemistry, 112, 66-74.
 
 __Evaluation de la pollution par les plastiques dans les eaux de surface en Suisse__, Faure, F., De Alencastro, L. F. (2018).
 
-__Defining the Baselines and standards for Microplastics Analyses in European waters: Final report Project BASEMAN.__, Gerdts, G. (2019). 
+__Defining the Baselines and standards for Microplastics Analyses in European waters: Final report Project BASEMAN__, Gerdts, G. (2019). 
 
 __Assessment of microplastic contamination on lakeshores of Lake Lugano__, Frei, G., Peduzzi, S., Stoll, S., & Bruder, A.
 
-__Comparison of the distribution and degradation of plastic debris along shorelines of the Great Lakes, North America.__, Zbyszewski, M., Corcoran, P. L., & Hockin, A. (2014).  Journal of Great Lakes Research, 40(2), 288-299.
+__Comparison of the distribution and degradation of plastic debris along shorelines of the Great Lakes, North America__, Zbyszewski, M., Corcoran, P. L., & Hockin, A. (2014).  Journal of Great Lakes Research, 40(2), 288-299.
 
-__Variation in plastic abundance at different lake beach zones-A case study.__, Imhof, H. K., Wiesheu, A. C., Anger, P. M., Niessner, R., Ivleva, N. P., & Laforsch, C. (2018). Variation in plastic abundance at different lake beach zones-A case study. Science of the Total Environment, 613, 530-537.
+__Variation in plastic abundance at different lake beach zones-A case study__, Imhof, H. K., Wiesheu, A. C., Anger, P. M., Niessner, R., Ivleva, N. P., & Laforsch, C. (2018). Variation in plastic abundance at different lake beach zones-A case study. Science of the Total Environment, 613, 530-537.
 
-__Microplastic contamination in Auckland (New Zealand) beach sediments.__, Bridson, J. H., Patel, M., Lewis, A., Gaw, S., & Parker, K. (2020).  Marine Pollution Bulletin, 151, 110867.
+__Microplastic contamination in Auckland (New Zealand) beach sediments__, Bridson, J. H., Patel, M., Lewis, A., Gaw, S., & Parker, K. (2020).  Marine Pollution Bulletin, 151, 110867.
 
 ## Mathématiques et informatique
 

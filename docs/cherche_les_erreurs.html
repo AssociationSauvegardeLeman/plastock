@@ -143,21 +143,20 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter_2.html">2. Déroulement du projet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter_3.html">3. Questions de recherches et hypothèses</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapter_4.html">4. Méthodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter_4.html">4. Protocoles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="resultats.html">5. Résultats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter_6.html">6. Conclusion</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Annex</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Annexes</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="annexe_methode_detail.html">Méthodes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="random_variables.html">Variables aléatoires</a></li>
+<li class="toctree-l1"><a class="reference internal" href="annexe_methode_detail.html">Méthodes détaillées pour l’échantillonage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="random_variables.html">Variables explicatives</a></li>
 <li class="toctree-l1"><a class="reference internal" href="micro_plage_position.html">Microplastiques par plage et position</a></li>
 <li class="toctree-l1"><a class="reference internal" href="micro_plage_attributes.html">Microplastiques par variables explicatives</a></li>
 <li class="toctree-l1"><a class="reference internal" href="micro_results.html">Prédiction de l’abondance en microplastiques</a></li>
 <li class="toctree-l1"><a class="reference internal" href="description_donnee.html">Data processing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="macro_plage_position.html">Macroplastiques par plage et position</a></li>
 <li class="toctree-l1"><a class="reference internal" href="macro_plage_attributes.html">Macroplastiques par variables explicatives</a></li>
-<li class="toctree-l1"><a class="reference internal" href="macro_surface_area.html">Macros déchets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="resultats_precedents.html">Résultats précédents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="references.html">Références</a></li>
 </ul>
 
@@ -307,7 +306,13 @@ document.write(`
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Unknown codes</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#find-the-errors">Find the errors</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#difference">difference</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#l-echantillon">l’échantillon</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compare-surface-areas">compare surface areas</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#extrapolated-values">Extrapolated values</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microplastics-total-pieces-1-266-712-044-1-349-710-956">Microplastics total pieces: 1’266 712 044 - 1’349 710 956</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macroplastics-m2-total-pieces-47-100-70-600">Macroplastics m² total pieces: 47,100 - 70,600</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macroplastics-linear-meters-total-pieces-38-300-68-800">Macroplastics linear meters total pieces: 38’300 - 68’800</a></li>
 </ul>
 </li>
 </ul>
@@ -757,781 +762,279 @@ memory usage: 335.5+ KB
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="l-echantillon">
-<h2>l’échantillon<a class="headerlink" href="#l-echantillon" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t1_dt</span><span class="p">[</span><span class="n">t1_dt</span><span class="p">[</span><span class="s1">&#39;diff&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="mi">614</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">event_total</span> <span class="o">=</span> <span class="n">mtwo</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;échantillon&quot;</span><span class="p">,</span> <span class="s2">&quot;Plage&quot;</span><span class="p">,</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="s2">&quot;Position&quot;</span><span class="p">,</span> <span class="s2">&quot;area&quot;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="s2">&quot;quantité&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">event_total</span><span class="p">[</span><span class="s1">&#39;pcs/m²&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">event_total</span><span class="p">[</span><span class="s2">&quot;quantité&quot;</span><span class="p">]</span><span class="o">/</span><span class="n">event_total</span><span class="o">.</span><span class="n">area</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="compare-surface-areas">
+<h2>compare surface areas<a class="headerlink" href="#compare-surface-areas" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">event_total</span><span class="p">[</span><span class="s1">&#39;pcs/m²&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>quantité</th>
-      <th>t2_q</th>
-      <th>diff</th>
-    </tr>
-    <tr>
-      <th>s</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t1samp</span> <span class="o">=</span> <span class="n">t1</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">t1</span><span class="o">.</span><span class="n">Plage</span><span class="o">==</span><span class="s2">&quot;Préverenges&quot;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">t1</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;2022-08-13&quot;</span><span class="p">)]</span>
-<span class="n">t2samp</span> <span class="o">=</span> <span class="n">t2</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">t2</span><span class="o">.</span><span class="n">Plage</span><span class="o">==</span><span class="s2">&quot;Préverenges&quot;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">t2</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span> <span class="o">==</span><span class="s2">&quot;2022-08-13&quot;</span><span class="p">)]</span>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    185.000000
+mean       0.758360
+std        1.032423
+min        0.005263
+25%        0.179104
+50%        0.377358
+75%        0.944444
+max        7.585859
+Name: pcs/m², dtype: float64
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mone</span><span class="p">[(</span><span class="n">mone</span><span class="o">.</span><span class="n">Plage</span> <span class="o">==</span> <span class="s2">&quot;Préverenges&quot;</span><span class="p">)</span><span class="o">&amp;</span><span class="p">(</span><span class="n">mone</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;2022-08-13&quot;</span><span class="p">)</span><span class="o">&amp;</span><span class="p">(</span><span class="n">mone</span><span class="p">[</span><span class="s1">&#39;quantité&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mtest</span> <span class="o">=</span> <span class="n">mone</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;échantillon&quot;</span><span class="p">,</span> <span class="s2">&quot;Plage&quot;</span><span class="p">,</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="s2">&quot;area&quot;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="s2">&quot;quantité&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">mtest</span><span class="p">[</span><span class="s2">&quot;pcs/m²&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mtest</span><span class="p">[</span><span class="s2">&quot;quantité&quot;</span><span class="p">]</span><span class="o">/</span><span class="n">mtest</span><span class="o">.</span><span class="n">area</span>
+<span class="n">mtest</span><span class="p">[</span><span class="s2">&quot;pcs/m²&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    98.000000
+mean      0.659221
+std       0.660652
+min       0.025974
+25%       0.204404
+50%       0.469382
+75%       0.845195
+max       3.554572
+Name: pcs/m², dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="extrapolated-values">
+<h1>Extrapolated values<a class="headerlink" href="#extrapolated-values" title="Permalink to this headline">#</a></h1>
+<p><strong>Method: linear interpolation of the expected quantiles</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">multinomial</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">norm</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="microplastics-total-pieces-1-266-712-044-1-349-710-956">
+<h2>Microplastics total pieces: 1’266 712 044 - 1’349 710 956<a class="headerlink" href="#microplastics-total-pieces-1-266-712-044-1-349-710-956" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.interpolate</span> <span class="kn">import</span> <span class="n">interp1d</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
+<span class="c1"># bayes</span>
+<span class="c1"># given quantiles and their corresponding values</span>
+<span class="n">quantiles</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.50</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">,</span> <span class="mf">0.99</span><span class="p">])</span>
+<span class="n">quantile_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="mi">248</span><span class="p">,</span> <span class="mi">460</span><span class="p">,</span> <span class="mi">3000</span><span class="p">])</span>
 
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>échantillon</th>
-      <th>Plage</th>
-      <th>substrat</th>
-      <th>date</th>
-      <th>area</th>
-      <th>slug</th>
-      <th>code</th>
-      <th>quantité</th>
-      <th>pcs/m²</th>
-      <th>region</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>6722</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>1111</td>
-      <td>preverenges</td>
-      <td>G112</td>
-      <td>69</td>
-      <td>0.062106</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>6723</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>1111</td>
-      <td>preverenges</td>
-      <td>G113</td>
-      <td>5</td>
-      <td>0.004500</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>6724</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>1111</td>
-      <td>preverenges</td>
-      <td>G125</td>
-      <td>2</td>
-      <td>0.001800</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>6725</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>1111</td>
-      <td>preverenges</td>
-      <td>G131</td>
-      <td>1</td>
-      <td>0.000900</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>6726</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>1111</td>
-      <td>preverenges</td>
-      <td>G211</td>
-      <td>4</td>
-      <td>0.003600</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>6727</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>1111</td>
-      <td>preverenges</td>
-      <td>G26</td>
-      <td>1</td>
-      <td>0.000900</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>6728</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>1111</td>
-      <td>preverenges</td>
-      <td>G27</td>
-      <td>232</td>
-      <td>0.208821</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>6729</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>1111</td>
-      <td>preverenges</td>
-      <td>G30</td>
-      <td>28</td>
-      <td>0.025203</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>6730</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>1111</td>
-      <td>preverenges</td>
-      <td>G31</td>
-      <td>2</td>
-      <td>0.001800</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>6731</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>1111</td>
-      <td>preverenges</td>
-      <td>G32</td>
-      <td>1</td>
-      <td>0.000900</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>6732</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>1111</td>
-      <td>preverenges</td>
-      <td>G34</td>
-      <td>1</td>
-      <td>0.000900</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>6733</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>1111</td>
-      <td>preverenges</td>
-      <td>G50</td>
-      <td>19</td>
-      <td>0.017102</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>6734</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>1111</td>
-      <td>preverenges</td>
-      <td>G74</td>
-      <td>2</td>
-      <td>0.001800</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>6735</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>1111</td>
-      <td>preverenges</td>
-      <td>G95</td>
-      <td>3</td>
-      <td>0.002700</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>6736</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>1111</td>
-      <td>preverenges</td>
-      <td>Gcaps</td>
-      <td>3</td>
-      <td>0.002700</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>6737</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>1111</td>
-      <td>preverenges</td>
-      <td>Gfoams</td>
-      <td>17</td>
-      <td>0.015302</td>
-      <td>Grand lac</td>
-    </tr>
-    <tr>
-      <th>6738</th>
-      <td>(Préverenges, 2022-08-13)</td>
-      <td>Préverenges</td>
-      <td>1</td>
-      <td>2022-08-13</td>
-      <td>1111</td>
-      <td>preverenges</td>
-      <td>Gfrags</td>
-      <td>260</td>
-      <td>0.234023</td>
-      <td>Grand lac</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
+<span class="c1"># min and max values are the first and last in quantile_values</span>
+<span class="n">min_value</span> <span class="o">=</span> <span class="n">quantile_values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">max_value</span> <span class="o">=</span> <span class="n">quantile_values</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># linearly interpolate a CDF based on the quantiles</span>
+<span class="n">cdf</span> <span class="o">=</span> <span class="n">interp1d</span><span class="p">(</span><span class="n">quantiles</span><span class="p">,</span> <span class="n">quantile_values</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">bounds_error</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="p">(</span><span class="n">min_value</span><span class="p">,</span> <span class="n">max_value</span><span class="p">),</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span>
+<span class="n">sampled</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">samples</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="mi">68399</span>
+<span class="c1"># sample rom the CDF&#39;s range and invert the CDF to get samples</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">):</span>
+    <span class="n">uniform_samples</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">samples</span><span class="p">)</span>
+    <span class="n">samples_c</span> <span class="o">=</span> <span class="n">cdf</span><span class="p">(</span><span class="n">uniform_samples</span><span class="p">)</span>
+    <span class="n">sampled</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">samples_c</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mtwo</span><span class="p">[(</span><span class="n">mtwo</span><span class="o">.</span><span class="n">Plage</span> <span class="o">==</span> <span class="s2">&quot;Préverenges&quot;</span><span class="p">)</span><span class="o">&amp;</span><span class="p">(</span><span class="n">mtwo</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;2022-08-13&quot;</span><span class="p">)]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">sampled</span><span class="p">,</span> <span class="p">[</span><span class="mf">.5</span><span class="p">,</span> <span class="mf">.25</span><span class="p">,</span> <span class="mf">.5</span><span class="p">,</span> <span class="mf">.75</span><span class="p">,</span> <span class="mf">.95</span><span class="p">]))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1267004161.4988241 1266900345.6491313 [1.26690035e+09 1.26639577e+09 1.26690035e+09 1.26770872e+09
+ 1.26829795e+09]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># random forest</span>
+<span class="n">quantile_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">113</span><span class="p">,</span> <span class="mi">137</span><span class="p">,</span> <span class="mi">149</span><span class="p">,</span> <span class="mi">520</span><span class="p">,</span> <span class="mi">3000</span><span class="p">])</span>
+<span class="n">min_value</span> <span class="o">=</span> <span class="n">quantile_values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">max_value</span> <span class="o">=</span> <span class="n">quantile_values</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">sampled</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1"># Linearly interpolate a CDF based on the quantiles</span>
+<span class="n">cdf</span> <span class="o">=</span> <span class="n">interp1d</span><span class="p">(</span><span class="n">quantiles</span><span class="p">,</span> <span class="n">quantile_values</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">bounds_error</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="p">(</span><span class="n">min_value</span><span class="p">,</span> <span class="n">max_value</span><span class="p">),</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span>
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Plage</th>
-      <th>area</th>
-      <th>Temps</th>
-      <th>Position</th>
-      <th>substrat</th>
-      <th>date</th>
-      <th>Saison</th>
-      <th>Objet</th>
-      <th>Détail</th>
-      <th>code</th>
-      <th>OPSAR</th>
-      <th>UNEP</th>
-      <th>quantité</th>
-      <th>Poids</th>
-      <th>échantillon</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>63</th>
-      <td>Préverenges</td>
-      <td>961</td>
-      <td>490</td>
-      <td>2</td>
-      <td>NaN</td>
-      <td>2022-08-13</td>
-      <td>3</td>
-      <td>Ballon de baudruche</td>
-      <td>NaN</td>
-      <td>G125</td>
-      <td>49.0</td>
-      <td>RB01</td>
-      <td>2</td>
-      <td>0.001600</td>
-      <td>(Préverenges, 2022-08-13)</td>
-    </tr>
-    <tr>
-      <th>127</th>
-      <td>Préverenges</td>
-      <td>961</td>
-      <td>490</td>
-      <td>2</td>
-      <td>NaN</td>
-      <td>2022-08-13</td>
-      <td>3</td>
-      <td>Bande élastique</td>
-      <td>NaN</td>
-      <td>G131</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>1</td>
-      <td>0.000280</td>
-      <td>(Préverenges, 2022-08-13)</td>
-    </tr>
-    <tr>
-      <th>186</th>
-      <td>Préverenges</td>
-      <td>961</td>
-      <td>490</td>
-      <td>2</td>
-      <td>NaN</td>
-      <td>2022-08-13</td>
-      <td>3</td>
-      <td>Bâtonnet de sucette en plastique</td>
-      <td>NaN</td>
-      <td>G31</td>
-      <td>19.0</td>
-      <td>NaN</td>
-      <td>2</td>
-      <td>0.000360</td>
-      <td>(Préverenges, 2022-08-13)</td>
-    </tr>
-    <tr>
-      <th>262</th>
-      <td>Préverenges</td>
-      <td>961</td>
-      <td>490</td>
-      <td>2</td>
-      <td>NaN</td>
-      <td>2022-08-13</td>
-      <td>3</td>
-      <td>Bouchon/capuchon PET</td>
-      <td>NaN</td>
-      <td>G21</td>
-      <td>15.0</td>
-      <td>PL01</td>
-      <td>3</td>
-      <td>0.005250</td>
-      <td>(Préverenges, 2022-08-13)</td>
-    </tr>
-    <tr>
-      <th>348</th>
-      <td>Préverenges</td>
-      <td>961</td>
-      <td>490</td>
-      <td>2</td>
-      <td>NaN</td>
-      <td>2022-08-13</td>
-      <td>3</td>
-      <td>Briquet</td>
-      <td>NaN</td>
-      <td>G26</td>
-      <td>16.0</td>
-      <td>PL10</td>
-      <td>1</td>
-      <td>0.012000</td>
-      <td>(Préverenges, 2022-08-13)</td>
-    </tr>
-    <tr>
-      <th>510</th>
-      <td>Préverenges</td>
-      <td>961</td>
-      <td>490</td>
-      <td>2</td>
-      <td>NaN</td>
-      <td>2022-08-13</td>
-      <td>3</td>
-      <td>Coton-tige</td>
-      <td>NaN</td>
-      <td>G95</td>
-      <td>98.0</td>
-      <td>OT02</td>
-      <td>3</td>
-      <td>0.000540</td>
-      <td>(Préverenges, 2022-08-13)</td>
-    </tr>
-    <tr>
-      <th>578</th>
-      <td>Préverenges</td>
-      <td>150</td>
-      <td>80</td>
-      <td>1</td>
-      <td>1.0</td>
-      <td>2022-08-13</td>
-      <td>3</td>
-      <td>Couverts</td>
-      <td>NaN</td>
-      <td>G34</td>
-      <td>6.0</td>
-      <td>PL06</td>
-      <td>1</td>
-      <td>0.008000</td>
-      <td>(Préverenges, 2022-08-13)</td>
-    </tr>
-    <tr>
-      <th>724</th>
-      <td>Préverenges</td>
-      <td>150</td>
-      <td>80</td>
-      <td>1</td>
-      <td>1.0</td>
-      <td>2022-08-13</td>
-      <td>3</td>
-      <td>Emballage (film) à nourriture/alimentaire/en p...</td>
-      <td>NaN</td>
-      <td>G30</td>
-      <td>19.0</td>
-      <td>NaN</td>
-      <td>7</td>
-      <td>0.004100</td>
-      <td>(Préverenges, 2022-08-13)</td>
-    </tr>
-    <tr>
-      <th>725</th>
-      <td>Préverenges</td>
-      <td>961</td>
-      <td>490</td>
-      <td>2</td>
-      <td>NaN</td>
-      <td>2022-08-13</td>
-      <td>3</td>
-      <td>Emballage (film) à nourriture/alimentaire/en p...</td>
-      <td>NaN</td>
-      <td>G30</td>
-      <td>19.0</td>
-      <td>NaN</td>
-      <td>21</td>
-      <td>0.012200</td>
-      <td>(Préverenges, 2022-08-13)</td>
-    </tr>
-    <tr>
-      <th>853</th>
-      <td>Préverenges</td>
-      <td>961</td>
-      <td>490</td>
-      <td>2</td>
-      <td>NaN</td>
-      <td>2022-08-13</td>
-      <td>3</td>
-      <td>Ficelle de moins de 1cm de diamètre</td>
-      <td>NaN</td>
-      <td>G50</td>
-      <td>32.0</td>
-      <td>PL19</td>
-      <td>19</td>
-      <td>0.076000</td>
-      <td>(Préverenges, 2022-08-13)</td>
-    </tr>
-    <tr>
-      <th>892</th>
-      <td>Préverenges</td>
-      <td>150</td>
-      <td>80</td>
-      <td>1</td>
-      <td>1.0</td>
-      <td>2022-08-13</td>
-      <td>3</td>
-      <td>Filaments de plastique de moins de 5 mm</td>
-      <td>NaN</td>
-      <td>G113</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>5</td>
-      <td>0.000100</td>
-      <td>(Préverenges, 2022-08-13)</td>
-    </tr>
-    <tr>
-      <th>1013</th>
-      <td>Préverenges</td>
-      <td>961</td>
-      <td>490</td>
-      <td>2</td>
-      <td>NaN</td>
-      <td>2022-08-13</td>
-      <td>3</td>
-      <td>Jouet en plastique</td>
-      <td>NaN</td>
-      <td>G32</td>
-      <td>20.0</td>
-      <td>PL08</td>
-      <td>1</td>
-      <td>0.100000</td>
-      <td>(Préverenges, 2022-08-13)</td>
-    </tr>
-    <tr>
-      <th>1135</th>
-      <td>Préverenges</td>
-      <td>150</td>
-      <td>80</td>
-      <td>1</td>
-      <td>1.0</td>
-      <td>2022-08-13</td>
-      <td>3</td>
-      <td>Mégot de cigarette</td>
-      <td>NaN</td>
-      <td>G27</td>
-      <td>64.0</td>
-      <td>PL11</td>
-      <td>3</td>
-      <td>0.000660</td>
-      <td>(Préverenges, 2022-08-13)</td>
-    </tr>
-    <tr>
-      <th>1136</th>
-      <td>Préverenges</td>
-      <td>961</td>
-      <td>490</td>
-      <td>2</td>
-      <td>NaN</td>
-      <td>2022-08-13</td>
-      <td>3</td>
-      <td>Mégot de cigarette</td>
-      <td>NaN</td>
-      <td>G27</td>
-      <td>64.0</td>
-      <td>PL11</td>
-      <td>229</td>
-      <td>0.050380</td>
-      <td>(Préverenges, 2022-08-13)</td>
-    </tr>
-    <tr>
-      <th>1292</th>
-      <td>Préverenges</td>
-      <td>150</td>
-      <td>80</td>
-      <td>1</td>
-      <td>1.0</td>
-      <td>2022-08-13</td>
-      <td>3</td>
-      <td>Morceau de plastique de moins de 2,5cm</td>
-      <td>NaN</td>
-      <td>G78</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>10</td>
-      <td>0.003000</td>
-      <td>(Préverenges, 2022-08-13)</td>
-    </tr>
-    <tr>
-      <th>1293</th>
-      <td>Préverenges</td>
-      <td>961</td>
-      <td>490</td>
-      <td>2</td>
-      <td>NaN</td>
-      <td>2022-08-13</td>
-      <td>3</td>
-      <td>Morceau de plastique de moins de 2,5cm</td>
-      <td>NaN</td>
-      <td>G78</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>232</td>
-      <td>0.069600</td>
-      <td>(Préverenges, 2022-08-13)</td>
-    </tr>
-    <tr>
-      <th>1447</th>
-      <td>Préverenges</td>
-      <td>961</td>
-      <td>490</td>
-      <td>2</td>
-      <td>NaN</td>
-      <td>2022-08-13</td>
-      <td>3</td>
-      <td>Morceau de plastique entre 2,5 et 50cm</td>
-      <td>NaN</td>
-      <td>G79</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>18</td>
-      <td>0.054000</td>
-      <td>(Préverenges, 2022-08-13)</td>
-    </tr>
-    <tr>
-      <th>1633</th>
-      <td>Préverenges</td>
-      <td>961</td>
-      <td>490</td>
-      <td>2</td>
-      <td>NaN</td>
-      <td>2022-08-13</td>
-      <td>3</td>
-      <td>Mousse de rembourage</td>
-      <td>NaN</td>
-      <td>G74</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>2</td>
-      <td>0.001600</td>
-      <td>(Préverenges, 2022-08-13)</td>
-    </tr>
-    <tr>
-      <th>1737</th>
-      <td>Préverenges</td>
-      <td>961</td>
-      <td>490</td>
-      <td>2</td>
-      <td>NaN</td>
-      <td>2022-08-13</td>
-      <td>3</td>
-      <td>Pansement/Sparadrap/Bande</td>
-      <td>NaN</td>
-      <td>G211</td>
-      <td>105.0</td>
-      <td>OT05</td>
-      <td>4</td>
-      <td>0.000800</td>
-      <td>(Préverenges, 2022-08-13)</td>
-    </tr>
-    <tr>
-      <th>1798</th>
-      <td>Préverenges</td>
-      <td>150</td>
-      <td>80</td>
-      <td>1</td>
-      <td>1.0</td>
-      <td>2022-08-13</td>
-      <td>3</td>
-      <td>Pellets/Nurdles industriels</td>
-      <td>NaN</td>
-      <td>G112</td>
-      <td>NaN</td>
-      <td>PL23</td>
-      <td>2</td>
-      <td>0.000050</td>
-      <td>(Préverenges, 2022-08-13)</td>
-    </tr>
-    <tr>
-      <th>1799</th>
-      <td>Préverenges</td>
-      <td>961</td>
-      <td>490</td>
-      <td>2</td>
-      <td>NaN</td>
-      <td>2022-08-13</td>
-      <td>3</td>
-      <td>Pellets/Nurdles industriels</td>
-      <td>NaN</td>
-      <td>G112</td>
-      <td>NaN</td>
-      <td>PL23</td>
-      <td>67</td>
-      <td>0.001675</td>
-      <td>(Préverenges, 2022-08-13)</td>
-    </tr>
-    <tr>
-      <th>2015</th>
-      <td>Préverenges</td>
-      <td>150</td>
-      <td>80</td>
-      <td>1</td>
-      <td>1.0</td>
-      <td>2022-08-13</td>
-      <td>3</td>
-      <td>Sagex-EPS/Polystirène expensé entre 0,5cm et 2...</td>
-      <td>NaN</td>
-      <td>G81</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>8</td>
-      <td>0.006400</td>
-      <td>(Préverenges, 2022-08-13)</td>
-    </tr>
-    <tr>
-      <th>2016</th>
-      <td>Préverenges</td>
-      <td>961</td>
-      <td>490</td>
-      <td>2</td>
-      <td>NaN</td>
-      <td>2022-08-13</td>
-      <td>3</td>
-      <td>Sagex-EPS/Polystirène expensé entre 0,5cm et 2...</td>
-      <td>NaN</td>
-      <td>G81</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>9</td>
-      <td>0.007200</td>
-      <td>(Préverenges, 2022-08-13)</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
+<span class="c1"># Sample uniformly from the CDF&#39;s range and invert the CDF to get samples</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">):</span>
+    <span class="n">uniform_samples</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">samples</span><span class="p">)</span>
+    <span class="n">samples_c</span> <span class="o">=</span> <span class="n">cdf</span><span class="p">(</span><span class="n">uniform_samples</span><span class="p">)</span>
+    <span class="n">sampled</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">samples_c</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">sampled</span><span class="p">,</span> <span class="p">[</span><span class="mf">.5</span><span class="p">,</span> <span class="mf">.25</span><span class="p">,</span> <span class="mf">.5</span><span class="p">,</span> <span class="mf">.75</span><span class="p">,</span> <span class="mf">.95</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1349912990.6183693 1349976842.9969382 [1.34997684e+09 1.34944760e+09 1.34997684e+09 1.35049346e+09
+ 1.35118109e+09]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="macroplastics-m2-total-pieces-47-100-70-600">
+<h2>Macroplastics m² total pieces: 47,100 - 70,600<a class="headerlink" href="#macroplastics-m2-total-pieces-47-100-70-600" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># bayes</span>
+<span class="n">quantile_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">.01</span><span class="p">,</span> <span class="mf">.03</span><span class="p">,</span> <span class="mf">.14</span><span class="p">,</span> <span class="mf">.34</span><span class="p">,</span> <span class="mf">1.06</span><span class="p">,</span> <span class="mf">4.58</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
+<span class="n">min_value</span> <span class="o">=</span> <span class="n">quantile_values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">max_value</span> <span class="o">=</span> <span class="n">quantile_values</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">sampled</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1"># Linearly interpolate a CDF based on the quantiles</span>
+<span class="n">cdf</span> <span class="o">=</span> <span class="n">interp1d</span><span class="p">(</span><span class="n">quantiles</span><span class="p">,</span> <span class="n">quantile_values</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">bounds_error</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="p">(</span><span class="n">min_value</span><span class="p">,</span> <span class="n">max_value</span><span class="p">),</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span>
+<span class="n">samples</span> <span class="o">=</span> <span class="mi">68399</span>
+<span class="c1"># Sample uniformly from the CDF&#39;s range and invert the CDF to get samples</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">):</span>
+    <span class="n">uniform_samples</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">samples</span><span class="p">)</span>
+    <span class="n">samples_c</span> <span class="o">=</span> <span class="n">cdf</span><span class="p">(</span><span class="n">uniform_samples</span><span class="p">)</span>
+    <span class="n">sampled</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">samples_c</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">sampled</span><span class="p">,</span> <span class="p">[</span><span class="mf">.5</span><span class="p">,</span> <span class="mf">.25</span><span class="p">,</span> <span class="mf">.5</span><span class="p">,</span> <span class="mf">.75</span><span class="p">,</span> <span class="mf">.95</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>70718.12416877097 70657.05328538858 [70657.05328539 70474.56990245 70657.05328539 71013.95141498
+ 71217.60588974]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># random forest</span>
+<span class="n">quantile_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">.01</span><span class="p">,</span> <span class="mf">.10</span><span class="p">,</span> <span class="mf">.24</span><span class="p">,</span> <span class="mf">.47</span><span class="p">,</span> <span class="mf">.6</span><span class="p">,</span> <span class="mf">2.12</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
+<span class="n">min_value</span> <span class="o">=</span> <span class="n">quantile_values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">max_value</span> <span class="o">=</span> <span class="n">quantile_values</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">sampled</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1"># Linearly interpolate a CDF based on the quantiles</span>
+<span class="n">cdf</span> <span class="o">=</span> <span class="n">interp1d</span><span class="p">(</span><span class="n">quantiles</span><span class="p">,</span> <span class="n">quantile_values</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">bounds_error</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="p">(</span><span class="n">min_value</span><span class="p">,</span> <span class="n">max_value</span><span class="p">),</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span>
+<span class="n">samples</span> <span class="o">=</span> <span class="mi">68399</span>
+<span class="c1"># Sample uniformly from the CDF&#39;s range and invert the CDF to get samples</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">):</span>
+    <span class="n">uniform_samples</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">samples</span><span class="p">)</span>
+    <span class="n">samples_c</span> <span class="o">=</span> <span class="n">cdf</span><span class="p">(</span><span class="n">uniform_samples</span><span class="p">)</span>
+    <span class="n">sampled</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">samples_c</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">sampled</span><span class="p">,</span> <span class="p">[</span><span class="mf">.5</span><span class="p">,</span> <span class="mf">.25</span><span class="p">,</span> <span class="mf">.5</span><span class="p">,</span> <span class="mf">.75</span><span class="p">,</span> <span class="mf">.95</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>47175.0075722434 47170.52086886583 [47170.52086887 46978.41491646 47170.52086887 47334.42207431
+ 47598.70147204]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="macroplastics-linear-meters-total-pieces-38-300-68-800">
+<h2>Macroplastics linear meters total pieces: 38’300 - 68’800<a class="headerlink" href="#macroplastics-linear-meters-total-pieces-38-300-68-800" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># bayes</span>
+<span class="n">quantile_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">.01</span><span class="p">,</span> <span class="mf">.03</span><span class="p">,</span> <span class="mf">1.32</span><span class="p">,</span> <span class="mf">3.86</span><span class="p">,</span> <span class="mf">7.12</span><span class="p">,</span> <span class="mf">18.26</span><span class="p">,</span> <span class="mi">20</span><span class="p">])</span>
+<span class="n">min_value</span> <span class="o">=</span> <span class="n">quantile_values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">max_value</span> <span class="o">=</span> <span class="n">quantile_values</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">sampled</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1"># Linearly interpolate a CDF based on the quantiles</span>
+<span class="n">cdf</span> <span class="o">=</span> <span class="n">interp1d</span><span class="p">(</span><span class="n">quantiles</span><span class="p">,</span> <span class="n">quantile_values</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">bounds_error</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="p">(</span><span class="n">min_value</span><span class="p">,</span> <span class="n">max_value</span><span class="p">),</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span>
+<span class="n">samples</span> <span class="o">=</span> <span class="mi">12688</span>
+<span class="c1"># Sample uniformly from the CDF&#39;s range and invert the CDF to get samples</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">):</span>
+    <span class="n">uniform_samples</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">samples</span><span class="p">)</span>
+    <span class="n">samples_c</span> <span class="o">=</span> <span class="n">cdf</span><span class="p">(</span><span class="n">uniform_samples</span><span class="p">)</span>
+    <span class="n">sampled</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">samples_c</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">sampled</span><span class="p">,</span> <span class="p">[</span><span class="mf">.5</span><span class="p">,</span> <span class="mf">.25</span><span class="p">,</span> <span class="mf">.5</span><span class="p">,</span> <span class="mf">.75</span><span class="p">,</span> <span class="mf">.95</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>68766.29796253821 68832.45385144875 [68832.45385145 68452.6973713  68832.45385145 69067.96574465
+ 69605.76535175]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># random forest</span>
+<span class="n">quantile_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">.01</span><span class="p">,</span> <span class="mf">.3</span><span class="p">,</span> <span class="mf">.86</span><span class="p">,</span> <span class="mf">2.46</span><span class="p">,</span> <span class="mf">3.42</span><span class="p">,</span> <span class="mf">9.28</span><span class="p">,</span> <span class="mi">20</span><span class="p">])</span>
+<span class="n">min_value</span> <span class="o">=</span> <span class="n">quantile_values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">max_value</span> <span class="o">=</span> <span class="n">quantile_values</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">sampled</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1"># Linearly interpolate a CDF based on the quantiles</span>
+<span class="n">cdf</span> <span class="o">=</span> <span class="n">interp1d</span><span class="p">(</span><span class="n">quantiles</span><span class="p">,</span> <span class="n">quantile_values</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">bounds_error</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="p">(</span><span class="n">min_value</span><span class="p">,</span> <span class="n">max_value</span><span class="p">),</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span>
+<span class="n">samples</span> <span class="o">=</span> <span class="mi">12688</span>
+<span class="c1"># Sample uniformly from the CDF&#39;s range and invert the CDF to get samples</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">):</span>
+    <span class="n">uniform_samples</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">samples</span><span class="p">)</span>
+    <span class="n">samples_c</span> <span class="o">=</span> <span class="n">cdf</span><span class="p">(</span><span class="n">uniform_samples</span><span class="p">)</span>
+    <span class="n">sampled</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">samples_c</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">sampled</span><span class="p">,</span> <span class="p">[</span><span class="mf">.5</span><span class="p">,</span> <span class="mf">.25</span><span class="p">,</span> <span class="mf">.5</span><span class="p">,</span> <span class="mf">.75</span><span class="p">,</span> <span class="mf">.95</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>38279.36795618427 38299.27635626822 [38299.27635627 38085.21861151 38299.27635627 38401.63289547
+ 38855.02306708]
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -1588,7 +1091,13 @@ memory usage: 335.5+ KB
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Unknown codes</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#find-the-errors">Find the errors</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#difference">difference</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#l-echantillon">l’échantillon</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compare-surface-areas">compare surface areas</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#extrapolated-values">Extrapolated values</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microplastics-total-pieces-1-266-712-044-1-349-710-956">Microplastics total pieces: 1’266 712 044 - 1’349 710 956</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macroplastics-m2-total-pieces-47-100-70-600">Macroplastics m² total pieces: 47,100 - 70,600</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macroplastics-linear-meters-total-pieces-38-300-68-800">Macroplastics linear meters total pieces: 38’300 - 68’800</a></li>
 </ul>
 </li>
 </ul>
