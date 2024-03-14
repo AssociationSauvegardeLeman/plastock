@@ -1,6 +1,6 @@
 # Pla'stock Léman
 
-*Statistiques descriptives et modèles du nombre de fragments de micro-plastiques et de déchets identifiés sur les plages du Léman.*
+*Statistiques descriptives et modèles du nombre de microplastiques et de macroplastiques identifiés sur les plages du Léman.*
 
 Il s'agit d'un manuscrit non publié. Ce travail en cours est l'œuvre des
 collaborateurs de [l'Association pour la Sauvegarde du Léman](https://asleman.org/) et Roger Erismann:
@@ -18,7 +18,7 @@ Le but est de décrire numériquement les observations en relation avec les diff
 
 ## Usage and citation
 
-Ce document est inachevé. Si vous souhaitez aider à maintenir ce repo, veuillez contacter analyst@hammerdirt.ch.
+Ce document est provisoire. Si vous souhaitez aider à maintenir ce repo, veuillez contacter analyst@hammerdirt.ch.
 
 Si, pour une raison quelconque, vous devez citer ce document, veuillez utiliser ce qui suit :
 
