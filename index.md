@@ -10,7 +10,6 @@ collaborateurs de [l'Association pour la Sauvegarde du Léman](https://asleman.o
 
 
 Veuillez contacter Alexis ou Adrien pour toute question concernant les microplastiques ou le lac en général.
-![map](resources/maps/annex_map_regions.jpeg)
 
 
 ## Objectif et structure du document
@@ -23,4 +22,4 @@ Ce document est inachevé. Si vous souhaitez aider à maintenir ce repo, veuille
 
 Si, pour une raison quelconque, vous devez citer ce document, veuillez utiliser ce qui suit :
 
-*Prélèvement de microplastiques avec l'Association Pour le Sauvegarde du Léman*, Adrien Bonny, Alexis Pochelon, 2022, Assoctiation pour le Sauvegarde du Léman.
+*Pla'stock, étude du stock de macro et microplasiques sur les plages du Léman*, Adrien Bonny, Alexis Pochelon, 2022, Assoctiation pour le Sauvegarde du Léman.
