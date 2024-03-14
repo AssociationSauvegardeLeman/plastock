@@ -19,7 +19,7 @@ parts:
   - file: random_variables
   - file: micro_plage_position
   - file: micro_plage_attributes
-  - file: micro_results
+  - file: micro prediction
   - file: description_donnee
   - file: macro_plage_position
   - file: macro_plage_attributes
