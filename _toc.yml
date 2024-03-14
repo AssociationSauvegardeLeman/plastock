@@ -11,7 +11,7 @@ parts:
   - file: chapter_3
   - file: chapter_4
   - file: resultats  
-  - file: chapter_6
+  - file: conclusion
 - caption: Annexes
   numbered: False
   chapters:
