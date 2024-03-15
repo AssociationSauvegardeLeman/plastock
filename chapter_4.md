@@ -6,11 +6,22 @@
 
 Le périmètre du Léman, plus grand lac d’Europe occidentale par son volume, est de 200 km. Ses rives ont été découpées en 25 tronçons de longueur équivalente et au moins une plage a été choisie dans chacun de ces secteurs selon ses caractéristiques (type de substrat, exposition, fréquentation, degré d’urbanisationdes alentours, etc.) et la diversité des milieux qui la constituent et ce, afin d’obtenir un échantillonnage représentatif de la réalité. 
 
-Incruster Secteur_etude
+:::{card} 
+:margin: 3
+
+```{image} resources/maps/Secteur_etude.png
+:alt: summary litter density
+:align: center
+:name: carte_secteur
+```
+
++++
+<b>Figure 4.1 :</b> Séparation des 200 km de rives lémaniques en 25 secteurs pour le choix des plages de l'étude   
+:::
 
 La méthodologie de prélèvements et d’analyses a été testée et choisie pour être compatible avec les protocoles d’autres études européennes aux fins de comparaisons (Faure et al., 2014)(Frei et al. 2021). Ces décisions ont été validées par le groupe de travail « Pla’stock » de l’ASL et le Conseil scientifique de la CIPEL.
 
- Le choix s’est porté sur neuf grandes plages de plus de 80 m de long, neuf de 50 à 80 m et sept de 15 à 50 m. Les surfaces inventoriées varient entre 16 m2 pour la plus petite et près de 2000 m2 pour la plus grande. Au total, ce sont quatre plages de moins de 100 m2, 15 de 100 à 500 m2, cinq de 500 à 1100 m2 et une de 1980 m2 qui ont été investiguées. De plus, une attention particulière a été portée au substrat afin d’avoir une bonne répartition entre les plages de sable, de graviers et de galets.
+Le choix s’est porté sur neuf grandes plages de plus de 80 m de long, neuf de 50 à 80 m et sept de 15 à 50 m. Les surfaces inventoriées varient entre 16 m2 pour la plus petite et près de 2000 m2 pour la plus grande. Au total, ce sont quatre plages de moins de 100 m2, 15 de 100 à 500 m2, cinq de 500 à 1100 m2 et une de 1980 m2 qui ont été investiguées. De plus, une attention particulière a été portée au substrat afin d’avoir une bonne répartition entre les plages de sable, de graviers et de galets.
 
 Chaque plage comprend deux sous-secteurs :
 

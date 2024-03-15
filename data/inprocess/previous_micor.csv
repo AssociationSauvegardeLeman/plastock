@@ -1,4 +1,4 @@
-Auteurs,Lieu,Taille échantillonnée en mm,Particule/m2,Ecart type,médiane,min,max
+Auteurs,Lieu,Taille échantillonnée en mm,Moyenne particule/m2,Ecart type,Médiane,Min,Max
 De Alencastro et Faure 2014,Léman,"0,3-5",2100,2000,1700,78,5000
 De Alencastro et Faure 2014,Lacs suisses,"0,3-5",1300,2000,270,20,7200
 De Alencastro et Faure 2014,Constance,"0,3-5",320,220,260,140,620
