@@ -170,7 +170,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="chapter_4.html">4. Protocoles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="resultats.html">5. Résultats</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conclusion.html">6. Conclusion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="micro_results.html">7. Prédiction de l’abondance en microplastiques</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Annexes</span></p>
 <ul class="current nav bd-sidenav">
@@ -342,6 +341,12 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#metres-lineaires">Mètres linéaires</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extrapolated-values">Extrapolated values</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#microplastics-total-pieces-1-266-712-044-1-349-710-956">Microplastics total pieces: 1’266 712 044 - 1’349 710 956</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#macroplastics-m2-total-pieces-47-100-70-600">Macroplastics m² total pieces: 47,100 - 70,600</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#macroplastics-linear-meters-total-pieces-38-300-68-800">Macroplastics linear meters total pieces: 38’300 - 68’800</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analyse-et-inference">Analyse et inférence</a><ul class="nav section-nav flex-column">
@@ -913,9 +918,228 @@ Dans la dernière étape, les codes qui doivent être combinés (G78 et G79) son
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
-<div class="cell tag_remove-input docutils container">
+</section>
+</section>
+</section>
+<section id="extrapolated-values">
+<h2>Extrapolated values<a class="headerlink" href="#extrapolated-values" title="Permalink to this heading">#</a></h2>
+<p><strong>Method: linear interpolation of the expected quantiles</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">multinomial</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">norm</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="microplastics-total-pieces-1-266-712-044-1-349-710-956">
+<h3>Microplastics total pieces: 1’266 712 044 - 1’349 710 956<a class="headerlink" href="#microplastics-total-pieces-1-266-712-044-1-349-710-956" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.interpolate</span> <span class="kn">import</span> <span class="n">interp1d</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># bayes</span>
+<span class="c1"># given quantiles and their corresponding values</span>
+<span class="n">quantiles</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.50</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">,</span> <span class="mf">0.99</span><span class="p">])</span>
+<span class="n">quantile_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="mi">248</span><span class="p">,</span> <span class="mi">460</span><span class="p">,</span> <span class="mi">3000</span><span class="p">])</span>
+
+<span class="c1"># min and max values are the first and last in quantile_values</span>
+<span class="n">min_value</span> <span class="o">=</span> <span class="n">quantile_values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">max_value</span> <span class="o">=</span> <span class="n">quantile_values</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># linearly interpolate a CDF based on the quantiles</span>
+<span class="n">cdf</span> <span class="o">=</span> <span class="n">interp1d</span><span class="p">(</span><span class="n">quantiles</span><span class="p">,</span> <span class="n">quantile_values</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">bounds_error</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="p">(</span><span class="n">min_value</span><span class="p">,</span> <span class="n">max_value</span><span class="p">),</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span>
+<span class="n">sampled</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">samples</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="mi">68399</span>
+<span class="c1"># sample rom the CDF&#39;s range and invert the CDF to get samples</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">):</span>
+    <span class="n">uniform_samples</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">samples</span><span class="p">)</span>
+    <span class="n">samples_c</span> <span class="o">=</span> <span class="n">cdf</span><span class="p">(</span><span class="n">uniform_samples</span><span class="p">)</span>
+    <span class="n">sampled</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">samples_c</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">sampled</span><span class="p">,</span> <span class="p">[</span><span class="mf">.5</span><span class="p">,</span> <span class="mf">.25</span><span class="p">,</span> <span class="mf">.5</span><span class="p">,</span> <span class="mf">.75</span><span class="p">,</span> <span class="mf">.95</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1267004161.4988241 1266900345.6491313 [1.26690035e+09 1.26639577e+09 1.26690035e+09 1.26770872e+09
+ 1.26829795e+09]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># random forest</span>
+<span class="n">quantile_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">113</span><span class="p">,</span> <span class="mi">137</span><span class="p">,</span> <span class="mi">149</span><span class="p">,</span> <span class="mi">520</span><span class="p">,</span> <span class="mi">3000</span><span class="p">])</span>
+<span class="n">min_value</span> <span class="o">=</span> <span class="n">quantile_values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">max_value</span> <span class="o">=</span> <span class="n">quantile_values</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">sampled</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1"># Linearly interpolate a CDF based on the quantiles</span>
+<span class="n">cdf</span> <span class="o">=</span> <span class="n">interp1d</span><span class="p">(</span><span class="n">quantiles</span><span class="p">,</span> <span class="n">quantile_values</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">bounds_error</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="p">(</span><span class="n">min_value</span><span class="p">,</span> <span class="n">max_value</span><span class="p">),</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span>
+
+<span class="c1"># Sample uniformly from the CDF&#39;s range and invert the CDF to get samples</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">):</span>
+    <span class="n">uniform_samples</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">samples</span><span class="p">)</span>
+    <span class="n">samples_c</span> <span class="o">=</span> <span class="n">cdf</span><span class="p">(</span><span class="n">uniform_samples</span><span class="p">)</span>
+    <span class="n">sampled</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">samples_c</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">sampled</span><span class="p">,</span> <span class="p">[</span><span class="mf">.5</span><span class="p">,</span> <span class="mf">.25</span><span class="p">,</span> <span class="mf">.5</span><span class="p">,</span> <span class="mf">.75</span><span class="p">,</span> <span class="mf">.95</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1349912990.6183693 1349976842.9969382 [1.34997684e+09 1.34944760e+09 1.34997684e+09 1.35049346e+09
+ 1.35118109e+09]
+</pre></div>
+</div>
+</div>
 </div>
 </section>
+<section id="macroplastics-m2-total-pieces-47-100-70-600">
+<h3>Macroplastics m² total pieces: 47,100 - 70,600<a class="headerlink" href="#macroplastics-m2-total-pieces-47-100-70-600" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># bayes</span>
+<span class="n">quantile_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">.01</span><span class="p">,</span> <span class="mf">.03</span><span class="p">,</span> <span class="mf">.14</span><span class="p">,</span> <span class="mf">.34</span><span class="p">,</span> <span class="mf">1.06</span><span class="p">,</span> <span class="mf">4.58</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
+<span class="n">min_value</span> <span class="o">=</span> <span class="n">quantile_values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">max_value</span> <span class="o">=</span> <span class="n">quantile_values</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">sampled</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1"># Linearly interpolate a CDF based on the quantiles</span>
+<span class="n">cdf</span> <span class="o">=</span> <span class="n">interp1d</span><span class="p">(</span><span class="n">quantiles</span><span class="p">,</span> <span class="n">quantile_values</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">bounds_error</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="p">(</span><span class="n">min_value</span><span class="p">,</span> <span class="n">max_value</span><span class="p">),</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span>
+<span class="n">samples</span> <span class="o">=</span> <span class="mi">68399</span>
+<span class="c1"># Sample uniformly from the CDF&#39;s range and invert the CDF to get samples</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">):</span>
+    <span class="n">uniform_samples</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">samples</span><span class="p">)</span>
+    <span class="n">samples_c</span> <span class="o">=</span> <span class="n">cdf</span><span class="p">(</span><span class="n">uniform_samples</span><span class="p">)</span>
+    <span class="n">sampled</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">samples_c</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">sampled</span><span class="p">,</span> <span class="p">[</span><span class="mf">.5</span><span class="p">,</span> <span class="mf">.25</span><span class="p">,</span> <span class="mf">.5</span><span class="p">,</span> <span class="mf">.75</span><span class="p">,</span> <span class="mf">.95</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>70718.12416877097 70657.05328538858 [70657.05328539 70474.56990245 70657.05328539 71013.95141498
+ 71217.60588974]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># random forest</span>
+<span class="n">quantile_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">.01</span><span class="p">,</span> <span class="mf">.10</span><span class="p">,</span> <span class="mf">.24</span><span class="p">,</span> <span class="mf">.47</span><span class="p">,</span> <span class="mf">.6</span><span class="p">,</span> <span class="mf">2.12</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
+<span class="n">min_value</span> <span class="o">=</span> <span class="n">quantile_values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">max_value</span> <span class="o">=</span> <span class="n">quantile_values</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">sampled</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1"># Linearly interpolate a CDF based on the quantiles</span>
+<span class="n">cdf</span> <span class="o">=</span> <span class="n">interp1d</span><span class="p">(</span><span class="n">quantiles</span><span class="p">,</span> <span class="n">quantile_values</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">bounds_error</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="p">(</span><span class="n">min_value</span><span class="p">,</span> <span class="n">max_value</span><span class="p">),</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span>
+<span class="n">samples</span> <span class="o">=</span> <span class="mi">68399</span>
+<span class="c1"># Sample uniformly from the CDF&#39;s range and invert the CDF to get samples</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">):</span>
+    <span class="n">uniform_samples</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">samples</span><span class="p">)</span>
+    <span class="n">samples_c</span> <span class="o">=</span> <span class="n">cdf</span><span class="p">(</span><span class="n">uniform_samples</span><span class="p">)</span>
+    <span class="n">sampled</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">samples_c</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">sampled</span><span class="p">,</span> <span class="p">[</span><span class="mf">.5</span><span class="p">,</span> <span class="mf">.25</span><span class="p">,</span> <span class="mf">.5</span><span class="p">,</span> <span class="mf">.75</span><span class="p">,</span> <span class="mf">.95</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>47175.0075722434 47170.52086886583 [47170.52086887 46978.41491646 47170.52086887 47334.42207431
+ 47598.70147204]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="macroplastics-linear-meters-total-pieces-38-300-68-800">
+<h3>Macroplastics linear meters total pieces: 38’300 - 68’800<a class="headerlink" href="#macroplastics-linear-meters-total-pieces-38-300-68-800" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># bayes</span>
+<span class="n">quantile_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">.01</span><span class="p">,</span> <span class="mf">.03</span><span class="p">,</span> <span class="mf">1.32</span><span class="p">,</span> <span class="mf">3.86</span><span class="p">,</span> <span class="mf">7.12</span><span class="p">,</span> <span class="mf">18.26</span><span class="p">,</span> <span class="mi">20</span><span class="p">])</span>
+<span class="n">min_value</span> <span class="o">=</span> <span class="n">quantile_values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">max_value</span> <span class="o">=</span> <span class="n">quantile_values</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">sampled</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1"># Linearly interpolate a CDF based on the quantiles</span>
+<span class="n">cdf</span> <span class="o">=</span> <span class="n">interp1d</span><span class="p">(</span><span class="n">quantiles</span><span class="p">,</span> <span class="n">quantile_values</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">bounds_error</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="p">(</span><span class="n">min_value</span><span class="p">,</span> <span class="n">max_value</span><span class="p">),</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span>
+<span class="n">samples</span> <span class="o">=</span> <span class="mi">12688</span>
+<span class="c1"># Sample uniformly from the CDF&#39;s range and invert the CDF to get samples</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">):</span>
+    <span class="n">uniform_samples</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">samples</span><span class="p">)</span>
+    <span class="n">samples_c</span> <span class="o">=</span> <span class="n">cdf</span><span class="p">(</span><span class="n">uniform_samples</span><span class="p">)</span>
+    <span class="n">sampled</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">samples_c</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">sampled</span><span class="p">,</span> <span class="p">[</span><span class="mf">.5</span><span class="p">,</span> <span class="mf">.25</span><span class="p">,</span> <span class="mf">.5</span><span class="p">,</span> <span class="mf">.75</span><span class="p">,</span> <span class="mf">.95</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>68766.29796253821 68832.45385144875 [68832.45385145 68452.6973713  68832.45385145 69067.96574465
+ 69605.76535175]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># random forest</span>
+<span class="n">quantile_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">.01</span><span class="p">,</span> <span class="mf">.3</span><span class="p">,</span> <span class="mf">.86</span><span class="p">,</span> <span class="mf">2.46</span><span class="p">,</span> <span class="mf">3.42</span><span class="p">,</span> <span class="mf">9.28</span><span class="p">,</span> <span class="mi">20</span><span class="p">])</span>
+<span class="n">min_value</span> <span class="o">=</span> <span class="n">quantile_values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">max_value</span> <span class="o">=</span> <span class="n">quantile_values</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">sampled</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1"># Linearly interpolate a CDF based on the quantiles</span>
+<span class="n">cdf</span> <span class="o">=</span> <span class="n">interp1d</span><span class="p">(</span><span class="n">quantiles</span><span class="p">,</span> <span class="n">quantile_values</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">bounds_error</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="p">(</span><span class="n">min_value</span><span class="p">,</span> <span class="n">max_value</span><span class="p">),</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span>
+<span class="n">samples</span> <span class="o">=</span> <span class="mi">12688</span>
+<span class="c1"># Sample uniformly from the CDF&#39;s range and invert the CDF to get samples</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">):</span>
+    <span class="n">uniform_samples</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">samples</span><span class="p">)</span>
+    <span class="n">samples_c</span> <span class="o">=</span> <span class="n">cdf</span><span class="p">(</span><span class="n">uniform_samples</span><span class="p">)</span>
+    <span class="n">sampled</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">samples_c</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">sampled</span><span class="p">,</span> <span class="p">[</span><span class="mf">.5</span><span class="p">,</span> <span class="mf">.25</span><span class="p">,</span> <span class="mf">.5</span><span class="p">,</span> <span class="mf">.75</span><span class="p">,</span> <span class="mf">.95</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>38279.36795618427 38299.27635626822 [38299.27635627 38085.21861151 38299.27635627 38401.63289547
+ 38855.02306708]
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 <section id="analyse-et-inference">
@@ -1778,6 +2002,12 @@ Cette section est rédigée en R. Les données sont les mêmes que celles utilis
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#metres-lineaires">Mètres linéaires</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extrapolated-values">Extrapolated values</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#microplastics-total-pieces-1-266-712-044-1-349-710-956">Microplastics total pieces: 1’266 712 044 - 1’349 710 956</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#macroplastics-m2-total-pieces-47-100-70-600">Macroplastics m² total pieces: 47,100 - 70,600</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#macroplastics-linear-meters-total-pieces-38-300-68-800">Macroplastics linear meters total pieces: 38’300 - 68’800</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analyse-et-inference">Analyse et inférence</a><ul class="nav section-nav flex-column">
