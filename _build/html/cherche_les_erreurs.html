@@ -1,0 +1,1178 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Unknown codes &#8212; Pla&#39;stock</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cherche_les_erreurs';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Pla'stock</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Rapport</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter_2.html">2. Déroulement du projet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter_3.html">3. Questions de recherches et hypothèses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter_4.html">4. Protocoles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resultats.html">5. Résultats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conclusion.html">6. Conclusion</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Annexes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="annexe_methode_detail.html">Méthodes détaillées pour l’échantillonage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="random_variables.html">Variables explicatives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="micro_plage_position.html">Microplastiques par plage et position</a></li>
+<li class="toctree-l1"><a class="reference internal" href="micro_plage_attributes.html">Microplastiques par variables explicatives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="micro_prediction.html">Prédiction de l’abondance en microplastiques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="description_donnee.html">Data processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="macro_plage_position.html">Macroplastiques par plage et position</a></li>
+<li class="toctree-l1"><a class="reference internal" href="macro_plage_attributes.html">Macroplastiques par variables explicatives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">Références</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/hammerdirt-analyst/plastock" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hammerdirt-analyst/plastock/issues/new?title=Issue%20on%20page%20%2Fcherche_les_erreurs.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Unknown codes</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Unknown codes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#find-the-errors">Find the errors</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#difference">difference</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compare-surface-areas">compare surface areas</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#extrapolated-values">Extrapolated values</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microplastics-total-pieces-1-266-712-044-1-349-710-956">Microplastics total pieces: 1’266 712 044 - 1’349 710 956</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macroplastics-m2-total-pieces-47-100-70-600">Macroplastics m² total pieces: 47,100 - 70,600</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macroplastics-linear-meters-total-pieces-38-300-68-800">Macroplastics linear meters total pieces: 38’300 - 68’800</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> watermark
+<span class="c1"># %load_ext rpy2.ipython</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="c1"># import rpy2</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestRegressor</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">beta</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">multinomial</span>
+
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.dates</span> <span class="k">as</span> <span class="nn">mdates</span>
+
+<span class="kn">from</span> <span class="nn">myst_nb</span> <span class="kn">import</span> <span class="n">glue</span>
+<span class="kn">from</span> <span class="nn">slugify</span> <span class="kn">import</span> <span class="n">slugify</span>
+
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+
+
+
+<span class="c1"># from rpy2.robjects.packages import importr</span>
+
+<span class="kn">import</span> <span class="nn">plastockconf</span> <span class="k">as</span> <span class="nn">psc</span>
+<span class="kn">import</span> <span class="nn">plastock</span> <span class="k">as</span> <span class="nn">pstk</span>
+
+<span class="kn">from</span> <span class="nn">plastockconf</span> <span class="kn">import</span> <span class="n">name_zones</span><span class="p">,</span> <span class="n">name_frequentation</span><span class="p">,</span> <span class="n">name_situation</span>
+<span class="kn">from</span> <span class="nn">plastockconf</span> <span class="kn">import</span> <span class="n">name_substrate</span><span class="p">,</span> <span class="n">name_distance</span><span class="p">,</span> <span class="n">table_css_styles</span><span class="p">,</span> <span class="n">table_css_styles_top</span>
+
+<span class="kn">from</span> <span class="nn">plastock</span> <span class="kn">import</span> <span class="n">add_table_to_page</span><span class="p">,</span> <span class="n">capitalize_x_tick_labels</span><span class="p">,</span> <span class="n">capitalize_x_and_y_axis_labels</span><span class="p">,</span> <span class="n">capitalize_legend_components</span><span class="p">,</span> <span class="n">attribute_summary</span>
+
+<span class="kn">import</span> <span class="nn">reportclass</span> <span class="k">as</span> <span class="nn">rc</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_rows&#39;</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mone</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/end_pipe/macro_data_msquared.csv&#39;</span><span class="p">)</span>
+<span class="n">mone</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">mone</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;mixed&#39;</span><span class="p">,</span> <span class="n">dayfirst</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">mone</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mone</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">mone</span><span class="p">[</span><span class="s2">&quot;échantillon&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">mone</span><span class="o">.</span><span class="n">Plage</span><span class="p">,</span> <span class="n">mone</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]))</span>
+<span class="n">mtwo</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/end_pipe/macro_current.csv&#39;</span><span class="p">)</span>
+
+<span class="c1"># these needed to be removed</span>
+<span class="c1"># not_these = [</span>
+<span class="c1">#     &#39;G9492&#39;,</span>
+<span class="c1">#     &#39;G989&#39;,</span>
+<span class="c1">#     &#39;G9147&#39;,</span>
+<span class="c1">#     &#39;G9135&#39;,</span>
+<span class="c1">#     &#39;G9134&#39;,</span>
+<span class="c1">#     &#39;G9493&#39;,</span>
+<span class="c1">#     &#39;G9145&#39;,</span>
+<span class="c1">#     &#39;G9331&#39;,</span>
+<span class="c1">#     &#39;G9146&#39;,</span>
+<span class="c1">#     &#39;G9491&#39;</span>
+<span class="c1">#     ]</span>
+
+<span class="c1"># mtwo = mtwo[~mtwo.Code.isin(not_these)]</span>
+<span class="c1"># mtwo.to_csv(&#39;data/end_pipe/macro_current.csv&#39;, index=False)</span>
+<span class="n">mtwo</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">mtwo</span><span class="o">.</span><span class="n">Date</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;mixed&#39;</span><span class="p">,</span> <span class="n">dayfirst</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">mtwo</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mtwo</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>
+
+
+<span class="n">new_names</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Substrat&#39;</span><span class="p">:</span><span class="s1">&#39;substrat&#39;</span><span class="p">,</span> <span class="s1">&#39;Date&#39;</span><span class="p">:</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="s1">&#39;Code&#39;</span><span class="p">:</span><span class="s1">&#39;code&#39;</span><span class="p">,</span> <span class="s1">&#39;Aire&#39;</span><span class="p">:</span><span class="s1">&#39;area&#39;</span><span class="p">,</span> <span class="s1">&#39;Quantité&#39;</span><span class="p">:</span><span class="s1">&#39;quantité&#39;</span><span class="p">}</span>
+<span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;échantillon&#39;</span><span class="p">,</span> <span class="s1">&#39;Plage&#39;</span><span class="p">,</span> <span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="s1">&#39;area&#39;</span><span class="p">,</span> <span class="s1">&#39;quantité&#39;</span><span class="p">,</span> <span class="s1">&#39;code&#39;</span><span class="p">]</span>
+
+<span class="n">t1</span> <span class="o">=</span> <span class="n">mone</span><span class="p">[</span><span class="o">~</span><span class="n">mone</span><span class="o">.</span><span class="n">isna</span><span class="p">()][</span><span class="n">columns</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t1</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>échantillon</th>
+      <th>Plage</th>
+      <th>date</th>
+      <th>area</th>
+      <th>quantité</th>
+      <th>code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>(Amphion, 2022-02-01)</td>
+      <td>Amphion</td>
+      <td>2022-02-01</td>
+      <td>440</td>
+      <td>0</td>
+      <td>G159</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>(Amphion, 2022-02-01)</td>
+      <td>Amphion</td>
+      <td>2022-02-01</td>
+      <td>440</td>
+      <td>0</td>
+      <td>G10</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>(Amphion, 2022-02-01)</td>
+      <td>Amphion</td>
+      <td>2022-02-01</td>
+      <td>440</td>
+      <td>0</td>
+      <td>G103</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>(Amphion, 2022-02-01)</td>
+      <td>Amphion</td>
+      <td>2022-02-01</td>
+      <td>440</td>
+      <td>0</td>
+      <td>G106</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>(Amphion, 2022-02-01)</td>
+      <td>Amphion</td>
+      <td>2022-02-01</td>
+      <td>440</td>
+      <td>0</td>
+      <td>G117</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mtwo</span><span class="p">[</span><span class="s1">&#39;échantillon&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">mtwo</span><span class="o">.</span><span class="n">Plage</span><span class="p">,</span> <span class="n">mtwo</span><span class="o">.</span><span class="n">Date</span><span class="p">))</span>
+<span class="n">mtwo</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">new_names</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="n">mtwo</span><span class="p">[</span><span class="n">columns</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t2</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>échantillon</th>
+      <th>Plage</th>
+      <th>date</th>
+      <th>area</th>
+      <th>quantité</th>
+      <th>code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>(Amphion, 2022-02-01)</td>
+      <td>Amphion</td>
+      <td>2022-02-01</td>
+      <td>98</td>
+      <td>2</td>
+      <td>G24</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>(Amphion, 2022-02-01)</td>
+      <td>Amphion</td>
+      <td>2022-02-01</td>
+      <td>342</td>
+      <td>42</td>
+      <td>G24</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>(Amphion, 2022-05-03)</td>
+      <td>Amphion</td>
+      <td>2022-05-03</td>
+      <td>342</td>
+      <td>5</td>
+      <td>G24</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>(Amphion, 2022-07-19)</td>
+      <td>Amphion</td>
+      <td>2022-07-19</td>
+      <td>98</td>
+      <td>5</td>
+      <td>G24</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>(Amphion, 2022-07-19)</td>
+      <td>Amphion</td>
+      <td>2022-07-19</td>
+      <td>342</td>
+      <td>11</td>
+      <td>G24</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t2</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 2147 entries, 0 to 2146
+Data columns (total 6 columns):
+ #   Column       Non-Null Count  Dtype 
+---  ------       --------------  ----- 
+ 0   échantillon  2147 non-null   object
+ 1   Plage        2147 non-null   object
+ 2   date         2147 non-null   object
+ 3   area         2147 non-null   int64 
+ 4   quantité     2147 non-null   int64 
+ 5   code         2147 non-null   object
+dtypes: int64(2), object(4)
+memory usage: 100.8+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t1</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 7154 entries, 0 to 7153
+Data columns (total 6 columns):
+ #   Column       Non-Null Count  Dtype 
+---  ------       --------------  ----- 
+ 0   échantillon  7154 non-null   object
+ 1   Plage        7154 non-null   object
+ 2   date         7154 non-null   object
+ 3   area         7154 non-null   int64 
+ 4   quantité     7154 non-null   int64 
+ 5   code         7154 non-null   object
+dtypes: int64(2), object(4)
+memory usage: 335.5+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t1</span><span class="p">[</span><span class="s1">&#39;quantité&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>28107
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t2</span><span class="p">[</span><span class="s1">&#39;quantité&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>28107
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t2</span><span class="p">[</span><span class="s2">&quot;échantillon&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>98
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t1</span><span class="p">[</span><span class="s2">&quot;échantillon&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>98
+</pre></div>
+</div>
+</div>
+</div>
+<section id="unknown-codes">
+<h1>Unknown codes<a class="headerlink" href="#unknown-codes" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mone_codes</span> <span class="o">=</span> <span class="n">mone</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+<span class="n">mtwo_codes</span> <span class="o">=</span> <span class="n">mtwo</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+<span class="n">gfrag_gfoam_gcaps</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;G21&#39;</span><span class="p">,</span> <span class="s1">&#39;G23&#39;</span><span class="p">,</span> <span class="s1">&#39;G24&#39;</span><span class="p">,</span> <span class="s1">&#39;G78&#39;</span><span class="p">,</span> <span class="s1">&#39;G79&#39;</span><span class="p">,</span> <span class="s1">&#39;G80&#39;</span><span class="p">,</span> <span class="s1">&#39;G81&#39;</span><span class="p">,</span> <span class="s1">&#39;G82&#39;</span><span class="p">,]</span>
+<span class="n">diff_mtwo_mone</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">mtwo_codes</span><span class="p">)</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">mone_codes</span><span class="p">))</span>
+
+<span class="n">codes_in_mtwo_not_in_mone</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">diff_mtwo_mone</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">gfrag_gfoam_gcaps</span><span class="p">]</span>
+<span class="n">codes_in_mtwo_not_in_mone</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># codes in mtwo not in mone:</span>
+<span class="n">mt_wtf</span> <span class="o">=</span> <span class="n">mtwo</span><span class="p">[</span><span class="n">mtwo</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">codes_in_mtwo_not_in_mone</span><span class="p">)]</span>
+<span class="n">mt_wtf</span><span class="p">[</span><span class="s1">&#39;quantité&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="find-the-errors">
+<h1>Find the errors<a class="headerlink" href="#find-the-errors" title="Permalink to this heading">#</a></h1>
+<p>C’est possible que il’n’y a pas de distinction entre les deux zones pour revernges le 13 août.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t2</span> <span class="o">=</span> <span class="n">t2</span><span class="p">[</span><span class="o">~</span><span class="n">t2</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">codes_in_mtwo_not_in_mone</span><span class="p">)]</span>
+
+<span class="n">t1_dt</span> <span class="o">=</span> <span class="n">t1</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;échantillon&quot;</span><span class="p">)[[</span><span class="s2">&quot;quantité&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">t2_dt</span> <span class="o">=</span> <span class="n">t2</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;échantillon&quot;</span><span class="p">)[[</span><span class="s2">&quot;quantité&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="n">t1_dt</span><span class="p">[</span><span class="s1">&#39;s&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">t1_dt</span><span class="o">.</span><span class="n">index</span><span class="p">]</span>
+<span class="n">t2_dt</span><span class="p">[</span><span class="s1">&#39;s&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">t2_dt</span><span class="o">.</span><span class="n">index</span><span class="p">]</span>
+
+<span class="n">t1_dt</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">t2_dt</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="difference">
+<h2>difference<a class="headerlink" href="#difference" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Il y a </span><span class="si">{</span><span class="n">t2_dt</span><span class="p">[</span><span class="s2">&quot;quantité&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">t1_dt</span><span class="p">[</span><span class="s2">&quot;quantité&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">}</span><span class="s1"> plus d</span><span class="se">\&#39;</span><span class="s1">objets en t2&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Il y a 0 plus d&#39;objets en t2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t1_dt</span><span class="p">[</span><span class="s1">&#39;t2_q&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">t1_dt</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">t2_dt</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="s1">&#39;quantité&#39;</span><span class="p">])</span>
+<span class="n">t1_dt</span><span class="p">[</span><span class="s1">&#39;diff&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">t1_dt</span><span class="p">[</span><span class="s1">&#39;quantité&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">t1_dt</span><span class="o">.</span><span class="n">t2_q</span>
+
+<span class="n">t1_dt</span><span class="p">[</span><span class="s1">&#39;diff&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">event_total</span> <span class="o">=</span> <span class="n">mtwo</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;échantillon&quot;</span><span class="p">,</span> <span class="s2">&quot;Plage&quot;</span><span class="p">,</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="s2">&quot;Position&quot;</span><span class="p">,</span> <span class="s2">&quot;area&quot;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="s2">&quot;quantité&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">event_total</span><span class="p">[</span><span class="s1">&#39;pcs/m²&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">event_total</span><span class="p">[</span><span class="s2">&quot;quantité&quot;</span><span class="p">]</span><span class="o">/</span><span class="n">event_total</span><span class="o">.</span><span class="n">area</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="compare-surface-areas">
+<h2>compare surface areas<a class="headerlink" href="#compare-surface-areas" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">event_total</span><span class="p">[</span><span class="s1">&#39;pcs/m²&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    185.000000
+mean       0.758360
+std        1.032423
+min        0.005263
+25%        0.179104
+50%        0.377358
+75%        0.944444
+max        7.585859
+Name: pcs/m², dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mtest</span> <span class="o">=</span> <span class="n">mone</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;échantillon&quot;</span><span class="p">,</span> <span class="s2">&quot;Plage&quot;</span><span class="p">,</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="s2">&quot;area&quot;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="s2">&quot;quantité&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">mtest</span><span class="p">[</span><span class="s2">&quot;pcs/m²&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mtest</span><span class="p">[</span><span class="s2">&quot;quantité&quot;</span><span class="p">]</span><span class="o">/</span><span class="n">mtest</span><span class="o">.</span><span class="n">area</span>
+<span class="n">mtest</span><span class="p">[</span><span class="s2">&quot;pcs/m²&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    98.000000
+mean      0.659221
+std       0.660652
+min       0.025974
+25%       0.204404
+50%       0.469382
+75%       0.845195
+max       3.554572
+Name: pcs/m², dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="extrapolated-values">
+<h1>Extrapolated values<a class="headerlink" href="#extrapolated-values" title="Permalink to this heading">#</a></h1>
+<p><strong>Method: linear interpolation of the expected quantiles</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">multinomial</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">norm</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="microplastics-total-pieces-1-266-712-044-1-349-710-956">
+<h2>Microplastics total pieces: 1’266 712 044 - 1’349 710 956<a class="headerlink" href="#microplastics-total-pieces-1-266-712-044-1-349-710-956" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.interpolate</span> <span class="kn">import</span> <span class="n">interp1d</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># bayes</span>
+<span class="c1"># given quantiles and their corresponding values</span>
+<span class="n">quantiles</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.50</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">,</span> <span class="mf">0.99</span><span class="p">])</span>
+<span class="n">quantile_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="mi">248</span><span class="p">,</span> <span class="mi">460</span><span class="p">,</span> <span class="mi">3000</span><span class="p">])</span>
+
+<span class="c1"># min and max values are the first and last in quantile_values</span>
+<span class="n">min_value</span> <span class="o">=</span> <span class="n">quantile_values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">max_value</span> <span class="o">=</span> <span class="n">quantile_values</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># linearly interpolate a CDF based on the quantiles</span>
+<span class="n">cdf</span> <span class="o">=</span> <span class="n">interp1d</span><span class="p">(</span><span class="n">quantiles</span><span class="p">,</span> <span class="n">quantile_values</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">bounds_error</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="p">(</span><span class="n">min_value</span><span class="p">,</span> <span class="n">max_value</span><span class="p">),</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span>
+<span class="n">sampled</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">samples</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="mi">68399</span>
+<span class="c1"># sample rom the CDF&#39;s range and invert the CDF to get samples</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">):</span>
+    <span class="n">uniform_samples</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">samples</span><span class="p">)</span>
+    <span class="n">samples_c</span> <span class="o">=</span> <span class="n">cdf</span><span class="p">(</span><span class="n">uniform_samples</span><span class="p">)</span>
+    <span class="n">sampled</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">samples_c</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">sampled</span><span class="p">,</span> <span class="p">[</span><span class="mf">.5</span><span class="p">,</span> <span class="mf">.25</span><span class="p">,</span> <span class="mf">.5</span><span class="p">,</span> <span class="mf">.75</span><span class="p">,</span> <span class="mf">.95</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1267004161.4988241 1266900345.6491313 [1.26690035e+09 1.26639577e+09 1.26690035e+09 1.26770872e+09
+ 1.26829795e+09]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># random forest</span>
+<span class="n">quantile_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">113</span><span class="p">,</span> <span class="mi">137</span><span class="p">,</span> <span class="mi">149</span><span class="p">,</span> <span class="mi">520</span><span class="p">,</span> <span class="mi">3000</span><span class="p">])</span>
+<span class="n">min_value</span> <span class="o">=</span> <span class="n">quantile_values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">max_value</span> <span class="o">=</span> <span class="n">quantile_values</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">sampled</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1"># Linearly interpolate a CDF based on the quantiles</span>
+<span class="n">cdf</span> <span class="o">=</span> <span class="n">interp1d</span><span class="p">(</span><span class="n">quantiles</span><span class="p">,</span> <span class="n">quantile_values</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">bounds_error</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="p">(</span><span class="n">min_value</span><span class="p">,</span> <span class="n">max_value</span><span class="p">),</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span>
+
+<span class="c1"># Sample uniformly from the CDF&#39;s range and invert the CDF to get samples</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">):</span>
+    <span class="n">uniform_samples</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">samples</span><span class="p">)</span>
+    <span class="n">samples_c</span> <span class="o">=</span> <span class="n">cdf</span><span class="p">(</span><span class="n">uniform_samples</span><span class="p">)</span>
+    <span class="n">sampled</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">samples_c</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">sampled</span><span class="p">,</span> <span class="p">[</span><span class="mf">.5</span><span class="p">,</span> <span class="mf">.25</span><span class="p">,</span> <span class="mf">.5</span><span class="p">,</span> <span class="mf">.75</span><span class="p">,</span> <span class="mf">.95</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1349912990.6183693 1349976842.9969382 [1.34997684e+09 1.34944760e+09 1.34997684e+09 1.35049346e+09
+ 1.35118109e+09]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="macroplastics-m2-total-pieces-47-100-70-600">
+<h2>Macroplastics m² total pieces: 47,100 - 70,600<a class="headerlink" href="#macroplastics-m2-total-pieces-47-100-70-600" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># bayes</span>
+<span class="n">quantile_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">.01</span><span class="p">,</span> <span class="mf">.03</span><span class="p">,</span> <span class="mf">.14</span><span class="p">,</span> <span class="mf">.34</span><span class="p">,</span> <span class="mf">1.06</span><span class="p">,</span> <span class="mf">4.58</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
+<span class="n">min_value</span> <span class="o">=</span> <span class="n">quantile_values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">max_value</span> <span class="o">=</span> <span class="n">quantile_values</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">sampled</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1"># Linearly interpolate a CDF based on the quantiles</span>
+<span class="n">cdf</span> <span class="o">=</span> <span class="n">interp1d</span><span class="p">(</span><span class="n">quantiles</span><span class="p">,</span> <span class="n">quantile_values</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">bounds_error</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="p">(</span><span class="n">min_value</span><span class="p">,</span> <span class="n">max_value</span><span class="p">),</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span>
+<span class="n">samples</span> <span class="o">=</span> <span class="mi">68399</span>
+<span class="c1"># Sample uniformly from the CDF&#39;s range and invert the CDF to get samples</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">):</span>
+    <span class="n">uniform_samples</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">samples</span><span class="p">)</span>
+    <span class="n">samples_c</span> <span class="o">=</span> <span class="n">cdf</span><span class="p">(</span><span class="n">uniform_samples</span><span class="p">)</span>
+    <span class="n">sampled</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">samples_c</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">sampled</span><span class="p">,</span> <span class="p">[</span><span class="mf">.5</span><span class="p">,</span> <span class="mf">.25</span><span class="p">,</span> <span class="mf">.5</span><span class="p">,</span> <span class="mf">.75</span><span class="p">,</span> <span class="mf">.95</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>70718.12416877097 70657.05328538858 [70657.05328539 70474.56990245 70657.05328539 71013.95141498
+ 71217.60588974]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># random forest</span>
+<span class="n">quantile_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">.01</span><span class="p">,</span> <span class="mf">.10</span><span class="p">,</span> <span class="mf">.24</span><span class="p">,</span> <span class="mf">.47</span><span class="p">,</span> <span class="mf">.6</span><span class="p">,</span> <span class="mf">2.12</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
+<span class="n">min_value</span> <span class="o">=</span> <span class="n">quantile_values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">max_value</span> <span class="o">=</span> <span class="n">quantile_values</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">sampled</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1"># Linearly interpolate a CDF based on the quantiles</span>
+<span class="n">cdf</span> <span class="o">=</span> <span class="n">interp1d</span><span class="p">(</span><span class="n">quantiles</span><span class="p">,</span> <span class="n">quantile_values</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">bounds_error</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="p">(</span><span class="n">min_value</span><span class="p">,</span> <span class="n">max_value</span><span class="p">),</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span>
+<span class="n">samples</span> <span class="o">=</span> <span class="mi">68399</span>
+<span class="c1"># Sample uniformly from the CDF&#39;s range and invert the CDF to get samples</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">):</span>
+    <span class="n">uniform_samples</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">samples</span><span class="p">)</span>
+    <span class="n">samples_c</span> <span class="o">=</span> <span class="n">cdf</span><span class="p">(</span><span class="n">uniform_samples</span><span class="p">)</span>
+    <span class="n">sampled</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">samples_c</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">sampled</span><span class="p">,</span> <span class="p">[</span><span class="mf">.5</span><span class="p">,</span> <span class="mf">.25</span><span class="p">,</span> <span class="mf">.5</span><span class="p">,</span> <span class="mf">.75</span><span class="p">,</span> <span class="mf">.95</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>47175.0075722434 47170.52086886583 [47170.52086887 46978.41491646 47170.52086887 47334.42207431
+ 47598.70147204]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="macroplastics-linear-meters-total-pieces-38-300-68-800">
+<h2>Macroplastics linear meters total pieces: 38’300 - 68’800<a class="headerlink" href="#macroplastics-linear-meters-total-pieces-38-300-68-800" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># bayes</span>
+<span class="n">quantile_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">.01</span><span class="p">,</span> <span class="mf">.03</span><span class="p">,</span> <span class="mf">1.32</span><span class="p">,</span> <span class="mf">3.86</span><span class="p">,</span> <span class="mf">7.12</span><span class="p">,</span> <span class="mf">18.26</span><span class="p">,</span> <span class="mi">20</span><span class="p">])</span>
+<span class="n">min_value</span> <span class="o">=</span> <span class="n">quantile_values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">max_value</span> <span class="o">=</span> <span class="n">quantile_values</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">sampled</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1"># Linearly interpolate a CDF based on the quantiles</span>
+<span class="n">cdf</span> <span class="o">=</span> <span class="n">interp1d</span><span class="p">(</span><span class="n">quantiles</span><span class="p">,</span> <span class="n">quantile_values</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">bounds_error</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="p">(</span><span class="n">min_value</span><span class="p">,</span> <span class="n">max_value</span><span class="p">),</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span>
+<span class="n">samples</span> <span class="o">=</span> <span class="mi">12688</span>
+<span class="c1"># Sample uniformly from the CDF&#39;s range and invert the CDF to get samples</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">):</span>
+    <span class="n">uniform_samples</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">samples</span><span class="p">)</span>
+    <span class="n">samples_c</span> <span class="o">=</span> <span class="n">cdf</span><span class="p">(</span><span class="n">uniform_samples</span><span class="p">)</span>
+    <span class="n">sampled</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">samples_c</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">sampled</span><span class="p">,</span> <span class="p">[</span><span class="mf">.5</span><span class="p">,</span> <span class="mf">.25</span><span class="p">,</span> <span class="mf">.5</span><span class="p">,</span> <span class="mf">.75</span><span class="p">,</span> <span class="mf">.95</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>68766.29796253821 68832.45385144875 [68832.45385145 68452.6973713  68832.45385145 69067.96574465
+ 69605.76535175]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># random forest</span>
+<span class="n">quantile_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">.01</span><span class="p">,</span> <span class="mf">.3</span><span class="p">,</span> <span class="mf">.86</span><span class="p">,</span> <span class="mf">2.46</span><span class="p">,</span> <span class="mf">3.42</span><span class="p">,</span> <span class="mf">9.28</span><span class="p">,</span> <span class="mi">20</span><span class="p">])</span>
+<span class="n">min_value</span> <span class="o">=</span> <span class="n">quantile_values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">max_value</span> <span class="o">=</span> <span class="n">quantile_values</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">sampled</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1"># Linearly interpolate a CDF based on the quantiles</span>
+<span class="n">cdf</span> <span class="o">=</span> <span class="n">interp1d</span><span class="p">(</span><span class="n">quantiles</span><span class="p">,</span> <span class="n">quantile_values</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">bounds_error</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="p">(</span><span class="n">min_value</span><span class="p">,</span> <span class="n">max_value</span><span class="p">),</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span>
+<span class="n">samples</span> <span class="o">=</span> <span class="mi">12688</span>
+<span class="c1"># Sample uniformly from the CDF&#39;s range and invert the CDF to get samples</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">):</span>
+    <span class="n">uniform_samples</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">samples</span><span class="p">)</span>
+    <span class="n">samples_c</span> <span class="o">=</span> <span class="n">cdf</span><span class="p">(</span><span class="n">uniform_samples</span><span class="p">)</span>
+    <span class="n">sampled</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">samples_c</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">sampled</span><span class="p">,</span> <span class="p">[</span><span class="mf">.5</span><span class="p">,</span> <span class="mf">.25</span><span class="p">,</span> <span class="mf">.5</span><span class="p">,</span> <span class="mf">.75</span><span class="p">,</span> <span class="mf">.95</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>38279.36795618427 38299.27635626822 [38299.27635627 38085.21861151 38299.27635627 38401.63289547
+ 38855.02306708]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Unknown codes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#find-the-errors">Find the errors</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#difference">difference</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compare-surface-areas">compare surface areas</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#extrapolated-values">Extrapolated values</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microplastics-total-pieces-1-266-712-044-1-349-710-956">Microplastics total pieces: 1’266 712 044 - 1’349 710 956</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macroplastics-m2-total-pieces-47-100-70-600">Macroplastics m² total pieces: 47,100 - 70,600</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macroplastics-linear-meters-total-pieces-38-300-68-800">Macroplastics linear meters total pieces: 38’300 - 68’800</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Roger Erismann, Alexis Pochelon
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p> Association pour la Sauvegarde du Léman 2024 </p>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
