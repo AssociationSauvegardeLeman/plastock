@@ -3,11 +3,12 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Microplastiques par plage et position &#8212; Pla&#39;stock</title>
   
   
@@ -18,15 +19,15 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
@@ -37,12 +38,14 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
@@ -65,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Microplastiques par variables explicatives" href="micro_plage_attributes.html" />
     <link rel="prev" title="Variables explicatives" href="random_variables.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -73,7 +76,16 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -107,12 +119,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <header>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
   
+  </header>
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -127,9 +147,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="index.html">
+  
   
   
   
@@ -265,20 +287,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -322,7 +346,7 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
@@ -381,8 +405,8 @@ document.write(`
 </div>
 </details>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="microplastiques-par-plage-et-position">
-<span id="micro-atts"></span><h1>Microplastiques par plage et position<a class="headerlink" href="#microplastiques-par-plage-et-position" title="Permalink to this headline">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="microplastiques-par-plage-et-position">
+<span id="micro-atts"></span><h1>Microplastiques par plage et position<a class="headerlink" href="#microplastiques-par-plage-et-position" title="Permalink to this heading">#</a></h1>
 <p>La position fait référence à l’emplacement de l’échantillon de microplastique sur la plage.</p>
 <p><strong>Résultats agrégés par forme, position et échantillon</strong></p>
 <div class="cell tag_remove-input docutils container">
@@ -471,8 +495,8 @@ document.write(`
 </table>
 </div></div>
 </div>
-<div class="section" id="nombre-cumule-d-echantillons-et-particules-par-plage">
-<h2>Nombre cumulé d’échantillons et particules par plage<a class="headerlink" href="#nombre-cumule-d-echantillons-et-particules-par-plage" title="Permalink to this headline">#</a></h2>
+<section id="nombre-cumule-d-echantillons-et-particules-par-plage">
+<h2>Nombre cumulé d’échantillons et particules par plage<a class="headerlink" href="#nombre-cumule-d-echantillons-et-particules-par-plage" title="Permalink to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 </div>
 <div class="cell tag_remove-input docutils container">
@@ -725,10 +749,12 @@ document.write(`
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
-<div class="figure align-default" id="fig-a11">
+<figure class="align-default" id="fig-a11">
 <img alt="_images/9836997d6ed09638dc7267935cfdb0647a7848d470283e42cef8151c3cec2f1c.png" src="_images/9836997d6ed09638dc7267935cfdb0647a7848d470283e42cef8151c3cec2f1c.png" />
-<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text"><span class="pasted-text"> </span></span><a class="headerlink" href="#fig-a11" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text"><span class="pasted-text"> </span></span><a class="headerlink" href="#fig-a11" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
@@ -835,9 +861,9 @@ document.write(`
 </table>
 </div></div>
 </div>
-</div>
-<div class="section" id="abondance-moyenne-par-echantillon-et-par-plage">
-<span id="micro-table-a1-4"></span><h2>Abondance moyenne par échantillon et par plage<a class="headerlink" href="#abondance-moyenne-par-echantillon-et-par-plage" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="abondance-moyenne-par-echantillon-et-par-plage">
+<span id="micro-table-a1-4"></span><h2>Abondance moyenne par échantillon et par plage<a class="headerlink" href="#abondance-moyenne-par-echantillon-et-par-plage" title="Permalink to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
@@ -894,13 +920,15 @@ document.write(`
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
-<div class="figure align-default" id="fig-a12">
+<figure class="align-default" id="fig-a12">
 <img alt="_images/369a2798c5e954344f696307dca77eb17312d592b44775be0bf3a185fad106cb.png" src="_images/369a2798c5e954344f696307dca77eb17312d592b44775be0bf3a185fad106cb.png" />
-<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text"><span class="pasted-text"> </span></span><a class="headerlink" href="#fig-a12" title="Permalink to this image">#</a></p>
-</div>
-</div>
-<div class="section" id="abondance-moyenne-par-position">
-<h2>Abondance moyenne par position<a class="headerlink" href="#abondance-moyenne-par-position" title="Permalink to this headline">#</a></h2>
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text"><span class="pasted-text"> </span></span><a class="headerlink" href="#fig-a12" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="abondance-moyenne-par-position">
+<h2>Abondance moyenne par position<a class="headerlink" href="#abondance-moyenne-par-position" title="Permalink to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
@@ -975,12 +1003,14 @@ document.write(`
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
-<div class="figure align-default" id="fig-a13">
+<figure class="align-default" id="fig-a13">
 <img alt="_images/4fdae01b7515f5e4294f22fffe7b86dfd9b81edb122e9d1b17b504f78e208b70.png" src="_images/4fdae01b7515f5e4294f22fffe7b86dfd9b81edb122e9d1b17b504f78e208b70.png" />
-<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text"><span class="pasted-text"> </span></span><a class="headerlink" href="#fig-a13" title="Permalink to this image">#</a></p>
-</div>
-<div class="section" id="nombre-moyen-par-forme-et-plage">
-<h3>Nombre moyen par forme et plage<a class="headerlink" href="#nombre-moyen-par-forme-et-plage" title="Permalink to this headline">#</a></h3>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text"><span class="pasted-text"> </span></span><a class="headerlink" href="#fig-a13" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="nombre-moyen-par-forme-et-plage">
+<h3>Nombre moyen par forme et plage<a class="headerlink" href="#nombre-moyen-par-forme-et-plage" title="Permalink to this heading">#</a></h3>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
@@ -1254,13 +1284,15 @@ document.write(`
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
-<div class="figure align-default" id="fig-a14">
+<figure class="align-default" id="fig-a14">
 <img alt="_images/61f027815cb7333b5d6b5594903ea0ac3e58c2d7362fffae4a20ff55eb3737ea.png" src="_images/61f027815cb7333b5d6b5594903ea0ac3e58c2d7362fffae4a20ff55eb3737ea.png" />
-<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text"><span class="pasted-text"> </span></span><a class="headerlink" href="#fig-a14" title="Permalink to this image">#</a></p>
-</div>
-</div>
-<div class="section" id="nombre-moyen-par-forme-et-position">
-<h3>Nombre moyen par forme et position<a class="headerlink" href="#nombre-moyen-par-forme-et-position" title="Permalink to this headline">#</a></h3>
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text"><span class="pasted-text"> </span></span><a class="headerlink" href="#fig-a14" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="nombre-moyen-par-forme-et-position">
+<h3>Nombre moyen par forme et position<a class="headerlink" href="#nombre-moyen-par-forme-et-position" title="Permalink to this heading">#</a></h3>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
@@ -1700,21 +1732,25 @@ document.write(`
 </table>
 </div></div>
 </div>
-</div>
-<div class="section" id="distributions">
-<h3>Distributions<a class="headerlink" href="#distributions" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="distributions">
+<h3>Distributions<a class="headerlink" href="#distributions" title="Permalink to this heading">#</a></h3>
 <div class="cell tag_remove-input docutils container">
 </div>
-<div class="figure align-default" id="fig-a15">
+<figure class="align-default" id="fig-a15">
 <img alt="_images/01ced0431798189cfa2887dcd0341cb1c99854fd9572232954322c492eb7e86f.png" src="_images/01ced0431798189cfa2887dcd0341cb1c99854fd9572232954322c492eb7e86f.png" />
-<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text"><span class="pasted-text"> </span></span><a class="headerlink" href="#fig-a15" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text"><span class="pasted-text"> </span></span><a class="headerlink" href="#fig-a15" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <div class="cell tag_remove-input docutils container">
 </div>
-<div class="figure align-default" id="fig-a16">
+<figure class="align-default" id="fig-a16">
 <img alt="_images/8c8bd536089d5d15fd2c036c57df07a8d1cbb50f5b668421eb95ee4ed295e1df.png" src="_images/8c8bd536089d5d15fd2c036c57df07a8d1cbb50f5b668421eb95ee4ed295e1df.png" />
-<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text"><span class="pasted-text"> </span></span><a class="headerlink" href="#fig-a16" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text"><span class="pasted-text"> </span></span><a class="headerlink" href="#fig-a16" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Git repo: https://github.com/hammerdirt-analyst/plastock.git
@@ -1729,9 +1765,9 @@ pandas    : 2.0.3
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1758,11 +1794,10 @@ pandas    : 2.0.3
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="random_variables.html"
@@ -1782,10 +1817,7 @@ pandas    : 2.0.3
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -1793,6 +1825,7 @@ pandas    : 2.0.3
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1829,6 +1862,7 @@ By Roger Erismann, Alexis Pochelon
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2022.
@@ -1858,8 +1892,8 @@ By Roger Erismann, Alexis Pochelon
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
 
   <footer class="bd-footer">
   </footer>

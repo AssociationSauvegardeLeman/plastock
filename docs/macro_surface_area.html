@@ -3,11 +3,12 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Macros déchets &#8212; Pla&#39;stock</title>
   
   
@@ -18,15 +19,15 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
@@ -37,12 +38,14 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
@@ -63,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -71,7 +74,16 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -105,12 +117,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <header>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
   
+  </header>
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -125,9 +145,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="index.html">
+  
   
   
   
@@ -263,20 +285,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -330,7 +354,7 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <div class="cell tag_remove-input docutils container">
 </div>
@@ -372,8 +396,8 @@ document.write(`
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="macros-dechets">
-<h1>Macros déchets<a class="headerlink" href="#macros-dechets" title="Permalink to this headline">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="macros-dechets">
+<h1>Macros déchets<a class="headerlink" href="#macros-dechets" title="Permalink to this heading">#</a></h1>
 <p>Les déchets de plage ont été échantillonnés tous les trimestres du 1er janvier 2022 au 31 décembre 2022 sur les plages du lac Léman. Les participants ont mesuré la longueur le long de la ligne d’eau et la largeur, la distance de la ligne d’eau, de chaque site d’étude. Au cours de cette période de 12 mois, les volontaires ont collecté et identifié 27 493 objets sur 25 sites, représentant 24 villes du bassin Lémanique, (<a class="reference internal" href="#sa-results"><span class="std std-ref">résultats</span></a>).</p>
 <div class="sd-card sd-sphinx-override sd-m-3 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
@@ -390,8 +414,8 @@ document.write(`
 <p>Le Swiss Litter Report (<a class="reference external" href="http://www.stoppp.org/">Swiss Litter Report</a>) fait état d’une moyenne de 0,67 déchet par m². La moyenne déclarée pour les lacs était de 1,23 pcs/m², avec des chiffres élevés dans les zones urbaines de 1,03 pcs/m². Nous notons que ces valeurs se situent dans la fourchette que l’on pourrait attendre de la mer ionienne (0,67 pcs/m²) (<a class="reference internal" href="references.html#ionian"><span class="std std-ref">Ionian</span></a>) ou de la mer méditerranée (0,61 pcs/m²)(<a class="reference internal" href="references.html#mediteranean"><span class="std std-ref">Mediterranean</span></a>).</p>
 <p><strong>Perspectives 2024 :</strong></p>
 <p>Si nous utilisons la même logique que celle appliquée dans (<a class="reference internal" href="resultats_precedents.html#previous-results"><span class="std std-ref">résulats précédents</span></a>), le résultat médian estimé pour 2024 se situe entre 0,43 pcs/m² et 0,62 pcs/m². Les sites avec un substrat de gravier ou plus éloignés auront des valeurs de comptage plus faibles pour les mégots de cigarettes et les emballages de snacks, mais des proportions plus élevées de plastiques fragmentés.</p>
-<div class="section" id="resultats">
-<span id="sa-results"></span><h2>Résultats<a class="headerlink" href="#resultats" title="Permalink to this headline">#</a></h2>
+<section id="resultats">
+<span id="sa-results"></span><h2>Résultats<a class="headerlink" href="#resultats" title="Permalink to this heading">#</a></h2>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
 <div class="sd-col sd-d-flex-column docutils">
@@ -487,10 +511,10 @@ document.write(`
 <p class="sd-card-text"><b> Figure 2.2 :</b> Pla’stock 2022, distribution des résultats de l’ensemble des échantillons.</p>
 </div>
 </div>
-<div class="section" id="les-objets-les-plus-courants">
-<span id="mc-sa"></span><h3>Les objets les plus courants<a class="headerlink" href="#les-objets-les-plus-courants" title="Permalink to this headline">#</a></h3>
-<div class="section" id="definition-des-objets-les-plus-courants">
-<h4>Définition des <em>objets les plus courants</em><a class="headerlink" href="#definition-des-objets-les-plus-courants" title="Permalink to this headline">#</a></h4>
+<section id="les-objets-les-plus-courants">
+<span id="mc-sa"></span><h3>Les objets les plus courants<a class="headerlink" href="#les-objets-les-plus-courants" title="Permalink to this heading">#</a></h3>
+<section id="definition-des-objets-les-plus-courants">
+<h4>Définition des <em>objets les plus courants</em><a class="headerlink" href="#definition-des-objets-les-plus-courants" title="Permalink to this heading">#</a></h4>
 <p>Les <em>objets les plus courants</em> peuvent être sélectionnés de plusieurs manières. On peut également les appeler les <em>objets d’intérêt</em>. Dans le cadre de ce rapport, nous nous concentrons sur les objets qui représentent une proportion plus importante des résultats que les autres. Nous avons utilisé deux critères de sélection : i. la quantité, ii. le taux d’échec.</p>
 <ol class="arabic simple">
 <li><p>Quanité: Si un objet a une quantité totale qui le place dans les dix premiers, il est considéré comme <em>courant</em>.</p></li>
@@ -605,9 +629,9 @@ document.write(`
   </tbody>
 </table>
 </span></p>
-</div>
-<div class="section" id="les-plus-courants-par-region">
-<span id="mc-regional"></span><h4>Les plus courants par région<a class="headerlink" href="#les-plus-courants-par-region" title="Permalink to this headline">#</a></h4>
+</section>
+<section id="les-plus-courants-par-region">
+<span id="mc-regional"></span><h4>Les plus courants par région<a class="headerlink" href="#les-plus-courants-par-region" title="Permalink to this heading">#</a></h4>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
 <div class="sd-col sd-d-flex-column docutils">
@@ -825,9 +849,9 @@ document.write(`
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="les-plus-courants-par-ville">
-<h4>Les plus courants par ville<a class="headerlink" href="#les-plus-courants-par-ville" title="Permalink to this headline">#</a></h4>
+</section>
+<section id="les-plus-courants-par-ville">
+<h4>Les plus courants par ville<a class="headerlink" href="#les-plus-courants-par-ville" title="Permalink to this heading">#</a></h4>
 <p><strong>Amphion à Hermance</strong></p>
 <div class="output text_html"><style type="text/css">
 #T_2ab8a tr:nth-child(even) {
@@ -1621,10 +1645,10 @@ document.write(`
     </tr>
   </tbody>
 </table>
-</div></div>
-</div>
-<div class="section" id="les-objets-trouves-en-fonction-de-leur-utilisation">
-<h3>Les objets trouvés en fonction de leur utilisation<a class="headerlink" href="#les-objets-trouves-en-fonction-de-leur-utilisation" title="Permalink to this headline">#</a></h3>
+</div></section>
+</section>
+<section id="les-objets-trouves-en-fonction-de-leur-utilisation">
+<h3>Les objets trouvés en fonction de leur utilisation<a class="headerlink" href="#les-objets-trouves-en-fonction-de-leur-utilisation" title="Permalink to this heading">#</a></h3>
 <p>Le type d’utilité est basé sur l’utilisation de l’objet avant qu’il ne soit jeté ou sur la description de l’objet si l’utilisation initiale est indéterminée. Les objets identifiés sont classés dans l’une des 260 catégories prédéfinies. Les catégories sont regroupées en fonction de leur utilisation ou de leur description.</p>
 <ul class="simple">
 <li><p>Eaux usées : objets rejetés par les stations d’épuration, y compris les objets susceptibles d’être jetés dans les toilettes.</p></li>
@@ -2474,9 +2498,9 @@ document.write(`
   </tbody>
 </table>
 </div><br>
-</div>
-<div class="section" id="conditions-dechantillonnage">
-<h3>Conditions d’échantillonnage<a class="headerlink" href="#conditions-dechantillonnage" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="conditions-dechantillonnage">
+<h3>Conditions d’échantillonnage<a class="headerlink" href="#conditions-dechantillonnage" title="Permalink to this heading">#</a></h3>
 <p>Les enquêteurs ont classé les conditions à chaque emplacement d’échantillonnage selon quatre catégories, fréquentation, substrat, distance au parking et situation (ville/campagne). Les plages ayant un taux d’utilisation élevé représentaient 56% (55/98) de tous les échantillons. Les plages situés à moins de 500 mètres d’un parking représentent 84% (83/98). Le résumé en détail est disponible (<a class="reference internal" href="macro_plage_attributes.html#macro-attributes"><span class="std std-ref">attributes</span></a>).</p>
 <p>Les catégories ont été combinées afin de réduire la covariance et d’améliorer l’interprétabilité. Les catégories ont été réduites de 4 à 2 dans le cas du substrat et de la distance au parking. La fréquence a été réduite à deux groupes en combinant les deux rangs les plus bas. Vous pouvez consulter les détails de la raison et de la manière dont nous procédons ici (<a class="reference internal" href="resultats_precedents.html#correlations"><span class="std std-ref">correlations</span></a>). Les résultats sont présentés ci-dessous :</p>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
@@ -2716,10 +2740,10 @@ document.write(`
 </div>
 </div>
 <p>Les lieux avec une plage de sable avaient la valeur médiane la plus élevée, soit .52 pcs/m² v/s graviers 0.24 pcs/m². Les lieux classés comme urbains avaient une valeur médiane de 0,52 pcs/m² pour 31 échantillons, contre 0,38 pcs/m² a la campagne pour 67 échantillons. Mais, l’échantillon moyenne attendu est plus élevé dans les localités désignées comme étant à la campagne (0.71 contre 0.57). Á la campagne, on s’attend à trouver plus de Gfrags et de pellets industriels (GPI) en % du total. Dans les villes, nous nous attendons à trouver plus de bouts de cigarettes et d’emballages de snacks par échantillon. Des prédictions ont été faites en utilisant différentes combinaisons de catégories à l’aide du régresseur de la forêt aléatoire (<a class="reference internal" href="#random-forest-sa"><span class="std std-ref">Random forest</span></a>) et d’une approximation de la grille bayésienne (<a class="reference internal" href="#grid-approx-p"><span class="std std-ref">Grid approximations</span></a>).</p>
-</div>
-</div>
-<div class="section" id="estimation-des-parametres-et-predictions">
-<h2>Estimation des paramètres et prédictions<a class="headerlink" href="#estimation-des-parametres-et-predictions" title="Permalink to this headline">#</a></h2>
+</section>
+</section>
+<section id="estimation-des-parametres-et-predictions">
+<h2>Estimation des paramètres et prédictions<a class="headerlink" href="#estimation-des-parametres-et-predictions" title="Permalink to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 </div>
 <div class="cell tag_remove-input docutils container">
@@ -2736,8 +2760,8 @@ document.write(`
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
-<div class="section" id="random-forest">
-<span id="random-forest-sa"></span><h3>Random Forest<a class="headerlink" href="#random-forest" title="Permalink to this headline">#</a></h3>
+<section id="random-forest">
+<span id="random-forest-sa"></span><h3>Random Forest<a class="headerlink" href="#random-forest" title="Permalink to this heading">#</a></h3>
 <p>Source : <a class="reference external" href="https://scikit-learn.org/0.16/modules/generated/sklearn.ensemble.RandomForestRegressor.html">scikit-learn random forest</a></p>
 <p>criterion : <code class="docutils literal notranslate"><span class="pre">absolute</span> <span class="pre">error</span></code></p>
 <p>La régression avec forêt aléatoire est une technique d’apprentissage automatique (machine learning) utilisée pour prédire des résultats continus (par opposition aux catégories dans la classification). C’est une méthode d’apprentissage ensembliste, ce qui signifie qu’elle combine les prédictions de plusieurs algorithmes d’apprentissage automatique pour produire des prédictions plus précises.</p>
@@ -3282,9 +3306,9 @@ Résultats</label><div class="sd-tab-content docutils">
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
-</div>
-<div class="section" id="approximation-bayesienne-par-grille">
-<span id="grid-approx-p"></span><h3>Approximation Bayésienne par Grille<a class="headerlink" href="#approximation-bayesienne-par-grille" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="approximation-bayesienne-par-grille">
+<span id="grid-approx-p"></span><h3>Approximation Bayésienne par Grille<a class="headerlink" href="#approximation-bayesienne-par-grille" title="Permalink to this heading">#</a></h3>
 <p>Source : <a class="reference external" href="https://hammerdirt-analyst.github.io/solid-waste-team/grid_approximation.html">solid-waste-team</a></p>
 <p>prior : beta(1,1)</p>
 <p>Cas d’utilisation : Cette méthode est une approche manuelle de l’inférence Bayésienne. Elle est particulièrement utile lorsque vous souhaitez incorporer des croyances antérieures et mettre à jour ces croyances avec des données observées.</p>
@@ -3813,10 +3837,10 @@ Résultats</label><div class="sd-tab-content docutils">
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="regions">
-<span id="leman-regions"></span><h2>Régions<a class="headerlink" href="#regions" title="Permalink to this headline">#</a></h2>
+</section>
+</section>
+<section id="regions">
+<span id="leman-regions"></span><h2>Régions<a class="headerlink" href="#regions" title="Permalink to this heading">#</a></h2>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
 <img alt="_images/regions_map.jpeg" src="_images/regions_map.jpeg" />
@@ -3825,9 +3849,9 @@ Résultats</label><div class="sd-tab-content docutils">
 <p class="sd-card-text"><b>Figure 2.3 :</b> Désignation régionale des 25 sites de l’étude</p>
 </div>
 </div>
-</div>
-<div class="section" id="inventaire">
-<h2>Inventaire<a class="headerlink" href="#inventaire" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="inventaire">
+<h2>Inventaire<a class="headerlink" href="#inventaire" title="Permalink to this heading">#</a></h2>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -4491,8 +4515,8 @@ numpy     : 1.26.3
 </div>
 </div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -4519,16 +4543,12 @@ numpy     : 1.26.3
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -4536,6 +4556,7 @@ numpy     : 1.26.3
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -4582,6 +4603,7 @@ By Roger Erismann, Alexis Pochelon
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2022.
@@ -4611,8 +4633,8 @@ By Roger Erismann, Alexis Pochelon
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
 
   <footer class="bd-footer">
   </footer>

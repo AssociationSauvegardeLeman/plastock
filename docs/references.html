@@ -3,11 +3,12 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Références &#8212; Pla&#39;stock</title>
   
   
@@ -18,15 +19,15 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
@@ -37,12 +38,14 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
@@ -64,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="Macroplastiques par variables explicatives" href="macro_plage_attributes.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -72,7 +75,16 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -106,12 +118,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <header>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
   
+  </header>
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -126,9 +146,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="index.html">
+  
   
   
   
@@ -264,20 +286,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -315,12 +339,12 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="references">
-<h1>Références<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h1>
-<div class="section" id="science-citoyenne-et-collecte-de-donnees">
-<h2>Science citoyenne et collecte de données<a class="headerlink" href="#science-citoyenne-et-collecte-de-donnees" title="Permalink to this headline">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="references">
+<h1>Références<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h1>
+<section id="science-citoyenne-et-collecte-de-donnees">
+<h2>Science citoyenne et collecte de données<a class="headerlink" href="#science-citoyenne-et-collecte-de-donnees" title="Permalink to this heading">#</a></h2>
 <p id="mlw-2013"><strong>Guidance on Monitoring of Marine Litter in European Seas</strong>, Galgani et all,  EUR 26113. Luxembourg (Luxembourg):
 Publications Office of the European Union; 2013. JRC83985 <a class="reference external" href="https://publications.jrc.ec.europa.eu/repository/handle/JRC83985">https://publications.jrc.ec.europa.
 eu/repository/handle/JRC83985</a></p>
@@ -339,9 +363,9 @@ European Union, Van Loon, et all , <a class="reference external" href="https://p
 <p><strong>Comparison of the distribution and degradation of plastic debris along shorelines of the Great Lakes, North America</strong>, Zbyszewski, M., Corcoran, P. L., &amp; Hockin, A. (2014).  Journal of Great Lakes Research, 40(2), 288-299.</p>
 <p><strong>Variation in plastic abundance at different lake beach zones-A case study</strong>, Imhof, H. K., Wiesheu, A. C., Anger, P. M., Niessner, R., Ivleva, N. P., &amp; Laforsch, C. (2018). Variation in plastic abundance at different lake beach zones-A case study. Science of the Total Environment, 613, 530-537.</p>
 <p><strong>Microplastic contamination in Auckland (New Zealand) beach sediments</strong>, Bridson, J. H., Patel, M., Lewis, A., Gaw, S., &amp; Parker, K. (2020).  Marine Pollution Bulletin, 151, 110867.</p>
-</div>
-<div class="section" id="mathematiques-et-informatique">
-<h2>Mathématiques et informatique<a class="headerlink" href="#mathematiques-et-informatique" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="mathematiques-et-informatique">
+<h2>Mathématiques et informatique<a class="headerlink" href="#mathematiques-et-informatique" title="Permalink to this heading">#</a></h2>
 <p id="scipy"><strong>scipy: Fundamental Algorithms for Scientific Computing in Python</strong>, <em>Virtanen et al</em>, Nature Methods, 2020, doi: 10.1038/s41592-019-0686-2.</p>
 <p id="pandas"><strong>pandas</strong>, <em>The pandas development team</em>, Python software, 2020, doi: 10.5281/zenodo.3509134, url: <a class="reference external" href="https://doi.org/10.5281/zenodo.3509134">https://doi.org/10.5281/zenodo.3509134</a>.</p>
 <p id="python-3"><strong>Python 3 Reference Manual</strong>, <em>Guido Van Rossum and Fred L. Drake</em>, CreateSpace, 2009, isbn: 1441412697.</p>
@@ -359,8 +383,8 @@ doi: 10.5555/2851115</p>
 <p id="bayes-oswaldo"><strong>Bayesian Analysis with Python - Second Edition</strong>, <em>Martin Oswaldo</em>, PackT, 2020, isbn: 9781789341652.</p>
 <p id="bayes-jaynes"><strong>Probability Theory: The logic of science</strong>, <em>Edwin Jaynes</em>, Washington University, 2003, isbn: 0521592712.</p>
 <p id="resampling"><strong>Resampling</strong>, <em>Wikepedia</em>, 2021, <a class="reference external" href="https://en.wikipedia.org/wiki/Resampling_(statistics)">https://en.wikipedia.org/wiki/Resampling_(statistics)</a>.</p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -387,11 +411,10 @@ doi: 10.5555/2851115</p>
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="macro_plage_attributes.html"
@@ -402,10 +425,7 @@ doi: 10.5555/2851115</p>
         <p class="prev-next-title">Macroplastiques par variables explicatives</p>
       </div>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -413,6 +433,7 @@ doi: 10.5555/2851115</p>
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -443,6 +464,7 @@ By Roger Erismann, Alexis Pochelon
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2022.
@@ -472,8 +494,8 @@ By Roger Erismann, Alexis Pochelon
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
 
   <footer class="bd-footer">
   </footer>

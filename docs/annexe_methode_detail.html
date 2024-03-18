@@ -3,11 +3,12 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Méthodes détaillées pour l’échantillonage &#8212; Pla&#39;stock</title>
   
   
@@ -18,15 +19,15 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
@@ -37,12 +38,14 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
@@ -65,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Variables explicatives" href="random_variables.html" />
     <link rel="prev" title="6. Conclusion" href="conclusion.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -73,7 +76,16 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -107,12 +119,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <header>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
   
+  </header>
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -127,9 +147,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="index.html">
+  
   
   
   
@@ -265,20 +287,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -328,19 +352,19 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="methodes-detaillees-pour-l-echantillonage">
-<h1>Méthodes détaillées pour l’échantillonage<a class="headerlink" href="#methodes-detaillees-pour-l-echantillonage" title="Permalink to this headline">#</a></h1>
-<div class="section" id="echantillonnage-de-microplastiques">
-<h2>Échantillonnage de microplastiques<a class="headerlink" href="#echantillonnage-de-microplastiques" title="Permalink to this headline">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="methodes-detaillees-pour-l-echantillonage">
+<h1>Méthodes détaillées pour l’échantillonage<a class="headerlink" href="#methodes-detaillees-pour-l-echantillonage" title="Permalink to this heading">#</a></h1>
+<section id="echantillonnage-de-microplastiques">
+<h2>Échantillonnage de microplastiques<a class="headerlink" href="#echantillonnage-de-microplastiques" title="Permalink to this heading">#</a></h2>
 <p>L’échantillonnage se fera de manière aléatoire sur la surface de chaque secteur. La densité d’échantillonnage sera standardisée (1 échantillon/45m2).
 Les prélèvements se feront sur une profondeur de 5 cm. Cette profondeur correspond à celle utilisée par les études similaires (Faure &amp; De Alencastro, 2014; Imhof et al., 2018; Zbyszewski et al., 2014)
 Les prélèvements se feront selon une méthode adaptée de Bridson et al (2020) avec un profilé métallique de 10 cm de côté sur une profondeur de 5 cm. Les échantillons ainsi prélevés seront ensuite stockés dans des boites en verre. Les récipients sont ensuite étiquetés de la manière suivante :</p>
 <p>Pays _ Région _ n° station_ n° échantillon. Les n° d’échantillons sont définis de l’amont vers l’aval.</p>
 <p>Exemple pour Baby Plage (GE) : CH_GE_01.1 ; CH_GE_01.2 ; CH_GE_01.3 ;…</p>
-<div class="section" id="recapitulatif">
-<h3>Récapitulatif<a class="headerlink" href="#recapitulatif" title="Permalink to this headline">#</a></h3>
+<section id="recapitulatif">
+<h3>Récapitulatif<a class="headerlink" href="#recapitulatif" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Positionner aléatoirement les points de prélèvement sur la carte</p></li>
 <li><p>Reporter les points sur le site</p></li>
@@ -359,40 +383,40 @@ vi.	Point à ajouter ?</p></li>
 <li><p>Répéter l’opération sur les autres points de prélèvement</p></li>
 <li><p>Les échantillons sont stockés à UNIGE</p></li>
 </ol>
-</div>
-</div>
-<div class="section" id="echantillonnage-de-macroplastiques">
-<h2>Échantillonnage de macroplastiques<a class="headerlink" href="#echantillonnage-de-macroplastiques" title="Permalink to this headline">#</a></h2>
-<div class="section" id="definition">
-<h3>Définition<a class="headerlink" href="#definition" title="Permalink to this headline">#</a></h3>
+</section>
+</section>
+<section id="echantillonnage-de-macroplastiques">
+<h2>Échantillonnage de macroplastiques<a class="headerlink" href="#echantillonnage-de-macroplastiques" title="Permalink to this heading">#</a></h2>
+<section id="definition">
+<h3>Définition<a class="headerlink" href="#definition" title="Permalink to this heading">#</a></h3>
 <p>Le terme « macroplastique » regroupe l’ensemble des éléments de plus de 5 mm. En dessous, les particules sont appelées microplastiques. Cependant, pour la partie « macroplastiques » de cette étude, l’ensemble des plastiques visibles à l’œil nu seront pris en compte. Les particules recherchées sur les plages peuvent ainsi mesurer seulement quelques millimètres à plusieurs centimètres. Les petits éléments demandent une attention très élevée, d’où le protocole strict présenté ci-après.</p>
-</div>
-<div class="section" id="objectif">
-<h3>Objectif<a class="headerlink" href="#objectif" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="objectif">
+<h3>Objectif<a class="headerlink" href="#objectif" title="Permalink to this heading">#</a></h3>
 <p>Le but de l’étude est d’établir la densité et le type des plastiques retrouvés sur les plages du Léman. Pour ce faire, des recensements sont menés conjointement sur 25 plages tout autour du lac. Afin d’obtenir des données comparables entre elles, les récoltes doivent être faites selon un protocole strict en respectant une surface et un temps de travail donnés. Le nombre d’<a class="reference external" href="http://intervenant.es">intervenant.es</a>, le secteur et le temps d’intervention doivent donc être rigoureusement respectés.</p>
-</div>
-<div class="section" id="materiel">
-<h3>Matériel<a class="headerlink" href="#materiel" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="materiel">
+<h3>Matériel<a class="headerlink" href="#materiel" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>1 seau par personne</p></li>
 <li><p>2 boîtes en plastiques (pour la.le responsable)</p></li>
 </ul>
-</div>
-<div class="section" id="secteur">
-<h3>Secteur<a class="headerlink" href="#secteur" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="secteur">
+<h3>Secteur<a class="headerlink" href="#secteur" title="Permalink to this heading">#</a></h3>
 <p>Selon les informations reçues dans la fiche secteur :</p>
 <ol class="arabic simple">
 <li><p>Ligne d’eau et les deux premiers mètres de la plage</p></li>
 <li><p>Reste de la plage</p></li>
 </ol>
-</div>
-<div class="section" id="recolte">
-<h3>Récolte<a class="headerlink" href="#recolte" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="recolte">
+<h3>Récolte<a class="headerlink" href="#recolte" title="Permalink to this heading">#</a></h3>
 <p>La.le responsable de secteur accueille les bénévoles et leur transmet les informations sur le secteur à inventorier. <a class="reference external" href="http://Certain.es">Certain.es</a> bénévoles seront <a class="reference external" href="http://xn--ddi-bmac.es">dédié.es</a> à la récolte sur la partie 1 et les autres sur la 2. Cette répartition se fera au prorata de la taille de la ligne d’eau par rapport au reste de la plage. La répartition des bénévoles sera préalablement transmise aux responsables de secteurs par l’ASL. Les récoltes des deux parties seront triées et comptabilisées de manière distincte.
 La récolte se fait en parcourant le secteur pré-défini à un rythme de 30 secondes /m2. Cette vitesse est très lente et permet une attention élevée aux petits éléments. Chaque bénévole, équipé de son seau, parcourt la plage. Il ne faut pas creuser pour rechercher les plastiques. Seuls ceux se trouvant à la surface de la plage sont récoltés. La.le responsable est également <a class="reference external" href="http://gardien.ne">gardien.ne</a> du temps. Lorsque le temps à disposition est écoulé, les bénévoles rassemblent les déchets récoltés sur la bâche tout en s’assurant de bien garder la séparation entre les éléments de la partie 1 et ceux de la partie 2. Le tri se fait selon la nomenclature reconnue au niveau européen et qui a été présentée aux responsables lors des soirées de formation. Il est important d’être très rigoureux.ses dans le tri afin de ne pas biaiser les statistiques. Une fois la comptabilisation des éléments effectuée, les données sont saisies dans l’app Net’Léman par la.le responsable de secteur.</p>
-</div>
-<div class="section" id="id1">
-<h3>Récapitulatif<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="id1">
+<h3>Récapitulatif<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Délimitation du site en 2 parties :
 a.	Partie 1 : ligne d’eau et les deux premiers mètres de plage
@@ -407,13 +431,13 @@ b.	Comptabilisation de l’ensemble des éléments et saisie des données par la
 <li><p>Envoi des échantillons
 a.	Les deux boites (partie 1 et partie 2) sont ensuite renvoyées à l’ASL avec à l’intérieur uniquement les éléments en plastique, à l’exception des mégots et des grands déchets (ex : bouteilles en PET). Vous pouvez conserver le carton reçu avec les boites et y coller l’étiquette pré-affranchie.</p></li>
 </ol>
-</div>
-<div class="section" id="meteo">
-<h3>Météo<a class="headerlink" href="#meteo" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="meteo">
+<h3>Météo<a class="headerlink" href="#meteo" title="Permalink to this heading">#</a></h3>
 <p>L’action est maintenue par tous les temps, dans la limite du raisonnable. Le seul facteur réellement limitant est le vent. En cas de vague trop importante, la ligne d’eau n’est pas accessible il n’est donc pas possible de garantir la justesse du protocole.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -440,11 +464,10 @@ a.	Les deux boites (partie 1 et partie 2) sont ensuite renvoyées à l’ASL ave
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="conclusion.html"
@@ -464,10 +487,7 @@ a.	Les deux boites (partie 1 et partie 2) sont ensuite renvoyées à l’ASL ave
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -475,6 +495,7 @@ a.	Les deux boites (partie 1 et partie 2) sont ensuite renvoyées à l’ASL ave
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -517,6 +538,7 @@ By Roger Erismann, Alexis Pochelon
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2022.
@@ -546,8 +568,8 @@ By Roger Erismann, Alexis Pochelon
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
 
   <footer class="bd-footer">
   </footer>
