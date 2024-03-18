@@ -3,11 +3,12 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Macroplastiques par variables explicatives &#8212; Pla&#39;stock</title>
   
   
@@ -18,15 +19,15 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
@@ -37,12 +38,14 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
@@ -65,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Références" href="references.html" />
     <link rel="prev" title="Macroplastiques par plage et position" href="macro_plage_position.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -73,7 +76,16 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -107,12 +119,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <header>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
   
+  </header>
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -127,9 +147,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="index.html">
+  
   
   
   
@@ -265,20 +287,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -319,7 +343,7 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
@@ -360,10 +384,10 @@ document.write(`
 </div>
 </details>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="macroplastiques-par-variables-explicatives">
-<span id="macro-attributes"></span><h1>Macroplastiques par variables explicatives<a class="headerlink" href="#macroplastiques-par-variables-explicatives" title="Permalink to this headline">#</a></h1>
-<div class="section" id="substrat">
-<h2>Substrat<a class="headerlink" href="#substrat" title="Permalink to this headline">#</a></h2>
+<section class="tex2jax_ignore mathjax_ignore" id="macroplastiques-par-variables-explicatives">
+<span id="macro-attributes"></span><h1>Macroplastiques par variables explicatives<a class="headerlink" href="#macroplastiques-par-variables-explicatives" title="Permalink to this heading">#</a></h1>
+<section id="substrat">
+<h2>Substrat<a class="headerlink" href="#substrat" title="Permalink to this heading">#</a></h2>
 <p>La moyenne et la médiane sur les plages de sables fins est légèrement supérieure à celles des autres substrats. Pour autant, les fortes variations font que la différence n’est pas significative.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
@@ -456,19 +480,21 @@ document.write(`
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
-<div class="figure align-default" id="fig-a41">
+<figure class="align-default" id="fig-a41">
 <img alt="_images/3d3ccfbabd85512dd429f542303829fa9de9eb276c6866cbc585e3ac4f38a297.png" src="_images/3d3ccfbabd85512dd429f542303829fa9de9eb276c6866cbc585e3ac4f38a297.png" />
-<p class="caption"><span class="caption-number">Fig. 15 </span><span class="caption-text"><span class="pasted-text"> </span></span><a class="headerlink" href="#fig-a41" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 15 </span><span class="caption-text"><span class="pasted-text"> </span></span><a class="headerlink" href="#fig-a41" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p><strong>Les plages substrat = sables fins</strong></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <p>Baby Plage, Bouveret, Excenevex, Grangettes, Préverenges, Rolle, Vidy</p>
 </div>
 </div>
-</div>
-<div class="section" id="frequentation">
-<h2>Fréquentation<a class="headerlink" href="#frequentation" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="frequentation">
+<h2>Fréquentation<a class="headerlink" href="#frequentation" title="Permalink to this heading">#</a></h2>
 <p>Une faible fréquentation de la plage semble influencer vers le bas l’abondance de macroplastiques. Ceci tend à montrer que la fréquentation sur site impacte le nombre de plastiques retrouvés.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
@@ -550,10 +576,12 @@ document.write(`
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
-<div class="figure align-default" id="fig-a42">
+<figure class="align-default" id="fig-a42">
 <img alt="_images/7bdafe462442b25bde3b4866027bee4e838ad10fcf0401013db8cbf0047b9456.png" src="_images/7bdafe462442b25bde3b4866027bee4e838ad10fcf0401013db8cbf0047b9456.png" />
-<p class="caption"><span class="caption-number">Fig. 16 </span><span class="caption-text"><span class="pasted-text"> </span></span><a class="headerlink" href="#fig-a42" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 16 </span><span class="caption-text"><span class="pasted-text"> </span></span><a class="headerlink" href="#fig-a42" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p id="freq-plages"><strong>Les plages fréquentation = moyenne</strong></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
@@ -566,9 +594,9 @@ document.write(`
 <p>Amphion, Baby Plage, Bouveret, Clarens, Excenevex, Hermance, Lutry, Port Choiseul, Préverenges, Rolle, Savonnière, Tougues, Versoix, Vidy</p>
 </div>
 </div>
-</div>
-<div class="section" id="situation">
-<h2>Situation<a class="headerlink" href="#situation" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="situation">
+<h2>Situation<a class="headerlink" href="#situation" title="Permalink to this heading">#</a></h2>
 <p>Pour l’analyse de l’influence de la situation de la plage, il est intéressant de comparer les moyennes et les médianes. D’un point de vue de la médiane, l’abondance en macroplastique est plus importante dans un contexte urbain. Pour autant, la moyenne plus élevée pour les plages de campagne montre que l’abondance sur certaines peut être très élevée. Dans le cas présent, les plages des Grangettes et du Bouveret représentent les extrèmes supérieurs pour les plages de campagnes.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
@@ -639,10 +667,12 @@ document.write(`
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
-<div class="figure align-default" id="fig-a43">
+<figure class="align-default" id="fig-a43">
 <img alt="_images/980d3bbbf5821b7e73c0783376d8898bb79dda492e358d941a2fc174f40743e0.png" src="_images/980d3bbbf5821b7e73c0783376d8898bb79dda492e358d941a2fc174f40743e0.png" />
-<p class="caption"><span class="caption-number">Fig. 17 </span><span class="caption-text"><span class="pasted-text"> </span></span><a class="headerlink" href="#fig-a43" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text"><span class="pasted-text"> </span></span><a class="headerlink" href="#fig-a43" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p id="sit-plages"><strong>Les plages situation = campagne</strong></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
@@ -655,9 +685,9 @@ document.write(`
 <p>Baby Plage, Clarens, Hermance, Lutry, Meillerie, Port Choiseul, Rolle, Vidy</p>
 </div>
 </div>
-</div>
-<div class="section" id="distance">
-<h2>Distance<a class="headerlink" href="#distance" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="distance">
+<h2>Distance<a class="headerlink" href="#distance" title="Permalink to this heading">#</a></h2>
 <p>La distance à un parking semble influencer les abondances en macroplastiques. En effet, la tendance indique que plus une plage est éloignée d’un parking, moins il y aura de plastique.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
@@ -750,10 +780,12 @@ document.write(`
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
-<div class="figure align-default" id="fig-a44">
+<figure class="align-default" id="fig-a44">
 <img alt="_images/e2f8d267eedbfd76b788f9f0bdb1ddd85f61a011b160e5bc93cd9e9ce83a5be0.png" src="_images/e2f8d267eedbfd76b788f9f0bdb1ddd85f61a011b160e5bc93cd9e9ce83a5be0.png" />
-<p class="caption"><span class="caption-number">Fig. 18 </span><span class="caption-text"><span class="pasted-text"> </span></span><a class="headerlink" href="#fig-a44" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text"><span class="pasted-text"> </span></span><a class="headerlink" href="#fig-a44" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p id="dist-plage"><strong>Les plages distance = 100 - 500 m</strong></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
@@ -766,9 +798,9 @@ document.write(`
 <p>Amphion, Anthy, Clarens, Cully, Excenevex, Gland, Pichette, Rolle, Saint-Disdille, Savonnière</p>
 </div>
 </div>
-</div>
-<div class="section" id="orientation">
-<h2>Orientation<a class="headerlink" href="#orientation" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="orientation">
+<h2>Orientation<a class="headerlink" href="#orientation" title="Permalink to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
@@ -974,8 +1006,8 @@ seaborn   : 0.13.1
 </div>
 </div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1002,11 +1034,10 @@ seaborn   : 0.13.1
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="macro_plage_position.html"
@@ -1026,10 +1057,7 @@ seaborn   : 0.13.1
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -1037,6 +1065,7 @@ seaborn   : 0.13.1
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1070,6 +1099,7 @@ By Roger Erismann, Alexis Pochelon
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2022.
@@ -1099,8 +1129,8 @@ By Roger Erismann, Alexis Pochelon
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
 
   <footer class="bd-footer">
   </footer>
