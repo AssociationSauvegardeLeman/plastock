@@ -1,4 +1,4 @@
-# Questions de recherches et hypothèses
+# Questions de recherche et hypothèses
 
  L’élaboration du plan de recherche pour la caractérisation des stocks de plastique qui se sont déposés sur les plages du Léman est basée sur la formulation d’un certain nombre de questions et d’hypothèses.
 
@@ -6,7 +6,7 @@
 
 L’élaboration du plan de recherche pour la caractérisation des stocks de plastique qui se sont déposés sur les plages du Léman est basée sur la formulation d’un certain nombre de questions et d’hypothèses.
 
-###  Questions de recherches
+###  Questions de recherche
 
 La nature, la forme, l’origine, la taille et l’abondance des microplastiques qui se déversent sur les plages du 
 Léman présentent-elles des différences significatives selon les plages considérées ?
@@ -35,7 +35,7 @@ L’exposition et le profil de la plage constituent des facteurs dominants pour 
 
 ## Macroplastiques
 
-### Questions de recherches
+### Questions de recherche
 
 La nature, la forme, l’origine, la taille et l’abondance des macroplastiques qui se déversent sur les plages du 
 Léman présentent-elles des différences significatives selon les plages considérées ?
