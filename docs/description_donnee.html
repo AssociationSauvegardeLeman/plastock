@@ -343,12 +343,7 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extrapolated-values">Extrapolated values</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#microplastics-total-pieces-1-266-712-044-1-349-710-956">Microplastics total pieces: 1’266 712 044 - 1’349 710 956</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#macroplastics-m2-total-pieces-47-100-70-600">Macroplastics m² total pieces: 47,100 - 70,600</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#macroplastics-linear-meters-total-pieces-38-300-68-800">Macroplastics linear meters total pieces: 38’300 - 68’800</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extrapolated-values">Extrapolated values</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analyse-et-inference">Analyse et inférence</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#haut-lac">Haut lac</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grand-lac">Grand lac</a></li>
@@ -922,68 +917,23 @@ Dans la dernière étape, les codes qui doivent être combinés (G78 et G79) son
 </section>
 </section>
 <section id="extrapolated-values">
-<h2>Extrapolated values<a class="headerlink" href="#extrapolated-values" title="Permalink to this heading">#</a></h2>
+<span id="id2"></span><h2>Extrapolated values<a class="headerlink" href="#extrapolated-values" title="Permalink to this heading">#</a></h2>
 <p><strong>Method: linear interpolation of the expected quantiles</strong></p>
-<div class="cell tag_remove-input docutils container">
-</div>
-<section id="microplastics-total-pieces-1-266-712-044-1-349-710-956">
-<h3>Microplastics total pieces: 1’266 712 044 - 1’349 710 956<a class="headerlink" href="#microplastics-total-pieces-1-266-712-044-1-349-710-956" title="Permalink to this heading">#</a></h3>
-<div class="cell tag_remove-input docutils container">
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">sampled</span><span class="p">,</span> <span class="p">[</span><span class="mf">.5</span><span class="p">,</span> <span class="mf">.25</span><span class="p">,</span> <span class="mf">.5</span><span class="p">,</span> <span class="mf">.75</span><span class="p">,</span> <span class="mf">.95</span><span class="p">]))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1266972468.5808823 1267049898.2353852 [1.26704990e+09 1.26653530e+09 1.26704990e+09 1.26742040e+09
- 1.26811714e+09]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_remove-input docutils container">
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">sampled</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">sampled</span><span class="p">,</span> <span class="p">[</span><span class="mf">.5</span><span class="p">,</span> <span class="mf">.25</span><span class="p">,</span> <span class="mf">.5</span><span class="p">,</span> <span class="mf">.75</span><span class="p">,</span> <span class="mf">.95</span><span class="p">]))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1349870731.1524847 1349889877.627323 [1.34988988e+09 1.34918125e+09 1.34988988e+09 1.35039865e+09
- 1.35130557e+09]
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="macroplastics-m2-total-pieces-47-100-70-600">
-<h3>Macroplastics m² total pieces: 47,100 - 70,600<a class="headerlink" href="#macroplastics-m2-total-pieces-47-100-70-600" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Microplastics total pieces: 1’266 712 044 - 1’349 710 956</p></li>
+<li><p>Macroplastics m² total pieces: 47,100 - 70,600</p></li>
+<li><p>Macroplastics linear meters total pieces: 38’300 - 68’800</p></li>
+</ul>
 <div class="cell tag_remove-input docutils container">
 </div>
 <div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>70730.49490817758 70662.1937299268 [70662.19372993 70410.45894137 70662.19372993 70958.37936001
- 71436.96742476]
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
 <div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>47199.142107736654 47185.3564877769 [47185.35648778 47042.74652748 47185.35648778 47334.74342067
- 47594.6258264 ]
-</pre></div>
 </div>
+<div class="cell tag_remove-input docutils container">
 </div>
-</div>
-</section>
-<section id="macroplastics-linear-meters-total-pieces-38-300-68-800">
-<h3>Macroplastics linear meters total pieces: 38’300 - 68’800<a class="headerlink" href="#macroplastics-linear-meters-total-pieces-38-300-68-800" title="Permalink to this heading">#</a></h3>
 <div class="cell tag_remove-input docutils container">
 </div>
 <div class="cell tag_remove-input docutils container">
@@ -996,15 +946,6 @@ Dans la dernière étape, les codes qui doivent être combinés (G78 et G79) son
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>38247.99456965657 38230.64094648702 [38230.64094649 38039.21367404 38230.64094649 38496.72625715
- 38696.65475651]
-</pre></div>
-</div>
-</div>
-</div>
-</section>
 </section>
 <section id="analyse-et-inference">
 <span id="analyse-inference"></span><h2>Analyse et inférence<a class="headerlink" href="#analyse-et-inference" title="Permalink to this heading">#</a></h2>
@@ -1870,12 +1811,7 @@ Cette section est rédigée en R. Les données sont les mêmes que celles utilis
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extrapolated-values">Extrapolated values</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#microplastics-total-pieces-1-266-712-044-1-349-710-956">Microplastics total pieces: 1’266 712 044 - 1’349 710 956</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#macroplastics-m2-total-pieces-47-100-70-600">Macroplastics m² total pieces: 47,100 - 70,600</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#macroplastics-linear-meters-total-pieces-38-300-68-800">Macroplastics linear meters total pieces: 38’300 - 68’800</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extrapolated-values">Extrapolated values</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analyse-et-inference">Analyse et inférence</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#haut-lac">Haut lac</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grand-lac">Grand lac</a></li>
