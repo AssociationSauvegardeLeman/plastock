@@ -332,7 +332,13 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microplastiques">6.1. Microplastiques</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stock-de-microplastiques-sur-les-plages-du-leman">6.1.1. Stock de microplastiques sur les plages du Léman</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparaison-avec-d-autres-etudes">6.1.2. Comparaison avec d’autres études</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prediction-des-abondances">6.1.3. Prédiction des abondances</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prediction-des-abondances">6.1.3. Prédiction des abondances</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sables">6.1.3.1. Sables :</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#graviers">6.1.3.2. Graviers :</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ligne-d-eau">6.1.3.3. Ligne d’eau :</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#plage-seche">6.1.3.4. Plage seche :</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macroplastiques">6.2. Macroplastiques</a><ul class="nav section-nav flex-column">
@@ -545,11 +551,52 @@ document.write(`
 </section>
 <section id="prediction-des-abondances">
 <h3><span class="section-number">6.1.3. </span>Prédiction des abondances<a class="headerlink" href="#prediction-des-abondances" title="Permalink to this heading">#</a></h3>
-<p>Rajouter les éléments de prédiction par grille bayésienne</p>
-<p>Source : solid-waste-team</p>
-<p>prior : beta(1,1)
-Les résultats présentés ci-dessus correspondent à ce qui a été réellement mesuré sur le terrain. Ce sont donc les valeurs de référence et de comparaison pour faire le lien avec les études précédentes. Aujourd’hui, certains outils mathématiques, tel que l’approximation par grille bayésienne, permettent d’établir une prédiction des abondances réelles sur les plages du Léman.</p>
-<p>Mise en œuvre : Implique la définition d’une grille de valeurs de paramètres et le calcul de la vraisemblance des données observées à chaque point de cette grille. En multipliant par la probabilité a priori et en normalisant, on obtient la distribution a posteriori. Cela peut être fait pour chaque condition séparément ou pour toutes les conditions ensemble, bien que cela soit plus intensif en termes de calcul.</p>
+<p><strong>Distribution des particules attendues par échantillon en fonction du substrat.</strong></p>
+<section id="sables">
+<h4><span class="section-number">6.1.3.1. </span>Sables :<a class="headerlink" href="#sables" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>1% : 0.77</p></li>
+<li><p>25% : 44.67</p></li>
+<li><p>50% (Median) : 101.28</p></li>
+<li><p>75% : 198.83</p></li>
+<li><p>99% : 825.88</p></li>
+<li><p>moyenne: 156</p></li>
+</ul>
+</section>
+<section id="graviers">
+<h4><span class="section-number">6.1.3.2. </span>Graviers :<a class="headerlink" href="#graviers" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>1% : 0.42</p></li>
+<li><p>25% : 35.15</p></li>
+<li><p>50% (Median) : 81.58</p></li>
+<li><p>75% : 186.83</p></li>
+<li><p>99% : 875.37</p></li>
+<li><p>moyenne: 154</p></li>
+</ul>
+<p><strong>Distribution des particules attendues par échantillon en fonction du position.</strong></p>
+</section>
+<section id="ligne-d-eau">
+<h4><span class="section-number">6.1.3.3. </span>Ligne d’eau :<a class="headerlink" href="#ligne-d-eau" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>1% : 0.17</p></li>
+<li><p>25% : 28.64</p></li>
+<li><p>50% (Median) : 66.51</p></li>
+<li><p>75% : 138.99</p></li>
+<li><p>99% : 753.31</p></li>
+<li><p>moyenne : 123</p></li>
+</ul>
+</section>
+<section id="plage-seche">
+<h4><span class="section-number">6.1.3.4. </span>Plage seche :<a class="headerlink" href="#plage-seche" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>1% : 1.19</p></li>
+<li><p>25% :  54.11</p></li>
+<li><p>50% (Median) :  117.84</p></li>
+<li><p>75% : 220.98</p></li>
+<li><p>99% : 886.90</p></li>
+<li><p>moyenne : 191</p></li>
+</ul>
+</section>
 </section>
 </section>
 <section id="macroplastiques">
@@ -567,7 +614,7 @@ Sur les 12’688 m de plages publiques, en extrapolant la moyenne de 3,42 pièce
 <div class="sd-col sd-d-flex-row sd-m-0 docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
 <div class="sd-card-header docutils">
-<p class="sd-card-text"><b>Tableau 5.9 :</b> Résultats précédents, comparaison des résultats des campagnes de collecte de déchets sauvages au bord du Léman entre 2015 et 2022, déchets par mètre de rivage, nombre d’échantillons et nombre total de déchets récoltés.</p>
+<p class="sd-card-text"><b>Tableau 6.2 :</b> Résultats précédents, comparaison des résultats des campagnes de collecte de déchets sauvages au bord du Léman entre 2015 et 2022, déchets par mètre de rivage, nombre d’échantillons et nombre total de déchets récoltés.</p>
 </div>
 <div class="sd-card-body docutils">
 <p class="sd-card-text"><span class="output text_html"><style type="text/css">
@@ -689,42 +736,87 @@ Sur les 12’688 m de plages publiques, en extrapolant la moyenne de 3,42 pièce
 </div>
 </div>
 <p>Les déchets dont la concentration sur les plages a le plus fortement diminué sont ceux liés à la consommation personnelle (mégots de cigarettes, emballages de snacks et bouchons de bouteilles en plastique). La diminution marquée de la densité de cotons-tiges en plastique (0,03 pcs/m contre 0,13 pcs/m) est inattendue et pourrait être attribuée à l’interdiction de la vente de ces articles en France.</p>
-<p>Sur la base des différentes sessions d’échantillonnage de ces dernières années, il est possible de prédire les abondances qui seront retrouvées sur les plages du Léman. Deux outils permettent de calculer ces prédictions : random forest et bayesian grid.</p>
+<p>Sur la base des différentes sessions d’échantillonnage de ces dernières années, il est possible de prédire les abondances qui seront retrouvées sur les plages du Léman.</p>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
-<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-1 sd-row-cols-lg-1 docutils">
 <div class="sd-col sd-d-flex-row docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-Random forest</div>
-<p class="sd-card-text">Tableau : prédictions random forest</p>
+<div class="sd-card-header docutils">
+<p class="sd-card-text"><b>Tableau 6.3 :</b>  Prédiction du nombre de pièce par mètre linéaire avec, ref <a class="reference internal" href="description_donnee.html#analyse-inference"><span class="std std-ref">Analyse et inference</span></a></p>
 </div>
-<div class="sd-card-footer docutils">
-<p class="sd-card-text"><b>Tableau XXX</b>  Prédiction du nombre de pièce par mètre linéaire avec Random forest</p>
-</div>
-</div>
-</div>
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 Grid approximation</div>
-<p class="sd-card-text">Tableau :prédictions grid approx</p>
-</div>
-<div class="sd-card-footer docutils">
-<p class="sd-card-text"><b>Tableau XXX</b>  Prédiction du nombre de pièce par mètre linéaire avec approximation Bayésienne par Grille</p>
-</div>
-</div>
-</div>
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-extrapolation des résulats</div>
-<p class="sd-card-text">Tableau : stock</p>
-</div>
-<div class="sd-card-footer docutils">
-<p class="sd-card-text"><b>Tableau XXX</b> Déchets présents sur les plages du Léman</p>
+<p class="sd-card-text"><span class="output text_html"><style type="text/css">
+#T_b3678 tr:nth-child(even) {
+  background-color: rgba(139, 69, 19, 0.08);
+}
+#T_b3678 tr:nth-child(odd) {
+  background: #FFF;
+}
+#T_b3678 tr {
+  font-size: 14px;
+  padding: 6px;
+}
+#T_b3678 th:nth-child(1) {
+  background-color: #FFF;
+  white-space: nowrap;
+  word-break: keep-all;
+}
+#T_b3678 caption {
+  caption-side: top;
+  font-size: 12px;
+  text-align: left;
+  margin-top: 12px;
+}
+</style>
+<table id="T_b3678">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_b3678_level0_col0" class="col_heading level0 col0" >moyenne</th>
+      <th id="T_b3678_level0_col1" class="col_heading level0 col1" >écart-type</th>
+      <th id="T_b3678_level0_col2" class="col_heading level0 col2" >min</th>
+      <th id="T_b3678_level0_col3" class="col_heading level0 col3" >25%</th>
+      <th id="T_b3678_level0_col4" class="col_heading level0 col4" >50%</th>
+      <th id="T_b3678_level0_col5" class="col_heading level0 col5" >75%</th>
+      <th id="T_b3678_level0_col6" class="col_heading level0 col6" >max</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_b3678_level0_row0" class="row_heading level0 row0" >Haut lac</th>
+      <td id="T_b3678_row0_col0" class="data row0 col0" >3.28</td>
+      <td id="T_b3678_row0_col1" class="data row0 col1" >3.43</td>
+      <td id="T_b3678_row0_col2" class="data row0 col2" >0.00</td>
+      <td id="T_b3678_row0_col3" class="data row0 col3" >0.70</td>
+      <td id="T_b3678_row0_col4" class="data row0 col4" >1.94</td>
+      <td id="T_b3678_row0_col5" class="data row0 col5" >4.79</td>
+      <td id="T_b3678_row0_col6" class="data row0 col6" >17.04</td>
+    </tr>
+    <tr>
+      <th id="T_b3678_level0_row1" class="row_heading level0 row1" >Grand lac</th>
+      <td id="T_b3678_row1_col0" class="data row1 col0" >2.33</td>
+      <td id="T_b3678_row1_col1" class="data row1 col1" >2.32</td>
+      <td id="T_b3678_row1_col2" class="data row1 col2" >0.00</td>
+      <td id="T_b3678_row1_col3" class="data row1 col3" >0.70</td>
+      <td id="T_b3678_row1_col4" class="data row1 col4" >1.55</td>
+      <td id="T_b3678_row1_col5" class="data row1 col5" >3.23</td>
+      <td id="T_b3678_row1_col6" class="data row1 col6" >13.25</td>
+    </tr>
+    <tr>
+      <th id="T_b3678_level0_row2" class="row_heading level0 row2" >Petit lac</th>
+      <td id="T_b3678_row2_col0" class="data row2 col0" >0.98</td>
+      <td id="T_b3678_row2_col1" class="data row2 col1" >1.15</td>
+      <td id="T_b3678_row2_col2" class="data row2 col2" >0.00</td>
+      <td id="T_b3678_row2_col3" class="data row2 col3" >0.25</td>
+      <td id="T_b3678_row2_col4" class="data row2 col4" >0.56</td>
+      <td id="T_b3678_row2_col5" class="data row2 col5" >1.22</td>
+      <td id="T_b3678_row2_col6" class="data row2 col6" >8.21</td>
+    </tr>
+  </tbody>
+</table>
+</span></p>
 </div>
 </div>
 </div>
@@ -810,7 +902,13 @@ Ouverture: Plus ample études à mener sur la courantologie car variables testé
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microplastiques">6.1. Microplastiques</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stock-de-microplastiques-sur-les-plages-du-leman">6.1.1. Stock de microplastiques sur les plages du Léman</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparaison-avec-d-autres-etudes">6.1.2. Comparaison avec d’autres études</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prediction-des-abondances">6.1.3. Prédiction des abondances</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prediction-des-abondances">6.1.3. Prédiction des abondances</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sables">6.1.3.1. Sables :</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#graviers">6.1.3.2. Graviers :</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ligne-d-eau">6.1.3.3. Ligne d’eau :</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#plage-seche">6.1.3.4. Plage seche :</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macroplastiques">6.2. Macroplastiques</a><ul class="nav section-nav flex-column">
