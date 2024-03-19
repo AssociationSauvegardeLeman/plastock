@@ -1,3 +1,4 @@
+(method_asl_plastock)=
 # Méthodes détaillées pour l'échantillonage
 
 ## Échantillonnage de microplastiques

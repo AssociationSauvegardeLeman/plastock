@@ -25,19 +25,28 @@ __Marine Litter Assessment in the Adriatic and Ionian Seas__, _Vlachogianni et a
 (mediteranean)=
 __Assessing marine litter on Mediterranean beaches:  Filling in the knowledge gaps via a participatory-science initiative__, _Vlachogianni, Th._, 2019, MIO-ECSDE, [MIO-ECSDE](https://mio-ecsde.org/project/assessing-marine-litter-on-mediterranean-beaches-filling-in-the-knowledge-gaps-via-a-participatory-science-initiative-vlachogianni-th-mio-ecsde-2019/)
 
+(boucher_et_all)=
 __(Micro) plastic fluxes and stocks in Lake Geneva__, Boucher, J., Faure, F., Pompini, O., Plummer, Z., Wieser, O., & de Alencastro, L. F. (2019).  basin. TrAC Trends in Analytical Chemistry, 112, 66-74.
 
+(faure_et_all)=
 __Evaluation de la pollution par les plastiques dans les eaux de surface en Suisse__, Faure, F., De Alencastro, L. F. (2018).
 
-__Defining the Baselines and standards for Microplastics Analyses in European waters: Final report Project BASEMAN__, Gerdts, G. (2019). 
+(gerdts_2019)=
+__Defining the Baselines and standards for Microplastics Analyses in European waters: Final report Project BASEMAN__, Gerdts, G. (2019). [Ocean best practices](https://repository.oceanbestpractices.org/handle/11329/1205)
 
+(frei_et_all)=
 __Assessment of microplastic contamination on lakeshores of Lake Lugano__, Frei, G., Peduzzi, S., Stoll, S., & Bruder, A.
 
+(Zbyszewski_et_all)=
 __Comparison of the distribution and degradation of plastic debris along shorelines of the Great Lakes, North America__, Zbyszewski, M., Corcoran, P. L., & Hockin, A. (2014).  Journal of Great Lakes Research, 40(2), 288-299.
 
+(imhoff_et_all)=
 __Variation in plastic abundance at different lake beach zones-A case study__, Imhof, H. K., Wiesheu, A. C., Anger, P. M., Niessner, R., Ivleva, N. P., & Laforsch, C. (2018). Variation in plastic abundance at different lake beach zones-A case study. Science of the Total Environment, 613, 530-537.
-
+(bridson_et_all)=
 __Microplastic contamination in Auckland (New Zealand) beach sediments__, Bridson, J. H., Patel, M., Lewis, A., Gaw, S., & Parker, K. (2020).  Marine Pollution Bulletin, 151, 110867.
+
+(bouzid_et_all)=
+__Quantification of Microplastics by Pyrolysis Coupled with Gas Chromatography and Mass Spectrometry in Sediments: Challenges and Implications__.Bouzid N, Anquetil C, Dris R, Gasperi J, Tassin B, Derenne S. Microplastics. 2022; 1(2):229-239. https://doi.org/10.3390/microplastics1020016 
 
 ## Mathématiques et informatique
 
