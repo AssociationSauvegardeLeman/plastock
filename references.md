@@ -42,8 +42,11 @@ __Comparison of the distribution and degradation of plastic debris along shoreli
 
 (imhoff_et_all)=
 __Variation in plastic abundance at different lake beach zones-A case study__, Imhof, H. K., Wiesheu, A. C., Anger, P. M., Niessner, R., Ivleva, N. P., & Laforsch, C. (2018). Variation in plastic abundance at different lake beach zones-A case study. Science of the Total Environment, 613, 530-537.
-
+(bridson_et_all)=
 __Microplastic contamination in Auckland (New Zealand) beach sediments__, Bridson, J. H., Patel, M., Lewis, A., Gaw, S., & Parker, K. (2020).  Marine Pollution Bulletin, 151, 110867.
+
+(bouzid_et_all)=
+__Quantification of Microplastics by Pyrolysis Coupled with Gas Chromatography and Mass Spectrometry in Sediments: Challenges and Implications__.Bouzid N, Anquetil C, Dris R, Gasperi J, Tassin B, Derenne S. Microplastics. 2022; 1(2):229-239. https://doi.org/10.3390/microplastics1020016 
 
 ## Mathématiques et informatique
 

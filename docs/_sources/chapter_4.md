@@ -19,7 +19,7 @@ Le périmètre du Léman, plus grand lac d’Europe occidentale par son volume, 
 <b>Figure 4.1 :</b> Séparation des 200 km de rives lémaniques en 25 secteurs pour le choix des plages de l'étude   
 :::
 
-La méthodologie de prélèvements et d’analyses a été testée et choisie pour être compatible avec les protocoles d’autres études européennes aux fins de comparaisons [Faure et al.](faure_et_all), [Frei et al](frei_et_all). Ces décisions ont été validées par le groupe de travail « Pla’stock » de l’ASL et le Conseil scientifique de la CIPEL.
+La méthodologie de prélèvements et d’analyses a été testée et choisie pour être compatible avec les protocoles d’autres études européennes aux fins de comparaisons ([Faure et al.](faure_et_all), [Frei et al](frei_et_all)). Ces décisions ont été validées par le groupe de travail « Pla’stock » de l’ASL et le Conseil scientifique de la CIPEL.
 
 Le choix s’est porté sur neuf grandes plages de plus de 80 m de long, neuf de 50 à 80 m et sept de 15 à 50 m. Les surfaces inventoriées varient entre 16 m2 pour la plus petite et près de 2000 m2 pour la plus grande. Au total, ce sont quatre plages de moins de 100 m2, 15 de 100 à 500 m2, cinq de 500 à 1100 m2 et une de 1980 m2 qui ont été investiguées. De plus, une attention particulière a été portée au substrat afin d’avoir une bonne répartition entre les plages de sable, de graviers et de galets.
 
@@ -43,7 +43,7 @@ Chaque plage comprend deux sous-secteurs :
 
 Les microplastiques, de taille inférieure à 5mm, ont été prélevés et analysés par les collaborateurs et collaboratrices de l’ASL ainsi que par deux étudiantes dans le cadre de la réalisation de leurs travaux de master au sein du groupe de recherche du Dr Serge Stoll du Département F.-A. Forel des Sciences de l’environnement et de l’eau de l’Université de Genève. Un troisième master en cours étudie les courants qui peuvent influencer le degré d’accumulation de microplastiques sur les plages.
 
-La stratégie d’échantillonnage est inspirée de celle de Gerdts [Gerdts](gerdts_2019). Sur chaque plage, une carotte de substrat est prélevée de manière aléatoire (positionnement préalable sur une carte) tous les 45 m2 en moyenne avec un profilé de 10cm de côté sur une profondeur de 5 cm. Cette profondeur correspond à celle utilisée dans le cadre d’études similaires [Faure et all](faure_et_all), [Imhof et al]9(imhoff_et_all), [Zbyszewski](Zbyszewski_et_all). La méthode est adaptée de Bridson et al (2020). La position géographique de chaque échantillon est relevée au moyen d’un GPS et les récipients contenant ces derniers sont stockés à l’Université en chambre froide à 4° C.
+La stratégie d’échantillonnage est inspirée de celle de Gerdts ([Gerdts 2019](gerdts_2019)). Sur chaque plage, une carotte de substrat est prélevée de manière aléatoire (positionnement préalable sur une carte) tous les 45 m2 en moyenne avec un profilé de 10cm de côté sur une profondeur de 5 cm. Cette profondeur correspond à celle utilisée dans le cadre d’études similaires ([Faure et all](faure_et_all), [Imhof et al](imhoff_et_all), [Zbyszewski](Zbyszewski_et_all)). La méthode est adaptée de Bridson, ([Bridson et al](bridson_et_all)). La position géographique de chaque échantillon est relevée au moyen d’un GPS et les récipients contenant ces derniers sont stockés à l’Université en chambre froide à 4° C.
 
 Les récipients sont étiquetés de la manière suivante : 
 
@@ -59,7 +59,7 @@ Au total, 235 échantillons de 500 cm3 ont ainsi été prélevés en novembre 20
 
 ### Extraction et comptabilisation des MPs en laboratoire (UNIGE)
 
-La manipulation des échantillons est effectuée dans de la verrerie rincée à l’eau ultrapure afin d’éviter toute contaminations par de nouveaux plastiques (Bouzid et al., 2021). Les échantillons sont séchés dans un four à 60°C avant d’être tamisés en trois fractions en fonction de leur taille : 500μm-1’250μm, 1’250μm-5’000μm et >5’000 μm.
+La manipulation des échantillons est effectuée dans de la verrerie rincée à l’eau ultrapure afin d’éviter toute contaminations par de nouveaux plastiques ([Bouzid et al](bouzid_et_all)). Les échantillons sont séchés dans un four à 60°C avant d’être tamisés en trois fractions en fonction de leur taille : 500μm-1’250μm, 1’250μm-5’000μm et >5’000 μm.
 
 Les microplastiques de tailles 1’250μm-5’000μm et >5’000μm, visibles à l’œil nu, sont triés et séparés manuellement des sédiments, puis caractérisés chimiquement par spectroscopie infrarouge.
 
