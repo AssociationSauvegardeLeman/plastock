@@ -34,6 +34,9 @@ __Evaluation de la pollution par les plastiques dans les eaux de surface en Suis
 (gerdts_2019)=
 __Defining the Baselines and standards for Microplastics Analyses in European waters: Final report Project BASEMAN__, Gerdts, G. (2019). [Ocean best practices](https://repository.oceanbestpractices.org/handle/11329/1205)
 
+(constant_et_all)=
+__Beached microplastics in the Northwestern Mediterranean Sea__, Mel Constant, Philippe Kerhervé, Morgan Mino-Vercellio-Verollet, Marc Dumontier, Anna Sànchez Vidal, Miquel Canals, Serge Heussner, Marine Pollution Bulletin, Volume 142, 2019, Pages 263-273,  ISSN 0025-326X, https://doi.org/10.1016/j.marpolbul.2019.03.032.
+
 (frei_et_all)=
 __Assessment of microplastic contamination on lakeshores of Lake Lugano__, Frei, G., Peduzzi, S., Stoll, S., & Bruder, A.
 
@@ -42,6 +45,7 @@ __Comparison of the distribution and degradation of plastic debris along shoreli
 
 (imhoff_et_all)=
 __Variation in plastic abundance at different lake beach zones-A case study__, Imhof, H. K., Wiesheu, A. C., Anger, P. M., Niessner, R., Ivleva, N. P., & Laforsch, C. (2018). Variation in plastic abundance at different lake beach zones-A case study. Science of the Total Environment, 613, 530-537.
+
 (bridson_et_all)=
 __Microplastic contamination in Auckland (New Zealand) beach sediments__, Bridson, J. H., Patel, M., Lewis, A., Gaw, S., & Parker, K. (2020).  Marine Pollution Bulletin, 151, 110867.
 
