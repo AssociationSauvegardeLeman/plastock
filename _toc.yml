@@ -6,6 +6,7 @@ parts:
 - caption: Rapport
   numbered: true
   chapters:
+  - file: resume
   - file: introduction
   - file: chapter_2
   - file: chapter_3

@@ -5,13 +5,13 @@ Réalisée en collaboration avec l’Université de Genève et avec le soutien d
 :::{card} 
 :margin: 3
 
-```{image} 
+```{image} resources/maps/CarteMacroMicro.png
 :alt: summary litter density
 :align: center
 :name: carte_secteur
 ```
 
 +++
-<b>Figure 4.1 :</b> Séparation des 200 km de rives lémaniques en 25 secteurs pour le choix des plages de l'étude   
+<b>Figure 1 :</b> Synthèse des abondances en plastiques sur le pourtour Lémnaniques les plages du Bouveret et des Grangettes se démarquent fortement.  
 :::
 
