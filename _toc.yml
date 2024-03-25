@@ -6,13 +6,13 @@ parts:
 - caption: Rapport
   numbered: true
   chapters:
-  - file: resume
-  - file: introduction
-  - file: chapter_2
-  - file: chapter_3
-  - file: chapter_4
-  - file: resultats  
-  - file: conclusion
+  - file: 1_resume
+  - file: 2_introduction
+  - file: 3_chapter
+  - file: 4_chapter
+  - file: 5_chapter
+  - file: 6-resultats  
+  - file: 7_conclusion
 - caption: Annexes
   numbered: False
   chapters:
@@ -24,4 +24,4 @@ parts:
   - file: description_donnee
   - file: macro_plage_position
   - file: macro_plage_attributes
-  - file: references
+  - file: 8-references

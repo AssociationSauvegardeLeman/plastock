@@ -16,7 +16,7 @@ Le périmètre du Léman, plus grand lac d’Europe occidentale par son volume, 
 ```
 
 +++
-<b>Figure 4.1 :</b> Séparation des 200 km de rives lémaniques en 25 secteurs pour le choix des plages de l'étude   
+<b>Figure 5.1 :</b> Séparation des 200 km de rives lémaniques en 25 secteurs pour le choix des plages de l'étude   
 :::
 
 La méthodologie de prélèvements et d’analyses a été testée et choisie pour être compatible avec les protocoles d’autres études européennes aux fins de comparaisons ([Faure et al.](faure_et_all), [Frei et al](frei_et_all)). Ces décisions ont été validées par le groupe de travail « Pla’stock » de l’ASL et le Conseil scientifique de la CIPEL.
@@ -33,7 +33,7 @@ Chaque plage comprend deux sous-secteurs :
 ```{image} resources/images/beach_zones.png
 ```
 +++
-<b>Figure 4.2 :</b> Secteurs des plages: Ligne d'eau et Plage sèche
+<b>Figure 5.2 :</b> Secteurs des plages: Ligne d'eau et Plage sèche
 :::
 ::::
 
@@ -62,7 +62,7 @@ Au total, 235 échantillons de 500 cm3 ont ainsi été prélevés en novembre 20
 ```{image} resources/images/Photoprelevement.png
 ```
 +++
-<b>Figure 4.3 :</b> Prélèvement de 100 cm2 de substrat. Le profilé est déposé en surface puis enfoncé à 5cm de profondeur. Le prélèvement est ensuite déposé dans une boîte de transport en verre et une feuille d'aluminium est placée entre l'échantillon et le couvercle pour éviter toutes contaminations
+<b>Figure 5.3 :</b> Prélèvement de 100 cm2 de substrat. Le profilé est déposé en surface puis enfoncé à 5cm de profondeur. Le prélèvement est ensuite déposé dans une boîte de transport en verre et une feuille d'aluminium est placée entre l'échantillon et le couvercle pour éviter toutes contaminations
 :::
 ::::
 
@@ -83,7 +83,7 @@ A la loupe binoculaire, sous cloche au sein des locaux de l’ASL. On distingue 
 Lors du traitement des échantillons à l’Université de Genève, de leur transport et de la comptabilisation à l’ASL des contaminations peuvent intervenir. Des blancs de laboratoires ont donc été effectué en reproduisant toutes les étapes allant du traitement de l'échantillon avec le NaI à la comptabilisation à l'ASL.
 
 
-Tableau 4.1: Blancs de laboratoire effectués à l'UNIGE avec comptabilisation à l'ASL
+Tableau 5.1: Blancs de laboratoire effectués à l'UNIGE avec comptabilisation à l'ASL
 | Blancs |Fibres transparentes| Fibres noires | Fibres bleues |Fibres rouges|
 | :---: |:---: |:---: |:---: |:---: |
 | Blanc 1 |15|4|0|2|
@@ -120,7 +120,7 @@ Chaque groupe de bénévoles se rend sur les plages qui lui sont assignées une 
 ```{image} resources/images/benevoles.JPG
 ```
 +++
-<b>Figure 4.4 :</b> Récolte assidue des macroplastiques sur la plage de Préverenges. Photo ASL
+<b>Figure 5.4 :</b> Récolte assidue des macroplastiques sur la plage de Préverenges. Photo ASL
 :::
 ::::
 
@@ -135,7 +135,7 @@ Le détail du protocole figure en annexe: [protocole](method_asl_plastock).
 ```{image} resources/images/Macrotri.jpeg
 ```
 +++
-<b>Figure 4.4 :</b> Tri des macroplastiques récoltés sur la plage de Vidy. Photo: Aleksandra Racz
+<b>Figure 5.5 :</b> Tri des macroplastiques récoltés sur la plage de Vidy. Photo: Aleksandra Racz
 :::
 ::::
 
