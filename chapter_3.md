@@ -2,7 +2,7 @@
 
  L’élaboration du plan de recherche pour la caractérisation des stocks de plastique qui se sont déposés sur les plages du Léman est basée sur la formulation d’un certain nombre de questions et d’hypothèses.
 
-##  Microplastiques
+##  Microplastiques (300 µm à 5 mm)
 
 L’élaboration du plan de recherche pour la caractérisation des stocks de plastique qui se sont déposés sur les plages du Léman est basée sur la formulation d’un certain nombre de questions et d’hypothèses.
 
@@ -33,7 +33,7 @@ La densité de particules/m2 est plus importante sur les plages de sable que sur
 
 L’exposition et le profil de la plage constituent des facteurs dominants pour expliquer le degré d’accumulation de plastiques (forme de la rive plus ou moins encaissée, courants et vents).
 
-## Macroplastiques
+## Macroplastiques (> 2 mm)
 
 ### Questions de recherche
 

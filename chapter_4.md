@@ -26,7 +26,7 @@ Le choix s’est porté sur neuf grandes plages de plus de 80 m de long, neuf de
 Chaque plage comprend deux sous-secteurs :
 
 1. la ligne d’eau (interface terre-eau + deux mètres de plage)
-2. le reste de la plage
+2. la plage sèche
 
 ::::{grid}
 :::{grid-item-card}

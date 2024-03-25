@@ -15,7 +15,7 @@ Réalisée en collaboration avec l’Université de Genève et avec le soutien d
 <b>Figure 1 :</b> Synthèse des abondances en plastiques sur le pourtour Lémnaniques les plages du Bouveret et des Grangettes se démarquent fortement.  
 :::
 
-# Resume
+## Resume
 Done in collaboration with the University of Geneva and with the support of CIPEL, the participatory science study "Pla'stock" enabled the estimation of the quantities of plastics present on the shores of Lake Geneva. Across 25 beaches, 217 substrate samples were analyzed, revealing an average of 16,500 ± 15,600 microplastic particles (0.3 mm to 5 mm) per square meter, with 75% being textile fibers. Furthermore, in 2022, over 100 volunteers mobilized across the 25 beaches to survey plastics visible to the naked eye (hereafter referred to as macroplastics) during four sampling sessions at three-month intervals. The concentration of macroplastics is 0.37 plastic item per square meter. The majority of collected items were highly fragmented and small in size (<2.5 cm). Food packaging, cigarette butts, and pellets (industrial granules) were the three most frequently identified elements. Significant variability is observed among different beaches. Two beaches stand out, both for macroplastics and microplastics: Grangettes and Bouveret.
 
 
