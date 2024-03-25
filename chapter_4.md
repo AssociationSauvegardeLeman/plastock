@@ -33,7 +33,7 @@ Chaque plage comprend deux sous-secteurs :
 ```{image} resources/images/beach_zones.png
 ```
 +++
-<b>Figure 4.2 :</b> Secteurs des plages: Ligne d'eau et Plage seche
+<b>Figure 4.2 :</b> Secteurs des plages: Ligne d'eau et Plage sèche
 :::
 ::::
 
@@ -56,6 +56,15 @@ Les numéros d’échantillons sont définis de l’amont vers l’aval.
 Exemple: Baby Plage à Genève : CH GE 01.1; CH GE 01.2 ; CH GE 01.3 ;… 
 
 Au total, 235 échantillons de 500 cm3 ont ainsi été prélevés en novembre 2021.
+
+::::{grid}
+:::{grid-item-card}
+```{image} resources/images/Photoprelevement.png
+```
++++
+<b>Figure 4.3 :</b> Prélèvement de 100 cm2 de substrat. Le profilé est déposé en surface puis enfoncé à 5cm de profondeur. Le prélèvement est ensuite déposé dans une boîte de transport en verre et une feuille d'aluminium est placée entre l'échantillon et le couvercle pour éviter toutes contaminations
+:::
+::::
 
 ### Extraction et comptabilisation des MPs en laboratoire (UNIGE)
 
@@ -92,6 +101,7 @@ Le nombre de bénévoles envoyé sur chaque plage (secteur) est proportionnel à
 
 Les plages sélectionnées dans le cadre de l’étude étant des plages publiques, les grands macroplastiques (bouteilles, jeux de sables…) sont régulièrement ramassés par les services communaux.
 
+
 ### Echantillonnage macroplastique (> 2 mm)
 
 La personne responsable de secteur accueille les bénévoles et leur transmet les informations sur le secteur à inventorier. Les macroplastiques récoltés dans les sous-secteurs (ligne d’eau et plage sèche) sont triés et comptabilisés séparément.
@@ -105,11 +115,29 @@ La collecte est exécutée par chaque groupe de bénévoles à une vitesse de 30
 
 Chaque groupe de bénévoles se rend sur les plages qui lui sont assignées une fois par saison durant une année.
 
+::::{grid}
+:::{grid-item-card}
+```{image} resources/images/benevoles.JPG
+```
++++
+<b>Figure 4.4 :</b> Récolte assidue des macroplastiques sur la plage de Préverenges. Photo ASL
+:::
+::::
+
 ### Tri et comptabilisation des macroplastiques
 
 Les plastiques récoltés sont réunis par sous-secteur et triés selon la nomenclature reconnue au niveau européen présentée aux responsables lors des soirées de formation et comptabilisés. Les données sont alors saisies dans l’app Net’Léman par les responsables.
 
 Le détail du protocole figure en annexe: [protocole](method_asl_plastock).
+
+::::{grid}
+:::{grid-item-card}
+```{image} resources/images/Macrotri.jpeg
+```
++++
+<b>Figure 4.4 :</b> Tri des macroplastiques récoltés sur la plage de Vidy. Photo: Aleksandra Racz
+:::
+::::
 
 ### Limite de l’approche méthodologique
 
