@@ -1,6 +1,6 @@
 # Protocoles
 
- L’élaboration du plan de recherche pour la caractérisation des stocks de plastique qui se sont déposés sur les plages du Léman est basée sur la formulation d’un certain nombre de questions et d’hypothèses.
+L’élaboration du plan de recherche pour la caractérisation des stocks de plastique qui se sont déposés sur les plages du Léman est basée sur la formulation d’un certain nombre de questions et d’hypothèses.
 
 ##  Zone d’étude
 
@@ -141,7 +141,7 @@ Le détail du protocole figure en annexe: [protocole](method_asl_plastock).
 
 ### Limite de l’approche méthodologique
 
-La récolte des macroplastiques et leur identification étant à la charge des bénévoles, un certain biais observateur peut interférer dans les mesures. Ce biais n’est malheureusement pas mesurable.
+La récolte des macroplastiques et leur identification étant à la charge des bénévoles, un certain biais observateur peut interférer dans les mesures. La communication entre les bénévoles et les experts doit être très régulière.
 
 
 
