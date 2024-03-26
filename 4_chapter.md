@@ -54,7 +54,7 @@ effectués, citons :
 
 Quels sont les objets les plus fréquemment trouvés sur les plages ?
 
-Peut-on comparer les résultats de cette étude à ceux d’autres travauxs réalisées autour du Léman ou ailleurs en 
+Peut-on comparer les résultats de cette étude à ceux d’autres travaux réalisés autour du Léman ou ailleurs en 
 Suisse, en Europe ou dans le monde?
 
 ### Hypothèses
