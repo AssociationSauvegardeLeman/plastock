@@ -4,7 +4,7 @@ L’élaboration du plan de recherche pour la caractérisation des stocks de pla
 
 ##  Zone d’étude
 
-Le périmètre du Léman, plus grand lac d’Europe occidentale par son volume, est de 200 km. Ses rives ont été découpées en 25 tronçons de longueur équivalente et au moins une plage a été choisie dans chacun de ces secteurs selon ses caractéristiques (type de substrat, exposition, fréquentation, degré d’urbanisationdes alentours, etc.) et la diversité des milieux qui la constituent et ce, afin d’obtenir un échantillonnage représentatif de la réalité. 
+Le périmètre du Léman, plus grand lac d’Europe occidentale par son volume, est de 200 km. Ses rives ont été découpées en 25 tronçons de longueur équivalente et au moins une plage a été choisie dans chacun de ces secteurs selon ses caractéristiques (type de substrat, exposition, fréquentation, degré d’urbanisation des alentours, etc.) et la diversité des milieux qui la constituent et ce, afin d’obtenir un échantillonnage représentatif de la réalité. 
 
 :::{card} 
 :margin: 3
