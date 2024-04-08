@@ -1,4 +1,4 @@
-# Pla'stock Léman
+# Pla'stock
 
 *Statistiques descriptives et modèles du nombre de microplastiques et de macroplastiques identifiés sur les plages du Léman.*
 
