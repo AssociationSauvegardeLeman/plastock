@@ -22,8 +22,7 @@ Parmi ceux qui semblent être les plus déterminants en ce qui concerne le site 
 * la fréquentation, ampleur et rythme
 * le substrat sur la ligne d’eau et sur la plage
 
-Peut-on comparer les résultats de cette étude à ceux d’autres travaux réalisées autour du Léman ou ailleurs en 
-Suisse, en Europe ou dans le monde ?
+Peut-on comparer les résultats de cette étude à ceux d’autres travaux réalisés autour du Léman ou ailleurs en Suisse, en Europe ou dans le monde ?
 
 ### Hypothèses
 
