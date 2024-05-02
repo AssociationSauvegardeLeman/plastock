@@ -2,6 +2,7 @@
 
 L’exécution de l’étude des stocks de plastiques sur les plages lémaniques s’est déroulée en en cinq phases (voir diagramme organisationnel ci-dessous).
 
+<<<<<<< HEAD
 ## Phase 1 : Sélection de la zone d’étude
 
 Une sélection de 25 plages a été effectuée afin d’assurer une répartition géographique optimale et une représentation significative le long de la rive lémanique selon divers critères, soit en termes d’orientation, d’exposition, de topographie environnante, de taille, de nature et texture du sol, de degré d’artificialisation, de fréquentation potentielle, etc.
@@ -22,3 +23,13 @@ La quantification du stock de microplastiques s’est déroulée dans les locaux
 Le présent rapport scientifique sur l’état des stocks de plastiques sur les plages du Léman a été publié sous forme vulgarisée par l’ASL dans la revue « Lémaniques », trimestriel de l’ASL en juin 2023, dans le but d’informer le grand public et le sensibiliser à la problématique. Un résumé sera également publié dans le rapport annuel 2024 de la CIPEL.
 
 Les travaux de master sur la caractérisation des microplastiques sur les plages du Léman ont été approuvé par le Département F.-A. Forel des sciences de l’environnement et de l’eau (DEFSE) en automne 2023 et feront l’objet d’une publication dans des journaux scientifiques.
+=======
+:::{card} 
+:margin: 3
+
+```{image} resources/images/diagramme.jpg
+:alt: summary litter density
+:align: center
+:name: diagramme
+```
+>>>>>>> refs/remotes/origin/main
