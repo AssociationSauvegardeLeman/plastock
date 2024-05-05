@@ -55,6 +55,9 @@ __Quantification of Microplastics by Pyrolysis Coupled with Gas Chromatography a
 (OFEV)=
 __Identification, quantification and analysis of observable anthropogenic litter along Swiss lake systems__, OFEV. 2021. https://www.plagespropres.ch/titlepage.html
 
+(SLR)=
+__Swiss Litter Report__, Gabrielle, Kuhl; Pascal, Blahrer; 2018; [Stopp research](http://stoppp.org/)
+
 (Osman)=
 __Microplastic sources, formation, toxicity and remediation: a review.__ Osman, A. I., Hosny, M., Eltaweil, A. S., Omar, S., Elgarahy, A. M., Farghali, M., ... & Akinyede, K. A. (2023). Environmental Chemistry Letters, 21(4), 2129-2169.
 (Hidalgo)=
@@ -86,7 +89,6 @@ __Regression analysis of count data. 2nd ed__, _A. Cameron and Pravin Trivedi_, 
 
 (jupyter_book)=
 __Jupyter Book__, _Jupyter Book_, 2021, [https://zenodo.org/record/4539666](https://zenodo.org/record/4539666).
-
 
 (bayes_hackers)=
 __Bayesian Methods for Hackers__, _Cameron Davidson-Pilon_, Addison-Wesley Professional, 2021, [https://github.

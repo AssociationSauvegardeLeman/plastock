@@ -1,6 +1,6 @@
 # Protocoles
 
-Que ce soit pour les macro- ou les microplastiques, les méthodes de prélèvements et d’analyses ont été développées puis testées et validées par l’ASL. Elles sont majoritairement compatibles avec les protocoles scientifiques utilisés par les différentes études ayant traité de la même thématique en Europe ([Gerdts, 2019](gerdts_2019) et au niveau helvétique ([OFEV, 2021](OFEV)),([Swiss Litter Reprot](SLR)). La méthodologie pour les macroplastiques se démarque des autres études par la prise en compte du mètre carré comme unité de référence par rapport à d’autres études qui se basent sur le mètre linéaire de ligne d’eau. Ce choix a été effectué afin de pouvoir comparer les abondances par mètre carré entre les microplastiques et les macroplastiques. Le choix des méthodes a été également validé par le conseil scientifique de la CIPEL. 
+Que ce soit pour les macro- ou les microplastiques, les méthodes de prélèvements et d’analyses ont été développées puis testées et validées par l’ASL. Elles sont majoritairement compatibles avec les protocoles scientifiques utilisés par les différentes études ayant traité de la même thématique en Europe ([Gerdts, 2019](gerdts_2019)) et au niveau helvétique ([OFEV, 2021](OFEV)),([Swiss Litter Report, 2018](SLR)). La méthodologie pour les macroplastiques se démarque des autres études par la prise en compte du mètre carré comme unité de référence par rapport à d’autres études qui se basent sur le mètre linéaire de ligne d’eau. Ce choix a été effectué afin de pouvoir comparer les abondances par mètre carré entre les microplastiques et les macroplastiques. Le choix des méthodes a été également validé par le conseil scientifique de la CIPEL. 
 
 ##  Zone d’étude
 
@@ -70,9 +70,9 @@ Au total, 235 échantillons de 500 cm3 ont ainsi été prélevés en novembre 20
 ::::
 
 ### Extraction et comptabilisation des microplastiques
-La manipulation des échantillons est effectuée dans de la verrerie rincée à l’eau ultrapure afin d’éviter toute nouvelle contamination par des plastiques (Bouzid et al). Dans un premier temps, les échantillons ont été séchés dans un four à 60 °C. Les plastiques ont ensuite été extraits par flottaisons dans une solution de Iodure de Sodium (NaI) à une densité de 1,7. Après 48 heures d’immersions, le surnageant est déposé sur des filtres en nitrate de cellulose avec une maille de 300 μm, puis placé dans une boîte en verre. Le matériel est constamment couvert de feuille d’aluminium pour éviter les contaminations. Les échantillons sont ensuite comptabilisés dans les locaux de l’ASL sous une cloche de plexiglas. 
+La manipulation des échantillons est effectuée dans de la verrerie rincée à l’eau ultrapure afin d’éviter toute nouvelle contamination par des plastiques ([Bouzid et al., 2022](bouzid_et_all)). Dans un premier temps, les échantillons ont été séchés dans un four à 60 °C. Les plastiques ont ensuite été extraits par flottaisons dans une solution de Iodure de Sodium (NaI) à une densité de 1,7. Après 48 heures d’immersions, le surnageant est déposé sur des filtres en nitrate de cellulose avec une maille de 300 μm, puis placé dans une boîte en verre. Le matériel est constamment couvert de feuille d’aluminium pour éviter les contaminations. Les échantillons sont ensuite comptabilisés dans les locaux de l’ASL sous une cloche de plexiglas. 
 
-L’identification des microplastiques se fait à l’aide d’une loupe binoculaire au grossissement 40x en respectant les trois règles définies par Hidalgo-Ruz et al. (2012). A savoir :
+L’identification des microplastiques se fait à l’aide d’une loupe binoculaire au grossissement 40x en respectant les trois règles définies par ([Hidalgo-Ruz et al., 2012](Hidalgo)). A savoir :
 -	il ne doit pas y avoir de cellules ou de structures organiques visibles
 -	pour les fibres, l’épaisseur doit être constante sur toute la longueur (sous réserve de présence de matière organique)
 -	la coloration doit être homogène.
