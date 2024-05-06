@@ -335,7 +335,7 @@ def analyze_scenario(scenario_data, func, n_iterations=100):
 
 
 def plot_histogram(predictions, observed, title="", reference='camp-dist-1', display=False, xlabel='pcs/m',
-                   ylabel='Densité de Probabilité', bins=20):
+                   ylabel='Densité de Probabilité', bins=20, file_name: str = None):
     fig, ax = plt.subplots(figsize=(10, 6))
     sns.histplot(predictions, bins=bins, stat="probability", ax=ax, label='prédictions', zorder=1)
     sns.histplot(observed, bins=bins, stat="probability", label='observée', zorder=0, ax=ax)
@@ -343,6 +343,8 @@ def plot_histogram(predictions, observed, title="", reference='camp-dist-1', dis
     plt.xlabel(xlabel)
     plt.ylabel(ylabel)
     plt.legend()
+    if file_name is not None:
+        plt.savefig(file_name)
     glue(reference, fig, display=display)
     plt.close()
 
