@@ -339,12 +339,14 @@ def plot_histogram(predictions, observed, title="", reference='camp-dist-1', dis
     fig, ax = plt.subplots(figsize=(10, 6))
     sns.histplot(predictions, bins=bins, stat="probability", ax=ax, label='prédictions', zorder=1)
     sns.histplot(observed, bins=bins, stat="probability", label='observée', zorder=0, ax=ax)
-    plt.title(title, loc='left')
+
     plt.xlabel(xlabel)
     plt.ylabel(ylabel)
     plt.legend()
+
     if file_name is not None:
         plt.savefig(file_name)
+    plt.title(title, loc='left')
     glue(reference, fig, display=display)
     plt.close()
 
