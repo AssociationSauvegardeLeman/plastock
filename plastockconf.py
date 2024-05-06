@@ -77,7 +77,7 @@ caption_bottom = {
 }
 caption_top = {'selector': 'caption','props': 'caption-side: top; font-size:12px; text-align: left; margin-top:12px;'}
 table_css_styles = [even_rows, odd_rows, table_font, header_row, t_data, caption_bottom]
-table_css_styles_top = [even_rows, odd_rows, table_font, header_row, caption_top]
+table_css_styles_top = [even_rows, odd_rows, table_font, t_data, header_row, caption_top]
 
 # the formatting for pd.styler
 format_kwargs = dict(precision=2, thousands="'", decimal=",")
