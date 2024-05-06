@@ -52,6 +52,21 @@ __Microplastic contamination in Auckland (New Zealand) beach sediments__, Bridso
 (bouzid_et_all)=
 __Quantification of Microplastics by Pyrolysis Coupled with Gas Chromatography and Mass Spectrometry in Sediments: Challenges and Implications__.Bouzid N, Anquetil C, Dris R, Gasperi J, Tassin B, Derenne S. Microplastics. 2022; 1(2):229-239. https://doi.org/10.3390/microplastics1020016 
 
+(OFEV)=
+__Identification, quantification and analysis of observable anthropogenic litter along Swiss lake systems__, OFEV. 2021. https://www.plagespropres.ch/titlepage.html
+
+(SLR)=
+__Swiss Litter Report__, Gabrielle, Kuhl; Pascal, Blahrer; 2018; [Stopp research](http://stoppp.org/)
+
+(Osman)=
+__Microplastic sources, formation, toxicity and remediation: a review.__ Osman, A. I., Hosny, M., Eltaweil, A. S., Omar, S., Elgarahy, A. M., Farghali, M., ... & Akinyede, K. A. (2023). Environmental Chemistry Letters, 21(4), 2129-2169.
+(Hidalgo)=
+__Distribution and abundance of small plastic debris on beaches in the SE Pacific (Chile): a study supported by a citizen science project.__ Hidalgo-Ruz, V., & Thiel, M. (2013). Marine environmental research, 87, 12-18.
+(Lots)=
+__A large-scale investigation of microplastic contamination: abundance and characteristics of microplastics in European beach sediment.__ Lots, F. A., Behrens, P., Vijver, M. G., Horton, A. A., & Bosker, T. (2017). Marine pollution bulletin, 123(1-2), 219-226.
+(Hanke)=
+__Guidance on monitoring of marine litter in European seas.__ Hanke, G., Galgani, F., Werner, S., Oosterbaan, L., Nilsson, P., Fleet, D., ... & Liebezeit, G. (2013).  Centro Oceanográfico de Vigo.
+
 ## Mathématiques et informatique
 
 (scipy)=
@@ -74,7 +89,6 @@ __Regression analysis of count data. 2nd ed__, _A. Cameron and Pravin Trivedi_, 
 
 (jupyter_book)=
 __Jupyter Book__, _Jupyter Book_, 2021, [https://zenodo.org/record/4539666](https://zenodo.org/record/4539666).
-
 
 (bayes_hackers)=
 __Bayesian Methods for Hackers__, _Cameron Davidson-Pilon_, Addison-Wesley Professional, 2021, [https://github.
