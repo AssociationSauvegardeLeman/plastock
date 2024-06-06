@@ -10,8 +10,8 @@ parts:
   - file: 2_introduction
   - file: 3_chapter
   - file: 4_chapter
-  - file: 5_chapter
-  - file: 6-resultats  
+  - file: 5_chapter-copy
+  - file: 6-resultats-copy
   - file: 7_discussion
   - file: 8-Conclusion
   - file: 8-references
