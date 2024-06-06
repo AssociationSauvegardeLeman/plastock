@@ -1,25 +1,78 @@
-# Pla'stock
+# Pla’stock
 
-*Statistiques descriptives et modèles du nombre de microplastiques et de macroplastiques identifiés sur les plages du Léman.*
+__Étude du stock de plastiques sur les plages du Léman__
 
+Une étude menée par l’Association pour la Sauvegarde du Léman [l'Association pour la Sauvegarde du Léman](https://asleman.org/) en collaboration avec l’Université de Genève (UniGE) et la Commission internationale pour la protection des eaux du Léman (CIPEL)
+
+::::{grid}
+:::{grid-item-card}
+
+```{image} resources/images/coverimage.png
+```
+:::
+::::
 Il s'agit d'un manuscrit non publié. Ce travail en cours est l'œuvre des
-collaborateurs de [l'Association pour la Sauvegarde du Léman](https://asleman.org/) et Roger Erismann:
+collaborateurs de et Roger Erismann:
 
-1. Adrien Bonny
-2. Alexis Pochelon
+__Image :__ Bénévoles en action
 
+__Auteurs :__ Alexis Pochelon (ASL), Raphaëlle Juge (ASL) et Roger Erismann
 
-Veuillez contacter Alexis ou Adrien pour toute question concernant les microplastiques ou le lac en général.
+__Avec le soutien de :__
 
+::::{grid} 3 3 4 4 
+:::{grid-item-card} 
+SIG
+^^^
+NO IMAGE
+:::
 
-## Objectif et structure du document
+:::{grid-item-card}
+UNIGE
+^^^
+```{image} resources/images/logos/logo-unige@2x.png
+```
+:::
 
-Le but est de décrire numériquement les observations en relation avec les différentes variables indépendantes listées/observées par les chercheurs. 
+:::{grid-item-card}
+CIPEL
+^^^
+```{image} resources/images/logos/logo-cipel.png
+```
+:::
+:::{grid-item-card}
+LOTTERIE ROMANDE
+^^^
 
-## Usage and citation
+NO IMAGE
+ 
+:::
+:::{grid-item-card}
+FONDATION VALERIE
+^^^
+```{image} resources/images/logos/fondvital.png
+```
+:::
+:::{grid-item-card}
+BNP
+^^^
+```{image} resources/images/logos/BNP.png
+```
+:::
+:::{grid-item-card}
+UBP
+^^^
+```{image} resources/images/logos/UBP.png
+```
+:::
+::::
 
-Ce document est provisoire. Si vous souhaitez aider à maintenir ce repo, veuillez contacter analyst@hammerdirt.ch.
+__Remerciements :__
 
-Si, pour une raison quelconque, vous devez citer ce document, veuillez utiliser ce qui suit :
+Membres du groupe plastique de l’ASL : Adrien Bonny, Julien Boucher, Jean-Marcel Dorioz, Claude Ganty, Suzanne Mader-Feigenwinter, Pascal Mulattieri, et Serge Stoll, ainsi qu’Alix Chatton et Malika Sekkiou (stagiaires)
 
-*Pla'stock, étude du stock de macro et microplasiques sur les plages du Léman*, Adrien Bonny, Alexis Pochelon, 2022, Assoctiation pour le Sauvegarde du Léman.
+Membres du conseil scientifique et du secrétariat de la CIPEL : Marc Babut, Hélène Bourgeois, Mathieu Coster, Benoit Ferrari, Nicole Gallina, Jean-Luc Loizeau, Frédéric Soulignac
+
+Etudiantes et étudiant de l’Université de Genève : Jade Bouzy, Mathis Ducleon, Lea Früh, Coline Guignier et Louise Uhlmann
+
+Bénévoles :  Denise Adler, Anne Affolter, Nadine Allal, Herve Amigo, Elodie Balistreri, Philippe Barbier, Jean-Claude Barrère, Claudine Battistolo, Dominique Baudet, Alexandre Berthoud, Thierry Bigler, Coralie Bonvin, Michel Borter, Sandrine Bouillot, Nicolas Bourquin, Karen Brunel, François Bujard, Mathilde Bussy, Gabrielle Chaizy, Sarah Chapalay, Sandra Christen, Flavia Cioffoletti, Julien Claude, Lionel Combebias, Christelle Crépin, Anastasia de Franchi, Yann Demont, Alain Dériaz, Nathalie Dewarrat, Cédric Drevet, Anne-Marie Dufour, Dominique Favre, Gilles Favre, Katia Fiaux, Willy Fink, Patrizia Fioriti, Patricia Fontaine, Claire Fouassier, Liliane Fourel, Christophe Gabriel, Monique Gasnier, Basile Gillard, Pawel Grabarz, Sandra Graf, Nicolas Guillemaux, Sylvain Guironnet, Catherine Herard, Martin Hesener, Dominique Imhof, Laure Jacquemard, May Kassem, Yvonne Kessler, Brigitte Klinkenbijl, Pierre Kremer, Aurélie Kropf, Catherine Lacour, Corinne Lavanchy, Françoise Le Fort, Gabrielle Lods, Martine Logossou-Jacot, Yves Lottaz, Michelle  Loup, Anne-Laure Maire, Adrien Maire, Sébastien Marquis, Philippe Meister, Valérie Mérat, Véronique Merkly, Marianne Michaud, Caroline Michaud, Hassan Mohammad, Martine Moret, Isabel Muhlethaler, Viviane Murat, Thomas Nook, Martine Oppliguer, Marianne Perron-Martel, Jean-François Pingoud, Danièle Pittet, Johanna Porchet, Coralie Probst, Aleksandra Racz, Marion Raffini, Philippe Regnault, Séverine Roth, Pierluigi Ruggeri, Michel Sallin, Murielle Salmon, Cristian Santana, Flore Seigneur, Thatcher Shellaby, Jacqueline Simonin, Ekaterina Souhodolskaya, Frédéric Soulignac, Christine Sullenger, Sandrine Teutschmann, Madeleine Thévoz, Thierry Maréchal, Jennifer Tschopp, Hans von Zinkernagel, Béatrice Walker, Jake Wellian, Olivier Wenger et Claire Ziegeler.

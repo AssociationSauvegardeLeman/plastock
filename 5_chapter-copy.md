@@ -95,23 +95,35 @@ Selon ces recommandations, les particules comptabilisées ont été réparties e
 
 ### Limite de l’approche méthodologique
 
-Lors du traitement des échantillons à l’Université de Genève, de leur transport et de la comptabilisation à l’ASL des contaminations (au cours des manipulations en laboratoire, aériennes, liées à l’outillage, les vêtements...) peuvent intervenir. Des blancs de laboratoires ont donc été effectués (Tableau 1) en reproduisant toutes les étapes allant du traitement de l’échantillon avec le NaI à la comptabilisation aux locaux de l’ASL.
-
-Tableau 1: Blancs de laboratoire effectués à l’UNIGE avec comptabilisation à l’ASL
+Lors du traitement des échantillons à l’Université de Genève, de leur transport et de la comptabilisation à l’ASL des contaminations (au cours des manipulations en laboratoire, aériennes, liées à l’outillage, les vêtements...) peuvent intervenir. Des blancs de laboratoires ont donc été effectués (Tableau 5.1) en reproduisant toutes les étapes allant du traitement de l’échantillon avec le NaI à la comptabilisation aux locaux de l’ASL.
+::::{grid}
+:::{grid-item-card}
+<b>Tableau 5.1 :</b> Blancs de laboratoire effectués à l’UNIGE avec comptabilisation à l’ASL
+^^^
 | Blancs |Fibres transparentes| Fibres noires | Fibres bleues |Fibres rouges|
 | :---: |:---: |:---: |:---: |:---: |
 | Blanc 1 |15|4|0|2|
 | Blanc 2 |39|7|4|0|
 |Blanc 3 |4|5|5|0|
 
+:::
+::::
+
 A noter que seules des fibres ont été retrouvées dans les blancs. Ces résultats ne sont pas surprenants au vu des risques de contamination aérienne. Avec une moyenne de 28 particules, comparée aux 189 particules comptabilisées en moyenne dans les échantillons, on peut considérer que la contamination est plutôt faible. Ces blancs ne sont pas soustraits des comptabilisations effectuées.
 
 ## Récolte, extraction et identification des macroplastiques
 
-Un macroplastique est défini le plus souvent par la norme internationale comme étant un objet ou un fragment plastique plus grand que 5 mm.  Pour autant, dans le cadre de cette étude, le terme macroplastique sera utilisé pour l’ensemble des plastiques visibles à l’œil nu. Il comprend donc également les “grands” microplastiques entre 2 et 5 mm. La récolte et le recensement des macroplastiques ont été confiés à des personnes de la société civile, qui se sont spontanément inscrites pour se livrer à cette expérience de science participative. Une centaine de bénévoles très motivés ont ainsi appliqué un protocole scientifique précis sur les plages sélectionnées par l’ASL en respectant une surface et un temps de travail donné (30 secondes d’observation par m2) (Tableau 2). Cette précision est nécessaire pour limiter le biais induit par le grand nombre d’observateurs et d’observatrices.   
+Un macroplastique est défini le plus souvent par la norme internationale comme étant un objet ou un fragment plastique plus grand que 5 mm.  Pour autant, dans le cadre de cette étude, le terme macroplastique sera utilisé pour l’ensemble des plastiques visibles à l’œil nu. Il comprend donc également les “grands” microplastiques entre 2 et 5 mm. La récolte et le recensement des macroplastiques ont été confiés à des personnes de la société civile, qui se sont spontanément inscrites pour se livrer à cette expérience de science participative. Une centaine de bénévoles très motivés ont ainsi appliqué un protocole scientifique précis sur les plages sélectionnées par l’ASL en respectant une surface et un temps de travail donné (30 secondes d’observation par m2) (Tableau 2). Cette précision est nécessaire pour limiter le biais induit par le grand nombre d’observateurs et d’observatrices. 
 
 
+::::{grid}
+:::{grid-item-card}
+<b>Tableau 5.2 :</b> Nombre de bénévoles mobilisés par plage et temps d’échantillonnage par secteurs
+^^^
 ATTENTION: Intégrer tableau: resources/tables/temps de passages.xlsx
+
+:::
+::::
 
 Le nombre d’intervenants, le secteur et le temps d’intervention doivent être rigoureusement respectés. En outre, la récolte des plus petits éléments (2 à 5 mm) demande une attention toute particulière.
 
