@@ -1,4 +1,6 @@
 # Inventaire
+
+La liste présentée ci-dessous correspond à la dénomination des différents objets reconnue au niveau européen. Cette liste a été définie dans le cadre du monitoring des déchets marins ([Galgani et al.](mlw_2013)).
 ::::{grid} 1 1 1 1
 :gutter: 0
 
