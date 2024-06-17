@@ -240,7 +240,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/hammerdirt-analyst/plastock" target="_blank"
+      <li><a href="https://github.com/AssociationSauvegardeLeman/plastock" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -257,7 +257,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/hammerdirt-analyst/plastock/issues/new?title=Issue%20on%20page%20%2Fdescription_donnee.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/AssociationSauvegardeLeman/plastock/issues/new?title=Issue%20on%20page%20%2Fdescription_donnee.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -940,26 +940,7 @@ Dans la dernière étape, les codes qui doivent être combinés (G78 et G79) son
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cdcode</span> <span class="o">=</span> <span class="n">work_datai</span>
-<span class="n">cdcode</span> <span class="o">=</span> <span class="n">cdcode</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;code&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">&#39;pcs/m&#39;</span><span class="p">:</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="s1">&#39;quantité&#39;</span><span class="p">:</span><span class="s1">&#39;sum&#39;</span><span class="p">})</span>
-<span class="n">total</span> <span class="o">=</span> <span class="n">cdcode</span><span class="p">[</span><span class="s1">&#39;quantité&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">cdcode</span><span class="p">[</span><span class="s1">&#39;</span><span class="si">% d</span><span class="s1">u total&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">((</span><span class="n">cdcode</span><span class="p">[</span><span class="s1">&#39;quantité&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">total</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;int&#39;</span><span class="p">)</span>
-<span class="n">cdcode</span><span class="p">[</span><span class="s1">&#39;</span><span class="si">% d</span><span class="s1">u total&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cdcode</span><span class="p">[</span><span class="s1">&#39;</span><span class="si">% d</span><span class="s1">u total&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1">%&#39;</span><span class="p">)</span>
-<span class="n">codemap</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/end_pipe/fr_labels.csv&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;en&#39;</span><span class="p">)</span>
-<span class="n">cdcode</span> <span class="o">=</span> <span class="n">cdcode</span><span class="p">[</span><span class="n">cdcode</span><span class="p">[</span><span class="s1">&#39;quantité&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="n">cdcode</span><span class="p">[</span><span class="s1">&#39;description&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cdcode</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">codemap</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="s1">&#39;fr&#39;</span><span class="p">])</span>
-<span class="n">cdcode</span> <span class="o">=</span> <span class="n">cdcode</span><span class="p">[[</span><span class="n">cdcode</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="o">*</span><span class="n">cdcode</span><span class="o">.</span><span class="n">columns</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]]]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="n">cdcode</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="n">cdcode</span> <span class="o">=</span> <span class="n">cdcode</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;quantité&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">cdcode</span> <span class="o">=</span> <span class="n">cdcode</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">set_table_styles</span><span class="p">(</span><span class="n">table_css_styles_top</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">psc</span><span class="o">.</span><span class="n">format_kwargs</span><span class="p">)</span>
-
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;resources/tables/inventory.html&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
-    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">cdcode</span><span class="o">.</span><span class="n">to_html</span><span class="p">())</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_remove-input docutils container">
 </div>
 </section>
 </section>
@@ -1029,79 +1010,9 @@ Dans la dernière étape, les codes qui doivent être combinés (G78 et G79) son
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">halfnorm</span><span class="p">,</span> <span class="n">multinomial</span>
-
-<span class="k">def</span> <span class="nf">make_posterior</span><span class="p">(</span><span class="n">observed</span><span class="p">,</span> <span class="n">prior</span><span class="p">):</span>
-
-    <span class="n">unnormalized</span> <span class="o">=</span> <span class="n">observed</span> <span class="o">*</span> <span class="n">prior</span>
-    <span class="n">normalized</span> <span class="o">=</span> <span class="n">unnormalized</span><span class="o">/</span><span class="nb">sum</span><span class="p">(</span><span class="n">unnormalized</span><span class="p">)</span>
-    <span class="n">posterior</span> <span class="o">=</span> <span class="n">multinomial</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">normalized</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">posterior</span>
-
-<span class="k">def</span> <span class="nf">hdi</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span> <span class="n">cred_mass</span><span class="o">=</span><span class="mf">.95</span><span class="p">):</span>
-    <span class="c1"># Sort the samples</span>
-    <span class="n">sorted_samples</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">samples</span><span class="p">)</span>
-    
-    
-    <span class="c1"># the number of included samples in the interval</span>
-    <span class="n">n_samples</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">sorted_samples</span><span class="p">)</span>
-    <span class="n">n_cred_samples</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">cred_mass</span> <span class="o">*</span> <span class="n">n_samples</span><span class="p">))</span>
-
-    <span class="c1"># width of intervals that include the number of samples</span>
-    <span class="n">interval_widths</span> <span class="o">=</span> <span class="n">sorted_samples</span><span class="p">[</span><span class="n">n_cred_samples</span><span class="p">:]</span> <span class="o">-</span> <span class="n">sorted_samples</span><span class="p">[:</span><span class="n">n_samples</span> <span class="o">-</span> <span class="n">n_cred_samples</span><span class="p">]</span>
-    
-    <span class="c1"># Find the shortest interval</span>
-    <span class="n">min_idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">interval_widths</span><span class="p">)</span>
-    
-    <span class="c1"># Return the HDI</span>
-    <span class="n">hdi_min</span> <span class="o">=</span> <span class="n">sorted_samples</span><span class="p">[</span><span class="n">min_idx</span><span class="p">]</span>
-    <span class="n">hdi_max</span> <span class="o">=</span> <span class="n">sorted_samples</span><span class="p">[</span><span class="n">min_idx</span> <span class="o">+</span> <span class="n">n_cred_samples</span><span class="p">]</span>
-    
-    <span class="k">return</span> <span class="n">hdi_min</span><span class="p">,</span> <span class="n">hdi_max</span>
-
-
-<span class="n">cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;loc_date&#39;</span><span class="p">,</span> <span class="s1">&#39;project&#39;</span><span class="p">]</span>
-<span class="n">for_all</span> <span class="o">=</span> <span class="n">current</span><span class="o">.</span><span class="n">w_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">cols</span><span class="p">,</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">pcs_m</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-
-<span class="n">prior_all</span> <span class="o">=</span> <span class="n">for_all</span><span class="p">[</span><span class="n">for_all</span><span class="o">.</span><span class="n">project</span> <span class="o">!=</span>  <span class="s2">&quot;Pla</span><span class="se">\&#39;</span><span class="s2">stock&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="n">observed</span> <span class="o">=</span> <span class="n">for_all</span><span class="p">[</span><span class="n">for_all</span><span class="o">.</span><span class="n">project</span> <span class="o">==</span>  <span class="s2">&quot;Pla</span><span class="se">\&#39;</span><span class="s2">stock&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-</pre></div>
+<div class="cell tag_remove-input docutils container">
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">index_range</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">)</span>
-
-<span class="n">p_exceedance_matrix</span> <span class="o">=</span> <span class="n">prior_all</span><span class="o">.</span><span class="n">pcs_m</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()[:,</span><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span>  <span class="o">&gt;</span> <span class="n">index_range</span>
-<span class="n">p_exceedance_counts</span> <span class="o">=</span> <span class="n">p_exceedance_matrix</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">prior_all</span><span class="p">)</span>
-
-<span class="n">o_exceedance_matrix</span> <span class="o">=</span> <span class="n">observed</span><span class="o">.</span><span class="n">pcs_m</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()[:,</span><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span>  <span class="o">&gt;</span> <span class="n">index_range</span>
-<span class="n">o_exceedance_counts</span> <span class="o">=</span> <span class="n">o_exceedance_matrix</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">observed</span><span class="p">)</span>
-
-<span class="n">posterior</span> <span class="o">=</span> <span class="n">make_posterior</span><span class="p">(</span><span class="n">o_exceedance_counts</span><span class="p">,</span> <span class="n">p_exceedance_counts</span><span class="p">)</span>
-
-<span class="n">samples</span> <span class="o">=</span> <span class="n">posterior</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span>
-<span class="n">samples</span> <span class="o">=</span> <span class="p">[</span><span class="n">index_range</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">samples</span><span class="p">]</span>
-
-<span class="n">the_hdi</span> <span class="o">=</span> <span class="n">hdi</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span> <span class="n">cred_mass</span><span class="o">=</span><span class="mf">.95</span><span class="p">)</span>
-
-<span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="s1">&#39;std&#39;</span><span class="p">,</span> <span class="s1">&#39;min&#39;</span><span class="p">,</span> <span class="s1">&#39;25%&#39;</span><span class="p">,</span> <span class="s1">&#39;50%&#39;</span><span class="p">,</span> <span class="s1">&#39;75%&#39;</span><span class="p">,</span> <span class="s1">&#39;max&#39;</span><span class="p">]</span>
-<span class="n">display_language</span> <span class="o">=</span> <span class="n">current</span><span class="o">.</span><span class="n">language</span>
-<span class="n">display_language_map</span> <span class="o">=</span> <span class="n">current</span><span class="o">.</span><span class="n">lang_maps</span><span class="p">[</span><span class="n">display_language</span><span class="p">]</span>
-
-<span class="n">forecast</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Prévisions&quot;</span><span class="p">])</span>
-<span class="n">forecast</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">forecast</span><span class="p">[</span><span class="s1">&#39;Prévisions&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span><span class="o">.</span><span class="n">T</span>
-<span class="n">forecast</span> <span class="o">=</span> <span class="n">forecast</span><span class="p">[</span><span class="n">columns</span><span class="p">]</span>
-<span class="n">fcast</span> <span class="o">=</span> <span class="n">rc</span><span class="o">.</span><span class="n">translated_and_style_for_display</span><span class="p">(</span><span class="n">forecast</span><span class="p">,</span> <span class="n">display_language_map</span><span class="p">,</span> <span class="n">display_language</span><span class="p">,</span> <span class="n">gradient</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;resources/tables/conclusion_predictions_table_macro_all.html&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
-    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">fcast</span><span class="o">.</span><span class="n">to_html</span><span class="p">())</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_remove-input docutils container">
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>

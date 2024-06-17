@@ -20,7 +20,7 @@ sphinx:
     # bibtex_reference_style: author_year
     html_theme_options:
       use_download_button: false
-      repository_url: https://github.com/hammerdirt-analyst/plastock
+      repository_url: https://github.com/AssociationSauvegardeLeman/plastock
       use_issues_button: true
       use_repository_button: true
       
