@@ -1,5 +1,5 @@
 (method_asl_plastock)=
-# Méthodes détaillées pour l'échantillonage
+# Annexe I: Méthodes détaillées pour l'échantillonage
 
 ## Échantillonnage de microplastiques
 
@@ -65,5 +65,5 @@ b.	Comptabilisation de l’ensemble des éléments et saisie des données par la
 a.	Les deux boites (partie 1 et partie 2) sont ensuite renvoyées à l’ASL avec à l’intérieur uniquement les éléments en plastique, à l’exception des mégots et des grands déchets (ex : bouteilles en PET). Vous pouvez conserver le carton reçu avec les boites et y coller l’étiquette pré-affranchie.
 
 ### Météo
-L’action est maintenue par tous les temps, dans la limite du raisonnable. Le seul facteur réellement limitant est le vent. En cas de vague trop importante, la ligne d’eau n’est pas accessible il n’est donc pas possible de garantir la justesse du protocole.
+L’action est maintenue par tous les temps, dans la limite du raisonnable. Le seul facteur réellement limitant est le vent. En cas de vagues trop importantes, la ligne d’eau n’est pas accessible il n’est donc pas possible de garantir la justesse du protocole.
 
