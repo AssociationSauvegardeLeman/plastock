@@ -1,4 +1,4 @@
-# Caractérisation chimique des particules
+# Annexe IX: Caractérisation chimique des particules
 
 ::::{grid} 1 1 2 2 
 :gutter: 0
@@ -23,7 +23,7 @@ En parallèle à la comptabilisation, des caractérisations chimiques ont été 
 :name: micro_evolution
 ```
 +++
-<b>Figure 6.5 :</b> Evolution des abondances moyennes de plastiques par kg de substrat analysé (Uhlmann, 2023) et (Guignier, 2023).
+<b>Figure A9.1 :</b> Evolution des abondances moyennes de plastiques par kg de substrat analysé (Uhlmann, 2023) et (Guignier, 2023).
 :::
 
 ::::
@@ -41,7 +41,7 @@ Au niveau de la caractérisation chimique, effectuée par FTIR-ATR, une grande v
 ```
 
 +++
-<b>Figure 6.6 :</b> Proportion des natures de MPs par plage échantillonnées (Uhlmann, 2023). PMA=Polyméthacrylate ; PE=Polyéthylène; PP=Polypropylène; PA=Polyamide; PS=Polystyrène
+<b>Figure A9.2 :</b> Proportion des natures de MPs par plage échantillonnées (Uhlmann, 2023). PMA=Polyméthacrylate ; PE=Polyéthylène; PP=Polypropylène; PA=Polyamide; PS=Polystyrène
 :::
 
 :::{grid-item-card}
@@ -53,6 +53,6 @@ Au niveau de la caractérisation chimique, effectuée par FTIR-ATR, une grande v
 ```
 
 +++
-<b>Figure 6.7 :</b> Proportion des natures de MPs (en %) de la fraction 63-500 um pour les cinqs site d'étude dont le score de recherche est supérieur à 0.7: polyamide et nylon (PA), polyéthylène (PE), polypropylène (PP), polystyrène (PS), éthylène-acétate de vinyle (EVA), polychlorure de vinyle (PVC), alcool polyvinylique (PVA), polyacrylamide (PAM), polyester, autre. (Guignier, 2023)
+<b>Figure A9.3 :</b> Proportion des natures de MPs (en %) de la fraction 63-500 um pour les cinqs site d'étude dont le score de recherche est supérieur à 0.7: polyamide et nylon (PA), polyéthylène (PE), polypropylène (PP), polystyrène (PS), éthylène-acétate de vinyle (EVA), polychlorure de vinyle (PVC), alcool polyvinylique (PVA), polyacrylamide (PAM), polyester, autre. (Guignier, 2023)
 :::
 ::::
