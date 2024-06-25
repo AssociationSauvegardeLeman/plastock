@@ -53,7 +53,7 @@ CIPEL
 
 :::{grid-item-card}
 :link: https://jeux.loro.ch/?gclid=CjwKCAjwvIWzBhAlEiwAHHWgvTC8ueTGo-FIN-hPjgvOQpaahMLDyOWrfybHwlS8UmobNHassZ5iFBoC9DcQAvD_BwE
-LOTTERIE ROMANDE
+LOTERIE ROMANDE
 ^^^
 ```{image} resources/images/logos/loterie_romande.png
 ```
@@ -62,9 +62,9 @@ LOTTERIE ROMANDE
 :::{grid-item-card}
 :link: https://www.fondation-valery.ch/
 
-FONDATION VALERIE
+FONDATION VALERY
 ^^^
-```{image} resources/images/logos/fondation_valery.png
+```{image} resources/images/logos/Fondation_valery_logo-02.png
 ```
 
 :::
