@@ -28,7 +28,7 @@ __Avec le soutien de :__
 :::{grid-item-card}
 :link: https://ww2.sig-ge.ch/vitale_vert
 
-SIG
+Fonds Electricité Vitale Vert
 ^^^
 ```{image} resources/images/logos/fondvital.png
 ```
@@ -37,7 +37,7 @@ SIG
 :::{grid-item-card}
 :link: https://unige.ch/
 
-UNIGE
+Université de Genève
 ^^^
 ```{image} resources/images/logos/logo-unige@2x.png
 ```
@@ -54,7 +54,7 @@ CIPEL
 
 :::{grid-item-card}
 :link: https://jeux.loro.ch/?gclid=CjwKCAjwvIWzBhAlEiwAHHWgvTC8ueTGo-FIN-hPjgvOQpaahMLDyOWrfybHwlS8UmobNHassZ5iFBoC9DcQAvD_BwE
-LOTERIE ROMANDE
+Loterie Romande
 ^^^
 ```{image} resources/images/logos/loterie_romande.png
 ```
@@ -63,7 +63,7 @@ LOTERIE ROMANDE
 :::{grid-item-card}
 :link: https://www.fondation-valery.ch/
 
-FONDATION VALERY
+Fondation Valery
 ^^^
 ```{image} resources/images/logos/Fondation_valery_logo-02.png
 ```
@@ -72,14 +72,14 @@ FONDATION VALERY
 :::{grid-item-card}
 :link: https://www.epargne-retraite-entreprises.bnpparibas.com/
 
-BNP
+BNP Paribas
 ^^^
 ```{image} resources/images/logos/BNP.png
 ```
 :::
 :::{grid-item-card}
 :link: https://www.ubp.com/en/private-clients/pure-play-private-banking?
-UBP
+Union Bancaire Privée
 ^^^
 ```{image} resources/images/logos/UBP.png
 ```
