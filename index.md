@@ -64,7 +64,7 @@ LOTTERIE ROMANDE
 
 FONDATION VALERIE
 ^^^
-```{image} resources/images/logos/fondation_valery.png
+```{image} resources/images/logos/Fondation valery_logo-02.png
 ```
 
 :::
