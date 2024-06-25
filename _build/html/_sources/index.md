@@ -2,7 +2,8 @@
 
 __Étude du stock de plastiques sur les plages du Léman__
 
-Une étude menée par l’Association pour la Sauvegarde du Léman [l'Association pour la Sauvegarde du Léman](https://asleman.org/) en collaboration avec l’Université de Genève (UniGE) et la Commission internationale pour la protection des eaux du Léman (CIPEL)
+
+Réalisée en collaboration avec l’Université de Genève, l’étude «Pla’stock » de [l'Association pour la Sauvegarde du Léman](https://asleman.org/), proposée et soutenue par la CIPEL afin de répondre à son plan d’action, a permis d’estimer les quantités de plastiques présentes sur les plages du Léman en 2021 et 2022.
 
 ::::{grid}
 :::{grid-item}
