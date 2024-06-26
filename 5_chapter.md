@@ -1,7 +1,7 @@
 # Méthodes
 
- Que ce soit pour les macro- ou les microplastiques, les méthodes de prélèvements et d’analyses ont été développées puis testées et validées par l’ASL. Elles sont majoritairement compatibles avec les protocoles scientifiques utilisés par les différentes études ayant traité de la même thématique en Europe 
-([Gerdts, 2019](gerdts_2019)) et au niveau helvétique ([OFEV, 2021](OFEV)),([Swiss Litter Report, 2018](SLR)). LLa méthodologie appliquée ici aux macroplastiques se démarque des autres études par la prise en compte du mètre carré comme unité de référence par rapport à d’autres études qui se basent sur le mètre linéaire de ligne d’eau. Ce choix a été effectué afin de pouvoir comparer les abondances par unité de surface entre les microplastiques et les macroplastiques. La méthodologie de prélèvements et d’analyses pour les microplastiques a été testée et choisie pour être compatible avec les protocoles d’autres études européennes aux fins de comparaison ([Faure et al., 2018](faure_et_all)), ([Frei et al, 2022](frei_et_all)). Les méthodes ont été validées par le groupe de travail « Pla’stock » de l’ASL et le Conseil scientifique de la CIPEL.
+Que ce soit pour les macro- ou les microplastiques, les méthodes de prélèvements et d’analyses ont été développées puis testées et validées par l’ASL. Elles sont majoritairement compatibles avec les protocoles scientifiques utilisés par les différentes études ayant traité de la même thématique en Europe 
+([Gerdts, 2019](gerdts_2019)) et au niveau helvétique ([OFEV, 2021](OFEV)),([Swiss Litter Report, 2018](SLR)). La méthodologie appliquée ici aux macroplastiques se démarque des autres études par la prise en compte du mètre carré comme unité de référence par rapport à d’autres études qui se basent sur le mètre linéaire de ligne d’eau. Ce choix a été effectué afin de pouvoir comparer les abondances par unité de surface entre les microplastiques et les macroplastiques. La méthodologie de prélèvements et d’analyses pour les microplastiques a été testée et choisie pour être compatible avec les protocoles d’autres études européennes aux fins de comparaison ([Faure et al., 2018](faure_et_all)), ([Frei et al, 2022](frei_et_all)). Les méthodes ont été validées par le groupe de travail « Pla’stock » de l’ASL et le Conseil scientifique de la CIPEL.
 
 ##  Zone d’étude
 
@@ -58,7 +58,7 @@ Les boîtes sont étiquetés de la manière suivante :
 Les numéros d’échantillons sont définis de l’amont vers l’aval. 
 Exemple: Baby Plage à Genève : CH GE 01.1; CH GE 01.2 ; CH GE 01.3 ;… 
 
-Au total, 235 échantillons de 500 cm3 ont ainsi été prélevés en novembre 2021. Dans le cadre de l’études, seuls 217 échantillons ont été traités et comptabilisés. 18 sont conservés à l’Université de Genève en vue de futures études.
+Au total, 235 échantillons de 500 cm3 ont ainsi été prélevés en novembre 2021. Dans le cadre de l’étude, seuls 217 échantillons ont été traités et comptabilisés. 18 sont conservés à l’Université de Genève en vue de futures études.
 
 ::::{grid}
 :::{grid-item-card}
