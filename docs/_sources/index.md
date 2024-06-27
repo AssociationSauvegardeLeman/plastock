@@ -69,28 +69,13 @@ Fondation Valery
 ```
 
 :::
-:::{grid-item-card}
-:link: https://www.epargne-retraite-entreprises.bnpparibas.com/
-
-BNP Paribas
-^^^
-```{image} resources/images/logos/BNP.png
-```
-:::
-:::{grid-item-card}
-:link: https://www.ubp.com/en/private-clients/pure-play-private-banking?
-Union Bancaire Privée
-^^^
-```{image} resources/images/logos/UBP.png
-```
-:::
 ::::
 
 __Remerciements :__
 
-__Membres du groupe plastique de l’ASL :__ Adrien Bonny, Julien Boucher, Jean-Marcel Dorioz, Claude Ganty, Suzanne Mader-Feigenwinter, Pascal Mulattieri, et Serge Stoll, ainsi qu’Alix Chatton et Malika Sekkiou (stagiaires)
+__Membres du groupe "plastiques" de l’ASL :__ Adrien Bonny, Julien Boucher, Jean-Marcel Dorioz, Claude Ganty, Suzanne Mader-Feigenwinter, Pascal Mulattieri, et Serge Stoll, ainsi qu’Alix Chatton et Malika Sekkiou (stagiaires)
 
-__Membres du conseil scientifique et du secrétariat de la CIPEL :__ Marc Babut, Hélène Bourgeois, Mathieu Coster, Benoit Ferrari, Nicole Gallina, Jean-Luc Loizeau, Frédéric Soulignac
+__Membres du conseil scientifique et du secrétariat de la CIPEL :__ Marc Babut, Hélène Bourgeois, Mathieu Coster, Benoit Ferrari, Nicole Gallina, Audrey Klein, Jean-Luc Loizeau, Adrien Oriez, Frédéric Soulignac
 
 __Etudiantes et étudiant de l’Université de Genève :__ Jade Bouzy, Mathis Ducleon, Lea Früh, Coline Guignier et Louise Uhlmann
 
