@@ -13,4 +13,6 @@ La réalisation de l’étude des stocks de plastiques sur les plages lémanique
 
 +++
 <b>Figure 2 : </b> Organisation des différentes phases du projet Pla'stock. Les prélèvements de macroplastiques ont eu lieu entre février et novembre 2022. Les échantillons de substrats pour le recensement des microplastiques ont été prélevés en novembre 2021, puis traités à l’UNIGE entre février 2022 et juin 2023 pour être comptabilisés à l’ASL entre mars 2022 et août 2023.
+
+<b>Figure 2 : </b> Organization of the different phases of the Pla'stock project. Macroplastic samplings took place between February and November 2022. Samples for microplastics were collected in November 2021, then processed at UNIGE between February 2022 and June 2023 for quantification at ASL between March 2022 and August 2023.
 :::
