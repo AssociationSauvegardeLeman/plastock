@@ -73,7 +73,7 @@ Fondation Valery
 ::::
 
 __Accompagnement :__
-Groupe de travail de l'ASL et Comité scientifique de la CIPEL
+Groupe de travail de l'ASL et conseil scientifique de la CIPEL
 
 __Coordination :__
 Suzanne Mader-Feigenwinter (ASL), Serge Stoll (UNIGE) et Nicole Gallina (CIPEL)
