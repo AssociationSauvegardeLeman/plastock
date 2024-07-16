@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Annexe I: Méthodes détaillées pour l’échantillonage &#8212; Pla&#39;stock</title>
   
@@ -15,53 +14,49 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'annexe_methode_detail';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -76,27 +71,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -118,8 +109,13 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
     </header>
   
 
@@ -143,6 +139,8 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="index.html">
   
@@ -154,7 +152,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Pla'stock</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Rapport</span></p>
 <ul class="nav bd-sidenav">
@@ -195,7 +204,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -204,14 +213,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -288,10 +297,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -299,14 +308,14 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -353,16 +362,16 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="annexe-i-methodes-detaillees-pour-l-echantillonage">
-<span id="method-asl-plastock"></span><h1>Annexe I: Méthodes détaillées pour l’échantillonage<a class="headerlink" href="#annexe-i-methodes-detaillees-pour-l-echantillonage" title="Permalink to this heading">#</a></h1>
+<span id="method-asl-plastock"></span><h1>Annexe I: Méthodes détaillées pour l’échantillonage<a class="headerlink" href="#annexe-i-methodes-detaillees-pour-l-echantillonage" title="Link to this heading">#</a></h1>
 <section id="echantillonnage-de-microplastiques">
-<h2>Échantillonnage de microplastiques<a class="headerlink" href="#echantillonnage-de-microplastiques" title="Permalink to this heading">#</a></h2>
+<h2>Échantillonnage de microplastiques<a class="headerlink" href="#echantillonnage-de-microplastiques" title="Link to this heading">#</a></h2>
 <p>L’échantillonnage se fait de manière aléatoire sur la surface de chaque secteur. La densité d’échantillonnage est standardisée (1 échantillon/45m2).
 Les prélèvements se font sur une profondeur de 5 cm. Cette profondeur correspond à celle utilisée par les études similaires (Faure &amp; De Alencastro, 2014; Imhof et al., 2018; Zbyszewski et al., 2014)
 Les prélèvements se font selon une méthode adaptée de Bridson et al (2020) avec un profilé métallique de 10 cm de côté sur une profondeur de 5 cm. Les échantillons ainsi prélevés sont ensuite stockés dans des boites en verre. Les récipients sont ensuite étiquetés de la manière suivante :</p>
 <p>Pays _ Région _ n° station_ n° échantillon. Les n° d’échantillons sont définis de l’amont vers l’aval.</p>
 <p>Exemple pour Baby Plage (GE) : CH_GE_01.1 ; CH_GE_01.2 ; CH_GE_01.3 ;…</p>
 <section id="recapitulatif">
-<h3>Récapitulatif<a class="headerlink" href="#recapitulatif" title="Permalink to this heading">#</a></h3>
+<h3>Récapitulatif<a class="headerlink" href="#recapitulatif" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Positionner aléatoirement les points de prélèvement sur la carte</p></li>
 <li><p>Reporter les points sur le site</p></li>
@@ -384,24 +393,24 @@ vi.	Point à ajouter ?</p></li>
 </section>
 </section>
 <section id="echantillonnage-de-macroplastiques">
-<h2>Échantillonnage de macroplastiques<a class="headerlink" href="#echantillonnage-de-macroplastiques" title="Permalink to this heading">#</a></h2>
+<h2>Échantillonnage de macroplastiques<a class="headerlink" href="#echantillonnage-de-macroplastiques" title="Link to this heading">#</a></h2>
 <section id="definition">
-<h3>Définition<a class="headerlink" href="#definition" title="Permalink to this heading">#</a></h3>
+<h3>Définition<a class="headerlink" href="#definition" title="Link to this heading">#</a></h3>
 <p>Le terme « macroplastique » regroupe l’ensemble des éléments de plus de 5 mm. En dessous, les particules sont appelées microplastiques. Cependant, pour la partie « macroplastiques » de cette étude, l’ensemble des plastiques visibles à l’œil nu seront pris en compte. Les particules recherchées sur les plages peuvent ainsi mesurer seulement quelques millimètres à plusieurs centimètres. Les petits éléments demandent une attention très élevée, d’où le protocole strict présenté ci-après.</p>
 </section>
 <section id="objectif">
-<h3>Objectif<a class="headerlink" href="#objectif" title="Permalink to this heading">#</a></h3>
+<h3>Objectif<a class="headerlink" href="#objectif" title="Link to this heading">#</a></h3>
 <p>Le but de l’étude est d’établir la densité et le type des plastiques retrouvés sur les plages du Léman. Pour ce faire, des recensements sont menés conjointement sur 25 plages tout autour du lac. Afin d’obtenir des données comparables entre elles, les récoltes doivent être faites selon un protocole strict en respectant une surface et un temps de travail donnés. Le nombre d’intervenant-es, le secteur et le temps d’intervention doivent donc être rigoureusement respectés.</p>
 </section>
 <section id="materiel">
-<h3>Matériel<a class="headerlink" href="#materiel" title="Permalink to this heading">#</a></h3>
+<h3>Matériel<a class="headerlink" href="#materiel" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>1 seau par personne</p></li>
 <li><p>2 boîtes en plastiques (pour la-le responsable)</p></li>
 </ul>
 </section>
 <section id="secteur">
-<h3>Secteur<a class="headerlink" href="#secteur" title="Permalink to this heading">#</a></h3>
+<h3>Secteur<a class="headerlink" href="#secteur" title="Link to this heading">#</a></h3>
 <p>Selon les informations reçues dans la fiche secteur :</p>
 <ol class="arabic simple">
 <li><p>Ligne d’eau et les deux premiers mètres de la plage</p></li>
@@ -409,12 +418,12 @@ vi.	Point à ajouter ?</p></li>
 </ol>
 </section>
 <section id="recolte">
-<h3>Récolte<a class="headerlink" href="#recolte" title="Permalink to this heading">#</a></h3>
+<h3>Récolte<a class="headerlink" href="#recolte" title="Link to this heading">#</a></h3>
 <p>La-le responsable de secteur accueille les bénévoles et leur transmet les informations sur le secteur à inventorier. Certain-es bénévoles sont dédié-es à la récolte sur la partie 1 et les autres sur la 2. Cette répartition est faite au prorata de la taille de la ligne d’eau par rapport au reste de la plage. La répartition des bénévoles est préalablement transmise aux responsables de secteurs par l’ASL. Les récoltes des deux parties sont triées et comptabilisées de manière distincte.
 La récolte se fait en parcourant le secteur pré-défini à un rythme de 30 secondes/m2. Cette vitesse est très lente et permet une attention élevée aux petits éléments. Chaque bénévole, équipé de son seau, parcourt la plage. Il ne faut pas creuser pour rechercher les plastiques. Seuls ceux se trouvant à la surface de la plage sont récoltés. La personne responsable est également gardien-ne du temps. Lorsque le temps à disposition est écoulé, les bénévoles rassemblent les déchets récoltés sur la bâche tout en s’assurant de bien garder la séparation entre les éléments de la partie 1 et ceux de la partie 2. Le tri se fait selon la nomenclature reconnue au niveau européen et qui a été présentée aux responsables lors des soirées de formation. Il est important d’être très rigoureux-ses dans le tri afin de ne pas biaiser les statistiques. Une fois la comptabilisation des éléments effectuée, les données sont saisies dans l’app Net’Léman par la.le responsable de secteur.</p>
 </section>
 <section id="id1">
-<h3>Récapitulatif<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<h3>Récapitulatif<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Délimitation du site en 2 parties :</p></li>
 </ul>
@@ -445,7 +454,7 @@ La récolte se fait en parcourant le secteur pré-défini à un rythme de 30 sec
 </ol>
 </section>
 <section id="meteo">
-<h3>Météo<a class="headerlink" href="#meteo" title="Permalink to this heading">#</a></h3>
+<h3>Météo<a class="headerlink" href="#meteo" title="Link to this heading">#</a></h3>
 <p>L’action est maintenue par tous les temps, dans la limite du raisonnable. Le seul facteur réellement limitant est le vent. En cas de vagues trop importantes, la ligne d’eau n’est pas accessible il n’est donc pas possible de garantir la justesse du protocole.</p>
 </section>
 </section>
@@ -478,7 +487,7 @@ La récolte se fait en parcourant le secteur pré-défini à un rythme de 30 sec
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -577,8 +586,8 @@ By Association pour la Sauvegarde du Léman
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

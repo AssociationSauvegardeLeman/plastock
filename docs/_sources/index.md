@@ -19,7 +19,7 @@ Réalisée en collaboration avec l’Université de Genève, l’étude «Pla’
 
 __Image :__ Bénévoles en action
 
-__Auteurs :__ Alexis Pochelon (ASL), Raphaëlle Juge (ASL) et Roger Erismann
+__Auteurs :__ Alexis Pochelon (ASL), Raphaëlle Juge (ASL), Roger Erismann, Serge Stoll (UNIGE), Mathieu Coster (CIPEL)
 
 __Avec le soutien de :__
 
@@ -82,7 +82,7 @@ __Remerciements :__
 
 __Membres du groupe "plastiques" de l’ASL :__ Adrien Bonny, Julien Boucher, Jean-Marcel Dorioz, Claude Ganty, Suzanne Mader-Feigenwinter, Pascal Mulattieri, et Serge Stoll, ainsi qu’Alix Chatton et Malika Sekkiou (stagiaires)
 
-__Membres du conseil scientifique et du secrétariat de la CIPEL :__ Marc Babut, Hélène Bourgeois, Mathieu Coster, Benoit Ferrari, Nicole Gallina, Audrey Klein, Jean-Luc Loizeau, Adrien Oriez, Frédéric Soulignac
+__Membres du conseil scientifique et du secrétariat de la CIPEL__
 
 __Etudiantes et étudiant de l’Université de Genève :__ Jade Bouzy, Mathis Ducleon, Lea Früh, Coline Guignier et Louise Uhlmann
 
