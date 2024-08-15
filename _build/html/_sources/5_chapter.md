@@ -18,9 +18,6 @@ Sur la base du périmètre défini par la CIPEL, les 200 km de rives du Léman o
 
 +++
 <b>Figure 5.1 :</b> Séparation des 200 km de rives lémaniques en 25 secteurs pour le choix des plages de l’étude.
-
-<b>Figure 5.1 :</b> Division of the 200 km of Lake Geneva shores into 25 sectors for the selection of the 25 study beaches.
-
 :::
 
 Le choix s’est porté sur neuf grandes plages de plus de 80 m de long, neuf de 50 à 80 m et sept de 15 à 50 m. Les surfaces inventoriées varient entre 16 m² pour la plus petite et près de 2000 m² pour la plus grande. Au total, ce sont quatre plages de moins de 100 m², 15 de 100 à 500 m², cinq de 500 à 1100 m² et une de 1980 m² qui ont été investiguées. De plus, une attention particulière a été portée au substrat afin d’avoir une bonne répartition entre les plages de sable, de graviers et de galets. La séparation entre les différents substrats a été effectuée à l’œil en fonction de la granulométrie moyenne de la plage.
@@ -38,8 +35,6 @@ A noter que la ligne d’eau se déplace au fil de l’année et des variations 
 ```
 +++
 <b>Figure 5.2 :</b> Sous-secteurs des plages : 1) Ligne d’eau et 2) Plage sèche.
-
-<b>Figure 5.2 :</b> Sub-sectors of the beaches : 1) Waterline and 2) Dry beach.
 :::
 ::::
 
@@ -70,8 +65,6 @@ Au total, 235 échantillons de 500 cm3 ont ainsi été prélevés en novembre 20
 ```
 +++
 <b>Figure 5.3 :</b> Prélèvement de 100 cm² de substrat (10 cm x 10 cm sur 5 cm de profondeur). Le profilé en métal est déposé en surface puis enfoncé à 5cm de profondeur. Le prélèvement est ensuite déposé dans une boîte de transport en verre et une feuille d’aluminium est placée entre l’échantillon et le couvercle pour éviter toutes contaminations.
-
-<b>Figure 5.3 :</b> Sampling of 100 cm2 of substrate (10 cm x 10 cm by 5 cm deep). The metal corer is placed on the surface and pushed down to a depth of 5 cm. The sample is then placed in a glass transport box, and a sheet of aluminium is placed between the sample and the lid to prevent any contamination.
 :::
 ::::
 
@@ -96,8 +89,6 @@ Selon ces recommandations, les particules comptabilisées ont été réparties e
 ```
 +++
 <b>Figure 5.4 :</b> De gauche à droite: Fibre, particule souple et particule dure identifiées lors de la comptabilisation.
-
-<b>Figure 5.4 :</b> From left to right : Fiber, soft particle, and hard particle found during the counting.
 :::
 ::::
 
@@ -107,8 +98,6 @@ Lors du traitement des échantillons à l’Université de Genève, de leur tran
 ::::{grid}
 :::{grid-item-card}
 <b>Tableau 5.1 :</b> Blancs de laboratoire effectués à l’UNIGE avec comptabilisation à l’ASL
-
-<b>Tableau 5.1 :</b> Laboratory blanks conducted at UNIGE with counting at ASL.
 ^^^
 | Blancs |Fibres transparentes| Fibres noires | Fibres bleues |Fibres rouges|
 | :---: |:---: |:---: |:---: |:---: |
@@ -129,8 +118,6 @@ Un macroplastique est défini le plus souvent par la norme internationale comme 
 ::::{grid}
 :::{grid-item-card}
 <b>Tableau 5.2 :</b> Nombre de bénévoles mobilisés par plage et temps d’échantillonnage par secteurs.
-
-<b>Tableau 5.2 :</b> Number of volunteers mobilized per beach and sampling time per sector.
 ^^^
 <style type="text/css">
 #T_b0ff6 tr:nth-child(even) {
@@ -376,8 +363,6 @@ Chaque groupe de bénévoles se rend sur la plage qui lui est assignée une fois
 ```
 +++
 <b>Figure 5.5 :</b> Récolte assidue des macroplastiques sur la plage de Préverenges. Photo ASL
-
-<b>Figure 5.5 :</b> Diligent collection of macroplastics on Préverenges beach. Photo by ASL.
 :::
 ::::
 
@@ -392,8 +377,6 @@ Les plastiques récoltés sont réunis par sous-secteur et triés (Figure 8) sel
 ```
 +++
 <b>Figure 5.6 :</b> Tri des macroplastiques récoltés sur la plage de Vidy selon des catégories d’objets (Annexe 1). Photo: Aleksandra Racz
-
-<b>Figure 5.6 :</b> Sorting of collected macroplastics on Vidy beach into object categories (Annex 1). Photo by Aleksandra Racz.
 :::
 ::::
 

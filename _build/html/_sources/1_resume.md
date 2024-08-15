@@ -18,5 +18,4 @@ The “Pla’stock” participatory science study, a collaboration a collaborati
 +++
 <b>Figure 1:</b> Synthèse des concentrations en plastiques sur les plages du Léman. Les plages du Bouveret et des Grangettes se démarquent fortement.
 
-<b>Figure 1:</b> Summary of plastic concentrations on the shores of Lake Geneva. The beaches Le Bouveret and Les Grangettes stand out prominently.
 :::
