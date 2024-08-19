@@ -4,7 +4,7 @@ __Étude du stock de plastiques sur les plages du Léman__
 
 __Study of microplastic stocks on the shores of Lake Geneva__
 
-À l'initiative de la Commission internationale pour la protection des eaux du Léman (CIPEL) pour répondre à son plan d’action 2021-2030, l'étude collaborative « Pla’stock » a été menée par [l'Association pour la Sauvegarde du Léman](https://asleman.org/) (ASL) en partenariat avec l'Université de Genève. Elle a permis d’estimer les quantités de plastiques présentes sur les plages du Léman en 2021 et 2022.
+À l'initiative de la [Commission internationale pour la protection des eaux du Léman](https://www.cipel.org/) (CIPEL) pour répondre à son plan d’action 2021-2030, l'étude collaborative « Pla’stock » a été menée par [l'Association pour la Sauvegarde du Léman](https://asleman.org/) (ASL) en partenariat avec l'Université de Genève. Elle a permis d’estimer les quantités de plastiques présentes sur les plages du Léman en 2021 et 2022.
 
 ::::{grid}
 :::{grid-item}
