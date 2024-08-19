@@ -1,0 +1,11 @@
+name: mpdfs
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - weasyprint
+  - jupyterlab
+  - reportlab
+  - pypdf2
+prefix: /home/roger/anaconda3/envs/mpdfs

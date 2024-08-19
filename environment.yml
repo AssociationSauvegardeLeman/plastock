@@ -1,18 +1,11 @@
-name: plastock_xportable
+name: mpdfs
 channels:
   - conda-forge
   - defaults
 dependencies:
   - python=3.9
-  - pandas=2.0.3
-  - matplotlib
-  - scikit-learn
-  - ipython
-  - geopandas
-  - seaborn
-  - sphinx
+  - weasyprint
   - jupyterlab
-  - jupyter-book
-  - python-slugify
-  - watermark
-
+  - reportlab
+  - pypdf2
+prefix: /home/roger/anaconda3/envs/mpdfs
